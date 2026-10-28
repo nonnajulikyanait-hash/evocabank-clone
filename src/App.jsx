@@ -2,8 +2,8 @@ import React from 'react';
 import Navbar from './components/layout/navbar';
 import EvocaCardSlider from './components/home/evocacardslider';
 import BiometricSection from './components/home/biometricsection';
-import StatueSection from './components/home/StatueSection';
-import CardsSliderSection from './components/home/CardsSliderSection';
+import StatueSection from './components/home/statuesection';
+import CardsSliderSection from './components/home/cardslidersection';
 
 function App() {
   return (
