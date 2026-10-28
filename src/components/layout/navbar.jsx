@@ -3,11 +3,11 @@ import React from 'react';
 export default function Navbar() {
   return (
     <header className="w-full bg-white border-b border-gray-100 sticky top-0 z-50">
-      {/* Վերին Մենյու (Top Bar) */}
-      <div className="bg-gray-50 border-b border-gray-100 text-xs text-gray-600 py-2 px-6">
+      {/* Top Bar */}
+      <div className="bg-[#f8f9fa] border-b border-gray-100 text-[11px] text-gray-600 py-1.5 px-8">
         <div className="container mx-auto flex justify-between items-center">
-          <div className="flex gap-6 font-medium">
-            <span className="text-[#6400dc] border-b-2 border-[#6400dc] pb-0.5 font-bold cursor-pointer">
+          <div className="flex gap-5 font-normal">
+            <span className="text-[#6400dc] border-b-2 border-[#6400dc] pb-1 font-semibold cursor-pointer">
               Անհատ
             </span>
             <span className="hover:text-[#6400dc] cursor-pointer transition">Բիզնես</span>
@@ -17,30 +17,30 @@ export default function Navbar() {
             <span className="hover:text-[#6400dc] cursor-pointer transition">Բլոգ</span>
             <span className="hover:text-[#6400dc] cursor-pointer transition">Կարիերա</span>
           </div>
-          <div className="flex items-center gap-4">
-            <span className="text-[#6400dc] font-semibold cursor-pointer">Անցանց հայտեր ▾</span>
-            <span className="text-[#6400dc] font-semibold cursor-pointer">Հետադարձ կապ ▾</span>
-            <div className="flex items-center gap-3 text-gray-500 ml-2">
-              <span className="cursor-pointer">📍</span>
-              <span className="cursor-pointer">❓</span>
-              <span className="cursor-pointer">🌐</span>
-              <span className="cursor-pointer">🔍</span>
-              <span className="cursor-pointer font-bold">☰</span>
+          <div className="flex items-center gap-5">
+            <span className="text-[#6400dc] font-medium cursor-pointer">Անցանց հայտեր ▾</span>
+            <span className="text-[#6400dc] font-medium cursor-pointer">Հետադարձ կապ ▾</span>
+            <div className="flex items-center gap-3.5 text-gray-500 ml-2">
+              <span className="cursor-pointer text-xs">📍</span>
+              <span className="cursor-pointer text-xs">❓</span>
+              <span className="cursor-pointer text-xs">🌐</span>
+              <span className="cursor-pointer text-xs">🔍</span>
+              <span className="cursor-pointer font-bold text-xs">☰</span>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Հիմնական Նավիգացիա */}
-      <div className="container mx-auto py-4 px-6 flex justify-between items-center">
-        {/* Լոգո */}
-        <div className="flex items-center gap-2 cursor-pointer">
-          <span className="text-3xl font-black text-[#6400dc] tracking-tighter">evoca</span>
-          <span className="w-2.5 h-2.5 bg-[#6400dc] rounded-full"></span>
+      {/* Main Navbar */}
+      <div className="container mx-auto py-3 px-8 flex justify-between items-center">
+        {/* Logo */}
+        <div className="flex items-center gap-1.5 cursor-pointer">
+          <span className="text-2xl font-black text-[#6400dc] tracking-tighter">evoca</span>
+          <span className="w-2 h-2 bg-[#6400dc] rounded-full"></span>
         </div>
 
-        {/* Հղումներ */}
-        <nav className="hidden lg:flex items-center gap-8 text-sm font-bold text-gray-800">
+        {/* Links */}
+        <nav className="hidden lg:flex items-center gap-7 text-[13px] font-bold text-gray-800">
           <a href="#" className="hover:text-[#6400dc] transition">Վարկեր</a>
           <a href="#" className="hover:text-[#6400dc] transition">Քարտեր</a>
           <a href="#" className="hover:text-[#6400dc] transition">Ավանդներ</a>
@@ -51,8 +51,8 @@ export default function Navbar() {
           <a href="#" className="hover:text-[#6400dc] transition">EvocaTOUCH</a>
         </nav>
 
-        {/* Կոճակ */}
-        <button className="bg-[#6400dc] hover:bg-opacity-90 text-white font-bold text-xs px-5 py-2.5 rounded-full transition shadow-md cursor-pointer">
+        {/* Button */}
+        <button className="bg-[#6400dc] hover:bg-opacity-90 text-white font-bold text-[11px] px-4 py-2 rounded-full transition shadow-sm cursor-pointer">
           EvocaONLINE
         </button>
       </div>
