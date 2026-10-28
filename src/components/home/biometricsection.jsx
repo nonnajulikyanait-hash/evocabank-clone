@@ -28,26 +28,26 @@ function BiometricSection() {
     <section className="py-12 lg:py-20 bg-white overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 lg:px-8 flex flex-col lg:flex-row items-center justify-between gap-12">
         
-        {/* Ձախ մաս - Ճշգրիտ եռանկյունի ֆոն և մեծացված դեմք */}
-        <div className="lg:w-1/2 flex justify-center items-center relative min-h-[380px]">
+        {/* Ձախ մաս - Ավելի մեծ եռանկյունի և դեմք */}
+        <div className="lg:w-1/2 flex justify-center items-center relative min-h-[400px]">
           
-          {/* Հետնամասի կետագծային/շրջանաձև նախշը */}
-          <div className="absolute w-[340px] h-[340px] rounded-full border border-dashed border-gray-200 pointer-events-none flex items-center justify-center">
-            <div className="w-[280px] h-[280px] rounded-full border border-dashed border-gray-100"></div>
+          {/* Հետնամասի կետագծային շրջաններ */}
+          <div className="absolute w-[380px] h-[380px] rounded-full border border-dashed border-gray-200 pointer-events-none flex items-center justify-center">
+            <div className="w-[300px] h-[300px] rounded-full border border-dashed border-gray-100"></div>
           </div>
 
-          {/* Մանուշակագույն եռանկյունաձև ֆոն (#6400DC) */}
+          {/* Ավելի մեծ մանուշակագույն եռանկյունաձև ֆոն (#6400DC) */}
           <div 
-            className="absolute w-[280px] h-[250px] bg-[#6400DC] pointer-events-none"
+            className="absolute w-[340px] h-[320px] bg-[#6400DC] pointer-events-none"
             style={{
               clipPath: 'polygon(0% 0%, 100% 0%, 50% 100%)',
-              borderTopLeftRadius: '24px',
-              borderTopRightRadius: '24px'
+              borderTopLeftRadius: '32px',
+              borderTopRightRadius: '32px'
             }}
           ></div>
           
-          {/* Դեմքի մեծացված նկարը */}
-          <div className="relative z-10 flex justify-center items-center w-[320px] h-[360px]">
+          {/* Դեմքի նկարը */}
+          <div className="relative z-10 flex justify-center items-center w-[360px] h-[400px]">
             <img 
               src={faces[faceIndex]} 
               alt="Biometric Identification" 
