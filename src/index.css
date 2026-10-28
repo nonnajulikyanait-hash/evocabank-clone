@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+@theme {
+  --color-evoca-purple: #4B2A84;
+  --color-evoca-lime: #C7D937;
+  --color-evoca-dark: #1C1625;
+  --color-evoca-gray: #F4F5F7;
+}
