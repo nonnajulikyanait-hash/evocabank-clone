@@ -27,13 +27,37 @@ export default function StatueSection() {
   return (
     <section className="relative bg-[#6400dc] text-white py-12 px-6 my-8 rounded-[60px] overflow-hidden max-w-[1400px] mx-auto">
       
-      {/* Ֆոնային շարժվող / լողացող նկարներ (Shapes) */}
-      <img src="https://www.evoca.am/img/shape1.png" alt="shape" className="absolute top-8 left-10 w-6 opacity-80 animate-pulse pointer-events-none" />
-      <img src="https://www.evoca.am/img/shape6.png" alt="shape" className="absolute top-12 right-20 w-8 opacity-80 animate-bounce pointer-events-none" />
-      <img src="https://www.evoca.am/img/shape4.png" alt="shape" className="absolute bottom-16 left-1/4 w-7 opacity-70 pointer-events-none" />
-      <img src="https://www.evoca.am/img/shape3.png" alt="shape" className="absolute top-1/2 right-8 w-6 opacity-80 pointer-events-none" />
-      <img src="https://www.evoca.am/img/shape2.png" alt="shape" className="absolute bottom-8 right-1/3 w-8 opacity-75 pointer-events-none" />
-      <img src="https://www.evoca.am/img/shape5.png" alt="shape" className="absolute bottom-4 right-5 w-10 opacity-90 pointer-events-none" />
+      {/* Ֆոնային շարժվող / լողացող պատկերներ (Shapes) */}
+      <img 
+        src="https://www.evoca.am/img/shape1.png" 
+        alt="shape" 
+        className="absolute top-8 left-10 w-6 opacity-80 animate-float-slow pointer-events-none" 
+      />
+      <img 
+        src="https://www.evoca.am/img/shape6.png" 
+        alt="shape" 
+        className="absolute top-12 right-20 w-8 opacity-80 animate-float-fast pointer-events-none" 
+      />
+      <img 
+        src="https://www.evoca.am/img/shape4.png" 
+        alt="shape" 
+        className="absolute bottom-16 left-1/4 w-7 opacity-70 animate-float-slow pointer-events-none" 
+      />
+      <img 
+        src="https://www.evoca.am/img/shape3.png" 
+        alt="shape" 
+        className="absolute top-1/2 right-8 w-6 opacity-80 animate-float-fast pointer-events-none" 
+      />
+      <img 
+        src="https://www.evoca.am/img/shape2.png" 
+        alt="shape" 
+        className="absolute bottom-8 right-1/3 w-8 opacity-75 animate-float-slow pointer-events-none" 
+      />
+      <img 
+        src="https://www.evoca.am/img/shape5.png" 
+        alt="shape" 
+        className="absolute bottom-4 right-5 w-10 opacity-90 animate-float-fast pointer-events-none" 
+      />
 
       <div className="max-w-7xl mx-auto relative z-10">
         
