@@ -28,26 +28,26 @@ function BiometricSection() {
     <section className="py-12 lg:py-20 bg-white overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 lg:px-8 flex flex-col lg:flex-row items-center justify-between gap-12">
         
-        {/* Ձախ մաս - Ավելի մեծ եռանկյունի և դեմք */}
-        <div className="lg:w-1/2 flex justify-center items-center relative min-h-[400px]">
+        {/* Ձախ մաս - Մեծացված եռանկյունի և դեմք */}
+        <div className="lg:w-1/2 flex justify-center items-center relative min-h-[440px]">
           
           {/* Հետնամասի կետագծային շրջաններ */}
-          <div className="absolute w-[380px] h-[380px] rounded-full border border-dashed border-gray-200 pointer-events-none flex items-center justify-center">
-            <div className="w-[300px] h-[300px] rounded-full border border-dashed border-gray-100"></div>
+          <div className="absolute w-[440px] h-[440px] rounded-full border border-dashed border-gray-200 pointer-events-none flex items-center justify-center">
+            <div className="w-[350px] h-[350px] rounded-full border border-dashed border-gray-100"></div>
           </div>
 
           {/* Ավելի մեծ մանուշակագույն եռանկյունաձև ֆոն (#6400DC) */}
           <div 
-            className="absolute w-[340px] h-[320px] bg-[#6400DC] pointer-events-none"
+            className="absolute w-[400px] h-[370px] bg-[#6400DC] pointer-events-none"
             style={{
               clipPath: 'polygon(0% 0%, 100% 0%, 50% 100%)',
-              borderTopLeftRadius: '32px',
-              borderTopRightRadius: '32px'
+              borderTopLeftRadius: '40px',
+              borderTopRightRadius: '40px'
             }}
           ></div>
           
           {/* Դեմքի նկարը */}
-          <div className="relative z-10 flex justify-center items-center w-[360px] h-[400px]">
+          <div className="relative z-10 flex justify-center items-center w-[400px] h-[440px]">
             <img 
               src={faces[faceIndex]} 
               alt="Biometric Identification" 
