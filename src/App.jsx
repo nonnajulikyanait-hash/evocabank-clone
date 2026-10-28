@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from './components/layout/navbar';
 import EvocaCardSlider from './components/home/evocacardslider';
+import BiometricSection from './components/home/biometricsection';
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Navbar />
       <main>
         <EvocaCardSlider />
+        <BiometricSection />
       </main>
     </div>
   );
