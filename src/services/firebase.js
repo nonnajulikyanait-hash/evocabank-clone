@@ -1,22 +1,21 @@
+// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
-import { getAuth } from "firebase/auth";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
-// Firebase-ի config-ը (հետագայում կդնենք իսկական keys-երը)
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "evocabank-clone.firebaseapp.com",
-  projectId: "evocabank-clone",
-  storageBucket: "evocabank-clone.appspot.com",
-  messagingSenderId: "YOUR_SENDER_ID",
-  appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyCG2aJvhZobJ8CC_TuOeSd9FpMPo6F0eEA",
+  authDomain: "evocabank-clone-d543a.firebaseapp.com",
+  projectId: "evocabank-clone-d543a",
+  storageBucket: "evocabank-clone-d543a.firebasestorage.app",
+  messagingSenderId: "139644214686",
+  appId: "1:139644214686:web:be24c5fe08d694ec390a8f",
+  measurementId: "G-H4DXXTHRLQ"
 };
 
-// Սկզբնավորում ենք Firebase-ը
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
-// Ակտիվացնում և export ենք անում Database-ը (Firestore) և Auth-ը
-export const db = getFirestore(app);
-export const auth = getAuth(app);
-
-export default app;
+const analytics = getAnalytics(app);
