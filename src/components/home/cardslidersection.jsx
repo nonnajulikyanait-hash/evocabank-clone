@@ -7,139 +7,139 @@ const cardsData = [
   {
     id: 1,
     title: 'Evoca Travel Card',
-    description: 'Ajs qartn ir bazmativ aravelutyunnerov kdarna qo tchampordakan anbazhan enkeri',
+    description: 'Այս քարտն իր բազմաթիվ առավելություններով կդառնա քո ճամփորդական անբաժան ընկերը։',
     image: 'https://www.evoca.am/images-cache/cards/1/17479817930565/415x261.jpg',
   },
   {
     id: 2,
     title: 'Evoca Visa Platinum',
-    description: 'Dzerq ber Evoca Visa Platinum qart yev ogtvir artonyal bankayin tsarayutyunneric:',
+    description: 'Ձեռք բեր Evoca Visa Platinum քարտ և օգտվիր արտոնյալ բանկային ծառայություններից:',
     image: 'https://www.evoca.am/images-cache/cards/1/17798007931247/415x261.png',
   },
   {
     id: 3,
     title: 'Wilco Visa Infinite',
-    description: 'Bacarik hnaravorutyunner yev anhatakan spasarkum Visa Infinite-i het:',
+    description: 'Բացառիկ հնարավորություններ և անհատական սպասարկում Visa Infinite-ի հետ:',
     image: 'https://www.evoca.am/images-cache/cards/1/17815131185095/415x261.png',
   },
   {
     id: 4,
     title: 'Evoca Gift Card',
-    description: 'Evoca Gift Card-e yerbeq chi hiasthaphecni. ayn idealakan nver e:\nGnir Evoca Gift Card, yev lavagujn nvere klini qone:\nEvoca Gift Card-ov karogh es vtcharel cankacad POS yev V-POS terminalov xanutnerum, srcarannerum, zvartchanqi kentronnerum, supermarkatnerum, onlayn xanutnerum:',
+    description: 'Evoca Gift Card-ը երբեք չի հիասթափեցնի. այն իդեալական նվեր է:\nԳնիր Evoca Gift Card, և լավագույն նվերը կլինի քոնը:\nEvoca Gift Card-ով կարող ես վճարել ցանկացած POS և V-POS տերմինալով խանութներում, սրճարաններում, զվարճանքի կենտրոններում, սուպերմարկետներում, օնլայն խանութներում:',
     image: 'https://www.evoca.am/images-cache/cards/1/17767720288483/415x261.png',
   },
   {
     id: 5,
     title: 'Digital Gift Card',
-    description: 'Araq yev harmaravet tvayin nver qart cankacad arithi hamar:',
+    description: 'Արագ և հարմարավետ թվային նվեր քարտ ցանկացած առիթի համար:',
     image: 'https://www.evoca.am/images-cache/cards/1/17282986912132/415x261.png',
   },
   {
     id: 6,
     title: 'Visa Infinite',
-    description: 'Dzer banalin` depi artonutyunneri mec ashxarh:\nQarte knviri Dzez bacarik hnaravorutyunneri phatheth` anvtang gnumneri, apahovagrvad tchampordutyunneri, VIP kargavitshaki dzerqberman hamar yev otch miayn:',
+    description: 'Ձեր բանալին՝ դեպի արտոնությունների մեծ աշխարհ:\nՔարտը կնվիրի Ձեզ բացառիկ հնարավորությունների փաթեթ՝ անվտանգ գնումների, ապահովագրված ճամփորդությունների, VIP կարգավիճակի ձեռքբերման համար և ոչ միայն: Այն կգոհացնի անգամ ամենաքմահաճ ու պահանջկոտ հաճախորդին:',
     image: 'https://www.evoca.am/images-cache/cards/1/1772717001933/415x261.png',
   },
   {
     id: 7,
     title: 'Visa Vision',
-    description: 'Evocabank-e nerkayacnum e ir nor` Visa Vision qarte, ori het du kstanas`',
+    description: 'Evocabank-ը ներկայացնում է իր նոր՝ Visa Vision քարտը, որի հետ դու կստանաս՝',
     bullets: [
-      '0% kanxikacum Evoca-i bolor bankomatneric',
-      'Cashback bolor ankanxik vtcharumneric',
-      'Drakan mnacordi vra gumari kutakum',
-      'Varkayin sahmanatshap` qo cankutyamb'
+      '0% կանխիկացում Evoca-ի բոլոր բանկոմատներից',
+      'Cashback բոլոր անկանխիկ վճարումներից',
+      'Դրական մնացորդի վրա գումարի կուտակում',
+      'Վարկային սահմանաչափ` քո ցանկությամբ'
     ],
     image: 'https://www.evoca.am/images-cache/cards/1/1714986482757/415x261.png',
   },
   {
     id: 8,
     title: 'Mastercard World Digital',
-    description: 'Patvirir tvayin qarte hima yev ayn hasaneli klini qo havelvacum hashvac ropeneri entagcum:',
+    description: 'Պատվիրիր թվային քարտը հիմա և այն հասանելի կլինի քո հավելվածում հաշված րոպեների ընթացքում։',
     image: 'https://www.evoca.am/images-cache/cards/1/17639683196125/415x261.png',
   },
   {
     id: 9,
     title: 'UnionPay Business Platinum',
-    description: 'Biznes gorcarqneri yev mijazgayin vtcharumneri husali gorcenker:',
+    description: 'Բիզնես գործարքների և միջազգային վճարումների հուսալի գործընկեր:',
     image: 'https://www.evoca.am/images-cache/cards/1/17249401821904/415x261.png',
   },
   {
     id: 10,
     title: 'MyLer Gift Card',
-    description: 'Yurahatuk nver qart lavagujn tpavorutyunneri hamar:',
+    description: 'Յուրահատուկ նվեր քարտ լավագույն տպավորությունների համար:',
     image: 'https://www.evoca.am/images-cache/cards/1/17655348192361/415x261.png',
   },
   {
     id: 11,
     title: 'UnionPay Gold',
-    description: 'Amboghj ashxarhum araq yev harmar vtcharumneri ughekice:',
+    description: 'Ամբողջ աշխարհում արագ և հարմար վճարումների ուղեկիցը։',
     image: 'https://www.evoca.am/images-cache/cards/1/17262129422977/415x261.png',
   },
   {
     id: 12,
     title: '4U.am Gift card',
-    description: 'Gnumneri layn hnaravorutyunner 4U.am harthakum:',
+    description: 'Գնումների լայն հնարավորություններ 4U.am հարթակում:',
     image: 'https://www.evoca.am/images-cache/cards/1/17485032554482/415x261.png',
   },
   {
     id: 13,
     title: 'Mastercard Gold',
-    description: 'Qarte kendergci qo kargavitshake yev anmoranali kdarcni qo bolor tchampordutyunnere:',
+    description: 'Քարտը կընդգծի քո կարգավիճակը և անմոռանալի կդարձնի քո բոլոր ճանապարհորդությունները:\nՀաշված րոպեների ընթացքում դու կկարողանաս նախապես գնել քո ավիատոմսը, ամրագրել հյուրանոցային համար կամ վարձել ավտոմեքենա՝ վճարելով Mastercard Gold քարտով:',
     image: 'https://www.evoca.am/images-cache/cards/1/17149865321136/415x261.png',
   },
   {
     id: 14,
     title: 'Mastercard Standard',
-    description: 'Amenorja gnumneric minchev anmoranali tchampordutyun` qo Mastercard Standard qartov:',
+    description: 'Ամենօրյա գնումներից մինչև անմոռանալի ճանապարհորդություն՝ քո Mastercard Standard քարտով:\nԵթե հաճախ ես ճամփորդում, այս քարտը քեզ համար պարզապես անհրաժեշտություն կդառնա։ Դու կկարողանաս նախապես գնել քո ավիատոմսը, ամրագրել հյուրանոցային համար կամ վարձել ավտոմեքենա` վճարելով Mastercard Standard քարտով։',
     image: 'https://www.evoca.am/images-cache/cards/1/17149866652788/415x261.png',
   },
   {
     id: 15,
     title: 'Visa Digital',
-    description: 'Anvtang yev araq arconc vtcharumner Visa Digital qartov:',
+    description: 'Անվտանգ և արագ առցանց վճարումներ Visa Digital քարտով:',
     image: 'https://www.evoca.am/images-cache/cards/1/17485025148319/415x261.png',
   },
   {
     id: 16,
     title: 'Visa Classic',
-    description: 'Universal vtcharayin qart, ore hasaneli klini ashxarhi cankacad ketum` 24/7 skzbunqov:',
+    description: 'Ունիվերսալ վճարային քարտ, որը հասանելի կլինի աշխարհի ցանկացած կետում` 24/7 սկզբունքով:\nԿատարիր մինչև 20,000 ՀՀ դրամի անհպում գործարքներ Visa Classic քարտով պարզ և արագ` առանց PIN կոդի մուտքագրման:',
     image: 'https://www.evoca.am/images-cache/cards/1/1714986642953/415x261.png',
   },
   {
     id: 17,
     title: 'Arca Classic',
-    description: 'Dzerq ber ArCa Classic qarte yev katarir qo gorcarqnere mer noraoch qarti ognutyamb:',
+    description: 'Ձեռք բեր ArCa Classic քարտը և կատարիր քո գործարքները մեր նորաոճ քարտի օգնությամբ:\nԸնդամենը մեկ հպում EvocaTOUCH հավելվածում և վերջ: Քարտը կարող ես ստանալ նույնիսկ առանց Բանկ այցելելու՝ հավելվածում նշելով առաքման տարբերակը: Evocabank-ը մշտապես հոգում է քո հարմարավետության մասին:',
     image: 'https://www.evoca.am/images-cache/cards/1/17404717644263/415x261.png',
   },
   {
     id: 18,
     title: 'Arca-UnionPay',
-    description: 'Petq che entroutyun kataral lokal yev mijazgayin qarteri mijev. Evoca-n miavorum e Arca yev UnionPay hamakargere:',
+    description: 'Պետք չէ ընտրություն կատարել լոկալ և միջազգային քարտերի միջև։\nEvoca-ն միավորում է Arca ազգային և UnionPay միջազգային վճարային համակարգերի հնարավորությունները մեկ քարտում` թողարկելով Arca-UnionPay քարտը:',
     image: 'https://www.evoca.am/images-cache/cards/1/17881574661708/415x261.png',
   },
   {
     id: 19,
     title: 'Visa Business',
-    description: 'Mekneq gorcurman Evocabank-i Visa Business qartov: Dzer kazmakerputyan dramakan mijocnere hasaneli en bolor keterum:',
+    description: 'Մեկնեք գործուղման Evocabank-ի Visa Business քարտով։ Նախապես գնեք Ձեր ավիատոմսը, ամրագրեք հյուրանոցային համար կամ վարձեք ավտոմեքենա։\nՁեր կազմակերպության դրամական միջոցները հասանելի են աշխարհի բոլոր կետերում:',
     image: 'https://www.evoca.am/images-cache/cards/1/17149865475676/415x261.png',
   },
   {
     id: 20,
     title: 'Dalma Gift Card',
-    description: 'Nver entreln ajlevs dzvar che. Dalma Gift Card-e nveri idealakan tarberak e:',
+    description: 'Նվեր ընտրելն այլևս դժվար չէ: 21-րդ դարում տոներին Gift քարտ նվիրելը նորաձև է դարձել։ Դու որոշում ես՝ որքան գումար տալ, նրանք որոշում են՝ որտեղ ծախսեն:\nDalma Gift Card-ը նվերի իդեալական տարբերակ է, որը համապատասխանում է նվեր ընտրելու քո բոլոր պահանջներին։',
     image: 'https://www.evoca.am/images-cache/cards/1/17404717113297/415x261.png',
   },
   {
     id: 21,
     title: 'Rio Gift Card',
-    description: 'Mez het du karogh es xnayel zhamanake, bajc unenal nveri lavagujn tarberake:',
+    description: 'Մեզ հետ դու կարող ես խնայել ամենաթանկը՝ ժամանակը, բայց նույն պահին ունենալ նվերի լավագույն տարբերակը։',
     image: 'https://www.evoca.am/images-cache/cards/1/17404717289057/415x261.png',
   },
   {
     id: 22,
     title: 'Visa Gold',
-    description: 'Qartn apahovum e Dzer harmaravetutyunn u hatcheli darcnum cankacad gnum: Visa Gold qarte tchampordutjan voghj entagcum klini Dzer husali ughekice:',
+    description: 'Քարտն ապահովում է Ձեր հարմարավետությունն ու հաճելի դարձնում ցանկացած գնում:\nVisa Gold քարտը ճամփորդության ողջ ընթացքում կլինի Ձեր հուսալի ուղեկիցն ու կընդգծի Ձեր յուրահատուկ կարգավիճակը:',
     image: 'https://www.evoca.am/images-cache/cards/1/17149865646885/415x261.png',
   },
 ];
@@ -152,7 +152,7 @@ export default function CardsSliderSection() {
     <section className="py-16 px-4 md:px-8 bg-[#f0f7fe] transition-colors duration-300">
       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8 md:gap-12">
         
-        {/* Left Side: Vertical Swiper without any hover effects */}
+        {/* Left Side: Vertical Swiper without hover background */}
         <div className="w-full lg:w-4/12 flex flex-col items-center relative">
           
           {/* Top Arrow */}
