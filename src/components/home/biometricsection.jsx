@@ -28,7 +28,7 @@ function BiometricSection() {
     <section className="py-12 lg:py-20 bg-white overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 lg:px-8 flex flex-col lg:flex-row items-center justify-between gap-12">
         
-        {/* Dzak mas - Verev bardzracvats demq ev erankyuni */}
+        {/* Dzak mas - Ajun thode var shift kele ahe (-translate-y-10) */}
         <div className="lg:w-1/2 flex justify-center items-center relative min-h-[440px]">
           
           {/* Hetnamasi ketagçayin shrjanner */}
@@ -38,7 +38,7 @@ function BiometricSection() {
 
           {/* Manushakaguyn erankyunaձev fon (#6400DC) */}
           <div 
-            className="absolute w-[400px] h-[370px] bg-[#6400DC] pointer-events-none -translate-y-4"
+            className="absolute w-[400px] h-[370px] bg-[#6400DC] pointer-events-none -translate-y-10"
             style={{
               clipPath: 'polygon(0% 0%, 100% 0%, 50% 100%)',
               borderTopLeftRadius: '40px',
@@ -46,8 +46,8 @@ function BiometricSection() {
             }}
           ></div>
           
-          {/* Demqi nkary verev hanvats (-translate-y-6) */}
-          <div className="relative z-10 flex justify-center items-center w-[400px] h-[440px] -translate-y-6">
+          {/* Demqi nkary ajun var hanvats (-translate-y-12) */}
+          <div className="relative z-10 flex justify-center items-center w-[400px] h-[440px] -translate-y-12">
             <img 
               src={faces[faceIndex]} 
               alt="Biometric Identification" 
