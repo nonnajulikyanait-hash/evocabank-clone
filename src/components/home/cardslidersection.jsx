@@ -145,14 +145,14 @@ const cardsData = [
 ];
 
 export default function CardsSliderSection() {
-  const [selectedCard, setSelectedCard] = useState(cardsData[2]); // Wilco Visa Infinite default
+  const [selectedCard, setSelectedCard] = useState(cardsData[4]); // Digital Gift Card default
   const [swiperInstance, setSwiperInstance] = useState(null);
 
   return (
     <section className="py-16 px-4 md:px-8 bg-[#f0f7fe] transition-colors duration-300">
       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8 md:gap-12">
         
-        {/* Left Side: Vertical Swiper with working purple arrows */}
+        {/* Left Side: Vertical Swiper without any hover effects */}
         <div className="w-full lg:w-4/12 flex flex-col items-center relative">
           
           {/* Top Arrow */}
@@ -166,7 +166,7 @@ export default function CardsSliderSection() {
             </svg>
           </button>
 
-          {/* Vertical Swiper Container - Transparent background */}
+          {/* Vertical Swiper Container - Fully Transparent */}
           <div className="h-[360px] w-full max-w-[280px]">
             <Swiper
               direction={'vertical'}
@@ -181,17 +181,16 @@ export default function CardsSliderSection() {
                 <SwiperSlide key={card.id}>
                   <div
                     onClick={() => setSelectedCard(card)}
-                    onMouseEnter={() => setSelectedCard(card)}
-                    className={`flex flex-col items-center justify-center p-3 rounded-2xl cursor-pointer transition-all duration-300 bg-transparent ${
+                    className={`flex flex-col items-center justify-center p-3 rounded-2xl cursor-pointer bg-transparent transition-all duration-200 ${
                       selectedCard.id === card.id 
-                        ? 'border-2 border-[#6400dc] shadow-md bg-white/40 scale-105' 
-                        : 'border border-transparent opacity-80 hover:opacity-100 hover:scale-102'
+                        ? 'border-b-2 border-[#6400dc]' 
+                        : 'border-b-2 border-transparent opacity-70'
                     }`}
                   >
                     <img 
                       src={card.image} 
                       alt={card.title} 
-                      className="w-24 h-15 object-contain transition-transform duration-300 hover:scale-110"
+                      className="w-24 h-15 object-contain"
                     />
                     <span className="text-xs font-bold text-gray-800 mt-1 text-center truncate w-full">
                       {card.title}
@@ -216,11 +215,11 @@ export default function CardsSliderSection() {
 
         {/* Center: Selected Card Image Display */}
         <div className="w-full lg:w-4/12 flex justify-center items-center py-4">
-          <div className="relative group">
+          <div className="relative">
             <img 
               src={selectedCard.image} 
               alt={selectedCard.title} 
-              className="w-[340px] md:w-[380px] h-auto object-contain drop-shadow-2xl transition-all duration-500 transform group-hover:scale-108 group-hover:-rotate-1"
+              className="w-[340px] md:w-[380px] h-auto object-contain drop-shadow-2xl transition-all duration-300"
             />
           </div>
         </div>
@@ -246,7 +245,7 @@ export default function CardsSliderSection() {
           </div>
 
           <div className="pt-2">
-            <button className="bg-[#6400dc] hover:bg-[#5200b8] text-white font-bold text-sm px-8 py-3.5 rounded-full shadow-lg transition-all transform hover:scale-105 cursor-pointer">
+            <button className="bg-[#6400dc] hover:bg-[#5200b8] text-white font-bold text-sm px-8 py-3.5 rounded-full shadow-lg transition-all cursor-pointer">
               Մանրամասն
             </button>
           </div>
