@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
@@ -98,45 +98,73 @@ const slidesData = [
 ];
 
 export default function EvocaCardSlider() {
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
+
   return (
-    <section className="py-8 px-6 bg-white">
-      <div className="container mx-auto">
+    <section className="w-full overflow-hidden bg-white pt-2">
+      <div className="w-full">
         <Swiper
           modules={[Autoplay, Pagination, Navigation]}
-          spaceBetween={30}
+          spaceBetween={0}
           slidesPerView={1}
           autoplay={{ delay: 4000, disableOnInteraction: false }}
-          pagination={{ clickable: true }}
-          navigation={true}
-          className="rounded-[40px] overflow-hidden shadow-xl"
+          pagination={{
+            el: '.custom-pagination',
+            clickable: true,
+          }}
+          navigation={{
+            prevEl: prevRef.current,
+            nextEl: nextRef.current,
+          }}
+          onBeforeInit={(swiper) => {
+            swiper.params.navigation.prevEl = prevRef.current;
+            swiper.params.navigation.nextEl = nextRef.current;
+          }}
+          className="relative w-full rounded-bl-[160px] overflow-hidden"
         >
           {slidesData.map((slide) => (
             <SwiperSlide key={slide.id}>
-              <div className={`${slide.bgColor} p-8 md:p-16 flex flex-col md:flex-row items-center justify-between gap-8 min-h-[460px] transition-colors duration-500`}>
-                <div className="max-w-lg text-left space-y-6 z-10">
-                  <h2 className={`text-3xl md:text-5xl font-extrabold tracking-tight ${slide.textColor}`}>
+              <div className={`${slide.bgColor} px-12 md:px-24 pt-16 pb-24 flex flex-col md:flex-row items-center justify-between min-h-[500px] transition-colors duration-500`}>
+                
+                {/* Text section */}
+                <div className="max-w-xl text-left space-y-6 z-10">
+                  <h1 className={`text-4xl md:text-5xl font-black tracking-tight leading-tight ${slide.textColor}`}>
                     {slide.title}
-                  </h2>
-                  <p className={`text-lg leading-relaxed ${slide.descColor}`}>
+                  </h1>
+                  <p className={`text-base md:text-lg font-normal ${slide.descColor}`}>
                     {slide.description}
                   </p>
-                  <div>
-                    <button className={`${slide.btnBg} hover:opacity-90 font-bold text-sm px-8 py-3.5 rounded-full transition shadow-lg cursor-pointer`}>
+                  <div className="pt-2">
+                    <button className={`${slide.btnBg} font-bold text-xs px-8 py-3.5 rounded-full transition cursor-pointer shadow-md hover:opacity-90`}>
                       {slide.btnText}
                     </button>
                   </div>
                 </div>
 
-                <div className="w-full md:w-1/2 flex justify-center items-center z-10">
+                {/* Image section */}
+                <div className="w-full md:w-1/2 flex justify-center items-center z-10 mt-6 md:mt-0">
                   <img 
                     src={slide.image} 
                     alt={slide.title} 
-                    className="max-h-[360px] object-contain drop-shadow-2xl hover:scale-105 transition duration-500"
+                    className="max-h-[380px] object-contain drop-shadow-xl"
                   />
                 </div>
+
               </div>
             </SwiperSlide>
           ))}
+
+          {/* Bottom Custom Navigation Arrows & Dots */}
+          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-30 flex items-center gap-4">
+            <button ref={prevRef} className="text-white hover:opacity-75 transition text-xl font-bold px-2 cursor-pointer">
+              ←
+            </button>
+            <div className="custom-pagination flex items-center gap-2"></div>
+            <button ref={nextRef} className="text-white hover:opacity-75 transition text-xl font-bold px-2 cursor-pointer">
+              →
+            </button>
+          </div>
         </Swiper>
       </div>
     </section>
