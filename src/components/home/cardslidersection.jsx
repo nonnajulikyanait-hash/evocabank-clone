@@ -1,8 +1,7 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Mousewheel } from 'swiper/modules';
+import { Mousewheel } from 'swiper/modules';
 import 'swiper/css';
-import 'swiper/css/navigation';
 
 const cardsData = [
   {
@@ -146,20 +145,19 @@ const cardsData = [
 ];
 
 export default function CardsSliderSection() {
-  const [selectedCard, setSelectedCard] = useState(cardsData[21]); // Visa Gold by default as shown in image
-  const prevRef = useRef(null);
-  const nextRef = useRef(null);
+  const [selectedCard, setSelectedCard] = useState(cardsData[2]); // Wilco Visa Infinite default
+  const [swiperInstance, setSwiperInstance] = useState(null);
 
   return (
     <section className="py-16 px-4 md:px-8 bg-[#f0f7fe] transition-colors duration-300">
       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8 md:gap-12">
         
-        {/* Left Side: Vertical Swiper with Top/Bottom Purple Arrows */}
+        {/* Left Side: Vertical Swiper with working purple arrows */}
         <div className="w-full lg:w-4/12 flex flex-col items-center relative">
           
           {/* Top Arrow */}
           <button 
-            ref={prevRef}
+            onClick={() => swiperInstance?.slidePrev()}
             className="z-10 p-2 text-[#6400dc] hover:scale-125 transition-transform duration-200 cursor-pointer mb-2"
             aria-label="Previous card"
           >
@@ -168,22 +166,15 @@ export default function CardsSliderSection() {
             </svg>
           </button>
 
-          {/* Vertical Swiper Container */}
+          {/* Vertical Swiper Container - Transparent background */}
           <div className="h-[360px] w-full max-w-[280px]">
             <Swiper
               direction={'vertical'}
               slidesPerView={3}
               spaceBetween={16}
               mousewheel={true}
-              modules={[Navigation, Mousewheel]}
-              navigation={{
-                prevEl: prevRef.current,
-                nextEl: nextRef.current,
-              }}
-              onBeforeInit={(swiper) => {
-                swiper.params.navigation.prevEl = prevRef.current;
-                swiper.params.navigation.nextEl = nextRef.current;
-              }}
+              modules={[Mousewheel]}
+              onSwiper={setSwiperInstance}
               className="h-full w-full"
             >
               {cardsData.map((card) => (
@@ -191,10 +182,10 @@ export default function CardsSliderSection() {
                   <div
                     onClick={() => setSelectedCard(card)}
                     onMouseEnter={() => setSelectedCard(card)}
-                    className={`flex flex-col items-center justify-center p-3 rounded-2xl cursor-pointer transition-all duration-300 bg-white shadow-sm border ${
+                    className={`flex flex-col items-center justify-center p-3 rounded-2xl cursor-pointer transition-all duration-300 bg-transparent ${
                       selectedCard.id === card.id 
-                        ? 'border-[#6400dc] shadow-md ring-2 ring-[#6400dc]/20 scale-105' 
-                        : 'border-transparent opacity-80 hover:opacity-100 hover:scale-102'
+                        ? 'border-2 border-[#6400dc] shadow-md bg-white/40 scale-105' 
+                        : 'border border-transparent opacity-80 hover:opacity-100 hover:scale-102'
                     }`}
                   >
                     <img 
@@ -213,7 +204,7 @@ export default function CardsSliderSection() {
 
           {/* Bottom Arrow */}
           <button 
-            ref={nextRef}
+            onClick={() => swiperInstance?.slideNext()}
             className="z-10 p-2 text-[#6400dc] hover:scale-125 transition-transform duration-200 cursor-pointer mt-2"
             aria-label="Next card"
           >
