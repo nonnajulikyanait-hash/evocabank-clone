@@ -1,7 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 export default function Navbar() {
+  const location = useLocation();
+  const isLoansActive = location.pathname === '/loans';
+
   return (
     <header className="w-full bg-white border-b border-gray-100 sticky top-0 z-50">
       {/* Top Bar */}
@@ -42,8 +45,11 @@ export default function Navbar() {
 
         {/* Links */}
         <nav className="hidden lg:flex items-center gap-7 text-[13px] font-bold text-gray-800">
-          {/* «Վարկեր» կոճակը հիմա տանում է /loans էջ */}
-          <Link to="/loans" className="hover:text-[#6400dc] transition">
+          {/* «Վարկեր» կոճակը հիմա ավտոմատ դառնում է մանուշակագույն, երբ գտնվում ես /loans էջում */}
+          <Link 
+            to="/loans" 
+            className={`transition ${isLoansActive ? 'text-[#6400dc]' : 'text-gray-800 hover:text-[#6400dc]'}`}
+          >
             Վարկեր
           </Link>
           <a href="#" className="hover:text-[#6400dc] transition">Քարտեր</a>

@@ -405,16 +405,16 @@ export default function AnhatVarker() {
     <div className="min-h-screen bg-white font-sans text-neutral-800">
       <Navbar />
       
-      {/* Sub-header Purple Bar (#6400dc) with Active "Վարկեր" Link */}
+      {/* Sub-header Purple Bar (#6400dc) with Fixed Text Colors */}
       <div className="bg-[#6400dc] text-white py-3 px-4 shadow-inner">
         <div className="max-w-7xl mx-auto flex items-center space-x-8 text-xs sm:text-sm font-semibold overflow-x-auto whitespace-nowrap">
-          <Link to="/loans" className="border-b-2 border-white pb-1 cursor-pointer">
+          <Link to="/loans" className="text-white border-b-2 border-white pb-1 cursor-pointer">
             Վարկեր
           </Link>
-          <Link to="/credit-history-and-score" className="opacity-80 hover:opacity-100 cursor-pointer">
+          <Link to="/credit-history-and-score" className="text-white opacity-80 hover:opacity-100 cursor-pointer">
             Վարկային պատմություն և սքոր
           </Link>
-          <Link to="/important-information" className="opacity-80 hover:opacity-100 cursor-pointer">
+          <Link to="/important-information" className="text-white opacity-80 hover:opacity-100 cursor-pointer">
             Կարևոր տեղեկատվություն
           </Link>
         </div>
