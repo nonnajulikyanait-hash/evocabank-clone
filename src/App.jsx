@@ -16,7 +16,8 @@ import CreditHistoryAndScore from './components/home/credithistoryandscore';
 import ImportantInformation from './components/home/importantinformation';
 import UnsecuredConsumerLoan from './components/home/unsecuredconsumerloan';
 import LoanDetail from './components/home/loandetail';
-import Qarter from './components/home/qarter'; // Ճշգրտված իմպորտ ըստ քո ֆայլի անվան
+import Qarter from './components/home/qarter';
+import AnhatAvandner from './components/home/anhatavandner'; // Ավանդների էջի իմպորտ
 
 function HomePage() {
   return (
@@ -56,6 +57,9 @@ function App() {
         
         {/* Քարտերի էջ (qarter.jsx) */}
         <Route path="/cards" element={<Qarter />} />
+
+        {/* Ավանդների էջ (anhatavandner.jsx) */}
+        <Route path="/deposits" element={<AnhatAvandner />} />
         
         {/* Վարկային պատմություն և սքոր */}
         <Route path="/credit-history-and-score" element={<CreditHistoryAndScore />} />
