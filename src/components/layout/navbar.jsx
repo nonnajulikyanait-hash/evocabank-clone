@@ -6,6 +6,7 @@ export default function Navbar() {
   const isLoansActive = location.pathname === '/loans';
   const isCardsActive = location.pathname === '/cards';
   const isDepositsActive = location.pathname === '/deposits' || location.pathname === '/anhat-avandner';
+  const isAccountsActive = location.pathname === '/accounts' || location.pathname === '/hashivner';
 
   return (
     <header className="w-full bg-white border-b border-gray-100 sticky top-0 z-50">
@@ -71,7 +72,14 @@ export default function Navbar() {
             Ավանդներ
           </Link>
 
-          <a href="#" className="hover:text-[#6400dc] transition">Հաշիվներ</a>
+          {/* «Հաշիվներ» */}
+          <Link 
+            to="/accounts" 
+            className={`transition ${isAccountsActive ? 'text-[#6400dc]' : 'text-gray-800 hover:text-[#6400dc]'}`}
+          >
+            Հաշիվներ
+          </Link>
+
           <a href="#" className="hover:text-[#6400dc] transition">Փոխանցումներ</a>
           <a href="#" className="hover:text-[#6400dc] transition">Արժեթղթեր</a>
           <a href="#" className="hover:text-[#6400dc] transition">EvocaSALARY</a>

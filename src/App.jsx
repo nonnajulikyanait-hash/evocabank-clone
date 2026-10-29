@@ -17,7 +17,8 @@ import ImportantInformation from './components/home/importantinformation';
 import UnsecuredConsumerLoan from './components/home/unsecuredconsumerloan';
 import LoanDetail from './components/home/loandetail';
 import Qarter from './components/home/qarter';
-import AnhatAvandner from './components/home/anhatavandner'; // Ավանդների էջի իմպորտ
+import AnhatAvandner from './components/home/anhatavandner';
+import Hashivner from './components/home/hashivner'; // Հաշիվների էջի իմպորտ
 
 function HomePage() {
   return (
@@ -60,6 +61,9 @@ function App() {
 
         {/* Ավանդների էջ (anhatavandner.jsx) */}
         <Route path="/deposits" element={<AnhatAvandner />} />
+
+        {/* Հաշիվների էջ (hashivner.jsx) */}
+        <Route path="/accounts" element={<Hashivner />} />
         
         {/* Վարկային պատմություն և սքոր */}
         <Route path="/credit-history-and-score" element={<CreditHistoryAndScore />} />
