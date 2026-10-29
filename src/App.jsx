@@ -5,6 +5,8 @@ import BiometricSection from './components/home/biometricsection';
 import StatueSection from './components/home/statuesection';
 import CardsSliderSection from './components/home/cardslidersection';
 import CalculatorSection from './components/home/calculatorsection';
+import EvocaOnlineMobile from './components/home/evocaonlinemobile';
+
 
 function App() {
   return (
@@ -16,6 +18,7 @@ function App() {
         <StatueSection />
         <CardsSliderSection />
         <CalculatorSection />
+        <EvocaOnlineMobile/>
       </main>
     </div>
   );
