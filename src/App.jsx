@@ -15,6 +15,7 @@ import AnhatVarker from './components/home/anhatvarker';
 import CreditHistoryAndScore from './components/home/credithistoryandscore';
 import ImportantInformation from './components/home/importantinformation';
 import UnsecuredConsumerLoan from './components/home/unsecuredconsumerloan';
+import LoanDetail from './components/home/loandetail';
 
 function HomePage() {
   return (
@@ -46,8 +47,11 @@ function App() {
         {/* Վարկերի էջ */}
         <Route path="/loans" element={<AnhatVarker />} />
         
-        {/* Անգրավ սպառողական վարկի մանրամասն էջ */}
+        {/* Հատուկ Անգրավ սպառողական վարկի մանրամասն էջ */}
         <Route path="/loans/unsecured-consumer-loan" element={<UnsecuredConsumerLoan />} />
+        
+        {/* Բոլոր մյուս վարկերի ընդհանուր դինամիկ էջը */}
+        <Route path="/loans/:id" element={<LoanDetail />} />
         
         {/* Վարկային պատմություն և սքոր */}
         <Route path="/credit-history-and-score" element={<CreditHistoryAndScore />} />
