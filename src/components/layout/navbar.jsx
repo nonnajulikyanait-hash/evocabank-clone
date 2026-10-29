@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 export default function Navbar() {
   const location = useLocation();
   const navigate = useNavigate();
 
-  // Check active state for Business section
   const isBusinessSection = location.pathname.startsWith('/business') || location.pathname === '/biznesvarker';
   
   const isLoansActive = location.pathname === '/loans';
@@ -23,7 +22,6 @@ export default function Navbar() {
       <div className="bg-[#f8f9fa] border-b border-gray-100 text-[11px] text-gray-600 py-1.5 px-8">
         <div className="container mx-auto flex justify-between items-center">
           <div className="flex gap-5 font-normal">
-            {/* Անհատ Tab */}
             <Link 
               to="/" 
               className={`pb-1 cursor-pointer transition ${!isBusinessSection ? 'text-[#6400dc] border-b-2 border-[#6400dc] font-semibold' : 'hover:text-[#6400dc]'}`}
@@ -31,7 +29,6 @@ export default function Navbar() {
               Անհատ
             </Link>
 
-            {/* Բիզնես Tab (Clicks and goes directly to biznesvarker / business-loans) */}
             <span 
               onClick={() => navigate('/business-loans')}
               className={`cursor-pointer transition ${isBusinessSection ? 'text-[#6400dc] border-b-2 border-[#6400dc] font-semibold' : 'hover:text-[#6400dc]'}`}
@@ -61,13 +58,11 @@ export default function Navbar() {
 
       {/* Main Navbar */}
       <div className="container mx-auto py-3 px-8 flex justify-between items-center">
-        {/* Logo */}
         <Link to="/" className="flex items-center gap-1.5 cursor-pointer">
           <span className="text-2xl font-black text-[#6400dc] tracking-tighter">evoca</span>
           <span className="w-2 h-2 bg-[#6400dc] rounded-full"></span>
         </Link>
 
-        {/* Links (Changes based on whether user is in Business or Individual mode) */}
         {!isBusinessSection ? (
           <nav className="hidden lg:flex items-center gap-7 text-[13px] font-bold text-gray-800">
             <Link to="/loans" className={`transition ${isLoansActive ? 'text-[#6400dc]' : 'text-gray-800 hover:text-[#6400dc]'}`}>
@@ -96,7 +91,6 @@ export default function Navbar() {
             </Link>
           </nav>
         ) : (
-          /* Business Sub-Header Menu (As seen in your screenshot) */
           <nav className="hidden lg:flex items-center gap-7 text-[13px] font-bold text-gray-800">
             <Link to="/business-loans" className="text-[#6400dc] transition">Վարկեր</Link>
             <span className="hover:text-[#6400dc] cursor-pointer transition">Լինգինգ</span>
@@ -109,7 +103,6 @@ export default function Navbar() {
           </nav>
         )}
 
-        {/* Button */}
         <Link 
           to="/evocaonline" 
           target="_blank" 
@@ -120,7 +113,7 @@ export default function Navbar() {
         </Link>
       </div>
 
-      {/* Purple Sub-Bar for Business Loans (As shown in screenshot) */}
+      {/* Single Purple Sub-Bar for Business Loans */}
       {isBusinessSection && (
         <div className="bg-[#6400dc] text-white py-2 px-8 text-xs font-medium">
           <div className="container mx-auto">
