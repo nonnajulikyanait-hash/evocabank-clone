@@ -9,6 +9,7 @@ export default function Navbar() {
   const isAccountsActive = location.pathname === '/accounts' || location.pathname === '/hashivner';
   const isTransfersActive = location.pathname === '/transfers' || location.pathname === '/poxancumner';
   const isSecuritiesActive = location.pathname === '/securities' || location.pathname === '/arjetxter';
+  const isEvocaSalaryActive = location.pathname === '/evocasalary';
 
   return (
     <header className="w-full bg-white border-b border-gray-100 sticky top-0 z-50">
@@ -98,7 +99,14 @@ export default function Navbar() {
             Արժեթղթեր
           </Link>
 
-          <a href="#" className="hover:text-[#6400dc] transition">EvocaSALARY</a>
+          {/* «EvocaSALARY» */}
+          <Link 
+            to="/evocasalary" 
+            className={`transition ${isEvocaSalaryActive ? 'text-[#6400dc]' : 'text-gray-800 hover:text-[#6400dc]'}`}
+          >
+            EvocaSALARY
+          </Link>
+
           <a href="#" className="hover:text-[#6400dc] transition">EvocaTOUCH</a>
         </nav>
 

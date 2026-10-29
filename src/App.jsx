@@ -21,6 +21,7 @@ import AnhatAvandner from './components/home/anhatavandner';
 import Hashivner from './components/home/hashivner'; // Հաշիվների էջի իմպորտ
 import Poxancumner from './components/home/poxancumner'; // Փոխանցումների էջի իմպորտ
 import Arjetxter from './components/home/arjetxter'; // Արժեթղթերի էջի իմպորտ
+import EvocaSalary from './components/home/evocasalary'; // EvocaSALARY էջի իմպորտ
 
 function HomePage() {
   return (
@@ -72,6 +73,9 @@ function App() {
 
         {/* Արժեթղթերի էջ (arjetxter.jsx) */}
         <Route path="/securities" element={<Arjetxter />} />
+
+        {/* EvocaSALARY էջ (evocasalary.jsx) */}
+        <Route path="/evocasalary" element={<EvocaSalary />} />
         
         {/* Վարկային պատմություն և սքոր */}
         <Route path="/credit-history-and-score" element={<CreditHistoryAndScore />} />
