@@ -122,7 +122,7 @@ export default function AnhatVarker() {
       image: 'https://www.evoca.am/images-cache/loans/1/17364209867562/415x261.png',
       stats: [
         { label: 'Գումար', value: 'մինչև 55 մլն ֏' },
-        { label: 'Մարման ժամկետ', value: 'մինչև 120 ամիս' },
+        { label: 'Ժամկետ', value: 'մինչև 120 ամիս' },
         { label: 'Տոկոսադրույք', value: '13%' }
       ]
     },
@@ -503,9 +503,12 @@ export default function AnhatVarker() {
                       Մանրամասն &gt;
                     </Link>
                   ) : (
-                    <button className="bg-purple-50 hover:bg-purple-100 text-[#6400dc] font-bold text-xs px-6 py-3 rounded-full transition-all cursor-pointer">
+                    <Link 
+                      to={`/loans/${loan.id}`} 
+                      className="bg-purple-50 hover:bg-purple-100 text-[#6400dc] font-bold text-xs px-6 py-3 rounded-full transition-all cursor-pointer inline-block"
+                    >
                       Մանրամասն &gt;
-                    </button>
+                    </Link>
                   )}
                 </div>
               </div>
