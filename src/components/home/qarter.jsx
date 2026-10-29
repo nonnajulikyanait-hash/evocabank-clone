@@ -365,7 +365,6 @@ export default function Qarter() {
             >
               Սոցիալական ապահովության վճարային քարտեր
             </span>
-            <span className="text-white opacity-80 hover:opacity-100 cursor-pointer">Evoca Benefits</span>
           </div>
         </div>
 
