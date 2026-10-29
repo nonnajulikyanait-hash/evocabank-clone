@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 
 export default function EvocaOnline() {
+  const [lang, setLang] = useState('HY'); // 'HY', 'EN', 'RU'
+  const [showLangMenu, setShowLangMenu] = useState(false);
+
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   
@@ -11,6 +14,61 @@ export default function EvocaOnline() {
   // Modals
   const [showQrModal, setShowQrModal] = useState(false);
   const [showErrorModal, setShowErrorModal] = useState(false);
+
+  // Translations object
+  const t = {
+    HY: {
+      loginTitle: "Մուտք համակարգ",
+      usernamePlaceholder: "Մուտքանուն",
+      passwordPlaceholder: "Գաղտնաբառ",
+      loginBtn: "Մուտք",
+      forgotPass: "Մոռաց՞ել եք մուտքանունը կամ գաղտնաբառը",
+      qrBtn: "Մուտք QR կոդով",
+      oldVersion: "Կայքի հին տարբերակ",
+      bankSupervised: "Բանկը վերահսկվում է ՀՀ Կենտրոնական բանկի կողմից",
+      version: "Տարբերակ 8.19.0",
+      emptyFieldError: "Դաշտը լրացված չէ",
+      qrTitle: "Արագ և ապահով",
+      qrDesc: "Եթե ունեք EvocaTOUCH հավելվածը, սկանավորեք QR կոդը՝ ավելի արագ մուտք գործելու համար։",
+      errorTitle: "Հաղորդագրություն",
+      errorText: "Մուտքանունը կամ գաղտնաբառը սխալ է:\n3 անընդմեջ անհաջող փորձերի դեպքում Ձեր մուտքը համակարգ կարգելափակվի:\nԵթե չեք հիշում Ձեր մուտքանունը կամ գաղտնաբառը, խնդրում ենք օգտվել «Մոռաց՞ել եք գաղտնաբառը» հղումից կամ զանգահարել Բանկ:\nՀեռ.՝ (+374 10) 60 55 55",
+      okBtn: "Լավ"
+    },
+    EN: {
+      loginTitle: "Sign In",
+      usernamePlaceholder: "Username",
+      passwordPlaceholder: "Password",
+      loginBtn: "Sign In",
+      forgotPass: "Forgot username or password?",
+      qrBtn: "Sign In with QR Code",
+      oldVersion: "Old version of the website",
+      bankSupervised: "The bank is supervised by the Central Bank of RA",
+      version: "Version 8.19.0",
+      emptyFieldError: "Field is required",
+      qrTitle: "Fast and Secure",
+      qrDesc: "If you have the EvocaTOUCH app, scan the QR code to log in faster.",
+      errorTitle: "Message",
+      errorText: "Incorrect username or password.\nAfter 3 consecutive failed attempts, your access will be blocked.\nIf you forgot your credentials, please use the 'Forgot password' link or call the Bank:\nTel.: (+374 10) 60 55 55",
+      okBtn: "OK"
+    },
+    RU: {
+      loginTitle: "Вход в систему",
+      usernamePlaceholder: "Имя пользователя",
+      passwordPlaceholder: "Пароль",
+      loginBtn: "Вход",
+      forgotPass: "Забыли имя пользователя или пароль?",
+      qrBtn: "Вход по QR-коду",
+      oldVersion: "Старая версия сайта",
+      bankSupervised: "Банк контролируется Центральным банком РА",
+      version: "Версия 8.19.0",
+      emptyFieldError: "Поле не заполнено",
+      qrTitle: "Быстро и безопасно",
+      qrDesc: "Если у вас есть приложение EvocaTOUCH, отсканируйте QR-код для более быстрого входа.",
+      errorTitle: "Сообщение",
+      errorText: "Неверное имя пользователя или пароль.\nВ случае 3 неудачных попыток подряд ваш доступ будет заблокирован.\nЕсли вы забыли данные, воспользуйтесь ссылкой 'Забыли пароль' или позвоните в Банк:\nТел.: (+374 10) 60 55 55",
+      okBtn: "Хорошо"
+    }
+  };
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -35,7 +93,7 @@ export default function EvocaOnline() {
       return;
     }
 
-    // Եթե տվյալները լրացված են, բայց սխալ/անկապ են, բացում ենք սխալի մոդալը
+    // Եթե սխալ կամ անկապ բան է գրված, բացում ենք սխալի մոդալը
     setShowErrorModal(true);
   };
 
@@ -43,14 +101,44 @@ export default function EvocaOnline() {
     <div className="min-h-screen bg-slate-100 font-sans flex flex-col justify-between relative select-none">
       
       {/* Top Navigation / Header */}
-      <header className="w-full bg-white border-b border-gray-200 py-4 px-8 flex justify-between items-center shadow-xs">
+      <header className="w-full bg-white border-b border-gray-200 py-4 px-8 flex justify-between items-center shadow-xs relative">
         <div className="flex items-center gap-1.5 cursor-pointer">
           <span className="text-2xl font-black text-[#6400dc] tracking-tighter">evoca</span>
           <span className="w-2 h-2 bg-[#6400dc] rounded-full"></span>
           <span className="text-xl font-bold text-neutral-700 ml-1">BANK</span>
         </div>
-        <div className="flex items-center gap-4 text-gray-600">
-          <span className="cursor-pointer text-lg">🌐</span>
+
+        {/* Language Switcher Dropdown (3rd screenshot style) */}
+        <div className="relative">
+          <button 
+            onClick={() => setShowLangMenu(!showLangMenu)}
+            className="flex items-center gap-2 p-2 rounded-xl hover:bg-gray-100 cursor-pointer text-gray-700 font-bold text-sm"
+          >
+            <span>🌐</span>
+          </button>
+
+          {showLangMenu && (
+            <div className="absolute right-0 mt-2 w-24 bg-white rounded-2xl shadow-lg border border-gray-100 py-2 z-50 text-center">
+              <button 
+                onClick={() => { setLang('EN'); setShowLangMenu(false); }}
+                className={`w-full py-1.5 text-xs font-bold transition cursor-pointer hover:bg-purple-50 ${lang === 'EN' ? 'text-[#6400dc] bg-purple-50' : 'text-gray-600'}`}
+              >
+                ENG
+              </button>
+              <button 
+                onClick={() => { setLang('HY'); setShowLangMenu(false); }}
+                className={`w-full py-1.5 text-xs font-bold transition cursor-pointer hover:bg-purple-50 ${lang === 'HY' ? 'text-[#6400dc] bg-purple-50' : 'text-gray-600'}`}
+              >
+                ՀԱՅ
+              </button>
+              <button 
+                onClick={() => { setLang('RU'); setShowLangMenu(false); }}
+                className={`w-full py-1.5 text-xs font-bold transition cursor-pointer hover:bg-purple-50 ${lang === 'RU' ? 'text-[#6400dc] bg-purple-50' : 'text-gray-600'}`}
+              >
+                РУС
+              </button>
+            </div>
+          )}
         </div>
       </header>
 
@@ -58,7 +146,7 @@ export default function EvocaOnline() {
       <main className="flex-grow flex flex-col items-center justify-center px-4 py-12">
         <div className="bg-white rounded-[24px] shadow-xl w-full max-w-md p-8 border border-gray-100">
           <h2 className="text-xl font-bold text-neutral-900 mb-6 text-center">
-            Մուտք համակարգ
+            {t[lang].loginTitle}
           </h2>
 
           <form onSubmit={handleLogin} className="space-y-4">
@@ -66,7 +154,7 @@ export default function EvocaOnline() {
             <div>
               <input
                 type="text"
-                placeholder="Մուտքանուն"
+                placeholder={t[lang].usernamePlaceholder}
                 value={username}
                 onChange={(e) => {
                   setUsername(e.target.value);
@@ -77,7 +165,7 @@ export default function EvocaOnline() {
                 }`}
               />
               {usernameError && (
-                <p className="text-red-500 text-xs mt-1 font-medium">Դաշտը լրացված չէ</p>
+                <p className="text-red-500 text-xs mt-1 font-medium">{t[lang].emptyFieldError}</p>
               )}
             </div>
 
@@ -86,7 +174,7 @@ export default function EvocaOnline() {
               <div className="relative">
                 <input
                   type="password"
-                  placeholder="Գաղտնաբառ"
+                  placeholder={t[lang].passwordPlaceholder}
                   value={password}
                   onChange={(e) => {
                     setPassword(e.target.value);
@@ -99,7 +187,7 @@ export default function EvocaOnline() {
                 <span className="absolute right-3 top-3.5 text-gray-400 cursor-pointer text-xs">👁️‍🗨️</span>
               </div>
               {passwordError && (
-                <p className="text-red-500 text-xs mt-1 font-medium">Դաշտը լրացված չէ</p>
+                <p className="text-red-500 text-xs mt-1 font-medium">{t[lang].emptyFieldError}</p>
               )}
             </div>
 
@@ -108,14 +196,14 @@ export default function EvocaOnline() {
               type="submit"
               className="w-full bg-[#6400dc] hover:bg-opacity-90 text-white font-bold py-3 rounded-xl transition shadow-md cursor-pointer text-sm"
             >
-              Մուտք
+              {t[lang].loginBtn}
             </button>
           </form>
 
           {/* Forgot credentials */}
           <div className="text-center mt-4">
             <a href="#" className="text-xs text-gray-500 hover:text-[#6400dc] transition">
-              Մոռաց՞ել եք մուտքանունը կամ գաղտնաբառը
+              {t[lang].forgotPass}
             </a>
           </div>
 
@@ -126,25 +214,33 @@ export default function EvocaOnline() {
             onClick={() => setShowQrModal(true)}
             className="w-full flex items-center justify-center gap-2 border border-gray-300 hover:bg-gray-50 py-3 rounded-xl transition cursor-pointer text-xs font-bold text-neutral-700"
           >
-            <span className="text-base">📱</span> Մուտք QR կոդով
+            <span className="text-base">📱</span> {t[lang].qrBtn}
           </button>
         </div>
 
+        {/* Old Version Link (Opens old online banking link in new tab) */}
         <div className="mt-8 text-xs text-gray-500 cursor-pointer hover:underline">
-          Կայքի հին տարբերակ
+          <a 
+            href="https://online.evoca.am/internetbank/MainForm.wgx" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="hover:text-[#6400dc] transition"
+          >
+            {t[lang].oldVersion}
+          </a>
         </div>
       </main>
 
       {/* Footer */}
       <footer className="w-full bg-white border-t border-gray-200 py-4 px-8 text-xs text-gray-500 flex flex-col md:flex-row justify-between items-center gap-4">
         <div>
-          <p>© 2026 Evocabank[cite: 4]</p>
-          <p>Բանկը վերահսկվում է ՀՀ Կենտրոնական բանկի կողմից[cite: 4]</p>
-          <p>Տարբերակ 8.19.0</p>
+          <p>© 2026 Evocabank</p>
+          <p>{t[lang].bankSupervised}</p>
+          <p>{t[lang].version}</p>
         </div>
         <div className="flex items-center gap-6">
-          <span>📞 (+374 10) 60 55 55[cite: 4]</span>
-          <span>✉️ hello@evoca.am[cite: 4]</span>
+          <span>📞 (+374 10) 60 55 55</span>
+          <span>✉️ hello@evoca.am</span>
         </div>
         <div className="flex gap-3">
           <span className="bg-black text-white px-3 py-1 rounded text-[10px]">App Store</span>
@@ -152,7 +248,7 @@ export default function EvocaOnline() {
         </div>
       </footer>
 
-      {/* ================= QR MODAL (2nd Screenshot) ================= */}
+      {/* ================= QR MODAL ================= */}
       {showQrModal && (
         <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4">
           <div className="bg-white rounded-3xl p-8 max-w-sm w-full relative shadow-2xl text-center space-y-4">
@@ -169,33 +265,30 @@ export default function EvocaOnline() {
                 className="w-48 h-48 object-contain mx-auto"
               />
             </div>
-            <h3 className="text-lg font-bold text-neutral-900">Արագ և ապահով</h3>
+            <h3 className="text-lg font-bold text-neutral-900">{t[lang].qrTitle}</h3>
             <p className="text-xs text-gray-600 leading-relaxed">
-              Եթե ունեք EvocaTOUCH հավելվածը, սկանավորեք QR կոդը՝ ավելի արագ մուտք գործելու համար։
+              {t[lang].qrDesc}
             </p>
           </div>
         </div>
       )}
 
-      {/* ================= ERROR MODAL (3rd Screenshot) ================= */}
+      {/* ================= ERROR MODAL ================= */}
       {showErrorModal && (
         <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4">
           <div className="bg-white rounded-3xl p-8 max-w-md w-full relative shadow-2xl text-left space-y-4">
             <div className="flex items-center gap-2 text-red-600 font-bold text-lg">
-              <span>⚠️</span> <span>Հաղորդագրություն</span>
+              <span>⚠️</span> <span>{t[lang].errorTitle}</span>
             </div>
-            <p className="text-xs text-gray-700 leading-relaxed">
-              Մուտքանունը կամ գաղտնաբառը սխալ է:<br />
-              3 անընդմեջ անհաջող փորձերի դեպքում Ձեր մուտքը համակարգ կարգելափակվի:<br />
-              Եթե չեք հիշում Ձեր մուտքանունը կամ գաղտնաբառը, խնդրում ենք օգտվել «Մոռաց՞ել եք գաղտնաբառը» հղումից կամ զանգահարել Բանկ:<br />
-              Հեռ.՝ (+374 10) 60 55 55
+            <p className="text-xs text-gray-700 leading-relaxed whitespace-pre-line">
+              {t[lang].errorText}
             </p>
             <div className="flex justify-end pt-2">
               <button
                 onClick={() => setShowErrorModal(false)}
                 className="bg-[#6400dc] hover:bg-opacity-90 text-white font-bold px-6 py-2 rounded-xl text-xs transition cursor-pointer"
               >
-                Լավ
+                {t[lang].okBtn}
               </button>
             </div>
           </div>
