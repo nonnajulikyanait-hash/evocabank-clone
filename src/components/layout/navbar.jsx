@@ -4,6 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 export default function Navbar() {
   const location = useLocation();
   const isLoansActive = location.pathname === '/loans';
+  const isCardsActive = location.pathname === '/cards';
 
   return (
     <header className="w-full bg-white border-b border-gray-100 sticky top-0 z-50">
@@ -45,14 +46,22 @@ export default function Navbar() {
 
         {/* Links */}
         <nav className="hidden lg:flex items-center gap-7 text-[13px] font-bold text-gray-800">
-          {/* «Վարկեր» կոճակը հիմա ավտոմատ դառնում է մանուշակագույն, երբ գտնվում ես /loans էջում */}
+          {/* «Վարկեր» */}
           <Link 
             to="/loans" 
             className={`transition ${isLoansActive ? 'text-[#6400dc]' : 'text-gray-800 hover:text-[#6400dc]'}`}
           >
             Վարկեր
           </Link>
-          <a href="#" className="hover:text-[#6400dc] transition">Քարտեր</a>
+
+          {/* «Քարտեր» */}
+          <Link 
+            to="/cards" 
+            className={`transition ${isCardsActive ? 'text-[#6400dc]' : 'text-gray-800 hover:text-[#6400dc]'}`}
+          >
+            Քարտեր
+          </Link>
+
           <a href="#" className="hover:text-[#6400dc] transition">Ավանդներ</a>
           <a href="#" className="hover:text-[#6400dc] transition">Հաշիվներ</a>
           <a href="#" className="hover:text-[#6400dc] transition">Փոխանցումներ</a>
