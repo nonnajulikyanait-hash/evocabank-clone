@@ -66,8 +66,25 @@ function Gortsynkerner() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="bg-[#fbfbfb] border border-gray-100 rounded-3xl p-8 lg:p-12 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative overflow-hidden">
           
-          {/* Ձախ մաս՝ Տեքստ */}
-          <div className="lg:col-span-5 space-y-6">
+          {/* Հետևի դեղին կետիկներով / նախշերով շարժվող անիմացիա */}
+          <div className="absolute left-1/4 top-1/2 -translate-y-1/2 w-64 h-64 pointer-events-none opacity-40">
+            <div className="w-full h-full rounded-full border-2 border-dashed border-amber-400 animate-[spin_20s_linear_infinite]"></div>
+            <div className="absolute top-4 left-4 w-3 h-3 bg-amber-400 rounded-full animate-bounce"></div>
+            <div className="absolute bottom-6 right-8 w-2 h-2 bg-amber-500 rounded-full animate-ping"></div>
+          </div>
+
+          {/* Ձախ մաս՝ Ձեռքի նկարը և Տեքստ */}
+          <div className="lg:col-span-5 space-y-6 relative z-10 flex flex-col items-start">
+            
+            {/* Ձեռքի նկար */}
+            <div className="mb-[-20px]">
+              <img 
+                src="https://www.evoca.am/img/hand.png" 
+                alt="Hand" 
+                className="w-24 h-auto object-contain animate-pulse"
+              />
+            </div>
+
             <h2 className="text-3xl font-bold text-neutral-900">Գործընկերներ</h2>
             <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
               Դարձեք Evocabank-ի գործընկեր և եկեք միասին գնանք դեպի նոր իրականություն: Դառնալով Evoca ընտանիքի անդամ՝ Դուք մուտք եք գործում ժամանակակից և յուրահատուկ աշխարհ:
@@ -80,7 +97,7 @@ function Gortsynkerner() {
           </div>
 
           {/* Աջ մաս՝ Սայդեր բոլոր 15 լոգոներով */}
-          <div className="lg:col-span-7 relative flex items-center">
+          <div className="lg:col-span-7 relative flex items-center z-10">
             <button 
               onClick={scrollLeft}
               className="absolute -left-4 z-10 bg-white border border-gray-200 shadow-md w-10 h-10 rounded-full flex items-center justify-center text-gray-700 hover:bg-gray-100 cursor-pointer"
