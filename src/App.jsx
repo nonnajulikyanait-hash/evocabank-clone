@@ -8,6 +8,8 @@ import CalculatorSection from './components/home/calculatorsection';
 import EvocaOnlineMobile from './components/home/evocaonlinemobile';
 import Gortsynkerner from './components/home/gortsynkerner';
 import CurrencyAndAddresses from './components/home/currencyandaddresses';
+import Hachaxord from './components/home/hachaxord';
+
 
 function App() {
   return (
@@ -22,6 +24,7 @@ function App() {
         <EvocaOnlineMobile />
         <Gortsynkerner />
         <CurrencyAndAddresses />
+        <Hachaxord />
       </main>
     </div>
   );
