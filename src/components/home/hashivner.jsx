@@ -4,7 +4,7 @@ import EvocaOnlineMobile from './evocaonlinemobile';
 import Footer from './footer';
 
 export default function Hashivner() {
-  const [activeTab, setActiveTab] = useState('non-resident'); // 'saving', 'opening', 'metal', 'non-resident'
+  const [activeTab, setActiveTab] = useState('metal'); // 'saving', 'opening', 'metal', 'non-resident'
   const [openAccordions, setOpenAccordions] = useState({});
 
   const toggleAccordion = (index) => {
@@ -49,207 +49,22 @@ export default function Hashivner() {
           </div>
         </div>
 
-        {activeTab === 'non-resident' ? (
-          /* ================= ՈՉ ՌԵԶԻԴԵՆՏ ՀԱՃԱԽՈՐԴՆԵՐԻ ՀԵՌԱՎԱՐ ՍՊԱՍԱՐԿՈՒՄ ԷՋ ================= */
-          <main className="max-w-7xl mx-auto px-4 py-8 text-left">
-            {/* Breadcrumbs */}
-            <div className="text-xs text-gray-400 mb-6 flex items-center gap-2">
-              <span>🏠</span> &gt; <span>Անհատ</span> &gt; <span>Հաշիվներ</span> &gt; <span className="text-gray-700 font-medium">Ոչ ռեզիդենտ հաճախորդների հեռավար սպասարկում</span>
-            </div>
-
-            {/* Banner Section */}
-            <div className="bg-[#f5efff] rounded-[32px] overflow-hidden p-8 md:p-12 mb-8 flex flex-col md:flex-row items-center justify-between gap-8 shadow-sm">
-              <div className="space-y-4 md:w-1/2">
-                <h1 className="text-3xl md:text-5xl font-black text-neutral-900 leading-tight tracking-tight">
-                  Ոչ ռեզիդենտ հաճախորդների հեռավար սպասարկում
-                </h1>
-                <p className="text-xs md:text-sm text-gray-700 leading-relaxed">
-                  Բանկ այցելելն այլևս պարտադիր չէ։ Անգամ եթե չեք բնակվում ՀՀ-ում, Evocabank-ի հետ Դուք կարող եք բացել հաշիվներ օնլայն եղանակով աշխարհի ցանկացած կետից և ցանկացած պահի։
-                </p>
-              </div>
-              <div className="md:w-1/2 flex justify-center">
-                <img 
-                  src="https://www.evoca.am/images-cache/menu/1/17510033256067/780x585.png" 
-                  alt="Ոչ ռեզիդենտ հաճախորդների հեռավար սպասարկում" 
-                  className="rounded-2xl max-h-80 object-cover shadow-md"
-                />
-              </div>
-            </div>
-
-            {/* Intro description */}
-            <div className="space-y-4 text-xs md:text-sm text-gray-700 leading-relaxed mb-12">
-              <p>
-                24/7 անձնական մենեջեր, ֆինանսական ծառայությունների հասանելիություն աշխարհի ցանկացած կետից, փաստաթղթերի անվճար առաքում Ձեր գտնվելու վայր․ բոլոր մանրուքները մտածված են, որ Դուք խնայեք Ձեր ժամանակը, չշեղվեք կարևոր գործերից և, իհարկե, օգտվեք prime սպասարկումից։
-              </p>
-              <p className="font-bold text-[#6400dc]">
-                Ուղարկեք փաստաթղթերը, անցեք տեսազանգով նույնականացում և բացեք Ձեր հաշիվը՝ առանց Բանկ այցելելու։
-              </p>
-              <p className="text-gray-500 italic">
-                Մանրամասները և քայլ առ քայլ ուղեցույցը՝ ներքևում։
-              </p>
-            </div>
-
-            {/* ANHRAZESHT TEXEKATVUTYUN Accordions */}
-            <div className="space-y-6 mb-16">
-              <h2 className="text-xl md:text-2xl font-black text-neutral-900">
-                ԱՆՀՐԱԺԵՇՏ ՏԵՂԵԿԱՏՎՈՒԹՅՈՒՆ
-              </h2>
-
-              <div className="space-y-4">
-                {/* Accordion 1: Առավելություններ */}
-                <div className="border border-gray-200 rounded-2xl overflow-hidden bg-white shadow-sm">
-                  <button
-                    onClick={() => toggleAccordion(0)}
-                    className="w-full flex justify-between items-center p-4 text-left font-bold text-neutral-800 hover:bg-purple-50 transition cursor-pointer"
-                  >
-                    <span className="flex items-center gap-2">
-                      <span className="text-[#6400dc]">⌄</span> Առավելություններ
-                    </span>
-                    <span className="text-xs text-gray-400 font-normal">{openAccordions[0] ? 'Փակել' : 'Բացել'}</span>
-                  </button>
-                  {openAccordions[0] && (
-                    <div className="p-4 border-t border-gray-100 bg-gray-50 space-y-3 text-xs md:text-sm text-gray-700 leading-relaxed">
-                      <div>
-                        <strong className="text-[#6400dc]">Prime կարգավիճակ Բանկում</strong>
-                        <p className="pl-4 pt-1">• Բացառիկ արտոնություններ, առաջնահերթ սպասարկում և ժամանակի խնայում</p>
-                      </div>
-                      <div>
-                        <strong className="text-[#6400dc]">Անհատական մենեջեր/Անձնական օգնական</strong>
-                        <p className="pl-4 pt-1">• 24/7 Աջակցություն ֆինանսական ցանկացած հարցում անմիջապես անձնական օգնականի կողմից</p>
-                      </div>
-                      <div>
-                        <strong className="text-[#6400dc]">Հեռավար սպասարկում</strong>
-                        <p className="pl-4 pt-1">• Ծառայությունների հասանելիություն առցանց՝ աշխարհի ցանկացած կետից</p>
-                      </div>
-                      <div>
-                        <strong className="text-[#6400dc]">Փաստաթղթերի անվճար առաքում</strong>
-                        <p className="pl-4 pt-1">• Առաքում անմիջապես Ձեր գտնվելու վայր, Ձեզ հարմար պահի՝ արագ և անվճար։</p>
-                      </div>
-                    </div>
-                  )}
-                </div>
-
-                {/* Accordion 2: Ֆիզիկական անձանց հաշվի բացման պայմաններ */}
-                <div className="border border-gray-200 rounded-2xl overflow-hidden bg-white shadow-sm">
-                  <button
-                    onClick={() => toggleAccordion(1)}
-                    className="w-full flex justify-between items-center p-4 text-left font-bold text-neutral-800 hover:bg-purple-50 transition cursor-pointer"
-                  >
-                    <span className="flex items-center gap-2">
-                      <span className="text-[#6400dc]">⌄</span> Ֆիզիկական անձանց հաշվի բացման պայմաններ
-                    </span>
-                    <span className="text-xs text-gray-400 font-normal">{openAccordions[1] ? 'Փակել' : 'Բացել'}</span>
-                  </button>
-                  {openAccordions[1] && (
-                    <div className="p-4 border-t border-gray-100 bg-gray-50 space-y-2 text-xs md:text-sm text-gray-700 leading-relaxed">
-                      <p>• Հանդիսանում են ՀՀ-ում գտնվող անշարժ գույքի սեփականատեր և ունեն անշարժ գույքի նկատմամբ սեփականության իրավունքի գրանցման վկայական</p>
-                      <p>• Պատրաստ են ներդնել նվազագույնը 6 ամիս ժամկետով և առնվազն 20 000 ԱՄՆ դոլար, 20 000 Եվրո, 1 500 000 ՌԴ ռուբլի և 10 000 000 ՀՀ դրամ գումարի չափով համարժեք ավանդ «ԷՎՈԿԱԲԱՆԿ» ՓԲԸ-ում</p>
-                      <p>• ՀՀ-ում գրանցված են որպես անհատ ձեռնարկատեր և ունեն ՀՀ Արդարադատության նախարարության իրավաբանական անձանց պետական ռեգիստրի կողմից տրամադրված գրանցման վկայական</p>
-                      <p>• Հանդիսանում են ՀՀ-ում գրանցված իրավաբանական անձի մասնակից (բաժնետեր) հիմնավորված համապատասխան փաստաթղթերով</p>
-                    </div>
-                  )}
-                </div>
-
-                {/* Accordion 3: Ֆիզիկական անձանց հաշվի բացման անհրաժեշտ փաստաթղթեր */}
-                <div className="border border-gray-200 rounded-2xl overflow-hidden bg-white shadow-sm">
-                  <button
-                    onClick={() => toggleAccordion(2)}
-                    className="w-full flex justify-between items-center p-4 text-left font-bold text-neutral-800 hover:bg-purple-50 transition cursor-pointer"
-                  >
-                    <span className="flex items-center gap-2">
-                      <span className="text-[#6400dc]">⌄</span> Ֆիզիկական անձանց հաշվի բացման անհրաժեշտ փաստաթղթեր
-                    </span>
-                    <span className="text-xs text-gray-400 font-normal">{openAccordions[2] ? 'Փակել' : 'Բացել'}</span>
-                  </button>
-                  {openAccordions[2] && (
-                    <div className="p-4 border-t border-gray-100 bg-gray-50 space-y-2 text-xs md:text-sm text-gray-700 leading-relaxed">
-                      <p>• Անձնագիր</p>
-                      <p>• Միջազգային անձնագիր</p>
-                      <p>• Եկամուտների ծագման աղբյուրը (ֆիզիկական անձի նախորդ տարվա հարկային հայտարարագիր, անշարժ գույքի, բաժնետոմսերի կամ արժեքավոր թղթերի վաճառքի կամ վարձակալության պայմանագիր)</p>
-                    </div>
-                  )}
-                </div>
-
-                {/* Accordion 4: Իրավաբանական անձանց փաստաթղթերի ցանկ */}
-                <div className="border border-gray-200 rounded-2xl overflow-hidden bg-white shadow-sm">
-                  <button
-                    onClick={() => toggleAccordion(3)}
-                    className="w-full flex justify-between items-center p-4 text-left font-bold text-neutral-800 hover:bg-purple-50 transition cursor-pointer"
-                  >
-                    <span className="flex items-center gap-2">
-                      <span className="text-[#6400dc]">⌄</span> Իրավաբանական անձանց փաստաթղթերի ցանկ
-                    </span>
-                    <span className="text-xs text-gray-400 font-normal">{openAccordions[3] ? 'Փակել' : 'Բացել'}</span>
-                  </button>
-                  {openAccordions[3] && (
-                    <div className="p-4 border-t border-gray-100 bg-gray-50 space-y-2 text-xs md:text-sm text-gray-700 leading-relaxed">
-                      <p>• Կանոնադրություն (ոչ ռեզիդենտների դեպքում` կանոնադրություն կամ դրան փոխարինող այլ փաստաթուղթ)</p>
-                      <p>• Պետական ռեգիստրի գրանցման վկայական (ոչ ռեզիդենտների դեպքում` տվյալ երկրի պետական գրանցման մարմնի կողմից տրված վկայական և հարկային մարմիններում գրանցված փաստաթուղթ)</p>
-                      <p>• Հարկ վճարողի հաշվառման համարը (ՀՎՀՀ), եթե այն բացակայում է պետական ռեգիստրի վկայականում</p>
-                      <p>• Գործադիր մարմնի ղեկավարի, գլխավոր հաշվապահի անձնագրերը կամ անձը հաստատող փաստաթղթերը</p>
-                      <p>• Հաշվետերերի անձնագրեր կամ նույնականացման քարտեր</p>
-                      <p className="font-bold text-[#6400dc] pt-2">Շահառուների համար անհրաժեշտ է՝</p>
-                      <p>• Եթե շահառուն ֆիզիկական անձ է, անձնագրի կամ նույնականացման քարտի պատճենները</p>
-                      <p>• Եթե շահառուն իրավաբանական անձ է, համապատասխան փաստաթղթերի պատճենները</p>
-                      <p>• Ընկերության ֆինանսական հաշվետվություններ վերջին մեկ տարվա կտրվածքով, աուդիտորական եզրակացություն</p>
-                      <p>• Լիցենզիա, եթե ընկերության գործունեությունը պահանջում է:</p>
-                    </div>
-                  )}
-                </div>
-
-                {/* Accordion 5: Սակագներ */}
-                <div className="border border-gray-200 rounded-2xl overflow-hidden bg-white shadow-sm">
-                  <button
-                    onClick={() => toggleAccordion(4)}
-                    className="w-full flex justify-between items-center p-4 text-left font-bold text-neutral-800 hover:bg-purple-50 transition cursor-pointer"
-                  >
-                    <span className="flex items-center gap-2">
-                      <span className="text-[#6400dc]">⌄</span> Սակագներ
-                    </span>
-                    <span className="text-xs text-gray-400 font-normal">{openAccordions[4] ? 'Փակել' : 'Բացել'}</span>
-                  </button>
-                  {openAccordions[4] && (
-                    <div className="p-4 border-t border-gray-100 bg-gray-50 space-y-4 text-xs md:text-sm text-gray-700 leading-relaxed">
-                      <div>
-                        <strong className="text-[#6400dc]">Ֆիզիկական անձանց համար</strong>
-                        <p>• Հաշվի բացում՝ 50,000 դրամ</p>
-                        <p>• Տարեկան սպասարկում՝ 250,000 դրամ</p>
-                        <p>• Փակման վճար՝ 0 դրամ</p>
-                        <p>• Դրամական միջոցների անկանխիկ մուտքագրում հաճախորդի հաշվին` 0.5%</p>
-                        <p>• Հաճախորդների փոխանցումներ` 0.5%</p>
-                        <p>• Հաշվի տեսակներ՝ USD, EUR, RUB, AED, GBP, CHF, CNY, CAD</p>
-                      </div>
-                      <div className="border-t border-gray-200 pt-3">
-                        <strong className="text-[#6400dc]">Իրավաբանական անձանց համար</strong>
-                        <p>• Հաշվի բացում՝ 100,000 դրամ</p>
-                        <p>• Տարեկան սպասարկում՝ 500,000 ՀՀ դրամ</p>
-                        <p>• Փակման վճար՝ 0 դրամ</p>
-                        <p>• Դրամական միջոցների անկանխիկ մուտքագրում հաճախորդի հաշվին` 0.5%</p>
-                        <p>• Հաճախորդների փոխանցումներ` 0.5%</p>
-                        <p>• Հաշվի տեսակներ՝ USD, EUR, RUB, AED, GBP, CHF, CNY, CAD</p>
-                      </div>
-                    </div>
-                  )}
-                </div>
-              </div>
-            </div>
-
-            <EvocaOnlineMobile />
-          </main>
-        ) : activeTab === 'metal' ? (
+        {activeTab === 'metal' ? (
           /* ================= ԱՌԱՐԿԱՅԱԶՈՒՐԿ ՄԵՏԱՂԱԿԱՆ ՀԱՇԻՎՆԵՐ ԷՋ ================= */
           <main className="max-w-7xl mx-auto px-4 py-8 text-left">
+            {/* Breadcrumbs */}
             <div className="text-xs text-gray-400 mb-6 flex items-center gap-2">
               <span>🏠</span> &gt; <span>Անհատ</span> &gt; <span>Հաշիվներ</span> &gt; <span className="text-gray-700 font-medium">Առարկայազուրկ մետաղական հաշիվներ</span>
             </div>
 
+            {/* Banner Section */}
             <div className="bg-[#f5efff] rounded-[32px] overflow-hidden p-8 md:p-12 mb-12 flex flex-col md:flex-row items-center justify-between gap-8 shadow-sm">
               <div className="space-y-4 md:w-1/2">
                 <h1 className="text-3xl md:text-5xl font-black text-neutral-900 leading-tight tracking-tight">
                   Առարկայազուրկ մետաղական հաշիվներ
                 </h1>
                 <p className="text-xs md:text-sm text-gray-700 leading-relaxed">
-                  Առաջարկում ենք բացել առարկայազուրկ մետաղական հաշիվներ, որոնք նախատեսված են անկանխիկ ոսկու հաշվառման համար:
+                  Առաջարկում ենք բացել առարկայազուրկ մետաղական հաշիվներ, որոնք նախատեսված են անկանխիկ ոսկու հաշվառման համար: Այս ցպահանջ հաշիվները հնարավորություն են ընձեռում խնայողություններ կատարել անկանխիկ ոսկով, ինչպես նաև ավելացնել դրանք՝ միջազգային շուկայում ոսկու գնի բարձրացման շնորհիվ:
                 </p>
               </div>
               <div className="md:w-1/2 flex justify-center">
@@ -258,6 +73,98 @@ export default function Hashivner() {
                   alt="Առարկայազուրկ մետաղական հաշիվներ" 
                   className="rounded-2xl max-h-80 object-cover shadow-md"
                 />
+              </div>
+            </div>
+
+            {/* Main Conditions Section */}
+            <div className="space-y-6 text-xs md:text-sm text-gray-700 leading-relaxed mb-16">
+              <h2 className="text-xl md:text-2xl font-black text-neutral-900">
+                Հիմնական պայմաններ
+              </h2>
+
+              <ul className="space-y-4 pl-2">
+                <li className="flex items-start gap-2">
+                  <span className="text-[#6400dc] font-bold">•</span>
+                  <span>
+                    Հաշիվներ ենք բացում ռեզիդենտ և ոչ ռեզիդենտ հաճախորդների համար, միայն 999.9 հարգի ոսկով, առանց նվազագույն մնացորդի պահանջի: Մեզ մոտ կարելի է գնել անկանխիկ ոսկի՝ սկսած 31 գրամից (ոսկու գնանշումը կատարվում է գրամով): Մեր կայքում հրապարակվում են ոսկու գնանշման օրական տվյալները, որոնք փոփոխվում են՝ կախված միջազգային շուկաներում ոսկու գնից:
+                  </span>
+                </li>
+
+                <li className="flex items-start gap-2">
+                  <span className="text-[#6400dc] font-bold">•</span>
+                  <span>
+                    Հաշիվներում անկանխիկ ոսկին հաշվառում ենք դրամով` ՀՀ Կենտրոնական բանկի հայտարարած հաշվարկային գնով և կշռային (գրամային) արտահայտությամբ՝ 0.01 գրամ ճշտությամբ կամ տրոյական ունցիաներով՝ 0.001 տրոյական ունցիա ճշտությամբ (մեկ տրոյական ունցիան հավասար է 31.10348 գրամի):
+                  </span>
+                </li>
+
+                <li className="flex items-start gap-2">
+                  <span className="text-[#6400dc] font-bold">•</span>
+                  <span>
+                    Մետաղական հաշիվ/ներ բացելիս ղեկավարվում ենք ՀՀ օրենսդրությամբ, ՀՀ Կենտրոնական բանկի նորմատիվ ակտերով, որոշումներով, մեր ներքին իրավական ակտերով:
+                  </span>
+                </li>
+
+                <li className="space-y-2">
+                  <div className="flex items-start gap-2">
+                    <span className="text-[#6400dc] font-bold">•</span>
+                    <span className="font-bold text-[#6400dc]">Այս հաշիվներով կարող ենք իրականացնել հետևյալ գործառնությունները՝</span>
+                  </div>
+                  <ul className="space-y-2 pl-6">
+                    <li className="flex items-start gap-2">
+                      <span className="text-gray-400 font-bold">-</span>
+                      <span>հաշվի համալրում՝ բանկից անկանխիկ ոսկի գնելու և այն հաշվին մուտքագրելու, ինչպես նաև ձեր կամ այլ անձի՝ նույն բանկում կամ այլ բանկում առկա մետաղական հաշվից անկանխիկ ոսկի փոխանցելու միջոցով,</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-gray-400 font-bold">-</span>
+                      <span>հաշվի ելքագրում՝ հաշվին առկա անկանխիկ ոսկին բանկին վաճառելու, ինչպես նաև ձեր կամ այլ անձի՝ նույն բանկում կամ այլ բանկում առկա մետաղական հաշվին անկանխիկ ոսկի փոխանցելու միջոցով:</span>
+                    </li>
+                  </ul>
+                </li>
+
+                <li className="flex items-start gap-2">
+                  <span className="text-[#6400dc] font-bold">•</span>
+                  <span>Մետաղական հաշիվները կարող են գրավադրվել:</span>
+                </li>
+
+                <li className="space-y-2">
+                  <div className="flex items-start gap-2">
+                    <span className="text-[#6400dc] font-bold">•</span>
+                    <span className="font-bold text-[#6400dc]">Հաշիվ բացելու համար անհրաժեշտ փաստաթղթերը՝</span>
+                  </div>
+                  <ul className="space-y-1 pl-6">
+                    <li className="flex items-start gap-2">
+                      <span className="text-gray-400 font-bold">-</span>
+                      <span>Դիմում՝ մեր ձևանմուշի համաձայն:</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-gray-400 font-bold">-</span>
+                      <span>Անձնագիր և սոցիալական քարտ կամ այն չունենալու մասին տեղեկանք, կամ միայն նույնականացման քարտ:</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-gray-400 font-bold">-</span>
+                      <span>Մեր պահանջով այլ փաստաթղթեր:</span>
+                    </li>
+                  </ul>
+                </li>
+
+                <li className="flex items-start gap-2">
+                  <span className="text-[#6400dc] font-bold">•</span>
+                  <span>
+                    Հաշիվներ բացելու համար կարող եք դիմել մեր Գլխամասային գրասենյակ և ցանկացած մասնաճյուղ: Մետաղական հաշիվների սպասարկման, գործառնությունների կատարման սակագներին և պայմաններին կարող եք ծանոթանալ <a href="#" className="text-[#6400dc] underline font-medium">այստեղ</a>:
+                  </span>
+                </li>
+              </ul>
+
+              {/* Extra Loans Note */}
+              <div className="bg-purple-50 p-5 rounded-2xl border border-purple-100 my-6">
+                <p>
+                  Evocabank-ում նաև կարող եք ձեռք բերել ոսկու գրավով վարկեր՝ ամենահարմար պայմաններով։ <a href="#" className="text-[#6400dc] font-bold underline">Ոսկու գրավով վարկը</a> տրամադրվում է ոսկյա իրերի գրավադրմամբ անձնական, ընտանեկան, տնային կամ այլ օգտագործման համար նախատեսված, ձեռնարկատիրական գործունեության հետ չկապված, ապրանքների (աշխատանքների, ծառայությունների) պատվիրման կամ ձեռքբերման նպատակով:
+                </p>
+              </div>
+
+              {/* Warning Notice */}
+              <div className="bg-red-50 p-4 rounded-xl border-l-4 border-red-500 text-red-700 font-semibold text-xs md:text-sm">
+                Ուշադրություն. Ավանդների հատուցումը երաշխավորող հիմնադրամը չի հատուցում մետաղական հաշիվները:
               </div>
             </div>
 
@@ -276,7 +183,7 @@ export default function Hashivner() {
                   Հաշիվների բացում և սպասարկում
                 </h1>
                 <p className="text-xs md:text-sm text-gray-700 leading-relaxed">
-                  Առաջարկում ենք բացել դրամային և արտարժութային ընթացիկ բանկային հաշիվներ։
+                  Առաջարկում ենք բացել դրամային և արտարժութային ընթացիկ բանկային հաշիվներ, որոնց սպասարկումն իրականացնում ենք մեր սակագների համաձայն: Մեզ մոտ հաշիվներ կարող են բացել Հայաստանի ռեզիդենտ և ոչ ռեզիդենտ ֆիզիկական անձիք:
                 </p>
               </div>
               <div className="md:w-1/2 flex justify-center">
@@ -285,6 +192,71 @@ export default function Hashivner() {
                   alt="Հաշիվների բացում և սպասարկում" 
                   className="rounded-2xl max-h-80 object-cover shadow-md"
                 />
+              </div>
+            </div>
+
+            <div className="bg-purple-50 p-6 rounded-2xl border border-purple-100 text-xs md:text-sm text-gray-700 leading-relaxed mb-10">
+              <p>
+                Մեր և ձեր պայմանագրային փոխհարաբերությունները կարգավորվում են <strong>ՀԱՄԱԼԻՐ ԲԱՆԿԱՅԻՆ ԾԱՌԱՅՈՒԹՅՈՒՆՆԵՐԻ ՄԱՏՈՒՑՄԱՆ ՊԱՅՄԱՆՆԵՐՈՎ</strong>, որը հրապարակային առաջարկ (օֆերտա) է և ձեր կողմից համարվում է ընդունված այն պահից, երբ առձեռն կամ հեռակառավարման համակարգերի միջոցով մեզ եք ներկայացնում պատշաճ լրացված և վավերացված՝ բանկային ծառայություններից օգտվելու հայտ/դիմում: Համալիր բանկային ծառայությունների մատուցման պայմաններին կարող եք ծանոթանալ <a href="#" className="text-[#6400dc] underline font-medium">այստեղ</a>:
+              </p>
+            </div>
+
+            <div className="relative rounded-[32px] overflow-hidden mb-12 shadow-md">
+              <img 
+                src="https://www.evoca.am/images-cache/menu/1/16111710051163/1920x530.jpg" 
+                alt="Հաշիվներ բացելու նպատակով" 
+                className="w-full h-64 md:h-80 object-cover"
+              />
+              <div className="absolute inset-0 bg-black/40 flex items-center justify-center p-6 text-center">
+                <h2 className="text-xl md:text-3xl font-extrabold text-white max-w-3xl leading-snug">
+                  Հաշիվներ բացելու նպատակով կարող եք դիմել մեր Գլխամասային գրասենյակ կամ ցանկացած մասնաճյուղ (բացառությամբ «Էրեբունի» -ի):
+                </h2>
+              </div>
+            </div>
+
+            <div className="space-y-6 mb-16">
+              <h2 className="text-xl md:text-2xl font-black text-neutral-900">
+                ԱՆՀՐԱԺԵՇՏ ՏԵՂԵԿԱՏՎՈՒԹՅՈՒՆ
+              </h2>
+
+              <div className="space-y-4">
+                <div className="border border-gray-200 rounded-2xl overflow-hidden bg-white shadow-sm">
+                  <button
+                    onClick={() => toggleAccordion(0)}
+                    className="w-full flex justify-between items-center p-4 text-left font-bold text-neutral-800 hover:bg-purple-50 transition cursor-pointer"
+                  >
+                    <span className="flex items-center gap-2">
+                      <span className="text-[#6400dc]">⌄</span> Անհրաժեշտ փաստաթղթեր
+                    </span>
+                    <span className="text-xs text-gray-400 font-normal">{openAccordions[0] ? 'Փակել' : 'Բացել'}</span>
+                  </button>
+                  {openAccordions[0] && (
+                    <div className="p-4 border-t border-gray-100 bg-gray-50 space-y-2 text-xs md:text-sm text-gray-700">
+                      <p>• Հաշվի բացման դիմում՝ մեր ձևանմուշի համաձայն:</p>
+                      <p>• Անձնագիր և սոցիալական քարտ կամ այն չունենալու մասին տեղեկանք, կամ միայն նույնականացման քարտ:</p>
+                      <p>• Մեր պահանջով այլ փաստաթղթեր:</p>
+                    </div>
+                  )}
+                </div>
+
+                <div className="border border-gray-200 rounded-2xl overflow-hidden bg-white shadow-sm">
+                  <button
+                    onClick={() => toggleAccordion(1)}
+                    className="w-full flex justify-between items-center p-4 text-left font-bold text-neutral-800 hover:bg-purple-50 transition cursor-pointer"
+                  >
+                    <span className="flex items-center gap-2">
+                      <span className="text-[#6400dc]">⌄</span> Հաշիվ բացելու ընթացակարգ
+                    </span>
+                    <span className="text-xs text-gray-400 font-normal">{openAccordions[1] ? 'Փակել' : 'Բացել'}</span>
+                  </button>
+                  {openAccordions[1] && (
+                    <div className="p-4 border-t border-gray-100 bg-gray-50 space-y-2 text-xs md:text-sm text-gray-700 leading-relaxed">
+                      <p>• Ընթացիկ հաշիվ կարող եք բացել դրամով, դոլարով, եվրոյով, ռուբլով, կանադական դոլարով, ֆրանկով և ֆունտ ստեռլինգով:</p>
+                      <p>• Նախքան հաշվի բացումը մեր աշխատակիցները ձեզ տեղեկացնում են հաշիվների բացման ու սպասարկման պայմանների մասին:</p>
+                      <p>• Ներկայացված փաստաթղթերի իսկությունն ու վավերականությունը ստուգելուց հետո ձեզ հետ կնքում ենք պայմանագիրը:</p>
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
 
@@ -313,6 +285,12 @@ export default function Hashivner() {
                   className="rounded-2xl max-h-80 object-cover shadow-md"
                 />
               </div>
+            </div>
+
+            <div className="space-y-6 text-xs md:text-sm text-gray-700 leading-relaxed mb-12">
+              <p>
+                Գումարդ ավելանա՞, թե՞ միշտ հասանելի մնա։ Այլևս պետք չէ ընտրել։ Evoca խնայողական հաշվի միջոցով կարող ես միաժամանակ և՛ խնայել, և՛ ավելացնել գումարդ, և՛ անհրաժեշտ պահին ունենալ դրա հասանելիությունը։
+              </p>
             </div>
 
             <EvocaOnlineMobile />
