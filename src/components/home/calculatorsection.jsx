@@ -50,7 +50,6 @@ export default function CalculatorSection() {
         totalInt += interestPayment;
       }
     } else {
-      // Bullet repayment model
       const monthlyPrincipalPart = principal / months;
       for (let i = 1; i <= months; i++) {
         const interestPayment = remainingBalance * monthlyRate;
@@ -75,24 +74,24 @@ export default function CalculatorSection() {
   };
 
   return (
-    <section className="py-12 px-4 md:px-8 bg-white overflow-hidden">
-      <div className="max-w-5xl mx-auto">
+    <section className="py-8 px-4 md:px-8 bg-white overflow-hidden">
+      <div className="max-w-4xl mx-auto">
         
         {/* Section Title */}
-        <div className="mb-6 text-left">
-          <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 tracking-tight">
+        <div className="mb-4 text-left">
+          <h2 className="text-xl md:text-2xl font-extrabold text-gray-900 tracking-tight">
             Հաշվիչներ
           </h2>
         </div>
 
         {/* Main Box */}
-        <div className="bg-white rounded-[28px] p-6 md:p-8 shadow-xl border border-gray-100">
+        <div className="bg-white rounded-[24px] p-5 md:p-6 shadow-lg border border-gray-100">
           
           {/* Tabs Switcher */}
-          <div className="flex items-center gap-6 border-b border-gray-100 pb-3 mb-6">
+          <div className="flex items-center gap-6 border-b border-gray-100 pb-2 mb-4">
             <button
               onClick={() => setActiveTab('loan')}
-              className={`text-base font-bold pb-2 transition-all relative cursor-pointer ${
+              className={`text-sm font-bold pb-2 transition-all relative cursor-pointer ${
                 activeTab === 'loan' ? 'text-gray-900 border-b-2 border-[#6400dc]' : 'text-gray-400 hover:text-gray-600'
               }`}
             >
@@ -100,7 +99,7 @@ export default function CalculatorSection() {
             </button>
             <button
               onClick={() => setActiveTab('deposit')}
-              className={`text-base font-bold pb-2 transition-all relative cursor-pointer ${
+              className={`text-sm font-bold pb-2 transition-all relative cursor-pointer ${
                 activeTab === 'deposit' ? 'text-gray-900 border-b-2 border-[#6400dc]' : 'text-gray-400 hover:text-gray-600'
               }`}
             >
@@ -111,13 +110,13 @@ export default function CalculatorSection() {
           {/* LOAN CALCULATOR */}
           {activeTab === 'loan' && (
             <div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6 items-center">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-4 items-center">
                 
                 {/* Left Column: Inputs */}
-                <div className="space-y-4">
+                <div className="space-y-3">
                   {/* Loan Amount */}
                   <div>
-                    <div className="flex justify-between text-xs font-semibold text-gray-700 mb-1">
+                    <div className="flex justify-between text-[11px] font-semibold text-gray-700 mb-0.5">
                       <span>Վարկի գումար</span>
                       <span className="text-[#6400dc] font-bold">{Number(loanAmount).toLocaleString()} ֏</span>
                     </div>
@@ -128,9 +127,9 @@ export default function CalculatorSection() {
                       step="50000"
                       value={loanAmount}
                       onChange={(e) => setLoanAmount(e.target.value)}
-                      className="w-full accent-[#6400dc] cursor-pointer"
+                      className="w-full accent-[#6400dc] cursor-pointer h-1.5"
                     />
-                    <div className="flex justify-between text-[10px] text-gray-400 mt-0.5">
+                    <div className="flex justify-between text-[9px] text-gray-400 mt-0.5">
                       <span>100,000 ֏</span>
                       <span>30,000,000 ֏</span>
                     </div>
@@ -138,7 +137,7 @@ export default function CalculatorSection() {
 
                   {/* Loan Term */}
                   <div>
-                    <div className="flex justify-between text-xs font-semibold text-gray-700 mb-1">
+                    <div className="flex justify-between text-[11px] font-semibold text-gray-700 mb-0.5">
                       <span>Ժամկետ</span>
                       <span className="text-[#6400dc] font-bold">{loanTerm} ամիս</span>
                     </div>
@@ -149,9 +148,9 @@ export default function CalculatorSection() {
                       step="1"
                       value={loanTerm}
                       onChange={(e) => setLoanTerm(e.target.value)}
-                      className="w-full accent-[#6400dc] cursor-pointer"
+                      className="w-full accent-[#6400dc] cursor-pointer h-1.5"
                     />
-                    <div className="flex justify-between text-[10px] text-gray-400 mt-0.5">
+                    <div className="flex justify-between text-[9px] text-gray-400 mt-0.5">
                       <span>1 ամիս</span>
                       <span>60 ամիս</span>
                     </div>
@@ -159,7 +158,7 @@ export default function CalculatorSection() {
 
                   {/* Interest Rate */}
                   <div>
-                    <div className="flex justify-between text-xs font-semibold text-gray-700 mb-1">
+                    <div className="flex justify-between text-[11px] font-semibold text-gray-700 mb-0.5">
                       <span>Տարեկան տոկոսադրույք</span>
                       <span className="text-[#6400dc] font-bold">{loanRate}%</span>
                     </div>
@@ -170,9 +169,9 @@ export default function CalculatorSection() {
                       step="0.5"
                       value={loanRate}
                       onChange={(e) => setLoanRate(e.target.value)}
-                      className="w-full accent-[#6400dc] cursor-pointer"
+                      className="w-full accent-[#6400dc] cursor-pointer h-1.5"
                     />
-                    <div className="flex justify-between text-[10px] text-gray-400 mt-0.5">
+                    <div className="flex justify-between text-[9px] text-gray-400 mt-0.5">
                       <span>1%</span>
                       <span>24%</span>
                     </div>
@@ -180,25 +179,25 @@ export default function CalculatorSection() {
 
                   {/* Repayment Type */}
                   <div>
-                    <span className="text-xs font-semibold text-gray-700 block mb-1.5">Մարման ձև</span>
+                    <span className="text-[11px] font-semibold text-gray-700 block mb-1">Մարման ձև</span>
                     <div className="flex items-center gap-4">
-                      <label className="flex items-center gap-2 cursor-pointer text-xs font-medium text-gray-700">
+                      <label className="flex items-center gap-1.5 cursor-pointer text-[11px] font-medium text-gray-700">
                         <input
                           type="radio"
                           name="repayment"
                           checked={repaymentType === 'annuity'}
                           onChange={() => setRepaymentType('annuity')}
-                          className="accent-[#6400dc] w-3.5 h-3.5"
+                          className="accent-[#6400dc] w-3 h-3"
                         />
                         Անուիտետային
                       </label>
-                      <label className="flex items-center gap-2 cursor-pointer text-xs font-medium text-gray-700">
+                      <label className="flex items-center gap-1.5 cursor-pointer text-[11px] font-medium text-gray-700">
                         <input
                           type="radio"
                           name="repayment"
                           checked={repaymentType === 'bullet'}
                           onChange={() => setRepaymentType('bullet')}
-                          className="accent-[#6400dc] w-3.5 h-3.5"
+                          className="accent-[#6400dc] w-3 h-3"
                         />
                         Մայր գումարի մարում վերջում
                       </label>
@@ -207,13 +206,13 @@ export default function CalculatorSection() {
                 </div>
 
                 {/* Right Column: Calculate Button Box */}
-                <div className="bg-[#f0f7fe] rounded-2xl p-6 flex flex-col justify-center items-center border border-blue-100 text-center h-full">
-                  <p className="text-xs font-semibold text-gray-500 mb-4">
+                <div className="bg-[#f0f7fe] rounded-xl p-5 flex flex-col justify-center items-center border border-blue-100 text-center h-full">
+                  <p className="text-[11px] font-semibold text-gray-500 mb-3">
                     Սեղմեք «Հաշվել»՝ մանրամասն գրաֆիկը տեսնելու համար
                   </p>
                   <button 
                     onClick={handleCalculateLoan}
-                    className="w-full bg-[#6400dc] hover:bg-[#5200b8] text-white font-bold text-sm py-3.5 px-6 rounded-full shadow-md transition-all cursor-pointer"
+                    className="w-full bg-[#6400dc] hover:bg-[#5200b8] text-white font-bold text-xs py-3 px-6 rounded-full shadow-md transition-all cursor-pointer"
                   >
                     Հաշվել
                   </button>
@@ -221,7 +220,7 @@ export default function CalculatorSection() {
 
               </div>
 
-              <p className="text-[11px] text-gray-400 text-left">
+              <p className="text-[10px] text-gray-400 text-left">
                 Բոլոր հաշվարկները կրում են մոտավոր բնույթ և չեն հանդիսանում հրապարակային առաջարկ։
               </p>
             </div>
@@ -230,13 +229,13 @@ export default function CalculatorSection() {
           {/* DEPOSIT CALCULATOR */}
           {activeTab === 'deposit' && (
             <div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6 items-center">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-4 items-center">
                 
                 {/* Left Column: Inputs */}
-                <div className="space-y-4">
+                <div className="space-y-3">
                   {/* Deposit Amount */}
                   <div>
-                    <div className="flex justify-between text-xs font-semibold text-gray-700 mb-1">
+                    <div className="flex justify-between text-[11px] font-semibold text-gray-700 mb-0.5">
                       <span>Ներդրվող գումար</span>
                       <span className="text-[#6400dc] font-bold">{Number(depositAmount).toLocaleString()} ֏</span>
                     </div>
@@ -247,9 +246,9 @@ export default function CalculatorSection() {
                       step="50000"
                       value={depositAmount}
                       onChange={(e) => setDepositAmount(e.target.value)}
-                      className="w-full accent-[#6400dc] cursor-pointer"
+                      className="w-full accent-[#6400dc] cursor-pointer h-1.5"
                     />
-                    <div className="flex justify-between text-[10px] text-gray-400 mt-0.5">
+                    <div className="flex justify-between text-[9px] text-gray-400 mt-0.5">
                       <span>100,000 ֏</span>
                       <span>50,000,000 ֏</span>
                     </div>
@@ -257,7 +256,7 @@ export default function CalculatorSection() {
 
                   {/* Deposit Term */}
                   <div>
-                    <div className="flex justify-between text-xs font-semibold text-gray-700 mb-1">
+                    <div className="flex justify-between text-[11px] font-semibold text-gray-700 mb-0.5">
                       <span>Ավանդի ժամկետ</span>
                       <span className="text-[#6400dc] font-bold">{depositTerm} օր</span>
                     </div>
@@ -268,9 +267,9 @@ export default function CalculatorSection() {
                       step="1"
                       value={depositTerm}
                       onChange={(e) => setDepositTerm(e.target.value)}
-                      className="w-full accent-[#6400dc] cursor-pointer"
+                      className="w-full accent-[#6400dc] cursor-pointer h-1.5"
                     />
-                    <div className="flex justify-between text-[10px] text-gray-400 mt-0.5">
+                    <div className="flex justify-between text-[9px] text-gray-400 mt-0.5">
                       <span>30 օր</span>
                       <span>1095 օր</span>
                     </div>
@@ -278,7 +277,7 @@ export default function CalculatorSection() {
 
                   {/* Interest Rate */}
                   <div>
-                    <div className="flex justify-between text-xs font-semibold text-gray-700 mb-1">
+                    <div className="flex justify-between text-[11px] font-semibold text-gray-700 mb-0.5">
                       <span>Տարեկան տոկոսադրույք</span>
                       <span className="text-[#6400dc] font-bold">{depositRate}%</span>
                     </div>
@@ -289,9 +288,9 @@ export default function CalculatorSection() {
                       step="0.5"
                       value={depositRate}
                       onChange={(e) => setDepositRate(e.target.value)}
-                      className="w-full accent-[#6400dc] cursor-pointer"
+                      className="w-full accent-[#6400dc] cursor-pointer h-1.5"
                     />
-                    <div className="flex justify-between text-[10px] text-gray-400 mt-0.5">
+                    <div className="flex justify-between text-[9px] text-gray-400 mt-0.5">
                       <span>1%</span>
                       <span>16%</span>
                     </div>
@@ -299,13 +298,13 @@ export default function CalculatorSection() {
                 </div>
 
                 {/* Right Column: Info / Button */}
-                <div className="bg-[#f0f7fe] rounded-2xl p-6 flex flex-col justify-center items-center border border-blue-100 text-center h-full">
-                  <p className="text-xs font-semibold text-gray-500 mb-4">
+                <div className="bg-[#f0f7fe] rounded-xl p-5 flex flex-col justify-center items-center border border-blue-100 text-center h-full">
+                  <p className="text-[11px] font-semibold text-gray-500 mb-3">
                     Հաշվարկեք Ձեր ավանդային եկամուտը պարզ և արագ
                   </p>
                   <button 
                     onClick={() => alert(`Ընդհանուր տոկոսային եկամուտը կազմում է՝ ${Math.round((depositAmount * (depositRate/100) * depositTerm) / 365).toLocaleString()} ֏`)}
-                    className="w-full bg-[#6400dc] hover:bg-[#5200b8] text-white font-bold text-sm py-3.5 px-6 rounded-full shadow-md transition-all cursor-pointer"
+                    className="w-full bg-[#6400dc] hover:bg-[#5200b8] text-white font-bold text-xs py-3 px-6 rounded-full shadow-md transition-all cursor-pointer"
                   >
                     Հաշվել
                   </button>
@@ -313,7 +312,7 @@ export default function CalculatorSection() {
 
               </div>
 
-              <p className="text-[11px] text-gray-400 text-left">
+              <p className="text-[10px] text-gray-400 text-left">
                 Բոլոր հաշվարկները կրում են մոտավոր բնույթ և չեն հանդիսանում հրապարակային առաջարկ։
               </p>
             </div>
@@ -323,7 +322,7 @@ export default function CalculatorSection() {
 
       </div>
 
-      {/* LOAN RESULT MODAL (POPUP) - Exactly like 3rd image */}
+      {/* LOAN RESULT MODAL (POPUP) */}
       {isModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
           <div className="bg-white rounded-3xl max-w-3xl w-full p-6 md:p-8 relative shadow-2xl max-h-[90vh] overflow-y-auto">
