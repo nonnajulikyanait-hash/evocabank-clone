@@ -9,6 +9,30 @@ export default function Arjetxter() {
   const [openBondsAccordions, setOpenBondsAccordions] = useState({});
   const [openHpdAccordions, setOpenHpdAccordions] = useState({});
 
+  // EvocaINVEST նյութերի և հարցերի վիճակները
+  const [openUseful, setOpenUseful] = useState(false);
+  const [openFaq, setOpenFaq] = useState(false);
+  const [activeFaqIndex, setActiveFaqIndex] = useState(null);
+
+  const faqList = [
+    {
+      question: "Ի՞նչ է բաժնետոմսը։",
+      answer: "Բաժնետոմսը ընկերության սեփականության մասնաբաժին ներկայացնող արժեթուղթ է։ Բաժնետոմս գնելիս՝ ներդրողը դառնում է տվյալ ընկերության մասնակի սեփականատեր և կարող է շահույթ ստանալ բաժնետոմսի գնի աճից կամ ընկերության կողմից վճարվող դիվիդենտներից։ Բաժնետոմսերի արժեքը կարող է փոփոխվել՝ շուկայական պահանջարկից, ընկերության արդյունքներից և տնտեսական պայմաններից կախված։"
+    },
+    {
+      question: "Ի՞նչ է պարտատոմսը։",
+      answer: "Պարտատոմսը պարտքային արժեթուղթ է։ Այն գնելիս` փաստացի գումար ես տրամադրում ընկերությանը կամ պետությանը որոշակի ժամկետով և դրա դիմաց ստանում ես կանխատեսելի տոկոսային եկամուտ։"
+    },
+    {
+      question: "Ի՞նչ է ETF-ը։",
+      answer: "ETF-ը (Exchange Traded Fund) ներդրումային ֆոնդ է, որը վաճառվում և գնվում է բորսայում սովորական բաժնետոմսի նման։ Այն սովորաբար միավորում է բազմաթիվ ակտիվներ մեկ գործիքի մեջ, օրինակ՝ բաժնետոմսեր, պարտատոմսեր կամ ամբողջ ինդեքս։"
+    },
+    {
+      question: "Ո՞րն է տարբերությունը բաժնետոմսերի, պարտատոմսերի և ETF-ների միջև։",
+      answer: "Բաժնետոմսը կապվում է մեկ ընկերության հետ և սովորաբար ունի ավելի բարձր եկամտաբերության, բայց նաև ավելի բարձր ռիսկի պոտենցիալ։\nՊարտատոմսը սովորաբար ավելի կայուն գործիք է և կարող է ապահովել կանխատեսելի տոկոսային եկամուտ։\nETF-ը թույլ է տալիս մեկ գործիքի միջոցով ներդրում կատարել միանգամից բազմաթիվ ակտիվներում, ինչը հաճախ օգնում է դիվերսիֆիկացնել ռիսկը։"
+    }
+  ];
+
   const toggleAccordion = (index) => {
     setOpenAccordions(prev => ({
       ...prev,
@@ -98,7 +122,7 @@ export default function Arjetxter() {
 
             <div className="space-y-4 text-xs md:text-sm text-gray-700 leading-relaxed mb-10">
               <p>
-                Բանկն իր հաճախորդներին ներդրումային ծառայություններ է մատուցում ինչպես տեղական, այնպես էլ՝ միջազգային շուկաներում: Բանկի կողմից առաջարկվող ծառայությունները հասանելի են իրավաբանական և ֆիզիկական անձ հանդիսացող հաճախորդներին:
+                Բանկն իր հաճախորդներին ներդրումային ծառայություններ է մատուցում ինչպես տեղական, այնպես էլ՝ միջազգային շուկաներում: Բանկի կողմից առաջարկվող ծառայությունները հասանելի են իրավաբանական and ֆիզիկական անձ հանդիսացող հաճախորդներին:
               </p>
             </div>
 
@@ -329,7 +353,7 @@ export default function Arjetxter() {
                 Հաշվի Օպերատորը ՀՀ Կենտրոնական Դեպոզիտարիայի հետ կնքած պայմանագրի հիման վրա միջնորդավորում է ՀՀ Կենտրոնական Դեպոզիտարիայի կողմից մատուցվող ծառայությունները:
               </p>
               <p>
-                Evocabank-ը, որպես ՀՀ Կենտրոնական Դեպոզիտարիայի Հաշվի Օպերատոր և կարգավորվող շուկայի հաշվարկային համակարգի անդամ (ԿՇՀՀԱ), մատուցում է ռեեստրավարման և պահառության ծառայություններ։
+                Evocabank-ը, որպես ՀՀ Կենտրոնական Դեպոզիտարիայի Հաշվի Օպերատոր և կարգավորվող շուկայի հաշվարկային համակարգի անդամ (ԿՇՀՀԱ), մատուցում է ռեեստրավարման և պահառության ծառայություններ՝ ապահովելով դրանց մատուցումը ինչպես Բանկի Գլխամասային գրասենյակում, այնպես էլ՝ մասնաճյուղերում։
               </p>
             </div>
 
@@ -374,7 +398,7 @@ export default function Arjetxter() {
                   Ռեպո/Հակադարձ Ռեպո գործարքներ
                 </h1>
                 <p className="text-xs md:text-sm text-gray-700 leading-relaxed">
-                  Կարճաժամկետ դրամական միջոցներ ներգրավելու և տեղաբաշխելու նպատակով Evocabank-ն իրականացնում է Ռեպո/Հակադարձ Ռեպո գործարքներ։
+                  Կարճաժամկետ դրամական միջոցներ ներգրավելու և տեղաբաշխելու նպատակով Evocabank-ն իրականացնում է Ռեպո/Հակադարձ Ռեպո գործարքներ։ Ռեպո/Հակադարձ Ռեպո գործարքների շնորհիվ՝ Բանկը կատարում է կարճաժամկետ իրացվելիության կառավարում։
                 </p>
               </div>
               <div className="md:w-1/2 flex justify-center">
@@ -392,6 +416,9 @@ export default function Arjetxter() {
               </p>
               <p>
                 Գործարքները կնքվում են ՀՀ պետական գանձապետական և ԿԲ-ի կողմից թողարկված պարտատոմսերով, ինչպես նաև ՀՀ առևտրային բանկերի, վարկային կազմակերպությունների կողմից թողարկված և Հայաստանի Ֆոնդային Բորսայում ցուցակված այլ կորպորատիվ պարտատոմսերով:
+              </p>
+              <p>
+                Գործարքի հիմնական պայմանները որոշվում են երկկողմ բանակցությունների արդյունքում:
               </p>
             </div>
 
@@ -420,6 +447,104 @@ export default function Arjetxter() {
                   className="rounded-2xl max-h-80 object-cover shadow-md"
                 />
               </div>
+            </div>
+
+            {/* EvocaInvest Bottom Section (Անհրաժեշտ տեղեկատվություն, օգտակար նյութեր և ՀՏՀ) */}
+            <div className="evocainvest-bottom-container" style={{ padding: '20px 0', fontFamily: 'sans-serif' }}>
+              
+              {/* ԱՆՀՐԱԺԵՇՏ ՏԵՂԵԿԱՏՎՈՒԹՅՈՒՆ */}
+              <h2 style={{ color: '#6400dc', borderBottom: '2px solid #6400dc', paddingBottom: '8px', marginBottom: '20px', fontSize: '24px', fontWeight: '900' }}>
+                ԱՆՀՐԱԺԵՇՏ ՏԵՂԵԿԱՏՎՈՒԹՅՈՒՆ
+              </h2>
+
+              {/* EvocaINVEST օգտակար նյութեր (Dropdown) */}
+              <div style={{ marginBottom: '20px', border: '1px solid #e5e7eb', borderRadius: '16px', overflow: 'hidden' }}>
+                <div 
+                  onClick={() => setOpenUseful(!openUseful)}
+                  style={{ 
+                    backgroundColor: '#f9fafb', 
+                    padding: '15px 20px', 
+                    cursor: 'pointer', 
+                    display: 'flex', 
+                    justifyContent: 'space-between', 
+                    alignItems: 'center',
+                    color: '#6400dc',
+                    fontWeight: 'bold',
+                    fontSize: '18px'
+                  }}
+                >
+                  <span>EvocaINVEST օգտակար նյութեր</span>
+                  <span>{openUseful ? '▲' : '▼'}</span>
+                </div>
+
+                {openUseful && (
+                  <div style={{ padding: '20px', display: 'flex', flexDirection: 'column', gap: '15px', backgroundColor: '#fff' }}>
+                    <a href="https://www.youtube.com/watch?v=5kUF-3KueZ8&t=2s" target="_blank" rel="noopener noreferrer" style={{ color: '#2563eb', textDecoration: 'none' }}>
+                      ▶ Տեսանյութ 1 (Դիտել YouTube-ում)
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=wax5BjEOAGQ&t=32s" target="_blank" rel="noopener noreferrer" style={{ color: '#2563eb', textDecoration: 'none' }}>
+                      ▶ Տեսանյութ 2 (Դիտել YouTube-ում)
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=oxxOZXf2kPA&t=12s" target="_blank" rel="noopener noreferrer" style={{ color: '#2563eb', textDecoration: 'none' }}>
+                      ▶ Տեսանյութ 3 (Դիտել YouTube-ում)
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=XCz2N5eicHs" target="_blank" rel="noopener noreferrer" style={{ color: '#2563eb', textDecoration: 'none' }}>
+                      ▶ Տեսանյութ 4 (Դիտել YouTube-ում)
+                    </a>
+                  </div>
+                )}
+              </div>
+
+              {/* Հաճախ տրվող հարցեր */}
+              <div style={{ marginBottom: '40px', border: '1px solid #e5e7eb', borderRadius: '16px', overflow: 'hidden' }}>
+                <div 
+                  onClick={() => setOpenFaq(!openFaq)}
+                  style={{ 
+                    backgroundColor: '#f9fafb', 
+                    padding: '15px 20px', 
+                    cursor: 'pointer', 
+                    display: 'flex', 
+                    justifyContent: 'space-between', 
+                    alignItems: 'center',
+                    color: '#6400dc',
+                    fontWeight: 'bold',
+                    fontSize: '18px'
+                  }}
+                >
+                  <span>Հաճախ տրվող հարցեր</span>
+                  <span>{openFaq ? '▲' : '▼'}</span>
+                </div>
+
+                {openFaq && (
+                  <div style={{ backgroundColor: '#fff' }}>
+                    {faqList.map((item, index) => (
+                      <div key={index} style={{ borderBottom: index !== faqList.length - 1 ? '1px solid #e5e7eb' : 'none' }}>
+                        <div 
+                          onClick={() => setActiveFaqIndex(activeFaqIndex === index ? null : index)}
+                          style={{ 
+                            padding: '15px 20px', 
+                            cursor: 'pointer', 
+                            display: 'flex', 
+                            justifyContent: 'space-between', 
+                            alignItems: 'center',
+                            color: '#4b5563',
+                            fontWeight: '600'
+                          }}
+                        >
+                          <span style={{ color: '#6400dc' }}>{item.question}</span>
+                          <span>{activeFaqIndex === index ? '−' : '+'}</span>
+                        </div>
+                        {activeFaqIndex === index && (
+                          <div style={{ padding: '0 20px 15px 20px', color: '#4b5563', lineHeight: '1.6', whiteSpace: 'pre-line' }}>
+                            {item.answer}
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+
             </div>
 
             <EvocaOnlineMobile />
