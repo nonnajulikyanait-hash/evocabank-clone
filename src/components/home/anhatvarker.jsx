@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Navbar from '../layout/navbar';
-import Footer from "./footer";
+import Footer from './footer';
 
 export default function AnhatVarker() {
   const [selectedFilter, setSelectedFilter] = useState('All');
@@ -407,8 +408,13 @@ export default function AnhatVarker() {
       {/* Sub-header Purple Bar (#6400dc) */}
       <div className="bg-[#6400dc] text-white py-3 px-4 shadow-inner">
         <div className="max-w-7xl mx-auto flex items-center space-x-8 text-xs sm:text-sm font-semibold overflow-x-auto whitespace-nowrap">
-          <span className="border-b-2 border-white pb-1 cursor-pointer">Վարկեր</span>
-          <span className="opacity-80 hover:opacity-100 cursor-pointer">Վարկային պատմություն և սքոր</span>
+          <Link to="/loans" className="border-b-2 border-white pb-1 cursor-pointer">
+            Վարկեր
+          </Link>
+          {/* Այստեղ ավելացվել է Link, որպեսզի սեղմելիս գնա վարկային պատմության էջ */}
+          <Link to="/credit-history-and-score" className="opacity-80 hover:opacity-100 cursor-pointer">
+            Վարկային պատմություն և սքոր
+          </Link>
           <span className="opacity-80 hover:opacity-100 cursor-pointer">Կարևոր տեղեկատվություն</span>
         </div>
       </div>
