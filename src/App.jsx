@@ -6,6 +6,8 @@ import StatueSection from './components/home/statuesection';
 import CardsSliderSection from './components/home/cardslidersection';
 import CalculatorSection from './components/home/calculatorsection';
 import EvocaOnlineMobile from './components/home/evocaonlinemobile';
+import Gortsynkerner from './components/home/gortsynkerner';
+
 
 
 function App() {
@@ -19,6 +21,7 @@ function App() {
         <CardsSliderSection />
         <CalculatorSection />
         <EvocaOnlineMobile/>
+        <Gortsynkerner/>
       </main>
     </div>
   );
