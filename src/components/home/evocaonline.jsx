@@ -32,10 +32,10 @@ export default function EvocaOnline() {
     }
 
     if (hasError) {
-      return; // Dashty lracvac che error dikharshe
+      return;
     }
 
-    // Եթե ինչ-որ անկապ կամ սխալ բան է գրված կամ մուտք են գործում, բացում ենք սխալի մոդալը (3rd screenshot)
+    // Եթե տվյալները լրացված են, բայց սխալ/անկապ են, բացում ենք սխալի մոդալը
     setShowErrorModal(true);
   };
 
@@ -171,7 +171,7 @@ export default function EvocaOnline() {
             </div>
             <h3 className="text-lg font-bold text-neutral-900">Արագ և ապահով</h3>
             <p className="text-xs text-gray-600 leading-relaxed">
-              Եթե ունեք EvocaTOUCH հավելվածը, սկանավորեք QR կոդը՝ ավելի արագ մուտք գործելու համար[cite: 15]։
+              Եթե ունեք EvocaTOUCH հավելվածը, սկանավորեք QR կոդը՝ ավելի արագ մուտք գործելու համար։
             </p>
           </div>
         </div>
@@ -186,9 +186,9 @@ export default function EvocaOnline() {
             </div>
             <p className="text-xs text-gray-700 leading-relaxed">
               Մուտքանունը կամ գաղտնաբառը սխալ է:<br />
-              3 անընդմեջ անհաջող փորձերի դեպքում Ձեր մուտքը համակարգ կարգելափակվի[cite: 16]:<br />
+              3 անընդմեջ անհաջող փորձերի դեպքում Ձեր մուտքը համակարգ կարգելափակվի:<br />
               Եթե չեք հիշում Ձեր մուտքանունը կամ գաղտնաբառը, խնդրում ենք օգտվել «Մոռաց՞ել եք գաղտնաբառը» հղումից կամ զանգահարել Բանկ:<br />
-              Հեռ.՝ (+374 10) 60 55 55[cite: 16]
+              Հեռ.՝ (+374 10) 60 55 55
             </p>
             <div className="flex justify-end pt-2">
               <button
