@@ -20,6 +20,7 @@ import Qarter from './components/home/qarter';
 import AnhatAvandner from './components/home/anhatavandner';
 import Hashivner from './components/home/hashivner'; // Հաշիվների էջի իմպորտ
 import Poxancumner from './components/home/poxancumner'; // Փոխանցումների էջի իմպորտ
+import Arjetxter from './components/home/arjetxter'; // Արժեթղթերի էջի իմպորտ
 
 function HomePage() {
   return (
@@ -68,6 +69,9 @@ function App() {
 
         {/* Փոխանցումների էջ (poxancumner.jsx) */}
         <Route path="/transfers" element={<Poxancumner />} />
+
+        {/* Արժեթղթերի էջ (arjetxter.jsx) */}
+        <Route path="/securities" element={<Arjetxter />} />
         
         {/* Վարկային պատմություն և սքոր */}
         <Route path="/credit-history-and-score" element={<CreditHistoryAndScore />} />
