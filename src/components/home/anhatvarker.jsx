@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../layout/navbar';
-import Footer from './footer';
+import Footer from "./footer";
 
 export default function AnhatVarker() {
   const [selectedFilter, setSelectedFilter] = useState('All');
@@ -411,11 +411,13 @@ export default function AnhatVarker() {
           <Link to="/loans" className="border-b-2 border-white pb-1 cursor-pointer">
             Վարկեր
           </Link>
-          {/* Այստեղ ավելացվել է Link, որպեսզի սեղմելիս գնա վարկային պատմության էջ */}
           <Link to="/credit-history-and-score" className="opacity-80 hover:opacity-100 cursor-pointer">
             Վարկային պատմություն և սքոր
           </Link>
-          <span className="opacity-80 hover:opacity-100 cursor-pointer">Կարևոր տեղեկատվություն</span>
+          {/* Այստեղ ավելացվել է Link դեպի ImportantInformation էջ */}
+          <Link to="/important-information" className="opacity-80 hover:opacity-100 cursor-pointer">
+            Կարևոր տեղեկատվություն
+          </Link>
         </div>
       </div>
 

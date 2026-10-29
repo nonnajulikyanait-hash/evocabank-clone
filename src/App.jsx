@@ -12,7 +12,8 @@ import CurrencyAndAddresses from './components/home/currencyandaddresses';
 import Hachaxord from './components/home/hachaxord';
 import Footer from './components/home/footer';
 import AnhatVarker from './components/home/anhatvarker';
-import CreditHistoryAndScore from "./components/home/credithistoryandscore";
+import CreditHistoryAndScore from './components/home/credithistoryandscore';
+import ImportantInformation from './components/home/importantinformation';
 
 function HomePage() {
   return (
@@ -38,10 +39,17 @@ function App() {
   return (
     <Router>
       <Routes>
+        {/* Գլխավոր էջ */}
         <Route path="/" element={<HomePage />} />
+        
+        {/* Վարկերի էջ */}
         <Route path="/loans" element={<AnhatVarker />} />
-        {/* Նոր էջի երթուղին */}
+        
+        {/* Վարկային պատմություն և սքոր */}
         <Route path="/credit-history-and-score" element={<CreditHistoryAndScore />} />
+        
+        {/* Կարևոր տեղեկատվություն */}
+        <Route path="/important-information" element={<ImportantInformation />} />
       </Routes>
     </Router>
   );
