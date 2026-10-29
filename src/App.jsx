@@ -28,7 +28,8 @@ import BiznesVarker from './components/home/biznesvarker';
 import Lizing from './components/home/lizing';
 import HatukArajark from './components/home/hatukarajark';
 import BiznesHashivner from './components/home/bizneshashivner';
-import ArarkayazurkMetaxakanHashivner from './components/home/ararkayazurkmetaxakanhashivner'; // Նոր իմպորտ
+import ArarkayazurkMetaxakanHashivner from './components/home/ararkayazurkmetaxakanhashivner';
+import BiznesAvandner from './components/home/biznesavandner'; // Բիզնես ավանդների էջի իմպորտ
 
 function HomePage() {
   return (
@@ -70,7 +71,8 @@ function App() {
         <Route path="/leasing" element={<Lizing />} />
         <Route path="/special-offer" element={<HatukArajark />} />
         <Route path="/business-accounts" element={<BiznesHashivner />} />
-        <Route path="/business-unallocated-metal-accounts" element={<ArarkayazurkMetaxakanHashivner />} /> {/* Թարմացված Route */}
+        <Route path="/business-unallocated-metal-accounts" element={<ArarkayazurkMetaxakanHashivner />} />
+        <Route path="/business-deposits" element={<BiznesAvandner />} /> {/* Բիզնես ավանդների երթուղի */}
         <Route path="/credit-history-and-score" element={<CreditHistoryAndScore />} />
         <Route path="/important-information" element={<ImportantInformation />} />
       </Routes>
