@@ -22,6 +22,7 @@ import Hashivner from './components/home/hashivner'; // Հաշիվների էջ�
 import Poxancumner from './components/home/poxancumner'; // Փոխանցումների էջի իմպորտ
 import Arjetxter from './components/home/arjetxter'; // Արժեթղթերի էջի իմպորտ
 import EvocaSalary from './components/home/evocasalary'; // EvocaSALARY էջի իմպորտ
+import EvocaTouch from './components/home/evocatouch'; // EvocaTOUCH էջի իմպորտ
 
 function HomePage() {
   return (
@@ -76,6 +77,9 @@ function App() {
 
         {/* EvocaSALARY էջ (evocasalary.jsx) */}
         <Route path="/evocasalary" element={<EvocaSalary />} />
+
+        {/* EvocaTOUCH էջ (evocatouch.jsx) */}
+        <Route path="/evocatouch" element={<EvocaTouch />} />
         
         {/* Վարկային պատմություն և սքոր */}
         <Route path="/credit-history-and-score" element={<CreditHistoryAndScore />} />

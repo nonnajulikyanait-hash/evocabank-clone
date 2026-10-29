@@ -10,6 +10,7 @@ export default function Navbar() {
   const isTransfersActive = location.pathname === '/transfers' || location.pathname === '/poxancumner';
   const isSecuritiesActive = location.pathname === '/securities' || location.pathname === '/arjetxter';
   const isEvocaSalaryActive = location.pathname === '/evocasalary';
+  const isEvocaTouchActive = location.pathname === '/evocatouch';
 
   return (
     <header className="w-full bg-white border-b border-gray-100 sticky top-0 z-50">
@@ -107,7 +108,13 @@ export default function Navbar() {
             EvocaSALARY
           </Link>
 
-          <a href="#" className="hover:text-[#6400dc] transition">EvocaTOUCH</a>
+          {/* «EvocaTOUCH» */}
+          <Link 
+            to="/evocatouch" 
+            className={`transition ${isEvocaTouchActive ? 'text-[#6400dc]' : 'text-gray-800 hover:text-[#6400dc]'}`}
+          >
+            EvocaTOUCH
+          </Link>
         </nav>
 
         {/* Button */}
