@@ -46,124 +46,135 @@ export default function Poxancumner() {
             </div>
 
             {/* Title */}
-            <h1 className="text-2xl md:text-3xl font-black text-neutral-900 mb-8 tracking-tight">
+            <h1 className="text-3xl md:text-4xl font-black text-neutral-900 mb-10 tracking-tight">
               Վճարային համակարգեր
             </h1>
 
-            {/* Payment Systems Horizontal Layout */}
-            <div className="space-y-6 mb-16">
+            {/* Payment Systems 3-Column Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
               
               {/* 1. MoneyTun */}
-              <div className="bg-white border border-gray-100 rounded-3xl p-6 shadow-sm hover:shadow-md transition grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
-                <div className="md:col-span-3 flex justify-center bg-gray-50 p-4 rounded-2xl">
-                  <img 
-                    src="https://www.evoca.am/images-cache/payment_systems/1/1738743146575/200x100.png" 
-                    alt="MoneyTun" 
-                    className="h-10 object-contain"
-                  />
-                </div>
-                <div className="md:col-span-9 space-y-2">
-                  <p className="text-xs text-gray-600 leading-relaxed">
+              <div className="bg-white border border-gray-100 rounded-[32px] p-8 shadow-sm hover:shadow-md transition flex flex-col justify-between text-center space-y-6">
+                <div className="space-y-6">
+                  <div className="h-16 flex items-center justify-center">
+                    <img 
+                      src="https://www.evoca.am/images-cache/payment_systems/1/1738743146575/200x100.png" 
+                      alt="MoneyTun" 
+                      className="h-10 object-contain"
+                    />
+                  </div>
+                  <p className="text-xs text-gray-600 leading-relaxed text-left">
                     MoneyTun-ը գործում է 2007 թվականից: Կազմակերպության նպատակը Ամերիկայի և Հայաստանի միջև ապահով ու պաշտպանված գործարքների ապահովումն է՝ հիմնված տասնամյակների փորձի վրա: Դրամական փոխանցումները կազմում են MoneyTun-ի կողմից մատուցվող ծառայությունների զգալի մասը:
                   </p>
-                  <div className="text-[11px] text-gray-700 pt-2 border-t border-gray-100 flex flex-wrap gap-x-6 gap-y-1">
-                    <div><span className="font-bold text-[#6400dc]">Հեռ․՝</span> +374 10 27 72 85</div>
-                    <div><span className="font-bold text-[#6400dc]">Գրաֆիկ՝</span> Երկ-Ուրբ 10:00-17:30, Շաբ 10:00-14:00, Կիր 10:00-13:00</div>
-                  </div>
+                </div>
+                <div className="border-t border-gray-100 pt-6 space-y-2 text-xs text-gray-700 text-center">
+                  <p className="font-bold text-[#6400dc]">MoneyTun Հաճախորդների սպասարկման հեռախոսահամար՝</p>
+                  <p className="font-semibold">+374 10 27 72 85</p>
+                  <p className="font-bold text-[#6400dc] pt-2">Աշխատանքային գրաֆիկ՝</p>
+                  <p>Երկուշաբթի-ուրբաթ 10:00-17:30<br/>Շաբաթ 10:00-14:00<br/>Կիրակի 10:00-13:00</p>
                 </div>
               </div>
 
               {/* 2. Ria */}
-              <div className="bg-white border border-gray-100 rounded-3xl p-6 shadow-sm hover:shadow-md transition grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
-                <div className="md:col-span-3 flex justify-center bg-gray-50 p-4 rounded-2xl">
-                  <img 
-                    src="https://www.evoca.am/images-cache/payment_systems/1/16510581265332/200x100.png" 
-                    alt="Ria" 
-                    className="h-10 object-contain"
-                  />
-                </div>
-                <div className="md:col-span-9 space-y-2">
-                  <p className="text-xs text-gray-600 leading-relaxed">
+              <div className="bg-white border border-gray-100 rounded-[32px] p-8 shadow-sm hover:shadow-md transition flex flex-col justify-between text-center space-y-6">
+                <div className="space-y-6">
+                  <div className="h-16 flex items-center justify-center">
+                    <img 
+                      src="https://www.evoca.am/images-cache/payment_systems/1/16510581265332/200x100.png" 
+                      alt="Ria" 
+                      className="h-10 object-contain"
+                    />
+                  </div>
+                  <p className="text-xs text-gray-600 leading-relaxed text-left">
                     Գործում է 182 երկրի ավելի քան 509,000 սպասարկման կետերում: Փոխանցումները կատարվում են դոլարով և եվրոյով: Միջնորդավճարը գանձվում է՝ ըստ RIA համակարգի սահմանած սակագների:
                   </p>
-                  <div className="text-[11px] text-gray-700 pt-2 border-t border-gray-100 flex flex-wrap gap-x-6 gap-y-1">
-                    <div><span className="font-bold text-[#6400dc]">Հեռ․՝</span> +374 94 23 59 00</div>
-                    <div><span className="font-bold text-[#6400dc]">Գրաֆիկ՝</span> Երկ-Ուրբ, 09:00-18:00</div>
-                    <div><span className="font-bold text-[#6400dc]">Լեզուներ՝</span> ռուսերեն, անգլերեն</div>
-                  </div>
+                </div>
+                <div className="border-t border-gray-100 pt-6 space-y-2 text-xs text-gray-700 text-center">
+                  <p className="font-bold text-[#6400dc]">Ria Հաճախորդների սպասարկման հեռախոսահամար Հայաստանի համար՝</p>
+                  <p className="font-semibold">+374 94 23 59 00</p>
+                  <p className="font-bold text-[#6400dc] pt-2">Աշխատանքային գրաֆիկ՝</p>
+                  <p>երկուշաբթի-ուրբաթ, 09:00-18:00 (Երևանի ժամանակով)</p>
+                  <p className="font-bold text-[#6400dc] pt-2">Հաճախորդների աջակցության լեզուներ՝</p>
+                  <p>ռուսերեն, անգլերեն</p>
                 </div>
               </div>
 
               {/* 3. UBPay */}
-              <div className="bg-white border border-gray-100 rounded-3xl p-6 shadow-sm hover:shadow-md transition grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
-                <div className="md:col-span-3 flex justify-center bg-gray-50 p-4 rounded-2xl">
-                  <img 
-                    src="https://www.evoca.am/images-cache/payment_systems/1/17304660969195/200x100.png" 
-                    alt="UBPay" 
-                    className="h-10 object-contain"
-                  />
-                </div>
-                <div className="md:col-span-9 space-y-2">
-                  <p className="text-xs text-gray-600 leading-relaxed">
+              <div className="bg-white border border-gray-100 rounded-[32px] p-8 shadow-sm hover:shadow-md transition flex flex-col justify-between text-center space-y-6">
+                <div className="space-y-6">
+                  <div className="h-16 flex items-center justify-center">
+                    <img 
+                      src="https://www.evoca.am/images-cache/payment_systems/1/17304660969195/200x100.png" 
+                      alt="UBPay" 
+                      className="h-10 object-contain"
+                    />
+                  </div>
+                  <p className="text-xs text-gray-600 leading-relaxed text-left">
                     UBPay – ը արագ դրամական փոխանցումների համակարգ է նախատեսված ֆիզիկական անձանց միջև ոչ առևտրային դրամական փոխանցումների իրականացման համար: Համակարգի միջոցով կարող եք իրականացնել փոխանցումներ Հայաստանից դեպի ՌԴ և հակառակ ուղղությամբ:
                   </p>
-                  <div className="text-[11px] text-gray-700 pt-2 border-t border-gray-100">
-                    <span className="font-bold text-[#6400dc]">Հեռ․՝</span> +374 43 00 49 35
-                  </div>
+                </div>
+                <div className="border-t border-gray-100 pt-6 space-y-2 text-xs text-gray-700 text-center">
+                  <p className="font-bold text-[#6400dc]">UBPay Հաճախորդների սպասարկման հեռախոսահամար`</p>
+                  <p className="font-semibold">+374 43 00 49 35</p>
                 </div>
               </div>
 
               {/* 4. IntelExpress */}
-              <div className="bg-white border border-gray-100 rounded-3xl p-6 shadow-sm hover:shadow-md transition grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
-                <div className="md:col-span-3 flex justify-center bg-gray-50 p-4 rounded-2xl">
-                  <img 
-                    src="https://www.evoca.am/images-cache/payment_systems/1/16133289933621/200x100.png" 
-                    alt="IntelExpress" 
-                    className="h-10 object-contain"
-                  />
-                </div>
-                <div className="md:col-span-9 space-y-2">
-                  <p className="text-xs text-gray-600 leading-relaxed">
+              <div className="bg-white border border-gray-100 rounded-[32px] p-8 shadow-sm hover:shadow-md transition flex flex-col justify-between text-center space-y-6">
+                <div className="space-y-6">
+                  <div className="h-16 flex items-center justify-center">
+                    <img 
+                      src="https://www.evoca.am/images-cache/payment_systems/1/16133289933621/200x100.png" 
+                      alt="IntelExpress" 
+                      className="h-10 object-contain"
+                    />
+                  </div>
+                  <p className="text-xs text-gray-600 leading-relaxed text-left">
                     Գործում է 90 երկրի ավելի քան 57,000 կետերում (Ռուսաստան, ԱՊՀ այլ երկրներ, Մեծ Բրիտանիա, Չինաստան, եվրոպական երկրներ և այլն)։ Փոխանցումները կատարվում են ռուբլով, դոլարով և եվրոյով: Միջնորդավճարը գանձվում է՝ ըստ IntelExpress-ի սահմանած սակագների:
                   </p>
-                  <div className="text-[11px] text-gray-700 pt-2 border-t border-gray-100">
-                    <span className="font-bold text-[#6400dc]">Հեռ․՝</span> +995 32 2 49 25 25
-                  </div>
+                </div>
+                <div className="border-t border-gray-100 pt-6 space-y-2 text-xs text-gray-700 text-center">
+                  <p className="font-bold text-[#6400dc]">INTELEXPRESS Հաճախորդների սպասարկման հեռախոսահամար՝</p>
+                  <p className="font-semibold">+995 32 2 49 25 25</p>
                 </div>
               </div>
 
               {/* 5. Stak */}
-              <div className="bg-white border border-gray-100 rounded-3xl p-6 shadow-sm hover:shadow-md transition grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
-                <div className="md:col-span-3 flex justify-center bg-gray-50 p-4 rounded-2xl">
-                  <img 
-                    src="https://www.evoca.am/images-cache/payment_systems/1/17651707946608/200x100.png" 
-                    alt="Stak" 
-                    className="h-10 object-contain"
-                  />
-                </div>
-                <div className="md:col-span-9 space-y-2">
-                  <p className="text-xs text-gray-600 leading-relaxed">
+              <div className="bg-white border border-gray-100 rounded-[32px] p-8 shadow-sm hover:shadow-md transition flex flex-col justify-between text-center space-y-6">
+                <div className="space-y-6">
+                  <div className="h-16 flex items-center justify-center">
+                    <img 
+                      src="https://www.evoca.am/images-cache/payment_systems/1/17651707946608/200x100.png" 
+                      alt="Stak" 
+                      className="h-10 object-contain"
+                    />
+                  </div>
+                  <p className="text-xs text-gray-600 leading-relaxed text-left">
                     «ՍՏԱԿ» դրամական փոխանցումների հայաստանյան միասնական համակարգի գործունեության նպատակը ռեզիդենտ և ոչ ռեզիդենտ հաճախորդների համար պատշաճ որակի դրամական փոխանցումների իրականացման կազմակերպումն է: Համակարգը հնարավորություն է տալիս կատարել և ստանալ փոխանցումներ դոլարով և, ինչպես նաև եվրոյով։
                   </p>
+                </div>
+                <div className="border-t border-gray-100 pt-6 space-y-2 text-xs text-gray-700 text-center">
+                  <p className="font-bold text-[#6400dc]">«ՍՏԱԿ» փոխանցումների համակարգ</p>
                 </div>
               </div>
 
               {/* 6. MoneyGram */}
-              <div className="bg-white border border-gray-100 rounded-3xl p-6 shadow-sm hover:shadow-md transition grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
-                <div className="md:col-span-3 flex justify-center bg-gray-50 p-4 rounded-2xl">
-                  <img 
-                    src="https://www.evoca.am/images-cache/payment_systems/1/17651703221475/200x100.png" 
-                    alt="MoneyGram" 
-                    className="h-10 object-contain"
-                  />
-                </div>
-                <div className="md:col-span-9 space-y-2">
-                  <p className="text-xs text-gray-600 leading-relaxed">
+              <div className="bg-white border border-gray-100 rounded-[32px] p-8 shadow-sm hover:shadow-md transition flex flex-col justify-between text-center space-y-6">
+                <div className="space-y-6">
+                  <div className="h-16 flex items-center justify-center">
+                    <img 
+                      src="https://www.evoca.am/images-cache/payment_systems/1/17651703221475/200x100.png" 
+                      alt="MoneyGram" 
+                      className="h-10 object-contain"
+                    />
+                  </div>
+                  <p className="text-xs text-gray-600 leading-relaxed text-left">
                     Գործում է 170 երկրի ավելի քան 125,000 կետերում: Արտերկրից Հայաստան փոխանցվում է դոլար և եվրո, իսկ Հայաստանից արտերկիր՝ միայն դոլար: Միջնորդավճարը գանձվում է ըստ MoneyGram-ի սահմանած սանդղակի:
                   </p>
-                  <div className="text-[11px] text-gray-700 pt-2 border-t border-gray-100">
-                    <span className="font-bold text-[#6400dc]">Հեռ․՝</span> 1-800-926-9400
-                  </div>
+                </div>
+                <div className="border-t border-gray-100 pt-6 space-y-2 text-xs text-gray-700 text-center">
+                  <p className="font-bold text-[#6400dc]">MoneyGram Հաճախորդների սպասարկման հեռախոսահամար`</p>
+                  <p className="font-semibold">1-800-926-9400</p>
                 </div>
               </div>
 
