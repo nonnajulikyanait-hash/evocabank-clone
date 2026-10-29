@@ -25,7 +25,8 @@ import EvocaSalary from './components/home/evocasalary';
 import EvocaTouch from './components/home/evocatouch'; 
 import EvocaOnline from './components/home/evocaonline';
 import BiznesVarker from './components/home/biznesvarker';
-import Lizing from './components/home/lizing'; // Լիզինգի էջի իմպորտ
+import Lizing from './components/home/lizing';
+import HatukArajark from './components/home/hatukarajark'; // Hatuk Arajark import
 
 function HomePage() {
   return (
@@ -51,52 +52,22 @@ function App() {
   return (
     <Router>
       <Routes>
-        {/* Գլխավոր էջ */}
         <Route path="/" element={<HomePage />} />
-        
-        {/* Վարկերի էջ */}
         <Route path="/loans" element={<AnhatVarker />} />
-        
-        {/* Հատուկ Անգրավ սպառողական վարկի մանրամասն էջ */}
         <Route path="/loans/unsecured-consumer-loan" element={<UnsecuredConsumerLoan />} />
-        
-        {/* Բոլոր մյուս վարկերի ընդհանուր դինամիկ էջը */}
         <Route path="/loans/:id" element={<LoanDetail />} />
-        
-        {/* Քարտերի էջ (qarter.jsx) */}
         <Route path="/cards" element={<Qarter />} />
-
-        {/* Ավանդների էջ (anhatavandner.jsx) */}
         <Route path="/deposits" element={<AnhatAvandner />} />
-
-        {/* Հաշիվների էջ (hashivner.jsx) */}
         <Route path="/accounts" element={<Hashivner />} />
-
-        {/* Փոխանցումների էջ (poxancumner.jsx) */}
         <Route path="/transfers" element={<Poxancumner />} />
-
-        {/* Արժեթղթերի էջ (arjetxter.jsx) */}
         <Route path="/securities" element={<Arjetxter />} />
-
-        {/* EvocaSALARY էջ (evocasalary.jsx) */}
         <Route path="/evocasalary" element={<EvocaSalary />} />
-
-        {/* EvocaTOUCH էջ (evocatouch.jsx) */}
         <Route path="/evocatouch" element={<EvocaTouch />} />
-
-        {/* EvocaONLINE էջ (evocaonline.jsx) */}
         <Route path="/evocaonline" element={<EvocaOnline />} />
-
-        {/* Բիզնես վարկերի էջ (biznesvarker.jsx) */}
         <Route path="/business-loans" element={<BiznesVarker />} />
-
-        {/* Լիզինգի էջ (lizing.jsx) */}
         <Route path="/leasing" element={<Lizing />} />
-        
-        {/* Վարկային պատմություն և սքոր */}
+        <Route path="/special-offer" element={<HatukArajark />} />
         <Route path="/credit-history-and-score" element={<CreditHistoryAndScore />} />
-        
-        {/* Կարևոր տեղեկատվություն */}
         <Route path="/important-information" element={<ImportantInformation />} />
       </Routes>
     </Router>

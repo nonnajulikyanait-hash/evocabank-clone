@@ -3,7 +3,6 @@ import Navbar from '../layout/navbar';
 import Footer from './footer';
 
 export default function Lizing() {
-  // Ծալվող/բացվող (Accordion) բաժինների վիճակը
   const [openSection, setOpenSection] = useState(null);
 
   const toggleSection = (index) => {
@@ -26,20 +25,20 @@ export default function Lizing() {
           </h1>
 
           <div className="flex gap-8 items-start">
-            {/* Սոց. ցանցերի կոճակներ ձախ կողմում */}
+            {/* Սոց․ ցանցերի կոճակներ */}
             <div className="hidden md:flex flex-col gap-3 p-3 bg-gray-50 rounded-2xl border border-gray-100 text-gray-500">
-              <span className="cursor-pointer hover:text-[#6400dc] text-sm">f</span>
-              <span className="cursor-pointer hover:text-[#6400dc] text-sm">in</span>
+              <span className="cursor-pointer hover:text-[#6400dc] text-sm font-bold">f</span>
+              <span className="cursor-pointer hover:text-[#6400dc] text-sm font-bold">in</span>
               <span className="cursor-pointer hover:text-[#6400dc] text-sm">📷</span>
             </div>
 
-            {/* Հիմնական բովանդակություն */}
+            {/* Բովանդակություն */}
             <div className="flex-1 space-y-6">
               <h2 className="text-lg font-bold text-neutral-900 tracking-wide mb-4">
                 ԱՆՀՐԱԺԵՇՏ ՏԵՂԵԿԱՏՎՈՒԹՅՈՒՆ
               </h2>
 
-              {/* ----------------- ԲԱԺԻՆ 1: Evoca Leasing ----------------- */}
+              {/* Accordion 1: Evoca Leasing */}
               <div className="border border-gray-200 rounded-2xl overflow-hidden bg-white shadow-2xs">
                 <button
                   onClick={() => toggleSection(1)}
@@ -86,13 +85,12 @@ export default function Lizing() {
                       <div><strong className="text-neutral-800">Մարման ժամկետը՝</strong> 6-72 ամիս` կախված ձեռքբերվող Լիզինգի առարկայից</div>
                       <div><strong className="text-neutral-800">Մարման եղանակը՝</strong> Անուիտետային, Զսպանակաձև, Պայմանագրային</div>
                       <div><strong className="text-neutral-800">Տարեկան տոկոսադրույքը՝</strong> ՀՀ դրամ՝ սկսած 10.5%-ից | ԱՄՆ դոլար՝ սկսած 8%-ից | Եվրո՝ սկսած 6%-ից</div>
-                      <div><strong className="text-neutral-800">Տույժեր՝</strong> Ժամկետանց մայր գումարի դեպքում` օրական 0.015%, տոկոսագումարի դեպքում` օրական 0.1%</div>
                     </div>
                   </div>
                 )}
               </div>
 
-              {/* ----------------- ԲԱԺԻՆ 2: Տնտեսության Արդիականացման ծրագիր ----------------- */}
+              {/* Accordion 2: Տնտեսության Արդիականացման ծրագիր */}
               <div className="border border-gray-200 rounded-2xl overflow-hidden bg-white shadow-2xs">
                 <button
                   onClick={() => toggleSection(2)}
@@ -115,13 +113,11 @@ export default function Lizing() {
                     <div><strong>5. Սուբսիդավորվող ոլորտներ՝</strong> Մշակող և հանքագործական արդյունաբերություն, շինարարություն, տեղեկատվություն և կապ, առողջապահություն, կրթություն և այլն:</div>
                     <div><strong>6. Առավելագույն չափ՝</strong> Մինչև 1 մլրդ ՀՀ դրամ կամ համարժեք արտարժույթ:</div>
                     <div><strong>7. Մարման ժամկետ՝</strong> Մինչև 120 ամիս:</div>
-                    <div><strong>8. Տարեկան տոկոսադրույք՝</strong> ՀՀ դրամ` 9%-14%, ԱՄՆ դոլար/Եվրո` 6%-10%:</div>
-                    <div><strong>9. Տոկոսադրույքի սուբսիդավորում՝</strong> ՀՀ դրամ` 8%, ԱՄՆ դոլար/Եվրո` 6%:</div>
                   </div>
                 )}
               </div>
 
-              {/* ----------------- ԲԱԺԻՆ 3: Գյուղատնտեսական տեխնիկայի լիզինգ ----------------- */}
+              {/* Accordion 3: Գյուղատնտեսական տեխնիկայի լիզինգ */}
               <div className="border border-gray-200 rounded-2xl overflow-hidden bg-white shadow-2xs">
                 <button
                   onClick={() => toggleSection(3)}
@@ -139,16 +135,14 @@ export default function Lizing() {
                   <div className="p-6 border-t border-gray-100 text-xs md:text-sm text-gray-700 space-y-3 bg-gray-50/50">
                     <div><strong>Արժույթ՝</strong> ՀՀ դրամ</div>
                     <div><strong>Գործունեության ոլորտ՝</strong> Գյուղատնտեսություն</div>
-                    <div><strong>Նպատակ՝</strong> Տրակտորներ, կոմբայններ, հավաքիչ-մամլիչներ, սրսկիչներ, կցասայլակներ և այլ տեխնիկա:</div>
                     <div><strong>Լիզինգի սահմանաչափ՝</strong> 5,100,000 - 500,000,000 ՀՀ դրամ</div>
                     <div><strong>Կանխավճար՝</strong> 20%</div>
                     <div><strong>Մարման ժամկետ՝</strong> 36 - 120 ամիս</div>
-                    <div><strong>Տարեկան տոկոսադրույք՝</strong> Լիզինգառուի համար փաստացի 2% (սահմանամերձ գոտիների կամ կոոպերատիվների համար՝ 0%):</div>
                   </div>
                 )}
               </div>
 
-              {/* ----------------- ԲԱԺԻՆ 4: Տրանսպորտային միջոցի լիզինգ ----------------- */}
+              {/* Accordion 4: Տրանսպորտային միջոցի լիզինգ */}
               <div className="border border-gray-200 rounded-2xl overflow-hidden bg-white shadow-2xs">
                 <button
                   onClick={() => toggleSection(4)}
@@ -166,9 +160,6 @@ export default function Lizing() {
                   <div className="p-6 border-t border-gray-100 text-xs md:text-sm text-gray-700 space-y-3 bg-gray-50/50">
                     <p>
                       Evoca-ի տրանսպորտային միջոցի լիզինգով կարող եք ձեռք բերել մարդատար, ուղևորատար կամ բեռնատար տրանսպորտային միջոց՝ թե՛ Հայաստանից, թե՛ արտերկրից՝ առաջնային կամ երկրորդային շուկայից։
-                    </p>
-                    <p>
-                      Ընտրության ազատությունը միայն տրանսպորտային միջոցին չի վերաբերում․ կարող եք ընտրել նաև լիզինգի արժույթը, մարման եղանակն ու ժամկետը՝ 6-ից մինչև 72 ամիս, իսկ ֆինանսավորման սահմանաչափը կարող է հասնել մինչև 1 մլրդ ՀՀ դրամի կամ համարժեք արտարժույթի։
                     </p>
                   </div>
                 )}

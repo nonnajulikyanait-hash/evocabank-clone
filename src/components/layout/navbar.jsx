@@ -5,7 +5,13 @@ export default function Navbar() {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const isBusinessSection = location.pathname.startsWith('/business') || location.pathname === '/biznesvarker' || location.pathname === '/leasing';
+  const isBusinessSection = 
+    location.pathname.startsWith('/business') || 
+    location.pathname === '/biznesvarker' || 
+    location.pathname === '/leasing' || 
+    location.pathname === '/special-offer';
+
+  const isLeasingSub = location.pathname === '/leasing' || location.pathname === '/special-offer';
 
   return (
     <header className="w-full bg-white border-b border-gray-100 sticky top-0 z-50">
@@ -59,7 +65,7 @@ export default function Navbar() {
             <Link to="/business-loans" className={`transition ${location.pathname === '/business-loans' ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>
               Վարկեր
             </Link>
-            <Link to="/leasing" className={`transition ${location.pathname === '/leasing' ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>
+            <Link to="/leasing" className={`transition ${isLeasingSub ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>
               Լիզինգ
             </Link>
             <span className="hover:text-[#6400dc] cursor-pointer transition">Հաշիվներ</span>
@@ -92,11 +98,30 @@ export default function Navbar() {
         </Link>
       </div>
 
-      {/* Sub-Bar */}
+      {/* Sub-Bar with White Line for active tab */}
       {isBusinessSection && (
-        <div className="bg-[#6400dc] text-white py-4 px-12 text-sm font-bold border-b border-white">
-          <div className="container mx-auto pl-6">
-            {location.pathname === '/leasing' ? 'Evoca Leasing' : 'Բիզնես վարկեր'}
+        <div className="bg-[#6400dc] text-white px-12 text-xs font-bold border-b border-white">
+          <div className="container mx-auto pl-6 flex gap-8 items-center h-12">
+            {isLeasingSub ? (
+              <>
+                <Link 
+                  to="/leasing" 
+                  className={`h-full flex items-center transition ${location.pathname === '/leasing' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}
+                >
+                  Evoca Leasing
+                </Link>
+                <Link 
+                  to="/special-offer" 
+                  className={`h-full flex items-center transition ${location.pathname === '/special-offer' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}
+                >
+                  Հատուկ առաջարկ
+                </Link>
+              </>
+            ) : (
+              <div className="h-full flex items-center border-b-2 border-white text-white font-black">
+                Բիզնես վարկեր
+              </div>
+            )}
           </div>
         </div>
       )}
