@@ -339,7 +339,7 @@ export default function Qarter() {
     { title: "UnionPay Business Platinum քարտեր (Տեղեկատվական ամփոփոգիր)", link: "https://www.evoca.am/files/global_files/1/union-pay-17-03-26.pdf" }
   ];
 
-  const filteredCards = cardsList; // Այստեղ կարող ես ավելացնել ֆիլտրման տրամաբանություն ըստ անհրաժեշտության
+  const filteredCards = cardsList;
 
   return (
     <div className="min-h-screen bg-white font-sans text-neutral-800 flex flex-col justify-between">
@@ -513,9 +513,9 @@ export default function Qarter() {
             </h1>
 
             <div className="mb-10">
-              <h2 className="text-xl font-bold text-neutral-900 mb-6 bg-gray-50 p-4 rounded-2xl border-l-4 border-[#6400dc]">
+              <h1 className="text-xl font-bold text-neutral-900 mb-6 text-left">
                 ԱՆՀՐԱԺԵՇՏ ՏԵՂԵԿԱՏՎՈՒԹՅՈՒՆ
-              </h2>
+              </h1>
 
               <div className="space-y-4">
                 {provisionSections.map((sec, secIdx) => (
@@ -527,7 +527,7 @@ export default function Qarter() {
                       <span className="flex items-center gap-2">
                         <span className="text-[#6400dc]">⌄</span> {sec.title}
                       </span>
-                      <span className="text-xs text-gray-400">{openAccordions[secIdx] ? 'Փակել' : 'Բացել'}</span>
+                      <span className="text-xs text-gray-400 font-normal">{openAccordions[secIdx] ? 'Փակել' : 'Բացել'}</span>
                     </button>
 
                     {openAccordions[secIdx] && (
@@ -549,9 +549,9 @@ export default function Qarter() {
 
             {/* Փաստաթղթեր բաժին */}
             <div className="mb-16">
-              <h2 className="text-xl font-bold text-neutral-900 mb-6 bg-gray-50 p-4 rounded-2xl border-l-4 border-[#6400dc]">
+              <h1 className="text-xl font-bold text-neutral-900 mb-6 text-left">
                 Փաստաթղթեր
-              </h2>
+              </h1>
               <div className="space-y-3">
                 {documentsList.map((doc, docIdx) => (
                   <a
