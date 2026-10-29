@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/layout/navbar';
 import EvocaCardSlider from './components/home/evocacardslider';
 import BiometricSection from './components/home/biometricsection';
@@ -10,10 +11,9 @@ import Gortsynkerner from './components/home/gortsynkerner';
 import CurrencyAndAddresses from './components/home/currencyandaddresses';
 import Hachaxord from './components/home/hachaxord';
 import Footer from './components/home/footer';
+import AnhatVarker from './components/loans/anhatvarker';
 
-
-
-function App() {
+function HomePage() {
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
@@ -27,9 +27,23 @@ function App() {
         <Gortsynkerner />
         <CurrencyAndAddresses />
         <Hachaxord />
-        <Footer />
       </main>
+      <Footer />
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        {/* Հիմնական գլխավոր էջ */}
+        <Route path="/" element={<HomePage />} />
+        
+        {/* Վարկերի էջը (React Routing-ով) */}
+        <Route path="/loans" element={<AnhatVarker />} />
+      </Routes>
+    </Router>
   );
 }
 
