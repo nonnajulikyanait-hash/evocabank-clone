@@ -495,9 +495,18 @@ export default function AnhatVarker() {
                 )}
 
                 <div className="pt-2">
-                  <button className="bg-purple-50 hover:bg-purple-100 text-[#6400dc] font-bold text-xs px-6 py-3 rounded-full transition-all cursor-pointer">
-                    Մանրամասն &gt;
-                  </button>
+                  {loan.id === 1 ? (
+                    <Link 
+                      to="/loans/unsecured-consumer-loan" 
+                      className="bg-purple-50 hover:bg-purple-100 text-[#6400dc] font-bold text-xs px-6 py-3 rounded-full transition-all cursor-pointer inline-block"
+                    >
+                      Մանրամասն &gt;
+                    </Link>
+                  ) : (
+                    <button className="bg-purple-50 hover:bg-purple-100 text-[#6400dc] font-bold text-xs px-6 py-3 rounded-full transition-all cursor-pointer">
+                      Մանրամասն &gt;
+                    </button>
+                  )}
                 </div>
               </div>
             </div>
