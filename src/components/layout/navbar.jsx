@@ -44,7 +44,7 @@ export default function Navbar() {
 
       {/* Main Navbar */}
       <div className="container mx-auto py-3 px-8 flex justify-between items-center">
-        {/* Logo (Սեղմելիս տանում է Գլխավոր էջ) */}
+        {/* Logo */}
         <Link to="/" className="flex items-center gap-1.5 cursor-pointer">
           <span className="text-2xl font-black text-[#6400dc] tracking-tighter">evoca</span>
           <span className="w-2 h-2 bg-[#6400dc] rounded-full"></span>
@@ -52,7 +52,6 @@ export default function Navbar() {
 
         {/* Links */}
         <nav className="hidden lg:flex items-center gap-7 text-[13px] font-bold text-gray-800">
-          {/* «Վարկեր» */}
           <Link 
             to="/loans" 
             className={`transition ${isLoansActive ? 'text-[#6400dc]' : 'text-gray-800 hover:text-[#6400dc]'}`}
@@ -60,7 +59,6 @@ export default function Navbar() {
             Վարկեր
           </Link>
 
-          {/* «Քարտեր» */}
           <Link 
             to="/cards" 
             className={`transition ${isCardsActive ? 'text-[#6400dc]' : 'text-gray-800 hover:text-[#6400dc]'}`}
@@ -68,7 +66,6 @@ export default function Navbar() {
             Քարտեր
           </Link>
 
-          {/* «Ավանդներ» */}
           <Link 
             to="/deposits" 
             className={`transition ${isDepositsActive ? 'text-[#6400dc]' : 'text-gray-800 hover:text-[#6400dc]'}`}
@@ -76,7 +73,6 @@ export default function Navbar() {
             Ավանդներ
           </Link>
 
-          {/* «Հաշիվներ» */}
           <Link 
             to="/accounts" 
             className={`transition ${isAccountsActive ? 'text-[#6400dc]' : 'text-gray-800 hover:text-[#6400dc]'}`}
@@ -84,7 +80,6 @@ export default function Navbar() {
             Հաշիվներ
           </Link>
 
-          {/* «Փոխանցումներ» */}
           <Link 
             to="/transfers" 
             className={`transition ${isTransfersActive ? 'text-[#6400dc]' : 'text-gray-800 hover:text-[#6400dc]'}`}
@@ -92,7 +87,6 @@ export default function Navbar() {
             Փոխանցումներ
           </Link>
 
-          {/* «Արժեթղթեր» */}
           <Link 
             to="/securities" 
             className={`transition ${isSecuritiesActive ? 'text-[#6400dc]' : 'text-gray-800 hover:text-[#6400dc]'}`}
@@ -100,7 +94,6 @@ export default function Navbar() {
             Արժեթղթեր
           </Link>
 
-          {/* «EvocaSALARY» */}
           <Link 
             to="/evocasalary" 
             className={`transition ${isEvocaSalaryActive ? 'text-[#6400dc]' : 'text-gray-800 hover:text-[#6400dc]'}`}
@@ -108,7 +101,6 @@ export default function Navbar() {
             EvocaSALARY
           </Link>
 
-          {/* «EvocaTOUCH» */}
           <Link 
             to="/evocatouch" 
             className={`transition ${isEvocaTouchActive ? 'text-[#6400dc]' : 'text-gray-800 hover:text-[#6400dc]'}`}
@@ -117,9 +109,11 @@ export default function Navbar() {
           </Link>
         </nav>
 
-        {/* Button */}
+        {/* EvocaONLINE Button (Opens in new tab) */}
         <Link 
           to="/evocaonline" 
+          target="_blank" 
+          rel="noopener noreferrer"
           className="bg-[#6400dc] hover:bg-opacity-90 text-white font-bold text-[11px] px-4 py-2 rounded-full transition shadow-sm cursor-pointer inline-block text-center"
         >
           EvocaONLINE
