@@ -24,7 +24,8 @@ import Arjetxter from './components/home/arjetxter';
 import EvocaSalary from './components/home/evocasalary'; 
 import EvocaTouch from './components/home/evocatouch'; 
 import EvocaOnline from './components/home/evocaonline';
-import BiznesVarker from './components/home/biznesvarker'; // Բիզնես վարկերի էջի իմպորտ
+import BiznesVarker from './components/home/biznesvarker';
+import Lizing from './components/home/lizing'; // Լիզինգի էջի իմպորտ
 
 function HomePage() {
   return (
@@ -88,6 +89,9 @@ function App() {
 
         {/* Բիզնես վարկերի էջ (biznesvarker.jsx) */}
         <Route path="/business-loans" element={<BiznesVarker />} />
+
+        {/* Լիզինգի էջ (lizing.jsx) */}
+        <Route path="/leasing" element={<Lizing />} />
         
         {/* Վարկային պատմություն և սքոր */}
         <Route path="/credit-history-and-score" element={<CreditHistoryAndScore />} />

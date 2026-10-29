@@ -5,16 +5,7 @@ export default function Navbar() {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const isBusinessSection = location.pathname.startsWith('/business') || location.pathname === '/biznesvarker';
-  
-  const isLoansActive = location.pathname === '/loans';
-  const isCardsActive = location.pathname === '/cards';
-  const isDepositsActive = location.pathname === '/deposits' || location.pathname === '/anhat-avandner';
-  const isAccountsActive = location.pathname === '/accounts' || location.pathname === '/hashivner';
-  const isTransfersActive = location.pathname === '/transfers' || location.pathname === '/poxancumner';
-  const isSecuritiesActive = location.pathname === '/securities' || location.pathname === '/arjetxter';
-  const isEvocaSalaryActive = location.pathname === '/evocasalary';
-  const isEvocaTouchActive = location.pathname === '/evocatouch';
+  const isBusinessSection = location.pathname.startsWith('/business') || location.pathname === '/biznesvarker' || location.pathname === '/leasing';
 
   return (
     <header className="w-full bg-white border-b border-gray-100 sticky top-0 z-50">
@@ -63,43 +54,31 @@ export default function Navbar() {
           <span className="w-2 h-2 bg-[#6400dc] rounded-full"></span>
         </Link>
 
-        {!isBusinessSection ? (
+        {isBusinessSection ? (
           <nav className="hidden lg:flex items-center gap-7 text-[13px] font-bold text-gray-800">
-            <Link to="/loans" className={`transition ${isLoansActive ? 'text-[#6400dc]' : 'text-gray-800 hover:text-[#6400dc]'}`}>
+            <Link to="/business-loans" className={`transition ${location.pathname === '/business-loans' ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>
               Վարկեր
             </Link>
-            <Link to="/cards" className={`transition ${isCardsActive ? 'text-[#6400dc]' : 'text-gray-800 hover:text-[#6400dc]'}`}>
-              Քարտեր
+            <Link to="/leasing" className={`transition ${location.pathname === '/leasing' ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>
+              Լիզինգ
             </Link>
-            <Link to="/deposits" className={`transition ${isDepositsActive ? 'text-[#6400dc]' : 'text-gray-800 hover:text-[#6400dc]'}`}>
-              Ավանդներ
-            </Link>
-            <Link to="/accounts" className={`transition ${isAccountsActive ? 'text-[#6400dc]' : 'text-gray-800 hover:text-[#6400dc]'}`}>
-              Հաշիվներ
-            </Link>
-            <Link to="/transfers" className={`transition ${isTransfersActive ? 'text-[#6400dc]' : 'text-gray-800 hover:text-[#6400dc]'}`}>
-              Փոխանցումներ
-            </Link>
-            <Link to="/securities" className={`transition ${isSecuritiesActive ? 'text-[#6400dc]' : 'text-gray-800 hover:text-[#6400dc]'}`}>
-              Արժեթղթեր
-            </Link>
-            <Link to="/evocasalary" className={`transition ${isEvocaSalaryActive ? 'text-[#6400dc]' : 'text-gray-800 hover:text-[#6400dc]'}`}>
-              EvocaSALARY
-            </Link>
-            <Link to="/evocatouch" className={`transition ${isEvocaTouchActive ? 'text-[#6400dc]' : 'text-gray-800 hover:text-[#6400dc]'}`}>
-              EvocaTOUCH
-            </Link>
-          </nav>
-        ) : (
-          <nav className="hidden lg:flex items-center gap-7 text-[13px] font-bold text-gray-800">
-            <Link to="/business-loans" className="text-[#6400dc] transition">Վարկեր</Link>
-            <span className="hover:text-[#6400dc] cursor-pointer transition">Լիզինգ</span>
             <span className="hover:text-[#6400dc] cursor-pointer transition">Հաշիվներ</span>
             <span className="hover:text-[#6400dc] cursor-pointer transition">Ավանդներ</span>
             <span className="hover:text-[#6400dc] cursor-pointer transition">Արժեթղթերի շուկա</span>
             <span className="hover:text-[#6400dc] cursor-pointer transition">Առևտրի ֆինանսավորում</span>
-            <span className="hover:text-[#6400dc] cursor-pointer transition">Դիջիթալ</span>
+            <span className="hover:text-[#6400dc] cursor-pointer transition">Դեպոզիտարիա</span>
             <span className="hover:text-[#6400dc] cursor-pointer transition">Այլ</span>
+          </nav>
+        ) : (
+          <nav className="hidden lg:flex items-center gap-7 text-[13px] font-bold text-gray-800">
+            <Link to="/loans" className="hover:text-[#6400dc] transition">Վարկեր</Link>
+            <Link to="/cards" className="hover:text-[#6400dc] transition">Քարտեր</Link>
+            <Link to="/deposits" className="hover:text-[#6400dc] transition">Ավանդներ</Link>
+            <Link to="/accounts" className="hover:text-[#6400dc] transition">Հաշիվներ</Link>
+            <Link to="/transfers" className="hover:text-[#6400dc] transition">Փոխանցումներ</Link>
+            <Link to="/securities" className="hover:text-[#6400dc] transition">Արժեթղթեր</Link>
+            <Link to="/evocasalary" className="hover:text-[#6400dc] transition">EvocaSALARY</Link>
+            <Link to="/evocatouch" className="hover:text-[#6400dc] transition">EvocaTOUCH</Link>
           </nav>
         )}
 
@@ -113,11 +92,11 @@ export default function Navbar() {
         </Link>
       </div>
 
-      {/* Single Purple Sub-Bar for Business Loans */}
+      {/* Sub-Bar */}
       {isBusinessSection && (
-        <div className="bg-[#6400dc] text-white py-2 px-8 text-xs font-medium">
-          <div className="container mx-auto">
-            Բիզնես վարկեր
+        <div className="bg-[#6400dc] text-white py-4 px-12 text-sm font-bold border-b border-white">
+          <div className="container mx-auto pl-6">
+            {location.pathname === '/leasing' ? 'Evoca Leasing' : 'Բիզնես վարկեր'}
           </div>
         </div>
       )}
