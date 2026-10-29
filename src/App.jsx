@@ -11,7 +11,9 @@ import Gortsynkerner from './components/home/gortsynkerner';
 import CurrencyAndAddresses from './components/home/currencyandaddresses';
 import Hachaxord from './components/home/hachaxord';
 import Footer from './components/home/footer';
-import AnhatVarker from './components/loans/anhatvarker';
+
+// Փոխված է ճիշտ ճանապարհը և մեծատառ անվանումը
+import AnhatVarker from './components/home/anhatvarker';
 
 function HomePage() {
   return (

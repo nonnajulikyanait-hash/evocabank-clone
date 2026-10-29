@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Navbar from '../layout/navbar';
-import Footer from '../common/footer';
+import Footer from "./footer";
 
 export default function AnhatVarker() {
   const [selectedFilter, setSelectedFilter] = useState('All');
