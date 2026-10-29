@@ -1,23 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import Navbar from '../layout/navbar';
+import Footer from './footer';
 
-const Qarter = ({ setActiveTab, selectedCard: externalSelectedCard, setSelectedCard: setExternalSelectedCard }) => {
-  const [selectedCard, setSelectedCard] = useState(externalSelectedCard || null);
+const Qarter = () => {
   const [activeFilter, setActiveFilter] = useState('Բոլորը');
   const [currentPage, setCurrentPage] = useState(1);
   const cardsPerPage = 20;
-
-  useEffect(() => {
-    if (externalSelectedCard) {
-      setSelectedCard(externalSelectedCard);
-    }
-  }, [externalSelectedCard]);
-
-  const handleBack = () => {
-    setSelectedCard(null);
-    if (setExternalSelectedCard) {
-      setExternalSelectedCard(null);
-    }
-  };
 
   const cardsList = [
     {
@@ -237,11 +226,6 @@ const Qarter = ({ setActiveTab, selectedCard: externalSelectedCard, setSelectedC
     }
   ];
 
-  // Գտնում ենք քարտի ամբողջական տվյալները, եթե Swiper-ից է եկել
-  const activeCardData = selectedCard
-    ? (cardsList.find(c => c.title.toLowerCase() === selectedCard.title.toLowerCase() || c.id === selectedCard.id) || selectedCard)
-    : null;
-
   const filteredCards = activeFilter === 'Բոլորը'
     ? cardsList
     : cardsList.filter(card => card.categories && card.categories.includes(activeFilter));
@@ -254,141 +238,99 @@ const Qarter = ({ setActiveTab, selectedCard: externalSelectedCard, setSelectedC
   const filterButtons = ['Բոլորը', 'Պրեմիում', 'Նվեր քարտեր', 'Թվային քարտեր', 'arca', 'VISA', 'Mastercard', 'UnionPay'];
 
   return (
-    <div className="bg-gray-50 min-h-screen font-sans flex flex-col justify-between">
+    <div className="min-h-screen bg-white font-sans text-neutral-800 flex flex-col justify-between">
       <div>
-        <div className="bg-purple-700 text-white py-3 px-6 md:px-12">
-          <div className="max-w-7xl mx-auto flex flex-wrap space-x-6 text-sm font-medium">
-            <span className="font-bold border-b-2 border-white pb-1 cursor-pointer">Քարտեր</span>
-            <span className="hover:opacity-80 cursor-pointer">Քարտերի տրամադրում և սպասարկում</span>
-            <span className="hover:opacity-80 cursor-pointer">Սոցիալական ապահովության վճարային քարտեր</span>
-            <span className="hover:opacity-80 cursor-pointer">Evoca Benefits</span>
+        <Navbar />
+
+        {/* Purple Bar #6400dc */}
+        <div className="bg-[#6400dc] text-white py-3 px-4 shadow-inner">
+          <div className="max-w-7xl mx-auto flex items-center space-x-8 text-xs sm:text-sm font-semibold overflow-x-auto whitespace-nowrap">
+            <span className="text-white border-b-2 border-white pb-1 cursor-pointer">Քարտեր</span>
+            <span className="text-white opacity-80 hover:opacity-100 cursor-pointer">Քարտերի տրամադրում և սպասարկում</span>
+            <span className="text-white opacity-80 hover:opacity-100 cursor-pointer">Սոցիալական ապահովության վճարային քարտեր</span>
+            <span className="text-white opacity-80 hover:opacity-100 cursor-pointer">Evoca Benefits</span>
           </div>
         </div>
 
-        <main className="max-w-7xl mx-auto px-4 md:px-12 pt-8 pb-16">
-          {activeCardData ? (
-            /* ԱՌԱՆՁԻՆ ՔԱՐՏԻ ԷՋԸ */
-            <div>
-              <div className="flex items-center justify-between mb-8">
-                <button
-                  onClick={handleBack}
-                  className="flex items-center space-x-2 text-sm text-gray-600 hover:text-purple-700 font-medium transition cursor-pointer"
-                >
-                  <span>← Վերադառնալ</span>
-                </button>
-                <div className="text-sm text-gray-400 flex items-center space-x-2">
-                  <span onClick={() => { handleBack(); setActiveTab && setActiveTab('home'); }} className="cursor-pointer hover:text-purple-600">Անհատ</span>
-                  <span>/</span>
-                  <span onClick={handleBack} className="cursor-pointer hover:text-purple-600">Քարտեր</span>
-                  <span>/</span>
-                  <span className="text-gray-600 font-medium">{activeCardData.title || activeCardData.name}</span>
+        <main className="max-w-7xl mx-auto px-4 py-8">
+          {/* Breadcrumbs */}
+          <div className="text-xs text-gray-400 mb-4 flex items-center gap-2 text-left">
+            <span>🏠</span> &gt; <span>Անհատ</span> &gt; <span className="text-gray-700 font-medium">Քարտեր</span>
+          </div>
+
+          <h1 className="text-3xl font-black text-neutral-900 mb-8 text-left">
+            Քարտեր
+          </h1>
+
+          {/* Filter Buttons */}
+          <div className="flex flex-wrap items-center gap-3 mb-12">
+            {filterButtons.map((btn) => (
+              <button
+                key={btn}
+                onClick={() => { setActiveFilter(btn); setCurrentPage(1); }}
+                className={`px-4 py-2 rounded-full text-xs font-bold transition-all cursor-pointer ${
+                  activeFilter === btn
+                    ? 'bg-[#6400dc] text-white shadow-md'
+                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                }`}
+              >
+                {btn}
+              </button>
+            ))}
+          </div>
+
+          {/* Cards List */}
+          <div className="space-y-10 mb-16">
+            {currentCards.map((card) => (
+              <div 
+                key={card.id} 
+                className="bg-white border border-gray-100 rounded-[32px] p-6 md:p-8 shadow-sm hover:shadow-md transition-all grid grid-cols-1 lg:grid-cols-12 gap-8 items-center"
+              >
+                <div className="lg:col-span-4 rounded-3xl overflow-hidden flex items-center justify-center aspect-[16/10]">
+                  <img 
+                    src={card.image} 
+                    alt={card.title} 
+                    className="w-full h-full object-contain hover:scale-105 transition-transform duration-500" 
+                  />
                 </div>
-              </div>
+                
+                <div className="lg:col-span-8 space-y-5 text-left">
+                  <h3 className="text-xl md:text-2xl font-black text-neutral-900 tracking-tight">
+                    {card.title}
+                  </h3>
+                  <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
+                    {card.desc}
+                  </p>
 
-              <div className="bg-white rounded-3xl p-6 md:p-12 shadow-sm border border-gray-100 max-w-5xl mx-auto mb-16">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-                  <div className="flex justify-center">
-                    <img src={activeCardData.image || activeCardData.img} alt={activeCardData.title || activeCardData.name} className="w-full max-w-md h-auto object-contain drop-shadow-xl" />
-                  </div>
-                  <div>
-                    <h1 className="text-3xl md:text-4xl font-extrabold text-neutral-900 mb-4">{activeCardData.title || activeCardData.name}</h1>
-                    <p className="text-gray-600 text-base leading-relaxed mb-8">{activeCardData.desc || activeCardData.text}</p>
-                    
-                    {activeCardData.features && activeCardData.features.length > 0 && (
-                      <div className="grid grid-cols-2 gap-6 mb-8 bg-gray-50 p-6 rounded-2xl">
-                        {activeCardData.features.map((feat, idx) => (
-                          <div key={idx}>
-                            {feat.prefix && <span className="text-xs text-gray-400 block">{feat.prefix}</span>}
-                            <div className="text-xl font-bold text-purple-700">{feat.value}</div>
-                            <div className="text-xs text-gray-500 mt-1">{feat.label}</div>
+                  {/* Stats Grid */}
+                  {card.features && card.features.length > 0 && (
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 pt-2 border-t border-gray-100">
+                      {card.features.map((feat, idx) => (
+                        <div key={idx} className="space-y-1">
+                          <div className="text-base md:text-xl font-black text-[#6400dc]">
+                            {feat.value}
                           </div>
-                        ))}
-                      </div>
-                    )}
+                          <div className="text-[11px] text-gray-400 font-medium">
+                            {feat.label}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
 
-                    <button className="bg-purple-700 hover:bg-purple-800 text-white font-bold text-base px-8 py-3.5 rounded-full transition shadow-md cursor-pointer">
-                      Պատվիրել քարտը
+                  <div className="pt-2">
+                    <button className="bg-purple-50 hover:bg-purple-100 text-[#6400dc] font-bold text-xs px-6 py-3 rounded-full transition-all cursor-pointer">
+                      Մանրամասն &gt;
                     </button>
                   </div>
                 </div>
               </div>
-            </div>
-          ) : (
-            /* ՑԱՆԿԻ ԷՋԸ */
-            <div>
-              <div className="text-sm text-gray-400 mb-4 flex items-center space-x-2">
-                <span onClick={() => setActiveTab && setActiveTab('home')} className="cursor-pointer hover:text-purple-600">Անհատ</span>
-                <span>/</span>
-                <span className="text-gray-600 font-medium">Քարտեր</span>
-              </div>
-
-              <h1 className="text-4xl md:text-5xl font-extrabold text-neutral-900 mb-8">
-                Քարտեր
-              </h1>
-
-              <div className="flex flex-wrap gap-3 mb-12">
-                {filterButtons.map((btn) => (
-                  <button
-                    key={btn}
-                    onClick={() => { setActiveFilter(btn); setCurrentPage(1); }}
-                    className={`px-6 py-2.5 rounded-full text-sm font-medium transition cursor-pointer ${
-                      activeFilter === btn
-                        ? 'bg-purple-700 text-white shadow-sm'
-                        : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-100'
-                    }`}
-                  >
-                    {btn}
-                  </button>
-                ))}
-              </div>
-
-              <div className="space-y-12 mb-16">
-                {currentCards.map((card) => (
-                  <div key={card.id} className="bg-white rounded-3xl p-6 md:p-10 shadow-sm border border-gray-100 flex flex-col lg:flex-row items-center gap-10 hover:shadow-md transition">
-                    <div 
-                      onClick={() => setSelectedCard(card)} 
-                      className="w-full lg:w-1/3 flex justify-center cursor-pointer transform hover:scale-105 transition duration-300"
-                    >
-                      <img src={card.image} alt={card.title} className="w-full max-w-sm h-auto object-contain drop-shadow-md" />
-                    </div>
-                    
-                    <div className="w-full lg:w-2/3">
-                      <h3 
-                        onClick={() => setSelectedCard(card)} 
-                        className="text-2xl md:text-3xl font-extrabold text-neutral-900 mb-4 hover:text-purple-700 transition cursor-pointer"
-                      >
-                        {card.title}
-                      </h3>
-                      <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-6">{card.desc}</p>
-
-                      <button
-                        onClick={() => setSelectedCard(card)}
-                        className="inline-flex items-center space-x-1 bg-purple-100 hover:bg-purple-200 text-purple-800 font-bold text-sm px-6 py-2.5 rounded-full transition cursor-pointer"
-                      >
-                        <span>Մանրամասն</span>
-                        <span>›</span>
-                      </button>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
+            ))}
+          </div>
         </main>
       </div>
 
-      <footer className="bg-white border-t border-gray-100 py-8 px-6 md:px-12 text-xs text-gray-500">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-          <div>
-            <span className="font-bold text-gray-800 text-sm">evocaBANK</span>
-            <p className="mt-1">ք. Երևան, 0010, Հանրապետության 44/2</p>
-          </div>
-          <div className="text-center md:text-right">
-            <p>hello@evoca.am</p>
-            <p>+374 10 605555</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
