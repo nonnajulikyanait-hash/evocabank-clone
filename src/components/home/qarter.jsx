@@ -4,7 +4,7 @@ import EvocaOnlineMobile from './evocaonlinemobile';
 import Footer from './footer';
 
 export default function Qarter() {
-  const [activeTab, setActiveTab] = useState('cards'); // 'cards' կամ 'provision'
+  const [activeTab, setActiveTab] = useState('cards'); // 'cards', 'provision', 'social'
   const [selectedCard, setSelectedCard] = useState(null);
   const [activeCardTab, setActiveCardTab] = useState('about');
   const [openAccordions, setOpenAccordions] = useState({});
@@ -339,8 +339,6 @@ export default function Qarter() {
     { title: "UnionPay Business Platinum քարտեր (Տեղեկատվական ամփոփոգիր)", link: "https://www.evoca.am/files/global_files/1/union-pay-17-03-26.pdf" }
   ];
 
-  const filteredCards = cardsList;
-
   return (
     <div className="min-h-screen bg-white font-sans text-neutral-800 flex flex-col justify-between">
       <div>
@@ -361,7 +359,12 @@ export default function Qarter() {
             >
               Քարտերի տրամադրում և սպասարկում
             </span>
-            <span className="text-white opacity-80 hover:opacity-100 cursor-pointer">Սոցիալական ապահովության վճարային քարտեր</span>
+            <span 
+              onClick={() => { setSelectedCard(null); setActiveTab('social'); }} 
+              className={`cursor-pointer pb-1 transition ${activeTab === 'social' && !selectedCard ? 'border-b-2 border-white text-white' : 'text-white opacity-80 hover:opacity-100'}`}
+            >
+              Սոցիալական ապահովության վճարային քարտեր
+            </span>
             <span className="text-white opacity-80 hover:opacity-100 cursor-pointer">Evoca Benefits</span>
           </div>
         </div>
@@ -501,6 +504,138 @@ export default function Qarter() {
 
             <EvocaOnlineMobile />
           </div>
+        ) : activeTab === 'social' ? (
+          /* ================= ՍՈՑԻԱԼԱԿԱՆ ԱՊԱՀՈՎՈՒԹՅԱՆ ՎՃԱՐԱՅԻՆ ՔԱՐՏԵՐ ԷՋ ================= */
+          <main className="max-w-7xl mx-auto px-4 py-8 text-left">
+            <div className="text-xs text-gray-400 mb-4 flex items-center gap-2">
+              <span>🏠</span> &gt; <span>Անհատ</span> &gt; <span className="cursor-pointer hover:text-[#6400dc]" onClick={() => setActiveTab('cards')}>Քարտեր</span> &gt; <span className="text-gray-700 font-medium">Սոցիալական ապահովության վճարային քարտեր</span>
+            </div>
+
+            {/* Banner Section */}
+            <div className="relative bg-[#f5efff] rounded-[32px] overflow-hidden p-8 md:p-12 mb-12 flex flex-col md:flex-row items-center justify-between gap-8 shadow-sm">
+              <div className="space-y-4 md:w-1/2">
+                <h1 className="text-3xl md:text-4xl font-black text-neutral-900 leading-tight">
+                  Սոցիալական ապահովության վճարային քարտեր
+                </h1>
+                <p className="text-xs md:text-sm text-gray-700 leading-relaxed">
+                  Կենսաթոշակառուներին առաջարկում ենք ARCA կենսաթոշակային վճարային քարտեր՝ միայն կենսաթոշակների գումարների սպասարկման նպատակով: Քարտերը տրամադրում ենք Սոցիալական ապահովության պետական ծառայության հետ 2011թ. հունվարի 21-ին կնքած պայմանագրի համաձայն:
+                </p>
+              </div>
+              <div className="md:w-1/2 flex justify-center">
+                <img 
+                  src="https://www.evoca.am/images-cache/menu/1/17218011250749/780x585.jpg" 
+                  alt="Սոցիալական ապահովության վճարային քարտեր" 
+                  className="rounded-2xl max-h-80 object-cover shadow-md"
+                />
+              </div>
+            </div>
+
+            {/* Content Section */}
+            <div className="space-y-8 text-xs md:text-sm text-gray-700 leading-relaxed mb-16">
+              <div className="space-y-4">
+                <p>Քարտերը տրամադրում և սպասարկում ենք մեր կողմից հաստատված Կենսաթոշակային քարտերի տրամադրման և սպասարկման սակագների համաձայն:</p>
+                <p>Քարտերի ստացման դիմում կարող եք ներկայացնել մեր Գլխամասային գրասենյակ կամ ցանկացած մասնաճյուղ:</p>
+                <p>Վճարային քարտերի տրամադրմանը, սպասարկմանը և օգտագործմանը վերաբերող մանրամասն տեղեկատվությանը կարող եք ծանոթանալ այստեղ:</p>
+                <p className="italic text-gray-500 bg-gray-50 p-4 rounded-xl border-l-2 border-[#6400dc]">
+                  <strong>Ծանոթագրություն</strong> - Կենսաթոշակառու` անձ, ում կենսաթոշակը վճարվում է անկանխիկ եղանակով, Բանկում բացված բանկային հաշվին փոխանցելու միջոցով: Կենսաթոշակ` կենսաթոշակի, պատվովճարի, դրամական օգնության և սոցիալական ապահովության այլ ծրագրերով նախատեսված դրամական վճարների գումարը:
+                </p>
+              </div>
+
+              {/* Operations Section */}
+              <div className="space-y-4 pt-4">
+                <h2 className="text-xl md:text-2xl font-black text-neutral-900">
+                  Վճարային քարտերով կատարվող գործառնություններ
+                </h2>
+                <p className="font-bold text-[#6400dc]">Վճարային քարտերով կարող եք՝</p>
+                <ul className="space-y-2 pl-4">
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#6400dc] font-bold">•</span>
+                    <span>Կանխիկացնել Ձեր քարտային հաշվին առկա միջոցները բանկոմատներից (ATM) և կանխիկացման կետերից (POS տերմինալներից):</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#6400dc] font-bold">•</span>
+                    <span>Կատարել անկանխիկ վճարումներ առևտրի և սպասարկման կետերում (ապրանքների կամ ծառայությունների դիմաց՝ խանութներում, ռեստորաններում, հյուրանոցներում և սպասարկման այլ կետերում):</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#6400dc] font-bold">•</span>
+                    <span>Կատարել կոմունալ վճարումներ՝ բանկոմատների միջոցով կամ օնլայն (www.arca.am-ում գրանցելով վիրտուալ քարտ):</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#6400dc] font-bold">•</span>
+                    <span>Օնլայն գործարքներ կատարել (վճարումներ, գնումներ):</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#6400dc] font-bold">•</span>
+                    <span>Քարտից քարտ գումար փոխանցել՝ բանկոմատների միջոցով կամ օնլայն:</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#6400dc] font-bold">•</span>
+                    <span>Մեր online բանկինգ ծառայությունից օգտվելու պարագայում դուք հնարավորություն կունենաք առանց մեզ այցելելու կատարել դրամական միջոցների համալրում (ընթացիկ հաշվից՝ քարտային հաշիվ) և անմիջապես տնօրինել այդ գումարները՝ ձեր քարտի միջոցով:</span>
+                  </li>
+                </ul>
+                <p className="text-xs text-gray-600 bg-purple-50 p-3 rounded-lg">
+                  <strong>Նշում.</strong> Քարտային հաշվով կատարվող դրամական շարժը վերահսկելու նպատակով ակտիվացնում ենք SMS-տեղեկացում ծառայությունը (դուք կարող եք դիմում գրել և հրաժարվել SMS տեղեկացումների ծառայությունից): Օնլայն վճարումներ իրականացնելիս կարող եք օգտվել 3D Secure ծառայությունից:
+                </p>
+              </div>
+
+              {/* Useful Info Section */}
+              <div className="space-y-4 pt-4">
+                <h2 className="text-xl md:text-2xl font-black text-neutral-900">
+                  Օգտակար տեղեկատվություն
+                </h2>
+                <p className="font-bold text-[#6400dc]">Քարտային վճարումներ կատարելիս անհրաժեշտ է հիշել`</p>
+                <ul className="space-y-2 pl-4">
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#6400dc] font-bold">•</span>
+                    <span>Քարտերով կարող եք վճարումներ կատարել այն առևտրի ու սպասարկման կետերում, որտեղ փակցված է տվյալ քարտային համակարգի լոգոտիպը:</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#6400dc] font-bold">•</span>
+                    <span>Քարտով վճարում կատարելիս՝ մինչև անդորրագիրը ստորագրելը, հավաստիացե՛ք, որ անդորրագրում նշված գումարը համապատասխանում է ձեր գործարքի գումարին:</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#6400dc] font-bold">•</span>
+                    <span>Քարտով վճարելիս մի՛շտ պահեք քարտը ձեր տեսադաշտում:</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#6400dc] font-bold">•</span>
+                    <span>Եթե հրաժարվում եք գնումից, ապա պահանջե՛ք չեղյալ համարել (VOID) ձեր վճարումը և պահե՛ք համապատասխան անդորրագիրը մինչև հերթական քաղվածքի ստացումը՝ համոզվելու, որ հաշվից գանձում չի կատարվել:</span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Warning Section */}
+              <div className="space-y-4 pt-4">
+                <h2 className="text-xl md:text-2xl font-black text-neutral-900">
+                  Զգուշացում
+                </h2>
+                <ul className="space-y-2 pl-4">
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#6400dc] font-bold">•</span>
+                    <span>Ապահովե՛ք ձեր PIN ծածկագրի գաղտնիությունը (այն պետք է պահպանել գաղտնի և հասանելի չդարձնել այլ անձանց): PIN ծածկագրով կատարված բոլոր գործառնությունների պատասխանատվությունը կրում եք դուք: Մենք պատասխանատվություն չենք կրում ձեր PIN ծածկագիրը երրորդ անձանց հասանելի դառնալու հետևանքով վճարային քարտի ոչ օրինական և ձեր կողմից չարտոնված օգտագործման համար:</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#6400dc] font-bold">•</span>
+                    <span>Քարտի կորստի կամ գողության դեպքում անմիջապես զանգահարե՛ք մեզ (+374 10) 605555 հեռախոսահամարով կամ «Արմենիան Քարդ» վճարահաշվարկային համակարգի (+374 10) 592222 հեռախոսահամարով՝ հայտնելով քարտի ստացման դիմումի մեջ ձեր կողմից նշված գաղտնաբառը: Զանգից անմիջապես հետո քարտի գործողությունը կդադարեցվի:</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#6400dc] font-bold">•</span>
+                    <span>Քարտի կորստի կամ գողության մասին ՄԵԶ տեղեկացնելու հետաձգումը կարող է հանգեցնել ձեր քարտով այլ անձանց կողմից գործարքների կատարմանը:</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#6400dc] font-bold">•</span>
+                    <span>Մենք պատասխանատվություն չենք կրում ձեզ հասցրած այն վնասի համար, որը կատարվել է քարտը կորցնելու և մեզ հայտնելու միջև ընկած ժամանակահատվածում:</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-[#6400dc] font-bold">•</span>
+                    <span>Դուք պատասխանատվություն եք կրում քարտով կատարված բոլոր գործառնությունների համար մինչև այն պահը, երբ տեղեկացնում եք մեզ կորստի կամ գողություն պատճառով քարտի գործողությունը դադարեցնելու անհրաժեշտության մասին:</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <EvocaOnlineMobile />
+          </main>
         ) : activeTab === 'provision' ? (
           /* ================= ՔԱՐՏԵՐԻ ՏՐԱՄԱԴՐՈՒՄ ԵՎ ՍՊԱՍԱՐԿՈՒՄ ԷՋ ================= */
           <main className="max-w-7xl mx-auto px-4 py-8 text-left">
@@ -589,7 +724,7 @@ export default function Qarter() {
             </h1>
 
             <div className="space-y-10 mb-16">
-              {filteredCards.map((card) => (
+              {cardsList.map((card) => (
                 <div 
                   key={card.id} 
                   className="bg-white border border-gray-100 rounded-[32px] p-6 md:p-8 shadow-sm hover:shadow-md transition-all grid grid-cols-1 lg:grid-cols-12 gap-8 items-center"
