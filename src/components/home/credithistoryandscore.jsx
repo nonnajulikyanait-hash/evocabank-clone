@@ -8,7 +8,7 @@ export default function CreditHistoryAndScore() {
     <div className="min-h-screen bg-white font-sans text-neutral-800">
       <Navbar />
 
-      {/* Purple Sub-header Bar with Working Links */}
+      {/* Sub-header Purple Bar with Active State */}
       <div className="bg-[#6400dc] text-white py-3 px-4 shadow-inner">
         <div className="max-w-7xl mx-auto flex items-center space-x-8 text-xs sm:text-sm font-semibold overflow-x-auto whitespace-nowrap">
           <Link to="/loans" className="opacity-80 hover:opacity-100 cursor-pointer">

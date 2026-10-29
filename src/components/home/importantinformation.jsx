@@ -8,7 +8,7 @@ export default function ImportantInformation() {
     <div className="min-h-screen bg-white font-sans text-neutral-800">
       <Navbar />
 
-      {/* Purple Sub-header Bar */}
+      {/* Purple Sub-header Bar with Active State */}
       <div className="bg-[#6400dc] text-white py-3 px-4 shadow-inner">
         <div className="max-w-7xl mx-auto flex items-center space-x-8 text-xs sm:text-sm font-semibold overflow-x-auto whitespace-nowrap">
           <Link to="/loans" className="opacity-80 hover:opacity-100 cursor-pointer">
@@ -17,9 +17,9 @@ export default function ImportantInformation() {
           <Link to="/credit-history-and-score" className="opacity-80 hover:opacity-100 cursor-pointer">
             Վարկային պատմություն և uScore
           </Link>
-          <span className="border-b-2 border-white pb-1 cursor-pointer">
+          <Link to="/important-information" className="border-b-2 border-white pb-1 cursor-pointer">
             Կարևոր տեղեկատվություն
-          </span>
+          </Link>
         </div>
       </div>
 
@@ -71,7 +71,7 @@ export default function ImportantInformation() {
           </div>
           <div className="flex items-start gap-2.5">
             <span className="w-2 h-2 rounded-full bg-[#6400dc] mt-2 shrink-0"></span>
-            <p>Դուք իրավունք ունեք նախքան վարկային պայմանագիր կնքելը ծանոթանալ պայմանագրի նախագծի հետ。</p>
+            <p>Դուք իրավունք ունեք նախքան վարկային պայմանագիր կնքելը ծանոթանալ պայմանագրի նախագծի հետ։</p>
           </div>
           <div className="flex items-start gap-2.5">
             <span className="w-2 h-2 rounded-full bg-[#6400dc] mt-2 shrink-0"></span>
@@ -180,21 +180,21 @@ export default function ImportantInformation() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 text-sm">
           <div>
             <h4 className="font-bold text-neutral-900 mb-3">Դրական որոշման կայացման չափանիշները`</h4>
-            <ul className="space-y-2 text-gray-600">
-              <li>• Մեր կողմից ընդունելի գրավադրվող գույքը և երաշխավորությունները</li>
-              <li>• Մշտական բնակության վայրը</li>
-              <li>• Կայուն եկամտի աղբյուրը</li>
-              <li>• Դրական կամ չեզոք վարկային պատմությունը</li>
-              <li>• Արժանահավատ և լիարժեք փաստաթղթերը</li>
+            <ul className="space-y-2 text-gray-600 list-disc pl-5">
+              <li>Մեր կողմից ընդունելի գրավադրվող գույքը և երաշխավորությունները</li>
+              <li>Մշտական բնակության վայրը</li>
+              <li>Կայուն եկամտի աղբյուրը</li>
+              <li>Դրական կամ չեզոք վարկային պատմությունը</li>
+              <li>Արժանահավատ և լիարժեք փաստաթղթերը</li>
             </ul>
           </div>
           <div>
             <h4 className="font-bold text-neutral-900 mb-3">Բացասական որոշման կայացման չափանիշները`</h4>
-            <ul className="space-y-2 text-gray-600">
-              <li>• Ոչ արժանահավատ փաստաթղթերը ներկայացնելը</li>
-              <li>• Բացասական վարկային պատմությունը</li>
-              <li>• Եկամտի աղբյուրի ռիսկայնությունը</li>
-              <li>• Գրավի պայմանագրի համար անհրաժեշտ փաստաթղթեր չներկայացնելը</li>
+            <ul className="space-y-2 text-gray-600 list-disc pl-5">
+              <li>Ոչ արժանահավատ փաստաթղթերը ներկայացնելը</li>
+              <li>Բացասական վարկային պատմությունը</li>
+              <li>Եկամտի աղբյուրի ռիսկայնությունը</li>
+              <li>Գրավի պայմանագրի համար անհրաժեշտ փաստաթղթեր չներկայացնելը</li>
             </ul>
           </div>
         </div>
@@ -203,11 +203,11 @@ export default function ImportantInformation() {
         <h2 className="text-2xl font-black text-neutral-900 mb-6">
           Պետական տուրքեր և այլ ծախսեր
         </h2>
-        <ul className="space-y-3 text-sm text-gray-700 mb-12">
-          <li>• <strong>Գրավադրվող գույքի գնահատում`</strong> 10,000-150,000 դրամ՝ կախված գույքի տեսակից և մակերեսից:</li>
-          <li>• <strong>Նոտարական ձևակերպման ծախսեր՝</strong> 10,000-30,000 դրամ:</li>
-          <li>• <strong>Գրավի գրանցման ծախսեր՝</strong> անշարժ գույքի դեպքում՝ սկսած 26,400 ՀՀ դրամից:</li>
-          <li>• <strong>Գրավադրվող գույքի ապահովագրում՝</strong> վարկի մնացորդի 0.15% – 2.5%-ի չափով:</li>
+        <ul className="space-y-3 text-sm text-gray-700 mb-12 list-disc pl-5">
+          <li><strong>Գրավադրվող գույքի գնահատում`</strong> 10,000-150,000 դրամ՝ կախված գույքի տեսակից և մակերեսից:</li>
+          <li><strong>Նոտարական ձևակերպման ծախսեր՝</strong> 10,000-30,000 դրամ:</li>
+          <li><strong>Գրավի գրանցման ծախսեր՝</strong> անշարժ գույքի դեպքում՝ սկսած 26,400 ՀՀ դրամից:</li>
+          <li><strong>Գրավադրվող գույքի ապահովագրում՝</strong> վարկի մնացորդի 0.15% – 2.5%-ի չափով:</li>
         </ul>
 
         {/* Section 5: APR and Formulas */}
