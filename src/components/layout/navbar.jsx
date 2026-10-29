@@ -118,9 +118,12 @@ export default function Navbar() {
         </nav>
 
         {/* Button */}
-        <button className="bg-[#6400dc] hover:bg-opacity-90 text-white font-bold text-[11px] px-4 py-2 rounded-full transition shadow-sm cursor-pointer">
+        <Link 
+          to="/evocaonline" 
+          className="bg-[#6400dc] hover:bg-opacity-90 text-white font-bold text-[11px] px-4 py-2 rounded-full transition shadow-sm cursor-pointer inline-block text-center"
+        >
           EvocaONLINE
-        </button>
+        </Link>
       </div>
     </header>
   );

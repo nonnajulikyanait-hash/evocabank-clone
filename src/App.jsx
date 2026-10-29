@@ -23,6 +23,7 @@ import Poxancumner from './components/home/poxancumner'; // Փոխանցումն
 import Arjetxter from './components/home/arjetxter'; // Արժեթղթերի էջի իմպորտ
 import EvocaSalary from './components/home/evocasalary'; // EvocaSALARY էջի իմպորտ
 import EvocaTouch from './components/home/evocatouch'; // EvocaTOUCH էջի իմպորտ
+import EvocaOnline from './components/home/evocaonline'; // EvocaONLINE էջի իմպորտ
 
 function HomePage() {
   return (
@@ -80,6 +81,9 @@ function App() {
 
         {/* EvocaTOUCH էջ (evocatouch.jsx) */}
         <Route path="/evocatouch" element={<EvocaTouch />} />
+
+        {/* EvocaONLINE էջ (evocaonline.jsx) */}
+        <Route path="/evocaonline" element={<EvocaOnline />} />
         
         {/* Վարկային պատմություն և սքոր */}
         <Route path="/credit-history-and-score" element={<CreditHistoryAndScore />} />
