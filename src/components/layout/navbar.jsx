@@ -10,9 +10,11 @@ export default function Navbar() {
     location.pathname === '/biznesvarker' || 
     location.pathname === '/leasing' || 
     location.pathname === '/special-offer' ||
-    location.pathname === '/business-accounts';
+    location.pathname === '/business-accounts' ||
+    location.pathname === '/business-unallocated-metal-accounts';
 
   const isLeasingSub = location.pathname === '/leasing' || location.pathname === '/special-offer';
+  const isAccountsSub = location.pathname === '/business-accounts' || location.pathname === '/business-unallocated-metal-accounts';
 
   return (
     <header className="w-full bg-white border-b border-gray-100 sticky top-0 z-50">
@@ -69,7 +71,7 @@ export default function Navbar() {
             <Link to="/leasing" className={`transition ${isLeasingSub ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>
               Լիզինգ
             </Link>
-            <Link to="/business-accounts" className={`transition ${location.pathname === '/business-accounts' ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>
+            <Link to="/business-accounts" className={`transition ${isAccountsSub ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>
               Հաշիվներ
             </Link>
             <span className="hover:text-[#6400dc] cursor-pointer transition">Ավանդներ</span>
@@ -120,9 +122,24 @@ export default function Navbar() {
                   Հատուկ առաջարկ
                 </Link>
               </>
+            ) : isAccountsSub ? (
+              <>
+                <Link 
+                  to="/business-accounts" 
+                  className={`h-full flex items-center transition ${location.pathname === '/business-accounts' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}
+                >
+                  Հաշիվների բացում և սպասարկում
+                </Link>
+                <Link 
+                  to="/business-unallocated-metal-accounts" 
+                  className={`h-full flex items-center transition ${location.pathname === '/business-unallocated-metal-accounts' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}
+                >
+                  Առարկայազուրկ մետաղական հաշիվներ
+                </Link>
+              </>
             ) : (
               <div className="h-full flex items-center border-b-2 border-white text-white font-black">
-                {location.pathname === '/business-accounts' ? 'Բիզնես հաշիվներ' : 'Բիզնես վարկեր'}
+                Բիզնես վարկեր
               </div>
             )}
           </div>
