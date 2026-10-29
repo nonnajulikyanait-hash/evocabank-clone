@@ -181,13 +181,6 @@ export default function BiznesVarker() {
       <div>
         <Navbar />
 
-        {/* Purple Sub-Bar Header */}
-        <div className="bg-[#6400dc] text-white py-3 px-8 text-sm font-bold shadow-sm">
-          <div className="container mx-auto">
-            Բիզնես վարկեր
-          </div>
-        </div>
-
         <main className="max-w-7xl mx-auto px-4 py-8 text-left">
           {/* Breadcrumbs */}
           <div className="text-xs text-gray-400 mb-6 flex items-center gap-2">
