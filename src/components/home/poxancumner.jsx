@@ -4,7 +4,7 @@ import EvocaOnlineMobile from './evocaonlinemobile';
 import Footer from './footer';
 
 export default function Poxancumner() {
-  const [activeTab, setActiveTab] = useState('transfers'); // 'transfers', 'systems'
+  const [activeTab, setActiveTab] = useState('systems'); // 'transfers', 'systems'
   const [openAccordions, setOpenAccordions] = useState({});
 
   const toggleAccordion = (index) => {
@@ -37,184 +37,173 @@ export default function Poxancumner() {
           </div>
         </div>
 
-        {activeTab === 'transfers' ? (
-          /* ================= ԴՐԱՄԱԿԱՆ ՓՈԽԱՆՑՈՒՄՆԵՐ ԷՋ ================= */
+        {activeTab === 'systems' ? (
+          /* ================= ՎՃԱՐԱՅԻՆ ՀԱՄԱԿԱՐԳԵՐ ԷՋ ================= */
           <main className="max-w-7xl mx-auto px-4 py-8 text-left">
             {/* Breadcrumbs */}
+            <div className="text-xs text-gray-400 mb-6 flex items-center gap-2">
+              <span>🏠</span> &gt; <span>Անհատ</span> &gt; <span>Փոխանցումներ</span> &gt; <span className="text-gray-700 font-medium">Վճարային համակարգեր</span>
+            </div>
+
+            {/* Title */}
+            <h1 className="text-3xl md:text-5xl font-black text-neutral-900 mb-10 tracking-tight">
+              Վճարային համակարգեր
+            </h1>
+
+            {/* Payment Systems Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+              
+              {/* 1. MoneyTun */}
+              <div className="bg-white border border-gray-100 rounded-[32px] p-6 shadow-sm hover:shadow-md transition flex flex-col justify-between space-y-4">
+                <div className="space-y-4">
+                  <div className="h-16 flex items-center">
+                    <img 
+                      src="https://www.evoca.am/images-cache/payment_systems/1/1738743146575/200x100.png" 
+                      alt="MoneyTun" 
+                      className="max-h-12 object-contain"
+                    />
+                  </div>
+                  <p className="text-xs text-gray-600 leading-relaxed">
+                    MoneyTun-ը գործում է 2007 թվականից: Կազմակերպության նպատակը Ամերիկայի և Հայաստանի միջև ապահով ու պաշտպանված գործարքների ապահովումն է՝ հիմնված տասնամյակների փորձի վրա: Դրամական փոխանցումները կազմում են MoneyTun-ի կողմից մատուցվող ծառայությունների զգալի մասը:
+                  </p>
+                </div>
+                <div className="border-t border-gray-100 pt-4 space-y-1 text-xs text-gray-700">
+                  <p className="font-bold text-[#6400dc]">MoneyTun Հաճախորդների սպասարկման հեռախոսահամար՝</p>
+                  <p className="font-semibold">+374 10 27 72 85</p>
+                  <p className="font-bold text-[#6400dc] pt-2">Աշխատանքային գրաֆիկ՝</p>
+                  <p>Երկուշաբթի-ուրբաթ 10:00-17:30</p>
+                  <p>Շաբաթ 10:00-14:00</p>
+                  <p>Կիրակի 10:00-13:00</p>
+                </div>
+              </div>
+
+              {/* 2. Ria */}
+              <div className="bg-white border border-gray-100 rounded-[32px] p-6 shadow-sm hover:shadow-md transition flex flex-col justify-between space-y-4">
+                <div className="space-y-4">
+                  <div className="h-16 flex items-center">
+                    <img 
+                      src="https://www.evoca.am/images-cache/payment_systems/1/16510581265332/200x100.png" 
+                      alt="Ria" 
+                      className="max-h-12 object-contain"
+                    />
+                  </div>
+                  <p className="text-xs text-gray-600 leading-relaxed">
+                    Գործում է 182 երկրի ավելի քան 509,000 սպասարկման կետերում: Փոխանցումները կատարվում են դոլարով և եվրոյով: Միջնորդավճարը գանձվում է՝ ըստ RIA համակարգի սահմանած սակագների:
+                  </p>
+                </div>
+                <div className="border-t border-gray-100 pt-4 space-y-1 text-xs text-gray-700">
+                  <p className="font-bold text-[#6400dc]">Ria Հաճախորդների սպասարկման հեռախոսահամար Հայաստանի համար՝</p>
+                  <p className="font-semibold">+374 94 23 59 00</p>
+                  <p className="font-bold text-[#6400dc] pt-2">Աշխատանքային գրաֆիկ՝</p>
+                  <p>երկուշաբթի-ուրբաթ, 09:00-18:00 (Երևանի ժամանակով)</p>
+                  <p className="font-bold text-[#6400dc] pt-2">Հաճախորդների աջակցության լեզուներ՝</p>
+                  <p>ռուսերեն, անգլերեն</p>
+                </div>
+              </div>
+
+              {/* 3. UBPay */}
+              <div className="bg-white border border-gray-100 rounded-[32px] p-6 shadow-sm hover:shadow-md transition flex flex-col justify-between space-y-4">
+                <div className="space-y-4">
+                  <div className="h-16 flex items-center">
+                    <img 
+                      src="https://www.evoca.am/images-cache/payment_systems/1/17304660969195/200x100.png" 
+                      alt="UBPay" 
+                      className="max-h-12 object-contain"
+                    />
+                  </div>
+                  <p className="text-xs text-gray-600 leading-relaxed">
+                    UBPay – ը արագ դրամական փոխանցումների համակարգ է նախատեսված ֆիզիկական անձանց միջև ոչ առևտրային դրամական փոխանցումների իրականացման համար: Համակարգի միջոցով կարող եք իրականացնել փոխանցումներ Հայաստանից դեպի ՌԴ և հակառակ ուղղությամբ:
+                  </p>
+                </div>
+                <div className="border-t border-gray-100 pt-4 space-y-1 text-xs text-gray-700">
+                  <p className="font-bold text-[#6400dc]">UBPay Հաճախորդների սպասարկման հեռախոսահամար`</p>
+                  <p className="font-semibold">+374 43 00 49 35</p>
+                </div>
+              </div>
+
+              {/* 4. IntelExpress */}
+              <div className="bg-white border border-gray-100 rounded-[32px] p-6 shadow-sm hover:shadow-md transition flex flex-col justify-between space-y-4">
+                <div className="space-y-4">
+                  <div className="h-16 flex items-center">
+                    <img 
+                      src="https://www.evoca.am/images-cache/payment_systems/1/16133289933621/200x100.png" 
+                      alt="IntelExpress" 
+                      className="max-h-12 object-contain"
+                    />
+                  </div>
+                  <p className="text-xs text-gray-600 leading-relaxed">
+                    Գործում է 90 երկրի ավելի քան 57,000 կետերում (Ռուսաստան, ԱՊՀ այլ երկրներ, Մեծ Բրիտանիա, Չինաստան, եվրոպական երկրներ և այլն)։ Փոխանցումները կատարվում են ռուբլով, դոլարով և եվրոյով: Միջնորդավճարը գանձվում է՝ ըստ IntelExpress-ի սահմանած սակագների:
+                  </p>
+                </div>
+                <div className="border-t border-gray-100 pt-4 space-y-1 text-xs text-gray-700">
+                  <p className="font-bold text-[#6400dc]">INTELEXPRESS Հաճախորդների սպասարկման հեռախոսահամար՝</p>
+                  <p className="font-semibold">+995 32 2 49 25 25</p>
+                </div>
+              </div>
+
+              {/* 5. Stak */}
+              <div className="bg-white border border-gray-100 rounded-[32px] p-6 shadow-sm hover:shadow-md transition flex flex-col justify-between space-y-4">
+                <div className="space-y-4">
+                  <div className="h-16 flex items-center">
+                    <img 
+                      src="https://www.evoca.am/images-cache/payment_systems/1/17651707946608/200x100.png" 
+                      alt="Stak" 
+                      className="max-h-12 object-contain"
+                    />
+                  </div>
+                  <p className="text-xs text-gray-600 leading-relaxed">
+                    «ՍՏԱԿ» դրամական փոխանցումների հայաստանյան միասնական համակարգի գործունեության նպատակը ռեզիդենտ և ոչ ռեզիդենտ հաճախորդների համար պատշաճ որակի դրամական փոխանցումների իրականացման կազմակերպումն է: Համակարգը հնարավորություն է տալիս կատարել և ստանալ փոխանցումներ դոլարով և, ինչպես նաև եվրոյով։
+                  </p>
+                </div>
+                <div className="border-t border-gray-100 pt-4 space-y-1 text-xs text-gray-700">
+                  <p className="font-bold text-[#6400dc]">«ՍՏԱԿ» փոխանցումների համակարգ</p>
+                </div>
+              </div>
+
+              {/* 6. MoneyGram */}
+              <div className="bg-white border border-gray-100 rounded-[32px] p-6 shadow-sm hover:shadow-md transition flex flex-col justify-between space-y-4">
+                <div className="space-y-4">
+                  <div className="h-16 flex items-center">
+                    <img 
+                      src="https://www.evoca.am/images-cache/payment_systems/1/17651703221475/200x100.png" 
+                      alt="MoneyGram" 
+                      className="max-h-12 object-contain"
+                    />
+                  </div>
+                  <p className="text-xs text-gray-600 leading-relaxed">
+                    Գործում է 170 երկրի ավելի քան 125,000 կետերում: Արտերկրից Հայաստան փոխանցվում է դոլար և եվրո, իսկ Հայաստանից արտերկիր՝ միայն դոլար: Միջնորդավճարը գանձվում է ըստ MoneyGram-ի սահմանած սանդղակի:
+                  </p>
+                </div>
+                <div className="border-t border-gray-100 pt-4 space-y-1 text-xs text-gray-700">
+                  <p className="font-bold text-[#6400dc]">MoneyGram Հաճախորդների սպասարկման հեռախոսահամար`</p>
+                  <p className="font-semibold">1-800-926-9400</p>
+                </div>
+              </div>
+
+            </div>
+
+            <EvocaOnlineMobile />
+          </main>
+        ) : (
+          /* ================= ԴՐԱՄԱԿԱՆ ՓՈԽԱՆՑՈՒՄՆԵՐ ԷՋ ================= */
+          <main className="max-w-7xl mx-auto px-4 py-8 text-left">
             <div className="text-xs text-gray-400 mb-6 flex items-center gap-2">
               <span>🏠</span> &gt; <span>Անհատ</span> &gt; <span>Փոխանցումներ</span> &gt; <span className="text-gray-700 font-medium">Դրամական փոխանցումներ</span>
             </div>
 
-            {/* Banner Section */}
             <div className="bg-[#f5efff] rounded-[32px] overflow-hidden p-8 md:p-12 mb-10 flex flex-col md:flex-row items-center justify-between gap-8 shadow-sm">
               <div className="space-y-4 md:w-1/2">
                 <h1 className="text-3xl md:text-5xl font-black text-neutral-900 leading-tight tracking-tight">
                   Դրամական փոխանցումներ
                 </h1>
                 <p className="text-xs md:text-sm text-gray-700 leading-relaxed">
-                  Իրականացնում ենք դրամական փոխանցումներ Հայաստանի տարածքում և դեպի արտերկիր՝ դրամով և արտարժույթով: Փոխանցումներն իրականացվում են միջազգային բանկային ստանդարտներին համապատասխանող համակարգերով:
+                  Իրականացնում ենք դրամական փոխանցումներ Հայաստանի տարածքում և դեպի արտերկիր՝ դրամով և արտարժույթով:
                 </p>
               </div>
               <div className="md:w-1/2 flex justify-center">
                 <img 
                   src="https://www.evoca.am/images-cache/menu/1/16115828343472/780x585.jpg" 
                   alt="Դրամական փոխանցումներ" 
-                  className="rounded-2xl max-h-80 object-cover shadow-md"
-                />
-              </div>
-            </div>
-
-            {/* General Provisions Section */}
-            <div className="space-y-4 text-xs md:text-sm text-gray-700 leading-relaxed mb-12">
-              <h2 className="text-xl md:text-2xl font-black text-neutral-900">
-                Ընդհանուր դրույթներ
-              </h2>
-              <p>
-                Ձեր բանկային փոխանցումներն իրականացնում ենք՝ ղեկավարվելով «Բանկերի և բանկային գործունեության մասին» ՀՀ օրենքով, ՀՀ Կենտրոնական բանկի իրավական ակտերով, ՀՀ այլ իրավական ակտերով, թղթակից բանկերի հետ կնքված պայմանագրերով և սպասարկման սահմանված պայմաններով:
-              </p>
-              <p>
-                Ձեր փոխանցումները կատարում ենք վճարման հանձնարարագրերի հիման վրա (կախված գումարի չափից, փոխանցման բնույթից և նպատակից` կարող են պահանջվել նաև այլ փաստթղթեր):
-              </p>
-              <p>
-                Յուրաքանչյուր աշխատանքային օրվա ընթացքում՝ մինչև ժամը 15:30 ներկայացված վճարման հանձնարարագրերը կատարում ենք նույն բանկային օրը, իսկ ժամը 15:30-ից հետո ներկայացված վճարման հանձնարարագրերը` հաջորդ բանկային օրը: Մինչև ժամը 16:30 ներկայացված դրամով փոխանցումները (պետական և տեղական բյուջեի վճարներ, կոմունալ կամ սոցիալական այլ վճարներ) կատարման ենք ընդունում նույն բանկային օրը:
-              </p>
-              <p>
-                Դրամով և արտարժույթով բանկային փոխանցումներ իրականացնելիս ձեզանից գանձում ենք միջնորդավճարներ՝ ըստ մեր դրույքաչափերի և սակագների: Կոմունալ վճարների սպասարկման դիմաց միջնորդավճար չենք գանձում: Միջնորդավճարները գանձվում են ՀՀ դրամով: Արտարժույթի տոկոսային հարաբերակցությամբ սահմանված միջնորդավճարները գանձվում են ՀՀ դրամով՝ հիմք ընդունելով գանձման օրը տվյալ արտարժույթի համար մեր կողմից սահմանված անկանխիկ վաճառքի փոխարժեքը:
-              </p>
-              <p>
-                Մենք պարտավոր ենք տրամադրել յուրաքանչյուր փոխանցման կատարումը հավաստող փաստաթուղթ, որտեղ նշված կլինեն փոխանցման գումարը, արժույթը, միջնորդավճարի չափը և այլ մանրամասներ:
-              </p>
-            </div>
-
-            {/* Large Wide Banner Image with White Overlay Text */}
-            <div className="relative rounded-[32px] overflow-hidden mb-12 shadow-md">
-              <img 
-                src="https://www.evoca.am/images-cache/menu/1/1611294541215/1920x530.jpg" 
-                alt="Կարող եք գումարներ փոխանցել" 
-                className="w-full h-64 md:h-80 object-cover"
-              />
-              <div className="absolute inset-0 bg-black/40 flex items-center justify-center p-6 text-center">
-                <h2 className="text-xl md:text-3xl font-extrabold text-white max-w-3xl leading-snug">
-                  Կարող եք գումարներ փոխանցել ինչպես ձեր հաշվից, այնպես էլ առանց հաշվի բացման:
-                </h2>
-              </div>
-            </div>
-
-            {/* ANHRAZESHT TEXEKATVUTYUN Accordions */}
-            <div className="space-y-6 mb-16">
-              <h2 className="text-xl md:text-2xl font-black text-neutral-900">
-                ԱՆՀՐԱԺԵՇՏ ՏԵՂԵԿԱՏՎՈՒԹՅՈՒՆ
-              </h2>
-
-              <div className="space-y-4">
-                {/* Accordion 1: Փոխանցումներ դրամով */}
-                <div className="border border-gray-200 rounded-2xl overflow-hidden bg-white shadow-sm">
-                  <button
-                    onClick={() => toggleAccordion(0)}
-                    className="w-full flex justify-between items-center p-4 text-left font-bold text-neutral-800 hover:bg-purple-50 transition cursor-pointer"
-                  >
-                    <span className="flex items-center gap-2">
-                      <span className="text-[#6400dc]">⌄</span> Փոխանցումներ դրամով
-                    </span>
-                    <span className="text-xs text-gray-400 font-normal">{openAccordions[0] ? 'Փակել' : 'Բացել'}</span>
-                  </button>
-                  {openAccordions[0] && (
-                    <div className="p-4 border-t border-gray-100 bg-gray-50 space-y-2 text-xs md:text-sm text-gray-700 leading-relaxed">
-                      <p>• Մեզ մոտ գործող վճարահաշվարկային համակարգն ապահովում է արագ և հուսալի դրամային փոխանցումներ ինչպես մեր համակարգում, այնպես էլ հայաստանյան այլ բանկերի միջև:</p>
-                      <p>• Դրամով փոխանցումները Հայաստանի տարածքում կատարվում են 1 բանկային օրվա ընթացքում:</p>
-                    </div>
-                  )}
-                </div>
-
-                {/* Accordion 2: Միջազգային փոխանցումներ */}
-                <div className="border border-gray-200 rounded-2xl overflow-hidden bg-white shadow-sm">
-                  <button
-                    onClick={() => toggleAccordion(1)}
-                    className="w-full flex justify-between items-center p-4 text-left font-bold text-neutral-800 hover:bg-purple-50 transition cursor-pointer"
-                  >
-                    <span className="flex items-center gap-2">
-                      <span className="text-[#6400dc]">⌄</span> Միջազգային փոխանցումներ
-                    </span>
-                    <span className="text-xs text-gray-400 font-normal">{openAccordions[1] ? 'Փակել' : 'Բացել'}</span>
-                  </button>
-                  {openAccordions[1] && (
-                    <div className="p-4 border-t border-gray-100 bg-gray-50 space-y-2 text-xs md:text-sm text-gray-700 leading-relaxed">
-                      <p>• Մենք SWIFT համակարգի անդամ ենք և ձեր արտարժութային միջազգային փոխանցումներն իրականացնում ենք այս համակարգով: Այն ապահովում է արագ և անվտանգ փոխանցումներ՝ միջազգային բանկային ստանդարտներին համապատասխան:</p>
-                      <p>• Փոխանցումը կատարում ենք միայն փոխանցվող գումարի և միջնորդավճարի գումարի փաստացի առկայության դեպքում:</p>
-                      <p>• Արտարժութային միջազգային փոխանցում իրականացնելու համար մեզ եք ներկայացնում սահմանված ձևանմուշի վճարման հանձնարարագիր:</p>
-                      <p>• Արտարժութային միջազգային բանկային փոխանցումները, ըստ մեր սակագների, իրականացվում են OUR (ծախսերը՝ փոխանցողի հաշվին), Guaranted OUR (գումարը ստացողին հասնում է ամբողջական) և BEN (ծախսերը՝ ստացողի հաշվին) տարբերակներով:</p>
-                      <p>• Արտարժութային միջազգային փոխանցումները, որպես կանոն, տևում են 1-3 բանկային օր:</p>
-                    </div>
-                  )}
-                </div>
-
-                {/* Accordion 3: Վճարային համակարգեր */}
-                <div className="border border-gray-200 rounded-2xl overflow-hidden bg-white shadow-sm">
-                  <button
-                    onClick={() => toggleAccordion(2)}
-                    className="w-full flex justify-between items-center p-4 text-left font-bold text-neutral-800 hover:bg-purple-50 transition cursor-pointer"
-                  >
-                    <span className="flex items-center gap-2">
-                      <span className="text-[#6400dc]">⌄</span> Վճարային համակարգեր
-                    </span>
-                    <span className="text-xs text-gray-400 font-normal">{openAccordions[2] ? 'Փակել' : 'Բացել'}</span>
-                  </button>
-                  {openAccordions[2] && (
-                    <div className="p-4 border-t border-gray-100 bg-gray-50 space-y-2 text-xs md:text-sm text-gray-700 leading-relaxed">
-                      <p>• Դրամական փոխանցումների վճարային համակարգերը հնարավորություն են տալիս շատ արագ՝ առանց բանկային հաշվի բացման, պարզեցված ընթացակարգով, ոչ առևտրային բնույթի փոխանցումներ կատարել ֆիզիկական անձանց միջև՝ դեպի աշխարհի տարբեր երկրներ:</p>
-                      <p>• Մեր կողմից սպասարկվող վճարային համակարգերին կարող եք ծանոթանալ <a href="#" className="text-[#6400dc] underline font-medium">այստեղ</a>:</p>
-                    </div>
-                  )}
-                </div>
-
-                {/* Accordion 4: Փոխանցման պայմանների փոփոխում կամ չեղյալացում */}
-                <div className="border border-gray-200 rounded-2xl overflow-hidden bg-white shadow-sm">
-                  <button
-                    onClick={() => toggleAccordion(3)}
-                    className="w-full flex justify-between items-center p-4 text-left font-bold text-neutral-800 hover:bg-purple-50 transition cursor-pointer"
-                  >
-                    <span className="flex items-center gap-2">
-                      <span className="text-[#6400dc]">⌄</span> Փոխանցման պայմանների փոփոխում կամ չեղյալացում
-                    </span>
-                    <span className="text-xs text-gray-400 font-normal">{openAccordions[3] ? 'Փակել' : 'Բացել'}</span>
-                  </button>
-                  {openAccordions[3] && (
-                    <div className="p-4 border-t border-gray-100 bg-gray-50 space-y-3 text-xs md:text-sm text-gray-700 leading-relaxed">
-                      <p>• Փոխանցումների վավերապայմանների փոփոխումը կամ փոխանցման չեղյալացումը կատարում ենք փոխանցումը նախաձեռնող անձի գրավոր դիմումի հիման վրա՝ նրանից գանձելով միջնորդավճարներ:</p>
-                      <p>• Փոխանցման մեջ առկա սխալների ուղղումը, ինչպես նաև փոխանցման չեղյալացումն իրականացում ենք փոխանցող և ստացող բանկերի հնարավորության սահմաններում և ժամկետներում, սովորաբար դա կարող է տևել 2-5 բանկային օր:</p>
-                      <p>• Եթե փոխանցումը նախաձեռնող անձը ներկայացրել է փոխանցման չեղյալացման հայտ, սակայն ըստ հարցման՝ միջոցներն արդեն հաշվեգրված են, ապա մենք չենք կարող պատասխանատվություն կրել գումարների վերադարձի համար:</p>
-                      <p><strong>Փոխանցված միջոցները ստացողին չհասնելու դեպքում`</strong></p>
-                      <p>• Փոխանցված միջոցները թղթակից բանկի կողմից վերադարձվում են փոխանցում կատարած բանկին:</p>
-                      <p>• Վերադարձված դրամական միջոցները հաշվեգրում ենք փոխանցում իրականացրած անձի բանկային հաշվին, իսկ առանց բանկային հաշվի բացման կատարված փոխանցման դեպքում՝ փոխանցման հանձնարարագրում նշված անձնագրային հիմքերով վերադարձնում ենք փոխանցում իրականացրած անձին:</p>
-                      <p>• Վճարային համակարգերով իրականացված փոխանցումների համար գործում են տվյալ համակարգերի ներքին ընթացակարգերով սահմանված պայմանները և ժամկետները:</p>
-                    </div>
-                  )}
-                </div>
-              </div>
-            </div>
-
-            <EvocaOnlineMobile />
-          </main>
-        ) : (
-          /* ================= ՎՃԱՐԱՅԻՆ ՀԱՄԱԿԱՐԳԵՐ ԷՋ ================= */
-          <main className="max-w-7xl mx-auto px-4 py-8 text-left">
-            <div className="text-xs text-gray-400 mb-6 flex items-center gap-2">
-              <span>🏠</span> &gt; <span>Անհատ</span> &gt; <span>Փոխանցումներ</span> &gt; <span className="text-gray-700 font-medium">Վճարային համակարգեր</span>
-            </div>
-
-            <div className="bg-[#f5efff] rounded-[32px] overflow-hidden p-8 md:p-12 mb-10 flex flex-col md:flex-row items-center justify-between gap-8 shadow-sm">
-              <div className="space-y-4 md:w-1/2">
-                <h1 className="text-3xl md:text-5xl font-black text-neutral-900 leading-tight tracking-tight">
-                  Վճարային համակարգեր
-                </h1>
-                <p className="text-xs md:text-sm text-gray-700 leading-relaxed">
-                  Կատարեք արագ և անվտանգ դրամական փոխանցումներ աշխարհի տարբեր երկրներ՝ առանց բանկային հաշվի բացման։
-                </p>
-              </div>
-              <div className="md:w-1/2 flex justify-center">
-                <img 
-                  src="https://www.evoca.am/images-cache/menu/1/16115828343472/780x585.jpg" 
-                  alt="Վճարային համակարգեր" 
                   className="rounded-2xl max-h-80 object-cover shadow-md"
                 />
               </div>
