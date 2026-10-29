@@ -15,27 +15,18 @@ export default function EvocaTouch() {
             <span>🏠</span> &gt; <span>Անհատ</span> &gt; <span className="text-gray-700 font-medium">EvocaTOUCH</span>
           </div>
 
-          {/* Banner Section */}
-          <div className="bg-[#f5efff] rounded-[32px] overflow-hidden p-8 md:p-12 mb-10 flex flex-col md:flex-row items-center justify-between gap-8 shadow-sm">
-            <div className="space-y-4 md:w-1/2">
-              <h1 className="text-3xl md:text-5xl font-black text-neutral-900 leading-tight tracking-tight">
-                EvocaTOUCH
-              </h1>
-              <p className="text-xs md:text-sm text-gray-700 leading-relaxed">
-                Շատերին թվում է՝ դժվար ու անիրական է ֆինանսական ոլորտում լինել կրեատիվ, սակայն Evocabank-ին տարիներ շարունակ հաջողվում է գտնել out of box լուծումներ և շուկային ներկայանալ նոր և ժամանակակից պրոդուկտներով։
-              </p>
-            </div>
-            <div className="md:w-1/2 flex justify-center">
-              <img 
-                src="https://www.evoca.am/images-cache/menu/1/17738355890361/780x585.png" 
-                alt="EvocaTOUCH" 
-                className="rounded-2xl max-h-80 object-cover shadow-md"
-              />
-            </div>
+          {/* Title Header (Without Banner Image) */}
+          <div className="mb-10">
+            <h1 className="text-3xl md:text-5xl font-black text-neutral-900 leading-tight tracking-tight mb-4">
+              EvocaTOUCH
+            </h1>
           </div>
 
           {/* Content Description */}
           <div className="space-y-6 text-xs md:text-sm text-gray-700 leading-relaxed mb-12">
+            <p>
+              Շատերին թվում է՝ դժվար ու անիրական է ֆինանսական ոլորտում լինել կրեատիվ, սակայն Evocabank-ին տարիներ շարունակ հաջողվում է գտնել out of box լուծումներ և շուկային ներկայանալ նոր և ժամանակակից պրոդուկտներով։
+            </p>
             <p>
               Այդ գաղափարների շարքից է նոր EvocaTOUCH հավելվածը, որն առանձնանում է ժամանակակից թվային լուծումներով և հնարավորություններով։
             </p>
