@@ -19,6 +19,7 @@ import LoanDetail from './components/home/loandetail';
 import Qarter from './components/home/qarter';
 import AnhatAvandner from './components/home/anhatavandner';
 import Hashivner from './components/home/hashivner'; // Հաշիվների էջի իմպորտ
+import Poxancumner from './components/home/poxancumner'; // Փոխանցումների էջի իմպորտ
 
 function HomePage() {
   return (
@@ -64,6 +65,9 @@ function App() {
 
         {/* Հաշիվների էջ (hashivner.jsx) */}
         <Route path="/accounts" element={<Hashivner />} />
+
+        {/* Փոխանցումների էջ (poxancumner.jsx) */}
+        <Route path="/transfers" element={<Poxancumner />} />
         
         {/* Վարկային պատմություն և սքոր */}
         <Route path="/credit-history-and-score" element={<CreditHistoryAndScore />} />
