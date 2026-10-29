@@ -18,12 +18,13 @@ import UnsecuredConsumerLoan from './components/home/unsecuredconsumerloan';
 import LoanDetail from './components/home/loandetail';
 import Qarter from './components/home/qarter';
 import AnhatAvandner from './components/home/anhatavandner';
-import Hashivner from './components/home/hashivner'; // Հաշիվների էջի իմպորտ
-import Poxancumner from './components/home/poxancumner'; // Փոխանցումների էջի իմպորտ
-import Arjetxter from './components/home/arjetxter'; // Արժեթղթերի էջի իմպորտ
-import EvocaSalary from './components/home/evocasalary'; // EvocaSALARY էջի իմպորտ
-import EvocaTouch from './components/home/evocatouch'; // EvocaTOUCH էջի իմպորտ
-import EvocaOnline from './components/home/evocaonline'; // EvocaONLINE էջի իմպորտ
+import Hashivner from './components/home/hashivner'; 
+import Poxancumner from './components/home/poxancumner'; 
+import Arjetxter from './components/home/arjetxter'; 
+import EvocaSalary from './components/home/evocasalary'; 
+import EvocaTouch from './components/home/evocatouch'; 
+import EvocaOnline from './components/home/evocaonline';
+import BiznesVarker from './components/home/biznesvarker'; // Բիզնես վարկերի էջի իմպորտ
 
 function HomePage() {
   return (
@@ -84,6 +85,9 @@ function App() {
 
         {/* EvocaONLINE էջ (evocaonline.jsx) */}
         <Route path="/evocaonline" element={<EvocaOnline />} />
+
+        {/* Բիզնես վարկերի էջ (biznesvarker.jsx) */}
+        <Route path="/business-loans" element={<BiznesVarker />} />
         
         {/* Վարկային պատմություն և սքոր */}
         <Route path="/credit-history-and-score" element={<CreditHistoryAndScore />} />
