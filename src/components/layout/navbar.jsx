@@ -5,6 +5,7 @@ export default function Navbar() {
   const location = useLocation();
   const isLoansActive = location.pathname === '/loans';
   const isCardsActive = location.pathname === '/cards';
+  const isDepositsActive = location.pathname === '/deposits' || location.pathname === '/anhat-avandner';
 
   return (
     <header className="w-full bg-white border-b border-gray-100 sticky top-0 z-50">
@@ -62,7 +63,14 @@ export default function Navbar() {
             Քարտեր
           </Link>
 
-          <a href="#" className="hover:text-[#6400dc] transition">Ավանդներ</a>
+          {/* «Ավանդներ» */}
+          <Link 
+            to="/deposits" 
+            className={`transition ${isDepositsActive ? 'text-[#6400dc]' : 'text-gray-800 hover:text-[#6400dc]'}`}
+          >
+            Ավանդներ
+          </Link>
+
           <a href="#" className="hover:text-[#6400dc] transition">Հաշիվներ</a>
           <a href="#" className="hover:text-[#6400dc] transition">Փոխանցումներ</a>
           <a href="#" className="hover:text-[#6400dc] transition">Արժեթղթեր</a>
