@@ -408,7 +408,7 @@ export default function AnhatVarker() {
       <div className="bg-[#6400dc] text-white py-3 px-4 shadow-inner">
         <div className="max-w-7xl mx-auto flex items-center space-x-8 text-xs sm:text-sm font-semibold overflow-x-auto whitespace-nowrap">
           <span className="border-b-2 border-white pb-1 cursor-pointer">Վարկեր</span>
-          <span className="opacity-80 hover:opacity-100 cursor-pointer">Վարկային պատմություն և uScore</span>
+          <span className="opacity-80 hover:opacity-100 cursor-pointer">Վարկային պատմություն և սքոր</span>
           <span className="opacity-80 hover:opacity-100 cursor-pointer">Կարևոր տեղեկատվություն</span>
         </div>
       </div>

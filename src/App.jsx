@@ -11,9 +11,8 @@ import Gortsynkerner from './components/home/gortsynkerner';
 import CurrencyAndAddresses from './components/home/currencyandaddresses';
 import Hachaxord from './components/home/hachaxord';
 import Footer from './components/home/footer';
-
-// Փոխված է ճիշտ ճանապարհը և մեծատառ անվանումը
 import AnhatVarker from './components/home/anhatvarker';
+import CreditHistoryAndScore from "./components/home/credithistoryandscore";
 
 function HomePage() {
   return (
@@ -39,11 +38,10 @@ function App() {
   return (
     <Router>
       <Routes>
-        {/* Հիմնական գլխավոր էջ */}
         <Route path="/" element={<HomePage />} />
-        
-        {/* Վարկերի էջը (React Routing-ով) */}
         <Route path="/loans" element={<AnhatVarker />} />
+        {/* Նոր էջի երթուղին */}
+        <Route path="/credit-history-and-score" element={<CreditHistoryAndScore />} />
       </Routes>
     </Router>
   );
