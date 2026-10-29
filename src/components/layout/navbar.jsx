@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
   return (
@@ -7,9 +8,9 @@ export default function Navbar() {
       <div className="bg-[#f8f9fa] border-b border-gray-100 text-[11px] text-gray-600 py-1.5 px-8">
         <div className="container mx-auto flex justify-between items-center">
           <div className="flex gap-5 font-normal">
-            <span className="text-[#6400dc] border-b-2 border-[#6400dc] pb-1 font-semibold cursor-pointer">
+            <Link to="/" className="text-[#6400dc] border-b-2 border-[#6400dc] pb-1 font-semibold cursor-pointer">
               Անհատ
-            </span>
+            </Link>
             <span className="hover:text-[#6400dc] cursor-pointer transition">Բիզնես</span>
             <span className="hover:text-[#6400dc] cursor-pointer transition">Ակնթարթային վճարումներ</span>
             <span className="hover:text-[#6400dc] cursor-pointer transition">Մեր մասին</span>
@@ -33,15 +34,18 @@ export default function Navbar() {
 
       {/* Main Navbar */}
       <div className="container mx-auto py-3 px-8 flex justify-between items-center">
-        {/* Logo */}
-        <div className="flex items-center gap-1.5 cursor-pointer">
+        {/* Logo (Սեղմելիս տանում է Գլխավոր էջ) */}
+        <Link to="/" className="flex items-center gap-1.5 cursor-pointer">
           <span className="text-2xl font-black text-[#6400dc] tracking-tighter">evoca</span>
           <span className="w-2 h-2 bg-[#6400dc] rounded-full"></span>
-        </div>
+        </Link>
 
         {/* Links */}
         <nav className="hidden lg:flex items-center gap-7 text-[13px] font-bold text-gray-800">
-          <a href="#" className="hover:text-[#6400dc] transition">Վարկեր</a>
+          {/* «Վարկեր» կոճակը հիմա տանում է /loans էջ */}
+          <Link to="/loans" className="hover:text-[#6400dc] transition">
+            Վարկեր
+          </Link>
           <a href="#" className="hover:text-[#6400dc] transition">Քարտեր</a>
           <a href="#" className="hover:text-[#6400dc] transition">Ավանդներ</a>
           <a href="#" className="hover:text-[#6400dc] transition">Հաշիվներ</a>
