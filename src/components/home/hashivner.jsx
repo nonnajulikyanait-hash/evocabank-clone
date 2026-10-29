@@ -4,7 +4,7 @@ import EvocaOnlineMobile from './evocaonlinemobile';
 import Footer from './footer';
 
 export default function Hashivner() {
-  const [activeTab, setActiveTab] = useState('metal'); // 'saving', 'opening', 'metal', 'non-resident'
+  const [activeTab, setActiveTab] = useState('metal'); // 'saving', 'opening', 'metal'
   const [openAccordions, setOpenAccordions] = useState({});
 
   const toggleAccordion = (index) => {
@@ -39,12 +39,6 @@ export default function Hashivner() {
               className={`cursor-pointer pb-1 transition ${activeTab === 'metal' ? 'border-b-2 border-white text-white' : 'text-white opacity-80 hover:opacity-100'}`}
             >
               Առարկայազուրկ մետաղական հաշիվներ
-            </span>
-            <span 
-              onClick={() => setActiveTab('non-resident')} 
-              className={`cursor-pointer pb-1 transition ${activeTab === 'non-resident' ? 'border-b-2 border-white text-white' : 'text-white opacity-80 hover:opacity-100'}`}
-            >
-              Ոչ ռեզիդենտ հաճախորդների հեռավար սպասարկում
             </span>
           </div>
         </div>
