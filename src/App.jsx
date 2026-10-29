@@ -26,7 +26,8 @@ import EvocaTouch from './components/home/evocatouch';
 import EvocaOnline from './components/home/evocaonline';
 import BiznesVarker from './components/home/biznesvarker';
 import Lizing from './components/home/lizing';
-import HatukArajark from './components/home/hatukarajark'; // Hatuk Arajark import
+import HatukArajark from './components/home/hatukarajark';
+import BiznesHashivner from './components/home/bizneshashivner'; // Բիզնես հաշիվների էջի իմպորտ
 
 function HomePage() {
   return (
@@ -67,6 +68,7 @@ function App() {
         <Route path="/business-loans" element={<BiznesVarker />} />
         <Route path="/leasing" element={<Lizing />} />
         <Route path="/special-offer" element={<HatukArajark />} />
+        <Route path="/business-accounts" element={<BiznesHashivner />} /> {/* Բիզնես հաշիվների երթուղի */}
         <Route path="/credit-history-and-score" element={<CreditHistoryAndScore />} />
         <Route path="/important-information" element={<ImportantInformation />} />
       </Routes>

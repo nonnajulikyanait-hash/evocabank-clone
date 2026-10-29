@@ -9,7 +9,8 @@ export default function Navbar() {
     location.pathname.startsWith('/business') || 
     location.pathname === '/biznesvarker' || 
     location.pathname === '/leasing' || 
-    location.pathname === '/special-offer';
+    location.pathname === '/special-offer' ||
+    location.pathname === '/business-accounts';
 
   const isLeasingSub = location.pathname === '/leasing' || location.pathname === '/special-offer';
 
@@ -68,7 +69,9 @@ export default function Navbar() {
             <Link to="/leasing" className={`transition ${isLeasingSub ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>
               Լիզինգ
             </Link>
-            <span className="hover:text-[#6400dc] cursor-pointer transition">Հաշիվներ</span>
+            <Link to="/business-accounts" className={`transition ${location.pathname === '/business-accounts' ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>
+              Հաշիվներ
+            </Link>
             <span className="hover:text-[#6400dc] cursor-pointer transition">Ավանդներ</span>
             <span className="hover:text-[#6400dc] cursor-pointer transition">Արժեթղթերի շուկա</span>
             <span className="hover:text-[#6400dc] cursor-pointer transition">Առևտրի ֆինանսավորում</span>
@@ -98,7 +101,7 @@ export default function Navbar() {
         </Link>
       </div>
 
-      {/* Sub-Bar with White Line for active tab */}
+      {/* Sub-Bar */}
       {isBusinessSection && (
         <div className="bg-[#6400dc] text-white px-12 text-xs font-bold border-b border-white">
           <div className="container mx-auto pl-6 flex gap-8 items-center h-12">
@@ -119,7 +122,7 @@ export default function Navbar() {
               </>
             ) : (
               <div className="h-full flex items-center border-b-2 border-white text-white font-black">
-                Բիզնես վարկեր
+                {location.pathname === '/business-accounts' ? 'Բիզնես հաշիվներ' : 'Բիզնես վարկեր'}
               </div>
             )}
           </div>
