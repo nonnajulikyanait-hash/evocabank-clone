@@ -83,23 +83,23 @@ function Gortsynkerner() {
           <div className="hidden lg:flex absolute left-[38%] top-1/2 -translate-y-1/2 items-center justify-center z-10 pointer-events-none">
             
             {/* 1. Մեծ դեղին կետագծերով շրջանագիծ (պտտվող) */}
-            <div className="absolute w-[320px] h-[320px] rounded-full border-2 border-dotted border-amber-300 animate-[spin_35s_linear_infinite]"></div>
+            <div className="absolute w-[280px] h-[280px] rounded-full border-2 border-dotted border-amber-300 animate-[spin_35s_linear_infinite]"></div>
 
             {/* 2. Միջին դեղին կետագծերով շրջանագիծ (հակառակ պտտվող) */}
-            <div className="absolute w-[260px] h-[260px] rounded-full border-2 border-dashed border-amber-400 opacity-80 animate-[spin_25s_linear_infinite_reverse]"></div>
+            <div className="absolute w-[220px] h-[220px] rounded-full border-2 border-dashed border-amber-400 opacity-80 animate-[spin_25s_linear_infinite_reverse]"></div>
 
             {/* 3. Փոքր դեղին կետագծերով շրջանագիծ */}
-            <div className="absolute w-[200px] h-[200px] rounded-full border border-dotted border-amber-400 opacity-60"></div>
+            <div className="absolute w-[160px] h-[160px] rounded-full border border-dotted border-amber-400 opacity-60"></div>
 
             {/* 4. Դեղին դեկորատիվ փոքրիկ կետիկներ */}
             <div className="absolute top-2 left-6 w-3 h-3 bg-amber-400 rounded-full animate-ping"></div>
             <div className="absolute bottom-4 right-8 w-2 h-2 bg-amber-500 rounded-full animate-bounce"></div>
 
-            {/* Ձեռքի նկարը՝ դրված շրջանագծերի ճիշտ կենտրոնում */}
+            {/* Ավելի փոքրացված ձեռքի նկարը՝ դրված շրջանագծերի ճիշտ կենտրոնում */}
             <img 
               src="https://www.evoca.am/img/hand.png" 
               alt="Evocabank Hand" 
-              className="w-48 h-auto object-contain relative z-20 drop-shadow-md translate-y-2"
+              className="w-32 h-auto object-contain relative z-20 drop-shadow-md translate-y-1"
             />
           </div>
 
