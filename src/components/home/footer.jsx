@@ -111,7 +111,6 @@ function Footer({ setActiveTab }) {
                 </button>
               </li>
               <li>
-                {/* Փոխված է 'kayqiqartez'-ի՝ kayqiqartez.jsx-ին անցնելու համար */}
                 <button onClick={() => handleNavClick('kayqiqartez')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">
                   Կայքի քարտեզ
                 </button>
@@ -160,14 +159,14 @@ function Footer({ setActiveTab }) {
           </p>
         </div>
 
-        {/* Ամենաներքևի գործընկերների պատկերները */}
-        <div className="border-t border-gray-200 pt-6 mt-6 flex items-center justify-between flex-wrap gap-4 opacity-80">
+        {/* Ամենաներքևի գործընկերների պատկերները՝ հավաքված ձախ կողմում */}
+        <div className="border-t border-gray-200 pt-6 mt-6 flex items-center justify-start flex-wrap gap-6 opacity-80">
           {partners.map((partner) => (
-            <div key={partner.id} className="h-10 flex items-center justify-center flex-1 min-w-[80px] max-w-[130px]">
+            <div key={partner.id} className="h-8 flex items-center justify-start">
               <img 
                 src={partner.url} 
                 alt={`Partner ${partner.id}`} 
-                className="max-h-8 w-auto object-contain grayscale hover:grayscale-0 transition-all"
+                className="max-h-7 w-auto object-contain grayscale hover:grayscale-0 transition-all"
                 onError={(e) => { e.target.style.display = 'none'; }}
               />
             </div>
