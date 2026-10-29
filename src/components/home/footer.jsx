@@ -75,52 +75,19 @@ function Footer({ setActiveTab }) {
           <div className="space-y-3">
             <h3 className="font-bold text-sm text-neutral-900">Այլ հղումներ</h3>
             <ul className="space-y-2 text-xs text-gray-600 flex flex-col items-start">
-              <li>
-                <button onClick={() => handleNavClick('evocaonline')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">
-                  EvocaONLINE
-                </button>
-              </li>
-              <li>
-                <button onClick={() => handleNavClick('pahatuper')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">
-                  Պահատուփեր
-                </button>
-              </li>
-              <li>
-                <button onClick={() => handleNavClick('harcer')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">
-                  Հաճախ տրվող հարցեր
-                </button>
-              </li>
-              <li>
-                <button onClick={() => handleNavClick('haytararutyun')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">
-                  Հայտարարություններ
-                </button>
-              </li>
-              <li>
-                <button onClick={() => handleNavClick('dibrary')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">
-                  Dibrary
-                </button>
-              </li>
-              <li>
-                <button onClick={() => handleNavClick('bukletner')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">
-                  Բուկլետներ
-                </button>
-              </li>
-              <li>
-                <button onClick={() => handleNavClick('kap')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">
-                  Հետադարձ կապ
-                </button>
-              </li>
-              <li>
-                <button onClick={() => handleNavClick('kayqiqartez')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">
-                  Կայքի քարտեզ
-                </button>
-              </li>
+              <li><button onClick={() => handleNavClick('evocaonline')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">EvocaONLINE</button></li>
+              <li><button onClick={() => handleNavClick('pahatuper')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">Պահատուփեր</button></li>
+              <li><button onClick={() => handleNavClick('harcer')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">Հաճախ տրվող հարցեր</button></li>
+              <li><button onClick={() => handleNavClick('haytararutyun')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">Հայտարարություններ</button></li>
+              <li><button onClick={() => handleNavClick('dibrary')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">Dibrary</button></li>
+              <li><button onClick={() => handleNavClick('bukletner')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">Բուկլետներ</button></li>
+              <li><button onClick={() => handleNavClick('kap')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">Հետադարձ կապ</button></li>
+              <li><button onClick={() => handleNavClick('kayqiqartez')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">Կայքի քարտեզ</button></li>
             </ul>
           </div>
 
           {/* Սյունակ 5: Սոցցանցեր, Հավելվածներ և Կապ */}
           <div className="space-y-4">
-            {/* Սոցցանցերի պատկերակներ */}
             <div className="flex space-x-3 text-gray-600 text-lg">
               <a href="#" aria-label="Facebook" className="hover:text-[#6400dc]">f</a>
               <a href="#" aria-label="Instagram" className="hover:text-[#6400dc]">ig</a>
@@ -129,17 +96,11 @@ function Footer({ setActiveTab }) {
               <a href="#" aria-label="LinkedIn" className="hover:text-[#6400dc]">in</a>
             </div>
 
-            {/* App Store / Google Play */}
             <div className="space-y-2 pt-2">
-              <a href="#" className="block">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="App Store" className="h-8" />
-              </a>
-              <a href="#" className="block">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" className="h-8" />
-              </a>
+              <a href="#" className="block"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="App Store" className="h-8" /></a>
+              <a href="#" className="block"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" className="h-8" /></a>
             </div>
 
-            {/* Հասցեներ և հեռախոսահամարներ */}
             <div className="space-y-1 pt-2 text-xs">
               <a href="https://www.evoca.am/hy/branches-and-atms" target="_blank" rel="noopener noreferrer" className="block text-[#6400dc] font-bold hover:underline">
                 Բանկի հասցեները և աշխատաժամերը
@@ -159,14 +120,14 @@ function Footer({ setActiveTab }) {
           </p>
         </div>
 
-        {/* Ամենաներքևի գործընկերների պատկերները՝ հավաքված ձախ կողմում */}
-        <div className="border-t border-gray-200 pt-6 mt-6 flex items-center justify-start flex-wrap gap-6 opacity-80">
+        {/* Ամենաներքևի գործընկերների պատկերները՝ հավաքված ձախ կողմում իրար կողք */}
+        <div className="border-t border-gray-200 pt-6 mt-4 flex items-center justify-start flex-wrap gap-4 opacity-90">
           {partners.map((partner) => (
-            <div key={partner.id} className="h-8 flex items-center justify-start">
+            <div key={partner.id} className="h-8 flex items-center justify-center">
               <img 
                 src={partner.url} 
                 alt={`Partner ${partner.id}`} 
-                className="max-h-7 w-auto object-contain grayscale hover:grayscale-0 transition-all"
+                className="max-h-6 w-auto object-contain grayscale hover:grayscale-0 transition-all"
                 onError={(e) => { e.target.style.display = 'none'; }}
               />
             </div>
