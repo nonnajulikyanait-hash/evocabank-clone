@@ -26,12 +26,12 @@ export default function UnsecuredConsumerLoan() {
         </div>
       </div>
 
-      {/* Hero Banner Section */}
-      <div className="relative bg-[#6400dc] text-white overflow-hidden py-12 px-4 md:px-12">
+      {/* Hero Banner Section with #e6d2ff background and curved bottom */}
+      <div className="relative bg-[#e6d2ff] text-neutral-900 overflow-hidden py-16 px-4 md:px-12 rounded-b-[40px] shadow-sm">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center relative z-10">
           <div className="space-y-4 text-left">
-            <h1 className="text-3xl md:text-5xl font-black tracking-tight">Անգրավ սպառողական վարկ</h1>
-            <p className="text-sm md:text-base opacity-90 leading-relaxed max-w-xl">
+            <h1 className="text-3xl md:text-5xl font-black tracking-tight text-neutral-900">Անգրավ սպառողական վարկ</h1>
+            <p className="text-sm md:text-base text-neutral-700 leading-relaxed max-w-xl">
               Նոր նպատակներ, անսպասելի ծախսեր կամ վաղուց պլանավորված գնումներ․ Evocabank-ի անգրավ սպառողական վարկը կօգնի կյանքի կոչել Ձեր ծրագրերը՝ առանց գույքի գրավադրման։
             </p>
           </div>
@@ -39,7 +39,7 @@ export default function UnsecuredConsumerLoan() {
             <img 
               src="https://www.evoca.am/images-cache/loans/1/16142452390597/560x400.png" 
               alt="Անգրավ սպառողական վարկ" 
-              className="max-h-80 object-contain"
+              className="max-h-72 object-contain"
             />
           </div>
         </div>
@@ -204,7 +204,10 @@ export default function UnsecuredConsumerLoan() {
 
                   <div>
                     <strong className="block text-neutral-900 mb-1">16. Այլ պայմաններ</strong>
-                    <p className="text-gray-600">- Փոխկապակցված անձը չպետք է ունենա այս վարկատեսակի գործող վարկ:<br/>- Կանխիկացման դեպքում գանձվում է վճար ըստ Բանկի սակագների:</p>
+                    <p className="text-gray-600">
+                      - Փոխկապակցված անձը չպետք է ունենա այս վարկատեսակի գործող վարկ:<br/>
+                      - Կանխիկացման դեպքում գանձվում է վճար ըստ Բանկի սակագների:
+                    </p>
                   </div>
                 </div>
               </div>
@@ -227,30 +230,30 @@ export default function UnsecuredConsumerLoan() {
 
           </div>
 
-          {/* Right Sticky Calculator / Summary Box (4 Cols) */}
-          <div className="lg:col-span-4 bg-white border border-gray-100 rounded-3xl p-6 shadow-sm sticky top-24 space-y-6">
+          {/* Right Sticky Calculator / Summary Box (4 Cols - Smaller & Compact) */}
+          <div className="lg:col-span-4 bg-white border border-gray-100 rounded-3xl p-5 shadow-sm sticky top-24 space-y-4">
             <div className="flex justify-center">
-              <span className="w-10 h-10 rounded-full bg-[#6400dc] text-white flex items-center justify-center font-bold text-lg">
+              <span className="w-8 h-8 rounded-full bg-[#6400dc] text-white flex items-center justify-center font-bold text-sm">
                 ֏
               </span>
             </div>
 
-            <div className="space-y-4 border-t border-b border-gray-100 py-6 text-left">
+            <div className="space-y-3 border-t border-b border-gray-100 py-4 text-left text-xs">
               <div>
-                <div className="text-xl md:text-2xl font-black text-[#6400dc]">մինչև 10 մլն. ֏</div>
-                <div className="text-xs text-gray-400 font-medium">Գումար</div>
+                <div className="text-lg md:text-xl font-black text-[#6400dc]">մինչև 10 մլն. ֏</div>
+                <div className="text-[11px] text-gray-400 font-medium">Գումար</div>
               </div>
-              <div className="pt-2">
-                <div className="text-xl md:text-2xl font-black text-[#6400dc]">մինչև 60 ամիս</div>
-                <div className="text-xs text-gray-400 font-medium">Ժամկետ</div>
+              <div className="pt-1">
+                <div className="text-lg md:text-xl font-black text-[#6400dc]">մինչև 60 ամիս</div>
+                <div className="text-[11px] text-gray-400 font-medium">Ժամկետ</div>
               </div>
-              <div className="pt-2">
-                <div className="text-xl md:text-2xl font-black text-[#6400dc]">սկսած 19%-ից</div>
-                <div className="text-xs text-gray-400 font-medium">Տոկոսադրույք</div>
+              <div className="pt-1">
+                <div className="text-lg md:text-xl font-black text-[#6400dc]">սկսած 19%-ից</div>
+                <div className="text-[11px] text-gray-400 font-medium">Տոկոսադրույք</div>
               </div>
             </div>
 
-            <button className="w-full bg-[#6400dc] hover:bg-opacity-90 text-white font-bold text-xs py-3.5 rounded-full transition shadow-md cursor-pointer">
+            <button className="w-full bg-[#6400dc] hover:bg-opacity-90 text-white font-bold text-xs py-3 rounded-full transition shadow-md cursor-pointer">
               Առցանց հայտ
             </button>
           </div>
