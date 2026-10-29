@@ -7,8 +7,7 @@ import CardsSliderSection from './components/home/cardslidersection';
 import CalculatorSection from './components/home/calculatorsection';
 import EvocaOnlineMobile from './components/home/evocaonlinemobile';
 import Gortsynkerner from './components/home/gortsynkerner';
-
-
+import CurrencyAndAddresses from './components/home/currencyandaddresses';
 
 function App() {
   return (
@@ -20,8 +19,9 @@ function App() {
         <StatueSection />
         <CardsSliderSection />
         <CalculatorSection />
-        <EvocaOnlineMobile/>
-        <Gortsynkerner/>
+        <EvocaOnlineMobile />
+        <Gortsynkerner />
+        <CurrencyAndAddresses />
       </main>
     </div>
   );
