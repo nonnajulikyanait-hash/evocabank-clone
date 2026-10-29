@@ -28,6 +28,7 @@ import BiznesVarker from './components/home/biznesvarker';
 import Lizing from './components/home/lizing';
 import HatukArajark from './components/home/hatukarajark';
 import BiznesHashivner from './components/home/bizneshashivner';
+import ArarkayazurkMetaxakanHashivner from './components/home/ararkayazurkmetaxakanhashivner'; // Նոր իմպորտ
 
 function HomePage() {
   return (
@@ -69,7 +70,7 @@ function App() {
         <Route path="/leasing" element={<Lizing />} />
         <Route path="/special-offer" element={<HatukArajark />} />
         <Route path="/business-accounts" element={<BiznesHashivner />} />
-        <Route path="/business-unallocated-metal-accounts" element={<BiznesHashivner />} />
+        <Route path="/business-unallocated-metal-accounts" element={<ArarkayazurkMetaxakanHashivner />} /> {/* Թարմացված Route */}
         <Route path="/credit-history-and-score" element={<CreditHistoryAndScore />} />
         <Route path="/important-information" element={<ImportantInformation />} />
       </Routes>
