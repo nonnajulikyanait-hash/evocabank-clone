@@ -93,12 +93,12 @@ export default function Navbar() {
         ) : (
           <nav className="hidden lg:flex items-center gap-7 text-[13px] font-bold text-gray-800">
             <Link to="/business-loans" className="text-[#6400dc] transition">Վարկեր</Link>
-            <span className="hover:text-[#6400dc] cursor-pointer transition">Լինգինգ</span>
+            <span className="hover:text-[#6400dc] cursor-pointer transition">Լիզինգ</span>
             <span className="hover:text-[#6400dc] cursor-pointer transition">Հաշիվներ</span>
             <span className="hover:text-[#6400dc] cursor-pointer transition">Ավանդներ</span>
             <span className="hover:text-[#6400dc] cursor-pointer transition">Արժեթղթերի շուկա</span>
             <span className="hover:text-[#6400dc] cursor-pointer transition">Առևտրի ֆինանսավորում</span>
-            <span className="hover:text-[#6400dc] cursor-pointer transition">Դեպոզիտարia</span>
+            <span className="hover:text-[#6400dc] cursor-pointer transition">Դիջիթալ</span>
             <span className="hover:text-[#6400dc] cursor-pointer transition">Այլ</span>
           </nav>
         )}
