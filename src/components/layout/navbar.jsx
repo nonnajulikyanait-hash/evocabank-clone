@@ -14,11 +14,12 @@ export default function Navbar() {
     location.pathname === '/business-unallocated-metal-accounts' ||
     location.pathname === '/business-deposits' ||
     location.pathname === '/business-securities' ||
-    location.pathname === '/bonds';
+    location.pathname === '/bonds' ||
+    location.pathname === '/cda-services';
 
   const isLeasingSub = location.pathname === '/leasing' || location.pathname === '/special-offer';
   const isAccountsSub = location.pathname === '/business-accounts' || location.pathname === '/business-unallocated-metal-accounts';
-  const isSecuritiesSub = location.pathname === '/business-securities' || location.pathname === '/bonds';
+  const isSecuritiesSub = location.pathname === '/business-securities' || location.pathname === '/bonds' || location.pathname === '/cda-services';
 
   return (
     <header className="w-full bg-white border-b border-gray-100 sticky top-0 z-50">
@@ -159,9 +160,12 @@ export default function Navbar() {
                 >
                   Պարտատոմսեր
                 </Link>
-                <span className="h-full flex items-center text-purple-200 hover:text-white transition whitespace-nowrap cursor-pointer">
+                <Link 
+                  to="/cda-services" 
+                  className={`h-full flex items-center transition ${location.pathname === '/cda-services' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}
+                >
                   ՀԿԴ ծառայություններ
-                </span>
+                </Link>
                 <span className="h-full flex items-center text-purple-200 hover:text-white transition whitespace-nowrap cursor-pointer">
                   Ռեպո/Հակադարձ ռեպո գործարքներ
                 </span>

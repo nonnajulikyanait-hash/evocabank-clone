@@ -31,7 +31,8 @@ import BiznesHashivner from './components/home/bizneshashivner';
 import ArarkayazurkMetaxakanHashivner from './components/home/ararkayazurkmetaxakanhashivner';
 import BiznesAvandner from './components/home/biznesavandner';
 import BiznesArjetxter from './components/home/biznesarjetxter';
-import Partatomser from './components/home/partatomser'; // Պարտատոմսերի էջի իմպորտ
+import Partatomser from './components/home/partatomser'; 
+import Carayutyunner from './components/home/carayutyunner';
 
 function HomePage() {
   return (
@@ -76,7 +77,8 @@ function App() {
         <Route path="/business-unallocated-metal-accounts" element={<ArarkayazurkMetaxakanHashivner />} />
         <Route path="/business-deposits" element={<BiznesAvandner />} />
         <Route path="/business-securities" element={<BiznesArjetxter />} />
-        <Route path="/bonds" element={<Partatomser />} /> {/* Պարտատոմսերի երթուղի */}
+        <Route path="/bonds" element={<Partatomser />} /> 
+        <Route path="/cda-services" element={<Carayutyunner />} />
         <Route path="/credit-history-and-score" element={<CreditHistoryAndScore />} />
         <Route path="/important-information" element={<ImportantInformation />} />
       </Routes>
