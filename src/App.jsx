@@ -35,6 +35,7 @@ import Partatomser from './components/home/partatomser';
 import Carayutyunner from './components/home/carayutyunner';
 import Gorcarqner from './components/home/gorcarqner';
 import EvocaInvest from './components/home/evocainvest';
+import Finansavorum from './components/home/finansavorum';
 
 function HomePage() {
   return (
@@ -83,6 +84,7 @@ function App() {
         <Route path="/cda-services" element={<Carayutyunner />} />
         <Route path="/repo-reverse-repo" element={<Gorcarqner />} />
         <Route path="/evocainvest-service" element={<EvocaInvest />} />
+        <Route path="/trade-finance" element={<Finansavorum />} />
         <Route path="/credit-history-and-score" element={<CreditHistoryAndScore />} />
         <Route path="/important-information" element={<ImportantInformation />} />
       </Routes>
