@@ -37,6 +37,7 @@ export default function Navbar() {
     location.pathname === '/factoring' || 
     location.pathname === '/creditive' ||
     location.pathname === '/inkaso';
+  const isDijitalSub = location.pathname === '/dijital';
 
   return (
     <header className="w-full bg-white border-b border-gray-100 sticky top-0 z-50">
@@ -105,7 +106,7 @@ export default function Navbar() {
             <Link to="/trade-finance" className={`transition ${isTradeFinanceSub ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>
               Առևտրի ֆինանսավորում
             </Link>
-            <Link to="/dijital" className={`transition ${location.pathname === '/dijital' ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>
+            <Link to="/dijital" className={`transition ${isDijitalSub ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>
               Դեպոզիտարիա
             </Link>
             <span className="hover:text-[#6400dc] cursor-pointer transition">Այլ</span>
@@ -134,12 +135,43 @@ export default function Navbar() {
       </div>
 
       {/* Sub-Bar */}
-      {isBusinessSection && location.pathname === '/dijital' && (
+      {isBusinessSection && (
         <div className="bg-[#6400dc] text-white px-12 text-xs font-bold border-b border-white">
           <div className="container mx-auto pl-6 flex gap-8 items-center h-12 overflow-x-auto">
-            <Link to="/dijital" className="h-full flex items-center border-b-2 border-white text-white font-black">
-              Դեպոզիտարիա
-            </Link>
+            {isLeasingSub ? (
+              <>
+                <Link to="/leasing" className={`h-full flex items-center transition ${location.pathname === '/leasing' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}>Evoca Leasing</Link>
+                <Link to="/special-offer" className={`h-full flex items-center transition ${location.pathname === '/special-offer' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}>Հատուկ առաջարկ</Link>
+              </>
+            ) : isAccountsSub ? (
+              <>
+                <Link to="/business-accounts" className={`h-full flex items-center transition ${location.pathname === '/business-accounts' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}>Հաշիվների բացում և սպասարկում</Link>
+                <Link to="/business-unallocated-metal-accounts" className={`h-full flex items-center transition ${location.pathname === '/business-unallocated-metal-accounts' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}>Առարկայազուրկ մետաղական հաշիվներ</Link>
+              </>
+            ) : isSecuritiesSub ? (
+              <>
+                <Link to="/business-securities" className={`h-full flex items-center transition ${location.pathname === '/business-securities' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}>Ներդրումային ծառայություններ</Link>
+                <Link to="/bonds" className={`h-full flex items-center transition ${location.pathname === '/bonds' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}>Պարտատոմսեր</Link>
+                <Link to="/cda-services" className={`h-full flex items-center transition ${location.pathname === '/cda-services' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}>ՀԿԴ ծառայություններ</Link>
+                <Link to="/repo-reverse-repo" className={`h-full flex items-center transition ${location.pathname === '/repo-reverse-repo' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}>Ռեպո/Հակադարձ ռեպո գործարքներ</Link>
+                <Link to="/evocainvest-service" className={`h-full flex items-center transition ${location.pathname === '/evocainvest-service' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}>EvocaINVEST</Link>
+              </>
+            ) : isTradeFinanceSub ? (
+              <>
+                <Link to="/trade-finance" className={`h-full flex items-center transition ${location.pathname === '/trade-finance' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}>Երաշխիք</Link>
+                <Link to="/factoring" className={`h-full flex items-center transition ${location.pathname === '/factoring' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}>Ֆակտորինգային ֆինանսավորում</Link>
+                <Link to="/creditive" className={`h-full flex items-center transition ${location.pathname === '/creditive' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}>Ակրեդիտիվ</Link>
+                <Link to="/inkaso" className={`h-full flex items-center transition ${location.pathname === '/inkaso' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}>Ինկասո</Link>
+              </>
+            ) : isDijitalSub ? (
+              <div className="h-full flex items-center border-b-2 border-white text-white font-black">
+                Դեպոզիտարիա
+              </div>
+            ) : (
+              <div className="h-full flex items-center border-b-2 border-white text-white font-black">
+                {location.pathname === '/business-deposits' ? 'Բիզնես ավանդներ' : 'Բիզնես վարկեր'}
+              </div>
+            )}
           </div>
         </div>
       )}
