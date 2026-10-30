@@ -17,6 +17,7 @@ export default function Navbar() {
 
   const isLeasingSub = location.pathname === '/leasing' || location.pathname === '/special-offer';
   const isAccountsSub = location.pathname === '/business-accounts' || location.pathname === '/business-unallocated-metal-accounts';
+  const isSecuritiesSub = location.pathname === '/business-securities';
 
   return (
     <header className="w-full bg-white border-b border-gray-100 sticky top-0 z-50">
@@ -79,7 +80,7 @@ export default function Navbar() {
             <Link to="/business-deposits" className={`transition ${location.pathname === '/business-deposits' ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>
               Ավանդներ
             </Link>
-            <Link to="/business-securities" className={`transition ${location.pathname === '/business-securities' ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>
+            <Link to="/business-securities" className={`transition ${isSecuritiesSub ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>
               Արժեթղթերի շուկա
             </Link>
             <span className="hover:text-[#6400dc] cursor-pointer transition">Առևտրի ֆինանսավորում</span>
@@ -112,7 +113,7 @@ export default function Navbar() {
       {/* Sub-Bar */}
       {isBusinessSection && (
         <div className="bg-[#6400dc] text-white px-12 text-xs font-bold border-b border-white">
-          <div className="container mx-auto pl-6 flex gap-8 items-center h-12">
+          <div className="container mx-auto pl-6 flex gap-8 items-center h-12 overflow-x-auto">
             {isLeasingSub ? (
               <>
                 <Link 
@@ -143,13 +144,27 @@ export default function Navbar() {
                   Առարկայազուրկ մետաղական հաշիվներ
                 </Link>
               </>
+            ) : isSecuritiesSub ? (
+              <>
+                <span className="h-full flex items-center border-b-2 border-white text-white font-black whitespace-nowrap cursor-pointer">
+                  Ներդրումային ծառայություններ
+                </span>
+                <span className="h-full flex items-center text-purple-200 hover:text-white transition whitespace-nowrap cursor-pointer">
+                  Պարտատոմսեր
+                </span>
+                <span className="h-full flex items-center text-purple-200 hover:text-white transition whitespace-nowrap cursor-pointer">
+                  ՀԿԴ ծառայություններ
+                </span>
+                <span className="h-full flex items-center text-purple-200 hover:text-white transition whitespace-nowrap cursor-pointer">
+                  Ռեպո/Հակադարձ ռեպո գործարքներ
+                </span>
+                <span className="h-full flex items-center text-purple-200 hover:text-white transition whitespace-nowrap cursor-pointer">
+                  EvocaINVEST
+                </span>
+              </>
             ) : (
               <div className="h-full flex items-center border-b-2 border-white text-white font-black">
-                {location.pathname === '/business-deposits' 
-                  ? 'Բիզնես ավանդներ' 
-                  : location.pathname === '/business-securities'
-                  ? 'Արժեթղթերի շուկա'
-                  : 'Բիզնես վարկեր'}
+                {location.pathname === '/business-deposits' ? 'Բիզնես ավանդներ' : 'Բիզնես վարկեր'}
               </div>
             )}
           </div>
