@@ -36,6 +36,7 @@ import Carayutyunner from './components/home/carayutyunner';
 import Gorcarqner from './components/home/gorcarqner';
 import EvocaInvest from './components/home/evocainvest';
 import Finansavorum from './components/home/finansavorum';
+import Faktoringayin from './components/home/faktoringayin';
 
 function HomePage() {
   return (
@@ -85,6 +86,7 @@ function App() {
         <Route path="/repo-reverse-repo" element={<Gorcarqner />} />
         <Route path="/evocainvest-service" element={<EvocaInvest />} />
         <Route path="/trade-finance" element={<Finansavorum />} />
+        <Route path="/factoring" element={<Faktoringayin />} />
         <Route path="/credit-history-and-score" element={<CreditHistoryAndScore />} />
         <Route path="/important-information" element={<ImportantInformation />} />
       </Routes>

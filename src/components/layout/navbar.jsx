@@ -18,7 +18,8 @@ export default function Navbar() {
     location.pathname === '/cda-services' ||
     location.pathname === '/repo-reverse-repo' ||
     location.pathname === '/evocainvest-service' ||
-    location.pathname === '/trade-finance';
+    location.pathname === '/trade-finance' ||
+    location.pathname === '/factoring';
 
   const isLeasingSub = location.pathname === '/leasing' || location.pathname === '/special-offer';
   const isAccountsSub = location.pathname === '/business-accounts' || location.pathname === '/business-unallocated-metal-accounts';
@@ -28,9 +29,7 @@ export default function Navbar() {
     location.pathname === '/cda-services' ||
     location.pathname === '/repo-reverse-repo' ||
     location.pathname === '/evocainvest-service';
-  
-  // Ավելացվել է 'Առևտրի ֆինանսավորում' բաժնի ստուգումը
-  const isTradeFinanceSub = location.pathname === '/trade-finance';
+  const isTradeFinanceSub = location.pathname === '/trade-finance' || location.pathname === '/factoring';
 
   return (
     <header className="w-full bg-white border-b border-gray-100 sticky top-0 z-50">
@@ -150,7 +149,7 @@ export default function Navbar() {
             ) : isTradeFinanceSub ? (
               <>
                 <Link to="/trade-finance" className={`h-full flex items-center transition ${location.pathname === '/trade-finance' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}>Երաշխիք</Link>
-                <span className="h-full flex items-center text-purple-200 hover:text-white transition whitespace-nowrap cursor-pointer">Ֆակտորինգային ֆինանսավորում</span>
+                <Link to="/factoring" className={`h-full flex items-center transition ${location.pathname === '/factoring' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}>Ֆակտորինգային ֆինանսավորում</Link>
                 <span className="h-full flex items-center text-purple-200 hover:text-white transition whitespace-nowrap cursor-pointer">Ակրեդիտիվ</span>
                 <span className="h-full flex items-center text-purple-200 hover:text-white transition whitespace-nowrap cursor-pointer">Ինկասո</span>
               </>
