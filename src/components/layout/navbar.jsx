@@ -13,11 +13,12 @@ export default function Navbar() {
     location.pathname === '/business-accounts' ||
     location.pathname === '/business-unallocated-metal-accounts' ||
     location.pathname === '/business-deposits' ||
-    location.pathname === '/business-securities';
+    location.pathname === '/business-securities' ||
+    location.pathname === '/bonds';
 
   const isLeasingSub = location.pathname === '/leasing' || location.pathname === '/special-offer';
   const isAccountsSub = location.pathname === '/business-accounts' || location.pathname === '/business-unallocated-metal-accounts';
-  const isSecuritiesSub = location.pathname === '/business-securities';
+  const isSecuritiesSub = location.pathname === '/business-securities' || location.pathname === '/bonds';
 
   return (
     <header className="w-full bg-white border-b border-gray-100 sticky top-0 z-50">
@@ -146,12 +147,18 @@ export default function Navbar() {
               </>
             ) : isSecuritiesSub ? (
               <>
-                <span className="h-full flex items-center border-b-2 border-white text-white font-black whitespace-nowrap cursor-pointer">
+                <Link 
+                  to="/business-securities" 
+                  className={`h-full flex items-center transition ${location.pathname === '/business-securities' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}
+                >
                   Ներդրումային ծառայություններ
-                </span>
-                <span className="h-full flex items-center text-purple-200 hover:text-white transition whitespace-nowrap cursor-pointer">
+                </Link>
+                <Link 
+                  to="/bonds" 
+                  className={`h-full flex items-center transition ${location.pathname === '/bonds' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}
+                >
                   Պարտատոմսեր
-                </span>
+                </Link>
                 <span className="h-full flex items-center text-purple-200 hover:text-white transition whitespace-nowrap cursor-pointer">
                   ՀԿԴ ծառայություններ
                 </span>
