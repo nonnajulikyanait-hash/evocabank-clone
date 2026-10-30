@@ -12,7 +12,8 @@ export default function Navbar() {
     location.pathname === '/special-offer' ||
     location.pathname === '/business-accounts' ||
     location.pathname === '/business-unallocated-metal-accounts' ||
-    location.pathname === '/business-deposits';
+    location.pathname === '/business-deposits' ||
+    location.pathname === '/business-securities';
 
   const isLeasingSub = location.pathname === '/leasing' || location.pathname === '/special-offer';
   const isAccountsSub = location.pathname === '/business-accounts' || location.pathname === '/business-unallocated-metal-accounts';
@@ -78,7 +79,9 @@ export default function Navbar() {
             <Link to="/business-deposits" className={`transition ${location.pathname === '/business-deposits' ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>
               Ավանդներ
             </Link>
-            <span className="hover:text-[#6400dc] cursor-pointer transition">Արժեթղթերի շուկա</span>
+            <Link to="/business-securities" className={`transition ${location.pathname === '/business-securities' ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>
+              Արժեթղթերի շուկա
+            </Link>
             <span className="hover:text-[#6400dc] cursor-pointer transition">Առևտրի ֆինանսավորում</span>
             <span className="hover:text-[#6400dc] cursor-pointer transition">Դեպոզիտարիա</span>
             <span className="hover:text-[#6400dc] cursor-pointer transition">Այլ</span>
@@ -142,7 +145,11 @@ export default function Navbar() {
               </>
             ) : (
               <div className="h-full flex items-center border-b-2 border-white text-white font-black">
-                {location.pathname === '/business-deposits' ? 'Բիզնես ավանդներ' : 'Բիզնես վարկեր'}
+                {location.pathname === '/business-deposits' 
+                  ? 'Բիզնես ավանդներ' 
+                  : location.pathname === '/business-securities'
+                  ? 'Արժեթղթերի շուկա'
+                  : 'Բիզնես վարկեր'}
               </div>
             )}
           </div>
