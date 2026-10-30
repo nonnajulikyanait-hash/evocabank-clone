@@ -45,25 +45,25 @@ export default function Navbar() {
               to="/" 
               className={`pb-1 cursor-pointer transition ${!isBusinessSection ? 'text-[#6400dc] border-b-2 border-[#6400dc] font-semibold' : 'hover:text-[#6400dc]'}`}
             >
-              Anhat
+              Անհատ
             </Link>
 
             <span 
               onClick={() => navigate('/business-loans')}
               className={`cursor-pointer transition ${isBusinessSection ? 'text-[#6400dc] border-b-2 border-[#6400dc] font-semibold' : 'hover:text-[#6400dc]'}`}
             >
-              Biznes
+              Բիզնես
             </span>
 
-            <span className="hover:text-[#6400dc] cursor-pointer transition">Akntartayin vcharumner</span>
-            <span className="hover:text-[#6400dc] cursor-pointer transition">Mer masin</span>
-            <span className="hover:text-[#6400dc] cursor-pointer transition">Norutyunner</span>
-            <span className="hover:text-[#6400dc] cursor-pointer transition">Blog</span>
-            <span className="hover:text-[#6400dc] cursor-pointer transition">Kariera</span>
+            <span className="hover:text-[#6400dc] cursor-pointer transition">Ակնթարթային վճարումներ</span>
+            <span className="hover:text-[#6400dc] cursor-pointer transition">Մեր մասին</span>
+            <span className="hover:text-[#6400dc] cursor-pointer transition">Նորություններ</span>
+            <span className="hover:text-[#6400dc] cursor-pointer transition">Բլոգ</span>
+            <span className="hover:text-[#6400dc] cursor-pointer transition">Կարիերա</span>
           </div>
           <div className="flex items-center gap-5">
-            <span className="text-[#6400dc] font-medium cursor-pointer">Anzanc hayter ▾</span>
-            <span className="text-[#6400dc] font-medium cursor-pointer">Hetadarc kap ▾</span>
+            <span className="text-[#6400dc] font-medium cursor-pointer">Անցանց հայտեր ▾</span>
+            <span className="text-[#6400dc] font-medium cursor-pointer">Հետադարձ կապ ▾</span>
             <div className="flex items-center gap-3.5 text-gray-500 ml-2">
               <span className="cursor-pointer text-xs">📍</span>
               <span className="cursor-pointer text-xs">❓</span>
@@ -85,34 +85,34 @@ export default function Navbar() {
         {isBusinessSection ? (
           <nav className="hidden lg:flex items-center gap-7 text-[13px] font-bold text-gray-800">
             <Link to="/business-loans" className={`transition ${location.pathname === '/business-loans' ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>
-              Varker
+              Վարկեր
             </Link>
             <Link to="/leasing" className={`transition ${isLeasingSub ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>
-              Lizing
+              Լիզինգ
             </Link>
             <Link to="/business-accounts" className={`transition ${isAccountsSub ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>
-              Hashivner
+              Հաշիվներ
             </Link>
             <Link to="/business-deposits" className={`transition ${location.pathname === '/business-deposits' ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>
-              Avandner
+              Ավանդներ
             </Link>
             <Link to="/business-securities" className={`transition ${isSecuritiesSub ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>
-              Arjetxteri shuka
+              Արժեթղթերի շուկա
             </Link>
             <Link to="/trade-finance" className={`transition ${location.pathname === '/trade-finance' ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>
-              Arevtri finansavorum
+              Առևտրի ֆինանսավորում
             </Link>
-            <span className="hover:text-[#6400dc] cursor-pointer transition">Depozitaria</span>
-            <span className="hover:text-[#6400dc] cursor-pointer transition">Ayl</span>
+            <span className="hover:text-[#6400dc] cursor-pointer transition">Դեպոզիտարիա</span>
+            <span className="hover:text-[#6400dc] cursor-pointer transition">Այլ</span>
           </nav>
         ) : (
           <nav className="hidden lg:flex items-center gap-7 text-[13px] font-bold text-gray-800">
-            <Link to="/loans" className="hover:text-[#6400dc] transition">Varker</Link>
-            <Link to="/cards" className="hover:text-[#6400dc] transition">Qarter</Link>
-            <Link to="/deposits" className="hover:text-[#6400dc] transition">Avandner</Link>
-            <Link to="/accounts" className="hover:text-[#6400dc] transition">Hashivner</Link>
-            <Link to="/transfers" className="hover:text-[#6400dc] transition">Poxancumner</Link>
-            <Link to="/securities" className="hover:text-[#6400dc] transition">Arjetxter</Link>
+            <Link to="/loans" className="hover:text-[#6400dc] transition">Վարկեր</Link>
+            <Link to="/cards" className="hover:text-[#6400dc] transition">Քարտեր</Link>
+            <Link to="/deposits" className="hover:text-[#6400dc] transition">Ավանդներ</Link>
+            <Link to="/accounts" className="hover:text-[#6400dc] transition">Հաշիվներ</Link>
+            <Link to="/transfers" className="hover:text-[#6400dc] transition">Փոխանցումներ</Link>
+            <Link to="/securities" className="hover:text-[#6400dc] transition">Արժեթղթեր</Link>
             <Link to="/evocasalary" className="hover:text-[#6400dc] transition">EvocaSALARY</Link>
             <Link to="/evocatouch" className="hover:text-[#6400dc] transition">EvocaTOUCH</Link>
           </nav>
@@ -135,31 +135,31 @@ export default function Navbar() {
             {isLeasingSub ? (
               <>
                 <Link to="/leasing" className={`h-full flex items-center transition ${location.pathname === '/leasing' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}>Evoca Leasing</Link>
-                <Link to="/special-offer" className={`h-full flex items-center transition ${location.pathname === '/special-offer' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}>Hatuk arajark</Link>
+                <Link to="/special-offer" className={`h-full flex items-center transition ${location.pathname === '/special-offer' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}>Հատուկ առաջարկ</Link>
               </>
             ) : isAccountsSub ? (
               <>
-                <Link to="/business-accounts" className={`h-full flex items-center transition ${location.pathname === '/business-accounts' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}>Hashivneri bacum ev spasarkum</Link>
-                <Link to="/business-unallocated-metal-accounts" className={`h-full flex items-center transition ${location.pathname === '/business-unallocated-metal-accounts' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}>Ararkayazurk metaxakan hashivner</Link>
+                <Link to="/business-accounts" className={`h-full flex items-center transition ${location.pathname === '/business-accounts' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}>Հաշիվների բացում և սպասարկում</Link>
+                <Link to="/business-unallocated-metal-accounts" className={`h-full flex items-center transition ${location.pathname === '/business-unallocated-metal-accounts' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}>Առարկայազուրկ մետաղական հաշիվներ</Link>
               </>
             ) : isSecuritiesSub ? (
               <>
-                <Link to="/business-securities" className={`h-full flex items-center transition ${location.pathname === '/business-securities' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}>Nerdrumayin carayutyunner</Link>
-                <Link to="/bonds" className={`h-full flex items-center transition ${location.pathname === '/bonds' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}>Partatomser</Link>
-                <Link to="/cda-services" className={`h-full flex items-center transition ${location.pathname === '/cda-services' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}>HKD carayutyunner</Link>
-                <Link to="/repo-reverse-repo" className={`h-full flex items-center transition ${location.pathname === '/repo-reverse-repo' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}>Repo/Hakadarc repo gorcarqner</Link>
+                <Link to="/business-securities" className={`h-full flex items-center transition ${location.pathname === '/business-securities' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}>Ներդրումային ծառայություններ</Link>
+                <Link to="/bonds" className={`h-full flex items-center transition ${location.pathname === '/bonds' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}>Պարտատոմսեր</Link>
+                <Link to="/cda-services" className={`h-full flex items-center transition ${location.pathname === '/cda-services' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}>ՀԿԴ ծառայություններ</Link>
+                <Link to="/repo-reverse-repo" className={`h-full flex items-center transition ${location.pathname === '/repo-reverse-repo' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}>Ռեպո/Հակադարձ ռեպո գործարքներ</Link>
                 <Link to="/evocainvest-service" className={`h-full flex items-center transition ${location.pathname === '/evocainvest-service' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}>EvocaINVEST</Link>
               </>
             ) : isTradeFinanceSub ? (
               <>
-                <Link to="/trade-finance" className={`h-full flex items-center transition ${location.pathname === '/trade-finance' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}>Erashxiq</Link>
-                <Link to="/factoring" className={`h-full flex items-center transition ${location.pathname === '/factoring' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}>Faktoringayin finansavorum</Link>
-                <Link to="/creditive" className={`h-full flex items-center transition ${location.pathname === '/creditive' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}>Akreditiv</Link>
-                <span className="h-full flex items-center text-purple-200 hover:text-white transition whitespace-nowrap cursor-pointer">Inkaso</span>
+                <Link to="/trade-finance" className={`h-full flex items-center transition ${location.pathname === '/trade-finance' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}>Երաշխիք</Link>
+                <Link to="/factoring" className={`h-full flex items-center transition ${location.pathname === '/factoring' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}>Ֆակտորինգային ֆինանսավորում</Link>
+                <Link to="/creditive" className={`h-full flex items-center transition ${location.pathname === '/creditive' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}>Ակրեդիտիվ</Link>
+                <span className="h-full flex items-center text-purple-200 hover:text-white transition whitespace-nowrap cursor-pointer">Ինկասո</span>
               </>
             ) : (
               <div className="h-full flex items-center border-b-2 border-white text-white font-black">
-                {location.pathname === '/business-deposits' ? 'Biznes avandner' : 'Biznes varker'}
+                {location.pathname === '/business-deposits' ? 'Բիզնես ավանդներ' : 'Բիզնես վարկեր'}
               </div>
             )}
           </div>
