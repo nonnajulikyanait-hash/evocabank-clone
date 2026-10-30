@@ -20,7 +20,8 @@ export default function Navbar() {
     location.pathname === '/evocainvest-service' ||
     location.pathname === '/trade-finance' ||
     location.pathname === '/factoring' ||
-    location.pathname === '/creditive';
+    location.pathname === '/creditive' ||
+    location.pathname === '/inkaso';
 
   const isLeasingSub = location.pathname === '/leasing' || location.pathname === '/special-offer';
   const isAccountsSub = location.pathname === '/business-accounts' || location.pathname === '/business-unallocated-metal-accounts';
@@ -33,7 +34,8 @@ export default function Navbar() {
   const isTradeFinanceSub = 
     location.pathname === '/trade-finance' || 
     location.pathname === '/factoring' || 
-    location.pathname === '/creditive';
+    location.pathname === '/creditive' ||
+    location.pathname === '/inkaso';
 
   return (
     <header className="w-full bg-white border-b border-gray-100 sticky top-0 z-50">
@@ -155,7 +157,7 @@ export default function Navbar() {
                 <Link to="/trade-finance" className={`h-full flex items-center transition ${location.pathname === '/trade-finance' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}>Երաշխիք</Link>
                 <Link to="/factoring" className={`h-full flex items-center transition ${location.pathname === '/factoring' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}>Ֆակտորինգային ֆինանսավորում</Link>
                 <Link to="/creditive" className={`h-full flex items-center transition ${location.pathname === '/creditive' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}>Ակրեդիտիվ</Link>
-                <span className="h-full flex items-center text-purple-200 hover:text-white transition whitespace-nowrap cursor-pointer">Ինկասո</span>
+                <Link to="/inkaso" className={`h-full flex items-center transition ${location.pathname === '/inkaso' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}>Ինկասո</Link>
               </>
             ) : (
               <div className="h-full flex items-center border-b-2 border-white text-white font-black">

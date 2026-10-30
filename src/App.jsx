@@ -38,6 +38,7 @@ import EvocaInvest from './components/home/evocainvest';
 import Finansavorum from './components/home/finansavorum';
 import Faktoringayin from './components/home/faktoringayin';
 import Akreditiv from './components/home/akreditiv';
+import Inkaso from './components/home/inkaso';
 
 function HomePage() {
   return (
@@ -91,6 +92,7 @@ function App() {
         <Route path="/credit-history-and-score" element={<CreditHistoryAndScore />} />
         <Route path="/important-information" element={<ImportantInformation />} />
         <Route path="/creditive" element={<Akreditiv />} />
+        <Route path="/inkaso" element={<Inkaso />} />
       </Routes>
     </Router>
   );
