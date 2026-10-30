@@ -107,7 +107,7 @@ export default function Navbar() {
               Առևտրի ֆինանսավորում
             </Link>
             <Link to="/dijital" className={`transition ${isDijitalSub ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>
-              Դեպոզիտարիա
+              Դիջիթալ
             </Link>
             <span className="hover:text-[#6400dc] cursor-pointer transition">Այլ</span>
           </nav>
