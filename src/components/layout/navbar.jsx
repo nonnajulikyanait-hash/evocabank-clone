@@ -16,7 +16,8 @@ export default function Navbar() {
     location.pathname === '/business-securities' ||
     location.pathname === '/bonds' ||
     location.pathname === '/cda-services' ||
-    location.pathname === '/repo-reverse-repo';
+    location.pathname === '/repo-reverse-repo' ||
+    location.pathname === '/evocainvest-service';
 
   const isLeasingSub = location.pathname === '/leasing' || location.pathname === '/special-offer';
   const isAccountsSub = location.pathname === '/business-accounts' || location.pathname === '/business-unallocated-metal-accounts';
@@ -24,7 +25,8 @@ export default function Navbar() {
     location.pathname === '/business-securities' || 
     location.pathname === '/bonds' || 
     location.pathname === '/cda-services' ||
-    location.pathname === '/repo-reverse-repo';
+    location.pathname === '/repo-reverse-repo' ||
+    location.pathname === '/evocainvest-service';
 
   return (
     <header className="w-full bg-white border-b border-gray-100 sticky top-0 z-50">
@@ -177,9 +179,12 @@ export default function Navbar() {
                 >
                   Ռեպո/Հակադարձ ռեպո գործարքներ
                 </Link>
-                <span className="h-full flex items-center text-purple-200 hover:text-white transition whitespace-nowrap cursor-pointer">
+                <Link 
+                  to="/evocainvest-service" 
+                  className={`h-full flex items-center transition ${location.pathname === '/evocainvest-service' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}
+                >
                   EvocaINVEST
-                </span>
+                </Link>
               </>
             ) : (
               <div className="h-full flex items-center border-b-2 border-white text-white font-black">
