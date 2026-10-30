@@ -39,6 +39,7 @@ import Finansavorum from './components/home/finansavorum';
 import Faktoringayin from './components/home/faktoringayin';
 import Akreditiv from './components/home/akreditiv';
 import Inkaso from './components/home/inkaso';
+import Dijital from './components/home/dijital';
 
 function HomePage() {
   return (
@@ -93,6 +94,7 @@ function App() {
         <Route path="/important-information" element={<ImportantInformation />} />
         <Route path="/creditive" element={<Akreditiv />} />
         <Route path="/inkaso" element={<Inkaso />} />
+        <Route path="/dijital" element={<Dijital />} />
       </Routes>
     </Router>
   );
