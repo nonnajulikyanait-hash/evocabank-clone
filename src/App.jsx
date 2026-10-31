@@ -40,6 +40,7 @@ import Faktoringayin from './components/home/faktoringayin';
 import Akreditiv from './components/home/akreditiv';
 import Inkaso from './components/home/inkaso';
 import Dijital from './components/home/dijital';
+import Terminal from './components/home/terminal';
 
 function HomePage() {
   return (
@@ -95,6 +96,7 @@ function App() {
         <Route path="/creditive" element={<Akreditiv />} />
         <Route path="/inkaso" element={<Inkaso />} />
         <Route path="/dijital" element={<Dijital />} />
+        <Route path="/terminal" element={<Terminal />} />
       </Routes>
     </Router>
   );

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Navbar from '../layout/navbar';
 import EvocaOnlineMobile from './evocaonlinemobile';
 import Footer from './footer';
@@ -9,15 +10,15 @@ export default function Dijital() {
       <div>
         <Navbar />
 
-        {/* Դիջիթալ Բաժնի Sub-Bar Նավարկություն */}
+        {/* Sub-Bar */}
         <div className="bg-[#6400dc] text-white px-12 text-xs font-bold border-b border-white">
           <div className="container mx-auto pl-6 flex gap-8 items-center h-12 overflow-x-auto">
-            <span className="h-full flex items-center border-b-2 border-white text-white font-black whitespace-nowrap cursor-pointer">
+            <Link to="/dijital" className="h-full flex items-center border-b-2 border-white text-white font-black whitespace-nowrap">
               V-POS Տերմինալ
-            </span>
-            <span className="h-full flex items-center text-purple-200 hover:text-white transition whitespace-nowrap cursor-pointer">
+            </Link>
+            <Link to="/terminal" className="h-full flex items-center text-purple-200 hover:text-white transition whitespace-nowrap">
               POS Տերմինալ
-            </span>
+            </Link>
             <span className="h-full flex items-center text-purple-200 hover:text-white transition whitespace-nowrap cursor-pointer">
               Սակագներ
             </span>
@@ -56,41 +57,38 @@ export default function Dijital() {
           </div>
 
           <div className="flex gap-8 items-start mb-12">
-            {/* Սոց․ ցանցերի կոճակներ */}
             <div className="hidden md:flex flex-col gap-3 p-3 bg-gray-50 rounded-2xl border border-gray-100 text-gray-500 sticky top-28">
               <span className="cursor-pointer hover:text-[#6400dc] text-sm font-bold">f</span>
               <span className="cursor-pointer hover:text-[#6400dc] text-sm font-bold">in</span>
               <span className="cursor-pointer hover:text-[#6400dc] text-sm">📷</span>
             </div>
 
-            {/* Հիմնական բովանդակություն */}
             <div className="flex-1 space-y-6 text-xs md:text-sm text-gray-700 leading-relaxed">
               <p className="text-gray-800 leading-relaxed">
-                Evocabank-ը կապահովի Ձեր կայքում V-POS տերմինալի տեղադրումը։ Այն հնարավորություն կտա Ձեզ խուսափել լրացուցիչ ծրագրային ծախսերից, սերտիֆիկացումից և հետագա ծրագրային ապահովումից[cite: 11]։
+                Evocabank-ը կապահովի Ձեր կայքում V-POS տերմինալի տեղադրումը։ Այն հնարավորություն կտա Ձեզ խուսափել լրացուցիչ ծրագրային ծախսերից, սերտիֆիկացումից և հետագա ծրագրային ապահովումից։
               </p>
 
               <p className="text-gray-800 leading-relaxed">
-                Ձեր գնորդները կկարողանան գնումներ կատարել Ձեր կայքից ու վճարել դրանց համար իրենց միջազգային VISA, Mastercard և տեղական ArCa վճարային քարտերով[cite: 11]։
+                Ձեր գնորդները կկարողանան գնումներ կատարել Ձեր կայքից ու վճարել դրանց համար իրենց միջազգային VISA, Mastercard և տեղական ArCa վճարային քարտերով։
               </p>
 
               <p className="text-gray-800 font-medium">
-                V-POS-ը հասանելի կլինի ինչպես Ձեր կայքում, այնպես էլ՝ մոբայլ հավելվածում[cite: 11]։
+                V-POS-ը հասանելի կլինի ինչպես Ձեր կայքում, այնպես էլ՝ մոբայլ հավելվածում։
               </p>
 
               <h3 className="text-base font-bold text-[#6400dc] pt-2">
-                Իսկ ինչո՞ւ տեղադրել Evocabank-ի V-POS տերմինալ՝[cite: 11]
+                Իսկ ինչո՞ւ տեղադրել Evocabank-ի V-POS տերմինալ՝
               </h3>
 
               <ul className="list-disc pl-5 space-y-2 text-gray-700">
-                <li>Օնլայն վաճառքների շնորհիվ կաճեն Ձեր եկամուտները[cite: 11],</li>
-                <li>Evocabank-ը V-POS-ով կատարված վաճառքներից կգանձի նվազագույն միջնորդավճարներ՝ հատուկ Ձեր բիզնեսի համար[cite: 11],</li>
+                <li>Օնլայն վաճառքների շնորհիվ կաճեն Ձեր եկամուտները,</li>
+                <li>Evocabank-ը V-POS-ով կատարված վաճառքներից կգանձի նվազագույն միջնորդավճարներ՝ հատուկ Ձեր բիզնեսի համար,</li>
               </ul>
 
               <p className="font-bold text-gray-900 pt-2">
-                Սպասարկման կետի գրանցման համար անհրաժեշտ V-POS տերմինալների տեղադրման ստանդարտ սակագներն են՝[cite: 11]
+                Սպասարկման կետի գրանցման համար անհրաժեշտ V-POS տերմինալների տեղադրման ստանդարտ սակագներն են՝
               </p>
 
-              {/* Սակագների Աղյուսակ */}
               <div className="overflow-x-auto rounded-xl border border-gray-200 bg-white">
                 <table className="w-full text-left border-collapse text-xs md:text-sm">
                   <thead>
@@ -130,38 +128,36 @@ export default function Dijital() {
                 </table>
               </div>
 
-              {/* Ծանոթագրություններ */}
               <div className="space-y-1 text-xs text-gray-500 pt-2 border-b border-gray-100 pb-4">
-                <p><sup>[1]</sup> Կախված ոլորտի առանձնահատկություններից և շրջանառությունից՝ սակագները կարող են փոփոխվել[cite: 11]։</p>
-                <p><sup>[2]</sup> Ներառյալ կիրառելի բոլոր հարկերը[cite: 11]։</p>
-                <p><sup>[3]</sup> Ներառյալ կիրառելի բոլոր հարկերը[cite: 11]։</p>
+                <p><sup>[1]</sup> Կախված ոլորտի առանձնահատկություններից և շրջանառությունից՝ սակագները կարող են փոփոխվել։</p>
+                <p><sup>[2]</sup> Ներառյալ կիրառելի բոլոր հարկերը։</p>
+                <p><sup>[3]</sup> Ներառյալ կիրառելի բոլոր հարկերը։</p>
               </div>
 
               <ul className="list-disc pl-5 space-y-2 text-gray-700 pt-2">
-                <li>Վճարումներն անվտանգ են, գործում են 3D Secure Code անվտանգության համակարգերը[cite: 12],</li>
-                <li>Վճարման պարզ գործընթաց, Ձեր գնորդները վճարում կկատարեն 1 քայլով[cite: 12],</li>
-                <li>Անվճար տեխնիկական խորհրդատվություն և տեխնիկական սպասարկում Բանկի մասնագետների կողմից[cite: 12],</li>
-                <li>Անհատական մոտեցում Ձեր բիզնեսին ու կայքին[cite: 12]։</li>
+                <li>Վճարումներն անվտանգ են, գործում են 3D Secure Code անվտանգության համակարգերը,</li>
+                <li>Վճարման պարզ գործընթաց, Ձեր գնորդները վճարում կկատարեն 1 քայլով,</li>
+                <li>Անվճար տեխնիկական խորհրդատվություն և տեխնիկական սպասարկում Բանկի մասնագետների կողմից,</li>
+                <li>Անհատական մոտեցում Ձեր բիզնեսին ու կայքին։</li>
               </ul>
 
               <p className="text-gray-800 pt-2">
-                V-POS տերմինալ տեղադրելու համար լրացրեք <span className="text-[#6400dc] font-bold underline cursor-pointer">Տերմինալի տեղադրման հայտը</span> հիմա[cite: 12]։
+                V-POS տերմինալ տեղադրելու համար լրացրեք <span className="text-[#6400dc] font-bold underline cursor-pointer">Տերմինալի տեղադրման հայտը</span> հիմա։
               </p>
 
               <ol className="list-decimal pl-5 space-y-2 text-gray-700">
-                <li>Մեր մասնագետը 3 աշխատանքային օրում կապ կհաստատի Ձեզ հետ, կներկայացնի պայմանները, կպատասխանի Ձեր բոլոր հարցերին և կպատրաստի գործընթացի համար անհրաժեշտ բոլոր փաստաթղթերը[cite: 12]։</li>
-                <li>Պայմանագրի ստորագրումից հետո V-POS-ը կտեղադրվի Ձեր բիզնեսի կայքում[cite: 12]։</li>
+                <li>Մեր մասնագետը 3 աշխատանքային օրում կապ կհաստատի Ձեզ հետ, կներկայացնի պայմանները, կպատասխանի Ձեր բոլոր հարցերին և կպատրաստի գործընթացի համար անհրաժեշտ բոլոր փաստաթղթերը։</li>
+                <li>Պայմանագրի ստորագրումից հետո V-POS-ը կտեղադրվի Ձեր բիզնեսի կայքում։</li>
               </ol>
 
               <p className="font-bold text-neutral-900 text-base pt-2">
-                Կառուցեք Ձեր բիզնեսի թվային ապագան[cite: 12]։
+                Կառուցեք Ձեր բիզնեսի թվային ապագան։
               </p>
 
               <p className="text-gray-800 pt-4">
-                Evocabank-ում այսուհետ գործում են բիզնես վարկ և բիզնես օվերդրաֆտ POS տերմինալի շրջանառության հիման վրա[cite: 12]։
+                Evocabank-ում այսուհետ գործում են բիզնես վարկ և բիզնես օվերդրաֆտ POS տերմինալի շրջանառության հիման վրա։
               </p>
 
-              {/* Փոքր Նկար */}
               <div className="py-4">
                 <img 
                   src="https://www.evoca.am/file_manager/pos2-600x315.jpg" 
@@ -170,7 +166,6 @@ export default function Dijital() {
                 />
               </div>
 
-              {/* Բիզնես վարկ POS տերմինալի շրջանառության հիման վրա */}
               <div className="pt-4 space-y-4">
                 <h2 className="text-xl font-bold text-neutral-900">
                   Բիզնես վարկ POS տերմինալի շրջանառության հիման վրա
@@ -199,7 +194,6 @@ export default function Dijital() {
                 </p>
               </div>
 
-              {/* Բիզնես օվերդրաֆտ POS տերմինալի շրջանառության հիման վրա */}
               <div className="pt-6 space-y-4 border-t border-gray-100">
                 <h2 className="text-xl font-bold text-neutral-900">
                   Բիզնես օվերդրաֆտ POS տերմինալի շրջանառության հիման վրա

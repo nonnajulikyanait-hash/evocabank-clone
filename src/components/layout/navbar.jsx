@@ -22,7 +22,8 @@ export default function Navbar() {
     location.pathname === '/factoring' ||
     location.pathname === '/creditive' ||
     location.pathname === '/inkaso' ||
-    location.pathname === '/dijital';
+    location.pathname === '/dijital' ||
+    location.pathname === '/terminal';
 
   const isLeasingSub = location.pathname === '/leasing' || location.pathname === '/special-offer';
   const isAccountsSub = location.pathname === '/business-accounts' || location.pathname === '/business-unallocated-metal-accounts';
@@ -37,7 +38,7 @@ export default function Navbar() {
     location.pathname === '/factoring' || 
     location.pathname === '/creditive' ||
     location.pathname === '/inkaso';
-  const isDijitalSub = location.pathname === '/dijital';
+  const isDijitalSub = location.pathname === '/dijital' || location.pathname === '/terminal';
 
   return (
     <header className="w-full bg-white border-b border-gray-100 sticky top-0 z-50">
@@ -134,7 +135,7 @@ export default function Navbar() {
         </Link>
       </div>
 
-      {/* Sub-Bar (отрисовывается только если это НЕ страница Dijital) */}
+      {/* Sub-Bar */}
       {isBusinessSection && !isDijitalSub && (
         <div className="bg-[#6400dc] text-white px-12 text-xs font-bold border-b border-white">
           <div className="container mx-auto pl-6 flex gap-8 items-center h-12 overflow-x-auto">
