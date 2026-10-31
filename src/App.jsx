@@ -44,6 +44,7 @@ import Terminal from './components/home/terminal';
 import Sakagner from './components/home/sakagner';
 import Hayt from './components/home/hayt';
 import MobilePos from './components/home/mobilepos';
+import Ayl from './components/home/ayl';
 
 function HomePage() {
   return (
@@ -103,6 +104,7 @@ function App() {
         <Route path="/sakagner" element={<Sakagner />} />
         <Route path="/hayt" element={<Hayt />} />
         <Route path="/mobilepos" element={<MobilePos />} />
+        <Route path="/ayl" element={<Ayl />} />
       </Routes>
     </Router>
   );
