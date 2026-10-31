@@ -14,12 +14,12 @@ export default function Karucvacq() {
           <div className="container mx-auto flex gap-6 text-xs font-semibold overflow-x-auto whitespace-nowrap">
             <Link to="/mer-masin" className="text-purple-200 hover:text-white cursor-pointer">Ընդհանուր</Link>
             <span className="border-b-2 border-white pb-1 cursor-pointer font-black">Կառուցվածք</span>
-            <Link to="/mer-masin" className="text-purple-200 hover:text-white cursor-pointer">Բաժնետերեր</Link>
-            <Link to="/mer-masin" className="text-purple-200 hover:text-white cursor-pointer">Ղեկավարություն</Link>
-            <Link to="/mer-masin" className="text-purple-200 hover:text-white cursor-pointer">Գործընկերներ</Link>
-            <Link to="/mer-masin" className="text-purple-200 hover:text-white cursor-pointer">Մրցանակներ</Link>
-            <Link to="/mer-masin" className="text-purple-200 hover:text-white cursor-pointer">CSR</Link>
-            <Link to="/mer-masin" className="text-purple-200 hover:text-white cursor-pointer">Էվոկա ֆինանսական խումբ</Link>
+            <Link to="/mer-masin/bajneterer" className="text-purple-200 hover:text-white cursor-pointer">Բաժնետերեր</Link>
+            <Link to="/mer-masin/xekavarutyun" className="text-purple-200 hover:text-white cursor-pointer">Ղեկավարություն</Link>
+            <Link to="/mer-masin/gortsynkerner" className="text-purple-200 hover:text-white cursor-pointer">Գործընկերներ</Link>
+            <Link to="/mer-masin/mrcanakner" className="text-purple-200 hover:text-white cursor-pointer">Մրցանակներ</Link>
+            <Link to="/mer-masin/csr" className="text-purple-200 hover:text-white cursor-pointer">CSR</Link>
+            <Link to="/mer-masin/xumb" className="text-purple-200 hover:text-white cursor-pointer">Էվոկա ֆինանսական խումբ</Link>
           </div>
         </div>
 

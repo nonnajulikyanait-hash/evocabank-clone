@@ -46,9 +46,9 @@ export default function MermasinGortsynkerner() {
             <Link to="/mer-masin/bajneterer" className="text-purple-200 hover:text-white cursor-pointer">Բաժնետերեր</Link>
             <Link to="/mer-masin/xekavarutyun" className="text-purple-200 hover:text-white cursor-pointer">Ղեկավարություն</Link>
             <span className="border-b-2 border-white pb-1 cursor-pointer font-black">Գործընկերներ</span>
-            <Link to="/mer-masin" className="text-purple-200 hover:text-white cursor-pointer">Մրցանակներ</Link>
-            <Link to="/mer-masin" className="text-purple-200 hover:text-white cursor-pointer">CSR</Link>
-            <Link to="/mer-masin" className="text-purple-200 hover:text-white cursor-pointer">Էվոկա ֆինանսական խումբ</Link>
+            <Link to="/mer-masin/mrcanakner" className="text-purple-200 hover:text-white cursor-pointer">Մրցանակներ</Link>
+            <Link to="/mer-masin/csr" className="text-purple-200 hover:text-white cursor-pointer">CSR</Link>
+            <Link to="/mer-masin/xumb" className="text-purple-200 hover:text-white cursor-pointer">Էվոկա ֆինանսական խումբ</Link>
           </div>
         </div>
 

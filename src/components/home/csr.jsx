@@ -19,7 +19,7 @@ export default function CSR() {
             <Link to="/mer-masin/gortsynkerner" className="text-purple-200 hover:text-white cursor-pointer">Գործընկերներ</Link>
             <Link to="/mer-masin/mrcanakner" className="text-purple-200 hover:text-white cursor-pointer">Մրցանակներ</Link>
             <span className="border-b-2 border-white pb-1 cursor-pointer font-black">CSR</span>
-            <Link to="/mer-masin" className="text-purple-200 hover:text-white cursor-pointer">Էվոկա ֆինանսական խումբ</Link>
+            <Link to="/mer-masin/xumb" className="text-purple-200 hover:text-white cursor-pointer">Էվոկա ֆինանսական խումբ</Link>
           </div>
         </div>
 
