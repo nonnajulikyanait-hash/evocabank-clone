@@ -53,6 +53,7 @@ import Karucvacq from './components/home/karucvacq';
 import Bajneterer from './components/home/bajneterer';
 import Xekavarutyun from './components/home/xekavarutyun';
 import Mrcanakner from './components/home/mrcanakner';
+import CSR from './components/home/csr';
 
 function HomePage() {
   return (
@@ -121,6 +122,7 @@ function App() {
         <Route path="/mer-masin/xekavarutyun" element={<Xekavarutyun />} />
         <Route path="/mer-masin/gortsynkerner" element={<MermasinGortsynkerner />} />
         <Route path="/mer-masin/mrcanakner" element={<Mrcanakner />} />
+        <Route path="/mer-masin/csr" element={<CSR />} />
       </Routes>
     </Router>
   );
