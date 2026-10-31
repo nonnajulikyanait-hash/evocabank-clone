@@ -42,6 +42,7 @@ import Inkaso from './components/home/inkaso';
 import Dijital from './components/home/dijital';
 import Terminal from './components/home/terminal';
 import Sakagner from './components/home/sakagner';
+import Hayt from './components/home/hayt';
 
 function HomePage() {
   return (
@@ -99,6 +100,7 @@ function App() {
         <Route path="/dijital" element={<Dijital />} />
         <Route path="/terminal" element={<Terminal />} />
         <Route path="/sakagner" element={<Sakagner />} />
+        <Route path="/hayt" element={<Hayt />} />
       </Routes>
     </Router>
   );
