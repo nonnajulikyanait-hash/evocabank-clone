@@ -43,6 +43,7 @@ import Dijital from './components/home/dijital';
 import Terminal from './components/home/terminal';
 import Sakagner from './components/home/sakagner';
 import Hayt from './components/home/hayt';
+import MobilePos from './components/home/mobilepos';
 
 function HomePage() {
   return (
@@ -101,6 +102,7 @@ function App() {
         <Route path="/terminal" element={<Terminal />} />
         <Route path="/sakagner" element={<Sakagner />} />
         <Route path="/hayt" element={<Hayt />} />
+        <Route path="/mobilepos" element={<MobilePos />} />
       </Routes>
     </Router>
   );

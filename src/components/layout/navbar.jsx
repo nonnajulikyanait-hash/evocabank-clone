@@ -25,7 +25,8 @@ export default function Navbar() {
     location.pathname === '/dijital' ||
     location.pathname === '/terminal' ||
     location.pathname === '/sakagner' ||
-    location.pathname === '/hayt';
+    location.pathname === '/hayt' ||
+    location.pathname === '/mobilepos';
 
   const isLeasingSub = location.pathname === '/leasing' || location.pathname === '/special-offer';
   const isAccountsSub = location.pathname === '/business-accounts' || location.pathname === '/business-unallocated-metal-accounts';
@@ -44,7 +45,8 @@ export default function Navbar() {
     location.pathname === '/dijital' || 
     location.pathname === '/terminal' || 
     location.pathname === '/sakagner' ||
-    location.pathname === '/hayt';
+    location.pathname === '/hayt' ||
+    location.pathname === '/mobilepos';
 
   return (
     <header className="w-full bg-white border-b border-gray-100 sticky top-0 z-50">
@@ -151,7 +153,7 @@ export default function Navbar() {
                 <Link to="/terminal" className={`h-full flex items-center transition whitespace-nowrap ${location.pathname === '/terminal' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}>POS Տերմինալ</Link>
                 <Link to="/sakagner" className={`h-full flex items-center transition whitespace-nowrap ${location.pathname === '/sakagner' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}>Սակագներ</Link>
                 <Link to="/hayt" className={`h-full flex items-center transition whitespace-nowrap ${location.pathname === '/hayt' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}>Տերմինալի տեղադրման հայտ</Link>
-                <span className="h-full flex items-center text-purple-200 hover:text-white transition whitespace-nowrap cursor-pointer">Evoca Mobile POS' mPOS</span>
+                <Link to="/mobilepos" className={`h-full flex items-center transition whitespace-nowrap ${location.pathname === '/mobilepos' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}>Evoca Mobile POS' mPOS</Link>
               </>
             ) : isLeasingSub ? (
               <>
