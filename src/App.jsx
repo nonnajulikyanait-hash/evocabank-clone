@@ -50,6 +50,7 @@ import AkntartayinVcharumner from './components/home/akntartayinvcharumner';
 import MerMasin from './components/home/mermasin';
 import Karucvacq from './components/home/karucvacq';
 import Bajneterer from './components/home/bajneterer';
+import Xekavarutyun from './components/home/xekavarutyun';
 
 function HomePage() {
   return (
@@ -115,6 +116,7 @@ function App() {
         <Route path="/mer-masin" element={<MerMasin />} />
         <Route path="/mer-masin/karucvacq" element={<Karucvacq />} />
         <Route path="/mer-masin/bajneterer" element={<Bajneterer />} />
+        <Route path="/mer-masin/xekavarutyun" element={<Xekavarutyun />} />
       </Routes>
     </Router>
   );
