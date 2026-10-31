@@ -8,6 +8,7 @@ import CardsSliderSection from './components/home/cardslidersection';
 import CalculatorSection from './components/home/calculatorsection';
 import EvocaOnlineMobile from './components/home/evocaonlinemobile';
 import Gortsynkerner from './components/home/gortsynkerner';
+import MermasinGortsynkerner from './components/home/mermasingortsynkerner';
 import CurrencyAndAddresses from './components/home/currencyandaddresses';
 import Hachaxord from './components/home/hachaxord';
 import Footer from './components/home/footer';
@@ -117,6 +118,7 @@ function App() {
         <Route path="/mer-masin/karucvacq" element={<Karucvacq />} />
         <Route path="/mer-masin/bajneterer" element={<Bajneterer />} />
         <Route path="/mer-masin/xekavarutyun" element={<Xekavarutyun />} />
+        <Route path="/mer-masin/gortsynkerner" element={<MermasinGortsynkerner />} />
       </Routes>
     </Router>
   );

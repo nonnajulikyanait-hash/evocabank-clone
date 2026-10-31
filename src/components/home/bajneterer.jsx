@@ -22,7 +22,7 @@ export default function Bajneterer() {
             <Link to="/mer-masin/karucvacq" className="text-purple-200 hover:text-white cursor-pointer">Կառուցվածք</Link>
             <span className="border-b-2 border-white pb-1 cursor-pointer font-black">Բաժնետերեր</span>
             <Link to="/mer-masin/xekavarutyun" className="text-purple-200 hover:text-white cursor-pointer">Ղեկավարություն</Link>
-            <Link to="/mer-masin" className="text-purple-200 hover:text-white cursor-pointer">Գործընկերներ</Link>
+            <Link to="/mer-masin/gortsynkerner" className="text-purple-200 hover:text-white cursor-pointer">Գործընկերներ</Link>
             <Link to="/mer-masin" className="text-purple-200 hover:text-white cursor-pointer">Մրցանակներ</Link>
             <Link to="/mer-masin" className="text-purple-200 hover:text-white cursor-pointer">CSR</Link>
             <Link to="/mer-masin" className="text-purple-200 hover:text-white cursor-pointer">Էվոկա ֆինանսական խումբ</Link>
