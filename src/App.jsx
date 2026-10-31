@@ -54,6 +54,7 @@ import Bajneterer from './components/home/bajneterer';
 import Xekavarutyun from './components/home/xekavarutyun';
 import Mrcanakner from './components/home/mrcanakner';
 import CSR from './components/home/csr';
+import Xumb from './components/home/xumb'; // Ավելացված է Xumb-ի իմպորտը
 
 function HomePage() {
   return (
@@ -123,6 +124,7 @@ function App() {
         <Route path="/mer-masin/gortsynkerner" element={<MermasinGortsynkerner />} />
         <Route path="/mer-masin/mrcanakner" element={<Mrcanakner />} />
         <Route path="/mer-masin/csr" element={<CSR />} />
+        <Route path="/mer-masin/xumb" element={<Xumb />} /> {/* Ավելացված է Xumb-ի Route-ը */}
       </Routes>
     </Router>
   );
