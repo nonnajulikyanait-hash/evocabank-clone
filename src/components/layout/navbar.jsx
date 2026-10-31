@@ -5,30 +5,34 @@ export default function Navbar() {
   const location = useLocation();
   const navigate = useNavigate();
 
+  const isMerMasinPage = location.pathname.startsWith('/mer-masin');
+
   const isBusinessSection = 
-    location.pathname.startsWith('/business') || 
-    location.pathname === '/biznesvarker' || 
-    location.pathname === '/leasing' || 
-    location.pathname === '/special-offer' ||
-    location.pathname === '/business-accounts' ||
-    location.pathname === '/business-unallocated-metal-accounts' ||
-    location.pathname === '/business-deposits' ||
-    location.pathname === '/business-securities' ||
-    location.pathname === '/bonds' ||
-    location.pathname === '/cda-services' ||
-    location.pathname === '/repo-reverse-repo' ||
-    location.pathname === '/evocainvest-service' ||
-    location.pathname === '/trade-finance' ||
-    location.pathname === '/factoring' ||
-    location.pathname === '/creditive' ||
-    location.pathname === '/inkaso' ||
-    location.pathname === '/dijital' ||
-    location.pathname === '/terminal' ||
-    location.pathname === '/sakagner' ||
-    location.pathname === '/hayt' ||
-    location.pathname === '/mobilepos' ||
-    location.pathname === '/ayl' ||
-    location.pathname === '/aylpoxancumner';
+    !isMerMasinPage && (
+      location.pathname.startsWith('/business') || 
+      location.pathname === '/biznesvarker' || 
+      location.pathname === '/leasing' || 
+      location.pathname === '/special-offer' ||
+      location.pathname === '/business-accounts' ||
+      location.pathname === '/business-unallocated-metal-accounts' ||
+      location.pathname === '/business-deposits' ||
+      location.pathname === '/business-securities' ||
+      location.pathname === '/bonds' ||
+      location.pathname === '/cda-services' ||
+      location.pathname === '/repo-reverse-repo' ||
+      location.pathname === '/evocainvest-service' ||
+      location.pathname === '/trade-finance' ||
+      location.pathname === '/factoring' ||
+      location.pathname === '/creditive' ||
+      location.pathname === '/inkaso' ||
+      location.pathname === '/dijital' ||
+      location.pathname === '/terminal' ||
+      location.pathname === '/sakagner' ||
+      location.pathname === '/hayt' ||
+      location.pathname === '/mobilepos' ||
+      location.pathname === '/ayl' ||
+      location.pathname === '/aylpoxancumner'
+    );
 
   const isLeasingSub = location.pathname === '/leasing' || location.pathname === '/special-offer';
   const isAccountsSub = location.pathname === '/business-accounts' || location.pathname === '/business-unallocated-metal-accounts';
@@ -59,7 +63,7 @@ export default function Navbar() {
           <div className="flex gap-5 font-normal">
             <Link 
               to="/" 
-              className={`pb-1 cursor-pointer transition ${!isBusinessSection && !location.pathname.startsWith('/mer-masin') ? 'text-[#6400dc] border-b-2 border-[#6400dc] font-semibold' : 'hover:text-[#6400dc]'}`}
+              className={`pb-1 cursor-pointer transition ${!isBusinessSection && !isMerMasinPage ? 'text-[#6400dc] border-b-2 border-[#6400dc] font-semibold' : 'hover:text-[#6400dc]'}`}
             >
               Անհատ
             </Link>
@@ -82,7 +86,7 @@ export default function Navbar() {
             
             <Link 
               to="/mer-masin" 
-              className={`transition ${location.pathname.startsWith('/mer-masin') ? 'text-[#6400dc] font-semibold border-b-2 border-[#6400dc]' : 'hover:text-[#6400dc]'}`}
+              className={`transition ${isMerMasinPage ? 'text-[#6400dc] font-semibold border-b-2 border-[#6400dc]' : 'hover:text-[#6400dc]'}`}
             >
               Մեր մասին
             </Link>
@@ -112,7 +116,15 @@ export default function Navbar() {
           <span className="w-2 h-2 bg-[#6400dc] rounded-full"></span>
         </Link>
 
-        {isBusinessSection ? (
+        {isMerMasinPage ? (
+          /* "Մեր մասին" էջերի համար նախատեսված վերնագրի մենյու (Evoca-ի մասին, Սակագներ, Հաշվետվություններ, Հայտարարություններ) */
+          <nav className="hidden lg:flex items-center gap-7 text-[13px] font-bold text-gray-800">
+            <Link to="/mer-masin" className="text-[#6400dc] transition">Evoca-ի մասին</Link>
+            <span className="hover:text-[#6400dc] cursor-pointer transition">Սակագներ</span>
+            <span className="hover:text-[#6400dc] cursor-pointer transition">Հաշվետվություններ</span>
+            <span className="hover:text-[#6400dc] cursor-pointer transition">Հայտարարություններ</span>
+          </nav>
+        ) : isBusinessSection ? (
           <nav className="hidden lg:flex items-center gap-7 text-[13px] font-bold text-gray-800">
             <Link to="/business-loans" className={`transition ${location.pathname === '/business-loans' ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>
               Վարկեր
