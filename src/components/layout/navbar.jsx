@@ -23,7 +23,8 @@ export default function Navbar() {
     location.pathname === '/creditive' ||
     location.pathname === '/inkaso' ||
     location.pathname === '/dijital' ||
-    location.pathname === '/terminal';
+    location.pathname === '/terminal' ||
+    location.pathname === '/sakagner';
 
   const isLeasingSub = location.pathname === '/leasing' || location.pathname === '/special-offer';
   const isAccountsSub = location.pathname === '/business-accounts' || location.pathname === '/business-unallocated-metal-accounts';
@@ -38,7 +39,10 @@ export default function Navbar() {
     location.pathname === '/factoring' || 
     location.pathname === '/creditive' ||
     location.pathname === '/inkaso';
-  const isDijitalSub = location.pathname === '/dijital' || location.pathname === '/terminal';
+  const isDijitalSub = 
+    location.pathname === '/dijital' || 
+    location.pathname === '/terminal' || 
+    location.pathname === '/sakagner';
 
   return (
     <header className="w-full bg-white border-b border-gray-100 sticky top-0 z-50">

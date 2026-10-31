@@ -41,6 +41,7 @@ import Akreditiv from './components/home/akreditiv';
 import Inkaso from './components/home/inkaso';
 import Dijital from './components/home/dijital';
 import Terminal from './components/home/terminal';
+import Sakagner from './components/home/sakagner';
 
 function HomePage() {
   return (
@@ -97,6 +98,7 @@ function App() {
         <Route path="/inkaso" element={<Inkaso />} />
         <Route path="/dijital" element={<Dijital />} />
         <Route path="/terminal" element={<Terminal />} />
+        <Route path="/sakagner" element={<Sakagner />} />
       </Routes>
     </Router>
   );

@@ -19,9 +19,9 @@ export default function Dijital() {
             <Link to="/terminal" className="h-full flex items-center text-purple-200 hover:text-white transition whitespace-nowrap">
               POS Տերմինալ
             </Link>
-            <span className="h-full flex items-center text-purple-200 hover:text-white transition whitespace-nowrap cursor-pointer">
+            <Link to="/sakagner" className="h-full flex items-center text-purple-200 hover:text-white transition whitespace-nowrap">
               Սակագներ
-            </span>
+            </Link>
             <span className="h-full flex items-center text-purple-200 hover:text-white transition whitespace-nowrap cursor-pointer">
               Տերմինալի տեղադրման հայտ
             </span>
