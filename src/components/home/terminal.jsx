@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Navbar from '../layout/navbar';
 import EvocaOnlineMobile from './evocaonlinemobile';
 import Footer from './footer';
@@ -9,27 +8,6 @@ export default function Terminal() {
     <div className="min-h-screen bg-white font-sans text-neutral-800 flex flex-col justify-between">
       <div>
         <Navbar />
-
-        {/* Դիջիթալ Բաժնի Sub-Bar Նավարկություն */}
-        <div className="bg-[#6400dc] text-white px-12 text-xs font-bold border-b border-white">
-          <div className="container mx-auto pl-6 flex gap-8 items-center h-12 overflow-x-auto">
-            <Link to="/dijital" className="h-full flex items-center text-purple-200 hover:text-white transition whitespace-nowrap">
-              V-POS Տերմինալ
-            </Link>
-            <Link to="/terminal" className="h-full flex items-center border-b-2 border-white text-white font-black whitespace-nowrap">
-              POS Տերմինալ
-            </Link>
-            <span className="h-full flex items-center text-purple-200 hover:text-white transition whitespace-nowrap cursor-pointer">
-              Սակագներ
-            </span>
-            <span className="h-full flex items-center text-purple-200 hover:text-white transition whitespace-nowrap cursor-pointer">
-              Տերմինալի տեղադրման հայտ
-            </span>
-            <span className="h-full flex items-center text-purple-200 hover:text-white transition whitespace-nowrap cursor-pointer">
-              Evoca Mobile POS' mPOS
-            </span>
-          </div>
-        </div>
 
         <main className="max-w-6xl mx-auto px-4 py-8 text-left">
           {/* Breadcrumbs */}
@@ -44,7 +22,7 @@ export default function Terminal() {
                 POS Տերմինալ
               </h1>
               <p className="text-xs md:text-sm text-gray-700 leading-relaxed">
-                <strong>POS-ը</strong> (point of sale) վճարային համակարգ է, որն օգտագործվում է անկանխիկ վճարումներ ընդունելու համար։ Արագ և տեղում վճարումներ կատարելն այսօր կարևոր նախապայման է Ձեր գնորդների համար[cite: 12]։
+                <strong>POS-ը</strong> (point of sale) վճարային համակարգ է, որն օգտագործվում է անկանխիկ վճարումներ ընդունելու համար։ Արագ և տեղում վճարումներ կատարելն այսօր կարևոր նախապայման է Ձեր գնորդների համար։
               </p>
             </div>
             <div className="flex justify-center">
@@ -57,41 +35,41 @@ export default function Terminal() {
           </div>
 
           <div className="flex gap-8 items-start mb-12">
-            {/* Սոց․ ցանցերի կոճակներ */}
+            {/* Соц. сети */}
             <div className="hidden md:flex flex-col gap-3 p-3 bg-gray-50 rounded-2xl border border-gray-100 text-gray-500 sticky top-28">
               <span className="cursor-pointer hover:text-[#6400dc] text-sm font-bold">f</span>
               <span className="cursor-pointer hover:text-[#6400dc] text-sm font-bold">in</span>
               <span className="cursor-pointer hover:text-[#6400dc] text-sm">📷</span>
             </div>
 
-            {/* Հիմնական բովանդակություն */}
+            {/* Основной контент */}
             <div className="flex-1 space-y-6 text-xs md:text-sm text-gray-700 leading-relaxed">
               <p className="text-gray-800 leading-relaxed">
-                Ձեր գնորդները կկարողանան գնումներ կատարել իրենց միջազգային VISA, Mastercard և տեղական ArCa վճարային քարտերով[cite: 13]։
+                Ձեր գնորդները կկարողանան գնումներ կատարել իրենց միջազգային VISA, Mastercard և տեղական ArCa վճարային քարտերով։
               </p>
 
               <p className="text-gray-800 font-medium">
-                POS-ը հասանելի կլինի ինչպես Ձեր կայքում, այնպես էլ՝ մոբայլ հավելվածում[cite: 13]։
+                POS-ը հասանելի կլինի ինչպես Ձեր կայքում, այնպես էլ՝ մոբայլ հավելվածում։
               </p>
 
               <h3 className="text-base font-bold text-[#6400dc] pt-2">
-                Իսկ ինչո՞ւ տեղադրել Evocabank-ի POS տերմինալ՝[cite: 13]
+                Իսկ ինչո՞ւ տեղադրել Evocabank-ի POS տերմինալ՝
               </h3>
 
               <ul className="list-disc pl-5 space-y-2 text-gray-700">
                 <li>
-                  Evocabank-ը POS-ով կատարված վաճառքներից կգանձի <strong>նվազագույն միջնորդավճարներ</strong>՝ հատուկ Ձեր բիզնեսի համար[cite: 13],
+                  Evocabank-ը POS-ով կատարված վաճառքներից կգանձի <strong>նվազագույն միջնորդավճարներ</strong>՝ հատուկ Ձեր բիզնեսի համար,
                 </li>
               </ul>
 
               <p className="font-bold text-gray-900 pt-2">
-                Սպասարկման կետի գրանցման համար անհրաժեշտ POS, ՀԴՄ-POS, mPOS, VENDISTA տերմինալների տեղադրման <span className="text-[#6400dc] underline cursor-pointer">ստանդարտ սակագներ ու պայմաններ</span>[cite: 13]։
+                Սպասարկման կետի գրանցման համար անհրաժեշտ POS, ՀԴՄ-POS, mPOS, VENDISTA տերմինալների տեղադրման <span className="text-[#6400dc] underline cursor-pointer">ստանդարտ սակագներ ու պայմաններ</span>։
               </p>
 
-              {/* Աղյուսակ 1 */}
+              {/* Таблица 1 */}
               <div className="space-y-3 pt-2">
                 <p className="font-semibold text-gray-800">
-                  1. Եթե վաճառակետի գործունեության տեսակը չի համընկնում <span className="text-[#6400dc] font-bold underline cursor-pointer">ԿԲ կողմից ներկայացված տեսակի կոդին</span> կամ գերազանցում է տարեկան 150.000.000 ՀՀ դրամի իրացման շրջանառության շեմը `[cite: 13]
+                  1. Եթե վաճառակետի գործունեության տեսակը չի համընկնում <span className="text-[#6400dc] font-bold underline cursor-pointer">ԿԲ կողմից ներկայացված տեսակի կոդին</span> կամ գերազանցում է տարեկան 150.000.000 ՀՀ դրամի իրացման շրջանառության շեմը `
                 </p>
 
                 <div className="overflow-x-auto rounded-xl border border-gray-200 bg-white">
@@ -129,14 +107,14 @@ export default function Terminal() {
                   </table>
                 </div>
                 <p className="text-xs text-gray-500 italic">
-                  mPOS և VENDISTA տերմինալների մասով ամսական միջնորդավճարների նվազագույն չափ չի սահմանվում[cite: 13]:
+                  mPOS և VENDISTA տերմինալների մասով ամսական միջնորդավճարների նվազագույն չափ չի սահմանվում:
                 </p>
               </div>
 
-              {/* Աղյուսակ 2 */}
+              {/* Таблица 2 */}
               <div className="space-y-3 pt-6">
                 <p className="font-semibold text-gray-800">
-                  2. Եթե վաճառակետի գործունեության տեսակը համընկնում է <span className="text-[#6400dc] font-bold underline cursor-pointer">ԿԲ կողմից ներկայացված տեսակի կոդին</span> և չի գերազանցում տարեկան 150.000.000 ՀՀ դրամի իրացման շրջանառության շեմը՝[cite: 14]
+                  2. Եթե վաճառակետի գործունեության տեսակը համընկնում է <span className="text-[#6400dc] font-bold underline cursor-pointer">ԿԲ կողմից ներկայացված տեսակի կոդին</span> և չի գերազանցում տարեկան 150.000.000 ՀՀ դրամի իրացման շրջանառության շեմը՝
                 </p>
 
                 <div className="overflow-x-auto rounded-xl border border-gray-200 bg-white">
@@ -176,26 +154,26 @@ export default function Terminal() {
                   </table>
                 </div>
                 <p className="text-xs text-gray-500 italic">
-                  mPOS և VENDISTA տերմինալների մասով ամսական միջնորդավճարների նվազագույն չափ չի սահմանվում[cite: 14]:
+                  mPOS և VENDISTA տերմինալների մասով ամսական միջնորդավճարների նվազագույն չափ չի սահմանվում:
                 </p>
               </div>
 
               <ul className="list-disc pl-5 space-y-2 text-gray-700 pt-4">
-                <li>Վճարման պարզ գործընթաց, Ձեր գնորդները վճարում կկատարեն 1 քայլով[cite: 14],</li>
-                <li>Անվճար տեխնիկական խորհրդատվություն և տեխնիկական սպասարկում Բանկի մասնագետների կողմից[cite: 14],</li>
-                <li>Անհատական մոտեցում Ձեր բիզնեսին ու կայքին[cite: 14]։</li>
+                <li>Վճարման պարզ գործընթաց, Ձեր գնորդները վճարում կկատարեն 1 քայլով,</li>
+                <li>Անվճար տեխնիկական խորհրդատվություն և տեխնիկական սպասարկում Բանկի մասնագետների կողմից,</li>
+                <li>Անհատական մոտեցում Ձեր բիզնեսին ու կայքին։</li>
               </ul>
 
               <p className="text-gray-800 pt-2">
-                1. POS տերմինալ տեղադրելու համար լրացրեք հայտը հենց հիմա[cite: 14]։
+                1. POS տերմինալ տեղադրելու համար լրացրեք հայտը հենց հիմա։
               </p>
 
               <p className="text-gray-700 pl-4">
-                Մեր մասնագետը 1 աշխատանքային օրում կապ կհաստատի Ձեզ հետ, կներկայացնի պայմանները, կպատասխանի Ձեր բոլոր հարցերին և կպատրաստի գործընթացի համար անհրաժեշտ բոլոր փաստաթղթերը[cite: 14]։
+                Մեր մասնագետը 1 աշխատանքային օրում կապ կհաստատի Ձեզ հետ, կներկայացնի պայմանները, կպատասխանի Ձեր բոլոր հարցերին և կպատրաստի գործընթացի համար անհրաժեշտ բոլոր փաստաթղթերը։
               </p>
 
               <p className="font-bold text-neutral-900 text-base pt-2">
-                Կառուցեք Ձեր ապագան Evocabank-ի հետ[cite: 14]։
+                Կառուցեք Ձեր ապագան Evocabank-ի հետ։
               </p>
 
             </div>
