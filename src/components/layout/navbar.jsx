@@ -80,7 +80,13 @@ export default function Navbar() {
               Ակնթարթային վճարումներ
             </Link>
             
-            <span className="hover:text-[#6400dc] cursor-pointer transition">Մեր մասին</span>
+            <Link 
+              to="/mer-masin" 
+              className={`transition ${location.pathname === '/mer-masin' ? 'text-[#6400dc] font-semibold' : 'hover:text-[#6400dc]'}`}
+            >
+              Մեր մասին
+            </Link>
+
             <span className="hover:text-[#6400dc] cursor-pointer transition">Նորություններ</span>
             <span className="hover:text-[#6400dc] cursor-pointer transition">Բլոգ</span>
             <span className="hover:text-[#6400dc] cursor-pointer transition">Կարիերա</span>

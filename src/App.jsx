@@ -47,6 +47,7 @@ import MobilePos from './components/home/mobilepos';
 import Ayl from './components/home/ayl';
 import AylPoxancumner from './components/home/aylpoxancumner';
 import AkntartayinVcharumner from './components/home/akntartayinvcharumner';
+import MerMasin from './components/home/mermasin';
 
 function HomePage() {
   return (
@@ -109,6 +110,7 @@ function App() {
         <Route path="/ayl" element={<Ayl />} />
         <Route path="/aylpoxancumner" element={<AylPoxancumner />} />
         <Route path="/akntartayinvcharumner" element={<AkntartayinVcharumner />} />
+        <Route path="/mer-masin" element={<MerMasin />} />
       </Routes>
     </Router>
   );
