@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Navbar from '../layout/navbar';
 import EvocaOnlineMobile from './evocaonlinemobile';
 import Footer from './footer';
@@ -9,27 +8,6 @@ export default function Sakagner() {
     <div className="min-h-screen bg-white font-sans text-neutral-800 flex flex-col justify-between">
       <div>
         <Navbar />
-
-        {/* Դիջիթալ Բաժնի Sub-Bar Նավարկություն */}
-        <div className="bg-[#6400dc] text-white px-12 text-xs font-bold border-b border-white">
-          <div className="container mx-auto pl-6 flex gap-8 items-center h-12 overflow-x-auto">
-            <Link to="/dijital" className="h-full flex items-center text-purple-200 hover:text-white transition whitespace-nowrap">
-              V-POS Տերմինալ
-            </Link>
-            <Link to="/terminal" className="h-full flex items-center text-purple-200 hover:text-white transition whitespace-nowrap">
-              POS Տերմինալ
-            </Link>
-            <Link to="/sakagner" className="h-full flex items-center border-b-2 border-white text-white font-black whitespace-nowrap">
-              Սակագներ
-            </Link>
-            <span className="h-full flex items-center text-purple-200 hover:text-white transition whitespace-nowrap cursor-pointer">
-              Տերմինալի տեղադրման հայտ
-            </span>
-            <span className="h-full flex items-center text-purple-200 hover:text-white transition whitespace-nowrap cursor-pointer">
-              Evoca Mobile POS' mPOS
-            </span>
-          </div>
-        </div>
 
         <main className="max-w-6xl mx-auto px-4 py-8 text-left">
           {/* Breadcrumbs */}
@@ -54,10 +32,10 @@ export default function Sakagner() {
               
               <div className="space-y-4">
                 <p className="text-gray-800 leading-relaxed">
-                  Տերմինալը փողոցում, ինչպես նաև առևտրի կետերում վճարումների համար նախատեսված սարք է։ Տերմինալների միջոցով Դուք նաև կարող եք կատարել բանկային ծառայություններ՝ առանց բանկ այցելելու՝ հեշտ և հարմար տարբերակով[cite: 13]։
+                  Տերմինալը փողոցում, ինչպես նաև առևտրի կետերում վճարումների համար նախատեսված սարք է։ Տերմինալների միջոցով Դուք նաև կարող եք կատարել բանկային ծառայություններ՝ առանց բանկ այցելելու՝ հեշտ և հարմար տարբերակով[cite: 13].
                 </p>
                 <p className="text-gray-800 leading-relaxed">
-                  Եթե Ձեր տարածքում չկա Evocabank-ի մասնաճյուղ, Դուք կարող եք կատարել Ձեր վճարումները հետևյալ տերմինալների միջոցով․[cite: 13]
+                  Եթե Ձեր տարածքում չկա Evocabank-ի մասնաճյուղ, Դուք կարող եք կատարել Ձեր վճարումները հետևյալ տերմինալների միջոցով.[cite: 13]
                 </p>
               </div>
 
@@ -72,7 +50,7 @@ export default function Sakagner() {
                   />
                 </div>
                 <p className="text-gray-800 leading-relaxed">
-                  Telcell վճարային տերմինալների միջոցով Դուք կարող եք 24/7 ռեժիմով կատարել ընթացիկ և քարտային հաշիվների համալրում և վարկի մարումներ[cite: 13, 14]։
+                  Telcell վճարային տերմինալների միջոցով Դուք կարող եք 24/7 ռեժիմով կատարել ընթացիկ և քարտային հաշիվների համալրում և վարկի մարումներ[cite: 13, 14].
                 </p>
                 <p className="text-gray-800 leading-relaxed">
                   Telcell համակարգը հասանելի է ինչպես Հայաստանի Հանրապետության տարածքում, այնպես էլ Արցախի Հանրապետությունում: Տերմինալների ցանկին և հասցեներին կարող եք ծանոթանալ <span className="text-[#6400dc] font-bold underline cursor-pointer">այստեղ</span>[cite: 14]:
@@ -115,7 +93,7 @@ export default function Sakagner() {
                   />
                 </div>
                 <p className="text-gray-800 leading-relaxed">
-                  uPay-ի միջոցով վճարումներ կարող եք կատարել՝ ինչպես uPay հավելվածով, այնպես էլ այցելելով Ucom սպասարկման կենտրոններ[cite: 14]։
+                  uPay-ի միջոցով վճարումներ կարող եք կատարել՝ ինչպես uPay հավելվածով, այնպես էլ այցելելով Ucom սպասարկման կենտրոններ[cite: 14].
                 </p>
                 <p className="text-gray-800 leading-relaxed font-semibold">
                   uPay-ում վճարում կատարելիս գործում են հետևյալ միջնորդավճարները՝[cite: 14]
@@ -151,7 +129,7 @@ export default function Sakagner() {
                   />
                 </div>
                 <p className="text-gray-800 leading-relaxed">
-                  Տերմինալների ցանկին և հասցեներին կարող եք ծանոթանալ <span className="text-[#6400dc] font-bold underline cursor-pointer">այստեղ</span>[cite: 15]:
+                  Տերմինալների ցանկին և հասցեներին կարող եք ծանոթանալ <span className="text-[#6400dc] font-bold underline cursor-pointer">այստեղ</span>:
                 </p>
                 <p className="text-gray-800 leading-relaxed font-semibold">
                   ՄոբիԴրամի տերմինալներով Evocabank-ի վճարում կատարելիս գործում են հետևյալ միջնորդավճարները՝[cite: 15]
@@ -194,7 +172,7 @@ export default function Sakagner() {
                   />
                 </div>
                 <p className="text-gray-800 leading-relaxed font-semibold">
-                  Idram հավելվածով կարող եք կատարել գործարքներ հետևյալ միջնորդավճարներով՝[cite: 16]
+                  Idram հավելվածով կարող եք կատարել գործարքներ հետևյալ միջնորդավճարներով՝
                 </p>
 
                 <div className="overflow-x-auto rounded-xl border border-gray-200 bg-white">
@@ -229,10 +207,10 @@ export default function Sakagner() {
                   />
                 </div>
                 <p className="text-gray-800 leading-relaxed">
-                  2,000-ից ավել վճարային տերմինալ, որոնց ցանկին և հասցեներին կարող եք ծանոթանալ <span className="text-[#6400dc] font-bold underline cursor-pointer">այստեղ</span>[cite: 16]:
+                  2,000-ից ավել վճարային տերմինալ, որոնց ցանկին և հասցեներին կարող եք ծանոթանալ <span className="text-[#6400dc] font-bold underline cursor-pointer">այստեղ</span>:
                 </p>
                 <p className="text-gray-800 leading-relaxed">
-                  Evocabank-ի մասնաճյուղերում տեղադրված EasyPay տերմինալներից օգտվելիս գործում է <strong>0% միջնորդավճար</strong>։ Այլ վայրերում տեղադրված EasyPay տերմինալներով Evocabank-ի վճարում կատարելիս գործում են հետևյալ միջնորդավճարները՝[cite: 16]
+                  Evocabank-ի մասնաճյուղերում տեղադրված EasyPay տերմինալներից օգտվելիս գործում է <strong>0% միջնորդավճար</strong>։ Այլ վայրերում տեղադրված EasyPay տերմինալներով Evocabank-ի վճարում կատարելիս գործում են հետևյալ միջնորդավճարները՝
                 </p>
 
                 <div className="overflow-x-auto rounded-xl border border-gray-200 bg-white">
