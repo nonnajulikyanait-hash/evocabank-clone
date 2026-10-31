@@ -27,7 +27,8 @@ export default function Navbar() {
     location.pathname === '/sakagner' ||
     location.pathname === '/hayt' ||
     location.pathname === '/mobilepos' ||
-    location.pathname === '/ayl';
+    location.pathname === '/ayl' ||
+    location.pathname === '/aylpoxancumner';
 
   const isLeasingSub = location.pathname === '/leasing' || location.pathname === '/special-offer';
   const isAccountsSub = location.pathname === '/business-accounts' || location.pathname === '/business-unallocated-metal-accounts';
@@ -48,7 +49,7 @@ export default function Navbar() {
     location.pathname === '/sakagner' ||
     location.pathname === '/hayt' ||
     location.pathname === '/mobilepos';
-  const isAylSub = location.pathname === '/ayl';
+  const isAylSub = location.pathname === '/ayl' || location.pathname === '/aylpoxancumner';
 
   return (
     <header className="w-full bg-white border-b border-gray-100 sticky top-0 z-50">
@@ -162,7 +163,7 @@ export default function Navbar() {
             ) : isAylSub ? (
               <>
                 <Link to="/ayl" className={`h-full flex items-center transition whitespace-nowrap ${location.pathname === '/ayl' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}>Պահատուփեր</Link>
-                <span className="h-full flex items-center text-purple-200 hover:text-white transition whitespace-nowrap cursor-pointer">Փոխանցումներ</span>
+                <Link to="/aylpoxancumner" className={`h-full flex items-center transition whitespace-nowrap ${location.pathname === '/aylpoxancumner' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}>Փոխանցումներ</Link>
               </>
             ) : isLeasingSub ? (
               <>
