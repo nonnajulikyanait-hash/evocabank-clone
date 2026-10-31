@@ -73,7 +73,9 @@ export default function Navbar() {
 
             <Link 
               to="/akntartayinvcharumner" 
-              className={`transition ${location.pathname === '/akntartayinvcharumner' ? 'text-[#6400dc] font-semibold' : 'hover:text-[#6400dc]'}`}
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-[#6400dc] transition cursor-pointer"
             >
               Ակնթարթային վճարումներ
             </Link>
