@@ -49,6 +49,7 @@ import AylPoxancumner from './components/home/aylpoxancumner';
 import AkntartayinVcharumner from './components/home/akntartayinvcharumner';
 import MerMasin from './components/home/mermasin';
 import Karucvacq from './components/home/karucvacq';
+import Bajneterer from './components/home/bajneterer';
 
 function HomePage() {
   return (
@@ -113,6 +114,7 @@ function App() {
         <Route path="/akntartayinvcharumner" element={<AkntartayinVcharumner />} />
         <Route path="/mer-masin" element={<MerMasin />} />
         <Route path="/mer-masin/karucvacq" element={<Karucvacq />} />
+        <Route path="/mer-masin/bajneterer" element={<Bajneterer />} />
       </Routes>
     </Router>
   );
