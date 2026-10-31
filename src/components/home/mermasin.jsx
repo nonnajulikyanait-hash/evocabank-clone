@@ -38,7 +38,7 @@ export default function MerMasin() {
           <div className="container mx-auto flex gap-6 text-xs font-semibold overflow-x-auto whitespace-nowrap">
             <Link to="/mer-masin" className="border-b-2 border-white pb-1 cursor-pointer font-black">Ընդհանուր</Link>
             <Link to="/mer-masin/karucvacq" className="text-purple-200 hover:text-white cursor-pointer">Կառուցվածք</Link>
-            <Link to="/mer-masin" className="text-purple-200 hover:text-white cursor-pointer">Բաժնետերեր</Link>
+            <Link to="/mer-masin/bajneterer" className="text-purple-200 hover:text-white cursor-pointer">Բաժնետերեր</Link>
             <Link to="/mer-masin" className="text-purple-200 hover:text-white cursor-pointer">Ղեկավարություն</Link>
             <Link to="/mer-masin" className="text-purple-200 hover:text-white cursor-pointer">Գործընկերներ</Link>
             <Link to="/mer-masin" className="text-purple-200 hover:text-white cursor-pointer">Մրցանակներ</Link>
