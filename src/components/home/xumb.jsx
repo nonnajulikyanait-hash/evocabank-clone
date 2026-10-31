@@ -63,7 +63,7 @@ export default function Xumb() {
           {/* Organizational Chart Image Section */}
           <div className="pt-8 flex justify-center">
             <img 
-              src="https://www.evoca.am/file_manager/Evoca%20financial%20group/%C2%AB%D4%B7%D5%8E%D5%88%D4%BF%D4%B1%C2%BB%20%D6%86%D5%AB%D5%B6%D5%A1%D5%B6%D5%BD%D5%A1%D5%‌هایն%D5%A1%D5%AF%D5%A1%D5%B6%20%D5%խ%D5%BE%D5%B8%D6%82%D5%B4%D5%B1%20Armenian.png" 
+              src="https://www.evoca.am/file_manager/Evoca%20financial%20group/%C2%AB%D4%B7%D5%8E%D5%88%D4%BF%D4%B1%C2%BB%20%D6%86%D5%AB%D5%B6%D5%A1%D5%B6%D5%BD%D5%A1%D5%AF%D5%A1%D5%B6%20%D5%AD%D5%B8%D6%82%D5%B4%D5%A2%20Armenian.png" 
               alt="Evoca Financial Group Structure" 
               className="max-w-full rounded-2xl shadow-sm object-contain"
             />
