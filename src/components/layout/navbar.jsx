@@ -134,8 +134,8 @@ export default function Navbar() {
         </Link>
       </div>
 
-      {/* Sub-Bar */}
-      {isBusinessSection && (
+      {/* Sub-Bar (отрисовывается только если это НЕ страница Dijital) */}
+      {isBusinessSection && !isDijitalSub && (
         <div className="bg-[#6400dc] text-white px-12 text-xs font-bold border-b border-white">
           <div className="container mx-auto pl-6 flex gap-8 items-center h-12 overflow-x-auto">
             {isLeasingSub ? (
@@ -163,10 +163,6 @@ export default function Navbar() {
                 <Link to="/creditive" className={`h-full flex items-center transition ${location.pathname === '/creditive' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}>Ակրեդիտիվ</Link>
                 <Link to="/inkaso" className={`h-full flex items-center transition ${location.pathname === '/inkaso' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}>Ինկասո</Link>
               </>
-            ) : isDijitalSub ? (
-              <div className="h-full flex items-center border-b-2 border-white text-white font-black">
-                Դեպոզիտարիա
-              </div>
             ) : (
               <div className="h-full flex items-center border-b-2 border-white text-white font-black">
                 {location.pathname === '/business-deposits' ? 'Բիզնես ավանդներ' : 'Բիզնես վարկեր'}

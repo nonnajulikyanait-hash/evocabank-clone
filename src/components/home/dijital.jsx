@@ -43,7 +43,7 @@ export default function Dijital() {
                 V-POS Տերմինալ
               </h1>
               <p className="text-xs md:text-sm text-gray-700 leading-relaxed">
-                <strong>V-POS-ը</strong> (virtual point of sale) վիրտուալ վճարային համակարգ է, որը հարմարավետ, ապահով և հեշտ լուծում է օնլայն առևտրով զբաղվող բիզնեսների համար։ Արագ և տեղում օնլայն վճարումներ կատարելն այսօր կարևոր նախապայման է Ձեր գնորդների համար[cite: 10]։
+                <strong>V-POS-ը</strong> (virtual point of sale) վիրտուալ վճարային համակարգ է, որը հարմարավետ, ապահով և հեշտ լուծում է օնլայն առևտրով զբաղվող բիզնեսների համար։ Արագ և տեղում օնլայն վճարումներ կատարելն այսօր կարևոր նախապայման է Ձեր գնորդների համար։
               </p>
             </div>
             <div className="flex justify-center">
