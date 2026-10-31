@@ -1,122 +1,144 @@
 import React from 'react';
-import Navbar from '../layout/navbar';
+import { Link, Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import Footer from './footer';
 
-export default function ArarkayazurkMetaxakanHashivner() {
+// Պատմություն (History) Page Component (3rd image design)
+function HistoryPage() {
   return (
     <div className="min-h-screen bg-white font-sans text-neutral-800 flex flex-col justify-between">
       <div>
-        <Navbar />
+        {/* Simplified Header */}
+        <header className="w-full bg-white border-b border-gray-100 py-4 px-6 md:px-12 flex justify-between items-center">
+          <div className="flex items-center gap-3">
+            <Link to="/akntartayinvcharumner" className="flex items-center gap-1.5 cursor-pointer">
+              <span className="text-2xl font-black text-[#6400dc] tracking-tighter">evoca</span>
+              <span className="w-2 h-2 bg-[#6400dc] rounded-full"></span>
+            </Link>
+            <span className="text-gray-400 font-light text-lg">|</span>
+            <span className="text-gray-600 text-sm font-medium">Online payment</span>
+          </div>
 
-        <main className="max-w-6xl mx-auto px-4 py-8 text-left">
+          <div className="flex items-center gap-6">
+            <span className="text-sm font-bold text-neutral-800 hidden sm:inline">+374 10 605555</span>
+            <span className="text-gray-300">🌐</span>
+            <Link 
+              to="/akntartayinvcharumner/history" 
+              className="bg-[#6400dc] text-white font-bold text-xs px-4 py-2 rounded-full shadow-sm"
+            >
+              Պատմություն
+            </Link>
+          </div>
+        </header>
+
+        {/* Main Content for History */}
+        <main className="max-w-6xl mx-auto px-4 py-12 text-center w-full">
           {/* Breadcrumbs */}
-          <div className="text-xs text-gray-400 mb-6 flex items-center gap-2">
-            <span>🏠</span> &gt; <span>Բիզնես</span> &gt; <span>Հաշիվներ</span> &gt; <span className="text-gray-700 font-medium">Առարկայազուրկ մետաղական հաշիվներ</span>
+          <div className="text-xs text-gray-400 mb-8 flex items-center justify-center gap-2">
+            <Link to="/akntartayinvcharumner" className="hover:text-[#6400dc]">Գլխավոր</Link>
+            <span>/</span>
+            <span className="text-gray-700 font-medium">Պատմություն</span>
           </div>
 
-          {/* Top Banner Section */}
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-8 mb-10">
-            <div className="lg:w-1/2 space-y-4">
-              <h1 className="text-3xl md:text-4xl font-black text-neutral-900 leading-tight">
-                Առարկայազուրկ մետաղական հաշիվներ
-              </h1>
-              <p className="text-sm md:text-base text-gray-600 leading-relaxed">
-                Առաջարկում ենք բացել առարկայազուրկ մետաղական հաշիվներ, որոնք նախատեսված են անկանխիկ ոսկու հաշվառման համար: Այս ցպահանջ հաշիվները հնարավորություն են ընձեռում խնայողություններ կատարել անկանխիկ ոսկով, ինչպես նաև ավելացնել դրանք՝ միջազգային շուկայում ոսկու գնի բարձրացման շնորհիվ:
-              </p>
+          <div className="flex flex-col items-center justify-center py-16 space-y-4">
+            <div className="w-20 h-20 flex items-center justify-center text-[#6400dc]">
+              <svg viewBox="0 0 24 24" fill="currentColor" className="w-16 h-16">
+                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zM7 10h10v2H7zm0 4h7v2H7z"/>
+              </svg>
             </div>
-            <div className="lg:w-1/2 w-full flex justify-center">
-              <img 
-                src="https://www.evoca.am/images-cache/menu/1/16154599304948/780x585.jpg" 
-                alt="Առարկայազուրկ մետաղական հաշիվներ" 
-                className="rounded-3xl shadow-sm object-cover w-full max-h-[350px]"
-              />
-            </div>
-          </div>
-
-          {/* Social Media Icons & Details */}
-          <div className="flex gap-8 items-start mb-12">
-            <div className="hidden md:flex flex-col gap-3 p-3 bg-gray-50 rounded-2xl border border-gray-100 text-gray-500">
-              <span className="cursor-pointer hover:text-[#6400dc] text-sm font-bold">f</span>
-              <span className="cursor-pointer hover:text-[#6400dc] text-sm font-bold">in</span>
-              <span className="cursor-pointer hover:text-[#6400dc] text-sm">📷</span>
-            </div>
-
-            <div className="flex-1 space-y-6 text-xs md:text-sm text-gray-700 leading-relaxed">
-              <h2 className="text-xl font-bold text-neutral-900 tracking-wide border-b border-gray-100 pb-3">
-                Հիմնական պայմաններ
-              </h2>
-
-              <ul className="space-y-4 list-disc pl-5 text-gray-600">
-                <li>
-                  Հաշիվներ ենք բացում ռեզիդենտ և ոչ ռեզիդենտ հաճախորդների համար, միայն 999.9 հարգի ոսկով, առանց նվազագույն մնացորդի պահանջի: Մեզ մոտ կարելի է գնել անկանխիկ ոսկի՝ սկսած 31 գրամից (ոսկու գնանշումը կատարվում է գրամով): Մեր կայքում հրապարակվում են ոսկու գնանշման օրական տվյալները, որոնք փոփոխվում են՝ կախված միջազգային շուկաներում ոսկու գնից:
-                </li>
-
-                <li>
-                  Հաշիվներում անկանխիկ ոսկին հաշվառում ենք դրամով` ՀՀ Կենտրոնական բանկի հայտարարած հաշվարկային գնով և կշռային (գրամային) արտահայտությամբ՝ 0.01 գրամ ճշտությամբ կամ տրոյական ունցիաներով՝ 0.001 տրոյական ունցիա ճշտությամբ (մեկ տրոյական ունցիան հավասար է 31.10348 գրամի):
-                </li>
-
-                <li>
-                  Մետաղական հաշիվ/ներ բացելիս ղեկավարվում ենք ՀՀ օրենսդրությամբ, ՀՀ Կենտրոնական բանկի նորմատիվ ակտերով, որոշումներով, մեր ներքին իրավական ակտերով:
-                </li>
-
-                <li>
-                  Հաշիվներ բացելու համար կարող եք դիմել մեր Գլխամասային գրասենյակ և ցանկացած մասնաճյուղ: Մետաղական հաշիվների սպասարկման, գործառնությունների կատարման սակագներին և պայմաններին կարող եք ծանոթանալ <span className="text-[#6400dc] underline font-bold cursor-pointer">այստեղ</span>:
-                </li>
-
-                <li>
-                  Այս հաշիվներով կարող ենք իրականացնել հետևյալ գործառնությունները՝
-                  <ul className="list-dash pl-5 mt-2 space-y-2 text-gray-700">
-                    <li>
-                      <strong>հաշվի համալրում՝</strong> բանկից անկանխիկ ոսկի գնելու և այն հաշվին մուտքագրելու, ինչպես նաև ձեր կամ այլ անձի՝ նույն բանկում կամ այլ բանկում առկա մետաղական հաշվից անկանխիկ ոսկի փոխանցելու միջոցով,
-                    </li>
-                    <li>
-                      <strong>հաշվի ելքագրում՝</strong> հաշվին առկա անկանխիկ ոսկին բանկին վաճառելու, ինչպես նաև ձեր կամ այլ անձի՝ նույն բանկում կամ այլ բանկում առկա մետաղական հաշվին անկանխիկ ոսկի փոխանցելու միջոցով:
-                    </li>
-                  </ul>
-                </li>
-
-                <li>
-                  Մետաղական հաշիվները կարող են գրավադրվել:
-                </li>
-
-                <li>
-                  <strong>Հաշիվ բացելու համար անհրաժեշտ փաստաթղթերը՝</strong>
-                  
-                  <div className="mt-4 space-y-4 bg-gray-50 p-6 rounded-2xl border border-gray-100 text-xs md:text-sm">
-                    <div>
-                      <h4 className="font-bold text-[#6400dc] mb-2">Իրավաբանական անձանց դեպքում`</h4>
-                      <ul className="list-disc pl-5 space-y-1.5 text-gray-600">
-                        <li>Դիմում՝ մեր ձևանմուշի համաձայն:</li>
-                        <li>Կանոնադրություն (ոչ ռեզիդենտների դեպքում՝ կանոնադրություն կամ փոխարինող այլ փաստաթուղթ):</li>
-                        <li>Պետական ռեգիստրի գրանցման վկայական (ոչ ռեզիդենտների դեպքում՝ տվյալ երկրի գրանցող պետական մարմնի կողմից տրված վկայական և գրանցման երկրի համապատասխան մարմնի կողմից տրված հարկային մարմիններում հաշվառված փաստաթուղթ):</li>
-                        <li>Հարկ վճարողի հաշվառման համարը (ՀՎՀՀ), եթե առկա չէ պետական ռեգիստրի վկայականում:</li>
-                        <li>Գործադիր մարմնի ղեկավար/ների, գլխավոր հաշվապահի անձնագրերը կամ նույնականացման քարտերը, ինչպես նաև քաղվածքներ պաշտոնների նշանակման հրամաններից, եթե պետական ռեգիստրի գրանցման վկայականում ղեկավարի վերաբերյալ տվյալները բացակայում են:</li>
-                        <li>Հաշվի կարգադրիչների անձնագրերը կամ նույնականացման քարտերը:</li>
-                        <li>Կանոնադրական կապիտալում 10% և ավելի բաժնեմաս ունեցող անձանց/իրական շահառուների նույնականացման համար անհրաժեշտ փաստաթղթեր:</li>
-                        <li>Մեր պահանջով այլ փաստաթղթեր:</li>
-                      </ul>
-                    </div>
-
-                    <div>
-                      <h4 className="font-bold text-[#6400dc] mb-2">Անհատ ձեռնարկատերի դեպքում`</h4>
-                      <ul className="list-disc pl-5 space-y-1.5 text-gray-600">
-                        <li>Դիմում՝ մեր ձևանմուշի համաձայն:</li>
-                        <li>Անձնագիր կամ նույնականացման քարտ:</li>
-                        <li>Պետական ռեգիստրի գրանցման վկայական (բացակայության դեպքում՝ քաղվածք պետական ռեգիստրից):</li>
-                        <li>Հարկ վճարողի հաշվառման համարը (ՀՎՀՀ), եթե առկա չէ պետական ռեգիստրի վկայականում:</li>
-                        <li>Ստորագրության նմուշի քարտ: Առանց կնիքի գործող անհատ ձեռնարկատերի դեպքում, ստորագրության և նմուշի քարտում կատարվում է համապատասխան գրառում՝ կնիքի բացակայության վերաբերյալ:</li>
-                        <li>Մեր պահանջով այլ փաստաթղթեր:</li>
-                      </ul>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
+            <p className="text-gray-600 text-sm md:text-base font-medium">
+              Ձեր վճարումների պատմությունը դատարկ է
+            </p>
           </div>
         </main>
       </div>
 
       <Footer />
     </div>
+  );
+}
+
+// Main Akntartayin Vcharumner Component (2nd image design)
+function Dashboard() {
+  const items = [
+    { title: "EVOCABANK", icon: "https://resource.evoca.am/images/WebPayment/evoca.png" },
+    { title: "Միջազգային բջջային օպերատորներ", icon: "https://resource.evoca.am/images/WebPayment/international.png" },
+    { title: "Կոմունալ վճարումներ", icon: "https://resource.evoca.am/images/WebPayment/utility.png" },
+    { title: "Ինտերնետ և TV", icon: "https://resource.evoca.am/images/WebPayment/internettv.png" },
+    { title: "ՃՈ վճարներ", icon: "https://resource.evoca.am/images/WebPayment/roadpolice.png" },
+    { title: "Վարկային կազմակերպություններ", icon: "https://resource.evoca.am/images/WebPayment/loan.png" },
+    { title: "Միջոցառումներ", icon: "https://resource.evoca.am/images/WebPayment/event.png" },
+  ];
+
+  return (
+    <div className="min-h-screen bg-white font-sans text-neutral-800 flex flex-col justify-between">
+      <div>
+        {/* Simplified Header (2nd image style) */}
+        <header className="w-full bg-white border-b border-gray-100 py-4 px-6 md:px-12 flex justify-between items-center">
+          <div className="flex items-center gap-3">
+            <Link to="/" className="flex items-center gap-1.5 cursor-pointer">
+              <span className="text-2xl font-black text-[#6400dc] tracking-tighter">evoca</span>
+              <span className="w-2 h-2 bg-[#6400dc] rounded-full"></span>
+            </Link>
+            <span className="text-gray-400 font-light text-lg">|</span>
+            <span className="text-gray-600 text-sm font-medium">Online payment</span>
+          </div>
+
+          <div className="flex items-center gap-6">
+            <span className="text-sm font-bold text-neutral-800 hidden sm:inline">+374 10 605555</span>
+            <span className="text-gray-300">🌐</span>
+            <Link 
+              to="/akntartayinvcharumner/history" 
+              className="bg-[#6400dc] text-white font-bold text-xs px-4 py-2 rounded-full shadow-sm hover:bg-opacity-90 transition"
+            >
+              Պատմություն
+            </Link>
+          </div>
+        </header>
+
+        <main className="max-w-6xl mx-auto px-4 py-12 w-full text-center">
+          <h1 className="text-3xl font-black text-neutral-900 mb-10">
+            Գլխավոր
+          </h1>
+
+          {/* Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center mb-16">
+            {items.map((item, index) => {
+              const isLast = index === items.length - 1;
+
+              return (
+                <div 
+                  key={index}
+                  className={`bg-white rounded-2xl p-8 h-56 flex flex-col items-center justify-center text-center shadow-xs border border-gray-100 transition-all duration-300 cursor-pointer hover:border-[#6400dc] hover:shadow-xl hover:ring-2 hover:ring-[#6400dc]/20 group ${
+                    isLast ? 'lg:col-start-2' : ''
+                  }`}
+                >
+                  <div className="h-24 flex items-center justify-center mb-4">
+                    <img 
+                      src={item.icon} 
+                      alt={item.title} 
+                      className="max-h-16 max-w-[140px] object-contain group-hover:scale-110 transition-transform duration-300"
+                    />
+                  </div>
+                  <h3 className="text-neutral-800 font-bold text-sm sm:text-base">
+                    {item.title}
+                  </h3>
+                </div>
+              );
+            })}
+          </div>
+        </main>
+      </div>
+
+      <Footer />
+    </div>
+  );
+}
+
+export default function AkntartayinVcharumner() {
+  return (
+    <Routes>
+      <Route path="/" element={<Dashboard />} />
+      <Route path="/history" element={<HistoryPage />} />
+    </Routes>
   );
 }
