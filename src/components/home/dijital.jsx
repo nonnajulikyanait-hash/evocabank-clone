@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Navbar from '../layout/navbar';
 import EvocaOnlineMobile from './evocaonlinemobile';
 import Footer from './footer';
@@ -9,27 +8,6 @@ export default function Dijital() {
     <div className="min-h-screen bg-white font-sans text-neutral-800 flex flex-col justify-between">
       <div>
         <Navbar />
-
-        {/* Sub-Bar */}
-        <div className="bg-[#6400dc] text-white px-12 text-xs font-bold border-b border-white">
-          <div className="container mx-auto pl-6 flex gap-8 items-center h-12 overflow-x-auto">
-            <Link to="/dijital" className="h-full flex items-center border-b-2 border-white text-white font-black whitespace-nowrap">
-              V-POS Տերմինալ
-            </Link>
-            <Link to="/terminal" className="h-full flex items-center text-purple-200 hover:text-white transition whitespace-nowrap">
-              POS Տերմինալ
-            </Link>
-            <Link to="/sakagner" className="h-full flex items-center text-purple-200 hover:text-white transition whitespace-nowrap">
-              Սակագներ
-            </Link>
-            <span className="h-full flex items-center text-purple-200 hover:text-white transition whitespace-nowrap cursor-pointer">
-              Տերմինալի տեղադրման հայտ
-            </span>
-            <span className="h-full flex items-center text-purple-200 hover:text-white transition whitespace-nowrap cursor-pointer">
-              Evoca Mobile POS' mPOS
-            </span>
-          </div>
-        </div>
 
         <main className="max-w-6xl mx-auto px-4 py-8 text-left">
           {/* Breadcrumbs */}
