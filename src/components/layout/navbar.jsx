@@ -71,7 +71,13 @@ export default function Navbar() {
               Բիզնես
             </span>
 
-            <span className="hover:text-[#6400dc] cursor-pointer transition">Ակնթարթային վճարումներ</span>
+            <Link 
+              to="/akntartayinvcharumner" 
+              className={`transition ${location.pathname === '/akntartayinvcharumner' ? 'text-[#6400dc] font-semibold' : 'hover:text-[#6400dc]'}`}
+            >
+              Ակնթարթային վճարումներ
+            </Link>
+            
             <span className="hover:text-[#6400dc] cursor-pointer transition">Մեր մասին</span>
             <span className="hover:text-[#6400dc] cursor-pointer transition">Նորություններ</span>
             <span className="hover:text-[#6400dc] cursor-pointer transition">Բլոգ</span>
@@ -121,7 +127,7 @@ export default function Navbar() {
             <Link to="/dijital" className={`transition ${isDijitalSub ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>
               Դիջիթալ
             </Link>
-            <Link to="/ayl" className={`transition ${isAylSub ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>
+            <Link to="/ayl" className={`transition ${location.pathname === '/ayl' ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>
               Այլ
             </Link>
           </nav>

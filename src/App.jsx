@@ -46,6 +46,7 @@ import Hayt from './components/home/hayt';
 import MobilePos from './components/home/mobilepos';
 import Ayl from './components/home/ayl';
 import AylPoxancumner from './components/home/aylpoxancumner';
+import AkntartayinVcharumner from './components/home/akntartayinvcharumner';
 
 function HomePage() {
   return (
@@ -107,6 +108,7 @@ function App() {
         <Route path="/mobilepos" element={<MobilePos />} />
         <Route path="/ayl" element={<Ayl />} />
         <Route path="/aylpoxancumner" element={<AylPoxancumner />} />
+        <Route path="/akntartayinvcharumner" element={<AkntartayinVcharumner />} />
       </Routes>
     </Router>
   );
