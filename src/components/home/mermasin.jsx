@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Navbar from '../layout/navbar';
 import Footer from './footer';
 
@@ -35,14 +36,14 @@ export default function MerMasin() {
         {/* Sub-header navigation menu for About Us */}
         <div className="bg-[#6400dc] text-white py-3 px-8 shadow-inner">
           <div className="container mx-auto flex gap-6 text-xs font-semibold overflow-x-auto whitespace-nowrap">
-            <span className="border-b-2 border-white pb-1 cursor-pointer">Ընդհանուր</span>
-            <span className="text-purple-200 hover:text-white cursor-pointer">Կառուցվածք</span>
-            <span className="text-purple-200 hover:text-white cursor-pointer">Բաժնետերեր</span>
-            <span className="text-purple-200 hover:text-white cursor-pointer">Ղեկավարություն</span>
-            <span className="text-purple-200 hover:text-white cursor-pointer">Գործընկերներ</span>
-            <span className="text-purple-200 hover:text-white cursor-pointer">Մրցանակներ</span>
-            <span className="text-purple-200 hover:text-white cursor-pointer">CSR</span>
-            <span className="text-purple-200 hover:text-white cursor-pointer">Էվոկա ֆինանսական խումբ</span>
+            <Link to="/mer-masin" className="border-b-2 border-white pb-1 cursor-pointer font-black">Ընդհանուր</Link>
+            <Link to="/mer-masin/karucvacq" className="text-purple-200 hover:text-white cursor-pointer">Կառուցվածք</Link>
+            <Link to="/mer-masin" className="text-purple-200 hover:text-white cursor-pointer">Բաժնետերեր</Link>
+            <Link to="/mer-masin" className="text-purple-200 hover:text-white cursor-pointer">Ղեկավարություն</Link>
+            <Link to="/mer-masin" className="text-purple-200 hover:text-white cursor-pointer">Գործընկերներ</Link>
+            <Link to="/mer-masin" className="text-purple-200 hover:text-white cursor-pointer">Մրցանակներ</Link>
+            <Link to="/mer-masin" className="text-purple-200 hover:text-white cursor-pointer">CSR</Link>
+            <Link to="/mer-masin" className="text-purple-200 hover:text-white cursor-pointer">Էվոկա ֆինանսական խումբ</Link>
           </div>
         </div>
 
