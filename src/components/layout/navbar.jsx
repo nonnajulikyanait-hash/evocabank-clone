@@ -59,7 +59,7 @@ export default function Navbar() {
           <div className="flex gap-5 font-normal">
             <Link 
               to="/" 
-              className={`pb-1 cursor-pointer transition ${!isBusinessSection ? 'text-[#6400dc] border-b-2 border-[#6400dc] font-semibold' : 'hover:text-[#6400dc]'}`}
+              className={`pb-1 cursor-pointer transition ${!isBusinessSection && !location.pathname.startsWith('/mer-masin') ? 'text-[#6400dc] border-b-2 border-[#6400dc] font-semibold' : 'hover:text-[#6400dc]'}`}
             >
               Անհատ
             </Link>
@@ -82,7 +82,7 @@ export default function Navbar() {
             
             <Link 
               to="/mer-masin" 
-              className={`transition ${location.pathname === '/mer-masin' ? 'text-[#6400dc] font-semibold' : 'hover:text-[#6400dc]'}`}
+              className={`transition ${location.pathname.startsWith('/mer-masin') ? 'text-[#6400dc] font-semibold border-b-2 border-[#6400dc]' : 'hover:text-[#6400dc]'}`}
             >
               Մեր մասին
             </Link>
