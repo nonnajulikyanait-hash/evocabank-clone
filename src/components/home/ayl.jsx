@@ -1,28 +1,13 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
 import Navbar from '../layout/navbar';
 import EvocaOnlineMobile from './evocaonlinemobile';
 import Footer from './footer';
 
 export default function Ayl() {
-  const location = useLocation();
-
   return (
     <div className="min-h-screen bg-white font-sans text-neutral-800 flex flex-col justify-between">
       <div>
         <Navbar />
-
-        {/* Այլ բաժնի Sub-Bar Նավարկություն */}
-        <div className="bg-[#6400dc] text-white px-12 text-xs font-bold border-b border-white">
-          <div className="container mx-auto pl-6 flex gap-8 items-center h-12 overflow-x-auto">
-            <Link to="/ayl" className={`h-full flex items-center transition whitespace-nowrap ${location.pathname === '/ayl' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}>
-              Պահատուփեր
-            </Link>
-            <span className="h-full flex items-center text-purple-200 hover:text-white transition whitespace-nowrap cursor-pointer">
-              Փոխանցումներ
-            </span>
-          </div>
-        </div>
 
         <main className="max-w-6xl mx-auto px-4 py-8 text-left">
           {/* Breadcrumbs */}
