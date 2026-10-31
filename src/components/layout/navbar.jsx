@@ -48,6 +48,7 @@ export default function Navbar() {
     location.pathname === '/sakagner' ||
     location.pathname === '/hayt' ||
     location.pathname === '/mobilepos';
+  const isAylSub = location.pathname === '/ayl';
 
   return (
     <header className="w-full bg-white border-b border-gray-100 sticky top-0 z-50">
@@ -119,7 +120,7 @@ export default function Navbar() {
             <Link to="/dijital" className={`transition ${isDijitalSub ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>
               Դիջիթալ
             </Link>
-            <Link to="/ayl" className={`transition ${location.pathname === '/ayl' ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>
+            <Link to="/ayl" className={`transition ${isAylSub ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>
               Այլ
             </Link>
           </nav>
@@ -147,10 +148,23 @@ export default function Navbar() {
       </div>
 
       {/* Sub-Bar */}
-      {isBusinessSection && !isDijitalSub && (
+      {isBusinessSection && (
         <div className="bg-[#6400dc] text-white px-12 text-xs font-bold border-b border-white">
           <div className="container mx-auto pl-6 flex gap-8 items-center h-12 overflow-x-auto">
-            {isLeasingSub ? (
+            {isDijitalSub ? (
+              <>
+                <Link to="/dijital" className={`h-full flex items-center transition whitespace-nowrap ${location.pathname === '/dijital' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}>V-POS Տերմինալ</Link>
+                <Link to="/terminal" className={`h-full flex items-center transition whitespace-nowrap ${location.pathname === '/terminal' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}>POS Տերմինալ</Link>
+                <Link to="/sakagner" className={`h-full flex items-center transition whitespace-nowrap ${location.pathname === '/sakagner' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}>Սակագներ</Link>
+                <Link to="/hayt" className={`h-full flex items-center transition whitespace-nowrap ${location.pathname === '/hayt' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}>Տերմինալի տեղադրման հայտ</Link>
+                <Link to="/mobilepos" className={`h-full flex items-center transition whitespace-nowrap ${location.pathname === '/mobilepos' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}>Evoca Mobile POS' mPOS</Link>
+              </>
+            ) : isAylSub ? (
+              <>
+                <Link to="/ayl" className={`h-full flex items-center transition whitespace-nowrap ${location.pathname === '/ayl' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}>Պահատուփեր</Link>
+                <span className="h-full flex items-center text-purple-200 hover:text-white transition whitespace-nowrap cursor-pointer">Փոխանցումներ</span>
+              </>
+            ) : isLeasingSub ? (
               <>
                 <Link to="/leasing" className={`h-full flex items-center transition ${location.pathname === '/leasing' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}>Evoca Leasing</Link>
                 <Link to="/special-offer" className={`h-full flex items-center transition ${location.pathname === '/special-offer' ? 'border-b-2 border-white text-white font-black' : 'text-purple-200 hover:text-white'}`}>Հատուկ առաջարկ</Link>
@@ -177,7 +191,7 @@ export default function Navbar() {
               </>
             ) : (
               <div className="h-full flex items-center border-b-2 border-white text-white font-black">
-                {location.pathname === '/business-deposits' ? 'Բիզնես ավանդներ' : location.pathname === '/ayl' ? 'Այլ ծառայություններ' : 'Բիզնես վարկեր'}
+                {location.pathname === '/business-deposits' ? 'Բիզնես ավանդներ' : 'Բիզնես վարկեր'}
               </div>
             )}
           </div>
