@@ -117,12 +117,11 @@ export default function Navbar() {
         </Link>
 
         {isMerMasinPage ? (
-          /* "Մեր մասին" էջերի վերնագրի մենյու (Evoca-ի մասին, Սակագներ, Հաշվետվություններ, Հայտարարություններ) */
+          /* "Մեր մասին" էջերի վերնագրի մենյու (Evoca-ի մասին, Հաշվետվություններ, Հայտարարություններ) */
           <nav className="hidden lg:flex items-center gap-7 text-[13px] font-bold text-gray-800">
             <Link to="/mer-masin" className="text-[#6400dc] transition">
               Evoca-ի մասին
             </Link>
-            <span className="hover:text-[#6400dc] cursor-pointer transition">Սակագներ</span>
             <span className="hover:text-[#6400dc] cursor-pointer transition">Հաշվետվություններ</span>
             <span className="hover:text-[#6400dc] cursor-pointer transition">Հայտարարություններ</span>
           </nav>
