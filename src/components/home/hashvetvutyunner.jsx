@@ -35,8 +35,8 @@ export default function Hashvetvutyunner() {
         {/* Reports Sub-header Purple Menu */}
         <div className="bg-[#6400dc] text-white py-3 px-8 shadow-inner">
           <div className="container mx-auto flex gap-8 text-xs font-semibold overflow-x-auto whitespace-nowrap">
-            <Link to="/hashvetvutyunner" className="text-purple-200 hover:text-white transition">Աուդիտորական եզրակացություն</Link>
-            <Link to="/finansakan" className="border-b-2 border-white pb-1 cursor-pointer font-black">Ֆինանսական հաշվետվություններ</Link>
+            <Link to="/hashvetvutyunner" className="border-b-2 border-white pb-1 cursor-pointer font-black">Աուդիտորական եզրակացություն</Link>
+            <Link to="/finansakan" className="text-purple-200 hover:text-white transition">Ֆինանսական հաշվետվություններ</Link>
             <span className="text-purple-200 hover:text-white cursor-pointer transition">Ներդրողների համար</span>
             <span className="text-purple-200 hover:text-white cursor-pointer transition">Կիսամյակային հաշվետվություն</span>
             <span className="text-purple-200 hover:text-white cursor-pointer transition">Տարեկան հաշվետվություն</span>
