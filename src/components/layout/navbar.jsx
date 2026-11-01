@@ -117,12 +117,14 @@ export default function Navbar() {
         </Link>
 
         {isMerMasinPage ? (
-          /* "Մեր մասին" էջերի վերնագրի մենյու (Evoca-ի մասին, Հաշվետվություններ, Հայտարարություններ) */
+          /* "Մեր մասին" էջերի վերնագրի մենյու */
           <nav className="hidden lg:flex items-center gap-7 text-[13px] font-bold text-gray-800">
-            <Link to="/mer-masin" className="text-[#6400dc] transition">
+            <Link to="/mer-masin" className={`transition ${location.pathname === '/mer-masin' || (location.pathname.startsWith('/mer-masin/') && location.pathname !== '/hashvetvutyunner') ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>
               Evoca-ի մասին
             </Link>
-            <span className="hover:text-[#6400dc] cursor-pointer transition">Հաշվետվություններ</span>
+            <Link to="/hashvetvutyunner" className={`transition ${location.pathname === '/hashvetvutyunner' ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>
+              Հաշվետվություններ
+            </Link>
             <span className="hover:text-[#6400dc] cursor-pointer transition">Հայտարարություններ</span>
           </nav>
         ) : isBusinessSection ? (
