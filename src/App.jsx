@@ -55,7 +55,8 @@ import Xekavarutyun from './components/home/xekavarutyun';
 import Mrcanakner from './components/home/mrcanakner';
 import CSR from './components/home/csr';
 import Xumb from './components/home/xumb';
-import Hashvetvutyunner from './components/home/hashvetvutyunner'; // Ավելացված է Հաշվետվությունների իմպորտը
+import Hashvetvutyunner from './components/home/hashvetvutyunner';
+import Finansakan from './components/home/finansakan'; // Ավելացված է Ֆինանսական հաշվետվությունների իմպորտը
 
 function HomePage() {
   return (
@@ -126,7 +127,8 @@ function App() {
         <Route path="/mer-masin/mrcanakner" element={<Mrcanakner />} />
         <Route path="/mer-masin/csr" element={<CSR />} />
         <Route path="/mer-masin/xumb" element={<Xumb />} />
-        <Route path="/hashvetvutyunner" element={<Hashvetvutyunner />} /> {/* Ավելացված է Հաշվետվությունների Route-ը */}
+        <Route path="/hashvetvutyunner" element={<Hashvetvutyunner />} />
+        <Route path="/finansakan" element={<Finansakan />} /> {/* Ավելացված է Ֆինանսական հաշվետվությունների Route-ը */}
       </Routes>
     </Router>
   );

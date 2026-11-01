@@ -35,8 +35,8 @@ export default function Hashvetvutyunner() {
         {/* Reports Sub-header Purple Menu */}
         <div className="bg-[#6400dc] text-white py-3 px-8 shadow-inner">
           <div className="container mx-auto flex gap-8 text-xs font-semibold overflow-x-auto whitespace-nowrap">
-            <span className="border-b-2 border-white pb-1 cursor-pointer font-black">Աուդիտորական եզրակացություն</span>
-            <span className="text-purple-200 hover:text-white cursor-pointer transition">Ֆինանսական հաշվետվություններ</span>
+            <Link to="/hashvetvutyunner" className="text-purple-200 hover:text-white transition">Աուդիտորական եզրակացություն</Link>
+            <Link to="/finansakan" className="border-b-2 border-white pb-1 cursor-pointer font-black">Ֆինանսական հաշվետվություններ</Link>
             <span className="text-purple-200 hover:text-white cursor-pointer transition">Ներդրողների համար</span>
             <span className="text-purple-200 hover:text-white cursor-pointer transition">Կիսամյակային հաշվետվություն</span>
             <span className="text-purple-200 hover:text-white cursor-pointer transition">Տարեկան հաշվետվություն</span>
@@ -57,35 +57,31 @@ export default function Hashvetvutyunner() {
             Աուդիտորական եզրակացություն
           </h1>
 
-          {/* Audit Reports Grid (2 columns per row like official site) */}
+          {/* Audit Reports Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {auditReports.map((report, idx) => {
-              // Group items by pairs for year headers or display individually per card
-              return (
-                <div key={idx} className="space-y-3">
-                  {/* Show year header if it's the first or different from previous */}
-                  <h2 className="text-2xl font-extrabold text-neutral-900 mt-4 mb-2">
-                    {report.year}
-                  </h2>
-                  <a 
-                    href={report.url} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="bg-[#f8f9fa] hover:bg-gray-100 border border-gray-100 rounded-2xl p-5 flex items-center justify-between transition group shadow-xs"
-                  >
-                    <div className="flex items-center gap-4">
-                      <div className="w-10 h-10 rounded-xl bg-purple-50 text-[#6400dc] flex items-center justify-center font-bold text-lg group-hover:bg-[#6400dc] group-hover:text-white transition">
-                        📄
-                      </div>
-                      <span className="text-neutral-800 font-bold text-sm md:text-base group-hover:text-[#6400dc] transition">
-                        {report.title}
-                      </span>
+            {auditReports.map((report, idx) => (
+              <div key={idx} className="space-y-3">
+                <h2 className="text-2xl font-extrabold text-neutral-900 mt-4 mb-2">
+                  {report.year}
+                </h2>
+                <a 
+                  href={report.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="bg-[#f8f9fa] hover:bg-gray-100 border border-gray-100 rounded-2xl p-5 flex items-center justify-between transition group shadow-xs"
+                >
+                  <div className="flex items-center gap-4">
+                    <div className="w-10 h-10 rounded-xl bg-purple-50 text-[#6400dc] flex items-center justify-center font-bold text-lg group-hover:bg-[#6400dc] group-hover:text-white transition">
+                      📄
                     </div>
-                    <span className="text-gray-400 group-hover:text-[#6400dc] text-sm font-bold">↓</span>
-                  </a>
-                </div>
-              );
-            })}
+                    <span className="text-neutral-800 font-bold text-sm md:text-base group-hover:text-[#6400dc] transition">
+                      {report.title}
+                    </span>
+                  </div>
+                  <span className="text-gray-400 group-hover:text-[#6400dc] text-sm font-bold">↓</span>
+                </a>
+              </div>
+            ))}
           </div>
 
         </main>
