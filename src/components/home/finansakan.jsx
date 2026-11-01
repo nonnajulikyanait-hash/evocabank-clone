@@ -177,7 +177,7 @@ export default function Finansakan() {
             <Link to="/hashvetvutyunner" className="text-purple-200 hover:text-white transition">Աուդիտորական եզրակացություն</Link>
             <Link to="/finansakan" className="border-b-2 border-white pb-1 cursor-pointer font-black">Ֆինանսական հաշվետվություններ</Link>
             <Link to="/nerdroxner" className="text-purple-200 hover:text-white transition">Ներդրողների համար</Link>
-            <span className="text-purple-200 hover:text-white cursor-pointer transition">Կիսամյակային հաշվետվություն</span>
+            <Link to="/kisamyakayin" className="text-purple-200 hover:text-white transition">Կիսամյակային հաշվետվություն</Link>
             <span className="text-purple-200 hover:text-white cursor-pointer transition">Տարեկան հաշվետվություն</span>
           </div>
         </div>
