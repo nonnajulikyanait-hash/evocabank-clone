@@ -86,7 +86,7 @@ export default function Nerdroxner() {
             <Link to="/finansakan" className="text-purple-200 hover:text-white transition">Ֆինանսական հաշվետվություններ</Link>
             <Link to="/nerdroxner" className="border-b-2 border-white pb-1 cursor-pointer font-black">Ներդրողների համար</Link>
             <Link to="/kisamyakayin" className="text-purple-200 hover:text-white transition">Կիսամյակային հաշվետվություն</Link>
-            <span className="text-purple-200 hover:text-white cursor-pointer transition">Տարեկան հաշվետվություն</span>
+            <Link to="/mermasintarekan" className="text-purple-200 hover:text-white transition">Տարեկան հաշվետվություն</Link>
           </div>
         </div>
 

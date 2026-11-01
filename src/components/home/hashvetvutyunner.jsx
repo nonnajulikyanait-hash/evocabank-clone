@@ -39,7 +39,7 @@ export default function Hashvetvutyunner() {
             <Link to="/finansakan" className="text-purple-200 hover:text-white transition">Ֆինանսական հաշվետվություններ</Link>
             <Link to="/nerdroxner" className="text-purple-200 hover:text-white transition">Ներդրողների համար</Link>
             <Link to="/kisamyakayin" className="text-purple-200 hover:text-white transition">Կիսամյակային հաշվետվություն</Link>
-            <span className="text-purple-200 hover:text-white cursor-pointer transition">Տարեկան հաշվետվություն</span>
+            <Link to="/mermasintarekan" className="text-purple-200 hover:text-white transition">Տարեկան հաշվետվություն</Link>
           </div>
         </div>
 

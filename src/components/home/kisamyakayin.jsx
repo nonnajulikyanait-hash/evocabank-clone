@@ -24,7 +24,7 @@ export default function Kisamyakayin() {
             <Link to="/finansakan" className="text-purple-200 hover:text-white transition">Ֆինանսական հաշվետվություններ</Link>
             <Link to="/nerdroxner" className="text-purple-200 hover:text-white transition">Ներդրողների համար</Link>
             <Link to="/kisamyakayin" className="border-b-2 border-white pb-1 cursor-pointer font-black">Կիսամյակային հաշվետվություն</Link>
-            <span className="text-purple-200 hover:text-white cursor-pointer transition">Տարեկան հաշվետվություն</span>
+            <Link to="/mermasintarekan" className="text-purple-200 hover:text-white transition">Տարեկան հաշվետվություն</Link>
           </div>
         </div>
 
