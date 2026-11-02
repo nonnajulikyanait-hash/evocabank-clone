@@ -98,6 +98,7 @@ function App() {
         <Route path="/loans/unsecured-consumer-loan" element={<UnsecuredConsumerLoan />} />
         <Route path="/loans/:id" element={<LoanDetail />} />
         <Route path="/cards" element={<Qarter />} />
+        <Route path="/qarter" element={<Qarter />} />
         <Route path="/deposits" element={<AnhatAvandner />} />
         <Route path="/accounts" element={<Hashivner />} />
         <Route path="/transfers" element={<Poxancumner />} />
