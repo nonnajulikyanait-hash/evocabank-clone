@@ -1,10 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../layout/navbar';
 import Footer from './footer';
 
 export default function Kariera() {
-  // Թիմի անդամների գնահատականների տվյալները
   const teamQuotes = [
     {
       words: ['Թրենդային', 'Պահանջված', 'Ուրախ'],
@@ -33,22 +32,41 @@ export default function Kariera() {
     }
   ];
 
-  // Տեսանյութերի ցանկ
   const videos = [
-    'https://www.youtube.com/embed/PvDYyPGb3RU',
-    'https://www.youtube.com/embed/PF9JbEC-z-I',
-    'https://www.youtube.com/embed/Abpc2dbNEdU',
-    'https://www.youtube.com/embed/X9yAx39078s',
-    'https://www.youtube.com/embed/ygQS-e1-2I8',
-    'https://www.youtube.com/embed/VNVSaTULcBk'
+    { title: 'Evocabank corporate event', url: 'https://www.youtube.com/embed/PvDYyPGb3RU' },
+    { title: 'Evoca New Year Corporate Party 2022', url: 'https://www.youtube.com/embed/PF9JbEC-z-I' },
+    { title: 'EVOCAISLAND Evoca Summer Party 2022', url: 'https://www.youtube.com/embed/Abpc2dbNEdU' },
+    { title: 'Evocabank neon art corporate party', url: 'https://www.youtube.com/embed/X9yAx39078s' },
+    { title: 'Evocabank Life', url: 'https://www.youtube.com/embed/ygQS-e1-2I8' },
+    { title: 'Evocabank Team', url: 'https://www.youtube.com/embed/VNVSaTULcBk' }
   ];
+
+  // Swiper State management
+  const [currentVideoIdx, setCurrentVideoIdx] = useState(0);
+  const [currentQuoteIdx, setCurrentQuoteIdx] = useState(0);
+
+  const prevVideo = () => {
+    setCurrentVideoIdx((prev) => (prev === 0 ? videos.length - 1 : prev - 1));
+  };
+
+  const nextVideo = () => {
+    setCurrentVideoIdx((prev) => (prev === videos.length - 1 ? 0 : prev + 1));
+  };
+
+  const prevQuote = () => {
+    setCurrentQuoteIdx((prev) => (prev === 0 ? teamQuotes.length - 1 : prev - 1));
+  };
+
+  const nextQuote = () => {
+    setCurrentQuoteIdx((prev) => (prev === teamQuotes.length - 1 ? 0 : prev + 1));
+  };
 
   return (
     <div className="min-h-screen bg-white font-sans text-neutral-800 flex flex-col justify-between">
       <div>
         <Navbar />
 
-        {/* Կարիերայի Ենթամենյու */}
+        {/* Purple Sub-header */}
         <div className="bg-[#6400dc] text-white py-3 px-8 shadow-inner">
           <div className="container mx-auto flex gap-8 text-xs font-semibold overflow-x-auto whitespace-nowrap">
             <Link to="/kariera" className="border-b-2 border-white pb-1 cursor-pointer font-black">Մշակույթ</Link>
@@ -59,22 +77,14 @@ export default function Kariera() {
         </div>
 
         <main className="space-y-16 pb-16">
-          {/* 1. Հիմնական վերնագրի բաժին (Մշակույթ) */}
-          <div className="relative w-full overflow-hidden bg-white">
-            <div className="container mx-auto px-4 py-8 relative z-10 flex flex-col lg:flex-row items-center gap-8">
-              <div className="w-full lg:w-1/2 rounded-2xl overflow-hidden shadow-lg">
-                <img 
-                  src="https://www.evoca.am/images-cache/menu/1/16195117975601/1920x634.jpg" 
-                  alt="Մշակույթ Evoca-ում" 
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-              <div className="w-full lg:w-1/2 bg-white/90 backdrop-blur-md p-8 rounded-2xl shadow-sm border border-gray-100">
-                <h2 className="text-2xl md:text-3xl font-extrabold text-neutral-900 mb-4">Մշակույթ</h2>
-                <p className="text-neutral-700 leading-relaxed">
-                  Evoca-ում աշխատելը հաճելի է: Առօրյան լցված է նորարարություններով: Այստեղ տաղանդները անընդհատ զարգանում են ու կատարելագործվում:
-                </p>
-              </div>
+          {/* 1. Full-Width Hero Section */}
+          <div className="relative w-full h-[500px] md:h-[600px] bg-cover bg-center overflow-hidden flex items-center justify-end px-6 md:px-24"
+               style={{ backgroundImage: `url('https://www.evoca.am/images-cache/menu/1/16195117975601/1920x634.jpg')` }}>
+            <div className="bg-white/95 backdrop-blur-md p-8 md:p-10 rounded-2xl shadow-xl max-w-lg space-y-4 border border-gray-100">
+              <h1 className="text-3xl md:text-4xl font-black text-neutral-900">Մշակույթ</h1>
+              <p className="text-neutral-700 leading-relaxed text-sm md:text-base">
+                Evoca-ում աշխատելը հաճելի է: Առօրյան լցված է նորարարություններով: Այստեղ տաղանդները անընդհատ զարգանում են ու կատարելագործվում:
+              </p>
             </div>
           </div>
 
@@ -84,10 +94,10 @@ export default function Kariera() {
               <h2 className="text-2xl md:text-3xl font-extrabold text-neutral-900 text-center">
                 Ինչու՞ աշխատել Evoca-ում
               </h2>
-              <p className="text-center text-neutral-600 italic max-w-2xl mx-auto">
+              <p className="text-center text-neutral-600 italic max-w-2xl mx-auto text-sm md:text-base">
                 «Բացահայտի՛ր, թե ինչն է Evoca-ն դարձնում այդքան յուրահատուկ: Աշխատակիցներն ուրախ են, մոտիվացված, իսկ առավելությունների մեծ փաթեթն օգնում է հոգ տանել իրենց և ընտանիքների մասին»
               </p>
-              <div className="rounded-2xl overflow-hidden shadow-lg max-w-3xl mx-auto">
+              <div className="rounded-3xl overflow-hidden shadow-xl max-w-4xl mx-auto">
                 <img 
                   src="https://www.evoca.am/file_manager/Career/evoca-girl.jpg" 
                   alt="Evoca Girl" 
@@ -97,74 +107,101 @@ export default function Kariera() {
             </div>
           </div>
 
-          {/* 3. Մշակույթ և Վիդեո Սլայդեր (Մանուշակագույն ֆոնով՝ անիմացիոն տարրերով) */}
-          <div className="bg-[#6400dc] text-white py-16 relative overflow-hidden">
-            {/* Անիմացիոն ֆոնային տարրեր */}
-            <img src="https://www.evoca.am/img/shape6.png" alt="shape" className="absolute top-10 left-10 w-16 opacity-30 animate-pulse" />
-            <img src="https://www.evoca.am/img/shape8.png" alt="shape" className="absolute bottom-10 right-10 w-20 opacity-30 animate-bounce" />
-            <img src="https://www.evoca.am/img/shape1.png" alt="shape" className="absolute top-1/2 left-5 w-12 opacity-30" />
-            <img src="https://www.evoca.am/img/shape7.png" alt="shape" className="absolute top-1/3 right-10 w-16 opacity-30" />
+          {/* 3. Culture & Video Swiper (Purple Animated Background) */}
+          <div className="bg-[#6400dc] text-white py-20 relative overflow-hidden">
+            {/* Animated Shapes */}
+            <img src="https://www.evoca.am/img/shape6.png" alt="shape" className="absolute top-10 left-10 w-16 opacity-40 animate-pulse" />
+            <img src="https://www.evoca.am/img/shape8.png" alt="shape" className="absolute bottom-10 right-10 w-24 opacity-40 animate-bounce" />
+            <img src="https://www.evoca.am/img/shape1.png" alt="shape" className="absolute top-1/2 left-8 w-14 opacity-40" />
+            <img src="https://www.evoca.am/img/shape7.png" alt="shape" className="absolute top-1/4 right-12 w-20 opacity-40" />
 
-            <div className="container mx-auto px-4 relative z-10 space-y-8">
+            <div className="container mx-auto px-4 relative z-10 space-y-10">
               <div className="max-w-3xl mx-auto text-center space-y-4">
-                <h2 className="text-3xl font-extrabold">Մշակույթ</h2>
+                <h2 className="text-3xl md:text-4xl font-black">Մշակույթ</h2>
                 <p className="text-purple-100 text-sm md:text-base leading-relaxed">
                   Evoca-ում մենք ոչ միայն անում ենք այն, ինչ սիրում ենք, այլ նաև կյանքից վերցնում ենք ամեն ինչ. Անընդհատ սովորում ենք, մեր փորձը կիսում ենք գործընկերների հետ, սպորտով ենք զբաղվում և հանգստանում: Միացեք մեզ!
                 </p>
               </div>
 
-              {/* Տեսանյութերի ցանկ / Սլայդերի սիմուլյացիա */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto pt-6">
-                {videos.map((vid, idx) => (
-                  <div key={idx} className="bg-white/10 backdrop-blur-md rounded-2xl p-3 border border-white/20 shadow-lg">
-                    <div className="aspect-video rounded-xl overflow-hidden bg-black/40 flex items-center justify-center">
-                      <iframe 
-                        src={vid} 
-                        title={`Evoca Video ${idx + 1}`} 
-                        className="w-full h-full"
-                        allowFullScreen
-                      ></iframe>
-                    </div>
+              {/* Large Video Swiper */}
+              <div className="relative max-w-4xl mx-auto flex items-center justify-center gap-4">
+                <button 
+                  onClick={prevVideo} 
+                  className="bg-white/20 hover:bg-white text-white hover:text-[#6400dc] p-4 rounded-full transition cursor-pointer text-xl z-20"
+                >
+                  ←
+                </button>
+
+                <div className="w-full bg-white rounded-3xl p-4 shadow-2xl overflow-hidden">
+                  <div className="aspect-video rounded-2xl overflow-hidden bg-black">
+                    <iframe 
+                      src={videos[currentVideoIdx].url} 
+                      title={videos[currentVideoIdx].title} 
+                      className="w-full h-full"
+                      allowFullScreen
+                    ></iframe>
                   </div>
-                ))}
+                  <h3 className="text-neutral-900 font-bold text-center mt-3 text-lg">
+                    {videos[currentVideoIdx].title}
+                  </h3>
+                </div>
+
+                <button 
+                  onClick={nextVideo} 
+                  className="bg-white/20 hover:bg-white text-white hover:text-[#6400dc] p-4 rounded-full transition cursor-pointer text-xl z-20"
+                >
+                  →
+                </button>
               </div>
             </div>
           </div>
 
-          {/* 4. Հարցրու՛ մեր թիմին */}
-          <div className="container mx-auto px-4 py-8 space-y-8">
+          {/* 4. Team Quotes Cards Swiper */}
+          <div className="container mx-auto px-4 py-8 space-y-10">
             <h2 className="text-2xl md:text-3xl font-extrabold text-neutral-900 text-center">
               Հարցրու ՛ մեր թիմին. «Ինչպիսի ՞ ն է Evoca-ն` 3 բառով»
             </h2>
 
-            {/* Քարտերի սլայդեր */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
-              {teamQuotes.map((item, idx) => (
-                <div key={idx} className="bg-[#f8f9fa] border border-gray-100 rounded-2xl p-6 flex flex-col justify-between shadow-xs hover:shadow-md transition">
-                  <div className="space-y-3">
-                    {item.words.map((word, wIdx) => (
-                      <span key={wIdx} className="block text-[#6400dc] font-bold text-lg">
-                        • {word}
-                      </span>
-                    ))}
-                  </div>
-                  <div className="mt-8 pt-4 border-t border-gray-200">
-                    <p className="font-extrabold text-neutral-900 text-sm">{item.name}</p>
-                    <p className="text-gray-500 text-xs">{item.role}</p>
-                  </div>
+            {/* Interactive Card Swiper */}
+            <div className="relative max-w-3xl mx-auto flex items-center justify-center gap-6">
+              <button 
+                onClick={prevQuote} 
+                className="bg-gray-100 hover:bg-[#6400dc] hover:text-white text-gray-700 p-4 rounded-full transition cursor-pointer text-xl"
+              >
+                ←
+              </button>
+
+              <div className="w-full bg-[#f8f9fa] border border-gray-200 rounded-3xl p-8 md:p-12 text-center shadow-md space-y-6">
+                <div className="flex justify-center flex-wrap gap-4">
+                  {teamQuotes[currentQuoteIdx].words.map((word, wIdx) => (
+                    <span key={wIdx} className="text-[#6400dc] font-black text-2xl md:text-3xl">
+                      {word}
+                    </span>
+                  ))}
                 </div>
-              ))}
+                <div className="pt-6 border-t border-gray-200">
+                  <p className="font-extrabold text-neutral-900 text-lg">{teamQuotes[currentQuoteIdx].name}</p>
+                  <p className="text-gray-500 text-sm">{teamQuotes[currentQuoteIdx].role}</p>
+                </div>
+              </div>
+
+              <button 
+                onClick={nextQuote} 
+                className="bg-gray-100 hover:bg-[#6400dc] hover:text-white text-gray-700 p-4 rounded-full transition cursor-pointer text-xl"
+              >
+                →
+              </button>
             </div>
           </div>
 
-          {/* 5. Դառնալ թիմի անդամ (Դիմումի ձևաթուղթ) */}
+          {/* 5. Application Form */}
           <div className="container mx-auto px-4 max-w-3xl bg-[#f8f9fa] border border-gray-100 rounded-3xl p-8 md:p-12 shadow-sm space-y-8">
             <div className="text-center space-y-2">
               <h2 className="text-2xl md:text-3xl font-extrabold text-neutral-900">
                 Դառնալ թիմի անդամ
               </h2>
               <p className="text-neutral-600 text-sm">
-                Եթե ցանկանում ես միանալ EvocaTEAM-ին, կարողես ուղարկել դիմում` կցելով ինքնակենսագրականը:
+                Եթե ցանկանում ես միանալ EvocaTEAM-ին, կարող ես ուղարկել դիմում` կցելով ինքնակենսագրականը:
               </p>
             </div>
 
