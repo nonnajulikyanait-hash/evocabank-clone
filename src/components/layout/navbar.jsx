@@ -14,7 +14,8 @@ export default function Navbar() {
     location.pathname.startsWith('/kariera') || 
     location.pathname === '/aravelutyunner' || 
     location.pathname === '/harcer' || 
-    location.pathname === '/yndunum';
+    location.pathname === '/yndunum' ||
+    location.pathname === '/praktika'; // ⬅️ Ավելացված է
 
   const isBusinessSection = 
     !isMerMasinPage && !isKarieraPage && (
@@ -134,12 +135,18 @@ export default function Navbar() {
         {isKarieraPage ? (
           /* "Կարիերա" էջի վերնագրի մենյու (Evoca Լայֆ / Աշխատանք և պրակտիկա) */
           <nav className="hidden lg:flex items-center gap-8 text-[13px] font-bold text-gray-800">
-            <Link to="/kariera" className="text-[#6400dc] transition">
+            <Link 
+              to="/kariera" 
+              className={`transition ${location.pathname === '/kariera' || location.pathname === '/aravelutyunner' || location.pathname === '/harcer' || location.pathname === '/yndunum' ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}
+            >
               Evoca Լայֆ
             </Link>
-            <span className="hover:text-[#6400dc] cursor-pointer transition">
+            <Link 
+              to="/praktika" 
+              className={`transition ${location.pathname === '/praktika' ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}
+            >
               Աշխատանք և պրակտիկա
-            </span>
+            </Link>
           </nav>
         ) : isMerMasinPage ? (
           /* "Մեր մասին" էջերի վերնագրի մենյու */
