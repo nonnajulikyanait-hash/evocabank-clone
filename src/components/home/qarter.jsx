@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import Navbar from '../layout/navbar';
 import EvocaOnlineMobile from './evocaonlinemobile';
 import Footer from './footer';
 
 export default function Qarter() {
+  const location = useLocation();
   const [activeTab, setActiveTab] = useState('cards'); // 'cards', 'provision', 'social'
   const [selectedCard, setSelectedCard] = useState(null);
   const [activeCardTab, setActiveCardTab] = useState('about');
@@ -233,6 +235,17 @@ export default function Qarter() {
       ]
     }
   ];
+
+  // Auto select Visa Infinite from location state if passed
+  useEffect(() => {
+    if (location.state && location.state.cardTitle) {
+      const foundCard = cardsList.find(c => c.title === location.state.cardTitle);
+      if (foundCard) {
+        setSelectedCard(foundCard);
+        setActiveTab('cards');
+      }
+    }
+  }, [location.state]);
 
   const provisionSections = [
     {
@@ -536,7 +549,7 @@ export default function Qarter() {
                 <p>Քարտերի ստացման դիմում կարող եք ներկայացնել մեր Գլխամասային գրասենյակ կամ ցանկացած մասնաճյուղ:</p>
                 <p>Վճարային քարտերի տրամադրմանը, սպասարկմանը և օգտագործմանը վերաբերող մանրամասն տեղեկատվությանը կարող եք ծանոթանալ այստեղ:</p>
                 <p className="italic text-gray-500 bg-gray-50 p-4 rounded-xl border-l-2 border-[#6400dc]">
-                  <strong>Ծանոթագրություն</strong> - Կենսաթոշակառու` անձ, ում կենսաթոշակը վճարվում է անկանխիկ եղանակով, Բանկում բացված բանկային հաշվին փոխանցելու միջոցով: Կենսաթոշակ` կենսաթոշակի, պատվովճարի, դրամական օգնության և սոցիալական ապահովության այլ ծրագրերով նախատեսված դրամական վճարների գումարը:
+                  <strong>Ծանոթագրություն․</strong> Կենսաթոշակառու` անձ, ում կենսաթոշակը վճարվում է անկանխիկ եղանակով, Բանկում բացված բանկային հաշվին փոխանցելու միջոցով: Կենսաթոշակ` կենսաթոշակի, պատվովճարի, դրամական օգնության և սոցիալական ապահովության այլ ծրագրերով նախատեսված դրամական վճարների գումարը:
                 </p>
               </div>
 

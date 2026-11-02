@@ -130,7 +130,7 @@ export default function Navbar() {
           </div>
 
           <div className="flex items-center gap-6">
-            {/* Arcatnc hayter Dropdown */}
+            {/* Առցանց հայտեր Dropdown */}
             <div 
               className="relative"
               onMouseEnter={() => setIsOnlineAppOpen(true)}
@@ -142,14 +142,14 @@ export default function Navbar() {
               {isOnlineAppOpen && (
                 <div className="absolute right-0 top-full w-52 bg-white border border-gray-100 rounded-xl shadow-lg py-2 z-50 text-neutral-800 text-xs">
                   <Link to="/smuz-varkavorum" className="block px-4 py-2 hover:bg-purple-50 hover:text-[#6400dc] transition">ՓՄՁ վարկավորում</Link>
-                  <Link to="/visa-infinite" className="block px-4 py-2 hover:bg-purple-50 hover:text-[#6400dc] transition">Visa Infinite</Link>
+                  <Link to="/qarter" state={{ cardTitle: "Visa Infinite" }} className="block px-4 py-2 hover:bg-purple-50 hover:text-[#6400dc] transition">Visa Infinite</Link>
                   <Link to="/mastercard-gold" className="block px-4 py-2 hover:bg-purple-50 hover:text-[#6400dc] transition">MasterCard Gold</Link>
                   <Link to="/visa-gold" className="block px-4 py-2 hover:bg-purple-50 hover:text-[#6400dc] transition">Visa Gold</Link>
                 </div>
               )}
             </div>
 
-            {/* Hetadardz kap Dropdown */}
+            {/* Հետադարձ կապ Dropdown */}
             <div 
               className="relative"
               onMouseEnter={() => setIsFeedbackOpen(true)}
@@ -323,7 +323,7 @@ export default function Navbar() {
         </div>
       )}
 
-      {/* Hetadardz Zangi Patver Modal (2rd nkar) */}
+      {/* Hetadardz Zangi Patver Modal */}
       {isCallModalOpen && (
         <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
           <div className="bg-white rounded-3xl max-w-lg w-full p-8 relative shadow-2xl space-y-6">
