@@ -62,6 +62,7 @@ import Kisamyakayin from './components/home/kisamyakayin';
 import MermasinTarekan from './components/home/mermasintarekan';
 import Kariera from './components/home/kariera';
 import Aravelutyunner from './components/home/aravelutyunner';
+import Harcer from './components/home/harcer';
 
 function HomePage() {
   return (
@@ -139,6 +140,7 @@ function App() {
         <Route path="/mermasintarekan" element={<MermasinTarekan />} />
         <Route path="/kariera" element={<Kariera />} />
         <Route path="/aravelutyunner" element={<Aravelutyunner />} />
+        <Route path="/harcer" element={<Harcer />} />
       </Routes>
     </Router>
   );
