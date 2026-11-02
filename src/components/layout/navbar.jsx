@@ -6,9 +6,10 @@ export default function Navbar() {
   const navigate = useNavigate();
 
   const isMerMasinPage = location.pathname.startsWith('/mer-masin');
+  const isKarieraPage = location.pathname.startsWith('/kariera');
 
   const isBusinessSection = 
-    !isMerMasinPage && (
+    !isMerMasinPage && !isKarieraPage && (
       location.pathname.startsWith('/business') || 
       location.pathname === '/biznesvarker' || 
       location.pathname === '/leasing' || 
@@ -63,7 +64,7 @@ export default function Navbar() {
           <div className="flex gap-5 font-normal">
             <Link 
               to="/" 
-              className={`pb-1 cursor-pointer transition ${!isBusinessSection && !isMerMasinPage ? 'text-[#6400dc] border-b-2 border-[#6400dc] font-semibold' : 'hover:text-[#6400dc]'}`}
+              className={`pb-1 cursor-pointer transition ${!isBusinessSection && !isMerMasinPage && !isKarieraPage ? 'text-[#6400dc] border-b-2 border-[#6400dc] font-semibold' : 'hover:text-[#6400dc]'}`}
             >
               Անհատ
             </Link>
@@ -94,10 +95,9 @@ export default function Navbar() {
             <span className="hover:text-[#6400dc] cursor-pointer transition">Նորություններ</span>
             <span className="hover:text-[#6400dc] cursor-pointer transition">Բլոգ</span>
             
-            {/* Կարիերա էջի հղումը */}
             <Link 
               to="/kariera" 
-              className={`transition ${location.pathname === '/kariera' ? 'text-[#6400dc] font-semibold border-b-2 border-[#6400dc]' : 'hover:text-[#6400dc]'}`}
+              className={`transition ${isKarieraPage ? 'text-[#6400dc] font-semibold border-b-2 border-[#6400dc]' : 'hover:text-[#6400dc]'}`}
             >
               Կարիերա
             </Link>
@@ -123,7 +123,17 @@ export default function Navbar() {
           <span className="w-2 h-2 bg-[#6400dc] rounded-full"></span>
         </Link>
 
-        {isMerMasinPage ? (
+        {isKarieraPage ? (
+          /* "Կարիերա" էջի վերնագրի մենյու (Evoca Լայֆ / Աշխատանք և պրակտիկա) */
+          <nav className="hidden lg:flex items-center gap-8 text-[13px] font-bold text-gray-800">
+            <Link to="/kariera" className="text-[#6400dc] transition">
+              Evoca Լայֆ
+            </Link>
+            <span className="hover:text-[#6400dc] cursor-pointer transition">
+              Աշխատանք և պրակտիկա
+            </span>
+          </nav>
+        ) : isMerMasinPage ? (
           /* "Մեր մասին" էջերի վերնագրի մենյու */
           <nav className="hidden lg:flex items-center gap-7 text-[13px] font-bold text-gray-800">
             <Link to="/mer-masin" className={`transition ${location.pathname === '/mer-masin' || (location.pathname.startsWith('/mer-masin/') && location.pathname !== '/hashvetvutyunner') ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>
