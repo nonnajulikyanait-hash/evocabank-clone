@@ -93,7 +93,14 @@ export default function Navbar() {
 
             <span className="hover:text-[#6400dc] cursor-pointer transition">Նորություններ</span>
             <span className="hover:text-[#6400dc] cursor-pointer transition">Բլոգ</span>
-            <span className="hover:text-[#6400dc] cursor-pointer transition">Կարիերա</span>
+            
+            {/* Կարիերա էջի հղումը */}
+            <Link 
+              to="/kariera" 
+              className={`transition ${location.pathname === '/kariera' ? 'text-[#6400dc] font-semibold border-b-2 border-[#6400dc]' : 'hover:text-[#6400dc]'}`}
+            >
+              Կարիերա
+            </Link>
           </div>
           <div className="flex items-center gap-5">
             <span className="text-[#6400dc] font-medium cursor-pointer">Անցանց հայտեր ▾</span>

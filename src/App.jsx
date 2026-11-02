@@ -59,7 +59,8 @@ import Hashvetvutyunner from './components/home/hashvetvutyunner';
 import Finansakan from './components/home/finansakan';
 import Nerdroxner from './components/home/nerdroxner';
 import Kisamyakayin from './components/home/kisamyakayin';
-import MermasinTarekan from './components/home/mermasintarekan'; // Ավելացված է Տարեկան հաշվետվությունների իմպորտը
+import MermasinTarekan from './components/home/mermasintarekan';
+import Kariera from './components/home/kariera'; // Ավելացված է Կարիերա էջի իմպորտը
 
 function HomePage() {
   return (
@@ -134,7 +135,8 @@ function App() {
         <Route path="/finansakan" element={<Finansakan />} />
         <Route path="/nerdroxner" element={<Nerdroxner />} />
         <Route path="/kisamyakayin" element={<Kisamyakayin />} />
-        <Route path="/mermasintarekan" element={<MermasinTarekan />} /> {/* Ավելացված է Տարեկան հաշվետվությունների Route-ը */}
+        <Route path="/mermasintarekan" element={<MermasinTarekan />} />
+        <Route path="/kariera" element={<Kariera />} /> {/* Ավելացված է Կարիերա էջի Route-ը */}
       </Routes>
     </Router>
   );
