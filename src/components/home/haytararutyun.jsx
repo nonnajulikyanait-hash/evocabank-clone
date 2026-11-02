@@ -4,7 +4,7 @@ import Navbar from '../layout/navbar';
 import Footer from './footer';
 
 export default function Haytararutyun() {
-  // Հայտարարությունների ամբողջական ցանկը
+  // Sapa p'anqamanta haytararutyunykunata qillqamurqani
   const announcementsList = [
     {
       id: 1,
@@ -119,9 +119,14 @@ export default function Haytararutyun() {
     }
   ];
 
-  // Accordion state
   const [openId, setOpenId] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
+
+  const itemsPerPage = 2; // Sapa p'anqamanta iskay haytararutyun
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentAnnouncements = announcementsList.slice(indexOfFirstItem, indexOfLastItem);
+  const totalPages = Math.ceil(announcementsList.length / itemsPerPage);
 
   const toggleAccordion = (id) => {
     setOpenId(openId === id ? null : id);
@@ -131,22 +136,6 @@ export default function Haytararutyun() {
     <div className="min-h-screen bg-white font-sans text-neutral-800 flex flex-col justify-between">
       <div>
         <Navbar />
-
-        {/* Մեր Մասին Ենթամենյու */}
-        <div className="bg-[#6400dc] text-white py-3 px-8 shadow-inner">
-          <div className="container mx-auto flex gap-8 text-xs font-semibold overflow-x-auto whitespace-nowrap">
-            <Link to="/mer-masin" className="text-purple-200 hover:text-white transition">Ընդհանուր</Link>
-            <Link to="/mer-masin/karucvacq" className="text-purple-200 hover:text-white transition">Կառուցվածք</Link>
-            <Link to="/mer-masin/bajneterer" className="text-purple-200 hover:text-white transition">Բաժնետերեր</Link>
-            <Link to="/mer-masin/xekavarutyun" className="text-purple-200 hover:text-white transition">Ղեկավարություն</Link>
-            <Link to="/mer-masin/gortsynkerner" className="text-purple-200 hover:text-white transition">Գործընկերներ</Link>
-            <Link to="/mer-masin/mrcanakner" className="text-purple-200 hover:text-white transition">Մրցանակներ</Link>
-            <Link to="/mer-masin/csr" className="text-purple-200 hover:text-white transition">CSR</Link>
-            <Link to="/mer-masin/xumb" className="text-purple-200 hover:text-white transition">Էվոկա ֆինանսական խումբ</Link>
-            <Link to="/hashvetvutyunner" className="text-purple-200 hover:text-white transition">Հաշվետվություններ</Link>
-            <Link to="/haytararutyunner" className="border-b-2 border-white pb-1 cursor-pointer font-black">Հայտարարություններ</Link>
-          </div>
-        </div>
 
         <main className="space-y-12 pb-20 pt-8">
           {/* Breadcrumbs */}
@@ -165,7 +154,6 @@ export default function Haytararutyun() {
                 Հայտարարություններ
               </h1>
 
-              {/* Filter / Calendar placeholder */}
               <div className="flex items-center gap-3 bg-gray-50 border border-gray-200 rounded-xl px-4 py-2 text-sm text-gray-600">
                 <span>📅</span>
                 <span className="text-gray-400">Սկսած</span>
@@ -176,7 +164,6 @@ export default function Haytararutyun() {
 
             {/* Main Content Layout with Background Graphics */}
             <div className="relative">
-              {/* Decorative Background Shapes (Matching visual reference) */}
               <div className="absolute -left-16 top-10 w-48 h-48 bg-[#fff3cd]/40 rounded-full blur-2xl pointer-events-none"></div>
               <div className="absolute left-12 top-32 z-0 hidden lg:block">
                 <img 
@@ -188,7 +175,7 @@ export default function Haytararutyun() {
 
               {/* Announcements Accordion List */}
               <div className="relative z-10 lg:ml-80 space-y-4">
-                {announcementsList.map((item) => (
+                {currentAnnouncements.map((item) => (
                   <div 
                     key={item.id} 
                     className="border border-gray-200 rounded-2xl overflow-hidden shadow-xs bg-white transition hover:border-[#6400dc]/50"
@@ -214,12 +201,15 @@ export default function Haytararutyun() {
                   </div>
                 ))}
 
-                {/* Pagination (1 to 8 as per design) */}
+                {/* Pagination */}
                 <div className="flex items-center justify-center gap-2 pt-8">
-                  {[1, 2, 3, 4, 5, 6, 7, 8].map((num) => (
+                  {Array.from({ length: totalPages }, (_, i) => i + 1).map((num) => (
                     <button
                       key={num}
-                      onClick={() => setCurrentPage(num)}
+                      onClick={() => {
+                        setCurrentPage(num);
+                        setOpenId(null);
+                      }}
                       className={`w-9 h-9 rounded-lg font-bold text-sm transition cursor-pointer flex items-center justify-center ${
                         currentPage === num 
                           ? 'bg-[#6400dc] text-white shadow-sm' 
@@ -229,7 +219,15 @@ export default function Haytararutyun() {
                       {num}
                     </button>
                   ))}
-                  <button className="w-9 h-9 rounded-lg bg-gray-100 text-gray-600 hover:bg-gray-200 font-bold text-sm flex items-center justify-center cursor-pointer">
+                  <button 
+                    onClick={() => {
+                      if (currentPage < totalPages) {
+                        setCurrentPage(currentPage + 1);
+                        setOpenId(null);
+                      }
+                    }}
+                    className="w-9 h-9 rounded-lg bg-gray-100 text-gray-600 hover:bg-gray-200 font-bold text-sm flex items-center justify-center cursor-pointer"
+                  >
                     →
                   </button>
                 </div>
