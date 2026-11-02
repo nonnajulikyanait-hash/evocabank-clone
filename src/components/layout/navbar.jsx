@@ -8,6 +8,17 @@ export default function Navbar() {
   // Dropdown states
   const [isOnlineAppOpen, setIsOnlineAppOpen] = useState(false);
   const [isFeedbackOpen, setIsFeedbackOpen] = useState(false);
+  
+  // Modal state (hetadardz zangi patver)
+  const [isCallModalOpen, setIsCallModalOpen] = useState(false);
+  const [phoneNumber, setPhoneNumber] = useState('');
+
+  const handleCallSubmit = (e) => {
+    e.preventDefault();
+    alert(`Zangi patver@ uxxarkvec: +374 ${phoneNumber}`);
+    setIsCallModalOpen(false);
+    setPhoneNumber('');
+  };
 
   const isMerMasinPage = 
     location.pathname.startsWith('/mer-masin') || 
@@ -119,7 +130,7 @@ export default function Navbar() {
           </div>
 
           <div className="flex items-center gap-6">
-            {/* Առցանց հայտեր Dropdown */}
+            {/* Arcatnc hayter Dropdown */}
             <div 
               className="relative"
               onMouseEnter={() => setIsOnlineAppOpen(true)}
@@ -138,7 +149,7 @@ export default function Navbar() {
               )}
             </div>
 
-            {/* Հետադարձ կապ Dropdown */}
+            {/* Hetadardz kap Dropdown */}
             <div 
               className="relative"
               onMouseEnter={() => setIsFeedbackOpen(true)}
@@ -153,7 +164,15 @@ export default function Navbar() {
                   <div className="px-4 py-2 hover:bg-purple-50 hover:text-[#6400dc] transition cursor-pointer">+374 98 205555</div>
                   <div className="px-4 py-2 hover:bg-purple-50 hover:text-[#6400dc] transition cursor-pointer">+374 99 605555</div>
                   <div className="px-4 py-2 hover:bg-purple-50 hover:text-[#6400dc] transition cursor-pointer border-t border-gray-100 mt-1 pt-2">8444</div>
-                  <div className="px-4 py-2 hover:bg-purple-50 hover:text-[#6400dc] transition cursor-pointer text-[#6400dc]">Պատվիրել զանգ</div>
+                  <div 
+                    onClick={() => {
+                      setIsFeedbackOpen(false);
+                      setIsCallModalOpen(true);
+                    }}
+                    className="px-4 py-2 hover:bg-purple-50 hover:text-[#6400dc] transition cursor-pointer text-[#6400dc]"
+                  >
+                    Պատվիրել զանգ
+                  </div>
                 </div>
               )}
             </div>
@@ -300,6 +319,53 @@ export default function Navbar() {
                 {location.pathname === '/business-deposits' ? 'Բիզնես ավանդներ' : 'Բիզնես վարկեր'}
               </div>
             )}
+          </div>
+        </div>
+      )}
+
+      {/* Hetadardz Zangi Patver Modal (2rd nkar) */}
+      {isCallModalOpen && (
+        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-3xl max-w-lg w-full p-8 relative shadow-2xl space-y-6">
+            <button 
+              onClick={() => setIsCallModalOpen(false)}
+              className="absolute top-6 right-6 text-gray-400 hover:text-gray-700 text-xl font-bold cursor-pointer"
+            >
+              ✕
+            </button>
+
+            <div className="space-y-2">
+              <h3 className="text-xl font-black text-neutral-950">Հետզանգի պատվեր</h3>
+              <p className="text-gray-500 text-xs leading-relaxed">
+                Խնդրում ենք մուտքագրել Ձեր հեռախոսահամարը, և մեր մասնագետները հնարավորինս արագ կապ կհաստատեն Ձեզ հետ:
+              </p>
+            </div>
+
+            <form onSubmit={handleCallSubmit} className="space-y-6">
+              <div className="space-y-2">
+                <label className="text-xs font-bold text-neutral-700 block">Հեռախոսահամար</label>
+                <div className="flex">
+                  <span className="bg-gray-100 border border-r-0 border-gray-300 rounded-l-xl px-3 py-3 text-xs text-gray-600 flex items-center font-bold">+374</span>
+                  <input 
+                    type="tel" 
+                    required
+                    placeholder="XX XX XX XX"
+                    value={phoneNumber}
+                    onChange={(e) => setPhoneNumber(e.target.value)}
+                    className="w-full border border-gray-300 rounded-r-xl px-4 py-3 text-sm focus:outline-none focus:border-[#6400dc]" 
+                  />
+                </div>
+              </div>
+
+              <div className="flex justify-center">
+                <button 
+                  type="submit"
+                  className="bg-[#6400dc] hover:bg-opacity-90 text-white font-bold text-xs uppercase px-8 py-3.5 rounded-xl transition shadow-sm cursor-pointer w-full"
+                >
+                  Հաստատել
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       )}
