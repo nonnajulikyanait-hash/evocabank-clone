@@ -66,6 +66,7 @@ import Harcer from './components/home/harcer';
 import Yndunum from './components/home/yndunum'; 
 import Haytararutyun from './components/home/haytararutyun';
 import Praktika from './components/home/praktika';
+import Usumnakan from './components/home/usumnakan';
 
 function HomePage() {
   return (
@@ -147,6 +148,7 @@ function App() {
         <Route path="/yndunum" element={<Yndunum />} />
         <Route path="/haytararutyunner" element={<Haytararutyun />} /> 
         <Route path="/praktika" element={<Praktika />} />
+        <Route path="/usumnakan" element={<Usumnakan />} />
       </Routes>
     </Router>
   );
