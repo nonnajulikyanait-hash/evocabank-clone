@@ -41,7 +41,6 @@ export default function Kariera() {
     { title: 'Evocabank Team', url: 'https://www.youtube.com/embed/VNVSaTULcBk' }
   ];
 
-  // Swiper State management
   const [currentVideoIdx, setCurrentVideoIdx] = useState(0);
   const [currentQuoteIdx, setCurrentQuoteIdx] = useState(0);
 
@@ -109,7 +108,6 @@ export default function Kariera() {
 
           {/* 3. Culture & Video Swiper (Purple Animated Background) */}
           <div className="bg-[#6400dc] text-white py-20 relative overflow-hidden">
-            {/* Animated Shapes */}
             <img src="https://www.evoca.am/img/shape6.png" alt="shape" className="absolute top-10 left-10 w-16 opacity-40 animate-pulse" />
             <img src="https://www.evoca.am/img/shape8.png" alt="shape" className="absolute bottom-10 right-10 w-24 opacity-40 animate-bounce" />
             <img src="https://www.evoca.am/img/shape1.png" alt="shape" className="absolute top-1/2 left-8 w-14 opacity-40" />
@@ -162,7 +160,6 @@ export default function Kariera() {
               Հարցրու ՛ մեր թիմին. «Ինչպիսի ՞ ն է Evoca-ն` 3 բառով»
             </h2>
 
-            {/* Interactive Card Swiper */}
             <div className="relative max-w-3xl mx-auto flex items-center justify-center gap-6">
               <button 
                 onClick={prevQuote} 
@@ -259,7 +256,7 @@ export default function Kariera() {
                 <div className="flex items-center gap-4">
                   <div className="bg-white border border-gray-200 rounded-xl p-3 flex items-center justify-center">
                     <img 
-                      src="https://accounts.zoho.com/static/showcaptcha?digest=1_C_3a7387f57aeb4a95c073e6cbd5a5b77c53b6d14de1cf87b3014acf4b8d780678348bf3fc0057957aa6b9b741e931792c56a0d2e9a714b8158788e33e65322b3d" 
+                      src="https://accounts.zoho.com/static/showcaptcha?digest=1_C_c650227a5d5f803deda631352226140fab644e31fffbddd9a8f2c43683e1676dfed64664d53e4e0fc68fdc773c30f2568394c4cb889fe89cac5d77f7187f1ad7" 
                       alt="Captcha" 
                       className="h-10 object-contain"
                     />

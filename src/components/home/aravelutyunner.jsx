@@ -59,7 +59,7 @@ export default function Aravelutyunner() {
         </div>
 
         <main className="space-y-16 pb-16">
-          {/* 1. Full-Width Hero Banner (Առավելություններ) */}
+          {/* 1. Full-Width Hero Banner */}
           <div 
             className="relative w-full h-[500px] md:h-[600px] bg-cover bg-center overflow-hidden flex items-end md:items-center justify-start px-6 md:px-24 pb-8 md:pb-0"
             style={{ backgroundImage: `url('https://www.evoca.am/images-cache/menu/1/16194612394395/1920x634.jpg')` }}
@@ -96,7 +96,7 @@ export default function Aravelutyunner() {
             </div>
           </div>
 
-          {/* 3. Դառնալ թիմի անդամ (Դիմումի ձևաթուղթ) */}
+          {/* 3. Application Form */}
           <div className="container mx-auto px-4 max-w-3xl bg-[#f8f9fa] border border-gray-100 rounded-3xl p-8 md:p-12 shadow-sm space-y-8">
             <div className="text-center space-y-2">
               <h2 className="text-2xl md:text-3xl font-extrabold text-neutral-900">
@@ -161,7 +161,7 @@ export default function Aravelutyunner() {
                 <div className="flex items-center gap-4">
                   <div className="bg-white border border-gray-200 rounded-xl p-3 flex items-center justify-center">
                     <img 
-                      src="https://accounts.zoho.com/static/showcaptcha?digest=1_C_3a7387f57aeb4a95c073e6cbd5a5b77c53b6d14de1cf87b3014acf4b8d780678348bf3fc0057957aa6b9b741e931792c56a0d2e9a714b8158788e33e65322b3d" 
+                      src="https://accounts.zoho.com/static/showcaptcha?digest=1_C_c650227a5d5f803deda631352226140fab644e31fffbddd9a8f2c43683e1676dfed64664d53e4e0fc68fdc773c30f2568394c4cb889fe89cac5d77f7187f1ad7" 
                       alt="Captcha" 
                       className="h-10 object-contain"
                     />
