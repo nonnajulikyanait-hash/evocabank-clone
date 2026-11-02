@@ -5,8 +5,12 @@ export default function Navbar() {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const isMerMasinPage = location.pathname.startsWith('/mer-masin');
-  const isKarieraPage = location.pathname.startsWith('/kariera');
+  const isMerMasinPage = location.pathname.startsWith('/mer-masin') || location.pathname === '/haytararutyunner';
+  const isKarieraPage = 
+    location.pathname.startsWith('/kariera') || 
+    location.pathname === '/aravelutyunner' || 
+    location.pathname === '/harcer' || 
+    location.pathname === '/yndunum';
 
   const isBusinessSection = 
     !isMerMasinPage && !isKarieraPage && (
@@ -142,7 +146,9 @@ export default function Navbar() {
             <Link to="/hashvetvutyunner" className={`transition ${location.pathname === '/hashvetvutyunner' ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>
               Հաշվետվություններ
             </Link>
-            <span className="hover:text-[#6400dc] cursor-pointer transition">Հայտարարություններ</span>
+            <Link to="/haytararutyunner" className={`transition ${location.pathname === '/haytararutyunner' ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>
+              Հայտարարություններ
+            </Link>
           </nav>
         ) : isBusinessSection ? (
           <nav className="hidden lg:flex items-center gap-7 text-[13px] font-bold text-gray-800">
