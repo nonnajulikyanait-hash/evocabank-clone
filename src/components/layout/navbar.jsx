@@ -5,7 +5,11 @@ export default function Navbar() {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const isMerMasinPage = location.pathname.startsWith('/mer-masin') || location.pathname === '/haytararutyunner';
+  const isMerMasinPage = 
+    location.pathname.startsWith('/mer-masin') || 
+    location.pathname === '/hashvetvutyunner' || 
+    location.pathname === '/haytararutyunner';
+
   const isKarieraPage = 
     location.pathname.startsWith('/kariera') || 
     location.pathname === '/aravelutyunner' || 
