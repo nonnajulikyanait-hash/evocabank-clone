@@ -4,7 +4,6 @@ import Navbar from '../layout/navbar';
 import Footer from './footer';
 
 export default function Praktika() {
-  // Թափուր աշխատատեղերի ցանկը
   const jobsList = [
     {
       id: 1,
@@ -57,29 +56,18 @@ export default function Praktika() {
         'ճամփորդական ապահովագրություն',
         'Evoca-ի պրոդուկտների և ծառայությունների արտոնյալ պայմաններ',
         'տոնական և տարեվերջյան բոնուսներ',
-        'բոնուսներ ամուսնության կամ երեխայի ծննդյան առթիվ',
         'վճարվող հանգստյան օրեր',
-        'սպորտ փաթեթ',
-        'անգլերեն լեզվի դասընթացներ',
-        'շարունակական կրթության և զարգացման լայն հնարավորություններ'
+        'սպորտ փաթեթ'
       ],
       responsibilities: [
         'ՓՄՁ հաճախորդների ներգրավում, գործնական հարաբերությունների հաստատում և պահպանում',
         'վարկային պորտֆելի սպասարկում',
-        'վարկային գործի կազմում, վարկային հայտի ներկայացում վարկային կոմիտեներին և ձևակերպման գործընթացի կառավարում',
-        'խնդրահարույց հաճախորդների հետ բանկացությունների վարում',
-        'վարչության պետի և բաժնի պետի այլ հանձնարարականների կատարում'
+        'վարկային գործի կազմում, վարկային հայտի ներկայացում վարկային կոմիտեներին'
       ],
       requirements: [
         'բարձրագույն կրթություն տնտեսագիտության, հաշվապահության կամ ֆինանսների ոլորտում',
         'ՓՄՁ հաճախորդների սպասարկման և վարկավորման առնվազն 2 տարվա աշխատանքային փորձ',
-        'ՀՀ բանկային օրենսդրության, վարկավորման գործընթացների գերազանց իմացություն',
-        'ՀԾ-բանկ 4.0 իմացություն',
-        'հաղորդակցման գերազանց հմտություններ',
-        'հաճախորդների ներգրավման և վաճառքների իրականացման հմտություններ',
-        'բանակցությունների վարման և կոնֆլիկտների կառավարման հմտություններ',
-        'վերլուծական ճկուն միտք',
-        'ռուսերենի և անգլերենի լավ իմացություն'
+        'ՀՀ բանկային օրենսդրության իմացություն'
       ],
       email: 'cv@evoca.am',
       subject: 'ՓՄՁ վարկավորման ավագ վարկային մասնագետ'
@@ -89,90 +77,12 @@ export default function Praktika() {
       title: 'Վարկերի հաստատման մասնագետ (Իրավաբանական անձանց)',
       deadline: '02.11.2026',
       location: 'Երևան, Գլխամասային գրասենյակ',
-      description: `Evoca-ն փնտրում է վարկերի հաստատման մասնագետ, ով պատասխանատու կլինի իրավաբանական անձանց և ԱՁ հաճախորդների վարկային հայտերի ուսումնասիրության և գնահատման, հաճախորդների վարկունակության ու վարկերի ապահովվածության վերլուծության, ինչպես նաև իր լիազորությունների շրջանակներում որոշումների և եզրակացությունների տրամադրման համար։`,
-      benefits: [
-        'բժշկական ապահովագրություն',
-        'ճամփորդական ապահովագրություն',
-        'Evoca-ի պրոդուկտների և ծառայությունների արտոնյալ պայմաններ',
-        'տոնական և տարեվերջյան բոնուսներ',
-        'վճարվող հանգստյան օրեր',
-        'սպորտ փաթեթ',
-        'անգլերեն լեզվի դասընթացներ'
-      ],
-      responsibilities: [
-        'իրավաբանական անձանց և ԱՁ հաճախորդների վարկային հայտերի դիտարկում և ուսումնասիրություն',
-        'իրավաբանական անձանց և ԱՁ հաճախորդների վարկային հայտերի վերաբերյալ, իր լիազորությունների շրջանակներում, որոշումների կայացում',
-        'իրավաբանական անձանց և ԱՁ հաճախորդների վարկային հայտերի վերաբերյալ, իր լիազորությունների շրջանակներում, եզրակացությունների ներկայացում',
-        'բաժնի ղեկավարի այլ հանձնարարությունների իրականացում'
-      ],
-      requirements: [
-        'բարձրագույն կրթություն տնտեսագիտության, ֆինանսների կամ հարակից ոլորտում',
-        'առնվազն երկու տարվա աշխատանքային փորձ որպես վարկային մասնագետ (բիզնես վարկավորման ոլորտում)',
-        'վերլուծական մտածողություն և փաստերը համադրելու կարողություն',
-        'բարձր ծանրաբեռնվածության պայմաններում արդյունավետ աշխատելու և ժամկետները պահպանելու ունակություն',
-        'միջազգային մասնագիտական որակավորումների առկայությունը դիտվում է որպես առավելություն'
-      ],
+      description: `Evoca-ն փնտրում է վարկերի հաստատման մասնագետ, ով պատասխանատու կլինի իրավաբանական անձանց և ԱՁ հաճախորդների վարկային հայտերի ուսումնասիրության և գնահատման համար։`,
+      benefits: ['բժշկական ապահովագրություն', 'ճամփորդական ապահովագրություն'],
+      responsibilities: ['իրավաբանական անձանց վարկային հայտերի դիտարկում և ուսումնասիրություն'],
+      requirements: ['բարձրագույն կրթություն տնտեսագիտության կամ ֆինանսների ոլորտում'],
       email: 'cv@evoca.am',
       subject: 'Վարկերի հաստատման մասնագետ (Իրավաբանական անձանց)'
-    },
-    {
-      id: 4,
-      title: 'Համապատասխանության ապահովման մասնագետ',
-      deadline: '28.10.2026',
-      location: 'Երևան, Գլխամասային գրասենյակ',
-      description: `Evoca-ն փնտրում է Համապատասխանության ապահովման պատասխանատու, ով պատասխանատու կլինի օրենսդրական պահանջների մշտադիտարկման և համապատասխանության ապահովման քաղաքականությունից բխող այլ գործառույթների համար։`,
-      benefits: [
-        'բժշկական ապահովագրություն',
-        'ճամփորդական ապահովագրություն',
-        'Evoca-ի պրոդուկտների և ծառայությունների արտոնյալ պայմաններ',
-        'տոնական և տարեվերջյան բոնուսներ',
-        'վճարվող հանգստյան օրեր',
-        'սպորտ փաթեթ'
-      ],
-      responsibilities: [
-        'օրենսդրական պահանջների մշտադիտարկում, օրենսդրական բացերի բացահայտում և դրանց հիման վրա առաջարկությունների մշակում',
-        'նոր կարգավորումների վերլուծություն, դրանց կիրառելիության և Բանկի գործընթացների վրա ազդեցության գնահատում',
-        'Բանկի ներքին իրավական ակտերի նախագծերի նախնական ուսումնասիրություն և համապատասխանության ապահովում'
-      ],
-      requirements: [
-        'բարձրագույն կրթություն տնտեսագիտության, կառավարման կամ իրավաբանական ոլորտում',
-        'առնվազն երկու տարվա աշխատանքային փորձ բանկային կամ ֆինանսական ոլորտում',
-        'ՀՀ բանկային օրենսդրության և Կենտրոնական բանկի նորմատիվ իրավական ակտերի խորացված իմացություն',
-        'հայերեն, ռուսերեն և անգլերեն լեզուների գերազանց իմացություն'
-      ],
-      email: 'cv@evoca.am',
-      subject: 'Համապատասխանության ապահովման մասնագետ'
-    },
-    {
-      id: 5,
-      title: 'Ավագ Հաշվապահ',
-      deadline: '02.11.2026',
-      location: 'Երևան, Գլխամասային գրասենյակ',
-      description: `Evoca-ն փնտրում է փորձառու ավագ հաշվապահ, ով պատասխանատու կլինի հաշվապահական հաշվառման առանձին ուղղության վարման, հաշվապահական գործընթացների պատշաճ իրականացման, ինչպես նաև ֆինանսական տվյալների ճշգրտության ու ամբողջականության ապահովման համար։`,
-      benefits: [
-        'բժշկական ապահովագրություն',
-        'ճամփորդական ապահովագրություն',
-        'Evoca-ի պրոդուկտների և ծառայությունների արտոնյալ պայմաններ',
-        'տոնական և տարեվերջյան բոնուսներ',
-        'վճարվող հանգստյան օրեր',
-        'սպորտ փաթեթ',
-        'անգլերեն լեզվի դասընթացներ'
-      ],
-      responsibilities: [
-        'վարել դեբիտորական և կրեդիտորական պարտքերի հաշվառում',
-        'իրականացնել հիմնական միջոցների, լիզինգի կամ աշխատավարձի հաշվառում՝ ըստ բաշխված ուղղության',
-        'ապահովել հաշվապահական գործառնությունների ճշգրիտ և ժամանակին հաշվառում',
-        'մասնակցել ֆինանսական հաշվետվությունների կազմման գործընթացին'
-      ],
-      requirements: [
-        'բարձրագույն կրթություն տնտեսագիտության, հաշվապահության կամ ֆինանսների ոլորտում',
-        'առնվազն 2 տարվա աշխատանքային փորձ որպես հաշվապահ',
-        'ՀԾ հաշվապահ ծրագրի իմացություն',
-        'MC office ծրագրերի իմացություն',
-        'ռուսերեն և անգլերեն լեզուների իմացություն'
-      ],
-      email: 'cv@evoca.am',
-      subject: 'Ավագ հաշվապահ'
     }
   ];
 
@@ -183,18 +93,18 @@ export default function Praktika() {
       <div>
         <Navbar />
 
-        {/* Կարիերայի ենթամենյու */}
+        {/* Manushakaguyn Sub-bar (Աշխատանք Evoca-ում | Ուսումնական պրակտիկա | EvocaBRIDGE) */}
         <div className="bg-[#6400dc] text-white py-3 px-8 shadow-inner">
           <div className="container mx-auto flex gap-8 text-xs font-semibold overflow-x-auto whitespace-nowrap">
-            <Link to="/kariera" className="text-purple-200 hover:text-white transition">Աշխատանք Evoca-ում</Link>
-            <Link to="/praktika" className="border-b-2 border-white pb-1 cursor-pointer font-black">Ուսումնական պրակտիկա</Link>
+            <Link to="/praktika" className="border-b-2 border-white pb-1 cursor-pointer font-black">Աշխատանք Evoca-ում</Link>
+            <span className="text-purple-200 hover:text-white transition cursor-pointer">Ուսումնական պրակտիկա</span>
             <span className="text-purple-200 hover:text-white transition cursor-pointer">EvocaBRIDGE</span>
           </div>
         </div>
 
         <main className="space-y-16 pb-20">
           {selectedJob ? (
-            /* Աշխատատեղի մանրամասն էջ */
+            /* Ashxatatxeri manramasn ej */
             <div className="container mx-auto px-4 max-w-4xl pt-8 space-y-8">
               <button 
                 onClick={() => setSelectedJob(null)}
@@ -255,13 +165,13 @@ export default function Praktika() {
               </div>
             </div>
           ) : (
-            /* Հիմնական Պրակտիկա / Աշխատանք էջ */
+            /* Main "Ashxatanq Evoca-um" view */
             <>
               {/* Top Banner with Image */}
               <div className="relative w-full h-[350px] md:h-[450px] overflow-hidden bg-gray-900">
                 <img 
                   src="https://www.evoca.am/images-cache/menu/1/16194611253542/1920x634.jpg" 
-                  alt="Evoca Careers" 
+                  alt="Ashxatanq Evoca-um" 
                   className="w-full h-full object-cover opacity-80"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-8 md:p-16">
@@ -273,7 +183,7 @@ export default function Praktika() {
                 </div>
               </div>
 
-              {/* What kind of teammate we are looking for */}
+              {/* Inčpisi timakic enq menq pntrum */}
               <div className="container mx-auto px-4 max-w-6xl text-center space-y-12 pt-8">
                 <h2 className="text-2xl md:text-3xl font-black text-neutral-950">
                   Ինչպիսի թիմակից ենք մենք փնտրում ?
@@ -282,42 +192,42 @@ export default function Praktika() {
                 <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
                   <div className="flex flex-col items-center space-y-4">
                     <div className="w-24 h-24 bg-purple-50 rounded-full flex items-center justify-center p-4 shadow-sm">
-                      <img src="https://www.evoca.am/images-cache/applicant_features/1/16194199747856/120x120.png" alt="Մոտիվացված" className="w-14 h-14 object-contain" />
+                      <img src="https://www.evoca.am/images-cache/applicant_features/1/16194199747856/120x120.png" alt="Motivacvat" className="w-14 h-14 object-contain" />
                     </div>
                     <span className="font-bold text-sm text-neutral-800">Մոտիվացված</span>
                   </div>
 
                   <div className="flex flex-col items-center space-y-4">
                     <div className="w-24 h-24 bg-purple-50 rounded-full flex items-center justify-center p-4 shadow-sm">
-                      <img src="https://www.evoca.am/images-cache/applicant_features/1/16194205883017/120x120.png" alt="Նպատակասլաց" className="w-14 h-14 object-contain" />
+                      <img src="https://www.evoca.am/images-cache/applicant_features/1/16194205883017/120x120.png" alt="Npatakaslac" className="w-14 h-14 object-contain" />
                     </div>
                     <span className="font-bold text-sm text-neutral-800">Նպատակասլաց</span>
                   </div>
 
                   <div className="flex flex-col items-center space-y-4">
                     <div className="w-24 h-24 bg-purple-50 rounded-full flex items-center justify-center p-4 shadow-sm">
-                      <img src="https://www.evoca.am/images-cache/applicant_features/1/16194206332591/120x120.png" alt="Արագ և ճկուն" className="w-14 h-14 object-contain" />
+                      <img src="https://www.evoca.am/images-cache/applicant_features/1/16194206332591/120x120.png" alt="Arag ev chkun" className="w-14 h-14 object-contain" />
                     </div>
                     <span className="font-bold text-sm text-neutral-800">Արագ և ճկուն</span>
                   </div>
 
                   <div className="flex flex-col items-center space-y-4">
                     <div className="w-24 h-24 bg-purple-50 rounded-full flex items-center justify-center p-4 shadow-sm">
-                      <img src="https://www.evoca.am/images-cache/applicant_features/1/16194207496218/120x120.png" alt="Իր աշխատանքը շա~տ սիրող" className="w-14 h-14 object-contain" />
+                      <img src="https://www.evoca.am/images-cache/applicant_features/1/16194207496218/120x120.png" alt="Ir ashxatanqy shat sirox" className="w-14 h-14 object-contain" />
                     </div>
                     <span className="font-bold text-sm text-neutral-800">Իր աշխատանքը շա~տ սիրող</span>
                   </div>
 
                   <div className="flex flex-col items-center space-y-4 col-span-2 md:col-span-1">
                     <div className="w-24 h-24 bg-purple-50 rounded-full flex items-center justify-center p-4 shadow-sm">
-                      <img src="https://www.evoca.am/images-cache/applicant_features/1/16194208269015/120x120.png" alt="Նորարարական և կրեատիվ լուծումներ գտնող" className="w-14 h-14 object-contain" />
+                      <img src="https://www.evoca.am/images-cache/applicant_features/1/16194208269015/120x120.png" alt="Norarakan ev kreativ" className="w-14 h-14 object-contain" />
                     </div>
                     <span className="font-bold text-sm text-neutral-800">Նորարարական և կրեատիվ լուծումներ գտնող</span>
                   </div>
                 </div>
               </div>
 
-              {/* Vacancies List */}
+              {/* Vacancies Cards List */}
               <div className="container mx-auto px-4 max-w-4xl space-y-8 pt-12">
                 <div className="flex justify-between items-center">
                   <h2 className="text-2xl md:text-3xl font-black text-neutral-950">
