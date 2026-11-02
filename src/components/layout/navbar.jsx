@@ -143,8 +143,8 @@ export default function Navbar() {
                 <div className="absolute right-0 top-full w-52 bg-white border border-gray-100 rounded-xl shadow-lg py-2 z-50 text-neutral-800 text-xs">
                   <Link to="/smuz-varkavorum" className="block px-4 py-2 hover:bg-purple-50 hover:text-[#6400dc] transition">ՓՄՁ վարկավորում</Link>
                   <Link to="/qarter" state={{ cardTitle: "Visa Infinite" }} className="block px-4 py-2 hover:bg-purple-50 hover:text-[#6400dc] transition">Visa Infinite</Link>
-                  <Link to="/mastercard-gold" className="block px-4 py-2 hover:bg-purple-50 hover:text-[#6400dc] transition">MasterCard Gold</Link>
-                  <Link to="/visa-gold" className="block px-4 py-2 hover:bg-purple-50 hover:text-[#6400dc] transition">Visa Gold</Link>
+                  <Link to="/qarter" state={{ cardTitle: "Mastercard Gold" }} className="block px-4 py-2 hover:bg-purple-50 hover:text-[#6400dc] transition">MasterCard Gold</Link>
+                  <Link to="/qarter" state={{ cardTitle: "Visa Gold" }} className="block px-4 py-2 hover:bg-purple-50 hover:text-[#6400dc] transition">Visa Gold</Link>
                 </div>
               )}
             </div>
