@@ -98,7 +98,7 @@ export default function Praktika() {
           <div className="container mx-auto flex gap-8 text-xs font-semibold overflow-x-auto whitespace-nowrap">
             <Link to="/praktika" className="border-b-2 border-white pb-1 cursor-pointer font-black">Աշխատանք Evoca-ում</Link>
             <Link to="/usumnakan" className="text-purple-200 hover:text-white transition cursor-pointer">Ուսումնական պրակտիկա</Link>
-            <span className="text-purple-200 hover:text-white transition cursor-pointer">EvocaBRIDGE</span>
+            <Link to="/evocabridge" className="text-purple-200 hover:text-white transition cursor-pointer">EvocaBRIDGE</Link>
           </div>
         </div>
 

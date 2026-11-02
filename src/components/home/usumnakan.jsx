@@ -43,7 +43,7 @@ export default function Usumnakan() {
           <div className="container mx-auto flex gap-8 text-xs font-semibold overflow-x-auto whitespace-nowrap">
             <Link to="/praktika" className="text-purple-200 hover:text-white transition">Աշխատանք Evoca-ում</Link>
             <Link to="/usumnakan" className="border-b-2 border-white pb-1 cursor-pointer font-black">Ուսումնական պրակտիկա</Link>
-            <span className="text-purple-200 hover:text-white transition cursor-pointer">EvocaBRIDGE</span>
+            <Link to="/evocabridge" className="text-purple-200 hover:text-white transition">EvocaBRIDGE</Link>
           </div>
         </div>
 
@@ -372,7 +372,7 @@ export default function Usumnakan() {
                     type="submit"
                     className="bg-[#6400dc] hover:bg-opacity-90 text-white font-bold text-sm px-8 py-4 rounded-xl transition shadow-sm cursor-pointer"
                   >
-                    Ես ուզում եզ աշխատել Evoca-ում :)
+                    Ես ուզում եմ աշխատել Evoca-ում :)
                   </button>
                 </div>
               </form>
