@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 export default function Navbar() {
   const location = useLocation();
   const navigate = useNavigate();
+
+  // Dropdown states
+  const [isOnlineAppOpen, setIsOnlineAppOpen] = useState(false);
+  const [isFeedbackOpen, setIsFeedbackOpen] = useState(false);
 
   const isMerMasinPage = 
     location.pathname.startsWith('/mer-masin') || 
@@ -17,7 +21,7 @@ export default function Navbar() {
     location.pathname === '/yndunum' ||
     location.pathname === '/praktika' ||
     location.pathname === '/usumnakan' ||
-    location.pathname === '/evocabridge'; // ⬅️ Ավելացված են բոլոր կարիերայի ենթաէջերը
+    location.pathname === '/evocabridge';
 
   const isBusinessSection = 
     !isMerMasinPage && !isKarieraPage && (
@@ -113,9 +117,47 @@ export default function Navbar() {
               Կարիերա
             </Link>
           </div>
-          <div className="flex items-center gap-5">
-            <span className="text-[#6400dc] font-medium cursor-pointer">Անցանց հայտեր ▾</span>
-            <span className="text-[#6400dc] font-medium cursor-pointer">Հետադարձ կապ ▾</span>
+
+          <div className="flex items-center gap-6">
+            {/* Առցանց հայտեր Dropdown */}
+            <div 
+              className="relative"
+              onMouseEnter={() => setIsOnlineAppOpen(true)}
+              onMouseLeave={() => setIsOnlineAppOpen(false)}
+            >
+              <span className="text-[#6400dc] font-medium cursor-pointer flex items-center gap-1 select-none py-1">
+                Առցանց հայտեր ▾
+              </span>
+              {isOnlineAppOpen && (
+                <div className="absolute right-0 top-full w-52 bg-white border border-gray-100 rounded-xl shadow-lg py-2 z-50 text-neutral-800 text-xs">
+                  <Link to="/smuz-varkavorum" className="block px-4 py-2 hover:bg-purple-50 hover:text-[#6400dc] transition">ՓՄՁ վարկավորում</Link>
+                  <Link to="/visa-infinite" className="block px-4 py-2 hover:bg-purple-50 hover:text-[#6400dc] transition">Visa Infinite</Link>
+                  <Link to="/mastercard-gold" className="block px-4 py-2 hover:bg-purple-50 hover:text-[#6400dc] transition">MasterCard Gold</Link>
+                  <Link to="/visa-gold" className="block px-4 py-2 hover:bg-purple-50 hover:text-[#6400dc] transition">Visa Gold</Link>
+                </div>
+              )}
+            </div>
+
+            {/* Հետադարձ կապ Dropdown */}
+            <div 
+              className="relative"
+              onMouseEnter={() => setIsFeedbackOpen(true)}
+              onMouseLeave={() => setIsFeedbackOpen(false)}
+            >
+              <span className="text-[#6400dc] font-medium cursor-pointer flex items-center gap-1 select-none py-1">
+                Հետադարձ կապ ▾
+              </span>
+              {isFeedbackOpen && (
+                <div className="absolute right-0 top-full w-48 bg-white border border-gray-100 rounded-xl shadow-lg py-2 z-50 text-neutral-800 text-xs font-semibold">
+                  <div className="px-4 py-2 hover:bg-purple-50 hover:text-[#6400dc] transition cursor-pointer">+374 10 605555</div>
+                  <div className="px-4 py-2 hover:bg-purple-50 hover:text-[#6400dc] transition cursor-pointer">+374 98 205555</div>
+                  <div className="px-4 py-2 hover:bg-purple-50 hover:text-[#6400dc] transition cursor-pointer">+374 99 605555</div>
+                  <div className="px-4 py-2 hover:bg-purple-50 hover:text-[#6400dc] transition cursor-pointer border-t border-gray-100 mt-1 pt-2">8444</div>
+                  <div className="px-4 py-2 hover:bg-purple-50 hover:text-[#6400dc] transition cursor-pointer text-[#6400dc]">Պատվիրել զանգ</div>
+                </div>
+              )}
+            </div>
+
             <div className="flex items-center gap-3.5 text-gray-500 ml-2">
               <span className="cursor-pointer text-xs">📍</span>
               <span className="cursor-pointer text-xs">❓</span>
@@ -135,7 +177,6 @@ export default function Navbar() {
         </Link>
 
         {isKarieraPage ? (
-          /* "Կարիերա" էջերի վերնագրի մենյու (Evoca Լայֆ / Աշխատանք և պրակտիկա) */
           <nav className="hidden lg:flex items-center gap-8 text-[13px] font-bold text-gray-800">
             <Link 
               to="/kariera" 
@@ -151,7 +192,6 @@ export default function Navbar() {
             </Link>
           </nav>
         ) : isMerMasinPage ? (
-          /* "Մեր մասին" էջերի վերնագրի մենյու */
           <nav className="hidden lg:flex items-center gap-7 text-[13px] font-bold text-gray-800">
             <Link to="/mer-masin" className={`transition ${location.pathname === '/mer-masin' || (location.pathname.startsWith('/mer-masin/') && location.pathname !== '/hashvetvutyunner') ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>
               Evoca-ի մասին
