@@ -63,7 +63,8 @@ import MermasinTarekan from './components/home/mermasintarekan';
 import Kariera from './components/home/kariera';
 import Aravelutyunner from './components/home/aravelutyunner';
 import Harcer from './components/home/harcer';
-import Yndunum from './components/home/yndunum'; // ⬅️ Ավելացված է
+import Yndunum from './components/home/yndunum'; 
+import Haytararutyun from './components/home/haytararutyun'; // ⬅️ Ավելացված է
 
 function HomePage() {
   return (
@@ -142,7 +143,8 @@ function App() {
         <Route path="/kariera" element={<Kariera />} />
         <Route path="/aravelutyunner" element={<Aravelutyunner />} />
         <Route path="/harcer" element={<Harcer />} />
-        <Route path="/yndunum" element={<Yndunum />} /> {/* ⬅️ Ավելացված է */}
+        <Route path="/yndunum" element={<Yndunum />} />
+        <Route path="/haytararutyunner" element={<Haytararutyun />} /> {/* ⬅️ Ավելացված է */}
       </Routes>
     </Router>
   );
