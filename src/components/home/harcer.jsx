@@ -38,7 +38,7 @@ export default function Harcer() {
             <Link to="/kariera" className="text-purple-200 hover:text-white transition">Մշակույթ</Link>
             <Link to="/aravelutyunner" className="text-purple-200 hover:text-white transition">Առավելություններ</Link>
             <Link to="/harcer" className="border-b-2 border-white pb-1 cursor-pointer font-black">Հաճախ տրվող հարցեր</Link>
-            <span className="text-purple-200 hover:text-white cursor-pointer transition">Ինչպես ընդունվել աշխատանքի Evocabank-ում</span>
+            <Link to="/yndunum" className="text-purple-200 hover:text-white transition">Ինչպես ընդունվել աշխատանքի Evocabank-ում</Link>
           </div>
         </div>
 
