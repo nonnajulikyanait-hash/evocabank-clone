@@ -70,7 +70,7 @@ export default function Kariera() {
         <div className="bg-[#6400dc] text-white py-3 px-8 shadow-inner">
           <div className="container mx-auto flex gap-8 text-xs font-semibold overflow-x-auto whitespace-nowrap">
             <Link to="/kariera" className="border-b-2 border-white pb-1 cursor-pointer font-black">Մշակույթ</Link>
-            <span className="text-purple-200 hover:text-white cursor-pointer transition">Առավելություններ</span>
+            <Link to="/aravelutyunner" className="text-purple-200 hover:text-white transition">Առավելություններ</Link>
             <span className="text-purple-200 hover:text-white cursor-pointer transition">Հաճախ տրվող հարցեր</span>
             <span className="text-purple-200 hover:text-white cursor-pointer transition">Ինչպես ընդունվել աշխատանքի Evocabank-ում</span>
           </div>
