@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Navbar from '../layout/navbar';
 import Footer from './footer';
 
@@ -87,7 +88,6 @@ export default function Blog() {
         category: "Կենսակերպ",
         title: "2021-ի ամենասպասված 21 սերիալները",
         date: "18.01.2021",
-        // URL Nkar 2 (PNG)
         image: "https://www.evoca.am/images-cache/blogs/1/16329974590876/438x328.png",
         description: "Ձեզ ենք ներկայացնում 2021-ի #mustwatch սերիալները՝ ըստ պաշտոնական և ոչ պաշտոնական տվյալների:",
         content: "Ցանկում ընդգրկված են Wanda Vision, The Witcher (season 2), La Casa De Papel և այլ հայտնի սերիալներ։"
@@ -97,7 +97,6 @@ export default function Blog() {
         category: "Կենսակերպ",
         title: "Ապագայի ամենապահանջված մասնագիտությունները",
         date: "22.06.2020",
-        // URL Nkar 3 (PNG)
         image: "https://www.evoca.am/images-cache/blogs/1/16335957379/438x328.png",
         description: "Կիսվենք ձեզ հետ ապագայի ամենապահանջված մասնագիտություններով՝ IT մասնագետ, Թվային մարքեթինգ և այլն:",
         content: "Տեխնոլոգիաների զարգացմանը զուգընթաց մեծանում է նորարարական մասնագիտությունների պահանջարկը։"
@@ -164,9 +163,12 @@ export default function Blog() {
                 {cat}
               </span>
             ))}
-            <span className="ml-auto px-4 py-2 rounded-full bg-gray-100 text-gray-700 cursor-pointer">
+            <Link 
+              to="/arxiv" 
+              className="ml-auto px-4 py-2 rounded-full bg-gray-100 text-gray-700 cursor-pointer hover:bg-purple-50 hover:text-[#6400dc] transition"
+            >
               Արխիվ &gt;
-            </span>
+            </Link>
           </div>
 
           {/* 1. Monthly Recap */}
