@@ -5,9 +5,9 @@ import Footer from './footer';
 export default function BolorNorutyunner() {
   const [selectedCategory, setSelectedCategory] = useState('Բոլորը');
   const [selectedNews, setSelectedNews] = useState(null);
-  const [currentPage, setCurrentPage] = useState(1); // Current page state
+  const [currentPage, setCurrentPage] = useState(1);
 
-  const itemsPerPage = 12; // Ekhan e 12-ta item per page set kora hoilo
+  const itemsPerPage = 12;
 
   const categories = ['Բոլորը', 'Գլխավոր', 'Բանկային', 'Հարցազրույցներ', 'Պրոդուկտներ', 'Նորարարություններ', 'Կենսակերպ', 'Մրցանակներ', 'CSR', 'Այլ'];
 
@@ -147,6 +147,158 @@ export default function BolorNorutyunner() {
       date: '27.03.2026',
       image: 'https://www.evoca.am/images-cache/news/1/17746129517291/510x383.png',
       content: `ՀՀ բանկային համակարգի պատմության մեջ առաջին սինդիկացված վարկային պայմանագրով 6 ֆինանսական կառույցներ միավորվել են։`
+    },
+    {
+      id: 18,
+      category: 'Բանկային',
+      title: 'Evoca-ն մասնակցում է TOON EXPO 2026-ին',
+      date: '24.03.2026',
+      image: 'https://www.evoca.am/images-cache/news/1/17743534930147/510x383.png',
+      content: `Evocabank-ը մասնակցում է TOON EXPO 2026-ին՝ Հայաստանում անշարժ գույքի և կառուցապատման ոլորտի ամենամեծ ցուցահանդեսին՝ առաջարկելով հիփոթեքային վարկեր և հատուկ պայմաններ։`
+    },
+    {
+      id: 19,
+      category: 'Պրոդուկտներ',
+      title: 'Վճարիր Evoca Mastercard-ով և ստացիր 10% cashback',
+      date: '10.03.2026',
+      image: 'https://www.evoca.am/images-cache/news/1/17732233309185/510x383.png',
+      content: `Մարտի 10-ից մինչև ապրիլի 10-ը արտերկրում կամ արտասահմանյան կայքերում Evoca Mastercard քարտերով կատարված վճարումների դիմաց ստացիր 10% cashback։`
+    },
+    {
+      id: 20,
+      category: 'Պրոդուկտներ',
+      title: 'Ներդրումային առաջարկ կանանց համար',
+      date: '06.03.2026',
+      image: 'https://www.evoca.am/images-cache/news/1/1773403253997/510x383.png',
+      content: `Կանանց միամսյակի առթիվ Evocabank-ում հնարավորություն կունենաք անվճար բացել բրոքերային հաշիվ և առանց միջնորդավճարի կատարել առաջին 3 ներդրումային գործարքները EvocaINVEST-ի միջոցով։`
+    },
+    {
+      id: 21,
+      category: 'Պրոդուկտներ',
+      title: 'Քո Crypto հաշիվը՝ արդեն EvocaTOUCH-ում',
+      date: '27.02.2026',
+      image: 'https://www.evoca.am/images-cache/news/1/17722002491716/510x383.png',
+      content: `Այժմ կարող ես ավելացնել քո Binance-ի հաշիվը EvocaTOUCH-ում և մեկ հարթակում տեսնել մնացորդը, փոփոխությունները և ակտիվների ընդհանուր պատկերը։`
+    },
+    {
+      id: 22,
+      category: 'Հարցազրույցներ',
+      title: 'Կարեն Եղիազարյանի հարցազրույցը Los Angeles Times ամսագրին',
+      date: '25.02.2026',
+      image: 'https://www.evoca.am/images-cache/news/1/17720089281517/510x383.png',
+      content: `Evocabank-ի Վարչության նախագահ Կարեն Եղիազարյանը Los Angeles Times-ին տված հարցազրույցում անդրադարձել է Բանկի «mobile-first» ձևաչափին և թվային լուծումներին։`
+    },
+    {
+      id: 23,
+      category: 'Բանկային',
+      title: 'Evocabank-ը միացել է AmCham Armenia-ին',
+      date: '10.02.2026',
+      image: 'https://www.evoca.am/images-cache/news/1/17707319421286/510x383.png',
+      content: `Evocabank-ը միացել է Ամերիկյան առևտրի պալատին Հայաստանում (AmCham Armenia)՝ ընդլայնելով միջազգային գործարար կապերը։`
+    },
+    {
+      id: 24,
+      category: 'Մրցանակներ',
+      title: 'Evocabank: Excellence in Travel Segment Innovation',
+      date: '10.02.2026',
+      image: 'https://www.evoca.am/images-cache/news/1/17707059995106/510x383.jpg',
+      content: `Բանկը Mastercard-ի կողմից արժանացել է «Excellence in Travel Segment Innovation» մրցանակին՝ Evoca Travel Card-ի համար։`
+    },
+    {
+      id: 25,
+      category: 'Պրոդուկտներ',
+      title: 'Հատուկ առաջարկներ Evoca Visa պրեմիում քարտապանների համար',
+      date: '12.09.2025',
+      image: 'https://www.evoca.am/images-cache/news/1/17576778780897/510x383.png',
+      content: `Ռեստորաններ, սրճարաններ, նորաձևություն և հյուրանոցներ՝ հատուկ զեղչեր ու արտոնություններ Evoca Visa Infinite քարտապանների համար։`
+    },
+    {
+      id: 26,
+      category: 'Մրցանակներ',
+      title: 'Evoca՝ ՓՄՁ վարկավորման ամենանորարար գործընկերը Հայաստանում',
+      date: '09.09.2025',
+      image: 'https://www.evoca.am/images-cache/news/1/17574945834607/510x383.png',
+      content: `International Finance ամսագրի կողմից Evocabank-ը ճանաչվել է ՓՄՁ վարկավորման ամենանորարար գործընկեր։`
+    },
+    {
+      id: 27,
+      category: 'Պրոդուկտներ',
+      title: 'iPhone և MacBook Air՝ 0% սպասարկման վճարով',
+      date: '08.09.2025',
+      image: 'https://www.evoca.am/images-cache/news/1/17573391299753/510x383.png',
+      content: `Ձեռք բերեք iPhone և MacBook Air բացառիկ առաջարկով՝ 0% տոկոսադրույքով առաջին ամիսների համար։`
+    },
+    {
+      id: 28,
+      category: 'Պրոդուկտներ',
+      title: 'Evoca Visa քարտապաններն ունեն առաջարկ',
+      date: '04.09.2025',
+      image: 'https://www.evoca.am/images-cache/news/1/17569912369255/510x383.png',
+      content: `Ստացեք մինչև 30% cashback buy.am-ից՝ գնումներ կատարելով Evoca Visa քարտով։`
+    },
+    {
+      id: 29,
+      category: 'Պրոդուկտներ',
+      title: 'Նոր առաջարկ Evoca Mastercard քարտապանների համար',
+      date: '01.09.2025',
+      image: 'https://www.evoca.am/images-cache/news/1/17567286835411/510x383.png',
+      content: `KFC բոլոր մասնաճյուղերում Evoca Mastercard-ով 3,000 դրամ և ավելի վճարում կատարելիս ստացեք սառը ամերիկանո և դոնաթ նվեր։`
+    },
+    {
+      id: 30,
+      category: 'Բանկային',
+      title: 'Evoca-ն մասնակցում է TOON EXPO 2025-ին',
+      date: '27.08.2025',
+      image: 'https://www.evoca.am/images-cache/news/1/175627574177/510x383.png',
+      content: `Evocabank-ը մասնակցում է TOON EXPO 2025-ին՝ առաջարկելով հիփոթեքային վարկեր և EvocaHOME օվերդրաֆտ։`
+    },
+    {
+      id: 31,
+      category: 'Բանկային',
+      title: 'Evocabank-ի Խորհրդի նոր կազմը',
+      date: '26.08.2025',
+      image: 'https://www.evoca.am/images-cache/news/1/1755691060325/510x383.png',
+      content: `Հունիսի 19-ին կայացած ժողովի արդյունքում ընտրվել են Evocabank-ի Խորհրդի նոր անդամներ։`
+    },
+    {
+      id: 32,
+      category: 'Բանկային',
+      title: 'Evocabank-ը՝ 50-րդ BACEE Jubilee համաժողովի պլատինում հովանավոր',
+      date: '19.08.2025',
+      image: 'https://www.evoca.am/images-cache/news/1/17556116751548/510x383.png',
+      content: `Հոկտեմբերին տեղի ունեցող BACEE-ի 50-րդ միջազգային բանկային համաժողովում Evocabank-ը հանդես կգա որպես պլատինում հովանավոր։`
+    },
+    {
+      id: 33,
+      category: 'Պրոդուկտներ',
+      title: 'Back to School. Վճարիր Evoca Mastercard-ով, ստացիր 20% cashback',
+      date: '14.08.2025',
+      image: 'https://www.evoca.am/images-cache/news/1/17551746889694/510x383.png',
+      content: `Օգոստոսի 15-ից սեպտեմբերի 15-ը լավագույն գրախանութներում Evoca Mastercard-ով վճարելիս ստացեք 20% cashback։`
+    },
+    {
+      id: 34,
+      category: 'Բանկային',
+      title: 'Էվոկաբանկ ԲԲԸ',
+      date: '01.08.2025',
+      image: 'https://www.evoca.am/images-cache/news/1/17540357468511/510x383.png',
+      content: `Համաձայն ՀՀ ԿԲ որոշման՝ «Էվոկաբանկ» ՓԲԸ-ն վերակազմավորվել և գործում է որպես «Էվոկաբանկ» բաց բաժնետիրական ընկերություն։`
+    },
+    {
+      id: 35,
+      category: 'Բանկային',
+      title: 'Evoca x Al Fardan Exchange. արագ ու հարմար փոխանցումներ դեպի ԱՄԷ',
+      date: '30.07.2025',
+      image: 'https://www.evoca.am/images-cache/news/1/17543142671349/510x383.png',
+      content: `Evocabank-ը առաջարկում է ավելի հարմար, արագ և վստահելի լուծում SWIFT փոխանցումների և ԱՄԷ-ում կանխիկ ստացման համար։`
+    },
+    {
+      id: 36,
+      category: 'Պրոդուկտներ',
+      title: '10% cashback և Skip The Line հնարավորություն',
+      date: '28.07.2025',
+      image: 'https://www.evoca.am/images-cache/news/1/17537015540189/510x383.png',
+      content: `Evoca Visa քարտապաններն ստանում են 10% cashback բարում և Skip The Line հնարավորություն։`
     }
   ];
 
@@ -168,7 +320,7 @@ export default function BolorNorutyunner() {
 
   const handleCategoryChange = (cat) => {
     setSelectedCategory(cat);
-    setCurrentPage(1); // Reset to page 1 on category change
+    setCurrentPage(1);
   };
 
   return (
