@@ -38,8 +38,12 @@ export default function Navbar() {
     location.pathname === '/norutyunner' || 
     location.pathname.startsWith('/bolor-norutyunner');
 
+  const isBlogPage = 
+    location.pathname === '/blog' || 
+    location.pathname.startsWith('/blog/');
+
   const isBusinessSection = 
-    !isMerMasinPage && !isKarieraPage && !isNorutyunnerPage && (
+    !isMerMasinPage && !isKarieraPage && !isNorutyunnerPage && !isBlogPage && (
       location.pathname.startsWith('/business') || 
       location.pathname === '/biznesvarker' || 
       location.pathname === '/leasing' || 
@@ -86,7 +90,7 @@ export default function Navbar() {
     location.pathname === '/mobilepos';
   const isAylSub = location.pathname === '/ayl' || location.pathname === '/aylpoxancumner';
 
-  const isAnhatPage = !isBusinessSection && !isMerMasinPage && !isKarieraPage && !isNorutyunnerPage;
+  const isAnhatPage = !isBusinessSection && !isMerMasinPage && !isKarieraPage && !isNorutyunnerPage && !isBlogPage;
 
   return (
     <header className="w-full bg-white border-b border-gray-100 sticky top-0 z-50">
@@ -129,6 +133,13 @@ export default function Navbar() {
               className={`transition ${isNorutyunnerPage ? 'text-[#6400dc] font-semibold border-b-2 border-[#6400dc]' : 'hover:text-[#6400dc]'}`}
             >
               Նորություններ
+            </Link>
+
+            <Link 
+              to="/blog" 
+              className={`transition ${isBlogPage ? 'text-[#6400dc] font-semibold border-b-2 border-[#6400dc]' : 'hover:text-[#6400dc]'}`}
+            >
+              Բլոգ
             </Link>
             
             <Link 

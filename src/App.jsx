@@ -70,6 +70,7 @@ import Usumnakan from './components/home/usumnakan';
 import Evocabridge from './components/home/evocabridge';
 import Norutyunner from './components/home/norutyunner';
 import BolorNorutyunner from './components/home/bolornorutyunner';
+import Blog from './components/home/blog'; // Ավելացված է բլոգի բաղադրիչը
 
 function HomePage() {
   return (
@@ -159,6 +160,7 @@ function App() {
         <Route path="/evocabridge" element={<Evocabridge />} />
         <Route path="/norutyunner" element={<Norutyunner />} />
         <Route path="/bolor-norutyunner" element={<BolorNorutyunner />} />
+        <Route path="/blog" element={<Blog />} /> {/* Ավելացված է բլոգի ռոութը */}
       </Routes>
     </Router>
   );
