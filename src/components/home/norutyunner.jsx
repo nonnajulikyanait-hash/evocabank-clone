@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Navbar from '../layout/navbar';
 import Footer from './footer';
 
 export default function Norutyunner() {
+  const navigate = useNavigate();
   const [selectedNews, setSelectedNews] = useState(null);
 
   const topNews = {
@@ -181,7 +183,12 @@ export default function Norutyunner() {
                 <button className="bg-gray-100 px-4 py-2 rounded-full hover:bg-purple-50 hover:text-[#6400dc] transition cursor-pointer">Մրցանակներ</button>
                 <button className="bg-gray-100 px-4 py-2 rounded-full hover:bg-purple-50 hover:text-[#6400dc] transition cursor-pointer">CSR</button>
                 <button className="bg-gray-100 px-4 py-2 rounded-full hover:bg-purple-50 hover:text-[#6400dc] transition cursor-pointer">Այլ</button>
-                <button className="bg-[#6400dc] text-white px-5 py-2 rounded-full font-bold ml-auto cursor-pointer shadow-sm hover:opacity-90 transition">Բոլորը &gt;</button>
+                <button 
+                  onClick={() => navigate('/bolor-norutyunner')}
+                  className="bg-[#6400dc] text-white px-5 py-2 rounded-full font-bold ml-auto cursor-pointer shadow-sm hover:opacity-90 transition"
+                >
+                  Բոլորը &gt;
+                </button>
               </div>
             </div>
 

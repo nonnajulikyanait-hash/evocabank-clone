@@ -69,6 +69,7 @@ import Praktika from './components/home/praktika';
 import Usumnakan from './components/home/usumnakan';
 import Evocabridge from './components/home/evocabridge';
 import Norutyunner from './components/home/norutyunner';
+import BolorNorutyunner from './components/home/bolornorutyunner';
 
 function HomePage() {
   return (
@@ -157,6 +158,7 @@ function App() {
         <Route path="/usumnakan" element={<Usumnakan />} />
         <Route path="/evocabridge" element={<Evocabridge />} />
         <Route path="/norutyunner" element={<Norutyunner />} />
+        <Route path="/bolor-norutyunner" element={<BolorNorutyunner />} />
       </Routes>
     </Router>
   );
