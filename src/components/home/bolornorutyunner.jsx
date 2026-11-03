@@ -378,7 +378,7 @@ export default function BolorNorutyunner() {
       title: 'Նոր զեղչեր Evoca Mastercard քարտապանների համար',
       date: '07.02.2025',
       image: 'https://www.evoca.am/images-cache/news/1/17389114240578/510x383.png',
-      content: '10% զեղչ iPhone-ի համար, 60% զեղչ պատյանների և 20% զեղչ AirPods-ի ու աքսեսուարների համար Evoca Mastercard-ով վճարելիս (iSpace, Vega, UCOM, VLV, iStore):'
+      content: '10% զեղչ iPhone-ի համար, 60% զեղչ պատյանների և 20% զեղչ AirPods-ի ու աքեսուարների համար Evoca Mastercard-ով վճարելիս (iSpace, Vega, UCOM, VLV, iStore):'
     },
     {
       id: 47,
@@ -519,7 +519,7 @@ export default function BolorNorutyunner() {
         <Navbar />
 
         {selectedNews ? (
-          <main className="max-w-4xl mx-auto px-4 py-8 text-left">
+          <main className="max-w-4xl mx-auto px-4 py-8 text-left bg-white">
             <button 
               onClick={() => setSelectedNews(null)} 
               className="font-bold text-xs text-gray-500 hover:text-[#6400dc] mb-6 flex items-center gap-1 cursor-pointer"
@@ -534,7 +534,7 @@ export default function BolorNorutyunner() {
             <p className="text-gray-700 leading-relaxed whitespace-pre-line">{selectedNews.content}</p>
           </main>
         ) : (
-          <div className="max-w-7xl mx-auto px-4 py-8 text-left">
+          <div className="max-w-7xl mx-auto px-4 py-8 text-left bg-white">
             <div className="text-xs text-gray-400 mb-3 flex items-center gap-2">
               <span>🏠</span> &gt; <span>Նորություններ</span> &gt; <span className="text-gray-700 font-medium">Բոլորը</span>
             </div>
