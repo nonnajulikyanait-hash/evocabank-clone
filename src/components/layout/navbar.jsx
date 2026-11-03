@@ -34,8 +34,12 @@ export default function Navbar() {
     location.pathname === '/usumnakan' ||
     location.pathname === '/evocabridge';
 
+  const isNorutyunnerPage = 
+    location.pathname === '/norutyunner' || 
+    location.pathname.startsWith('/bolor-norutyunner');
+
   const isBusinessSection = 
-    !isMerMasinPage && !isKarieraPage && (
+    !isMerMasinPage && !isKarieraPage && !isNorutyunnerPage && (
       location.pathname.startsWith('/business') || 
       location.pathname === '/biznesvarker' || 
       location.pathname === '/leasing' || 
@@ -82,6 +86,8 @@ export default function Navbar() {
     location.pathname === '/mobilepos';
   const isAylSub = location.pathname === '/ayl' || location.pathname === '/aylpoxancumner';
 
+  const isAnhatPage = !isBusinessSection && !isMerMasinPage && !isKarieraPage && !isNorutyunnerPage;
+
   return (
     <header className="w-full bg-white border-b border-gray-100 sticky top-0 z-50">
       {/* Top Bar */}
@@ -90,7 +96,7 @@ export default function Navbar() {
           <div className="flex gap-5 font-normal">
             <Link 
               to="/" 
-              className={`pb-1 cursor-pointer transition ${!isBusinessSection && !isMerMasinPage && !isKarieraPage ? 'text-[#6400dc] border-b-2 border-[#6400dc] font-semibold' : 'hover:text-[#6400dc]'}`}
+              className={`pb-1 cursor-pointer transition ${isAnhatPage ? 'text-[#6400dc] border-b-2 border-[#6400dc] font-semibold' : 'hover:text-[#6400dc]'}`}
             >
               Անհատ
             </Link>
@@ -120,12 +126,10 @@ export default function Navbar() {
 
             <Link 
               to="/norutyunner" 
-              className={`transition ${location.pathname === '/norutyunner' ? 'text-[#6400dc] font-semibold border-b-2 border-[#6400dc]' : 'hover:text-[#6400dc]'}`}
+              className={`transition ${isNorutyunnerPage ? 'text-[#6400dc] font-semibold border-b-2 border-[#6400dc]' : 'hover:text-[#6400dc]'}`}
             >
               Նորություններ
             </Link>
-
-            <span className="hover:text-[#6400dc] cursor-pointer transition">Բլոգ</span>
             
             <Link 
               to="/kariera" 
