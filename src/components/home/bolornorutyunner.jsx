@@ -378,7 +378,7 @@ export default function BolorNorutyunner() {
       title: 'Նոր զեղչեր Evoca Mastercard քարտապանների համար',
       date: '07.02.2025',
       image: 'https://www.evoca.am/images-cache/news/1/17389114240578/510x383.png',
-      content: '10% զեղչ iPhone-ի համար, 60% զեղչ պատյանների և 20% զեղչ AirPods-ի ու աքեսուարների համար Evoca Mastercard-ով վճարելիս (iSpace, Vega, UCOM, VLV, iStore):'
+      content: '10% զեղչ iPhone-ի համար, 60% զեղչ պատյանների և 20% զեղչ AirPods-ի ու աքսեսուարների համար Evoca Mastercard-ով վճարելիս (iSpace, Vega, UCOM, VLV, iStore):'
     },
     {
       id: 47,
@@ -551,7 +551,7 @@ export default function BolorNorutyunner() {
                   className={`px-4 py-2 rounded-full transition cursor-pointer ${
                     selectedCategory === cat 
                       ? 'bg-[#6400dc] text-white font-bold' 
-                      : 'bg-gray-100 hover:bg-purple-50 hover:text-[#6400dc]'
+                      : 'bg-gray-100 text-gray-700 hover:bg-purple-50 hover:text-[#6400dc]'
                   }`}
                 >
                   {cat}
