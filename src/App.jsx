@@ -68,6 +68,7 @@ import Haytararutyun from './components/home/haytararutyun';
 import Praktika from './components/home/praktika';
 import Usumnakan from './components/home/usumnakan';
 import Evocabridge from './components/home/evocabridge';
+import Norutyunner from './components/home/norutyunner';
 
 function HomePage() {
   return (
@@ -155,6 +156,7 @@ function App() {
         <Route path="/praktika" element={<Praktika />} />
         <Route path="/usumnakan" element={<Usumnakan />} />
         <Route path="/evocabridge" element={<Evocabridge />} />
+        <Route path="/norutyunner" element={<Norutyunner />} />
       </Routes>
     </Router>
   );

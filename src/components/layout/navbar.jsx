@@ -118,7 +118,13 @@ export default function Navbar() {
               Մեր մասին
             </Link>
 
-            <span className="hover:text-[#6400dc] cursor-pointer transition">Նորություններ</span>
+            <Link 
+              to="/norutyunner" 
+              className={`transition ${location.pathname === '/norutyunner' ? 'text-[#6400dc] font-semibold border-b-2 border-[#6400dc]' : 'hover:text-[#6400dc]'}`}
+            >
+              Նորություններ
+            </Link>
+
             <span className="hover:text-[#6400dc] cursor-pointer transition">Բլոգ</span>
             
             <Link 
