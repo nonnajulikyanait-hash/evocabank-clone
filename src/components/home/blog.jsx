@@ -87,7 +87,8 @@ export default function Blog() {
         category: "Կենսակերպ",
         title: "2021-ի ամենասպասված 21 սերիալները",
         date: "18.01.2021",
-        image: "https://www.evoca.am/images-cache/blogs/1/16329974590876/438x328.jpg",
+        // URL Nkar 2 (PNG)
+        image: "https://www.evoca.am/images-cache/blogs/1/16329974590876/438x328.png",
         description: "Ձեզ ենք ներկայացնում 2021-ի #mustwatch սերիալները՝ ըստ պաշտոնական և ոչ պաշտոնական տվյալների:",
         content: "Ցանկում ընդգրկված են Wanda Vision, The Witcher (season 2), La Casa De Papel և այլ հայտնի սերիալներ։"
       },
@@ -96,7 +97,8 @@ export default function Blog() {
         category: "Կենսակերպ",
         title: "Ապագայի ամենապահանջված մասնագիտությունները",
         date: "22.06.2020",
-        image: "https://www.evoca.am/images-cache/blogs/1/16335957379/438x328.jpg",
+        // URL Nkar 3 (PNG)
+        image: "https://www.evoca.am/images-cache/blogs/1/16335957379/438x328.png",
         description: "Կիսվենք ձեզ հետ ապագայի ամենապահանջված մասնագիտություններով՝ IT մասնագետ, Թվային մարքեթինգ և այլն:",
         content: "Տեխնոլոգիաների զարգացմանը զուգընթաց մեծանում է նորարարական մասնագիտությունների պահանջարկը։"
       }
@@ -291,7 +293,7 @@ export default function Blog() {
               <div 
                 key={item.id}
                 onClick={() => { setSelectedBlog(item); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
-                className="bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition cursor-pointer flex flex-col justify-between group"
+                className="bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition duration-300 cursor-pointer flex flex-col justify-between group"
               >
                 <div>
                   <div className="h-56 overflow-hidden bg-gray-50">
