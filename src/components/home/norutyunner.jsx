@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Navbar from '../layout/navbar';
-import EvocaOnlineMobile from './evocaonlinemobile';
 import Footer from './footer';
 
 export default function Norutyunner() {
@@ -159,10 +158,6 @@ export default function Norutyunner() {
                   <img src={selectedNews.innerBanner} alt="Crypto banner" className="w-full object-cover" />
                 </div>
               )}
-            </div>
-
-            <div className="mt-12 pt-8 border-t border-gray-100">
-              <EvocaOnlineMobile />
             </div>
           </main>
         ) : (
