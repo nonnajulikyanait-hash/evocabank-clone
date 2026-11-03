@@ -13,7 +13,7 @@ export default function Norutyunner() {
     desc: 'IFC-ն Evocabank-ին տրամադրել է 10 մլն դոլարի վարկ` Հայաստանում ՄՓՄՁ-ներին աջակցելու, աշխատատեղեր ստեղծելու և բնապահպանական ծրագրեր ֆինանսավորելու համար։',
     date: '26.10.2026',
     image: 'https://www.evoca.am/images-cache/news/1/17930164747919/780x585.png',
-    content: 'IFC-ն Evocabank-ին տրամադրել է 10 մլն դոլարի վարկ` Հայաստանում ՄՓՄՁ-ներին աջակցելու, աշխատատեղեր ստեղծելու և բնապահպանական ծրագրեր ֆինանսավորելու համար։ Ծրագրի շրջանակում ֆինանսավորումը կուղղվի կանաչ նախագծերի, էներգաարդյունավետ տեխնոլոգիաների ներդրմանը և փոքր ու միջին բիզնեսի կայուն զարգացմանը।'
+    content: 'IFC-ն Evocabank-ին տրամադրել է 10 մլն դոլարի վարկ` Հայաստանում ՄՓՄՁ-ներին աջակցելու, աշխատատեղեր ստեղծելու և բնապահպանական ծրագրեր ֆինանսավորելու համար։ Ծրագրի շրջանակում ֆինանսավորումը կուղղվի կանաչ նախագծերի, էներգաարդյունավետ տեխնոլոգիաների ներդրմանը և փոքր ու միջին բիզնեսի կայուն զարգացմանը։'
   };
 
   const mainNews = {
@@ -215,7 +215,7 @@ export default function Norutyunner() {
                   <img 
                     src={topNews.image} 
                     alt={topNews.title} 
-                    className="w-full h-auto object-cover group-hover:scale-105 transition duration-500" 
+                    className="w-full h-auto object-cover" 
                   />
                 </div>
               </div>
@@ -230,7 +230,7 @@ export default function Norutyunner() {
                     <img 
                       src={mainNews.image} 
                       alt={mainNews.title} 
-                      className="w-full h-auto rounded-2xl group-hover:scale-105 transition duration-500 object-cover" 
+                      className="w-full h-auto rounded-2xl object-cover" 
                     />
                   </div>
                   <div className="p-6 md:p-8 space-y-4">
@@ -260,7 +260,7 @@ export default function Norutyunner() {
                         <img 
                           src={item.image} 
                           alt={item.title} 
-                          className="w-full h-full object-cover group-hover:scale-105 transition duration-500" 
+                          className="w-full h-full object-cover" 
                         />
                       </div>
                       <div className="p-4 space-y-2">
@@ -289,7 +289,7 @@ export default function Norutyunner() {
                     <img 
                       src={middleNews.image} 
                       alt={middleNews.title} 
-                      className="w-full h-auto object-cover group-hover:scale-105 transition duration-500 rounded-2xl" 
+                      className="w-full h-auto object-cover rounded-2xl" 
                     />
                   </div>
                   <div className="lg:w-1/2 space-y-4">
@@ -326,7 +326,7 @@ export default function Norutyunner() {
                         <img 
                           src={item.image} 
                           alt={item.title} 
-                          className="w-full h-full object-cover group-hover:scale-105 transition duration-500" 
+                          className="w-full h-full object-cover" 
                         />
                       </div>
                       <div className="p-6 space-y-3">
