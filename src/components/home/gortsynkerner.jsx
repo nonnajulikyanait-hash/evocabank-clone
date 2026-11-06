@@ -24,28 +24,28 @@ function Gortsynkerner() {
     { id: 15, name: 'Partner 15', img: 'https://www.evoca.am/images-cache/partners/1/16104599802947/185x80_grayscale.png' },
   ];
 
-  // Վերջին նորությունների տվյալները (ID-ները համապատասխանեցված են BolorNorutyunner-ի հետ)
+  // Verjin norutyunneri tvyalnery՝ BolorNorutyunner.jsx-ic vercvats 3 irakan qarterov
   const newsList = [
     {
-      id: 12,
-      category: 'Կենսակերպ',
-      title: 'Դիլիջան, մենք գալիս ենք',
-      date: '11.09.2026',
-      img: 'https://www.evoca.am/images-cache/news/1/17891134831451/439x320.png',
+      id: 1,
+      category: "Բանկային",
+      title: "Evocabank-ը և IFC-ն մեկնարկում են բնապահպանական առաջին ծրագիրը",
+      date: "26.10.2026",
+      img: "https://www.evoca.am/images-cache/news/1/17930164747919/510x383.png",
     },
     {
-      id: 2, // Օրինակելի ID կամ հարմարեցված
-      category: 'Կենսակերպ',
-      title: 'Evocabank-ը՝ Retro Fest-ի ֆինանսական գործընկեր',
-      date: '03.09.2026',
-      img: 'https://www.evoca.am/images-cache/news/1/17884237814941/439x320.png',
+      id: 2,
+      category: "Հարցազրույցներ",
+      title: "Սթիվեն Բարթլեթը Երևանում Evoca Conference 2026-ին",
+      date: "19.10.2026",
+      img: "https://www.evoca.am/images-cache/news/1/17930859918757/510x383.png",
     },
     {
-      id: 33, // Օրինակելի ID կամ հարմարեցված
-      category: 'Պրոդուկտներ',
-      title: 'Դեպի նոր ուսումնական տարի՝ մինչև 23% cashback-ով',
-      date: '31.08.2026',
-      img: 'https://www.evoca.am/images-cache/news/1/17873217684586/439x320.png',
+      id: 3,
+      category: "Մրցանակներ",
+      title: "Evocabank-ը FinComm Armenia 2026-ի գլխավոր գործընկեր",
+      date: "08.10.2026",
+      img: "https://www.evoca.am/images-cache/news/1/17915391966329/510x383.png",
     },
   ];
 
@@ -83,7 +83,7 @@ function Gortsynkerner() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="bg-[#fbfbfb] border border-gray-100 rounded-3xl p-8 lg:p-12 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative overflow-hidden min-h-[420px]">
           
-          {/* Ձախ մաս՝ Տեքստ */}
+          {/* Dzax mas: Tekst */}
           <div className="lg:col-span-5 space-y-6 relative z-10">
             <h2 className="text-3xl font-bold text-neutral-900">Գործընկերներ</h2>
             <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
@@ -99,7 +99,7 @@ function Gortsynkerner() {
             </div>
           </div>
 
-          {/* Կենտրոնական մաս */}
+          {/* Kentronakan mas */}
           <div className="hidden lg:flex absolute left-[38%] top-1/2 -translate-y-1/2 items-center justify-center z-10 pointer-events-none">
             <div className="absolute w-[280px] h-[280px] rounded-full border-2 border-dotted border-amber-300 animate-[spin_35s_linear_infinite]"></div>
             <div className="absolute w-[220px] h-[220px] rounded-full border-2 border-dashed border-amber-400 opacity-80 animate-[spin_25s_linear_infinite_reverse]"></div>
@@ -114,7 +114,7 @@ function Gortsynkerner() {
             />
           </div>
 
-          {/* Աջ մաս՝ Սլայդեր բոլոր 15 լոգոներով */}
+          {/* Aj mas: Slider */}
           <div className="lg:col-span-7 lg:col-start-6 relative flex items-center z-10 pl-0 lg:pl-16">
             <button 
               onClick={scrollLeft}
@@ -158,7 +158,7 @@ function Gortsynkerner() {
       {/* 2. ՎԵՐՋԻՆ ՆՈՐՈՒԹՅՈՒՆՆԵՐԻ ԲԱԺԻՆ */}
       <div className="max-w-7xl mx-auto px-6 space-y-8">
         
-        {/* Վերնագիր և «Բոլոր նորությունները» կոճակ */}
+        {/* Vernagir ev «Բոլոր նորությունները» knopka */}
         <div className="flex justify-between items-center">
           <h2 className="text-3xl font-bold text-neutral-900">Վերջին նորությունները</h2>
           <button 
@@ -169,7 +169,7 @@ function Gortsynkerner() {
           </button>
         </div>
 
-        {/* Նորությունների քարտերի ցանց (Grid) */}
+        {/* News Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {newsList.map((news) => (
             <div 
@@ -177,7 +177,7 @@ function Gortsynkerner() {
               onClick={() => handleNewsClick(news.id)}
               className="bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between cursor-pointer group"
             >
-              {/* Նկարի բլոկ */}
+              {/* Nkari blok */}
               <div className="relative overflow-hidden aspect-[4/3] bg-gray-100">
                 <img 
                   src={news.img} 
@@ -186,7 +186,7 @@ function Gortsynkerner() {
                 />
               </div>
 
-              {/* Տեքստային բլոկ */}
+              {/* Tekstayin blok */}
               <div className="p-6 space-y-3 flex-1 flex flex-col justify-between">
                 <div className="space-y-2">
                   <span className="text-xs font-semibold text-purple-600 uppercase tracking-wider">
