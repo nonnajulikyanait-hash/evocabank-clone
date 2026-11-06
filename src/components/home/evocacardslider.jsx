@@ -95,7 +95,7 @@ const slidesData = [
     btnBg: 'bg-black text-white',
     image: 'https://www.evoca.am/images-cache/sliders/1/17262130779724/2fee1054871280f57daf5204f901c563-577x486.png',
     path: '/qarter',
-    cardTitle: 'UnionPay Gold', // Ապահովում է, որ գնա qarter.jsx-ի UnionPay Gold բաժին
+    cardTitle: 'UnionPay Gold',
   },
   {
     id: 8,
@@ -107,7 +107,7 @@ const slidesData = [
     descColor: 'text-gray-800',
     btnBg: 'bg-[#6400dc] text-white',
     image: 'https://www.evoca.am/images-cache/sliders/1/16178037539626/79381d3e68fdf7ec25c5837a19ce5821-577x486.jpg',
-    path: '/qarter',
+    path: '/deposits', // Տանում է անհատ ավանդների էջ (AnhatAvandner)
   },
 ];
 
@@ -119,6 +119,8 @@ export default function EvocaCardSlider() {
   const handleCardClick = (slide) => {
     if (slide.id === 6) {
       navigate('/loans/8');
+    } else if (slide.id === 8) {
+      navigate('/deposits'); // Անմիջապես բացում է AnhatAvandner.jsx էջը
     } else if (slide.path === '/evocasalary') {
       navigate('/evocasalary');
     } else if (slide.path === '/norutyunner') {
