@@ -13,7 +13,7 @@ const cardsData = [
     tag: 'Նվեր քարտեր',
     title: 'Evoca Gift Card',
     description: 'Գնիր Evoca Gift Card, և լավագույն նվերը կլինի քոնը: Քարտը հարմար է բոլոր առիթների համար:',
-    cardTitle: 'Evoca Gift Card', // Քարտի վերնագիրը Qarter.jsx փոխանցելու համար
+    cardTitle: 'Evoca Gift Card',
   },
   {
     id: 3,
@@ -36,6 +36,10 @@ export default function StatueSection() {
     if (card.id === 49) {
       // Գնում է 49-րդ նորության էջ
       navigate('/bolor-norutyunner', { state: { openNewsId: 49 } });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (card.id === 3) {
+      // Գնում է 50-րդ նորության էջ (EvocaTOUCH 2)
+      navigate('/bolor-norutyunner', { state: { openNewsId: 50 } });
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else if (card.id === 2 || card.title === 'Evoca Gift Card') {
       // Գնում է Qarter.jsx էջ և բացում Evoca Gift Card-ը
