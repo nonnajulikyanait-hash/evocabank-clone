@@ -24,24 +24,24 @@ function Gortsynkerner() {
     { id: 15, name: 'Partner 15', img: 'https://www.evoca.am/images-cache/partners/1/16104599802947/185x80_grayscale.png' },
   ];
 
-  // Վերջին նորությունների տվյալները
+  // Վերջին նորությունների տվյալները (ID-ները համապատասխանեցված են BolorNorutyunner-ի հետ)
   const newsList = [
     {
-      id: 1,
+      id: 12,
       category: 'Կենսակերպ',
       title: 'Դիլիջան, մենք գալիս ենք',
       date: '11.09.2026',
       img: 'https://www.evoca.am/images-cache/news/1/17891134831451/439x320.png',
     },
     {
-      id: 2,
+      id: 2, // Օրինակելի ID կամ հարմարեցված
       category: 'Կենսակերպ',
       title: 'Evocabank-ը՝ Retro Fest-ի ֆինանսական գործընկեր',
       date: '03.09.2026',
       img: 'https://www.evoca.am/images-cache/news/1/17884237814941/439x320.png',
     },
     {
-      id: 3,
+      id: 33, // Օրինակելի ID կամ հարմարեցված
       category: 'Պրոդուկտներ',
       title: 'Դեպի նոր ուսումնական տարի՝ մինչև 23% cashback-ով',
       date: '31.08.2026',
@@ -51,6 +51,16 @@ function Gortsynkerner() {
 
   const handleGoToPartners = () => {
     navigate('/mer-masin/gortsynkerner');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleGoToAllNews = () => {
+    navigate('/bolor-norutyunner');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleNewsClick = (newsId) => {
+    navigate('/bolor-norutyunner', { state: { openNewsId: newsId } });
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -89,23 +99,14 @@ function Gortsynkerner() {
             </div>
           </div>
 
-          {/* Կենտրոնական մաս՝ Ձեռքի նկարը և ֆոնային տարբեր չափսերի դեղին կետագծերով շրջանագծերը */}
+          {/* Կենտրոնական մաս */}
           <div className="hidden lg:flex absolute left-[38%] top-1/2 -translate-y-1/2 items-center justify-center z-10 pointer-events-none">
-            
-            {/* 1. Մեծ դեղին կետագծերով շրջանագիծ (պտտվող) */}
             <div className="absolute w-[280px] h-[280px] rounded-full border-2 border-dotted border-amber-300 animate-[spin_35s_linear_infinite]"></div>
-
-            {/* 2. Միջին դեղին կետագծերով շրջանագիծ (հակառակ պտտվող) */}
             <div className="absolute w-[220px] h-[220px] rounded-full border-2 border-dashed border-amber-400 opacity-80 animate-[spin_25s_linear_infinite_reverse]"></div>
-
-            {/* 3. Փոքր դեղին կետագծերով շրջանագիծ */}
             <div className="absolute w-[160px] h-[160px] rounded-full border border-dotted border-amber-400 opacity-60"></div>
-
-            {/* 4. Դեղին դեկորատիվ փոքրիկ կետիկներ */}
             <div className="absolute top-2 left-6 w-3 h-3 bg-amber-400 rounded-full animate-ping"></div>
             <div className="absolute bottom-4 right-8 w-2 h-2 bg-amber-500 rounded-full animate-bounce"></div>
 
-            {/* Ավելի փոքրացված ձեռքի նկարը՝ դրված շրջանագծերի ճիշտ կենտրոնում */}
             <img 
               src="https://www.evoca.am/img/hand.png" 
               alt="Evocabank Hand" 
@@ -160,7 +161,10 @@ function Gortsynkerner() {
         {/* Վերնագիր և «Բոլոր նորությունները» կոճակ */}
         <div className="flex justify-between items-center">
           <h2 className="text-3xl font-bold text-neutral-900">Վերջին նորությունները</h2>
-          <button className="bg-purple-100 text-[#6400dc] px-5 py-2.5 rounded-xl font-bold text-sm hover:bg-purple-200 transition-colors cursor-pointer">
+          <button 
+            onClick={handleGoToAllNews}
+            className="bg-purple-100 text-[#6400dc] px-5 py-2.5 rounded-xl font-bold text-sm hover:bg-purple-200 transition-colors cursor-pointer"
+          >
             Բոլոր նորությունները &gt;
           </button>
         </div>
@@ -170,6 +174,7 @@ function Gortsynkerner() {
           {newsList.map((news) => (
             <div 
               key={news.id}
+              onClick={() => handleNewsClick(news.id)}
               className="bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between cursor-pointer group"
             >
               {/* Նկարի բլոկ */}
