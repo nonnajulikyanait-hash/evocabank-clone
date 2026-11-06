@@ -43,6 +43,7 @@ const slidesData = [
     btnBg: 'bg-[#6400dc] text-white',
     image: 'https://www.evoca.am/images-cache/sliders/1/17612202124044/b74e87ec0e83aa10cb128d41f0ada026-577x486.png',
     path: '/norutyunner',
+    newsId: 100
   },
   {
     id: 4,
@@ -115,7 +116,7 @@ export default function EvocaCardSlider() {
     if (slide.path === '/evocasalary') {
       navigate('/evocasalary');
     } else if (slide.path === '/norutyunner') {
-      navigate('/norutyunner', { state: { openNewsId: 100 } });
+      navigate('/norutyunner', { state: { openNewsId: slide.newsId } });
     } else {
       navigate('/qarter', { state: { cardTitle: slide.title } });
     }
