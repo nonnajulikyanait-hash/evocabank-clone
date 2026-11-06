@@ -362,6 +362,7 @@ export default function LoanDetail() {
     }
   ];
 
+  // Այստեղ `id`-ն փոխարկվում է թվի և ճշգրիտ գտնվում զանգվածից
   const loan = loansData.find(item => item.id === Number(id)) || loansData[0];
 
   return (
@@ -460,7 +461,7 @@ export default function LoanDetail() {
             </div>
 
             <div className="space-y-3 border-t border-b border-gray-100 py-4 text-left text-xs">
-              {loan.stats.map((stat, idx) => (
+              {loan.stats && loan.stats.map((stat, idx) => (
                 <div key={idx} className="pt-1">
                   <div className="text-lg md:text-xl font-black text-[#6400dc]">{stat.value}</div>
                   <div className="text-[11px] text-gray-400 font-medium">{stat.label}</div>
