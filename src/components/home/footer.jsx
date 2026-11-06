@@ -1,6 +1,9 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Footer({ setActiveTab }) {
+  const navigate = useNavigate();
+
   const partners = [
     { id: 1, url: 'https://www.evoca.am/img/temp/partners/partner-1.png' },
     { id: 2, url: 'https://www.evoca.am/img/temp/partners/partner-2.png' },
@@ -16,6 +19,11 @@ function Footer({ setActiveTab }) {
       setActiveTab(tabName);
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
+  };
+
+  const handleRouteChange = (path) => {
+    navigate(path);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
@@ -44,16 +52,14 @@ function Footer({ setActiveTab }) {
           <div className="space-y-3">
             <h3 className="font-bold text-sm text-neutral-900">Բանկի մասին</h3>
             <ul className="space-y-2 text-xs text-gray-600">
-              <li><button onClick={() => handleNavClick('mermasin')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">Մեր մասին</button></li>
-              <li><button onClick={() => handleNavClick('mermasin')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">Ղեկավարություն</button></li>
-              <li><button onClick={() => handleNavClick('mermasin')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">Բաժնետերեր</button></li>
-              <li><a href="#reports" className="hover:text-[#6400dc]">Հաշվետվություններ</a></li>
-              <li><a href="#legal-acts" className="hover:text-[#6400dc]">Իրավական ակտեր</a></li>
-              <li><a href="#tariffs" className="hover:text-[#6400dc]">Սակագներ</a></li>
-              <li><a href="#properties" className="hover:text-[#6400dc]">Օտարվող գույք</a></li>
-              <li><a href="#developers" className="hover:text-[#6400dc]">Կառուցապատողներ</a></li>
-              <li><a href="#car-salons" className="hover:text-[#6400dc]">Գործընկեր ավտոսրահներ</a></li>
-              <li><a href="#tariffs-archive" className="hover:text-[#6400dc]">Սակագների արխիվ</a></li>
+              <li><button onClick={() => handleRouteChange('/mer-masin')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">Մեր մասին</button></li>
+              <li><button onClick={() => handleRouteChange('/mer-masin/xekavarutyun')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">Ղեկավարություն</button></li>
+              <li><button onClick={() => handleRouteChange('/mer-masin/bajneterer')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">Բաժնետերեր</button></li>
+              <li><button onClick={() => handleRouteChange('/hashvetvutyunner')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">Հաշվետվություններ</button></li>
+              <li><button onClick={() => handleRouteChange('/iravakan')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">Իրավական ակտեր</button></li>
+              <li><button onClick={() => handleRouteChange('/guyq')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">Օտարվող գույք</button></li>
+              <li><button onClick={() => handleRouteChange('/karucapatox')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">Կառուցապատողներ</button></li>
+              <li><button onClick={() => handleRouteChange('/avtosrahner')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">Գործընկեր ավտոսրահներ</button></li>
             </ul>
           </div>
 
