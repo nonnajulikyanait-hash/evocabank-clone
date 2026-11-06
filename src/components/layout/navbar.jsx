@@ -69,6 +69,16 @@ export default function Navbar() {
       location.pathname === '/aylpoxancumner'
     );
 
+  // Անհատ բաժնի ենթաէջերի ստուգումներ՝ մանուշակագույն դարձնելու համար
+  const isLoansPage = location.pathname.startsWith('/loans') || location.pathname.startsWith('/varker');
+  const isCardsPage = location.pathname.startsWith('/cards') || location.pathname.startsWith('/qarter');
+  const isDepositsPage = location.pathname.startsWith('/deposits') || location.pathname.startsWith('/avandner');
+  const isAccountsPage = location.pathname.startsWith('/accounts') || location.pathname.startsWith('/hashivner');
+  const isTransfersPage = location.pathname.startsWith('/transfers') || location.pathname.startsWith('/poxancumner');
+  const isSecuritiesPage = location.pathname.startsWith('/securities') || location.pathname.startsWith('/arjetghter');
+  const isSalaryPage = location.pathname.startsWith('/evocasalary');
+  const isTouchPage = location.pathname.startsWith('/evocatouch');
+
   const isLeasingSub = location.pathname === '/leasing' || location.pathname === '/special-offer';
   const isAccountsSub = location.pathname === '/business-accounts' || location.pathname === '/business-unallocated-metal-accounts';
   const isSecuritiesSub = 
@@ -272,14 +282,14 @@ export default function Navbar() {
           </nav>
         ) : (
           <nav className="hidden lg:flex items-center gap-7 text-[13px] font-bold text-gray-800">
-            <Link to="/loans" className="hover:text-[#6400dc] transition">Վարկեր</Link>
-            <Link to="/cards" className="hover:text-[#6400dc] transition">Քարտեր</Link>
-            <Link to="/deposits" className="hover:text-[#6400dc] transition">Ավանդներ</Link>
-            <Link to="/accounts" className="hover:text-[#6400dc] transition">Հաշիվներ</Link>
-            <Link to="/transfers" className="hover:text-[#6400dc] transition">Փոխանցումներ</Link>
-            <Link to="/securities" className="hover:text-[#6400dc] transition">Արժեթղթեր</Link>
-            <Link to="/evocasalary" className="hover:text-[#6400dc] transition">EvocaSALARY</Link>
-            <Link to="/evocatouch" className="hover:text-[#6400dc] transition">EvocaTOUCH</Link>
+            <Link to="/loans" className={`transition ${isLoansPage ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>Վարկեր</Link>
+            <Link to="/qarter" className={`transition ${isCardsPage ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>Քարտեր</Link>
+            <Link to="/deposits" className={`transition ${isDepositsPage ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>Ավանդներ</Link>
+            <Link to="/accounts" className={`transition ${isAccountsPage ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>Հաշիվներ</Link>
+            <Link to="/transfers" className={`transition ${isTransfersPage ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>Փոխանցումներ</Link>
+            <Link to="/securities" className={`transition ${isSecuritiesPage ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>Արժեթղթեր</Link>
+            <Link to="/evocasalary" className={`transition ${isSalaryPage ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>EvocaSALARY</Link>
+            <Link to="/evocatouch" className={`transition ${isTouchPage ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>EvocaTOUCH</Link>
           </nav>
         )}
 
