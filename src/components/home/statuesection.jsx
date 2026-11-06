@@ -13,6 +13,7 @@ const cardsData = [
     tag: 'Նվեր քարտեր',
     title: 'Evoca Gift Card',
     description: 'Գնիր Evoca Gift Card, և լավագույն նվերը կլինի քոնը: Քարտը հարմար է բոլոր առիթների համար:',
+    cardTitle: 'Evoca Gift Card', // Քարտի վերնագիրը Qarter.jsx փոխանցելու համար
   },
   {
     id: 3,
@@ -31,9 +32,14 @@ const cardsData = [
 export default function StatueSection() {
   const navigate = useNavigate();
 
-  const handleCardClick = (cardId) => {
-    if (cardId === 49) {
+  const handleCardClick = (card) => {
+    if (card.id === 49) {
+      // Գնում է 49-րդ նորության էջ
       navigate('/bolor-norutyunner', { state: { openNewsId: 49 } });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (card.id === 2 || card.title === 'Evoca Gift Card') {
+      // Գնում է Qarter.jsx էջ և բացում Evoca Gift Card-ը
+      navigate('/qarter', { state: { cardTitle: 'Evoca Gift Card' } });
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
@@ -73,7 +79,7 @@ export default function StatueSection() {
             {cardsData.map((card) => (
               <div 
                 key={card.id}
-                onClick={() => handleCardClick(card.id)}
+                onClick={() => handleCardClick(card)}
                 className="bg-white text-gray-900 p-6 rounded-[28px] shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl flex flex-col justify-between cursor-pointer hover:bg-purple-50"
               >
                 <div>
