@@ -504,10 +504,11 @@ export default function BolorNorutyunner() {
     }
   ];
 
-  // Check if openNewsId is passed via navigation state
+  // Check if openNewsId or openId is passed via navigation state
   useEffect(() => {
-    if (location.state && location.state.openNewsId) {
-      const foundNews = allNews.find(n => n.id === location.state.openNewsId);
+    if (location.state && (location.state.openNewsId || location.state.openId)) {
+      const targetId = location.state.openNewsId || location.state.openId;
+      const foundNews = allNews.find(n => n.id === Number(targetId));
       if (foundNews) {
         setSelectedNews(foundNews);
       }
