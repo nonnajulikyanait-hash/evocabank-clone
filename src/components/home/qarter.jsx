@@ -236,7 +236,7 @@ export default function Qarter() {
     }
   ];
 
-  // Auto select Visa Infinite from location state if passed
+  // Auto select card from location state if passed (e.g. from slider)
   useEffect(() => {
     if (location.state && location.state.cardTitle) {
       const foundCard = cardsList.find(c => c.title === location.state.cardTitle);

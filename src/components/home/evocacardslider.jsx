@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
@@ -98,8 +99,14 @@ const slidesData = [
 ];
 
 export default function EvocaCardSlider() {
+  const navigate = useNavigate();
   const prevRef = useRef(null);
   const nextRef = useRef(null);
+
+  const handleCardClick = (title) => {
+    navigate('/qarter', { state: { cardTitle: title } });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   return (
     <section className="w-full overflow-hidden bg-white pt-2">
@@ -136,7 +143,10 @@ export default function EvocaCardSlider() {
                     {slide.description}
                   </p>
                   <div className="pt-2">
-                    <button className={`${slide.btnBg} font-bold text-xs px-8 py-3.5 rounded-full transition cursor-pointer shadow-md hover:opacity-90`}>
+                    <button 
+                      onClick={() => handleCardClick(slide.title)}
+                      className={`${slide.btnBg} font-bold text-xs px-8 py-3.5 rounded-full transition cursor-pointer shadow-md hover:opacity-90`}
+                    >
                       {slide.btnText}
                     </button>
                   </div>
