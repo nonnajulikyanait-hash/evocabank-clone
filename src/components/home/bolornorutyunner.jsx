@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import Navbar from '../layout/navbar';
 import Footer from './footer';
 
 export default function BolorNorutyunner() {
+  const location = useLocation();
   const [selectedCategory, setSelectedCategory] = useState("Բոլորը");
   const [selectedNews, setSelectedNews] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
@@ -386,7 +388,7 @@ export default function BolorNorutyunner() {
       title: "Նոր զեղչեր Evoca Mastercard քարտապանների համար",
       date: "07.02.2025",
       image: "https://www.evoca.am/images-cache/news/1/17389114240578/510x383.png",
-      content: "Զեղչեր էլեկտրոնիկայի և աքսեսուարների համար Evoca Mastercard-ով վճարելիս:"
+      content: "Զեղչեր էլեկտրոնիկայի և աքեսուարների համար Evoca Mastercard-ով վճարելիս:"
     },
     {
       id: 47,
@@ -501,6 +503,16 @@ export default function BolorNorutyunner() {
       content: "Auto Gallery-ի հետ համատեղ Evocabank-ն առաջարկում է ավտովարկ՝ արագ հաստատմամբ:"
     }
   ];
+
+  // Check if openNewsId is passed via navigation state
+  useEffect(() => {
+    if (location.state && location.state.openNewsId) {
+      const foundNews = allNews.find(n => n.id === location.state.openNewsId);
+      if (foundNews) {
+        setSelectedNews(foundNews);
+      }
+    }
+  }, [location.state]);
 
   const filteredNews = selectedCategory === "Բոլորը" 
     ? allNews 
