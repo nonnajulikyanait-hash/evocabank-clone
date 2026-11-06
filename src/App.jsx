@@ -23,13 +23,16 @@ import Iravakan from './components/home/iravakan';
 import Guyq from './components/home/guyq';                 
 import Karucapatox from './components/home/karucapatox';   
 import Avtosrahner from './components/home/avtosrahner';   
-import Iravunqner from './components/home/iravunqner';       // ⬅️ Ավելացվել է
-import Chapanishner from './components/home/chapanishner';   // ⬅️ Ավելացվել է
-import Kargavorum from './components/home/kargavorum';       // ⬅️ Ավելացվել է
-import Gaxtniutyun from './components/home/gaxtniutyun';     // ⬅️ Ավելացվել է
-import Hashtarar from './components/home/hashtarar';         // ⬅️ Ավելացվել է
-import Kanxargelum from './components/home/kanxargelum';     // ⬅️ Ավելացվել է
-import Hxumner from './components/home/hxumner';             // ⬅️ Ավելացվել է
+import Iravunqner from './components/home/iravunqner';       
+import Chapanishner from './components/home/chapanishner';   
+import Kargavorum from './components/home/kargavorum';       
+import Gaxtniutyun from './components/home/gaxtniutyun';     
+import Hashtarar from './components/home/hashtarar';         
+import Kanxargelum from './components/home/kanxargelum';     
+import Hxumner from './components/home/hxumner';             
+import Footerevoca from './components/home/footerevoca';         
+import Footerpahatuper from './components/home/footerpahatuper'; 
+import Footerharcer from './components/home/footerharcer';     
 import AnhatAvandner from './components/home/anhatavandner';
 import Hashivner from './components/home/hashivner'; 
 import Poxancumner from './components/home/poxancumner'; 
@@ -121,13 +124,16 @@ function App() {
         <Route path="/guyq" element={<Guyq />} />                       
         <Route path="/karucapatox" element={<Karucapatox />} />         
         <Route path="/avtosrahner" element={<Avtosrahner />} />         
-        <Route path="/iravunqner" element={<Iravunqner />} />           {/* ⬅️ Ավելացվել է */}
-        <Route path="/chapanishner" element={<Chapanishner />} />       {/* ⬅️ Ավելացվել է */}
-        <Route path="/kargavorum" element={<Kargavorum />} />           {/* ⬅️ Ավելացվել է */}
-        <Route path="/gaxtniutyun" element={<Gaxtniutyun />} />         {/* ⬅️ Ավելացվել է */}
-        <Route path="/hashtarar" element={<Hashtarar />} />             {/* ⬅️ Ավելացվել է */}
-        <Route path="/kanxargelum" element={<Kanxargelum />} />         {/* ⬅️ Ավելացվել է */}
-        <Route path="/hxumner" element={<Hxumner />} />                 {/* ⬅️ Ավելացվել է */}
+        <Route path="/iravunqner" element={<Iravunqner />} />           
+        <Route path="/chapanishner" element={<Chapanishner />} />       
+        <Route path="/kargavorum" element={<Kargavorum />} />           
+        <Route path="/gaxtniutyun" element={<Gaxtniutyun />} />         
+        <Route path="/hashtarar" element={<Hashtarar />} />             
+        <Route path="/kanxargelum" element={<Kanxargelum />} />         
+        <Route path="/hxumner" element={<Hxumner />} />                 
+        <Route path="/footerevoca" element={<Footerevoca />} />         
+        <Route path="/footerpahatuper" element={<Footerpahatuper />} /> 
+        <Route path="/footerharcer" element={<Footerharcer />} />       
         <Route path="/visa-infinite" element={<Qarter />} />
         <Route path="/mastercard-gold" element={<Qarter />} />
         <Route path="/visa-gold" element={<Qarter />} />

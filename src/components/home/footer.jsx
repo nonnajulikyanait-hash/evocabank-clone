@@ -81,9 +81,9 @@ function Footer({ setActiveTab }) {
           <div className="space-y-3">
             <h3 className="font-bold text-sm text-neutral-900">Այլ հղումներ</h3>
             <ul className="space-y-2 text-xs text-gray-600 flex flex-col items-start">
-              <li><button onClick={() => handleNavClick('evocaonline')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">EvocaONLINE</button></li>
-              <li><button onClick={() => handleNavClick('pahatuper')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">Պահատուփեր</button></li>
-              <li><button onClick={() => handleNavClick('harcer')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">Հաճախ տրվող հարցեր</button></li>
+              <li><button onClick={() => handleRouteChange('/footerevoca')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">EvocaONLINE</button></li>
+              <li><button onClick={() => handleRouteChange('/footerpahatuper')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">Պահատուփեր</button></li>
+              <li><button onClick={() => handleRouteChange('/footerharcer')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">Հաճախ տրվող հարցեր</button></li>
               <li><button onClick={() => handleNavClick('haytararutyun')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">Հայտարարություններ</button></li>
               <li><button onClick={() => handleNavClick('dibrary')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">Dibrary</button></li>
               <li><button onClick={() => handleNavClick('bukletner')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">Բուկլետներ</button></li>
