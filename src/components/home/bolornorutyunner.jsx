@@ -27,8 +27,15 @@ export default function BolorNorutyunner() {
           date: "16.06.2023",
           image: "https://www.evoca.am/images-cache/news/1/16868326578274/510x383.png",
           content: "Evoca Digital քարտը Visa համակարգի թվային քարտ է, որով կարող ես կատարել բոլոր գործարքները:"
+        },
+        {
+          id: 50,
+          category: "Նորարարություններ",
+          title: "Նոր EvocaTOUCH",
+          date: "2024",
+          image: "https://www.evoca.am/images-cache/news/1/16848286806716/780x585.png",
+          content: "Evocabank-ը ներկայացրեց իր նոր EvocaTOUCH հավելվածը ժամանակակից թվային լուծումներով:"
         }
-        // ... (остальные новости подгрузятся ниже в основном массиве)
       ];
       // Ищем в полном списке
       const found = allNewsList.find(n => n.id === Number(targetId));
