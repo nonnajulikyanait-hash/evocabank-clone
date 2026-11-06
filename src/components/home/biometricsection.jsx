@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const faces = [
   "https://www.evoca.am/img/temp/biometric/face1.png",
@@ -9,6 +10,7 @@ const faces = [
 function BiometricSection() {
   const [faceIndex, setFaceIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -23,6 +25,11 @@ function BiometricSection() {
 
     return () => clearInterval(interval);
   }, []);
+
+  const handleLearnMore = () => {
+    navigate('/evocatouch');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   return (
     <section className="py-12 lg:py-20 bg-white overflow-hidden">
@@ -79,7 +86,10 @@ function BiometricSection() {
 
             {/* Boton */}
             <div>
-              <button className="font-bold text-xs sm:text-sm px-7 py-3.5 rounded-full text-white bg-[#6400DC] hover:bg-opacity-90 transition-all shadow-md cursor-pointer">
+              <button 
+                onClick={handleLearnMore}
+                className="font-bold text-xs sm:text-sm px-7 py-3.5 rounded-full text-white bg-[#6400DC] hover:bg-opacity-90 transition-all shadow-md cursor-pointer"
+              >
                 Իմանալ ավելին
               </button>
             </div>
