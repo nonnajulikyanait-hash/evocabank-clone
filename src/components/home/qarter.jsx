@@ -342,7 +342,7 @@ export default function Qarter() {
     }
   ];
 
-  documentsList = [
+  const documentsList = [
     { title: "Կենսաթոշակային քարտեր", link: "https://www.evoca.am/files/global_files/1/pention-cards.pdf" },
     { title: "Evoca Gift քարտեր (Տեղեկատվական ամփոփագիր)", link: "https://www.evoca.am/files/global_files/1/evoca-gift-tariffs.pdf" },
     { title: "Տեղեկատվական ամփոփագիր (Բանկային հաշիվներ) 08.06.26", link: "https://www.evoca.am/files/global_files/1/bank-account-08-06-26.pdf" },
