@@ -44,7 +44,7 @@ function Footer({ setActiveTab }) {
               Evocabank-ը վերահսկվում է Հայաստանի Հանրապետության Կենտրոնական բանկի կողմից
             </p>
             <p className="text-[10px] text-gray-400">
-              1990 - 2026, © ԲՈԼՈՐ ԻՐԱՎՈՒՆՔՆԵԸ ՊԱՇՏՊԱՆՎԱԾ ԵՆ
+              1990 - 2026, © ԲՈԼՈՐ ԻՐԱՎՈՒՆՔՆԵՐԸ ՊԱՇՏՊԱՆՎԱԾ ԵՆ
             </p>
           </div>
 
@@ -88,7 +88,7 @@ function Footer({ setActiveTab }) {
               <li><button onClick={() => handleRouteChange('/dibrary')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">Dibrary</button></li>
               <li><button onClick={() => handleRouteChange('/bukletner')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">Բուկլետներ</button></li>
               <li><button onClick={() => handleRouteChange('/kap')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">Հետադարձ կապ</button></li>
-              <li><button onClick={() => handleNavClick('kayqiqartez')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">Կայքի քարտեզ</button></li>
+              <li><button onClick={() => handleRouteChange('/kayqiqartez')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">Կայքի քարտեզ</button></li>
             </ul>
           </div>
 

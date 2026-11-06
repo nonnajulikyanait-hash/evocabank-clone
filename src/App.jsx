@@ -90,6 +90,7 @@ import Arxiv from './components/home/arxiv';
 import Dibrary from './components/home/dibrary';
 import Bukletner from './components/home/bukletner';
 import Kap from './components/home/kap';
+import Kayqiqartez from './components/home/kayqiqartez'; // ⬅️ Ավելացվել է
 
 function HomePage() {
   return (
@@ -188,7 +189,7 @@ function App() {
         <Route path="/kariera" element={<Kariera />} />
         <Route path="/aravelutyunner" element={<Aravelutyunner />} />
         <Route path="/harcer" element={<Harcer />} />
-        <Route path="/yndunum" element={<Yndunum />} />
+        <Route path="/yndunum" element={<Yndunum />} /> 
         <Route path="/haytararutyunner" element={<Haytararutyun />} /> 
         <Route path="/praktika" element={<Praktika />} />
         <Route path="/usumnakan" element={<Usumnakan />} />
@@ -200,6 +201,7 @@ function App() {
         <Route path="/dibrary" element={<Dibrary />} />
         <Route path="/bukletner" element={<Bukletner />} />
         <Route path="/kap" element={<Kap />} />
+        <Route path="/kayqiqartez" element={<Kayqiqartez />} /> {/* ⬅️ Ավելացվել է */}
       </Routes>
     </Router>
   );
