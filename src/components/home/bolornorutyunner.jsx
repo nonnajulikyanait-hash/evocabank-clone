@@ -3,22 +3,25 @@ import { useNavigate } from 'react-router-dom';
 
 const cardsData = [
   {
-    id: 49, // Ավելացվել է ID՝ 49-րդ նորությանը հղվելու համար
+    id: 49, // ID-ն դրված է 49, որպեսզի բացի համապատասխան նորությունը
     tag: 'Թվային քարտեր',
     title: 'Evoca Digital քարտ',
     description: 'Evoca Digital քարտն արդեն հասանելի է EvocaTOUCH հավելվածով։ Ակտիվացրու այն հիմա և ընտրիր քո սիրելի դիզայնը։',
   },
   {
+    id: 2,
     tag: 'Նվեր քարտեր',
     title: 'Evoca Gift Card',
     description: 'Գնիր Evoca Gift Card, և լավագույն նվերը կլինի քոնը: Քարտը հարմար է բոլոր առիթների համար:',
   },
   {
+    id: 3,
     tag: 'Նոր հավելված',
     title: 'EvocaTOUCH 2',
     description: 'EvocaTOUCH-ը պարզապես բանկային հավելված չէ, վստահ ենք՝ այն քեզ համար դառնալու է ապրելակերպ։',
   },
   {
+    id: 4,
     tag: 'Օնլայն վճարումներ',
     title: 'Արագ online վճարումներ',
     description: 'Կատարիր քո ընթացիկ վճարումները Evocabank-ի online տերմինալի միջոցով՝ պարզ և արագ: Այն հասանելի է 24/7:',
@@ -94,12 +97,12 @@ export default function StatueSection() {
 
           {/* Աջ մաս - 4 Քառակուսիները */}
           <div className="w-full lg:w-7/12 grid grid-cols-1 md:grid-cols-2 gap-5">
-            {cardsData.map((card, index) => (
+            {cardsData.map((card) => (
               <div 
-                key={index}
+                key={card.id}
                 onClick={() => handleCardClick(card)}
                 className={`bg-white text-gray-900 p-6 rounded-[28px] shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl flex flex-col justify-between ${
-                  card.id === 49 ? 'cursor-pointer' : ''
+                  card.id === 49 ? 'cursor-pointer hover:bg-purple-50' : ''
                 }`}
               >
                 <div>
