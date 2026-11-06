@@ -66,14 +66,14 @@ function Footer({ setActiveTab }) {
           {/* Sylunk 3: Ogtakar hulumner */}
           <div className="space-y-3">
             <h3 className="font-bold text-sm text-neutral-900">Օգտակար հղումներ</h3>
-            <ul className="space-y-2 text-xs text-gray-600">
-              <li><a href="#customer-rights" className="hover:text-[#6400dc]">Հաճախորդի իրավունքները (Բողոքի ներկայացման կանոններ)</a></li>
-              <li><a href="#residency-criteria" className="hover:text-[#6400dc]">Հաճախորդի ռեզիդենտության չափանիշներ</a></li>
-              <li><a href="#regulation" className="hover:text-[#6400dc]">Կարգավորում</a></li>
-              <li><a href="#privacy-policy" className="hover:text-[#6400dc]">Գաղտնիության քաղաքականություն</a></li>
-              <li><a href="#financial-ombudsman" className="hover:text-[#6400dc]">Ֆին. հաշտարար</a></li>
-              <li><a href="#fraud-prevention" className="hover:text-[#6400dc]">Ֆինանսական հանցագործությունների կանխարգելում</a></li>
-              <li><a href="#cardholders-links" className="hover:text-[#6400dc]">Հղումներ Բանկի քարտապանների համար</a></li>
+            <ul className="space-y-2 text-xs text-gray-600 flex flex-col items-start">
+              <li><button onClick={() => handleRouteChange('/iravunqner')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">Հաճախորդի իրավունքները (Բողոքի ներկայացման կանոններ)</button></li>
+              <li><button onClick={() => handleRouteChange('/chapanishner')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">Հաճախորդի ռեզիդենտության չափանիշներ</button></li>
+              <li><button onClick={() => handleRouteChange('/kargavorum')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">Կարգավորում</button></li>
+              <li><button onClick={() => handleRouteChange('/gaxtniutyun')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">Գաղտնիության քաղաքականություն</button></li>
+              <li><button onClick={() => handleRouteChange('/hashtarar')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">Ֆին. հաշտարար</button></li>
+              <li><button onClick={() => handleRouteChange('/kanxargelum')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">Ֆինանսական հանցագործությունների կանխարգելում</button></li>
+              <li><button onClick={() => handleRouteChange('/hxumner')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">Հղումներ Բանկի քարտապանների համար</button></li>
             </ul>
           </div>
 

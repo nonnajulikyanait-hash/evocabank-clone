@@ -22,7 +22,14 @@ import Qartez from './components/home/qartez';
 import Iravakan from './components/home/iravakan';         
 import Guyq from './components/home/guyq';                 
 import Karucapatox from './components/home/karucapatox';   
-import Avtosrahner from './components/home/avtosrahner';   // ⬅️ Ավելացվել է ավտոսրահների բաղադրիչը
+import Avtosrahner from './components/home/avtosrahner';   
+import Iravunqner from './components/home/iravunqner';       // ⬅️ Ավելացվել է
+import Chapanishner from './components/home/chapanishner';   // ⬅️ Ավելացվել է
+import Kargavorum from './components/home/kargavorum';       // ⬅️ Ավելացվել է
+import Gaxtniutyun from './components/home/gaxtniutyun';     // ⬅️ Ավելացվել է
+import Hashtarar from './components/home/hashtarar';         // ⬅️ Ավելացվել է
+import Kanxargelum from './components/home/kanxargelum';     // ⬅️ Ավելացվել է
+import Hxumner from './components/home/hxumner';             // ⬅️ Ավելացվել է
 import AnhatAvandner from './components/home/anhatavandner';
 import Hashivner from './components/home/hashivner'; 
 import Poxancumner from './components/home/poxancumner'; 
@@ -113,7 +120,14 @@ function App() {
         <Route path="/iravakan" element={<Iravakan />} />               
         <Route path="/guyq" element={<Guyq />} />                       
         <Route path="/karucapatox" element={<Karucapatox />} />         
-        <Route path="/avtosrahner" element={<Avtosrahner />} />         {/* ⬅️ Ավելացվել է */}
+        <Route path="/avtosrahner" element={<Avtosrahner />} />         
+        <Route path="/iravunqner" element={<Iravunqner />} />           {/* ⬅️ Ավելացվել է */}
+        <Route path="/chapanishner" element={<Chapanishner />} />       {/* ⬅️ Ավելացվել է */}
+        <Route path="/kargavorum" element={<Kargavorum />} />           {/* ⬅️ Ավելացվել է */}
+        <Route path="/gaxtniutyun" element={<Gaxtniutyun />} />         {/* ⬅️ Ավելացվել է */}
+        <Route path="/hashtarar" element={<Hashtarar />} />             {/* ⬅️ Ավելացվել է */}
+        <Route path="/kanxargelum" element={<Kanxargelum />} />         {/* ⬅️ Ավելացվել է */}
+        <Route path="/hxumner" element={<Hxumner />} />                 {/* ⬅️ Ավելացվել է */}
         <Route path="/visa-infinite" element={<Qarter />} />
         <Route path="/mastercard-gold" element={<Qarter />} />
         <Route path="/visa-gold" element={<Qarter />} />
