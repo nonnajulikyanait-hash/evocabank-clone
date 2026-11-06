@@ -18,6 +18,7 @@ const slidesData = [
     descColor: 'text-gray-700',
     btnBg: 'bg-[#6400dc] text-white',
     image: 'https://www.evoca.am/images-cache/sliders/1/17480089224912/4012c7541d8db15b5666bb0e4f4bdf7a-576x486.png',
+    path: '/qarter',
   },
   {
     id: 2,
@@ -29,6 +30,7 @@ const slidesData = [
     descColor: 'text-gray-200',
     btnBg: 'bg-white text-[#6539aa]',
     image: 'https://www.evoca.am/images-cache/sliders/1/17740137222872/7152cafab4609e8483a365f79ecf04cb-577x486.png',
+    path: '/evocasalary',
   },
   {
     id: 3,
@@ -40,6 +42,7 @@ const slidesData = [
     descColor: 'text-gray-300',
     btnBg: 'bg-[#6400dc] text-white',
     image: 'https://www.evoca.am/images-cache/sliders/1/17612202124044/b74e87ec0e83aa10cb128d41f0ada026-577x486.png',
+    path: '/qarter',
   },
   {
     id: 4,
@@ -51,6 +54,7 @@ const slidesData = [
     descColor: 'text-gray-300',
     btnBg: 'bg-[#6400dc] text-white',
     image: 'https://www.evoca.am/images-cache/sliders/1/16856146843579/345dd727d7ee28e2cd6ec180e5d65740-577x486.jpg',
+    path: '/qarter',
   },
   {
     id: 5,
@@ -62,6 +66,7 @@ const slidesData = [
     descColor: 'text-gray-300',
     btnBg: 'bg-[#6400dc] text-white',
     image: 'https://www.evoca.am/images-cache/sliders/1/17737433784078/126c54e244e880fd563d8af43979486c-577x485.png',
+    path: '/qarter',
   },
   {
     id: 6,
@@ -73,6 +78,7 @@ const slidesData = [
     descColor: 'text-gray-700',
     btnBg: 'bg-[#6400dc] text-white',
     image: 'https://www.evoca.am/images-cache/sliders/1/16178037539626/79381d3e68fdf7ec25c5837a19ce5821-577x486.jpg',
+    path: '/qarter',
   },
   {
     id: 7,
@@ -84,6 +90,7 @@ const slidesData = [
     descColor: 'text-gray-100',
     btnBg: 'bg-black text-white',
     image: 'https://www.evoca.am/images-cache/sliders/1/17262130779724/2fee1054871280f57daf5204f901c563-577x486.png',
+    path: '/qarter',
   },
   {
     id: 8,
@@ -95,6 +102,7 @@ const slidesData = [
     descColor: 'text-gray-800',
     btnBg: 'bg-[#6400dc] text-white',
     image: 'https://www.evoca.am/images-cache/sliders/1/16178037539626/79381d3e68fdf7ec25c5837a19ce5821-577x486.jpg',
+    path: '/qarter',
   },
 ];
 
@@ -103,8 +111,12 @@ export default function EvocaCardSlider() {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
 
-  const handleCardClick = (title) => {
-    navigate('/qarter', { state: { cardTitle: title } });
+  const handleCardClick = (slide) => {
+    if (slide.path === '/evocasalary') {
+      navigate('/evocasalary');
+    } else {
+      navigate('/qarter', { state: { cardTitle: slide.title } });
+    }
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -144,7 +156,7 @@ export default function EvocaCardSlider() {
                   </p>
                   <div className="pt-2">
                     <button 
-                      onClick={() => handleCardClick(slide.title)}
+                      onClick={() => handleCardClick(slide)}
                       className={`${slide.btnBg} font-bold text-xs px-8 py-3.5 rounded-full transition cursor-pointer shadow-md hover:opacity-90`}
                     >
                       {slide.btnText}
