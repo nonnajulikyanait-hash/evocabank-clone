@@ -88,7 +88,7 @@ import BolorNorutyunner from './components/home/bolornorutyunner';
 import Blog from './components/home/blog';
 import Arxiv from './components/home/arxiv';
 import Dibrary from './components/home/dibrary';
-
+import Bukletner from './components/home/bukletner'; // ⬅️ Ավելացվել է
 
 function HomePage() {
   return (
@@ -197,6 +197,7 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/arxiv" element={<Arxiv />} />
         <Route path="/dibrary" element={<Dibrary />} />
+        <Route path="/bukletner" element={<Bukletner />} /> {/* ⬅️ Ավելացվել է */}
       </Routes>
     </Router>
   );

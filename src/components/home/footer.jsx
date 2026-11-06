@@ -86,7 +86,7 @@ function Footer({ setActiveTab }) {
               <li><button onClick={() => handleRouteChange('/footerharcer')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">Հաճախ տրվող հարցեր</button></li>
               <li><button onClick={() => handleNavClick('haytararutyun')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">Հայտարարություններ</button></li>
               <li><button onClick={() => handleRouteChange('/dibrary')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">Dibrary</button></li>
-              <li><button onClick={() => handleNavClick('bukletner')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">Բուկլետներ</button></li>
+              <li><button onClick={() => handleRouteChange('/bukletner')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">Բուկլետներ</button></li>
               <li><button onClick={() => handleNavClick('kap')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">Հետադարձ կապ</button></li>
               <li><button onClick={() => handleNavClick('kayqiqartez')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">Կայքի քարտեզ</button></li>
             </ul>
