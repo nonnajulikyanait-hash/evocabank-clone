@@ -82,7 +82,7 @@ const slidesData = [
     descColor: 'text-gray-700',
     btnBg: 'bg-[#6400dc] text-white',
     image: 'https://www.evoca.am/images-cache/sliders/1/16178037539626/79381d3e68fdf7ec25c5837a19ce5821-577x486.jpg',
-    path: '/qarter',
+    path: '/anhatvarker', // Ændret path til anhatvarker-siden
   },
   {
     id: 7,
@@ -117,7 +117,10 @@ export default function EvocaCardSlider() {
   const nextRef = useRef(null);
 
   const handleCardClick = (slide) => {
-    if (slide.path === '/evocasalary') {
+    if (slide.id === 6) {
+      // Sender brugeren til AnhatVarker-siden
+      navigate('/anhatvarker');
+    } else if (slide.path === '/evocasalary') {
       navigate('/evocasalary');
     } else if (slide.path === '/norutyunner') {
       navigate('/norutyunner', { state: { openNewsId: slide.newsId } });

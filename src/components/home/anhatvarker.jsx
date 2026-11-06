@@ -405,7 +405,7 @@ export default function AnhatVarker() {
     <div className="min-h-screen bg-white font-sans text-neutral-800">
       <Navbar />
       
-      {/* Sub-header Purple Bar (#6400dc) with Fixed Text Colors */}
+      {/* Sub-header Purple Bar (#6400dc) */}
       <div className="bg-[#6400dc] text-white py-3 px-4 shadow-inner">
         <div className="max-w-7xl mx-auto flex items-center space-x-8 text-xs sm:text-sm font-semibold overflow-x-auto whitespace-nowrap">
           <Link to="/loans" className="text-white border-b-2 border-white pb-1 cursor-pointer">
@@ -498,6 +498,13 @@ export default function AnhatVarker() {
                   {loan.id === 1 ? (
                     <Link 
                       to="/loans/unsecured-consumer-loan" 
+                      className="bg-purple-50 hover:bg-purple-100 text-[#6400dc] font-bold text-xs px-6 py-3 rounded-full transition-all cursor-pointer inline-block"
+                    >
+                      Մանրամասն &gt;
+                    </Link>
+                  ) : loan.id === 6 ? (
+                    <Link 
+                      to="/loans/8" 
                       className="bg-purple-50 hover:bg-purple-100 text-[#6400dc] font-bold text-xs px-6 py-3 rounded-full transition-all cursor-pointer inline-block"
                     >
                       Մանրամասն &gt;
