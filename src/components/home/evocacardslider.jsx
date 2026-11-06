@@ -116,7 +116,8 @@ export default function EvocaCardSlider() {
     if (slide.path === '/evocasalary') {
       navigate('/evocasalary');
     } else if (slide.path === '/norutyunner') {
-      navigate('/norutyunner', { state: { openNewsId: slide.newsId } });
+      // Sender også som URL query parameter (?id=100) for at være 100% sikker på denfanger det
+      navigate('/norutyunner?id=100', { state: { openNewsId: 100 } });
     } else {
       navigate('/qarter', { state: { cardTitle: slide.title } });
     }
@@ -195,4 +196,3 @@ export default function EvocaCardSlider() {
     </section>
   );
 }
-//kbh
