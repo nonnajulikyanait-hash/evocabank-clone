@@ -89,7 +89,7 @@ import Blog from './components/home/blog';
 import Arxiv from './components/home/arxiv';
 import Dibrary from './components/home/dibrary';
 import Bukletner from './components/home/bukletner';
-import Kap from './components/home/kap'; // ⬅️ Ավելացվել է
+import Kap from './components/home/kap';
 
 function HomePage() {
   return (
@@ -198,9 +198,8 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/arxiv" element={<Arxiv />} />
         <Route path="/dibrary" element={<Dibrary />} />
-        <Footer /> // Wait, route doesn't go here, check original closing
         <Route path="/bukletner" element={<Bukletner />} />
-        <Route path="/kap" element={<Kap />} /> {/* ⬅️ Ավելացվել է */}
+        <Route path="/kap" element={<Kap />} />
       </Routes>
     </Router>
   );
