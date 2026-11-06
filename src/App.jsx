@@ -19,9 +19,10 @@ import UnsecuredConsumerLoan from './components/home/unsecuredconsumerloan';
 import LoanDetail from './components/home/loandetail';
 import Qarter from './components/home/qarter';
 import Qartez from './components/home/qartez'; 
-import Iravakan from './components/home/iravakan';         // ⬅️ Ավելացվել է
-import Guyq from './components/home/guyq';                 // ⬅️ Ավելացվել է
-import Karucapatox from './components/home/karucapatox';   // ⬅️ Ավելացվել է
+import Iravakan from './components/home/iravakan';         
+import Guyq from './components/home/guyq';                 
+import Karucapatox from './components/home/karucapatox';   
+import Avtosrahner from './components/home/avtosrahner';   // ⬅️ Ավելացվել է ավտոսրահների բաղադրիչը
 import AnhatAvandner from './components/home/anhatavandner';
 import Hashivner from './components/home/hashivner'; 
 import Poxancumner from './components/home/poxancumner'; 
@@ -109,9 +110,10 @@ function App() {
         <Route path="/cards" element={<Qarter />} />
         <Route path="/qarter" element={<Qarter />} />
         <Route path="/qartez" element={<Qartez />} />
-        <Route path="/iravakan" element={<Iravakan />} />               {/* ⬅️ Ավելացվել է */}
-        <Route path="/guyq" element={<Guyq />} />                       {/* ⬅️ Ավելացվել է */}
-        <Route path="/karucapatox" element={<Karucapatox />} />         {/* ⬅️ Ավելացվել է */}
+        <Route path="/iravakan" element={<Iravakan />} />               
+        <Route path="/guyq" element={<Guyq />} />                       
+        <Route path="/karucapatox" element={<Karucapatox />} />         
+        <Route path="/avtosrahner" element={<Avtosrahner />} />         {/* ⬅️ Ավելացվել է */}
         <Route path="/visa-infinite" element={<Qarter />} />
         <Route path="/mastercard-gold" element={<Qarter />} />
         <Route path="/visa-gold" element={<Qarter />} />
