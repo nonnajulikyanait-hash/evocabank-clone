@@ -66,7 +66,7 @@ function EvocaOnlineMobile() {
 
             </div>
 
-            {/* Աջ մաս՝ Տեքստեր, QR կոդ և Կոճակներ */}
+            {/* Աջ մաս՝ Տեքստեր, QR կոդ և Հավելվածներ */}
             <div className="w-full lg:w-5/12 text-left flex flex-col space-y-4">
               
               <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
@@ -77,17 +77,8 @@ function EvocaOnlineMobile() {
                 Evocabank-ը արագ, պարզ և նորարար ծառայություններ մատուցող բանկ է, որն առանձնանում է տեղեկատվական նորագույն տեխնոլոգիաների ակտիվ կիրառմամբ:
               </p>
 
-              <div>
-                <a 
-                  href="#register" 
-                  className="inline-block bg-white text-[#6400dc] hover:bg-neutral-100 font-bold px-6 py-2.5 rounded-full shadow-md transition-transform hover:scale-105 text-sm"
-                >
-                  Դառնալ հաճախորդ
-                </a>
-              </div>
-
               {/* QR կոդ և Հավելվածների խանութներ */}
-              <div className="pt-3 border-t border-purple-400/30">
+              <div className="pt-2 border-t border-purple-400/30">
                 <span className="text-[11px] text-purple-200 block mb-2 font-medium">
                   Ներբեռնել հավելվածները՝
                 </span>
