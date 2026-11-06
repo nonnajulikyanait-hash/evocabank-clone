@@ -34,16 +34,20 @@ export default function StatueSection() {
 
   const handleCardClick = (card) => {
     if (card.id === 49) {
-      // Գնում է 49-րդ նորության էջ
+      // Gnum e 49-rd norutyan ej
       navigate('/bolor-norutyunner', { state: { openNewsId: 49 } });
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else if (card.id === 3) {
-      // Գնում է 50-րդ նորության էջ (EvocaTOUCH 2)
+      // Gnum e 50-rd norutyan ej (EvocaTOUCH 2)
       navigate('/bolor-norutyunner', { state: { openNewsId: 50 } });
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else if (card.id === 2 || card.title === 'Evoca Gift Card') {
-      // Գնում է Qarter.jsx էջ և բացում Evoca Gift Card-ը
+      // Gnum e Qarter.jsx ej
       navigate('/qarter', { state: { cardTitle: 'Evoca Gift Card' } });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (card.id === 4) {
+      // Gnum e akntartayinvcharumner.jsx ej
+      navigate('/akntartayinvcharumner');
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
@@ -51,7 +55,7 @@ export default function StatueSection() {
   return (
     <section className="relative bg-[#6400dc] text-white py-12 px-6 my-8 rounded-[60px] overflow-hidden max-w-[1400px] mx-auto">
       
-      {/* Ֆոնային շարժվող / լողացող պատկերներ (Shapes) */}
+      {/* Shapes */}
       <img src="https://www.evoca.am/img/shape1.png" alt="shape" className="absolute top-8 left-10 w-6 opacity-80 pointer-events-none" />
       <img src="https://www.evoca.am/img/shape6.png" alt="shape" className="absolute top-12 right-20 w-8 opacity-80 pointer-events-none" />
       <img src="https://www.evoca.am/img/shape4.png" alt="shape" className="absolute bottom-16 left-1/4 w-7 opacity-70 pointer-events-none" />
