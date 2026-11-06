@@ -1,7 +1,9 @@
 import React, { useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Gortsynkerner() {
   const scrollRef = useRef(null);
+  const navigate = useNavigate();
 
   // 15 գործընկերների լոգոները
   const partners = [
@@ -47,6 +49,11 @@ function Gortsynkerner() {
     },
   ];
 
+  const handleGoToPartners = () => {
+    navigate('/mer-masin/gortsynkerner');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   const scrollLeft = () => {
     if (scrollRef.current) {
       scrollRef.current.scrollBy({ left: -250, behavior: 'smooth' });
@@ -73,7 +80,10 @@ function Gortsynkerner() {
               Դարձեք Evocabank-ի գործընկեր և եկեք միասին գնանք դեպի նոր իրականություն: Դառնալով Evoca ընտանիքի անդամ՝ Դուք մուտք եք գործում ժամանակակից և յուրահատուկ աշխարհ: Մենք մշտապես բաց ենք հետաքրքիր առաջարկների ու համագործակցությունների համար:
             </p>
             <div>
-              <button className="bg-[#6400dc] text-white px-6 py-3 rounded-xl font-bold text-sm shadow-md hover:bg-purple-800 transition-colors cursor-pointer">
+              <button 
+                onClick={handleGoToPartners}
+                className="bg-[#6400dc] text-white px-6 py-3 rounded-xl font-bold text-sm shadow-md hover:bg-purple-800 transition-colors cursor-pointer"
+              >
                 Բոլոր գործընկերները &gt;
               </button>
             </div>
@@ -120,7 +130,8 @@ function Gortsynkerner() {
               {partners.map((partner) => (
                 <div 
                   key={partner.id} 
-                  className="bg-white border border-gray-100 rounded-2xl p-6 min-w-[200px] h-[120px] flex items-center justify-center shadow-sm flex-shrink-0 hover:shadow-md transition-shadow"
+                  onClick={handleGoToPartners}
+                  className="bg-white border border-gray-100 rounded-2xl p-6 min-w-[200px] h-[120px] flex items-center justify-center shadow-sm flex-shrink-0 hover:shadow-md transition-shadow cursor-pointer"
                 >
                   <img 
                     src={partner.img} 
