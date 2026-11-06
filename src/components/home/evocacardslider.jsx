@@ -82,7 +82,7 @@ const slidesData = [
     descColor: 'text-gray-700',
     btnBg: 'bg-[#6400dc] text-white',
     image: 'https://www.evoca.am/images-cache/sliders/1/16178037539626/79381d3e68fdf7ec25c5837a19ce5821-577x486.jpg',
-    path: '/loans/8', // Ուղղակիորեն տանում է 8-րդ վարկի մանրամասների էջ
+    path: '/loans/8',
   },
   {
     id: 7,
@@ -95,7 +95,7 @@ const slidesData = [
     btnBg: 'bg-black text-white',
     image: 'https://www.evoca.am/images-cache/sliders/1/17262130779724/2fee1054871280f57daf5204f901c563-577x486.png',
     path: '/qarter',
-    cardTitle: 'UnionPay Gold',
+    cardTitle: 'UnionPay Gold', // Ապահովում է, որ գնա qarter.jsx-ի UnionPay Gold բաժին
   },
   {
     id: 8,
@@ -118,7 +118,7 @@ export default function EvocaCardSlider() {
 
   const handleCardClick = (slide) => {
     if (slide.id === 6) {
-      navigate('/loans/8'); // Անմիջապես բացում է 8-րդ վարկի էջը (LoanDetail)
+      navigate('/loans/8');
     } else if (slide.path === '/evocasalary') {
       navigate('/evocasalary');
     } else if (slide.path === '/norutyunner') {
