@@ -99,6 +99,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/loans" element={<AnhatVarker />} />
+        <Route path="/anhatvarker" element={<AnhatVarker />} />
         <Route path="/loans/unsecured-consumer-loan" element={<UnsecuredConsumerLoan />} />
         <Route path="/loans/:id" element={<LoanDetail />} />
         <Route path="/cards" element={<Qarter />} />
