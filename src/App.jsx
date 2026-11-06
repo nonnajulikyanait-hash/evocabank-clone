@@ -87,6 +87,8 @@ import Norutyunner from './components/home/norutyunner';
 import BolorNorutyunner from './components/home/bolornorutyunner';
 import Blog from './components/home/blog';
 import Arxiv from './components/home/arxiv';
+import Dibrary from './components/home/dibrary';
+
 
 function HomePage() {
   return (
@@ -194,6 +196,7 @@ function App() {
         <Route path="/bolor-norutyunner" element={<BolorNorutyunner />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/arxiv" element={<Arxiv />} />
+        <Route path="/dibrary" element={<Dibrary />} />
       </Routes>
     </Router>
   );
