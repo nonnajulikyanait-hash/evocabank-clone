@@ -1,7 +1,15 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function CurrencyAndAddresses() {
   const [activeTab, setActiveTab] = useState(0);
+  const navigate = useNavigate();
+
+  const handleMapClick = (e) => {
+    e.preventDefault();
+    navigate('/qartez');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   return (
     <section className="relative bg-white py-12 overflow-hidden border-b border-neutral-100">
@@ -184,19 +192,20 @@ function CurrencyAndAddresses() {
               <img 
                 src="https://www.evoca.am/img/addresses.png" 
                 alt="Evoca Addresses Map" 
-                className="w-full max-w-[280px] h-auto object-contain drop-shadow-md"
+                className="w-full max-w-[280px] h-auto object-contain drop-shadow-md cursor-pointer"
+                onClick={handleMapClick}
               />
             </div>
 
             {/* «Դիտել քարտեզը» կոճակ */}
             <div>
-              <a 
-                href="#map" 
-                className="inline-flex items-center space-x-1 text-sm font-bold text-[#6400dc] hover:text-[#5200b3] transition-colors"
+              <button 
+                onClick={handleMapClick}
+                className="inline-flex items-center space-x-1 text-sm font-bold text-[#6400dc] hover:text-[#5200b3] transition-colors cursor-pointer bg-transparent border-0 p-0"
               >
                 <span>Դիտել քարտեզը</span>
                 <span className="text-lg leading-none">&gt;</span>
-              </a>
+              </button>
             </div>
           </div>
 
