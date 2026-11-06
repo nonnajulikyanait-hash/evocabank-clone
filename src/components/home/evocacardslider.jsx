@@ -19,6 +19,7 @@ const slidesData = [
     btnBg: 'bg-[#6400dc] text-white',
     image: 'https://www.evoca.am/images-cache/sliders/1/17480089224912/4012c7541d8db15b5666bb0e4f4bdf7a-576x486.png',
     path: '/qarter',
+    cardTitle: 'Evoca Travel Card',
   },
   {
     id: 2,
@@ -43,7 +44,7 @@ const slidesData = [
     btnBg: 'bg-[#6400dc] text-white',
     image: 'https://www.evoca.am/images-cache/sliders/1/17612202124044/b74e87ec0e83aa10cb128d41f0ada026-577x486.png',
     path: '/norutyunner',
-    newsId: 100
+    newsId: 100,
   },
   {
     id: 4,
@@ -56,6 +57,7 @@ const slidesData = [
     btnBg: 'bg-[#6400dc] text-white',
     image: 'https://www.evoca.am/images-cache/sliders/1/16856146843579/345dd727d7ee28e2cd6ec180e5d65740-577x486.jpg',
     path: '/qarter',
+    cardTitle: 'Visa Vision',
   },
   {
     id: 5,
@@ -68,6 +70,7 @@ const slidesData = [
     btnBg: 'bg-[#6400dc] text-white',
     image: 'https://www.evoca.am/images-cache/sliders/1/17737433784078/126c54e244e880fd563d8af43979486c-577x485.png',
     path: '/qarter',
+    cardTitle: 'Visa Infinite',
   },
   {
     id: 6,
@@ -92,6 +95,7 @@ const slidesData = [
     btnBg: 'bg-black text-white',
     image: 'https://www.evoca.am/images-cache/sliders/1/17262130779724/2fee1054871280f57daf5204f901c563-577x486.png',
     path: '/qarter',
+    cardTitle: 'UnionPay Gold',
   },
   {
     id: 8,
@@ -116,10 +120,9 @@ export default function EvocaCardSlider() {
     if (slide.path === '/evocasalary') {
       navigate('/evocasalary');
     } else if (slide.path === '/norutyunner') {
-      // Sender også som URL query parameter (?id=100) for at være 100% sikker på denfanger det
-      navigate('/norutyunner?id=100', { state: { openNewsId: 100 } });
-    } else {
-      navigate('/qarter', { state: { cardTitle: slide.title } });
+      navigate('/norutyunner', { state: { openNewsId: slide.newsId } });
+    } else if (slide.path === '/qarter') {
+      navigate('/qarter', { state: { cardTitle: slide.cardTitle || slide.title } });
     }
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -150,7 +153,6 @@ export default function EvocaCardSlider() {
             <SwiperSlide key={slide.id}>
               <div className={`${slide.bgColor} px-12 md:px-24 pt-16 pb-24 flex flex-col md:flex-row items-center justify-between min-h-[500px] transition-colors duration-500`}>
                 
-                {/* Text section */}
                 <div className="max-w-xl text-left space-y-6 z-10">
                   <h1 className={`text-4xl md:text-5xl font-black tracking-tight leading-tight ${slide.textColor}`}>
                     {slide.title}
@@ -168,7 +170,6 @@ export default function EvocaCardSlider() {
                   </div>
                 </div>
 
-                {/* Image section */}
                 <div className="w-full md:w-1/2 flex justify-center items-center z-10 mt-6 md:mt-0">
                   <img 
                     src={slide.image} 
@@ -181,7 +182,6 @@ export default function EvocaCardSlider() {
             </SwiperSlide>
           ))}
 
-          {/* Bottom Custom Navigation Arrows & Dots */}
           <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-30 flex items-center gap-4">
             <button ref={prevRef} className="text-white hover:opacity-75 transition text-xl font-bold px-2 cursor-pointer">
               ←
