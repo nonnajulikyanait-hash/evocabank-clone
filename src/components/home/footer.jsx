@@ -5,13 +5,13 @@ function Footer({ setActiveTab }) {
   const navigate = useNavigate();
 
   const partners = [
-    { id: 1, url: 'https://www.evoca.am/img/temp/partners/partner-1.png' },
-    { id: 2, url: 'https://www.evoca.am/img/temp/partners/partner-2.png' },
-    { id: 3, url: 'https://www.evoca.am/img/temp/partners/partner-6.png' },
-    { id: 4, url: 'https://www.evoca.am/img/temp/partners/partner-3.png' },
-    { id: 5, url: 'https://www.evoca.am/img/temp/partners/partner-4.png' },
-    { id: 6, url: 'https://www.evoca.am/img/temp/partners/partner-5-new.png' },
-    { id: 7, url: 'https://www.evoca.am/img/temp/partners/partner-7.png' },
+    { id: 1, url: 'https://www.evoca.am/img/temp/partners/partner-1.png', link: 'https://www.cba.am/hy/' },
+    { id: 2, url: 'https://www.evoca.am/img/temp/partners/partner-2.png', link: 'https://fsm.am/' },
+    { id: 3, url: 'https://www.evoca.am/img/temp/partners/partner-6.png', link: 'https://www.fininfo.am/' },
+    { id: 4, url: 'https://www.evoca.am/img/temp/partners/partner-3.png', link: 'https://www.abcfinance.am/' },
+    { id: 5, url: 'https://www.evoca.am/img/temp/partners/partner-4.png', link: 'https://adgf.am/' },
+    { id: 6, url: 'https://www.evoca.am/img/temp/partners/partner-5-new.png', link: 'https://www.arca.am/' },
+    { id: 7, url: 'https://www.evoca.am/img/temp/partners/partner-7.png', link: 'https://acra.am/' },
   ];
 
   const handleNavClick = (tabName) => {
@@ -129,14 +129,20 @@ function Footer({ setActiveTab }) {
         {/* Partner Logos above the bottom line, positioned on the right */}
         <div className="border-t border-gray-300 pt-6 mt-4 flex items-center justify-end flex-wrap gap-4 opacity-90">
           {partners.map((partner) => (
-            <div key={partner.id} className="h-8 flex items-center justify-center">
+            <a 
+              key={partner.id} 
+              href={partner.link} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="h-8 flex items-center justify-center cursor-pointer"
+            >
               <img 
                 src={partner.url} 
                 alt={`Partner ${partner.id}`} 
                 className="max-h-6 w-auto object-contain grayscale hover:grayscale-0 transition-all"
                 onError={(e) => { e.target.style.display = 'none'; }}
               />
-            </div>
+            </a>
           ))}
         </div>
 
