@@ -86,13 +86,13 @@ export default function Qartez() {
         <Navbar />
 
         {/* Վերնագրային մաս */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-10 pb-6 text-left">
-          <h1 className="text-3xl md:text-4xl font-black text-neutral-900 mb-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-8 md:pt-10 pb-6 text-left">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-neutral-900 mb-6 md:mb-8">
             Բանկի հասցեները և աշխատաժամերը
           </h1>
 
           {/* 3 Թաբեր */}
-          <div className="flex flex-wrap items-center gap-8 border-b border-gray-200 pb-3 mb-6 text-sm md:text-base font-bold text-gray-500">
+          <div className="flex flex-wrap items-center gap-6 sm:gap-8 border-b border-gray-200 pb-3 mb-6 text-xs sm:text-sm md:text-base font-bold text-gray-500 overflow-x-auto whitespace-nowrap">
             <button
               onClick={() => setActiveTab('branches')}
               className={`pb-3 transition-colors cursor-pointer relative ${
@@ -125,12 +125,12 @@ export default function Qartez() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
 
             {/* Ձախ մաս՝ Հասցեների ցանկ */}
-            <div className="lg:col-span-4 bg-white border border-gray-100 rounded-3xl p-6 shadow-sm max-h-[600px] overflow-y-auto text-left space-y-6">
+            <div className="lg:col-span-4 bg-white border border-gray-100 rounded-3xl p-5 sm:p-6 shadow-sm max-h-[500px] lg:max-h-[600px] overflow-y-auto text-left space-y-6">
               
               {/* 1. ՄԱՍՆԱՃՅՈՒՂԵՐ */}
               {activeTab === 'branches' && branches.map((item) => (
                 <div key={item.id} className="border-b border-gray-100 pb-5 last:border-0 last:pb-0 space-y-2">
-                  <h3 className="text-base font-bold text-neutral-900 flex items-center gap-1.5">
+                  <h3 className="text-sm sm:text-base font-bold text-neutral-900 flex items-center gap-1.5">
                     <span className="text-[#6400dc]">📍</span> {item.title}
                   </h3>
                   <p className="text-xs text-gray-500 flex items-center gap-1">
@@ -148,11 +148,11 @@ export default function Qartez() {
               {/* 2. ԲԱՆԿՈՄԱՏՆԵՐ */}
               {activeTab === 'atms' && atms.map((item) => (
                 <div key={item.id} className="border-b border-gray-100 pb-5 last:border-0 last:pb-0 space-y-2">
-                  <h3 className="text-base font-bold text-neutral-900 flex items-center gap-1.5">
+                  <h3 className="text-sm sm:text-base font-bold text-neutral-900 flex items-center gap-1.5">
                     <span className="text-[#6400dc]">📍</span> {item.title}
                   </h3>
                   <p className="text-xs text-gray-500">{item.desc}</p>
-                  <div className="flex items-center gap-2 pt-1">
+                  <div className="flex items-center gap-2 pt-1 flex-wrap">
                     <span className="text-[10px] bg-blue-50 text-blue-700 px-2 py-0.5 rounded font-bold">ArCa</span>
                     <span className="text-[10px] bg-blue-50 text-blue-900 px-2 py-0.5 rounded font-bold">VISA</span>
                     <span className="text-[10px] bg-red-50 text-red-600 px-2 py-0.5 rounded font-bold">Mastercard</span>
@@ -163,7 +163,7 @@ export default function Qartez() {
               {/* 3. ՏԵՐՄԻՆԱԼՆԵՐ */}
               {activeTab === 'terminals' && terminals.map((item) => (
                 <div key={item.id} className="border-b border-gray-100 pb-4 last:border-0 last:pb-0">
-                  <h3 className="text-sm font-bold text-neutral-800 flex items-center gap-1.5">
+                  <h3 className="text-xs sm:text-sm font-bold text-neutral-800 flex items-center gap-1.5">
                     <span className="text-[#6400dc]">📍</span> {item.title}
                   </h3>
                 </div>
@@ -172,21 +172,21 @@ export default function Qartez() {
             </div>
 
             {/* Աջ մաս՝ Ինտերակտիվ Քարտեզ OpenStreetMap-ով */}
-            <div className="lg:col-span-8 relative rounded-3xl overflow-hidden border border-gray-100 shadow-md h-[600px] bg-gray-100">
+            <div className="lg:col-span-8 relative rounded-3xl overflow-hidden border border-gray-100 shadow-md h-[400px] sm:h-[500px] lg:h-[600px] bg-gray-100">
               
               {/* Ֆիլտրերի վերնաշերտ (Overlay Filter) */}
               <div className="absolute top-4 left-4 right-4 z-10 flex flex-wrap items-center justify-between gap-3 bg-white/90 backdrop-blur-md p-3 rounded-2xl shadow-sm">
                 <div className="flex items-center gap-2">
-                  <button className="bg-white border border-gray-200 px-4 py-1.5 rounded-xl text-xs font-bold text-neutral-700 shadow-sm flex items-center gap-1.5 cursor-pointer hover:bg-gray-50">
+                  <button className="bg-white border border-gray-200 px-3 sm:px-4 py-1.5 rounded-xl text-xs font-bold text-neutral-700 shadow-sm flex items-center gap-1.5 cursor-pointer hover:bg-gray-50">
                     <span>≡</span> Ֆիլտր
                   </button>
                 </div>
 
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-2 sm:gap-3">
                   <select 
                     value={selectedCity} 
                     onChange={(e) => setSelectedCity(e.target.value)}
-                    className="bg-white border border-gray-200 rounded-xl px-3 py-1.5 text-xs font-bold text-neutral-700 outline-none cursor-pointer"
+                    className="bg-white border border-gray-200 rounded-xl px-2 sm:px-3 py-1.5 text-xs font-bold text-neutral-700 outline-none cursor-pointer"
                   >
                     <option value="Երևան">Երևան</option>
                     <option value="Գյումրի">Գյումրի</option>
@@ -196,7 +196,7 @@ export default function Qartez() {
                   <select 
                     value={selectedRegion} 
                     onChange={(e) => setSelectedRegion(e.target.value)}
-                    className="bg-white border border-gray-200 rounded-xl px-3 py-1.5 text-xs font-bold text-neutral-700 outline-none cursor-pointer"
+                    className="bg-white border border-gray-200 rounded-xl px-2 sm:px-3 py-1.5 text-xs font-bold text-neutral-700 outline-none cursor-pointer"
                   >
                     <option value="Բոլորը">Համայնք</option>
                     <option value="Կենտրոն">Կենտրոն</option>
@@ -206,7 +206,7 @@ export default function Qartez() {
                 </div>
               </div>
 
-              {/* OpenStreetMap Iframe (Առանց Google Maps API Key-ի սխալների) */}
+              {/* OpenStreetMap Iframe */}
               <iframe
                 title="Evocabank Map"
                 className="w-full h-full border-0"

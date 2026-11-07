@@ -83,31 +83,31 @@ export default function Yndunum() {
         <Navbar />
 
         {/* Կարիերայի Ենթամենյու */}
-        <div className="bg-[#6400dc] text-white py-3 px-8 shadow-inner">
-          <div className="container mx-auto flex gap-8 text-xs font-semibold overflow-x-auto whitespace-nowrap">
-            <Link to="/kariera" className="text-purple-200 hover:text-white transition">Մշակույթ</Link>
-            <Link to="/aravelutyunner" className="text-purple-200 hover:text-white transition">Առավելություններ</Link>
-            <Link to="/harcer" className="text-purple-200 hover:text-white transition">Հաճախ տրվող հարցեր</Link>
-            <Link to="/yndunum" className="border-b-2 border-white pb-1 cursor-pointer font-black">Ինչպես ընդունվել աշխատանքի Evocabank-ում</Link>
+        <div className="bg-[#6400dc] text-white py-3 px-4 md:px-8 shadow-inner">
+          <div className="container mx-auto flex gap-6 sm:gap-8 text-xs font-semibold overflow-x-auto whitespace-nowrap scrollbar-none">
+            <Link to="/kariera" className="text-purple-200 hover:text-white transition shrink-0">Մշակույթ</Link>
+            <Link to="/aravelutyunner" className="text-purple-200 hover:text-white transition shrink-0">Առավելություններ</Link>
+            <Link to="/harcer" className="text-purple-200 hover:text-white transition shrink-0">Հաճախ տրվող հարցեր</Link>
+            <Link to="/yndunum" className="border-b-2 border-white pb-1 cursor-pointer font-black shrink-0">Ինչպես ընդունվել աշխատանքի Evocabank-ում</Link>
           </div>
         </div>
 
-        <main className="space-y-16 pb-16">
+        <main className="space-y-12 sm:space-y-16 pb-12 sm:pb-16">
           {/* 1. Full-Width Hero Section */}
           <div 
-            className="relative w-full h-[500px] md:h-[600px] bg-cover bg-center overflow-hidden flex items-end md:items-center justify-start px-6 md:px-24 pb-8 md:pb-0"
+            className="relative w-full h-[350px] sm:h-[450px] md:h-[600px] bg-cover bg-center overflow-hidden flex items-end md:items-center justify-start p-6 sm:p-10 md:px-24 pb-8 md:pb-0"
             style={{ backgroundImage: `url('https://www.evoca.am/images-cache/menu/1/16194613464502/1920x634.jpg')` }}
           >
-            <div className="bg-white/95 backdrop-blur-md p-8 md:p-10 rounded-2xl shadow-xl max-w-lg space-y-4 border border-gray-100">
-              <h1 className="text-3xl md:text-4xl font-black text-neutral-900 leading-tight">
+            <div className="bg-white/95 backdrop-blur-md p-6 sm:p-8 md:p-10 rounded-2xl shadow-xl max-w-lg space-y-4 border border-gray-100">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-neutral-900 leading-tight">
                 Ինչպես ընդունվել աշխատանքի Evocabank-ում
               </h1>
             </div>
           </div>
 
           {/* 2. Աշխատանքի ընդունվելու փուլեր (Interactive Accordion Timeline) */}
-          <div className="container mx-auto px-4 max-w-4xl space-y-8">
-            <h2 className="text-2xl md:text-3xl font-extrabold text-neutral-900 text-center">
+          <div className="container mx-auto px-4 max-w-4xl space-y-6 sm:space-y-8">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-neutral-900 text-center">
               Աշխատանքի ընդունվելու փուլեր
             </h2>
 
@@ -115,18 +115,18 @@ export default function Yndunum() {
               {hiringSteps.map((step) => (
                 <div 
                   key={step.id} 
-                  className="flex items-start gap-4 border border-gray-200 rounded-2xl overflow-hidden shadow-xs bg-[#f8f9fa] transition"
+                  className="flex flex-col sm:flex-row items-start gap-4 border border-gray-200 rounded-2xl overflow-hidden shadow-xs bg-[#f8f9fa] transition p-4 sm:p-0"
                 >
                   {/* Step Number Circle */}
-                  <div className="bg-[#6400dc] text-white font-extrabold w-12 h-12 rounded-xl flex items-center justify-center shrink-0 m-4 text-lg shadow-sm">
+                  <div className="bg-[#6400dc] text-white font-extrabold w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center shrink-0 sm:m-4 text-base sm:text-lg shadow-sm">
                     {step.id}
                   </div>
 
                   {/* Accordion Content Box */}
-                  <div className="flex-1 my-auto pr-4 py-3">
+                  <div className="flex-1 my-auto sm:pr-4 sm:py-3 w-full">
                     <button
                       onClick={() => toggleStep(step.id)}
-                      className="w-full text-left py-2 flex justify-between items-center gap-4 font-bold text-neutral-900 text-sm md:text-base hover:text-[#6400dc] transition cursor-pointer"
+                      className="w-full text-left py-2 flex justify-between items-center gap-4 font-bold text-neutral-900 text-xs sm:text-sm md:text-base hover:text-[#6400dc] transition cursor-pointer"
                     >
                       <span>{step.title}</span>
                       <span className={`text-xl transform transition-transform duration-300 ${openStep === step.id ? 'rotate-180 text-[#6400dc]' : 'text-gray-400'}`}>
@@ -135,7 +135,7 @@ export default function Yndunum() {
                     </button>
 
                     {openStep === step.id && (
-                      <div className="pt-3 pb-2 text-neutral-600 text-sm leading-relaxed border-t border-gray-200 mt-2">
+                      <div className="pt-3 pb-2 text-neutral-600 text-xs sm:text-sm leading-relaxed border-t border-gray-200 mt-2">
                         {step.content}
                       </div>
                     )}
@@ -146,12 +146,12 @@ export default function Yndunum() {
           </div>
 
           {/* 3. Application Form */}
-          <div className="container mx-auto px-4 max-w-3xl bg-[#f8f9fa] border border-gray-100 rounded-3xl p-8 md:p-12 shadow-sm space-y-8">
+          <div className="container mx-auto px-4 max-w-3xl bg-[#f8f9fa] border border-gray-100 rounded-3xl p-6 sm:p-8 md:p-12 shadow-sm space-y-6 sm:space-y-8">
             <div className="text-center space-y-2">
-              <h2 className="text-2xl md:text-3xl font-extrabold text-neutral-900">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-neutral-900">
                 Դառնալ թիմի անդամ
               </h2>
-              <p className="text-neutral-600 text-sm">
+              <p className="text-neutral-600 text-xs sm:text-sm">
                 Եթե ցանկանում ես միանալ EvocaTEAM-ին, կարող ես ուղարկել դիմում` կցելով ինքնակենսագրականը:
               </p>
             </div>
@@ -207,15 +207,15 @@ export default function Yndunum() {
 
               <div className="space-y-3">
                 <label className="block text-xs font-bold text-neutral-700">Ստուգման ծածկագիր *</label>
-                <div className="flex items-center gap-4">
-                  <div className="bg-white border border-gray-200 rounded-xl p-3 flex items-center justify-center">
+                <div className="flex flex-col sm:flex-row items-center gap-4">
+                  <div className="bg-white border border-gray-200 rounded-xl p-3 flex items-center justify-center w-full sm:w-auto">
                     <img 
                       src="https://accounts.zoho.com/static/showcaptcha?digest=1_C_c650227a5d5f803deda631352226140fab644e31fffbddd9a8f2c43683e1676dfed64664d53e4e0fc68fdc773c30f2568394c4cb889fe89cac5d77f7187f1ad7" 
                       alt="Captcha" 
                       className="h-10 object-contain"
                     />
                   </div>
-                  <input type="text" placeholder="Մուտքագրեք ծածկագիրը" required className="flex-1 bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#6400dc]" />
+                  <input type="text" placeholder="Մուտքագրեք ծածկագիրը" required className="w-full sm:flex-1 bg-white border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#6400dc]" />
                 </div>
               </div>
 

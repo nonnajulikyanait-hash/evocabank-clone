@@ -14,13 +14,13 @@ export default function BiznesArjetxter() {
       <div>
         <Navbar />
 
-        <main className="max-w-6xl mx-auto px-4 py-8 text-left">
+        <main className="max-w-6xl mx-auto px-4 py-6 md:py-8 text-left">
           {/* Breadcrumbs */}
-          <div className="text-xs text-gray-400 mb-6 flex items-center gap-2">
+          <div className="text-xs text-gray-400 mb-6 flex items-center gap-2 flex-wrap">
             <span>🏠</span> &gt; <span>Բիզնես</span> &gt; <span>Արժեթղթերի շուկա</span> &gt; <span className="text-gray-700 font-medium">Ներդրումային ծառայություններ</span>
           </div>
 
-          <h1 className="text-3xl md:text-4xl font-black text-neutral-900 mb-8">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-neutral-900 mb-6 md:mb-8">
             Ներդրումային ծառայություններ
           </h1>
 
@@ -33,13 +33,13 @@ export default function BiznesArjetxter() {
             </div>
 
             {/* Հիմնական տեքստեր */}
-            <div className="flex-1 space-y-6 text-xs md:text-sm text-gray-700 leading-relaxed">
-              <p className="text-base text-gray-800 font-medium">
+            <div className="flex-1 space-y-6 text-xs md:text-sm text-gray-700 leading-relaxed w-full">
+              <p className="text-sm sm:text-base text-gray-800 font-medium">
                 Բանկն իր հաճախորդներին ներդրումային ծառայություններ է մատուցում ինչպես տեղական, այնպես էլ՝ միջազգային շուկաներում: Բանկի կողմից առաջարկվող ծառայությունները հասանելի են իրավաբանական և ֆիզիկական անձ հանդիսացող հաճախորդներին:
               </p>
 
               <div className="space-y-2 pt-2">
-                <h3 className="text-base font-bold text-[#6400dc]">
+                <h3 className="text-sm sm:text-base font-bold text-[#6400dc]">
                   Ինչպե՞ս դառնալ հաճախորդ։
                 </h3>
                 <p>
@@ -50,7 +50,7 @@ export default function BiznesArjetxter() {
                 </p>
               </div>
 
-              <div className="space-y-1 bg-gray-50 p-5 rounded-2xl border border-gray-100">
+              <div className="space-y-1 bg-gray-50 p-4 sm:p-5 rounded-2xl border border-gray-100">
                 <p className="font-bold text-gray-900">Հասցե՝</p>
                 <p>Երևան, Հանրապետության 44/2</p>
                 <p className="font-bold text-gray-900 pt-2">Հետադարձ կապ՝</p>
@@ -63,7 +63,7 @@ export default function BiznesArjetxter() {
               </div>
 
               {/* Accordion Section */}
-              <h2 className="text-xl font-bold text-neutral-900 tracking-wide pt-6 mb-4">
+              <h2 className="text-lg sm:text-xl font-bold text-neutral-900 tracking-wide pt-6 mb-4">
                 ԱՆՀՐԱԺԵՇՏ ՏԵՂԵԿԱՏՎՈՒԹՅՈՒՆ
               </h2>
 
@@ -72,7 +72,7 @@ export default function BiznesArjetxter() {
                 <div className="border border-gray-200 rounded-2xl overflow-hidden bg-white shadow-2xs">
                   <button
                     onClick={() => toggleSection(1)}
-                    className="w-full flex justify-between items-center p-5 text-left font-bold text-gray-800 hover:text-[#6400dc] transition cursor-pointer"
+                    className="w-full flex justify-between items-center p-4 sm:p-5 text-left font-bold text-gray-800 hover:text-[#6400dc] transition cursor-pointer text-xs sm:text-sm"
                   >
                     <span className="flex items-center gap-3">
                       <span className={`text-[#6400dc] text-xs transition-transform duration-200 ${openSection === 1 ? 'rotate-180' : ''}`}>
@@ -83,7 +83,7 @@ export default function BiznesArjetxter() {
                   </button>
 
                   {openSection === 1 && (
-                    <div className="p-6 border-t border-gray-100 text-xs md:text-sm text-gray-700 space-y-4 bg-gray-50/50">
+                    <div className="p-4 sm:p-6 border-t border-gray-100 text-xs md:text-sm text-gray-700 space-y-4 bg-gray-50/50">
                       <div>
                         <h4 className="font-bold text-[#6400dc] mb-1">Արժեթղթերի շուկայում Բրոքերային ծառայությունների մատուցման կանոններ</h4>
                         <p className="leading-relaxed text-gray-600">
@@ -105,7 +105,7 @@ export default function BiznesArjetxter() {
                 <div className="border border-gray-200 rounded-2xl overflow-hidden bg-white shadow-2xs">
                   <button
                     onClick={() => toggleSection(2)}
-                    className="w-full flex justify-between items-center p-5 text-left font-bold text-gray-800 hover:text-[#6400dc] transition cursor-pointer"
+                    className="w-full flex justify-between items-center p-4 sm:p-5 text-left font-bold text-gray-800 hover:text-[#6400dc] transition cursor-pointer text-xs sm:text-sm"
                   >
                     <span className="flex items-center gap-3">
                       <span className={`text-[#6400dc] text-xs transition-transform duration-200 ${openSection === 2 ? 'rotate-180' : ''}`}>
@@ -116,12 +116,12 @@ export default function BiznesArjetxter() {
                   </button>
 
                   {openSection === 2 && (
-                    <div className="p-6 border-t border-gray-100 text-xs md:text-sm text-gray-700 space-y-2 bg-gray-50/50">
+                    <div className="p-4 sm:p-6 border-t border-gray-100 text-xs md:text-sm text-gray-700 space-y-2 bg-gray-50/50">
                       <p className="text-[#6400dc] font-bold cursor-pointer hover:underline">
-                        • Տեղական և Ռուսական շուկաներում ծառայությունների մատուցման սակագներ
+                        - Տեղական և Ռուսական շուկաներում ծառայությունների մատուցման սակագներ
                       </p>
                       <p className="text-[#6400dc] font-bold cursor-pointer hover:underline">
-                        • Միջազգային շուկաներում ծառայությունների մատուցման սակագներ
+                        - Միջազգային շուկաներում ծառայությունների մատուցման սակագներ
                       </p>
                     </div>
                   )}
@@ -131,7 +131,7 @@ export default function BiznesArjetxter() {
                 <div className="border border-gray-200 rounded-2xl overflow-hidden bg-white shadow-2xs">
                   <button
                     onClick={() => toggleSection(3)}
-                    className="w-full flex justify-between items-center p-5 text-left font-bold text-gray-800 hover:text-[#6400dc] transition cursor-pointer"
+                    className="w-full flex justify-between items-center p-4 sm:p-5 text-left font-bold text-gray-800 hover:text-[#6400dc] transition cursor-pointer text-xs sm:text-sm"
                   >
                     <span className="flex items-center gap-3">
                       <span className={`text-[#6400dc] text-xs transition-transform duration-200 ${openSection === 3 ? 'rotate-180' : ''}`}>
@@ -142,18 +142,18 @@ export default function BiznesArjetxter() {
                   </button>
 
                   {openSection === 3 && (
-                    <div className="p-6 border-t border-gray-100 text-xs md:text-sm text-gray-700 space-y-2 bg-gray-50/50">
+                    <div className="p-4 sm:p-6 border-t border-gray-100 text-xs md:text-sm text-gray-700 space-y-2 bg-gray-50/50">
                       <p className="text-[#6400dc] font-bold cursor-pointer hover:underline">
-                        • «Արժեթղթերով գործարքներ կնքելու նպատակով պատվերների ընդունման և կատարման» ընթացակարգ
+                        - «Արժեթղթերով գործարքներ կնքելու նպատակով պատվերների ընդունման և կատարման» ընթացակարգ
                       </p>
                       <p className="text-[#6400dc] font-bold cursor-pointer hover:underline">
-                        • «Շահերի բախման սահմանափակման» ընթացակարգ
+                        - «Շահերի բախման սահմանափակման» ընթացակարգ
                       </p>
                       <p className="text-[#6400dc] font-bold cursor-pointer hover:underline">
-                        • Ֆոնդային բորսաներ
+                        - Ֆոնդային բորսաներ
                       </p>
                       <p className="text-[#6400dc] font-bold cursor-pointer hover:underline">
-                        • Տեղեկացումներ հնարավոր ռիսկերի վերաբերյալ
+                        - Տեղեկացումներ հնարավոր ռիսկերի վերաբերյալ
                       </p>
                     </div>
                   )}

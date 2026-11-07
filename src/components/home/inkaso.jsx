@@ -8,13 +8,13 @@ export default function Inkaso() {
       <div>
         <Navbar />
 
-        <main className="max-w-6xl mx-auto px-4 py-8 text-left">
+        <main className="max-w-6xl mx-auto px-4 py-6 md:py-8 text-left">
           {/* Breadcrumbs */}
-          <div className="text-xs text-gray-400 mb-6 flex items-center gap-2">
+          <div className="text-xs text-gray-400 mb-6 flex items-center gap-2 flex-wrap">
             <span>🏠</span> &gt; <span>Բիզնես</span> &gt; <span>Առևտրի ֆինանսավորում</span> &gt; <span className="text-gray-700 font-medium">Ինկասո</span>
           </div>
 
-          <h1 className="text-3xl md:text-4xl font-black text-neutral-900 mb-8">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-neutral-900 mb-6 md:mb-8">
             Ինկասո
           </h1>
 
@@ -27,34 +27,34 @@ export default function Inkaso() {
             </div>
 
             {/* Հիմնական բովանդակություն */}
-            <div className="flex-1 space-y-6 text-xs md:text-sm text-gray-700 leading-relaxed">
+            <div className="flex-1 space-y-6 text-xs sm:text-sm text-gray-700 leading-relaxed w-full">
               <p className="text-gray-800 leading-relaxed">
-                Ինկասոն վճարումների ստացման և պարտքերի մարման արագ, պարզ ու արդյունավետ գործիք է[cite: 15]:
+                Ինկասոն վճարումների ստացման և պարտքերի մարման արագ, պարզ ու արդյունավետ գործիք է:
               </p>
 
               <p className="text-gray-800 leading-relaxed">
-                Այն վաճառողի հանձնարարությունն է մեզ՝ մատակարարված ապրանքների փաստաթղթերը, վճարի դիմաց, փոխանցելու գնորդին: Ընդ որում, մենք վճարման որևէ պարտավորություն չենք ստանձնում, այլ կատարում ենք փաստաթղթերը փոխանցողի (միջնորդի) դեր[cite: 15]:
+                Այն վաճառողի հանձնարարությունն է մեզ՝ մատակարարված ապրանքների փաստաթղթերը, վճարի դիմաց, փոխանցելու գնորդին: Ընդ որում, մենք վճարման որևէ պարտավորություն չենք ստանձնում, այլ կատարում ենք փաստաթղթերը փոխանցողի (միջնորդի) դեր:
               </p>
 
-              <h3 className="text-base font-bold text-[#6400dc] pt-2">
-                Ինկասոյի վճարման հիմնական ձևերն են՝[cite: 15]
+              <h3 className="text-sm sm:text-base font-bold text-[#6400dc] pt-2">
+                Ինկասոյի վճարման հիմնական ձևերն են՝
               </h3>
 
               <ul className="list-disc pl-5 space-y-3 text-gray-700">
                 <li>
-                  <strong>Փաստաթղթեր՝ վճարման դիմաց (Documents Against Payment or D/P).</strong> փաստաթղթերը տրամադրում ենք գնորդին՝ միայն նրա կողմից ապրանքների դիմաց վճարելուց հետո[cite: 15]:
+                  <strong>Փաստաթղթեր՝ վճարման դիմաց (Documents Against Payment or D/P).</strong> փաստաթղթերը տրամադրում ենք գնորդին՝ միայն նրա կողմից ապրանքների դիմաց վճարելուց հետո:
                 </li>
                 <li>
-                  <strong>Փաստաթղթեր՝ ակցեպտի դիմաց (Documents Against Acceptance or D/A).</strong> փաստաթղթերը տրամադրում ենք գնորդին՝ ապրանքների դիմաց հետագայում վճարելու պայմանով (վճարումների հետաձգման պարտավորագրի (մուրհակ) ակցեպտի դեպքում): Ինկասոյի այս ձևը կիրառվում է, երբ գնորդն ու վաճառողը պայմանավորվածություն ունեն վճարման հետաձգման վերաբերյալ[cite: 15]:
+                  <strong>Փաստաթղթեր՝ ակցեպտի դիմաց (Documents Against Acceptance or D/A).</strong> փաստաթղթերը տրամադրում ենք գնորդին՝ ապրանքների դիմաց հետագայում վճարելու պայմանով (վճարումների հետաձգման պարտավորագրի (մուրհակ) ակցեպտի դեպքում): Ինկասոյի այս ձևը կիրառվում է, երբ գնորդն ու վաճառողը պայմանավորվածություն ունեն վճարման հետաձգման վերաբերյալ:
                 </li>
               </ul>
 
-              <h2 className="text-xl font-bold text-neutral-900 tracking-wide pt-6 mb-4">
+              <h2 className="text-lg sm:text-xl font-bold text-neutral-900 tracking-wide pt-6 mb-4">
                 Սակագներ
               </h2>
 
               <p className="text-gray-800 leading-relaxed">
-                Ինկասոյի գործառնությունների վերաբերյալ լրացուցիչ տեղեկություններ և խորհրդատվություն ստանալու համար կարող եք դիմել մեր Գլխամասային գրասենյակ՝ «Միջազգային և արտարժութային գործառնությունների» բաժին[cite: 15]:
+                Ինկասոյի գործառնությունների վերաբերյալ լրացուցիչ տեղեկություններ և խորհրդատվություն ստանալու համար կարող եք դիմել մեր Գլխամասային գրասենյակ՝ «Միջազգային և արտարժութային գործառնությունների» բաժին:
               </p>
 
             </div>

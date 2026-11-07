@@ -13,7 +13,7 @@ export default function UnsecuredConsumerLoan() {
       
       {/* Sub-header Purple Bar */}
       <div className="bg-[#6400dc] text-white py-3 px-4 shadow-inner">
-        <div className="max-w-7xl mx-auto flex items-center space-x-8 text-xs sm:text-sm font-semibold overflow-x-auto whitespace-nowrap">
+        <div className="max-w-7xl mx-auto flex items-center space-x-6 sm:space-x-8 text-xs sm:text-sm font-semibold overflow-x-auto whitespace-nowrap scrollbar-none">
           <Link to="/loans" className="text-white border-b-2 border-white pb-1 cursor-pointer">
             Վարկեր
           </Link>
@@ -27,11 +27,13 @@ export default function UnsecuredConsumerLoan() {
       </div>
 
       {/* Hero Banner Section with #e6d2ff background and curved bottom */}
-      <div className="relative bg-[#e6d2ff] text-neutral-900 overflow-hidden py-16 px-4 md:px-12 rounded-b-[40px] shadow-sm">
+      <div className="relative bg-[#e6d2ff] text-neutral-900 overflow-hidden py-10 sm:py-14 md:py-16 px-4 sm:px-6 md:px-12 rounded-b-[30px] md:rounded-b-[40px] shadow-sm">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center relative z-10">
           <div className="space-y-4 text-left">
-            <h1 className="text-3xl md:text-5xl font-black tracking-tight text-neutral-900">Անգրավ սպառողական վարկ</h1>
-            <p className="text-sm md:text-base text-neutral-700 leading-relaxed max-w-xl">
+            <h1 className="text-2xl sm:text-3xl md:text-5xl font-black tracking-tight text-neutral-900">
+              Անգրավ սպառողական վարկ
+            </h1>
+            <p className="text-xs sm:text-sm md:text-base text-neutral-700 leading-relaxed max-w-xl">
               Նոր նպատակներ, անսպասելի ծախսեր կամ վաղուց պլանավորված գնումներ․ Evocabank-ի անգրավ սպառողական վարկը կօգնի կյանքի կոչել Ձեր ծրագրերը՝ առանց գույքի գրավադրման։
             </p>
           </div>
@@ -39,18 +41,18 @@ export default function UnsecuredConsumerLoan() {
             <img 
               src="https://www.evoca.am/images-cache/loans/1/16142452390597/560x400.png" 
               alt="Անգրավ սպառողական վարկ" 
-              className="max-h-72 object-contain"
+              className="max-h-56 sm:max-h-72 object-contain"
             />
           </div>
         </div>
       </div>
 
       {/* Main Container */}
-      <div className="max-w-7xl mx-auto px-4 py-8">
+      <div className="max-w-7xl mx-auto px-4 py-6 sm:py-8">
         
         {/* Breadcrumb & Back */}
-        <div className="flex items-center gap-4 mb-8">
-          <Link to="/loans" className="text-xs font-bold text-gray-500 hover:text-[#6400dc] flex items-center gap-1">
+        <div className="flex items-center gap-4 mb-6 md:mb-8 overflow-x-auto whitespace-nowrap">
+          <Link to="/loans" className="text-xs font-bold text-gray-500 hover:text-[#6400dc] flex items-center gap-1 shrink-0">
             ← Վերադառնալ
           </Link>
           <div className="text-xs text-gray-400 flex items-center gap-2">
@@ -59,28 +61,28 @@ export default function UnsecuredConsumerLoan() {
         </div>
 
         {/* Content & Sidebar Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           
           {/* Left Details & Tabs (8 Cols) */}
-          <div className="lg:col-span-8 space-y-6 text-left">
+          <div className="lg:col-span-8 space-y-6 text-left w-full overflow-hidden">
             
             {/* Tabs Navigation */}
-            <div className="flex border-b border-gray-200 gap-8 text-sm font-bold">
+            <div className="flex border-b border-gray-200 gap-6 sm:gap-8 text-xs sm:text-sm font-bold overflow-x-auto whitespace-nowrap scrollbar-none">
               <button 
                 onClick={() => setActiveTab('about')}
-                className={`pb-3 cursor-pointer transition-all border-b-2 ${activeTab === 'about' ? 'border-[#6400dc] text-[#6400dc]' : 'border-transparent text-gray-500 hover:text-neutral-800'}`}
+                className={`pb-3 cursor-pointer transition-all border-b-2 shrink-0 ${activeTab === 'about' ? 'border-[#6400dc] text-[#6400dc]' : 'border-transparent text-gray-500 hover:text-neutral-800'}`}
               >
                 Վարկի մասին
               </button>
               <button 
                 onClick={() => setActiveTab('conditions')}
-                className={`pb-3 cursor-pointer transition-all border-b-2 ${activeTab === 'conditions' ? 'border-[#6400dc] text-[#6400dc]' : 'border-transparent text-gray-500 hover:text-neutral-800'}`}
+                className={`pb-3 cursor-pointer transition-all border-b-2 shrink-0 ${activeTab === 'conditions' ? 'border-[#6400dc] text-[#6400dc]' : 'border-transparent text-gray-500 hover:text-neutral-800'}`}
               >
                 Պայմաններ
               </button>
               <button 
                 onClick={() => setActiveTab('documents')}
-                className={`pb-3 cursor-pointer transition-all border-b-2 ${activeTab === 'documents' ? 'border-[#6400dc] text-[#6400dc]' : 'border-transparent text-gray-500 hover:text-neutral-800'}`}
+                className={`pb-3 cursor-pointer transition-all border-b-2 shrink-0 ${activeTab === 'documents' ? 'border-[#6400dc] text-[#6400dc]' : 'border-transparent text-gray-500 hover:text-neutral-800'}`}
               >
                 Պահանջվող փաստաթղթերի ցանկ
               </button>
@@ -88,7 +90,7 @@ export default function UnsecuredConsumerLoan() {
 
             {/* Tab 1: About */}
             {activeTab === 'about' && (
-              <div className="space-y-4 text-sm text-gray-700 leading-relaxed animate-fadeIn">
+              <div className="space-y-4 text-xs sm:text-sm text-gray-700 leading-relaxed animate-fadeIn">
                 <p>
                   Evocabank-ն առաջարկում է մինչև 10,000,000 ՀՀ դրամ անգրավ սպառողական վարկ՝ պարզ, արագ և հարմար։ Վարկը նախատեսված է Ձեր ամենատարբեր ֆինանսական կարիքները հոգալու համար՝ անկախ նրանից՝ ցանկանում եք իրականացնել վաղուց պլանավորված նպատակը, թե լուծել անսպասելի ծախսերը։
                 </p>
@@ -103,7 +105,7 @@ export default function UnsecuredConsumerLoan() {
 
             {/* Tab 2: Conditions */}
             {activeTab === 'conditions' && (
-              <div className="space-y-6 text-sm text-gray-700 animate-fadeIn">
+              <div className="space-y-6 text-xs sm:text-sm text-gray-700 animate-fadeIn">
                 <div className="space-y-4">
                   <div className="border-b pb-3">
                     <strong className="block text-neutral-900 mb-1">1. Վարկի տրամադրման նպատակը</strong>
@@ -133,7 +135,7 @@ export default function UnsecuredConsumerLoan() {
 
                   <div className="border-b pb-3">
                     <strong className="block text-neutral-900 mb-1">6. Տարեկան տոկոսադրույքներ</strong>
-                    <div className="grid grid-cols-2 gap-4 mt-2 bg-gray-50 p-4 rounded-xl">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-2 bg-gray-50 p-4 rounded-xl">
                       <div>
                         <span className="font-bold text-xs text-gray-500 block">Առանց եկամուտների հիմնավորման</span>
                         <span>Անվանական՝ <strong>21%</strong></span><br/>
@@ -205,7 +207,8 @@ export default function UnsecuredConsumerLoan() {
                   <div>
                     <strong className="block text-neutral-900 mb-1">16. Այլ պայմաններ</strong>
                     <p className="text-gray-600">
-                      - Փոխկապակցված անձը չպետք է ունենա այս վարկատեսակի գործող վարկ:<br/>
+                      - Փոխկապակցված անձը չպետք է ունենա այս վարկատեսակի գործող վարկ:
+                      <br/>
                       - Կանխիկացման դեպքում գանձվում է վճար ըստ Բանկի սակագների:
                     </p>
                   </div>
@@ -215,7 +218,7 @@ export default function UnsecuredConsumerLoan() {
 
             {/* Tab 3: Required Documents */}
             {activeTab === 'documents' && (
-              <div className="space-y-4 text-sm text-gray-700 animate-fadeIn">
+              <div className="space-y-4 text-xs sm:text-sm text-gray-700 animate-fadeIn">
                 <ol className="list-decimal pl-5 space-y-2 text-gray-700">
                   <li>Վարկի տրամադրման դիմում-հայտ</li>
                   <li>Անձնագիր կամ նույնականացման քարտ, ինչպես նաև սոցիալական քարտ կամ սոցիալական քարտ չունենալու մասին տեղեկանք (ID քարտի դեպքում սոց. քարտ չի պահանջվում)</li>
@@ -231,7 +234,7 @@ export default function UnsecuredConsumerLoan() {
           </div>
 
           {/* Right Sticky Calculator / Summary Box (4 Cols - Smaller & Compact) */}
-          <div className="lg:col-span-4 bg-white border border-gray-100 rounded-3xl p-5 shadow-sm sticky top-24 space-y-4">
+          <div className="lg:col-span-4 bg-white border border-gray-100 rounded-3xl p-5 shadow-sm lg:sticky lg:top-24 space-y-4 w-full">
             <div className="flex justify-center">
               <span className="w-8 h-8 rounded-full bg-[#6400dc] text-white flex items-center justify-center font-bold text-sm">
                 ֏

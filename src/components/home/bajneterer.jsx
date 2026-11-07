@@ -16,8 +16,8 @@ export default function Bajneterer() {
         <Navbar />
 
         {/* Sub-header navigation menu for About Us */}
-        <div className="bg-[#6400dc] text-white py-3 px-8 shadow-inner">
-          <div className="container mx-auto flex gap-6 text-xs font-semibold overflow-x-auto whitespace-nowrap">
+        <div className="bg-[#6400dc] text-white py-3 px-4 sm:px-8 shadow-inner">
+          <div className="container mx-auto flex gap-6 text-xs font-semibold overflow-x-auto whitespace-nowrap scrollbar-none">
             <Link to="/mer-masin" className="text-purple-200 hover:text-white cursor-pointer">Ընդհանուր</Link>
             <Link to="/mer-masin/karucvacq" className="text-purple-200 hover:text-white cursor-pointer">Կառուցվածք</Link>
             <span className="border-b-2 border-white pb-1 cursor-pointer font-black">Բաժնետերեր</span>
@@ -29,9 +29,9 @@ export default function Bajneterer() {
           </div>
         </div>
 
-        <main className="max-w-6xl mx-auto px-4 py-12 space-y-12">
+        <main className="max-w-6xl mx-auto px-4 py-8 md:py-12 space-y-8 md:space-y-12">
           {/* Breadcrumbs */}
-          <div className="text-xs text-gray-400 flex items-center gap-2">
+          <div className="text-xs text-gray-400 flex items-center gap-2 flex-wrap">
             <Link to="/mer-masin" className="hover:text-[#6400dc]">Մեր մասին</Link>
             <span>/</span>
             <span>Evoca-ի մասին</span>
@@ -39,12 +39,12 @@ export default function Bajneterer() {
             <span className="text-gray-700 font-medium">Բաժնետերեր</span>
           </div>
 
-          <h1 className="text-3xl md:text-4xl font-extrabold text-neutral-900 mb-8">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-neutral-900 mb-6 md:mb-8">
             Բաժնետերեր
           </h1>
 
           {/* Shareholder Profile Section */}
-          <div className="bg-white rounded-3xl p-6 md:p-10 border border-gray-100 shadow-sm grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+          <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 border border-gray-100 shadow-sm grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
             <div className="flex flex-col items-center space-y-4">
               <img 
                 src="https://www.evoca.am/file_manager/Shareholders/Mareta%20Gevorkyan%20Evocabank.png" 
@@ -58,8 +58,8 @@ export default function Bajneterer() {
               </div>
             </div>
 
-            <div className="md:col-span-2 space-y-4 text-gray-700 text-sm md:text-base leading-relaxed">
-              <h2 className="text-2xl font-bold text-[#6400dc]">Մարետա Գևորկյան</h2>
+            <div className="md:col-span-2 space-y-4 text-gray-700 text-xs sm:text-sm md:text-base leading-relaxed">
+              <h2 className="text-xl md:text-2xl font-bold text-[#6400dc]">Մարետա Գևորկյան</h2>
               <p>
                 Մարետա Գևորկյանը միանձնյա տիրապետում է Evocabank-ի բաժնետոմսերի 100%-ին։
               </p>
@@ -77,7 +77,7 @@ export default function Bajneterer() {
 
           {/* ANHRAZHESHT TEXEKATVUTYUN (Accordions) */}
           <section className="space-y-6 pt-6">
-            <h2 className="text-xl md:text-2xl font-extrabold text-neutral-900">
+            <h2 className="text-lg sm:text-xl md:text-2xl font-extrabold text-neutral-900">
               ԱՆՀՐԱԺԵՇՏ ՏԵՂԵԿԱՏՎՈՒԹՅՈՒՆ
             </h2>
 
@@ -86,13 +86,13 @@ export default function Bajneterer() {
               <div className="border border-gray-200 rounded-2xl overflow-hidden bg-white shadow-xs">
                 <button 
                   onClick={() => toggleAccordion(1)}
-                  className="w-full px-6 py-4 flex justify-between items-center text-left font-bold text-neutral-800 hover:bg-gray-50 transition cursor-pointer"
+                  className="w-full px-4 sm:px-6 py-4 flex justify-between items-center text-left font-bold text-neutral-800 hover:bg-gray-50 transition cursor-pointer text-xs sm:text-sm"
                 >
                   <span>Ուշադրություն</span>
                   <span className={`transform transition-transform ${openAccordion === 1 ? 'rotate-180' : ''}`}>▼</span>
                 </button>
                 {openAccordion === 1 && (
-                  <div className="px-6 pb-6 text-sm text-gray-700 space-y-3 border-t border-gray-100 pt-4 leading-relaxed">
+                  <div className="px-4 sm:px-6 pb-6 text-xs sm:text-sm text-gray-700 space-y-3 border-t border-gray-100 pt-4 leading-relaxed">
                     <p>
                       - «ԷՎՈԿԱԲԱՆԿ» ԲԲԸ-ի յուրաքանչյուր բաժնետեր, համաձայն «Բանկերի և բանկային գործունեության մասին» Հայաստանի Հանրապետության օրենքի 43-րդ հոդվածի 4-րդ մասի, իրավունք ունի ստանալու մեր վերջին տարեկան հաշվետվության և արտաքին աուդիտի եզրակացության պատճենները:
                     </p>
@@ -113,13 +113,13 @@ export default function Bajneterer() {
               <div className="border border-gray-200 rounded-2xl overflow-hidden bg-white shadow-xs">
                 <button 
                   onClick={() => toggleAccordion(2)}
-                  className="w-full px-6 py-4 flex justify-between items-center text-left font-bold text-neutral-800 hover:bg-gray-50 transition cursor-pointer"
+                  className="w-full px-4 sm:px-6 py-4 flex justify-between items-center text-left font-bold text-neutral-800 hover:bg-gray-50 transition cursor-pointer text-xs sm:text-sm"
                 >
                   <span>Տեղեկատվություն մեր կանոնադրական կապիտալի փոփոխության վերաբերյալ</span>
                   <span className={`transform transition-transform ${openAccordion === 2 ? 'rotate-180' : ''}`}>▼</span>
                 </button>
                 {openAccordion === 2 && (
-                  <div className="px-6 pb-6 text-sm text-gray-700 space-y-3 border-t border-gray-100 pt-4 leading-relaxed">
+                  <div className="px-4 sm:px-6 pb-6 text-xs sm:text-sm text-gray-700 space-y-3 border-t border-gray-100 pt-4 leading-relaxed">
                     <p>2011թ. Բանկի կանոնադրական կապիտալը համալրվել է 7.2 մլրդ դրամով՝ կազմելով 14 մլրդ. 400 մլն. դրամ:</p>
                     <p>Մեր մասնակիցների 08.07.2016թ. արտահերթ ընդհանուր ժողովի որոշմամբ՝ Բանկը սահմանափակ պատասխանատվության ընկերությունից վերակազմավորվել է փակ բաժնետիրական ընկերության և մեր փաստացի համալրված կանոնադրական կապիտալը (14 մլրդ. 400 մլն. դրամ) բաժանվել է 144,000 հատ հասարակ բաժնետոմսերի, յուրաքանչյուրը՝ 100,000 դրամ անվանական արժեքով:</p>
                     <p>2016թ. Բանկի կանոնադրական կապիտալը համալրվել է 3 մլրդ. 550 մլն. դրամով և կազմել 17 մլրդ. 950 մլն. դրամ: Մենք տեղաբաշխել ենք 100,000 դրամ անվանական արժեքով 35,500 հատ արտոնյալ բաժնետոմս:</p>
@@ -134,13 +134,13 @@ export default function Bajneterer() {
               <div className="border border-gray-200 rounded-2xl overflow-hidden bg-white shadow-xs">
                 <button 
                   onClick={() => toggleAccordion(3)}
-                  className="w-full px-6 py-4 flex justify-between items-center text-left font-bold text-neutral-800 hover:bg-gray-50 transition cursor-pointer"
+                  className="w-full px-4 sm:px-6 py-4 flex justify-between items-center text-left font-bold text-neutral-800 hover:bg-gray-50 transition cursor-pointer text-xs sm:text-sm"
                 >
                   <span>Տեղեկատվություն շահաբաժինների բաշխման վերաբերյալ</span>
                   <span className={`transform transition-transform ${openAccordion === 3 ? 'rotate-180' : ''}`}>▼</span>
                 </button>
                 {openAccordion === 3 && (
-                  <div className="px-6 pb-6 text-sm text-gray-700 space-y-3 border-t border-gray-100 pt-4 leading-relaxed">
+                  <div className="px-4 sm:px-6 pb-6 text-xs sm:text-sm text-gray-700 space-y-3 border-t border-gray-100 pt-4 leading-relaxed">
                     <p>2003-2006 թթ. մեր մասնակիցների միջև շահաբաժիններ չեն բաշխվել: Ընդհանուր ժողովի որոշմամբ՝ փաստացի ստացված զուտ շահույթն ուղղվել է մեր կանոնադրական հիմնադրամի համալրմանը կամ որպես չբաշխված շահույթ թողնվել մեր տրամադրության տակ:</p>
                     <p>2006թ. 9 ամսվա գործունեություն արդյունքներով մեր մասնակիցներին միջանկյալ վճարվել է 80 մլն. դրամ շահաբաժին:</p>
                     <p>2007թ. 9 ամսվա գործունեություն արդյունքներով մեր մասնակիցներին միջանկյալ վճարվել է 55 մլն. դրամ շահաբաժին:</p>

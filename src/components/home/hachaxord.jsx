@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
 
@@ -14,7 +14,7 @@ const reviewsData = [
   },
   {
     id: 2,
-    text: "Գերազանց սպասարկում, ընտիր ու հավես անձնակազմ Ազատության մասնաճյուղում: Վարկային բաժնից շատ շնորհակալ եм, վարկս ձևակերպվեց առանց ավելորդ քաշքշուկների` հեշտ, արագ, որակով:",
+    text: "Գերազանց սպասարկում, ընտիր ու հավես անձնակազմ Ազատության մասնաճյուղում: Վարկային բաժնից շատ շնորհակալ եմ, վարկս ձևակերպվեց առանց ավելորդ քաշքշուկների` հեշտ, արագ, որակով:",
     author: "Նունե Գևորգյան",
     role: "Հաճախորդ"
   },
@@ -40,29 +40,29 @@ const reviewsData = [
 
 function Hachaxord() {
   return (
-    <section className="relative bg-white py-16 overflow-hidden">
+    <section className="relative bg-white py-12 md:py-16 overflow-hidden">
       <div className="max-w-4xl mx-auto px-4 relative">
         
-        {/* Ձախ կողմի շարժվող ձեռքի նկար (Animate pulse / bounce) */}
-        <div className="absolute left-0 lg:-left-16 top-1/2 -translate-y-1/2 hidden md:block pointer-events-none animate-bounce duration-1000">
+        {/* Ձախ կողմի շարժվող ձեռքի նկար */}
+        <div className="absolute left-0 lg:-left-12 top-1/2 -translate-y-1/2 hidden md:block pointer-events-none animate-bounce duration-1000">
           <img 
             src="https://www.evoca.am/img/reviews/hand2.png" 
             alt="Hand Left" 
-            className="w-20 lg:w-24 h-auto object-contain"
+            className="w-16 lg:w-20 h-auto object-contain"
           />
         </div>
 
         {/* Աջ կողմի շարժվող ձեռքի նկար */}
-        <div className="absolute right-0 lg:-right-16 top-1/2 -translate-y-1/2 hidden md:block pointer-events-none animate-bounce duration-1000">
+        <div className="absolute right-0 lg:-right-12 top-1/2 -translate-y-1/2 hidden md:block pointer-events-none animate-bounce duration-1000">
           <img 
             src="https://www.evoca.am/img/reviews/hand2.png" 
             alt="Hand Right" 
-            className="w-20 lg:w-24 h-auto object-contain transform scale-x-[-1]"
+            className="w-16 lg:w-20 h-auto object-contain transform scale-x-[-1]"
           />
         </div>
 
         {/* Սլայդեր բլոկ */}
-        <div className="px-6 md:px-12">
+        <div className="px-4 sm:px-8 md:px-12">
           <Swiper
             modules={[Pagination, Autoplay]}
             spaceBetween={30}
@@ -74,7 +74,7 @@ function Hachaxord() {
           >
             {reviewsData.map((item) => (
               <SwiperSlide key={item.id}>
-                <div className="flex flex-col items-center text-center px-4">
+                <div className="flex flex-col items-center text-center px-2 sm:px-4">
                   
                   {/* 5 Աստղեր */}
                   <div className="flex items-center space-x-1 mb-4 text-amber-400">
@@ -88,26 +88,26 @@ function Hachaxord() {
                   {/* Կարծիքի տեքստը մեջբերման նշաններով */}
                   <div className="relative max-w-2xl mb-6">
                     {/* Ձախ մեջբերման նշան */}
-                    <span className="absolute -left-6 -top-3 text-[#6400dc] text-3xl font-serif select-none">
+                    <span className="absolute -left-4 sm:-left-6 -top-3 text-[#6400dc] text-2xl sm:text-3xl font-serif select-none">
                       ❝
                     </span>
                     
-                    <p className="text-neutral-700 text-sm sm:text-base leading-relaxed font-normal">
+                    <p className="text-neutral-700 text-xs sm:text-sm md:text-base leading-relaxed font-normal">
                       {item.text}
                     </p>
 
                     {/* Աջ մեջբերման նշան */}
-                    <span className="absolute -right-6 -bottom-3 text-[#6400dc] text-3xl font-serif select-none">
+                    <span className="absolute -right-4 sm:-right-6 -bottom-3 text-[#6400dc] text-2xl sm:text-3xl font-serif select-none">
                       ❞
                     </span>
                   </div>
 
                   {/* Հեղինակ */}
                   <div className="flex flex-col items-center">
-                    <h4 className="font-bold text-neutral-900 text-sm sm:text-base">
+                    <h4 className="font-bold text-neutral-900 text-xs sm:text-sm md:text-base">
                       {item.author}
                     </h4>
-                    <span className="text-xs text-neutral-500 mt-0.5">
+                    <span className="text-[11px] sm:text-xs text-neutral-500 mt-0.5">
                       {item.role}
                     </span>
                   </div>
@@ -120,7 +120,7 @@ function Hachaxord() {
 
       </div>
 
-      {/* Custom styles for Swiper pagination dots to match Evoca violet color */}
+      {/* Custom styles for Swiper pagination dots */}
       <style jsx global>{`
         .swiper-pagination-bullet {
           background: #d1d5db !important;

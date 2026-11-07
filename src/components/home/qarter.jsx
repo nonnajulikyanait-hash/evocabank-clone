@@ -236,7 +236,6 @@ export default function Qarter() {
     }
   ];
 
-  // Auto select card from location state if passed (e.g. from slider)
   useEffect(() => {
     if (location.state && location.state.cardTitle) {
       const foundCard = cardsList.find(c => c.title === location.state.cardTitle);
@@ -358,23 +357,23 @@ export default function Qarter() {
         <Navbar />
 
         {/* Purple Sub-bar #6400dc */}
-        <div className="bg-[#6400dc] text-white py-3 px-4 shadow-inner">
-          <div className="max-w-7xl mx-auto flex items-center space-x-8 text-xs sm:text-sm font-semibold overflow-x-auto whitespace-nowrap">
+        <div className="bg-[#6400dc] text-white py-3 px-4 sm:px-8 shadow-inner">
+          <div className="max-w-7xl mx-auto flex items-center space-x-6 sm:space-x-8 text-xs sm:text-sm font-semibold overflow-x-auto whitespace-nowrap">
             <span 
               onClick={() => { setSelectedCard(null); setActiveTab('cards'); }} 
-              className={`cursor-pointer pb-1 transition ${activeTab === 'cards' && !selectedCard ? 'border-b-2 border-white text-white' : 'text-white opacity-80 hover:opacity-100'}`}
+              className={`cursor-pointer pb-1 transition ${activeTab === 'cards' && !selectedCard ? 'border-b-2 border-white text-white font-black' : 'text-white opacity-80 hover:opacity-100'}`}
             >
               Քարտեր
             </span>
             <span 
               onClick={() => { setSelectedCard(null); setActiveTab('provision'); }} 
-              className={`cursor-pointer pb-1 transition ${activeTab === 'provision' && !selectedCard ? 'border-b-2 border-white text-white' : 'text-white opacity-80 hover:opacity-100'}`}
+              className={`cursor-pointer pb-1 transition ${activeTab === 'provision' && !selectedCard ? 'border-b-2 border-white text-white font-black' : 'text-white opacity-80 hover:opacity-100'}`}
             >
               Քարտերի տրամադրում և սպասարկում
             </span>
             <span 
               onClick={() => { setSelectedCard(null); setActiveTab('social'); }} 
-              className={`cursor-pointer pb-1 transition ${activeTab === 'social' && !selectedCard ? 'border-b-2 border-white text-white' : 'text-white opacity-80 hover:opacity-100'}`}
+              className={`cursor-pointer pb-1 transition ${activeTab === 'social' && !selectedCard ? 'border-b-2 border-white text-white font-black' : 'text-white opacity-80 hover:opacity-100'}`}
             >
               Սոցիալական ապահովության վճարային քարտեր
             </span>
@@ -384,35 +383,15 @@ export default function Qarter() {
         {selectedCard ? (
           /* ================= ՔԱՐՏԻ ՄԱՆՐԱՄԱՍՆ ԷՋԸ ================= */
           <div>
-            <div className="relative bg-[#e6d2ff] text-neutral-900 overflow-hidden py-16 px-4 md:px-12 rounded-b-[40px] shadow-sm">
-              <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center relative z-10">
-                <div className="space-y-4 text-left">
-                  <h1 className="text-3xl md:text-5xl font-black tracking-tight text-neutral-900">
-                    {selectedCard.title}
-                  </h1>
-                  <p className="text-sm md:text-base text-neutral-700 leading-relaxed max-w-xl">
-                    {selectedCard.desc}
-                  </p>
-                </div>
-                <div className="flex justify-center">
-                  <img 
-                    src={selectedCard.image} 
-                    alt={selectedCard.title} 
-                    className="max-h-72 object-contain hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div className="max-w-7xl mx-auto px-4 py-8">
-              <div className="flex items-center gap-4 mb-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8 text-left">
+              <div className="flex items-center gap-4 mb-8 flex-wrap">
                 <button 
                   onClick={() => setSelectedCard(null)} 
                   className="text-xs font-bold text-gray-500 hover:text-[#6400dc] flex items-center gap-1 cursor-pointer"
                 >
                   ← Վերադառնալ
                 </button>
-                <div className="text-xs text-gray-400 flex items-center gap-2">
+                <div className="text-xs text-gray-400 flex items-center gap-2 flex-wrap">
                   <span>🏠</span> &gt; <span>Անհատ</span> &gt; 
                   <span onClick={() => setSelectedCard(null)} className="cursor-pointer hover:text-[#6400dc]">Քարտեր</span> &gt; 
                   <span className="text-gray-700 font-medium">{selectedCard.title}</span>
@@ -421,7 +400,7 @@ export default function Qarter() {
 
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
                 <div className="lg:col-span-8 space-y-6 text-left">
-                  <div className="flex border-b border-gray-200 gap-8 text-sm font-bold">
+                  <div className="flex border-b border-gray-200 gap-6 sm:gap-8 text-xs sm:text-sm font-bold overflow-x-auto whitespace-nowrap">
                     <button 
                       onClick={() => setActiveCardTab('about')}
                       className={`pb-3 cursor-pointer transition-all border-b-2 ${activeCardTab === 'about' ? 'border-[#6400dc] text-[#6400dc]' : 'border-transparent text-gray-500 hover:text-neutral-800'}`}
@@ -443,13 +422,13 @@ export default function Qarter() {
                   </div>
 
                   {activeCardTab === 'about' && (
-                    <div className="space-y-4 text-sm text-gray-700 leading-relaxed">
+                    <div className="space-y-4 text-xs sm:text-sm text-gray-700 leading-relaxed">
                       <p>{selectedCard.desc}</p>
                     </div>
                   )}
 
                   {activeCardTab === 'conditions' && (
-                    <div className="space-y-3 text-sm text-gray-700">
+                    <div className="space-y-3 text-xs sm:text-sm text-gray-700">
                       <p className="font-semibold text-neutral-900">Ընդհանուր պայմաններ․</p>
                       <ul className="list-disc pl-5 space-y-1 text-gray-600">
                         <li>Արժույթը՝ ՀՀ դրամ, ԱՄՆ դոլար, Եվրո</li>
@@ -459,7 +438,7 @@ export default function Qarter() {
                   )}
 
                   {activeCardTab === 'documents' && (
-                    <div className="space-y-3 text-sm text-gray-700">
+                    <div className="space-y-3 text-xs sm:text-sm text-gray-700">
                       <ol className="list-decimal pl-5 space-y-1 text-gray-600">
                         <li>Անձնագիր կամ նույնականացման քարտ</li>
                         <li>ՀԾՀ (Սոց. քարտ)</li>
@@ -492,8 +471,8 @@ export default function Qarter() {
             </div>
 
             {/* Swiper / Slider for other cards */}
-            <div className="max-w-7xl mx-auto px-4 py-12 border-t border-gray-100">
-              <h2 className="text-2xl font-black text-neutral-900 mb-6 text-left">Այլ քարտեր</h2>
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 border-t border-gray-100">
+              <h2 className="text-xl sm:text-2xl font-black text-neutral-900 mb-6 text-left">Այլ քարտեր</h2>
               <div className="flex gap-6 overflow-x-auto pb-6 scrollbar-thin snap-x">
                 {cardsList.filter(c => c.id !== selectedCard.id).map(card => (
                   <div
@@ -518,32 +497,32 @@ export default function Qarter() {
           </div>
         ) : activeTab === 'social' ? (
           /* ================= ՍՈՑԻԱԼԱԿԱՆ ԱՊԱՀՈՎՈՒԹՅԱՆ ՎՃԱՐԱՅԻՆ ՔԱՐՏԵՐ ԷՋ ================= */
-          <main className="max-w-7xl mx-auto px-4 py-8 text-left">
-            <div className="text-xs text-gray-400 mb-4 flex items-center gap-2">
+          <main className="max-w-7xl mx-auto px-4 sm:px-6 py-8 text-left">
+            <div className="text-xs text-gray-400 mb-4 flex items-center gap-2 flex-wrap">
               <span>🏠</span> &gt; <span>Անհատ</span> &gt; <span className="cursor-pointer hover:text-[#6400dc]" onClick={() => setActiveTab('cards')}>Քարտեր</span> &gt; <span className="text-gray-700 font-medium">Սոցիալական ապահովության վճարային քարտեր</span>
             </div>
 
             {/* Banner Section */}
-            <div className="relative bg-[#f5efff] rounded-[32px] overflow-hidden p-8 md:p-12 mb-12 flex flex-col md:flex-row items-center justify-between gap-8 shadow-sm">
+            <div className="relative bg-[#f5efff] rounded-[28px] sm:rounded-[32px] overflow-hidden p-6 sm:p-8 md:p-12 mb-12 flex flex-col md:flex-row items-center justify-between gap-8 shadow-sm">
               <div className="space-y-4 md:w-1/2">
-                <h1 className="text-3xl md:text-4xl font-black text-neutral-900 leading-tight">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-neutral-900 leading-tight">
                   Սոցիալական ապահովության վճարային քարտեր
                 </h1>
-                <p className="text-xs md:text-sm text-gray-700 leading-relaxed">
+                <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
                   Կենսաթոշակառուներին առաջարկում ենք ARCA կենսաթոշակային վճարային քարտեր՝ միայն կենսաթոշակների գումարների սպասարկման նպատակով: Քարտերը տրամադրում ենք Սոցիալական ապահովության պետական ծառայության հետ 2011թ. հունվարի 21-ին կնքած պայմանագրի համաձայն:
                 </p>
               </div>
-              <div className="md:w-1/2 flex justify-center">
+              <div className="md:w-1/2 flex justify-center w-full">
                 <img 
                   src="https://www.evoca.am/images-cache/menu/1/17218011250749/780x585.jpg" 
                   alt="Սոցիալական ապահովության վճարային քարտեր" 
-                  className="rounded-2xl max-h-80 object-cover shadow-md"
+                  className="rounded-2xl max-h-80 w-full object-cover shadow-md"
                 />
               </div>
             </div>
 
             {/* Content Section */}
-            <div className="space-y-8 text-xs md:text-sm text-gray-700 leading-relaxed mb-16">
+            <div className="space-y-8 text-xs sm:text-sm text-gray-700 leading-relaxed mb-16">
               <div className="space-y-4">
                 <p>Քարտերը տրամադրում և սպասարկում ենք մեր կողմից հաստատված Կենսաթոշակային քարտերի տրամադրման և սպասարկման սակագների համաձայն:</p>
                 <p>Քարտերի ստացման դիմում կարող եք ներկայացնել մեր Գլխամասային գրասենյակ կամ ցանկացած մասնաճյուղ:</p>
@@ -555,7 +534,7 @@ export default function Qarter() {
 
               {/* Operations Section */}
               <div className="space-y-4 pt-4">
-                <h2 className="text-xl md:text-2xl font-black text-neutral-900">
+                <h2 className="text-lg sm:text-xl md:text-2xl font-black text-neutral-900">
                   Վճարային քարտերով կատարվող գործառնություններ
                 </h2>
                 <p className="font-bold text-[#6400dc]">Վճարային քարտերով կարող եք՝</p>
@@ -592,7 +571,7 @@ export default function Qarter() {
 
               {/* Useful Info Section */}
               <div className="space-y-4 pt-4">
-                <h2 className="text-xl md:text-2xl font-black text-neutral-900">
+                <h2 className="text-lg sm:text-xl md:text-2xl font-black text-neutral-900">
                   Օգտակար տեղեկատվություն
                 </h2>
                 <p className="font-bold text-[#6400dc]">Քարտային վճարումներ կատարելիս անհրաժեշտ է հիշել`</p>
@@ -618,7 +597,7 @@ export default function Qarter() {
 
               {/* Warning Section */}
               <div className="space-y-4 pt-4">
-                <h2 className="text-xl md:text-2xl font-black text-neutral-900">
+                <h2 className="text-lg sm:text-xl md:text-2xl font-black text-neutral-900">
                   Զգուշացում
                 </h2>
                 <ul className="space-y-2 pl-4">
@@ -650,26 +629,26 @@ export default function Qarter() {
           </main>
         ) : activeTab === 'provision' ? (
           /* ================= ՔԱՐՏԵՐԻ ՏՐԱՄԱԴՐՈՒՄ ԵՎ ՍՊԱՍԱՐԿՈՒՄ ԷՋ ================= */
-          <main className="max-w-7xl mx-auto px-4 py-8 text-left">
-            <div className="text-xs text-gray-400 mb-4 flex items-center gap-2">
+          <main className="max-w-7xl mx-auto px-4 sm:px-6 py-8 text-left">
+            <div className="text-xs text-gray-400 mb-4 flex items-center gap-2 flex-wrap">
               <span>🏠</span> &gt; <span>Անհատ</span> &gt; <span className="cursor-pointer hover:text-[#6400dc]" onClick={() => setActiveTab('cards')}>Քարտեր</span> &gt; <span className="text-gray-700 font-medium">Քարտերի տրամադրում և սպասարկում</span>
             </div>
 
-            <h1 className="text-3xl font-black text-neutral-900 mb-8">
+            <h1 className="text-2xl sm:text-3xl font-black text-neutral-900 mb-8">
               Քարտերի տրամադրում և սպասարկում
             </h1>
 
             <div className="mb-10">
-              <h1 className="text-xl font-bold text-neutral-900 mb-6 text-left">
+              <h2 className="text-lg sm:text-xl font-bold text-neutral-900 mb-6 text-left">
                 ԱՆՀՐԱԺԵՇՏ ՏԵՂԵԿԱՏՎՈՒԹՅՈՒՆ
-              </h1>
+              </h2>
 
               <div className="space-y-4">
                 {provisionSections.map((sec, secIdx) => (
                   <div key={secIdx} className="border border-gray-200 rounded-2xl overflow-hidden bg-white shadow-sm">
                     <button
                       onClick={() => toggleAccordion(secIdx)}
-                      className="w-full flex justify-between items-center p-4 text-left font-bold text-neutral-800 hover:bg-purple-50 transition cursor-pointer"
+                      className="w-full flex justify-between items-center p-4 text-left font-bold text-neutral-800 hover:bg-purple-50 transition cursor-pointer text-xs sm:text-sm"
                     >
                       <span className="flex items-center gap-2">
                         <span className="text-[#6400dc]">⌄</span> {sec.title}
@@ -678,7 +657,7 @@ export default function Qarter() {
                     </button>
 
                     {openAccordions[secIdx] && (
-                      <div className="p-4 border-t border-gray-100 bg-gray-50 space-y-3 text-xs md:text-sm text-gray-700">
+                      <div className="p-4 border-t border-gray-100 bg-gray-50 space-y-3 text-xs sm:text-sm text-gray-700">
                         {sec.content.map((itemText, itemIdx) => (
                           <div key={itemIdx} className="flex items-start gap-3">
                             <span className="bg-[#6400dc] text-white rounded-full w-5 h-5 flex items-center justify-center text-[10px] font-bold flex-shrink-0 mt-0.5">
@@ -696,9 +675,9 @@ export default function Qarter() {
 
             {/* Փաստաթղթեր բաժին */}
             <div className="mb-16">
-              <h1 className="text-xl font-bold text-neutral-900 mb-6 text-left">
+              <h2 className="text-lg sm:text-xl font-bold text-neutral-900 mb-6 text-left">
                 Փաստաթղթեր
-              </h1>
+              </h2>
               <div className="space-y-3">
                 {documentsList.map((doc, docIdx) => (
                   <a
@@ -710,11 +689,11 @@ export default function Qarter() {
                   >
                     <div className="flex items-center gap-3">
                       <span className="text-[#6400dc] font-bold text-lg">📄</span>
-                      <span className="text-xs md:text-sm font-medium text-neutral-800 group-hover:text-[#6400dc] transition">
+                      <span className="text-xs sm:text-sm font-medium text-neutral-800 group-hover:text-[#6400dc] transition">
                         {doc.title}
                       </span>
                     </div>
-                    <span className="text-xs font-bold text-[#6400dc] opacity-0 group-hover:opacity-100 transition">
+                    <span className="text-xs font-bold text-[#6400dc] opacity-0 group-hover:opacity-100 transition shrink-0">
                       Ներբեռնել &gt;
                     </span>
                   </a>
@@ -726,12 +705,12 @@ export default function Qarter() {
           </main>
         ) : (
           /* ================= ՔԱՐՏԵՐԻ ՑԱՆԿԻ ԷՋԸ ================= */
-          <main className="max-w-7xl mx-auto px-4 py-8">
-            <div className="text-xs text-gray-400 mb-4 flex items-center gap-2 text-left">
+          <main className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
+            <div className="text-xs text-gray-400 mb-4 flex items-center gap-2 text-left flex-wrap">
               <span>🏠</span> &gt; <span>Անհատ</span> &gt; <span className="text-gray-700 font-medium">Քարտեր</span>
             </div>
 
-            <h1 className="text-3xl font-black text-neutral-900 mb-8 text-left">
+            <h1 className="text-2xl sm:text-3xl font-black text-neutral-900 mb-8 text-left">
               Քարտեր
             </h1>
 
@@ -739,9 +718,9 @@ export default function Qarter() {
               {cardsList.map((card) => (
                 <div 
                   key={card.id} 
-                  className="bg-white border border-gray-100 rounded-[32px] p-6 md:p-8 shadow-sm hover:shadow-md transition-all grid grid-cols-1 lg:grid-cols-12 gap-8 items-center"
+                  className="bg-white border border-gray-100 rounded-[28px] sm:rounded-[32px] p-6 md:p-8 shadow-sm hover:shadow-md transition-all grid grid-cols-1 lg:grid-cols-12 gap-8 items-center"
                 >
-                  <div className="lg:col-span-4 rounded-3xl overflow-hidden flex items-center justify-center aspect-[16/10]">
+                  <div className="lg:col-span-4 rounded-3xl overflow-hidden flex items-center justify-center aspect-[16/10] bg-gray-50 p-4">
                     <img 
                       src={card.image} 
                       alt={card.title} 
@@ -750,10 +729,10 @@ export default function Qarter() {
                   </div>
                   
                   <div className="lg:col-span-8 space-y-5 text-left">
-                    <h3 className="text-xl md:text-2xl font-black text-neutral-900 tracking-tight">
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-black text-neutral-900 tracking-tight">
                       {card.title}
                     </h3>
-                    <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
+                    <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
                       {card.desc}
                     </p>
 
@@ -761,7 +740,7 @@ export default function Qarter() {
                       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 pt-2 border-t border-gray-100">
                         {card.features.map((feat, idx) => (
                           <div key={idx} className="space-y-1">
-                            <div className="text-base md:text-xl font-black text-[#6400dc]">
+                            <div className="text-sm sm:text-base md:text-xl font-black text-[#6400dc]">
                               {feat.value}
                             </div>
                             <div className="text-[11px] text-gray-400 font-medium">
@@ -784,6 +763,8 @@ export default function Qarter() {
                 </div>
               ))}
             </div>
+
+            <EvocaOnlineMobile />
           </main>
         )}
       </div>

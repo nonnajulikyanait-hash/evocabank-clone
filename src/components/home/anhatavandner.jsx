@@ -78,7 +78,7 @@ export default function AnhatAvandner() {
 
         {/* Sub-navbar #6400dc */}
         <div className="bg-[#6400dc] text-white py-3 px-4 shadow-inner">
-          <div className="max-w-7xl mx-auto flex items-center space-x-8 text-xs sm:text-sm font-semibold overflow-x-auto whitespace-nowrap">
+          <div className="max-w-7xl mx-auto flex items-center space-x-6 md:space-x-8 text-xs sm:text-sm font-semibold overflow-x-auto whitespace-nowrap scrollbar-none">
             <span 
               onClick={() => { setSelectedDeposit(null); setActiveTab('deposits'); }} 
               className={`cursor-pointer pb-1 transition ${activeTab === 'deposits' && !selectedDeposit ? 'border-b-2 border-white text-white' : 'text-white opacity-80 hover:opacity-100'}`}
@@ -96,16 +96,16 @@ export default function AnhatAvandner() {
 
         {selectedDeposit ? (
           /* ================= 1. ԱՎԱՆԴԻ ՄԱՆՐԱՄԱՍՆ ԷՋ ================= */
-          <main className="max-w-7xl mx-auto px-4 py-8 text-left">
+          <main className="max-w-7xl mx-auto px-4 py-6 md:py-8 text-left">
             {/* Breadcrumbs */}
-            <div className="flex items-center gap-4 mb-8">
+            <div className="flex flex-wrap items-center gap-2 md:gap-4 mb-6 md:mb-8 text-xs">
               <button 
                 onClick={() => setSelectedDeposit(null)} 
-                className="text-xs font-bold text-gray-500 hover:text-[#6400dc] flex items-center gap-1 cursor-pointer"
+                className="font-bold text-gray-500 hover:text-[#6400dc] flex items-center gap-1 cursor-pointer"
               >
                 ← Վերադառնալ
               </button>
-              <div className="text-xs text-gray-400 flex items-center gap-2">
+              <div className="text-gray-400 flex items-center gap-2 flex-wrap">
                 <span>🏠</span> &gt; <span>Անհատ</span> &gt; 
                 <span onClick={() => setSelectedDeposit(null)} className="cursor-pointer hover:text-[#6400dc]">Ավանդներ</span> &gt; 
                 <span className="text-gray-700 font-medium">{selectedDeposit.title}</span>
@@ -113,15 +113,15 @@ export default function AnhatAvandner() {
             </div>
 
             {/* Top Banner */}
-            <div className="bg-[#f5efff] rounded-[32px] p-8 md:p-12 mb-12 grid grid-cols-1 md:grid-cols-12 gap-8 items-center shadow-sm">
+            <div className="bg-[#f5efff] rounded-2xl md:rounded-[32px] p-6 sm:p-8 md:p-12 mb-8 md:mb-12 grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-center shadow-sm">
               <div className="md:col-span-7 space-y-4">
-                <h1 className="text-3xl md:text-5xl font-black text-neutral-900 tracking-tight">
+                <h1 className="text-2xl sm:text-3xl md:text-5xl font-black text-neutral-900 tracking-tight">
                   {selectedDeposit.title}
                 </h1>
                 <p className="text-xs md:text-sm text-gray-700 leading-relaxed">
                   {selectedDeposit.desc}
                 </p>
-                <button className="bg-[#6400dc] hover:bg-opacity-90 text-white font-bold text-xs px-8 py-3.5 rounded-full transition shadow-md cursor-pointer mt-4">
+                <button className="w-full sm:w-auto bg-[#6400dc] hover:bg-opacity-90 text-white font-bold text-xs px-8 py-3.5 rounded-full transition shadow-md cursor-pointer mt-4">
                   Ներդնել ավանդ
                 </button>
               </div>
@@ -129,31 +129,31 @@ export default function AnhatAvandner() {
                 <img 
                   src={selectedDeposit.image} 
                   alt={selectedDeposit.title} 
-                  className="max-h-64 object-contain rounded-2xl hover:scale-105 transition-transform duration-300"
+                  className="max-h-48 sm:max-h-64 object-contain rounded-2xl hover:scale-105 transition-transform duration-300"
                 />
               </div>
             </div>
 
             {/* Info Grid */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-16">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 mb-16">
               <div className="lg:col-span-8 space-y-8">
                 <div>
-                  <h3 className="text-xl font-extrabold text-neutral-900 mb-3">
+                  <h3 className="text-lg md:text-xl font-extrabold text-neutral-900 mb-3">
                     Ավանդի մասին
                   </h3>
-                  <p className="text-sm text-gray-600 leading-relaxed">
+                  <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
                     {selectedDeposit.detailsInfo.about}
                   </p>
                 </div>
 
                 <div className="border-t border-gray-100 pt-6">
-                  <h3 className="text-xl font-extrabold text-neutral-900 mb-4">
+                  <h3 className="text-lg md:text-xl font-extrabold text-neutral-900 mb-4">
                     Հիմնական պայմաններ
                   </h3>
                   <ul className="space-y-3">
                     {selectedDeposit.detailsInfo.conditions.map((cond, idx) => (
                       <li key={idx} className="flex items-start gap-3 text-xs md:text-sm text-gray-700">
-                        <span className="text-[#6400dc] font-bold text-base">•</span>
+                        <span className="text-[#6400dc] font-bold text-base leading-none">•</span>
                         <span>{cond}</span>
                       </li>
                     ))}
@@ -162,15 +162,15 @@ export default function AnhatAvandner() {
               </div>
 
               {/* Right Box - Key Stats */}
-              <div className="lg:col-span-4 bg-white border border-gray-100 rounded-3xl p-6 shadow-sm space-y-6">
+              <div className="lg:col-span-4 bg-white border border-gray-100 rounded-2xl sm:rounded-3xl p-6 shadow-sm space-y-6 h-fit">
                 <h4 className="font-bold text-neutral-900 border-b border-gray-100 pb-3">
                   Ավանդի ցուցանիշներ
                 </h4>
-                <div className="space-y-4">
+                <div className="grid grid-cols-2 lg:grid-cols-1 gap-4 lg:gap-6">
                   {selectedDeposit.features.map((feat, idx) => (
                     <div key={idx} className="space-y-1">
-                      <div className="text-xs text-gray-400 font-medium">{feat.label}</div>
-                      <div className="text-lg font-black text-[#6400dc]">
+                      <div className="text-[11px] text-gray-400 font-medium">{feat.label}</div>
+                      <div className="text-base sm:text-lg font-black text-[#6400dc]">
                         {feat.prefix && <span className="text-xs font-normal text-gray-500 mr-1">{feat.prefix}</span>}
                         {feat.value}
                       </div>
@@ -182,18 +182,18 @@ export default function AnhatAvandner() {
           </main>
         ) : activeTab === 'important' ? (
           /* ================= 2. ԿԱՐԵՎՈՐ ՏԵՂԵԿԱՏՎՈՒԹՅՈՒՆ ԷՋ ================= */
-          <main className="max-w-7xl mx-auto px-4 py-8 text-left">
-            <div className="text-xs text-gray-400 mb-4 flex items-center gap-2">
+          <main className="max-w-7xl mx-auto px-4 py-6 md:py-8 text-left">
+            <div className="text-xs text-gray-400 mb-4 flex items-center gap-2 flex-wrap">
               <span>🏠</span> &gt; <span>Անհատ</span> &gt; <span className="cursor-pointer hover:text-[#6400dc]" onClick={() => setActiveTab('deposits')}>Ավանդներ</span> &gt; <span className="text-gray-700 font-medium">Կարևոր տեղեկատվություն</span>
             </div>
 
-            <h1 className="text-3xl font-black text-neutral-900 mb-8">
+            <h1 className="text-2xl sm:text-3xl font-black text-neutral-900 mb-6 md:mb-8">
               Կարևոր տեղեկատվություն
             </h1>
 
-            <div className="space-y-6 text-xs md:text-sm text-gray-700 leading-relaxed mb-16 bg-gray-50 p-8 rounded-3xl border border-gray-100">
-              <h3 className="font-extrabold text-neutral-900 text-base mb-4">Ընդհանուր դրույթներ</h3>
-              <ol className="space-y-3 list-decimal pl-5">
+            <div className="space-y-6 text-xs md:text-sm text-gray-700 leading-relaxed mb-16 bg-gray-50 p-5 sm:p-8 rounded-2xl sm:rounded-3xl border border-gray-100">
+              <h3 className="font-extrabold text-neutral-900 text-sm md:text-base mb-4">Ընդհանուր դրույթներ</h3>
+              <ol className="space-y-3 list-decimal pl-4 sm:pl-5">
                 <li>«ԷՎՈԿԱԲԱՆԿ» ԲԲԸ-ն (այսուհետ՝ Բանկ) իրականացնում է իրավաբանական և ֆիզիկական անձանցից (ռեզիդենտ, ոչ ռեզիդենտ) ժամկետային ավանդների (այսուհետ՝ Ավանդ) ներգրավում:</li>
                 <li>Ավանդները ներգրավվում են՝ ՀՀ դրամով, ԱՄՆ դոլարով, Եվրոյով և ՌԴ ռուբլով:</li>
                 <li>Ավանդներն ընդունվում են ինչպես կանխիկ, այնպես էլ անկանխիկ եղանակով:</li>
@@ -202,7 +202,7 @@ export default function AnhatAvandner() {
                 <li>Հայտ-պայմանագրում/էլ. հայտում նշվում է Ավանդի տեսակը, գումարը, արժույթը, ժամկետը, տոկոսադրույքը և ըստ անհրաժեշտության այլ պայմաններ:</li>
                 <li>
                   Ավանդների ներդրման համար գործառնական օր է համարվում՝
-                  <ul className="list-disc pl-5 mt-1 space-y-1">
+                  <ul className="list-disc pl-4 sm:pl-5 mt-1 space-y-1">
                     <li>Գլխամասում և մասնաճյուղերում ներդրվող ավանդների գծով` տվյալ ստորաբաժանման Հաճախորդների սպասարկման համար սահմանված ժամերը,</li>
                     <li>Հեռակառավարման համակարգերի միջոցով ներդրվող ավանդների համար` տվյալ օրացուցային օրվա 24-ժամյա ժամանակահատվածը</li>
                   </ul>
@@ -213,7 +213,7 @@ export default function AnhatAvandner() {
                 <li>Հաշվեգրված տոկոսների վճարումը իրականացվում է համաձայն Հաճախորդի կողմից Հայտ-պայմանագրում/Պայմանագրում նշված տոկոսների վճարման պարբերականության:</li>
                 <li>
                   Ավանդների հետ կապված կանխիկ գործառնությունների միջնորդավճարները սահմանվում են Բանկի «Սակագներով և դրույքներով» (TRM14-0002-02/1)-ով սահմանված դրամարկղային գործառնությունների սակագներով, բացառությամբ ՌԴ ռուբլով ավանդների:
-                  <ul className="list-disc pl-5 mt-1 space-y-1">
+                  <ul className="list-disc pl-4 sm:pl-5 mt-1 space-y-1">
                     <li>Կանխիկ ՌԴ ռուբլով ներդրված Ավանդը վերադարձվում է կանխիկ ՌԴ ռուբլով, իսկ անկանխիկ ՌԴ ռուբլով ներդրված Ավանդը վերադարձվում է անկանխիկ ՌԴ ռուբլով՝ առանց միջնորդավճարների գանձման:</li>
                     <li>Անկանխիկ ՌԴ ռուբլով ներդրված Ավանդը կանխիկ ՌԴ ռուբլով վերադարձնելու դեպքում գանձվում է վերադարձման օրը ՌԴ ռուբլու կանխիկացման համար սահմանված միջնորդավճարը:</li>
                     <li>Կանխիկ ՌԴ ռուբլով ներդրված Ավանդը անկանխիկ ՌԴ ռուբլով վերադարձնելու դեպքում գանձվում է վերադարձման օրը կանխիկ ՌԴ ռուբլու մուտքագրման համար սահմանված միջնորդավճարը:</li>
@@ -225,24 +225,24 @@ export default function AnhatAvandner() {
           </main>
         ) : (
           /* ================= 3. ԱՎԱՆԴՆԵՐԻ ՑԱՆԿԻ ԷՋ ================= */
-          <main className="max-w-7xl mx-auto px-4 py-8">
-            <div className="text-xs text-gray-400 mb-4 flex items-center gap-2 text-left">
+          <main className="max-w-7xl mx-auto px-4 py-6 md:py-8">
+            <div className="text-xs text-gray-400 mb-4 flex items-center gap-2 text-left flex-wrap">
               <span>🏠</span> &gt; <span>Անհատ</span> &gt; <span className="text-gray-700 font-medium">Ավանդներ</span>
             </div>
 
-            <h1 className="text-3xl font-black text-neutral-900 mb-8 text-left">
+            <h1 className="text-2xl sm:text-3xl font-black text-neutral-900 mb-6 md:mb-8 text-left">
               Ավանդներ
             </h1>
 
             {/* Deposit Cards List */}
-            <div className="space-y-12 mb-16">
+            <div className="space-y-6 md:space-y-12 mb-16">
               {depositsList.map((deposit) => (
                 <div 
                   key={deposit.id}
-                  className="bg-white border border-gray-100 rounded-[32px] p-6 md:p-8 shadow-sm hover:shadow-md transition-all grid grid-cols-1 lg:grid-cols-12 gap-8 items-center"
+                  className="bg-white border border-gray-100 rounded-2xl sm:rounded-[32px] p-5 sm:p-6 md:p-8 shadow-sm hover:shadow-md transition-all grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 items-center"
                 >
                   {/* Left Image */}
-                  <div className="lg:col-span-5 rounded-3xl overflow-hidden flex items-center justify-center bg-gray-50 p-4 aspect-[16/10]">
+                  <div className="lg:col-span-5 rounded-2xl sm:rounded-3xl overflow-hidden flex items-center justify-center bg-gray-50 p-4 aspect-[16/10]">
                     <img 
                       src={deposit.image} 
                       alt={deposit.title} 
@@ -251,8 +251,8 @@ export default function AnhatAvandner() {
                   </div>
 
                   {/* Right Content */}
-                  <div className="lg:col-span-7 space-y-5 text-left">
-                    <h2 className="text-2xl md:text-3xl font-black text-neutral-900 tracking-tight">
+                  <div className="lg:col-span-7 space-y-4 md:space-y-5 text-left">
+                    <h2 className="text-xl sm:text-2xl md:text-3xl font-black text-neutral-900 tracking-tight">
                       {deposit.title}
                     </h2>
                     <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
@@ -260,16 +260,16 @@ export default function AnhatAvandner() {
                     </p>
 
                     {/* Features Grid */}
-                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-2 border-t border-gray-100">
+                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 pt-2 border-t border-gray-100">
                       {deposit.features.map((feat, idx) => (
                         <div key={idx} className="space-y-1">
-                          <div className="text-[11px] text-gray-400 font-medium">
-                            {feat.prefix && <span className="mr-1">{feat.prefix}</span>}
+                          <div className="text-[10px] sm:text-[11px] text-gray-400 font-medium h-4">
+                            {feat.prefix && <span>{feat.prefix}</span>}
                           </div>
-                          <div className="text-base md:text-xl font-black text-[#6400dc]">
+                          <div className="text-sm sm:text-base md:text-xl font-black text-[#6400dc]">
                             {feat.value}
                           </div>
-                          <div className="text-[11px] text-gray-400 font-medium">
+                          <div className="text-[10px] sm:text-[11px] text-gray-400 font-medium">
                             {feat.label}
                           </div>
                         </div>
@@ -283,7 +283,7 @@ export default function AnhatAvandner() {
                           setSelectedDeposit(deposit);
                           window.scrollTo({ top: 0, behavior: 'smooth' });
                         }}
-                        className="bg-purple-50 hover:bg-purple-100 text-[#6400dc] font-bold text-xs px-6 py-3 rounded-full transition-all cursor-pointer flex items-center gap-1"
+                        className="w-full sm:w-auto bg-purple-50 hover:bg-purple-100 text-[#6400dc] font-bold text-xs px-6 py-3 rounded-full transition-all cursor-pointer flex items-center justify-center gap-1"
                       >
                         Մանրամասն &gt;
                       </button>

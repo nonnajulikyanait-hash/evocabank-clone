@@ -55,21 +55,21 @@ export default function Guyq() {
         <Navbar />
 
         {/* Բովանդակության գլխավոր կոնտեյներ */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-10 pb-16 text-left">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8 md:py-12 text-left">
           
           {/* Հացի փշրանքներ (Breadcrumbs) */}
-          <div className="text-xs text-gray-400 mb-6 flex items-center gap-2">
+          <div className="text-xs text-gray-400 mb-6 flex items-center gap-2 flex-wrap">
             <span>🏠</span> &gt; <span className="text-gray-700 font-medium">Օտարվող գույք</span>
           </div>
 
-          <h1 className="text-3xl md:text-4xl font-black text-neutral-900 mb-8">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-neutral-900 mb-6 md:mb-8">
             Օտարվող գույք
           </h1>
 
           {/* Աղյուսակ */}
-          <div className="bg-white border border-gray-200 rounded-3xl overflow-hidden shadow-sm">
+          <div className="bg-white border border-gray-200 rounded-2xl sm:rounded-3xl overflow-hidden shadow-sm">
             <div className="overflow-x-auto">
-              <table className="w-full text-left border-collapse">
+              <table className="w-full text-left border-collapse min-w-[700px]">
                 <thead>
                   <tr className="bg-gray-50 border-b border-gray-200 text-xs font-bold text-gray-500 uppercase tracking-wider">
                     <th className="py-4 px-6 w-[35%]">Հասցե</th>
@@ -78,7 +78,7 @@ export default function Guyq() {
                     <th className="py-4 px-6 w-[25%]">Նկար</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-gray-200 text-sm">
+                <tbody className="divide-y divide-gray-200 text-xs sm:text-sm">
                   {properties.map((item) => (
                     <tr key={item.id} className="hover:bg-gray-50/50 transition-colors">
                       <td className="py-4 px-6 font-semibold text-neutral-900 leading-snug">
@@ -91,7 +91,7 @@ export default function Guyq() {
                         {item.area}
                       </td>
                       <td className="py-4 px-6">
-                        <div className="w-32 h-24 rounded-xl overflow-hidden bg-gray-100 border border-gray-200 shadow-sm">
+                        <div className="w-28 sm:w-32 h-20 sm:h-24 rounded-xl overflow-hidden bg-gray-100 border border-gray-200 shadow-sm">
                           <img 
                             src={item.image} 
                             alt={item.address} 

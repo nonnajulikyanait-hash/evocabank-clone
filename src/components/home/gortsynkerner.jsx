@@ -77,22 +77,22 @@ function Gortsynkerner() {
   };
 
   return (
-    <div className="w-full bg-white font-sans py-16 space-y-20">
+    <div className="w-full bg-white font-sans py-10 sm:py-16 space-y-16 sm:space-y-20">
       
       {/* 1. ԳՈՐԾԸՆԿԵՐՆԵՐԻ ԲԱԺԻՆ */}
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="bg-[#fbfbfb] border border-gray-100 rounded-3xl p-8 lg:p-12 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative overflow-hidden min-h-[420px]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="bg-[#fbfbfb] border border-gray-100 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative overflow-hidden min-h-[420px]">
           
           {/* Dzax mas: Tekst */}
-          <div className="lg:col-span-5 space-y-6 relative z-10">
-            <h2 className="text-3xl font-bold text-neutral-900">Գործընկերներ</h2>
-            <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+          <div className="lg:col-span-5 space-y-4 sm:space-y-6 relative z-10 text-left">
+            <h2 className="text-2xl sm:text-3xl font-bold text-neutral-900">Գործընկերներ</h2>
+            <p className="text-gray-600 text-xs sm:text-sm md:text-base leading-relaxed">
               Դարձեք Evocabank-ի գործընկեր և եկեք միասին գնանք դեպի նոր իրականություն: Դառնալով Evoca ընտանիքի անդամ՝ Դուք մուտք եք գործում ժամանակակից և յուրահատուկ աշխարհ: Մենք մշտապես բաց ենք հետաքրքիր առաջարկների ու համագործակցությունների համար:
             </p>
             <div>
               <button 
                 onClick={handleGoToPartners}
-                className="bg-[#6400dc] text-white px-6 py-3 rounded-xl font-bold text-sm shadow-md hover:bg-purple-800 transition-colors cursor-pointer"
+                className="bg-[#6400dc] text-white px-6 py-3 rounded-xl font-bold text-xs sm:text-sm shadow-md hover:bg-purple-800 transition-colors cursor-pointer"
               >
                 Բոլոր գործընկերները &gt;
               </button>
@@ -118,26 +118,26 @@ function Gortsynkerner() {
           <div className="lg:col-span-7 lg:col-start-6 relative flex items-center z-10 pl-0 lg:pl-16">
             <button 
               onClick={scrollLeft}
-              className="absolute -left-2 z-20 bg-white border border-gray-200 shadow-md w-10 h-10 rounded-full flex items-center justify-center text-gray-700 hover:bg-gray-100 cursor-pointer"
+              className="absolute -left-2 z-20 bg-white border border-gray-200 shadow-md w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center text-gray-700 hover:bg-gray-100 cursor-pointer"
             >
               &lt;
             </button>
 
             <div 
               ref={scrollRef}
-              className="flex space-x-6 overflow-x-auto scrollbar-none py-4 px-2 w-full scroll-smooth"
+              className="flex space-x-4 sm:space-x-6 overflow-x-auto scrollbar-none py-4 px-2 w-full scroll-smooth"
               style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
             >
               {partners.map((partner) => (
                 <div 
                   key={partner.id} 
                   onClick={handleGoToPartners}
-                  className="bg-white border border-gray-100 rounded-2xl p-6 min-w-[200px] h-[120px] flex items-center justify-center shadow-sm flex-shrink-0 hover:shadow-md transition-shadow cursor-pointer"
+                  className="bg-white border border-gray-100 rounded-2xl p-4 sm:p-6 min-w-[170px] sm:min-w-[200px] h-[100px] sm:h-[120px] flex items-center justify-center shadow-sm flex-shrink-0 hover:shadow-md transition-shadow cursor-pointer"
                 >
                   <img 
                     src={partner.img} 
                     alt={partner.name} 
-                    className="max-h-16 max-w-[140px] object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                    className="max-h-14 sm:max-h-16 max-w-[120px] sm:max-w-[140px] object-contain grayscale hover:grayscale-0 transition-all duration-300"
                   />
                 </div>
               ))}
@@ -145,7 +145,7 @@ function Gortsynkerner() {
 
             <button 
               onClick={scrollRight}
-              className="absolute -right-4 z-20 bg-white border border-gray-200 shadow-md w-10 h-10 rounded-full flex items-center justify-center text-gray-700 hover:bg-gray-100 cursor-pointer"
+              className="absolute -right-2 sm:-right-4 z-20 bg-white border border-gray-200 shadow-md w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center text-gray-700 hover:bg-gray-100 cursor-pointer"
             >
               &gt;
             </button>
@@ -156,26 +156,26 @@ function Gortsynkerner() {
 
 
       {/* 2. ՎԵՐՋԻՆ ՆՈՐՈՒԹՅՈՒՆՆԵՐԻ ԲԱԺԻՆ */}
-      <div className="max-w-7xl mx-auto px-6 space-y-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 space-y-6 sm:space-y-8 text-left">
         
         {/* Vernagir ev «Բոլոր նորությունները» knopka */}
-        <div className="flex justify-between items-center">
-          <h2 className="text-3xl font-bold text-neutral-900">Վերջին նորությունները</h2>
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+          <h2 className="text-2xl sm:text-3xl font-bold text-neutral-900">Վերջին նորությունները</h2>
           <button 
             onClick={handleGoToAllNews}
-            className="bg-purple-100 text-[#6400dc] px-5 py-2.5 rounded-xl font-bold text-sm hover:bg-purple-200 transition-colors cursor-pointer"
+            className="bg-purple-100 text-[#6400dc] px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm hover:bg-purple-200 transition-colors cursor-pointer"
           >
             Բոլոր նորությունները &gt;
           </button>
         </div>
 
         {/* News Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
           {newsList.map((news) => (
             <div 
               key={news.id}
               onClick={() => handleNewsClick(news.id)}
-              className="bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between cursor-pointer group"
+              className="bg-white border border-gray-100 rounded-2xl sm:rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between cursor-pointer group"
             >
               {/* Nkari blok */}
               <div className="relative overflow-hidden aspect-[4/3] bg-gray-100">
@@ -187,16 +187,16 @@ function Gortsynkerner() {
               </div>
 
               {/* Tekstayin blok */}
-              <div className="p-6 space-y-3 flex-1 flex flex-col justify-between">
+              <div className="p-5 sm:p-6 space-y-3 flex-1 flex flex-col justify-between">
                 <div className="space-y-2">
-                  <span className="text-xs font-semibold text-purple-600 uppercase tracking-wider">
+                  <span className="text-[11px] sm:text-xs font-semibold text-purple-600 uppercase tracking-wider">
                     | {news.category}
                   </span>
-                  <h3 className="text-lg font-bold text-neutral-900 group-hover:text-[#6400dc] transition-colors leading-snug">
+                  <h3 className="text-base sm:text-lg font-bold text-neutral-900 group-hover:text-[#6400dc] transition-colors leading-snug">
                     {news.title}
                   </h3>
                 </div>
-                <p className="text-xs text-gray-400 pt-4 border-t border-gray-100">
+                <p className="text-[11px] sm:text-xs text-gray-400 pt-4 border-t border-gray-100">
                   {news.date}
                 </p>
               </div>

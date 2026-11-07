@@ -9,16 +9,16 @@ export default function Kanxargelum() {
         <Navbar />
 
         {/* Բովանդակության գլխավոր կոնտեյներ */}
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 pt-10 pb-16 text-left">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8 md:py-12 text-left">
           
           {/* Հացի փշրանքներ (Breadcrumbs) */}
-          <div className="text-xs text-gray-400 mb-6 flex items-center gap-2">
+          <div className="text-xs text-gray-400 mb-6 flex items-center gap-2 flex-wrap">
             <span>🏠</span> &gt; <span className="text-gray-700 font-medium">Ֆինանսական հանցագործությունների կանխարգելում</span>
           </div>
 
           {/* Վերնագիր և մեծ նկար */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-10">
-            <h1 className="text-3xl md:text-4xl font-black text-neutral-900 leading-tight">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-neutral-900 leading-tight">
               Ֆինանսական հանցագործությունների կանխարգելում
             </h1>
             <div className="rounded-2xl overflow-hidden shadow-sm border border-gray-200">
@@ -31,15 +31,15 @@ export default function Kanxargelum() {
             </div>
           </div>
 
-          <div className="space-y-8 text-sm text-gray-700 leading-relaxed">
+          <div className="space-y-8 text-xs sm:text-sm text-gray-700 leading-relaxed">
             
             {/* Հայտարարություն */}
             <div>
-              <h2 className="text-lg font-bold text-neutral-900 mb-3">
+              <h2 className="text-base sm:text-lg font-bold text-neutral-900 mb-3">
                 Ֆինանսական հանցագործությունների կանխարգելման մասին հայտարարություն
               </h2>
               <p className="space-y-3">
-                Evocabank-ում մենք պարտավորվել ենք պայքարել ֆինանսական հանցագործությունների բոլոր ձևերի դեմ, ներառյալ` փողերի լվացման, ահաբեկչության ֆինանսավորման, խարդախությունների, կաշառակերության, կոռուպցիայի և պատժամիջոցներից խուսափելու դեպքերը: Որպես պատասխանատու ֆինանսական կազմակերպություն` մենք ըմբռնումով ենք մոտենում ֆինանսական հանցագործությունների դեմ համընդհանուր պայքարում մեր դերին և ձեռնարկում ենք կանխարգելիչ միջոցներ՝ ֆինանսական համակարգի ամբողջականությունը պաշտպանելու և հաճախորդների վստահությունը Բանկի նկատմամբ ամրապնդելու համար:
+                Evocabank-ում մենք պարտավորվել ենք պայքարել ֆինանսական հանցագործությունների բոլոր ձևերի դեմ, ներառյալ՝ փողերի լվացման, ահաբեկչության ֆինանսավորման, խարդախությունների, կաշառակերության, կոռուպցիայի և պատժամիջոցներից խուսափելու դեպքերը: Որպես պատասխանատու ֆինանսական կազմակերպություն՝ մենք ըմբռնումով ենք մոտենում ֆինանսական հանցագործությունների դեմ համընդհանուր պայքարում մեր դերին և ձեռնարկում ենք կանխարգելիչ միջոցներ՝ ֆինանսական համակարգի ամբողջականությունը պաշտպանելու և հաճախորդների վստահությունը Բանկի նկատմամբ ամրապնդելու համար:
               </p>
               <p className="mt-3">
                 Մենք ընդունել ենք ֆինանսական հանցագործությունների կանխարգելման համապարփակ մոտեցում, որը ներառում է հետևյալ առանցքային տարրերը՝
@@ -48,7 +48,7 @@ export default function Kanxargelum() {
 
             {/* 1. Ճանաչիր քո հաճախորդին */}
             <div>
-              <h3 className="font-bold text-neutral-900 text-base mb-2">
+              <h3 className="font-bold text-neutral-900 text-sm sm:text-base mb-2">
                 1. Ճանաչիր քո հաճախորդին և Հաճախորդի պատշաճ ուսումնասիրություն
               </h3>
               <p className="mb-2">
@@ -64,7 +64,7 @@ export default function Kanxargelum() {
 
             {/* 2. Փողերի լվացման դեմ պայքարի միջոցառումներ */}
             <div>
-              <h3 className="font-bold text-neutral-900 text-base mb-2">
+              <h3 className="font-bold text-neutral-900 text-sm sm:text-base mb-2">
                 2. Փողերի լվացման դեմ պայքարի միջոցառումներ
               </h3>
               <p className="mb-2">
@@ -80,7 +80,7 @@ export default function Kanxargelum() {
 
             {/* 3. Ահաբեկչության ֆինանսավորման դեմ պայքար */}
             <div>
-              <h3 className="font-bold text-neutral-900 text-base mb-2">
+              <h3 className="font-bold text-neutral-900 text-sm sm:text-base mb-2">
                 3. Ահաբեկչության ֆինանսավորման դեմ պայքար
               </h3>
               <p className="mb-2">
@@ -95,11 +95,11 @@ export default function Kanxargelum() {
 
             {/* 4. Պատժամիջոցներից խուսափում */}
             <div>
-              <h3 className="font-bold text-neutral-900 text-base mb-2">
+              <h3 className="font-bold text-neutral-900 text-sm sm:text-base mb-2">
                 4. Պատժամիջոցներից խուսափում
               </h3>
               <p className="mb-2">
-                Evocabank-ը պարտավորվել է ապահովել լիարժեք համապատասխանություն պատժամիջոցների բոլոր կանոններին և կանոնակարգերին, այդ թվում նրանց, որոնք ուժի մեջ են դրվել՝
+                Evocabank-ը պարտավորվել է ապահովել լիարժեք համապատասխանություն պատժամիջոցների բոլոր կանոններին և կանոնակարգերին, այդ թվում՝ նրանց, որոնք ուժի մեջ են դրվել՝
               </p>
               <ul className="list-disc pl-5 space-y-1 text-gray-600 mb-3">
                 <li>Միավորված ազգերի կազմակերպության Անվտանգության խորհրդի կողմից,</li>
@@ -119,7 +119,7 @@ export default function Kanxargelum() {
 
             {/* 5. Խարդախությունների կանխարգելում */}
             <div>
-              <h3 className="font-bold text-neutral-900 text-base mb-2">
+              <h3 className="font-bold text-neutral-900 text-sm sm:text-base mb-2">
                 5. Խարդախությունների կանխարգելում
               </h3>
               <p className="mb-2">
@@ -135,7 +135,7 @@ export default function Kanxargelum() {
 
             {/* 6. Ուսուցում և իրազեկում */}
             <div>
-              <h3 className="font-bold text-neutral-900 text-base mb-2">
+              <h3 className="font-bold text-neutral-900 text-sm sm:text-base mb-2">
                 6. Ուսուցում և իրազեկում
               </h3>
               <p className="mb-2">
@@ -150,7 +150,7 @@ export default function Kanxargelum() {
 
             {/* 7. Ներքին հսկողության համակարգ և ռիսկերի կառավարում */}
             <div>
-              <h3 className="font-bold text-neutral-900 text-base mb-2">
+              <h3 className="font-bold text-neutral-900 text-sm sm:text-base mb-2">
                 7. Ներքին հսկողության համակարգ և ռիսկերի կառավարում
               </h3>
               <p className="mb-2">
@@ -164,7 +164,7 @@ export default function Kanxargelum() {
 
             {/* 8. Կանոնակարգող մարմինների հետ համագործակցություն */}
             <div>
-              <h3 className="font-bold text-neutral-900 text-base mb-2">
+              <h3 className="font-bold text-neutral-900 text-sm sm:text-base mb-2">
                 8. Կանոնակարգող մարմինների հետ համագործակցություն
               </h3>
               <p className="mb-2">
@@ -178,7 +178,7 @@ export default function Kanxargelum() {
 
             {/* 9. Գլոբալ չափորոշիչների հետ համապատասխանություն */}
             <div>
-              <h3 className="font-bold text-neutral-900 text-base mb-2">
+              <h3 className="font-bold text-neutral-900 text-sm sm:text-base mb-2">
                 9. Գլոբալ չափորոշիչների հետ համապատասխանություն
               </h3>
               <p className="mb-2">
@@ -193,7 +193,7 @@ export default function Kanxargelum() {
 
             {/* 10. Հաճախորդների պատասխանատվություն */}
             <div>
-              <h3 className="font-bold text-neutral-900 text-base mb-2">
+              <h3 className="font-bold text-neutral-900 text-sm sm:text-base mb-2">
                 10. Հաճախորդների պատասխանատվություն
               </h3>
               <p className="mb-2">
@@ -206,7 +206,7 @@ export default function Kanxargelum() {
 
             {/* Կապ մեզ հետ */}
             <div className="pt-2">
-              <h3 className="font-bold text-neutral-900 text-base mb-2">Կապ մեզ հետ</h3>
+              <h3 className="font-bold text-neutral-900 text-sm sm:text-base mb-2">Կապ մեզ հետ</h3>
               <p className="mb-3">
                 Ֆինանսական հանցագործությունների կանխարգելման հետ կապված հարցերի համար՝ խնդրում ենք դիմել մեզ՝ <a href="mailto:ifm@evoca.am" className="text-[#6400dc] underline font-semibold">ifm@evoca.am</a> հասցեով։
               </p>

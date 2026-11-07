@@ -9,19 +9,19 @@ export default function BiznesAvandner() {
       <div>
         <Navbar />
 
-        <main className="max-w-6xl mx-auto px-4 py-8 text-left">
+        <main className="max-w-6xl mx-auto px-4 py-6 md:py-8 text-left">
           {/* Breadcrumbs */}
-          <div className="text-xs text-gray-400 mb-6 flex items-center gap-2">
+          <div className="text-xs text-gray-400 mb-6 flex items-center gap-2 flex-wrap">
             <span>🏠</span> &gt; <span>Բիզնես</span> &gt; <span>Ավանդներ</span> &gt; <span className="text-gray-700 font-medium">Դասական ավանդ</span>
           </div>
 
           {/* Top Banner Section */}
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-8 mb-10">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-6 md:gap-8 mb-10">
             <div className="lg:w-1/2 space-y-4">
-              <h1 className="text-3xl md:text-4xl font-black text-neutral-900 leading-tight">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-neutral-900 leading-tight">
                 Դասական ավանդ
               </h1>
-              <p className="text-sm md:text-base text-gray-600 leading-relaxed">
+              <p className="text-xs sm:text-sm md:text-base text-gray-600 leading-relaxed">
                 Դասական ավանդը կայուն բարձր եկամտաբերությամբ կավելացնի ձեր խնայողությունները: Դասական ժամկետային ավանդն ընդունում ենք ֆիզիկական և իրավաբանական անձանցից: Ավանդ ներդնելիս ձեզ տրամադրում ենք անվճար միջազգային քարտ:
               </p>
             </div>
@@ -29,7 +29,7 @@ export default function BiznesAvandner() {
               <img 
                 src="https://www.evoca.am/images-cache/menu/1/1615568375393/780x585.jpg" 
                 alt="Դասական ավանդ" 
-                className="rounded-3xl shadow-sm object-cover w-full max-h-[350px]"
+                className="rounded-2xl sm:rounded-3xl shadow-sm object-cover w-full max-h-[350px]"
               />
             </div>
           </div>
@@ -43,20 +43,20 @@ export default function BiznesAvandner() {
               <span className="cursor-pointer hover:text-[#6400dc] text-sm">📷</span>
             </div>
 
-            <div className="flex-1 space-y-8 text-xs md:text-sm text-gray-700 leading-relaxed">
-              <h2 className="text-xl md:text-2xl font-black text-neutral-900 tracking-wide border-b border-gray-100 pb-3">
+            <div className="flex-1 space-y-8 text-xs md:text-sm text-gray-700 leading-relaxed w-full">
+              <h2 className="text-lg sm:text-xl md:text-2xl font-black text-neutral-900 tracking-wide border-b border-gray-100 pb-3">
                 Անհրաժեշտ տեղեկատվություն
               </h2>
 
               {/* Ընդհանուր տեղեկատվություն */}
               <div className="space-y-3">
-                <h3 className="text-base font-bold text-[#6400dc]">
+                <h3 className="text-sm sm:text-base font-bold text-[#6400dc]">
                   Ընդհանուր տեղեկատվություն
                 </h3>
                 <ul className="list-disc pl-5 space-y-2 text-gray-600">
                   <li>
                     Ժամկետային ավանդներն ընդունում ենք ֆիզիկական (այդ թվում՝ անհատ ձեռնարկատեր) և իրավաբանական անձ հաճախորդներից (ռեզիդենտ, ոչ ռեզիդենտ)՝
-                    <ul className="list-dash pl-5 mt-1 space-y-1 text-gray-700">
+                    <ul className="list-disc pl-5 mt-1 space-y-1 text-gray-700">
                       <li>դրամով, դոլարով, եվրոյով և ռուբլով,</li>
                       <li>կանխիկ և անկանխիկ տարբերակով:</li>
                     </ul>
@@ -74,7 +74,7 @@ export default function BiznesAvandner() {
 
               {/* Ավանդի տոկոսագումարների հաշվարկման և վճարման կարգը */}
               <div className="space-y-3 pt-2">
-                <h3 className="text-base font-bold text-[#6400dc]">
+                <h3 className="text-sm sm:text-base font-bold text-[#6400dc]">
                   Ավանդի տոկոսագումարների հաշվարկման և վճարման կարգը
                 </h3>
                 <ul className="list-disc pl-5 space-y-2 text-gray-600">
@@ -83,7 +83,7 @@ export default function BiznesAvandner() {
                   <li>Ավանդների դիմաց հաշվեգրվող տոկոսագումարները վճարում ենք կանխիկ և անկանխիկ եղանակով՝ ավանդատուի ցանկությամբ տոկոսագումարները կարող են վճարվել այն արտարժույթով, որով ներգրավվել է ավանդը, ինչպես նաև ՀՀ դրամով` հիմք ընդունելով վճարման օրը տվյալ արտարժույթի համար մեր կողմից սահմանված անկանխիկ առքի փոխարժեքը:</li>
                   <li>
                     Ձեր ընտրությամբ տոկոսագումարները վճարում ենք հետևյալ տարբերակներով՝
-                    <ul className="list-dash pl-5 mt-1 space-y-1 text-gray-700">
+                    <ul className="list-disc pl-5 mt-1 space-y-1 text-gray-700">
                       <li><strong>Տոկոսագումարների պարբերաբար վճարումով,</strong> որի դեպքում ավանդի դիմաց հաշվեգրված տոկոսագումարները ձեզ վճարում ենք երկկողմանի համաձայնեցված ժամանակացույցով, կամ՝</li>
                       <li><strong>Տոկոսագումարների վճարմամբ՝ պայմանագրի ժամկետի վերջում,</strong> որի դեպքում ավանդի դիմաց հաշվեգրված տոկոսագումարները վճարում ենք պայմանագրի գործողության ավարտին (վերադարձնում ենք ավանդի գումարի հետ միասին):</li>
                     </ul>
@@ -96,7 +96,7 @@ export default function BiznesAvandner() {
 
               {/* Ավանդային հաշվի վերաբերյալ տրամադրվող տեղեկատվություն */}
               <div className="space-y-3 pt-2">
-                <h3 className="text-base font-bold text-[#6400dc]">
+                <h3 className="text-sm sm:text-base font-bold text-[#6400dc]">
                   Ավանդային հաշվի վերաբերյալ տրամադրվող տեղեկատվություն
                 </h3>
                 <ul className="list-disc pl-5 space-y-2 text-gray-600">
@@ -108,7 +108,7 @@ export default function BiznesAvandner() {
 
               {/* Այլ պայմաններ */}
               <div className="space-y-3 pt-2">
-                <h3 className="text-base font-bold text-[#6400dc]">
+                <h3 className="text-sm sm:text-base font-bold text-[#6400dc]">
                   Այլ պայմաններ
                 </h3>
                 <ul className="list-disc pl-5 space-y-2 text-gray-600">
@@ -120,7 +120,7 @@ export default function BiznesAvandner() {
 
               {/* Երաշխավորված ավանդների սահմանաչափերը */}
               <div className="space-y-3 pt-2">
-                <h3 className="text-base font-bold text-[#6400dc]">
+                <h3 className="text-sm sm:text-base font-bold text-[#6400dc]">
                   Երաշխավորված ավանդների սահմանաչափերը
                 </h3>
                 <p className="text-gray-600">
@@ -139,12 +139,12 @@ export default function BiznesAvandner() {
 
               {/* ----------------- ՊԱՅՄԱՆՆԵՐ ԵՎ ՍԱԿԱԳՆԵՐ ----------------- */}
               <div className="pt-6 space-y-4">
-                <h2 className="text-xl md:text-2xl font-black text-neutral-900 tracking-wide border-b border-gray-100 pb-3">
+                <h2 className="text-lg sm:text-xl md:text-2xl font-black text-neutral-900 tracking-wide border-b border-gray-100 pb-3">
                   Պայմաններ և սակագներ
                 </h2>
 
                 <div className="overflow-x-auto rounded-2xl border border-gray-200">
-                  <table className="w-full text-center border-collapse text-xs md:text-sm bg-white">
+                  <table className="w-full text-center border-collapse text-xs md:text-sm bg-white min-w-[650px]">
                     <thead>
                       <tr className="bg-purple-50 text-[#6400dc] font-bold">
                         <th className="border-b border-r border-gray-200 p-3 text-left">
@@ -211,7 +211,7 @@ export default function BiznesAvandner() {
                   <li>
                     Ավանդատուի պահանջով ավանդային պայմանագիրը ժամկետից շուտ լուծելու դեպքում Բանկը իրականացնում է Ավանդի տոկոսագումարների վերահաշվարկ հետևյալ դրույքաչափերով՝
                     <div className="overflow-x-auto rounded-xl border border-gray-200 my-3">
-                      <table className="w-full text-center border-collapse text-xs bg-white">
+                      <table className="w-full text-center border-collapse text-xs bg-white min-w-[450px]">
                         <thead>
                           <tr className="bg-purple-50 text-[#6400dc] font-bold">
                             <th className="border-b border-r border-gray-200 p-2.5 text-left">Ավանդի արժույթ</th>
@@ -250,7 +250,7 @@ export default function BiznesAvandner() {
 
               {/* ----------------- ԼՐԱՑՈՒՑԻՉ ՊԱՅՄԱՆՆԵՐ ----------------- */}
               <div className="pt-4 space-y-4">
-                <h2 className="text-xl md:text-2xl font-black text-neutral-900 tracking-wide border-b border-gray-100 pb-3">
+                <h2 className="text-lg sm:text-xl md:text-2xl font-black text-neutral-900 tracking-wide border-b border-gray-100 pb-3">
                   Լրացուցիչ պայմաններ
                 </h2>
 
@@ -259,7 +259,7 @@ export default function BiznesAvandner() {
                   <li>
                     Տրամադրվող վճարային քարտի տեսակները, ըստ ներդրվող ավանդի գումարի սահմանվում է ստորև.
                     <div className="overflow-x-auto rounded-xl border border-gray-200 my-3">
-                      <table className="w-full text-center border-collapse text-xs md:text-sm bg-white">
+                      <table className="w-full text-center border-collapse text-xs md:text-sm bg-white min-w-[600px]">
                         <thead>
                           <tr className="bg-purple-50 text-[#6400dc] font-bold">
                             <th className="border-b border-r border-gray-200 p-3 text-left">Ավանդի արժույթ</th>

@@ -107,7 +107,7 @@ const slidesData = [
     descColor: 'text-gray-800',
     btnBg: 'bg-[#6400dc] text-white',
     image: 'https://www.evoca.am/images-cache/sliders/1/16178037539626/79381d3e68fdf7ec25c5837a19ce5821-577x486.jpg',
-    path: '/deposits', // Տանում է անհատ ավանդների էջ (AnhatAvandner)
+    path: '/deposits',
   },
 ];
 
@@ -120,7 +120,7 @@ export default function EvocaCardSlider() {
     if (slide.id === 6) {
       navigate('/loans/8');
     } else if (slide.id === 8) {
-      navigate('/deposits'); // Անմիջապես բացում է AnhatAvandner.jsx էջը
+      navigate('/deposits');
     } else if (slide.path === '/evocasalary') {
       navigate('/evocasalary');
     } else if (slide.path === '/norutyunner') {
@@ -151,34 +151,34 @@ export default function EvocaCardSlider() {
             swiper.params.navigation.prevEl = prevRef.current;
             swiper.params.navigation.nextEl = nextRef.current;
           }}
-          className="relative w-full rounded-bl-[160px] overflow-hidden"
+          className="relative w-full rounded-bl-[80px] md:rounded-bl-[160px] overflow-hidden"
         >
           {slidesData.map((slide) => (
             <SwiperSlide key={slide.id}>
-              <div className={`${slide.bgColor} px-12 md:px-24 pt-16 pb-24 flex flex-col md:flex-row items-center justify-between min-h-[500px] transition-colors duration-500`}>
+              <div className={`${slide.bgColor} px-6 sm:px-12 md:px-24 pt-12 md:pt-16 pb-20 md:pb-24 flex flex-col md:flex-row items-center justify-between min-h-[420px] md:min-h-[500px] transition-colors duration-500`}>
                 
-                <div className="max-w-xl text-left space-y-6 z-10">
-                  <h1 className={`text-4xl md:text-5xl font-black tracking-tight leading-tight ${slide.textColor}`}>
+                <div className="max-w-xl text-left space-y-4 md:space-y-6 z-10 w-full">
+                  <h1 className={`text-2xl sm:text-3xl md:text-5xl font-black tracking-tight leading-tight ${slide.textColor}`}>
                     {slide.title}
                   </h1>
-                  <p className={`text-base md:text-lg font-normal ${slide.descColor}`}>
+                  <p className={`text-xs sm:text-sm md:text-lg font-normal ${slide.descColor} leading-relaxed`}>
                     {slide.description}
                   </p>
                   <div className="pt-2">
                     <button 
                       onClick={() => handleCardClick(slide)}
-                      className={`${slide.btnBg} font-bold text-xs px-8 py-3.5 rounded-full transition cursor-pointer shadow-md hover:opacity-90`}
+                      className={`${slide.btnBg} font-bold text-xs sm:text-sm px-6 sm:px-8 py-3 sm:py-3.5 rounded-full transition cursor-pointer shadow-md hover:opacity-90`}
                     >
                       {slide.btnText}
                     </button>
                   </div>
                 </div>
 
-                <div className="w-full md:w-1/2 flex justify-center items-center z-10 mt-6 md:mt-0">
+                <div className="w-full md:w-1/2 flex justify-center items-center z-10 mt-8 md:mt-0">
                   <img 
                     src={slide.image} 
                     alt={slide.title} 
-                    className="max-h-[380px] object-contain drop-shadow-xl"
+                    className="max-h-[260px] sm:max-h-[320px] md:max-h-[380px] object-contain drop-shadow-xl"
                   />
                 </div>
 
@@ -186,12 +186,12 @@ export default function EvocaCardSlider() {
             </SwiperSlide>
           ))}
 
-          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-30 flex items-center gap-4">
-            <button ref={prevRef} className="text-white hover:opacity-75 transition text-xl font-bold px-2 cursor-pointer">
+          <div className="absolute bottom-4 md:bottom-6 left-1/2 -translate-x-1/2 z-30 flex items-center gap-4">
+            <button ref={prevRef} className="text-white hover:opacity-75 transition text-lg md:text-xl font-bold px-2 cursor-pointer">
               ←
             </button>
             <div className="custom-pagination flex items-center gap-2"></div>
-            <button ref={nextRef} className="text-white hover:opacity-75 transition text-xl font-bold px-2 cursor-pointer">
+            <button ref={nextRef} className="text-white hover:opacity-75 transition text-lg md:text-xl font-bold px-2 cursor-pointer">
               →
             </button>
           </div>

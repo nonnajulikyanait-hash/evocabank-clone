@@ -34,8 +34,8 @@ export default function MerMasin() {
         <Navbar />
 
         {/* Sub-header navigation menu for About Us */}
-        <div className="bg-[#6400dc] text-white py-3 px-8 shadow-inner">
-          <div className="container mx-auto flex gap-6 text-xs font-semibold overflow-x-auto whitespace-nowrap">
+        <div className="bg-[#6400dc] text-white py-3 px-4 sm:px-8 shadow-inner">
+          <div className="container mx-auto flex gap-6 text-xs sm:text-sm font-semibold overflow-x-auto whitespace-nowrap">
             <span className="border-b-2 border-white pb-1 cursor-pointer font-black">Ընդհանուր</span>
             <Link to="/mer-masin/karucvacq" className="text-purple-200 hover:text-white cursor-pointer">Կառուցվածք</Link>
             <Link to="/mer-masin/bajneterer" className="text-purple-200 hover:text-white cursor-pointer">Բաժնետերեր</Link>
@@ -47,10 +47,10 @@ export default function MerMasin() {
           </div>
         </div>
 
-        <main className="max-w-6xl mx-auto px-4 py-12 space-y-16">
+        <main className="max-w-6xl mx-auto px-4 py-8 md:py-12 space-y-12 md:space-y-16 text-left">
           
           {/* Breadcrumbs */}
-          <div className="text-xs text-gray-400 flex items-center gap-2">
+          <div className="text-xs text-gray-400 flex items-center gap-2 flex-wrap">
             <span>Մեր մասին</span>
             <span>/</span>
             <span>Evoca-ի մասին</span>
@@ -60,17 +60,17 @@ export default function MerMasin() {
 
           {/* 1. Ընդհանուր տեղեկատվություն */}
           <section>
-            <h1 className="text-3xl md:text-4xl font-extrabold text-neutral-900 mb-8">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-neutral-900 mb-6 md:mb-8">
               Ընդհանուր տեղեկատվություն
             </h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-              <div className="text-gray-700 text-sm md:text-base leading-relaxed space-y-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 items-center">
+              <div className="text-gray-700 text-xs sm:text-sm md:text-base leading-relaxed space-y-4">
                 <p>
                   <strong>Evocabank</strong>-ը արագ, պարզ և նորարար ծառայություններ մատուցող բանկ է, որն առանձնանում է տեղեկատվական նորագույն տեխնոլոգիաների ակտիվ կիրառմամբ:
                 </p>
                 <p>Մենք հատուկ ուշադրություն ենք դարձնում մոբայլ ծառայությունների զարգացմանը:</p>
                 <p>
-                  Մենք աշխատում ենք mobile-first ֆորմատով՝ յուրաքանչյուր նոր ծառայություն նախագծելիս՝ նախևառաջ հաշվի ենք առնելու դրա՝ հավելվածով օգտագործման հարմարավետությունը:
+                  Մենք աշխատում ենք mobile-first ֆորմատով՝ յուրաքանչյուր նոր ծառայություն նախագծելիս՝ նախևառաջ հաշվի ենք առնում դրա՝ հավելվածով օգտագործման հարմարավետությունը:
                 </p>
                 <p>Աշխարհը թվային է դառնում, և մենք պատրաստ ենք դրան:</p>
               </div>
@@ -85,11 +85,11 @@ export default function MerMasin() {
           </section>
 
           {/* 2. Մեր տեսլականը (Մանուշակագույն background) */}
-          <section className="bg-[#6400dc] text-white rounded-3xl p-8 md:p-12 shadow-md">
-            <h2 className="text-2xl md:text-3xl font-extrabold mb-6">
+          <section className="bg-[#6400dc] text-white rounded-3xl p-6 sm:p-8 md:p-12 shadow-md">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold mb-4 md:mb-6">
               Մեր տեսլականը
             </h2>
-            <ul className="space-y-4 text-sm md:text-base leading-relaxed">
+            <ul className="space-y-4 text-xs sm:text-sm md:text-base leading-relaxed">
               <li className="flex items-start gap-3">
                 <span className="text-xl font-bold">—</span>
                 <span>Դառնալ գլոբալ ֆինտեխ գործընկեր, որը միավորում է լավագույն փորձն ու տեխնոլոգիական նորարարությունները հարմարավետ և ճկուն ծառայություններ ապահովելու համար։</span>
@@ -99,17 +99,17 @@ export default function MerMasin() {
 
           {/* 3. Մեր առաքելությունը */}
           <section>
-            <h2 className="text-2xl md:text-3xl font-extrabold text-neutral-900 mb-6">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-neutral-900 mb-6">
               Մեր առաքելությունը
             </h2>
             <div className="relative rounded-3xl overflow-hidden shadow-lg">
               <img 
                 src="https://www.evoca.am/images-cache/about_pages/1/160992374514/946x430.jpg" 
                 alt="Mission" 
-                className="w-full h-[350px] md:h-[420px] object-cover"
+                className="w-full h-[280px] sm:h-[350px] md:h-[420px] object-cover"
               />
-              <div className="absolute bottom-4 left-4 right-4 md:bottom-8 md:left-8 md:right-8 bg-neutral-100/90 backdrop-blur-md p-6 rounded-2xl border border-gray-200">
-                <p className="text-neutral-800 text-sm md:text-base leading-relaxed font-medium">
+              <div className="absolute bottom-4 left-4 right-4 md:bottom-8 md:left-8 md:right-8 bg-neutral-100/90 backdrop-blur-md p-4 sm:p-6 rounded-2xl border border-gray-200">
+                <p className="text-neutral-800 text-xs sm:text-sm md:text-base leading-relaxed font-medium">
                   Որպես human-first և խելացի ֆինտեխ ընկերություն` մենք հնարավորություն ենք տալիս մարդկանց երազելու ավելի համարձակ, բիզնեսներին` բացահայտելու նոր հորիզոններ, և հասարակությանը՝ կառուցելու ավելի լավ ապագա:
                 </p>
               </div>
@@ -118,12 +118,12 @@ export default function MerMasin() {
 
           {/* 4. Բանկի պատմությունը (Timeline Swiper style) */}
           <section>
-            <h2 className="text-2xl md:text-3xl font-extrabold text-neutral-900 mb-8">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-neutral-900 mb-6 md:mb-8">
               Բանկի պատմությունը
             </h2>
 
             {/* Years Timeline Bar */}
-            <div className="relative flex items-center justify-between border-b border-gray-200 pb-4 mb-10 overflow-x-auto gap-6 px-2">
+            <div className="relative flex items-center justify-between border-b border-gray-200 pb-4 mb-8 md:mb-10 overflow-x-auto gap-6 px-2">
               {historyData.map((item, idx) => (
                 <button
                   key={item.year}
@@ -132,23 +132,23 @@ export default function MerMasin() {
                     activeYearIndex === idx ? 'text-[#6400dc] font-black scale-110' : 'text-gray-400 font-semibold hover:text-gray-600'
                   }`}
                 >
-                  <span className="text-sm md:text-base mb-2">{item.year}</span>
+                  <span className="text-xs sm:text-sm md:text-base mb-2">{item.year}</span>
                   <span className={`w-3 h-3 rounded-full transition-all ${activeYearIndex === idx ? 'bg-[#6400dc] ring-4 ring-purple-100' : 'bg-gray-300'}`}></span>
                 </button>
               ))}
             </div>
 
             {/* Active Year Content Box */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-gray-50 rounded-3xl p-6 md:p-10 border border-gray-100 shadow-xs">
-              <div className="text-gray-700 text-sm md:text-base leading-relaxed">
-                <span className="text-[#6400dc] font-black text-2xl mb-4 block">{historyData[activeYearIndex].year}</span>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center bg-gray-50 rounded-3xl p-5 sm:p-6 md:p-10 border border-gray-100 shadow-xs">
+              <div className="text-gray-700 text-xs sm:text-sm md:text-base leading-relaxed">
+                <span className="text-[#6400dc] font-black text-xl md:text-2xl mb-3 block">{historyData[activeYearIndex].year}</span>
                 <p>{historyData[activeYearIndex].text}</p>
               </div>
               <div className="flex justify-center">
                 <img 
                   src={historyData[activeYearIndex].img} 
                   alt={historyData[activeYearIndex].year} 
-                  className="rounded-2xl shadow-md max-h-[300px] object-contain"
+                  className="rounded-2xl shadow-md max-h-[250px] sm:max-h-[300px] object-contain"
                 />
               </div>
             </div>
@@ -156,25 +156,25 @@ export default function MerMasin() {
 
           {/* 5. Արժեքներ և առաջնայնություններ */}
           <section>
-            <h2 className="text-2xl md:text-3xl font-extrabold text-neutral-900 mb-8">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-neutral-900 mb-6 md:mb-8">
               Արժեքներ և առաջնայնություններ
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
               <div className="bg-gray-50 p-6 rounded-3xl border border-gray-100 space-y-3">
-                <h3 className="text-lg font-black text-[#6400dc]">Human-first</h3>
-                <p className="text-sm text-gray-600 leading-relaxed">
+                <h3 className="text-base sm:text-lg font-black text-[#6400dc]">Human-first</h3>
+                <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
                   Առաջին տեղում միշտ մարդիկ են՝ մեր հաճախորդները, էքսպերտների թիմը և հասարակությունը։ Չէ՞ որ աշխարհում ամեն ինչ արվում է մարդկանց կողմից մարդկանց համար։
                 </p>
               </div>
               <div className="bg-gray-50 p-6 rounded-3xl border border-gray-100 space-y-3">
-                <h3 className="text-lg font-black text-[#6400dc]">Նորարարություն</h3>
-                <p className="text-sm text-gray-600 leading-relaxed">
+                <h3 className="text-base sm:text-lg font-black text-[#6400dc]">Նորարարություն</h3>
+                <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
                   Նորարարությունը մեր ԴՆԹ-ի մասն է, իսկ փոփոխությունն այսօր միակ հաստատունն է։ Մենք բաց ենք և պատրաստակամ զարգանալու համար։
                 </p>
               </div>
               <div className="bg-gray-50 p-6 rounded-3xl border border-gray-100 space-y-3">
-                <h3 className="text-lg font-black text-[#6400dc]">Դրական ազդեցություն</h3>
-                <p className="text-sm text-gray-600 leading-relaxed">
+                <h3 className="text-base sm:text-lg font-black text-[#6400dc]">Դրական ազդեցություն</h3>
+                <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
                   Մենք ձգտում ենք ունենալ դրական ազդեցություն և նպաստել աշխարհն ավելի լավը դարձնելուն։
                 </p>
               </div>
@@ -183,13 +183,13 @@ export default function MerMasin() {
 
           {/* 6. Կորպորատիվ սոցիալական պատասխանատվություն */}
           <section>
-            <h2 className="text-2xl md:text-3xl font-extrabold text-neutral-900 mb-6">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-neutral-900 mb-6">
               Կորպորատիվ սոցիալական պատասխանատվություն
             </h2>
-            <p className="text-gray-700 text-sm md:text-base mb-6 leading-relaxed">
+            <p className="text-gray-700 text-xs sm:text-sm md:text-base mb-6 leading-relaxed">
               Բանկը շարունակաբար աջակցություն է ցուցաբերում հանրության տարբեր խմբերին և հասարակական նախաձեռնություններին հետևյալ ոլորտներում`
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-700">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm text-gray-700">
               <div className="flex items-start gap-3 bg-gray-50 p-4 rounded-2xl border border-gray-100">
                 <span className="text-[#6400dc] font-bold">—</span>
                 <span>Նորագույն տեխնոլոգիաների զարգացում, նորարար նախաձեռնություններ, startup-եր,</span>
@@ -211,23 +211,23 @@ export default function MerMasin() {
 
           {/* 7. Բանկի լոգոտիպը */}
           <section className="text-center max-w-3xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-extrabold text-neutral-900 mb-6">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-neutral-900 mb-6">
               Բանկի լոգոտիպը
             </h2>
-            <p className="text-gray-700 text-sm md:text-base leading-relaxed mb-8">
+            <p className="text-gray-700 text-xs sm:text-sm md:text-base leading-relaxed mb-8">
               Բանկի լոգոն կազմված է evolution՝ էվոլյուցիա բառի արմատից և նմանեցված է evoke՝ զարթեցնել բառին: Բառի երկրորդ տառը՝ V-ն, պատկերված է կորացված անկյուններով հավասարակողմ եռանկյան տեսքով և նմանեցված է դեպի աջ և վեր ուղղված սլաքի տեսքով՝ խարդհրդանշելով Բանկի ձգտումը դեպի առաջընթաց:
             </p>
             <div className="flex justify-center">
-              <img src="https://www.evoca.am/file_manager/icons/logo.png" alt="Evocabank logo" className="h-16 md:h-20 object-contain" />
+              <img src="https://www.evoca.am/file_manager/icons/logo.png" alt="Evocabank logo" className="h-14 sm:h-16 md:h-20 object-contain" />
             </div>
           </section>
 
           {/* 8. Բանկի բրենդբուքը */}
           <section className="text-center">
-            <h2 className="text-2xl md:text-3xl font-extrabold text-neutral-900 mb-4">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-neutral-900 mb-4">
               Բանկի բրենդբուքը
             </h2>
-            <p className="text-gray-700 text-sm md:text-base max-w-2xl mx-auto mb-8 leading-relaxed">
+            <p className="text-gray-700 text-xs sm:text-sm md:text-base max-w-2xl mx-auto mb-8 leading-relaxed">
               Բրենդբուքում կգտնեք Բանկի լոգոյի կիրառման կանոնները, բրենդային գույները, տառատեսակները և բրենդի այլ կարևոր տարրերը։<br />
               Սա պարզապես ուղեցույց չէ, այլ ոգեշնչման աղբյուր՝ ուժեղ և ճանաչելի բրենդ կառուցելու համար։
             </p>
@@ -238,10 +238,10 @@ export default function MerMasin() {
 
           {/* 9. Բանկի կորպորատիվ գույները */}
           <section className="space-y-6 max-w-3xl mx-auto text-center">
-            <h2 className="text-2xl md:text-3xl font-extrabold text-neutral-900">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-neutral-900">
               Բանկի կորպորատիվ գույները
             </h2>
-            <p className="text-gray-700 text-sm md:text-base">
+            <p className="text-gray-700 text-xs sm:text-sm md:text-base">
               Բանկի կորպորատիվ գույներն են` սպիտակը, մոխրագույնը և մանուշակագույնը:
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-left">
@@ -271,14 +271,14 @@ export default function MerMasin() {
           </section>
 
           {/* 10. ISO27001:2026 միջազգային հավաստագիր */}
-          <section className="bg-purple-50/60 rounded-3xl p-8 md:p-12 border border-purple-100">
-            <h2 className="text-2xl md:text-3xl font-extrabold text-neutral-900 mb-4">
+          <section className="bg-purple-50/60 rounded-3xl p-6 sm:p-8 md:p-12 border border-purple-100">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-neutral-900 mb-4">
               ISO27001:2026 միջազգային հավաստագիր
             </h2>
-            <h3 className="text-lg font-bold text-[#6400dc] mb-4">
+            <h3 className="text-base sm:text-lg font-bold text-[#6400dc] mb-4">
               Evocabank-ը ստացել է ISO27001:2026 միջազգային հավաստագիր
             </h3>
-            <p className="text-gray-700 text-sm md:text-base leading-relaxed">
+            <p className="text-gray-700 text-xs sm:text-sm md:text-base leading-relaxed">
               Հավաստագիրը վկայում է Բանկում ֆինանսական պրոդուկտների և ծառայությունների, տվյալների բազաների, տեղեկատվության մշակման և պահպանման օբյեկտների, հաճախորդների և բանկային հիմնական գործարքների վերաբերյալ ֆինանսական տեղեկատվության անվտանգ կառավարման համակարգի առկայության մասին:
             </p>
           </section>

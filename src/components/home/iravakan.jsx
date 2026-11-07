@@ -9,23 +9,23 @@ export default function Iravakan() {
         <Navbar />
 
         {/* Բովանդակության գլխավոր կոնտեյներ */}
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 pt-10 pb-16 text-left">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8 md:py-12 text-left">
           
           {/* Հացի փշրանքներ (Breadcrumbs) */}
-          <div className="text-xs text-gray-400 mb-6 flex items-center gap-2">
+          <div className="text-xs text-gray-400 mb-6 flex items-center gap-2 flex-wrap">
             <span>🏠</span> &gt; <span className="text-gray-700 font-medium">Իրավական ակտեր</span>
           </div>
 
-          <h1 className="text-3xl md:text-4xl font-black text-neutral-900 mb-10">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-neutral-900 mb-8 md:mb-10">
             Իրավական ակտեր
           </h1>
 
           {/* 1. Օրենքներ բաժին */}
-          <div className="mb-12">
-            <h2 className="text-2xl font-bold text-neutral-900 mb-6 border-b border-gray-100 pb-3">
+          <div className="mb-10 md:mb-12">
+            <h2 className="text-xl sm:text-2xl font-bold text-neutral-900 mb-4 sm:mb-6 border-b border-gray-100 pb-3">
               Օրենքներ
             </h2>
-            <ul className="space-y-3 text-sm text-[#6400dc] font-medium">
+            <ul className="space-y-3 text-xs sm:text-sm text-[#6400dc] font-medium">
               <li><a href="#cb-law" className="hover:underline">Կենտրոնական բանկի մասին ՀՀ օրենք</a></li>
               <li><a href="#civ-code" className="hover:underline">ՀՀ քաղաքացիական օրենսգիրք</a></li>
               <li><a href="#bank-law" className="hover:underline">Բանկերի և բանկային գործունեության մասին ՀՀ օրենք</a></li>
@@ -41,10 +41,10 @@ export default function Iravakan() {
 
           {/* 2. Կանոնակարգեր և այլ իրավական ակտեր */}
           <div>
-            <h2 className="text-2xl font-bold text-neutral-900 mb-6 border-b border-gray-100 pb-3">
+            <h2 className="text-xl sm:text-2xl font-bold text-neutral-900 mb-4 sm:mb-6 border-b border-gray-100 pb-3">
               Կանոնակարգեր և այլ իրավական ակտեր
             </h2>
-            <ol className="space-y-4 text-sm text-neutral-700 list-decimal pl-5">
+            <ol className="space-y-4 text-xs sm:text-sm text-neutral-700 list-decimal pl-5">
               <li>
                 <a href="#reg-1" className="text-[#6400dc] hover:underline font-medium">
                   Կանոնակարգ 1 «Բանկերի և օտարերկրյա բանկերի մասնաճյուղերի գրանցումն ու լիցենզավորումը, բանկերի մասնաճյուղերի և ներկայացուցչությունների գրանցումը, բանկերի և օտարերկրյա բանկերի մասնաճյուղերի ղեկավարների որակավորումը և գրանցումը»

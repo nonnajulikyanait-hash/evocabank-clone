@@ -222,15 +222,15 @@ export default function Arxiv() {
         <Navbar />
 
         {selectedBlog ? (
-          <main className="max-w-4xl mx-auto px-4 py-8 text-left bg-white">
+          <main className="max-w-4xl mx-auto px-4 py-6 md:py-8 text-left bg-white">
             <button 
               onClick={() => setSelectedBlog(null)} 
               className="font-bold text-xs text-gray-500 hover:text-[#6400dc] mb-6 flex items-center gap-1 cursor-pointer"
             >
               ← Վերադառնալ արխիվին
             </button>
-            <h1 className="text-2xl md:text-3xl font-black text-neutral-900 mb-4">{selectedBlog.title}</h1>
-            <div className="flex items-center gap-3 mb-4">
+            <h1 className="text-2xl sm:text-3xl font-black text-neutral-900 mb-4">{selectedBlog.title}</h1>
+            <div className="flex items-center gap-3 mb-4 flex-wrap">
               <span className="text-xs font-bold text-[#6400dc] bg-purple-50 px-3 py-1 rounded-full inline-block">{selectedBlog.category}</span>
               <span className="text-xs text-gray-400">{selectedBlog.date}</span>
             </div>
@@ -246,25 +246,25 @@ export default function Arxiv() {
                 <h2 className="text-xl font-bold mt-2">{selectedBlog.title}</h2>
               </div>
             </div>
-            <div className="text-gray-700 leading-relaxed space-y-4">
+            <div className="text-gray-700 leading-relaxed space-y-4 text-xs sm:text-sm">
               {selectedBlog.content}
             </div>
           </main>
         ) : (
-          <main className="max-w-7xl mx-auto px-4 py-8 text-left">
-            <h1 className="text-3xl md:text-4xl font-black text-neutral-900 mb-8">
+          <main className="max-w-7xl mx-auto px-4 py-6 md:py-8 text-left">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-neutral-900 mb-6 md:mb-8">
               Արխիվ
             </h1>
 
             {/* Ֆիլտրերի կոճակներ */}
-            <div className="flex flex-wrap items-center gap-2 border-b border-gray-100 pb-6 mb-12 text-xs font-semibold text-gray-600">
+            <div className="flex flex-wrap items-center gap-2 border-b border-gray-100 pb-4 md:pb-6 mb-8 md:mb-12 text-xs font-semibold text-gray-600">
               {['Բոլորը', 'Բիզնես', 'Կենսակերպ', 'Ներդրումներ'].map((cat) => (
                 <button
                   key={cat}
                   onClick={() => { setActiveCategory(cat); setCurrentPage(1); }}
                   className={`px-4 py-2 rounded-full transition cursor-pointer ${
                     activeCategory === cat
-                      ? 'bg-[#6400dc] text-white font-bold'
+                      ? 'bg-[#6400dc] text-white font-bold shadow-sm'
                       : 'bg-gray-100 text-gray-700 hover:bg-purple-50 hover:text-[#6400dc]'
                   }`}
                 >
@@ -274,7 +274,7 @@ export default function Arxiv() {
             </div>
 
             {/* Բլոգների քարտերի ցանց (Grid) */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12 md:mb-16">
               {currentBlogs.map((item) => (
                 <div 
                   key={item.id}

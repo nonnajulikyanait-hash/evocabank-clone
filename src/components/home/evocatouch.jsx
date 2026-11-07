@@ -9,21 +9,21 @@ export default function EvocaTouch() {
       <div>
         <Navbar />
 
-        <main className="max-w-7xl mx-auto px-4 py-8 text-left">
+        <main className="max-w-7xl mx-auto px-4 py-6 md:py-8 text-left">
           {/* Breadcrumbs */}
-          <div className="text-xs text-gray-400 mb-6 flex items-center gap-2">
+          <div className="text-xs text-gray-400 mb-6 flex items-center gap-2 flex-wrap">
             <span>🏠</span> &gt; <span>Անհատ</span> &gt; <span className="text-gray-700 font-medium">EvocaTOUCH</span>
           </div>
 
-          {/* Title Header (Without Banner Image) */}
-          <div className="mb-10">
-            <h1 className="text-3xl md:text-5xl font-black text-neutral-900 leading-tight tracking-tight mb-4">
+          {/* Title Header */}
+          <div className="mb-8 md:mb-10">
+            <h1 className="text-2xl sm:text-3xl md:text-5xl font-black text-neutral-900 leading-tight tracking-tight mb-4">
               EvocaTOUCH
             </h1>
           </div>
 
           {/* Content Description */}
-          <div className="space-y-6 text-xs md:text-sm text-gray-700 leading-relaxed mb-12">
+          <div className="space-y-6 text-xs sm:text-sm text-gray-700 leading-relaxed mb-12">
             <p>
               Շատերին թվում է՝ դժվար ու անիրական է ֆինանսական ոլորտում լինել կրեատիվ, սակայն Evocabank-ին տարիներ շարունակ հաջողվում է գտնել out of box լուծումներ և շուկային ներկայանալ նոր և ժամանակակից պրոդուկտներով։
             </p>
@@ -46,17 +46,17 @@ export default function EvocaTouch() {
               Նոր հավելվածն առաջարկում է գործառույթների լայն շրջանակ, որը ներառում է ամենօրյա բանկային գործընթացները՝ վերացնելով ֆիզիկական մասնաճյուղ այցելելու անհրաժեշտությունը: Առանց գրանցման և սպասարկման վճարի՝ օգտատերերը կարող են․
             </p>
 
-            <ul className="space-y-2 pl-4">
-              <li>• Բացել բանկային հաշիվներ,</li>
-              <li>• Պատվիրել քարտ կամ բացել թվային քարտ վայրկյանների ընթացքում,</li>
-              <li>• Ստանալ վարկ,</li>
-              <li>• Ներդնել ավանդ,</li>
-              <li>• Կատարել փոխանցումներ հաշիվներին և քարտերին, ինչպես հայաստանյան, այնպես էլ արտերկրյա բանկերին,</li>
-              <li>• Կատարել բանկային փոխանցումներ և վճարումներ,</li>
-              <li>• Կատարել կոմունալ վճարումներ,</li>
-              <li>• Առցանց ստանալ ավտոմեքենաների տուգանքները և իրականացնել վճարումներ մեկ հպումով,</li>
-              <li>• Կատարել փոխանցումներ կոնտակտային տվյալներով,</li>
-              <li>• 24/7 ուղղել հարցեր նամակի միջոցով:</li>
+            <ul className="space-y-2 pl-4 list-disc">
+              <li>Բացել բանկային հաշիվներ,</li>
+              <li>Պատվիրել քարտ կամ բացել թվային քարտ վայրկյանների ընթացքում,</li>
+              <li>Ստանալ վարկ,</li>
+              <li>Ներդնել ավանդ,</li>
+              <li>Կատարել փոխանցումներ հաշիվներին և քարտերին, ինչպես հայաստանյան, այնպես էլ արտերկրյա բանկերին,</li>
+              <li>Կատարել բանկային փոխանցումներ և վճարումներ,</li>
+              <li>Կատարել կոմունալ վճարումներ,</li>
+              <li>Առցանց ստանալ ավտոմեքենաների տուգանքները և իրականացնել վճարումներ մեկ հպումով,</li>
+              <li>Կատարել փոխանցումներ կոնտակտային տվյալներով,</li>
+              <li>24/7 ուղղել հարցեր նամակի միջոցով:</li>
             </ul>
 
             <p>
@@ -68,7 +68,7 @@ export default function EvocaTouch() {
             <p>
               EvocaTOUCH-ի միջոցով օգտատերերը կարող են 24/7 հասանելիություն ունենալ իրենց ֆինանսներին, վերահսկել իրենց դրամական միջոցները, արագ ու անվտանգ գործարքներ կատարել աշխարհի ցանկացած կետից, ցանկացած ժամի:
             </p>
-            <p className="font-bold text-[#6400dc]">
+            <p className="font-bold text-[#6400dc] text-sm sm:text-base pt-2">
               EvocaTOUCH-ը պարզապես բանկային հավելված չէ․ կարծում ենք, այն ձեզ համար դառնալու է ապրելակերպի մի մաս։
             </p>
           </div>

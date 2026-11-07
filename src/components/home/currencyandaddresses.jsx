@@ -12,7 +12,7 @@ function CurrencyAndAddresses() {
   };
 
   return (
-    <section className="relative bg-white py-12 overflow-hidden border-b border-neutral-100">
+    <section className="relative bg-white py-8 md:py-12 overflow-hidden border-b border-neutral-100">
       <div className="max-w-6xl mx-auto px-4 lg:px-8">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
@@ -54,7 +54,7 @@ function CurrencyAndAddresses() {
             </div>
 
             {/* Թաբերի բովանդակություն */}
-            <div className="bg-white border border-neutral-200 rounded-2xl p-5 shadow-sm text-left">
+            <div className="bg-white border border-neutral-200 rounded-2xl p-4 sm:p-5 shadow-sm text-left">
               
               {/* Թաբ 0: Կանխիկ */}
               {activeTab === 0 && (
@@ -65,7 +65,7 @@ function CurrencyAndAddresses() {
                     <span className="text-right">Վաճառք</span>
                   </div>
 
-                  <div className="space-y-4 text-sm">
+                  <div className="space-y-4 text-xs sm:text-sm">
                     <div className="grid grid-cols-3 items-center px-2 py-1.5 hover:bg-neutral-50 rounded-lg">
                       <div className="flex items-center space-x-2 font-bold text-neutral-800">
                         <span className="text-red-600 font-extrabold">USD</span>
@@ -114,7 +114,7 @@ function CurrencyAndAddresses() {
                     <span className="text-right">Վաճառք</span>
                   </div>
 
-                  <div className="space-y-4 text-sm">
+                  <div className="space-y-4 text-xs sm:text-sm">
                     <div className="grid grid-cols-3 items-center px-2 py-1.5 hover:bg-neutral-50 rounded-lg">
                       <span className="font-bold text-neutral-800">USD</span>
                       <span className="text-right text-red-600 font-semibold flex items-center justify-end gap-1"><span className="text-[10px]">▼</span> 361</span>
@@ -142,7 +142,7 @@ function CurrencyAndAddresses() {
                     <span className="text-right">Սահմանային (Արժեքը ՀՀ Դրամով 1 գրამის համար)</span>
                   </div>
 
-                  <div className="space-y-3 text-sm">
+                  <div className="space-y-3 text-xs sm:text-sm">
                     {[{h: 375, p: '18,400'}, {h: 500, p: '24,600'}, {h: 583, p: '28,700'}, {h: 750, p: '36,900'}, {h: 875, p: '43,000'}, {h: 900, p: '44,300'}, {h: 958, p: '47,100'}, {h: 999, p: '49,100'}].map((item, idx) => (
                       <div key={idx} className="grid grid-cols-2 items-center px-2 py-1.5 border-b border-neutral-100 last:border-0">
                         <span className="font-bold text-neutral-800">{item.h}</span>
@@ -161,7 +161,7 @@ function CurrencyAndAddresses() {
                     <span className="text-right">Սահմանային</span>
                   </div>
 
-                  <div className="grid grid-cols-2 items-center px-2 py-2">
+                  <div className="grid grid-cols-2 items-center px-2 py-2 text-xs sm:text-sm">
                     <span className="font-bold text-neutral-800">RUB</span>
                     <span className="text-right font-semibold text-neutral-900">10%</span>
                   </div>

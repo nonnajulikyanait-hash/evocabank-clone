@@ -402,127 +402,128 @@ export default function AnhatVarker() {
     : loansData.filter(loan => loan.category === selectedFilter);
 
   return (
-    <div className="min-h-screen bg-white font-sans text-neutral-800">
-      <Navbar />
-      
-      {/* Sub-header Purple Bar (#6400dc) */}
-      <div className="bg-[#6400dc] text-white py-3 px-4 shadow-inner">
-        <div className="max-w-7xl mx-auto flex items-center space-x-8 text-xs sm:text-sm font-semibold overflow-x-auto whitespace-nowrap">
-          <Link to="/loans" className="text-white border-b-2 border-white pb-1 cursor-pointer">
-            Վարկեր
-          </Link>
-          <Link to="/credit-history-and-score" className="text-white opacity-80 hover:opacity-100 cursor-pointer">
-            Վարկային պատմություն և սքոր
-          </Link>
-          <Link to="/important-information" className="text-white opacity-80 hover:opacity-100 cursor-pointer">
-            Կարևոր տեղեկատվություն
-          </Link>
-        </div>
-      </div>
-
-      {/* Breadcrumb & Main Title */}
-      <div className="max-w-7xl mx-auto px-4 py-8">
-        <div className="text-xs text-gray-400 mb-4 flex items-center gap-2 text-left">
-          <span>🏠</span> &gt; <span>Անհատ</span> &gt; <span>Վարկեր</span> &gt; <span className="text-gray-700 font-medium">Վարկեր</span>
+    <div className="min-h-screen bg-white font-sans text-neutral-800 flex flex-col justify-between">
+      <div>
+        <Navbar />
+        
+        {/* Sub-header Purple Bar (#6400dc) */}
+        <div className="bg-[#6400dc] text-white py-3 px-4 shadow-inner">
+          <div className="max-w-7xl mx-auto flex items-center space-x-6 md:space-x-8 text-xs sm:text-sm font-semibold overflow-x-auto whitespace-nowrap scrollbar-none">
+            <Link to="/loans" className="text-white border-b-2 border-white pb-1 cursor-pointer">
+              Վարկեր
+            </Link>
+            <Link to="/credit-history-and-score" className="text-white opacity-80 hover:opacity-100 cursor-pointer">
+              Վարկային պատմություն և սքոր
+            </Link>
+            <Link to="/important-information" className="text-white opacity-80 hover:opacity-100 cursor-pointer">
+              Կարևոր տեղեկատվություն
+            </Link>
+          </div>
         </div>
 
-        <h1 className="text-3xl font-black text-neutral-900 mb-8 text-left">Վարկեր</h1>
+        {/* Breadcrumb & Main Title */}
+        <main className="max-w-7xl mx-auto px-4 py-6 md:py-8">
+          <div className="text-xs text-gray-400 mb-4 flex items-center gap-2 text-left flex-wrap">
+            <span>🏠</span> &gt; <span>Անհատ</span> &gt; <span>Վարկեր</span> &gt; <span className="text-gray-700 font-medium">Վարկեր</span>
+          </div>
 
-        {/* Filter Buttons */}
-        <div className="flex flex-wrap items-center gap-3 mb-12">
-          {[
-            { label: 'Բոլորը', key: 'All' },
-            { label: 'Գրավով ապահովված սպառողական վարկեր', key: 'Gravov' },
-            { label: 'Անգրավ սպառողական վարկեր', key: 'Angrav' },
-            { label: 'Հիփոթեքային վարկեր', key: 'Mortgage' },
-            { label: 'Ավտոմեքենաների ձեռքբերման ֆինանսավորում', key: 'Auto' },
-            { label: 'Ապառիկ', key: 'Aparanik' },
-            { label: 'Օնլայն վարկեր', key: 'Online' }
-          ].map((tab) => (
-            <button
-              key={tab.key}
-              onClick={() => setSelectedFilter(tab.key)}
-              className={`px-4 py-2 rounded-full text-xs font-bold transition-all cursor-pointer ${
-                selectedFilter === tab.key 
-                  ? 'bg-[#6400dc] text-white shadow-md' 
-                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-              }`}
-            >
-              {tab.label}
-            </button>
-          ))}
-        </div>
+          <h1 className="text-2xl sm:text-3xl font-black text-neutral-900 mb-6 md:mb-8 text-left">Վարկեր</h1>
 
-        {/* Loans Cards List */}
-        <div className="space-y-10">
-          {filteredLoans.map((loan) => (
-            <div 
-              key={loan.id}
-              className="bg-white border border-gray-100 rounded-[32px] p-6 md:p-8 shadow-sm hover:shadow-md transition-all grid grid-cols-1 lg:grid-cols-12 gap-8 items-center"
-            >
-              {/* Left Image Box */}
-              <div className="lg:col-span-4 rounded-3xl overflow-hidden bg-[#6400dc] flex items-center justify-center aspect-[16/10] shadow-sm">
-                <img 
-                  src={loan.image} 
-                  alt={loan.title} 
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                />
-              </div>
+          {/* Filter Buttons */}
+          <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-8 md:mb-12">
+            {[
+              { label: 'Բոլորը', key: 'All' },
+              { label: 'Գրավով ապահովված սպառողական վարկեր', key: 'Gravov' },
+              { label: 'Անգրավ սպառողական վարկեր', key: 'Angrav' },
+              { label: 'Հիփոթեքային վարկեր', key: 'Mortgage' },
+              { label: 'Ավտոմեքենաների ձեռքբերման ֆինանսավորում', key: 'Auto' },
+              { label: 'Ապառիկ', key: 'Aparanik' },
+              { label: 'Օնլայն վարկեր', key: 'Online' }
+            ].map((tab) => (
+              <button
+                key={tab.key}
+                onClick={() => setSelectedFilter(tab.key)}
+                className={`px-3 sm:px-4 py-2 rounded-full text-xs font-bold transition-all cursor-pointer ${
+                  selectedFilter === tab.key 
+                    ? 'bg-[#6400dc] text-white shadow-md' 
+                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                }`}
+              >
+                {tab.label}
+              </button>
+            ))}
+          </div>
 
-              {/* Right Details */}
-              <div className="lg:col-span-8 space-y-5 text-left">
-                <h3 className="text-xl md:text-2xl font-black text-neutral-900 tracking-tight">
-                  {loan.title}
-                </h3>
-                <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
-                  {loan.description}
-                </p>
+          {/* Loans Cards List */}
+          <div className="space-y-6 md:space-y-10 mb-16">
+            {filteredLoans.map((loan) => (
+              <div 
+                key={loan.id}
+                className="bg-white border border-gray-100 rounded-2xl sm:rounded-[32px] p-5 sm:p-6 md:p-8 shadow-sm hover:shadow-md transition-all grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 items-center"
+              >
+                {/* Left Image Box */}
+                <div className="lg:col-span-4 rounded-2xl sm:rounded-3xl overflow-hidden bg-[#6400dc] flex items-center justify-center aspect-[16/10] shadow-sm">
+                  <img 
+                    src={loan.image} 
+                    alt={loan.title} 
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
 
-                {/* Stats Grid */}
-                {loan.stats.length > 0 && (
-                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 pt-2 border-t border-gray-100">
-                    {loan.stats.map((stat, idx) => (
-                      <div key={idx} className="space-y-1">
-                        <div className="text-base md:text-xl font-black text-[#6400dc]">
-                          {stat.value}
+                {/* Right Details */}
+                <div className="lg:col-span-8 space-y-4 md:space-y-5 text-left">
+                  <h3 className="text-xl sm:text-2xl font-black text-neutral-900 tracking-tight">
+                    {loan.title}
+                  </h3>
+                  <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
+                    {loan.description}
+                  </p>
+
+                  {/* Stats Grid */}
+                  {loan.stats.length > 0 && (
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4 pt-2 border-t border-gray-100">
+                      {loan.stats.map((stat, idx) => (
+                        <div key={idx} className="space-y-1">
+                          <div className="text-base sm:text-lg md:text-xl font-black text-[#6400dc]">
+                            {stat.value}
+                          </div>
+                          <div className="text-[10px] sm:text-[11px] text-gray-400 font-medium">
+                            {stat.label}
+                          </div>
                         </div>
-                        <div className="text-[11px] text-gray-400 font-medium">
-                          {stat.label}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                )}
-
-                <div className="pt-2">
-                  {loan.id === 1 ? (
-                    <Link 
-                      to="/loans/unsecured-consumer-loan" 
-                      className="bg-purple-50 hover:bg-purple-100 text-[#6400dc] font-bold text-xs px-6 py-3 rounded-full transition-all cursor-pointer inline-block"
-                    >
-                      Մանրամասն &gt;
-                    </Link>
-                  ) : loan.id === 6 ? (
-                    <Link 
-                      to="/loans/8" 
-                      className="bg-purple-50 hover:bg-purple-100 text-[#6400dc] font-bold text-xs px-6 py-3 rounded-full transition-all cursor-pointer inline-block"
-                    >
-                      Մանրամասն &gt;
-                    </Link>
-                  ) : (
-                    <Link 
-                      to={`/loans/${loan.id}`} 
-                      className="bg-purple-50 hover:bg-purple-100 text-[#6400dc] font-bold text-xs px-6 py-3 rounded-full transition-all cursor-pointer inline-block"
-                    >
-                      Մանրամասն &gt;
-                    </Link>
+                      ))}
+                    </div>
                   )}
+
+                  <div className="pt-2">
+                    {loan.id === 1 ? (
+                      <Link 
+                        to="/loans/unsecured-consumer-loan" 
+                        className="w-full sm:w-auto bg-purple-50 hover:bg-purple-100 text-[#6400dc] font-bold text-xs px-6 py-3 rounded-full transition-all cursor-pointer inline-flex justify-center items-center"
+                      >
+                        Մանրամասն &gt;
+                      </Link>
+                    ) : loan.id === 6 ? (
+                      <Link 
+                        to="/loans/8" 
+                        className="w-full sm:w-auto bg-purple-50 hover:bg-purple-100 text-[#6400dc] font-bold text-xs px-6 py-3 rounded-full transition-all cursor-pointer inline-flex justify-center items-center"
+                      >
+                        Մանրամասն &gt;
+                      </Link>
+                    ) : (
+                      <Link 
+                        to={`/loans/${loan.id}`} 
+                        className="w-full sm:w-auto bg-purple-50 hover:bg-purple-100 text-[#6400dc] font-bold text-xs px-6 py-3 rounded-full transition-all cursor-pointer inline-flex justify-center items-center"
+                      >
+                        Մանրամասն &gt;
+                      </Link>
+                    )}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
-
+            ))}
+          </div>
+        </main>
       </div>
 
       <Footer />

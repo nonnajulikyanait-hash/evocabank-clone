@@ -9,19 +9,19 @@ export default function Dijital() {
       <div>
         <Navbar />
 
-        <main className="max-w-6xl mx-auto px-4 py-8 text-left">
+        <main className="max-w-6xl mx-auto px-4 py-6 md:py-8 text-left">
           {/* Breadcrumbs */}
-          <div className="text-xs text-gray-400 mb-6 flex items-center gap-2">
+          <div className="text-xs text-gray-400 mb-6 flex items-center gap-2 flex-wrap">
             <span>🏠</span> &gt; <span>Բիզնես</span> &gt; <span>Դիջիթալ</span> &gt; <span className="text-gray-700 font-medium">V-POS Տերմինալ</span>
           </div>
 
           {/* Banner / Header Section */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12 bg-gray-50 rounded-3xl p-6 md:p-10 border border-gray-100">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center mb-10 md:mb-12 bg-gray-50 rounded-2xl md:rounded-3xl p-5 sm:p-6 md:p-10 border border-gray-100">
             <div>
-              <h1 className="text-3xl md:text-4xl font-black text-neutral-900 mb-6">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-neutral-900 mb-4 md:mb-6">
                 V-POS Տերմինալ
               </h1>
-              <p className="text-xs md:text-sm text-gray-700 leading-relaxed">
+              <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
                 <strong>V-POS-ը</strong> (virtual point of sale) վիրտուալ վճարային համակարգ է, որը հարմարավետ, ապահով և հեշտ լուծում է օնլայն առևտրով զբաղվող բիզնեսների համար։ Արագ և տեղում օնլայն վճարումներ կատարելն այսօր կարևոր նախապայման է Ձեր գնորդների համար։
               </p>
             </div>
@@ -29,7 +29,7 @@ export default function Dijital() {
               <img 
                 src="https://www.evoca.am/images-cache/menu/1/16158111599306/780x585.jpg" 
                 alt="V-POS Terminal" 
-                className="w-full max-w-md rounded-2xl shadow-sm object-cover"
+                className="w-full max-w-md rounded-xl md:rounded-2xl shadow-sm object-cover"
               />
             </div>
           </div>
@@ -41,7 +41,7 @@ export default function Dijital() {
               <span className="cursor-pointer hover:text-[#6400dc] text-sm">📷</span>
             </div>
 
-            <div className="flex-1 space-y-6 text-xs md:text-sm text-gray-700 leading-relaxed">
+            <div className="flex-1 space-y-6 text-xs sm:text-sm text-gray-700 leading-relaxed w-full">
               <p className="text-gray-800 leading-relaxed">
                 Evocabank-ը կապահովի Ձեր կայքում V-POS տերմինալի տեղադրումը։ Այն հնարավորություն կտա Ձեզ խուսափել լրացուցիչ ծրագրային ծախսերից, սերտիֆիկացումից և հետագա ծրագրային ապահովումից։
               </p>
@@ -54,7 +54,7 @@ export default function Dijital() {
                 V-POS-ը հասանելի կլինի ինչպես Ձեր կայքում, այնպես էլ՝ մոբայլ հավելվածում։
               </p>
 
-              <h3 className="text-base font-bold text-[#6400dc] pt-2">
+              <h3 className="text-sm sm:text-base font-bold text-[#6400dc] pt-2">
                 Իսկ ինչո՞ւ տեղադրել Evocabank-ի V-POS տերմինալ՝
               </h3>
 
@@ -68,7 +68,7 @@ export default function Dijital() {
               </p>
 
               <div className="overflow-x-auto rounded-xl border border-gray-200 bg-white">
-                <table className="w-full text-left border-collapse text-xs md:text-sm">
+                <table className="w-full text-left border-collapse text-xs md:text-sm min-w-[650px]">
                   <thead>
                     <tr className="bg-purple-50/50 border-b border-gray-200 text-gray-900 font-bold">
                       <th className="p-3">Գործարքի տեսակ</th>
@@ -106,7 +106,7 @@ export default function Dijital() {
                 </table>
               </div>
 
-              <div className="space-y-1 text-xs text-gray-500 pt-2 border-b border-gray-100 pb-4">
+              <div className="space-y-1 text-[11px] sm:text-xs text-gray-500 pt-2 border-b border-gray-100 pb-4">
                 <p><sup>[1]</sup> Կախված ոլորտի առանձնահատկություններից և շրջանառությունից՝ սակագները կարող են փոփոխվել։</p>
                 <p><sup>[2]</sup> Ներառյալ կիրառելի բոլոր հարկերը։</p>
                 <p><sup>[3]</sup> Ներառյալ կիրառելի բոլոր հարկերը։</p>
@@ -128,7 +128,7 @@ export default function Dijital() {
                 <li>Պայմանագրի ստորագրումից հետո V-POS-ը կտեղադրվի Ձեր բիզնեսի կայքում։</li>
               </ol>
 
-              <p className="font-bold text-neutral-900 text-base pt-2">
+              <p className="font-bold text-neutral-900 text-sm sm:text-base pt-2">
                 Կառուցեք Ձեր բիզնեսի թվային ապագան։
               </p>
 
@@ -140,12 +140,12 @@ export default function Dijital() {
                 <img 
                   src="https://www.evoca.am/file_manager/pos2-600x315.jpg" 
                   alt="POS Terminal Loan" 
-                  className="w-full max-w-md rounded-2xl border border-gray-100 shadow-xs"
+                  className="w-full max-w-md rounded-2xl border border-gray-100 shadow-xs object-cover"
                 />
               </div>
 
               <div className="pt-4 space-y-4">
-                <h2 className="text-xl font-bold text-neutral-900">
+                <h2 className="text-lg sm:text-xl font-bold text-neutral-900">
                   Բիզնես վարկ POS տերմինալի շրջանառության հիման վրա
                 </h2>
                 <p className="text-gray-700 leading-relaxed">
@@ -173,7 +173,7 @@ export default function Dijital() {
               </div>
 
               <div className="pt-6 space-y-4 border-t border-gray-100">
-                <h2 className="text-xl font-bold text-neutral-900">
+                <h2 className="text-lg sm:text-xl font-bold text-neutral-900">
                   Բիզնես օվերդրաֆտ POS տերմինալի շրջանառության հիման վրա
                 </h2>
                 <p className="text-gray-700 leading-relaxed">

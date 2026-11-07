@@ -34,47 +34,44 @@ export default function StatueSection() {
 
   const handleCardClick = (card) => {
     if (card.id === 49) {
-      // Gnum e 49-rd norutyan ej
       navigate('/bolor-norutyunner', { state: { openNewsId: 49 } });
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else if (card.id === 3) {
-      // Gnum e 50-rd norutyan ej (EvocaTOUCH 2)
       navigate('/bolor-norutyunner', { state: { openNewsId: 50 } });
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else if (card.id === 2 || card.title === 'Evoca Gift Card') {
-      // Gnum e Qarter.jsx ej
       navigate('/qarter', { state: { cardTitle: 'Evoca Gift Card' } });
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else if (card.id === 4) {
-      // Gnum e akntartayinvcharumner.jsx ej
       navigate('/akntartayinvcharumner');
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
 
   return (
-    <section className="relative bg-[#6400dc] text-white py-12 px-6 my-8 rounded-[60px] overflow-hidden max-w-[1400px] mx-auto">
+    <section className="relative bg-[#6400dc] text-white py-8 sm:py-10 md:py-12 px-4 sm:px-6 my-6 md:my-8 rounded-[30px] sm:rounded-[45px] md:rounded-[60px] overflow-hidden max-w-[1400px] mx-auto">
       
-      {/* Shapes */}
-      <img src="https://www.evoca.am/img/shape1.png" alt="shape" className="absolute top-8 left-10 w-6 opacity-80 pointer-events-none" />
-      <img src="https://www.evoca.am/img/shape6.png" alt="shape" className="absolute top-12 right-20 w-8 opacity-80 pointer-events-none" />
-      <img src="https://www.evoca.am/img/shape4.png" alt="shape" className="absolute bottom-16 left-1/4 w-7 opacity-70 pointer-events-none" />
-      <img src="https://www.evoca.am/img/shape3.png" alt="shape" className="absolute top-1/2 right-8 w-6 opacity-80 pointer-events-none" />
-      <img src="https://www.evoca.am/img/shape2.png" alt="shape" className="absolute bottom-8 right-1/3 w-8 opacity-75 pointer-events-none" />
-      <img src="https://www.evoca.am/img/shape5.png" alt="shape" className="absolute bottom-4 right-5 w-10 opacity-90 pointer-events-none" />
+      {/* Shapes (փոքր էկրանների վրա մասամբ թաքնված կամ չափսերը հարմարեցված) */}
+      <img src="https://www.evoca.am/img/shape1.png" alt="shape" className="absolute top-4 sm:top-8 left-4 sm:left-10 w-4 sm:w-6 opacity-80 pointer-events-none" />
+      <img src="https://www.evoca.am/img/shape6.png" alt="shape" className="absolute top-6 sm:top-12 right-10 sm:right-20 w-5 sm:w-8 opacity-80 pointer-events-none" />
+      <img src="https://www.evoca.am/img/shape4.png" alt="shape" className="absolute bottom-10 sm:bottom-16 left-1/4 w-5 sm:w-7 opacity-70 pointer-events-none" />
+      <img src="https://www.evoca.am/img/shape3.png" alt="shape" className="absolute top-1/2 right-4 sm:right-8 w-4 sm:w-6 opacity-80 pointer-events-none" />
+      <img src="https://www.evoca.am/img/shape2.png" alt="shape" className="absolute bottom-4 sm:bottom-8 right-1/3 w-5 sm:w-8 opacity-75 pointer-events-none" />
+      <img src="https://www.evoca.am/img/shape5.png" alt="shape" className="absolute bottom-2 sm:bottom-4 right-3 sm:right-5 w-6 sm:w-10 opacity-90 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         
-        <div className="text-center mb-10">
-          <h2 className="text-2xl md:text-4xl font-black tracking-tight">
+        <div className="text-center mb-8 md:mb-10">
+          <h2 className="text-xl sm:text-2xl md:text-4xl font-black tracking-tight">
             Լավագույնը Evocabank-ից
           </h2>
         </div>
 
-        <div className="flex flex-col lg:flex-row items-center gap-8">
+        <div className="flex flex-col lg:flex-row items-center gap-6 lg:gap-8">
           
+          {/* Արձանիկի հատված */}
           <div className="w-full lg:w-5/12 flex justify-center relative">
-            <div className="relative w-full max-w-sm h-[380px] flex items-center justify-center">
+            <div className="relative w-full max-w-[280px] sm:max-w-sm h-[260px] sm:h-[340px] md:h-[380px] flex items-center justify-center">
               <img 
                 src="https://www.evoca.am/img/statue-1.png" 
                 alt="Statue" 
@@ -83,18 +80,19 @@ export default function StatueSection() {
             </div>
           </div>
 
-          <div className="w-full lg:w-7/12 grid grid-cols-1 md:grid-cols-2 gap-5">
+          {/* Քարտերի ցանց (Grid) */}
+          <div className="w-full lg:w-7/12 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
             {cardsData.map((card) => (
               <div 
                 key={card.id}
                 onClick={() => handleCardClick(card)}
-                className="bg-white text-gray-900 p-6 rounded-[28px] shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl flex flex-col justify-between cursor-pointer hover:bg-purple-50"
+                className="bg-white text-gray-900 p-5 sm:p-6 rounded-[22px] sm:rounded-[28px] shadow-lg transition-all duration-300 hover:-translate-y-1 sm:hover:-translate-y-2 hover:shadow-2xl flex flex-col justify-between cursor-pointer hover:bg-purple-50"
               >
                 <div>
                   <span className="inline-block text-[#6400dc] bg-[#f3e8ff] text-xs font-bold px-3 py-1 rounded-full mb-3">
                     {card.tag}
                   </span>
-                  <h3 className="text-lg font-black mb-2 text-gray-900">
+                  <h3 className="text-base sm:text-lg font-black mb-2 text-gray-900">
                     {card.title}
                   </h3>
                   <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">

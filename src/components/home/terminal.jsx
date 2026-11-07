@@ -9,19 +9,19 @@ export default function Terminal() {
       <div>
         <Navbar />
 
-        <main className="max-w-6xl mx-auto px-4 py-8 text-left">
+        <main className="max-w-6xl mx-auto px-4 py-6 md:py-8 text-left">
           {/* Breadcrumbs */}
-          <div className="text-xs text-gray-400 mb-6 flex items-center gap-2">
+          <div className="text-xs text-gray-400 mb-4 md:mb-6 flex items-center gap-2 overflow-x-auto whitespace-nowrap">
             <span>🏠</span> &gt; <span>Բիզնես</span> &gt; <span>Դիջիթալ</span> &gt; <span className="text-gray-700 font-medium">POS Տերմինալ</span>
           </div>
 
           {/* Banner / Header Section */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12 bg-gray-50 rounded-3xl p-6 md:p-10 border border-gray-100">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center mb-10 md:mb-12 bg-gray-50 rounded-2xl md:rounded-3xl p-5 sm:p-6 md:p-10 border border-gray-100">
             <div>
-              <h1 className="text-3xl md:text-4xl font-black text-neutral-900 mb-6">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-neutral-900 mb-4 md:mb-6">
                 POS Տերմինալ
               </h1>
-              <p className="text-xs md:text-sm text-gray-700 leading-relaxed">
+              <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
                 <strong>POS-ը</strong> (point of sale) վճարային համակարգ է, որն օգտագործվում է անկանխիկ վճարումներ ընդունելու համար։ Արագ և տեղում վճարումներ կատարելն այսօր կարևոր նախապայման է Ձեր գնորդների համար։
               </p>
             </div>
@@ -29,21 +29,21 @@ export default function Terminal() {
               <img 
                 src="https://www.evoca.am/images-cache/menu/1/16158085302978/780x585.jpg" 
                 alt="POS Terminal" 
-                className="w-full max-w-md rounded-2xl shadow-sm object-cover"
+                className="w-full max-w-md rounded-xl md:rounded-2xl shadow-sm object-cover"
               />
             </div>
           </div>
 
           <div className="flex gap-8 items-start mb-12">
-            {/* Соц. сети */}
-            <div className="hidden md:flex flex-col gap-3 p-3 bg-gray-50 rounded-2xl border border-gray-100 text-gray-500 sticky top-28">
+            {/* Սոց․ ցանցեր */}
+            <div className="hidden md:flex flex-col gap-3 p-3 bg-gray-50 rounded-2xl border border-gray-100 text-gray-500 sticky top-28 shrink-0">
               <span className="cursor-pointer hover:text-[#6400dc] text-sm font-bold">f</span>
               <span className="cursor-pointer hover:text-[#6400dc] text-sm font-bold">in</span>
               <span className="cursor-pointer hover:text-[#6400dc] text-sm">📷</span>
             </div>
 
-            {/* Основной контент */}
-            <div className="flex-1 space-y-6 text-xs md:text-sm text-gray-700 leading-relaxed">
+            {/* Հիմնական բովանդակություն */}
+            <div className="flex-1 w-full space-y-6 text-xs sm:text-sm text-gray-700 leading-relaxed">
               <p className="text-gray-800 leading-relaxed">
                 Ձեր գնորդները կկարողանան գնումներ կատարել իրենց միջազգային VISA, Mastercard և տեղական ArCa վճարային քարտերով։
               </p>
@@ -52,7 +52,7 @@ export default function Terminal() {
                 POS-ը հասանելի կլինի ինչպես Ձեր կայքում, այնպես էլ՝ մոբայլ հավելվածում։
               </p>
 
-              <h3 className="text-base font-bold text-[#6400dc] pt-2">
+              <h3 className="text-sm sm:text-base font-bold text-[#6400dc] pt-2">
                 Իսկ ինչո՞ւ տեղադրել Evocabank-ի POS տերմինալ՝
               </h3>
 
@@ -62,18 +62,19 @@ export default function Terminal() {
                 </li>
               </ul>
 
-              <p className="font-bold text-gray-900 pt-2">
+              <p className="font-bold text-gray-900 pt-2 leading-relaxed">
                 Սպասարկման կետի գրանցման համար անհրաժեշտ POS, ՀԴՄ-POS, mPOS, VENDISTA տերմինալների տեղադրման <span className="text-[#6400dc] underline cursor-pointer">ստանդարտ սակագներ ու պայմաններ</span>։
               </p>
 
-              {/* Таблица 1 */}
+              {/* Աղյուսակ 1 */}
               <div className="space-y-3 pt-2">
-                <p className="font-semibold text-gray-800">
-                  1. Եթե վաճառակետի գործունեության տեսակը չի համընկնում <span className="text-[#6400dc] font-bold underline cursor-pointer">ԿԲ կողմից ներկայացված տեսակի կոդին</span> կամ գերազանցում է տարեկան 150.000.000 ՀՀ դրամի իրացման շրջանառության շեմը `
+                <p className="font-semibold text-gray-800 leading-relaxed">
+                  1. Եթե վաճառակետի գործունեության տեսակը չի համընկնում{' '}
+                  <span className="text-[#6400dc] font-bold underline cursor-pointer">ԿԲ կողմից ներկայացված տեսակի կոդին</span> կամ գերազանցում է տարեկան 150.000.000 ՀՀ դրամի իրացման շրջանառության շեմը `
                 </p>
 
-                <div className="overflow-x-auto rounded-xl border border-gray-200 bg-white">
-                  <table className="w-full text-left border-collapse text-xs md:text-sm">
+                <div className="w-full overflow-x-auto rounded-xl border border-gray-200 bg-white">
+                  <table className="w-full text-left border-collapse text-xs md:text-sm min-w-[700px]">
                     <thead>
                       <tr className="bg-purple-50/50 border-b border-gray-200 text-gray-900 font-bold">
                         <th className="p-3">Գործարքի տեսակ</th>
@@ -111,14 +112,14 @@ export default function Terminal() {
                 </p>
               </div>
 
-              {/* Таблица 2 */}
+              {/* Աղյուսակ 2 */}
               <div className="space-y-3 pt-6">
-                <p className="font-semibold text-gray-800">
+                <p className="font-semibold text-gray-800 leading-relaxed">
                   2. Եթե վաճառակետի գործունեության տեսակը համընկնում է <span className="text-[#6400dc] font-bold underline cursor-pointer">ԿԲ կողմից ներկայացված տեսակի կոդին</span> և չի գերազանցում տարեկան 150.000.000 ՀՀ դրամի իրացման շրջանառության շեմը՝
                 </p>
 
-                <div className="overflow-x-auto rounded-xl border border-gray-200 bg-white">
-                  <table className="w-full text-left border-collapse text-xs md:text-sm">
+                <div className="w-full overflow-x-auto rounded-xl border border-gray-200 bg-white">
+                  <table className="w-full text-left border-collapse text-xs md:text-sm min-w-[700px]">
                     <thead>
                       <tr className="bg-purple-50/50 border-b border-gray-200 text-gray-900 font-bold">
                         <th className="p-3">Գործարքի տեսակ</th>
@@ -164,7 +165,7 @@ export default function Terminal() {
                 <li>Անհատական մոտեցում Ձեր բիզնեսին ու կայքին։</li>
               </ul>
 
-              <p className="text-gray-800 pt-2">
+              <p className="text-gray-800 pt-2 font-semibold">
                 1. POS տերմինալ տեղադրելու համար լրացրեք հայտը հենց հիմա։
               </p>
 
@@ -172,7 +173,7 @@ export default function Terminal() {
                 Մեր մասնագետը 1 աշխատանքային օրում կապ կհաստատի Ձեզ հետ, կներկայացնի պայմանները, կպատասխանի Ձեր բոլոր հարցերին և կպատրաստի գործընթացի համար անհրաժեշտ բոլոր փաստաթղթերը։
               </p>
 
-              <p className="font-bold text-neutral-900 text-base pt-2">
+              <p className="font-bold text-neutral-900 text-sm md:text-base pt-2">
                 Կառուցեք Ձեր ապագան Evocabank-ի հետ։
               </p>
 

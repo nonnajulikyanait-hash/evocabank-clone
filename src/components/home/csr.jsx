@@ -10,7 +10,7 @@ export default function CSR() {
         <Navbar />
 
         {/* Sub-header navigation menu for About Us */}
-        <div className="bg-[#6400dc] text-white py-3 px-8 shadow-inner">
+        <div className="bg-[#6400dc] text-white py-3 px-4 sm:px-8 shadow-inner">
           <div className="container mx-auto flex gap-6 text-xs font-semibold overflow-x-auto whitespace-nowrap">
             <Link to="/mer-masin" className="text-purple-200 hover:text-white cursor-pointer">Ընդհանուր</Link>
             <Link to="/mer-masin/karucvacq" className="text-purple-200 hover:text-white cursor-pointer">Կառուցվածք</Link>
@@ -23,9 +23,9 @@ export default function CSR() {
           </div>
         </div>
 
-        <main className="max-w-6xl mx-auto px-4 py-12 space-y-12">
+        <main className="max-w-6xl mx-auto px-4 py-8 md:py-12 space-y-8 md:space-y-12 text-left">
           {/* Breadcrumbs */}
-          <div className="text-xs text-gray-400 flex items-center gap-2">
+          <div className="text-xs text-gray-400 flex items-center gap-2 flex-wrap">
             <Link to="/mer-masin" className="hover:text-[#6400dc]">Մեր մասին</Link>
             <span>/</span>
             <span>Evoca-ի մասին</span>
@@ -34,14 +34,14 @@ export default function CSR() {
           </div>
 
           {/* Top Section: Title/Description and Image side-by-side */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-            <div className="space-y-6">
-              <h1 className="text-3xl md:text-4xl font-extrabold text-neutral-900 leading-tight">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 items-center">
+            <div className="space-y-4 md:space-y-6">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-neutral-900 leading-tight">
                 Կորպորատիվ<br />
                 Սոցիալական<br />
                 Պատասխանատվություն
               </h1>
-              <p className="text-gray-700 text-sm md:text-base leading-relaxed">
+              <p className="text-gray-700 text-xs sm:text-sm md:text-base leading-relaxed">
                 Մենք մեծ կարևորություն ենք տալիս CSR-ին՝ ապահովելով մեր գործունեության դրական ազդեցությունը թե՛ հասարակության, թե՛ շրջակա միջավայրի վրա:
               </p>
             </div>
@@ -49,32 +49,32 @@ export default function CSR() {
               <img 
                 src="https://www.evoca.am/images-cache/menu/1/17108330711252/780x585.png" 
                 alt="CSR Illustration" 
-                className="rounded-3xl shadow-sm w-full object-cover"
+                className="rounded-2xl sm:rounded-3xl shadow-sm w-full object-cover"
               />
             </div>
           </div>
 
           {/* Detailed Content Section */}
-          <div className="space-y-6 text-gray-700 text-sm md:text-base leading-relaxed pt-6">
+          <div className="space-y-5 md:space-y-6 text-gray-700 text-xs sm:text-sm md:text-base leading-relaxed pt-4 md:pt-6">
             <p>
               <strong>Evocabank</strong>-ում Կորպորատիվ սոցիալական պատասխանատվությունը կարևորագույն արժեք է, որն արտացոլվում է Բանկի գրեթե բոլոր նախաձեռնություններում։ Բանկը շարունակաբար աջակցություն է ցուցաբերում հանրության տարբեր խմբերին և հասարակական նախաձեռնություններին հետևյալ ոլորտներում՝
             </p>
 
             <ul className="space-y-3 pl-2">
               <li className="flex items-start gap-3">
-                <span className="text-[#6400dc] font-bold">—</span>
+                <span className="text-[#6400dc] font-bold shrink-0">—</span>
                 <span>Նորագույն տեխնոլոգիաների զարգացում,</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-[#6400dc] font-bold">—</span>
+                <span className="text-[#6400dc] font-bold shrink-0">—</span>
                 <span>Երիտասարդության կրթական, գիտական և մշակութային նախաձեռնություններ,</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-[#6400dc] font-bold">—</span>
+                <span className="text-[#6400dc] font-bold shrink-0">—</span>
                 <span>Հասարակական կարևոր նշանակություն ունեցող նախաձեռնություններ,</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-[#6400dc] font-bold">—</span>
+                <span className="text-[#6400dc] font-bold shrink-0">—</span>
                 <span>Հասարակության առավել խոցելի խմբեր, մասնավորապես՝ ծնողազուրկ կամ հատուկ խնամքի տակ գտնվող երեխաներ:</span>
               </li>
             </ul>

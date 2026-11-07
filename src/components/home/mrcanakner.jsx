@@ -50,8 +50,8 @@ export default function Mrcanakner() {
         <Navbar />
 
         {/* Sub-header navigation menu for About Us */}
-        <div className="bg-[#6400dc] text-white py-3 px-8 shadow-inner">
-          <div className="container mx-auto flex gap-6 text-xs font-semibold overflow-x-auto whitespace-nowrap">
+        <div className="bg-[#6400dc] text-white py-3 px-4 sm:px-8 shadow-inner">
+          <div className="container mx-auto flex gap-6 text-xs sm:text-sm font-semibold overflow-x-auto whitespace-nowrap">
             <Link to="/mer-masin" className="text-purple-200 hover:text-white cursor-pointer">Ընդհանուր</Link>
             <Link to="/mer-masin/karucvacq" className="text-purple-200 hover:text-white cursor-pointer">Կառուցվածք</Link>
             <Link to="/mer-masin/bajneterer" className="text-purple-200 hover:text-white cursor-pointer">Բաժնետերեր</Link>
@@ -63,9 +63,9 @@ export default function Mrcanakner() {
           </div>
         </div>
 
-        <main className="max-w-6xl mx-auto px-4 py-12 space-y-12">
+        <main className="max-w-6xl mx-auto px-4 py-8 md:py-12 space-y-8 md:space-y-12 text-left">
           {/* Breadcrumbs */}
-          <div className="text-xs text-gray-400 flex items-center gap-2">
+          <div className="text-xs text-gray-400 flex items-center gap-2 flex-wrap">
             <Link to="/mer-masin" className="hover:text-[#6400dc]">Մեր մասին</Link>
             <span>/</span>
             <span>Evoca-ի մասին</span>
@@ -73,7 +73,7 @@ export default function Mrcanakner() {
             <span className="text-gray-700 font-medium">Մրցանակներ</span>
           </div>
 
-          <h1 className="text-3xl md:text-4xl font-extrabold text-neutral-900 mb-8">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-neutral-900 mb-6 md:mb-8">
             Մրցանակներ
           </h1>
 
@@ -82,19 +82,19 @@ export default function Mrcanakner() {
             {getAwardsByPage().map((award, idx) => (
               <div 
                 key={idx} 
-                className="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm flex flex-col justify-between hover:shadow-md transition"
+                className="bg-white rounded-3xl p-6 sm:p-8 border border-gray-100 shadow-sm flex flex-col justify-between hover:shadow-md transition"
               >
-                <div className="space-y-3">
-                  <span className="text-[#6400dc] font-extrabold text-lg block">{award.year}</span>
-                  <h3 className="text-neutral-900 font-bold text-base md:text-lg leading-snug">
+                <div className="space-y-2 sm:space-y-3">
+                  <span className="text-[#6400dc] font-extrabold text-base sm:text-lg block">{award.year}</span>
+                  <h3 className="text-neutral-900 font-bold text-sm sm:text-base md:text-lg leading-snug">
                     {award.title}
                   </h3>
                 </div>
-                <div className="flex justify-end pt-6 mt-4 border-t border-gray-50">
+                <div className="flex justify-end pt-4 sm:pt-6 mt-4 border-t border-gray-50">
                   <img 
                     src={award.img} 
                     alt={award.title} 
-                    className="h-10 object-contain"
+                    className="h-8 sm:h-10 object-contain"
                   />
                 </div>
               </div>

@@ -61,7 +61,7 @@ export default function Arjetxter() {
 
         {/* Purple Sub-bar #6400dc */}
         <div className="bg-[#6400dc] text-white py-3 px-4 shadow-inner">
-          <div className="max-w-7xl mx-auto flex items-center space-x-8 text-xs sm:text-sm font-semibold overflow-x-auto whitespace-nowrap">
+          <div className="max-w-7xl mx-auto flex items-center space-x-6 md:space-x-8 text-xs sm:text-sm font-semibold overflow-x-auto whitespace-nowrap scrollbar-none">
             <span 
               onClick={() => setActiveTab('investment')} 
               className={`cursor-pointer pb-1 transition ${activeTab === 'investment' ? 'border-b-2 border-white text-white' : 'text-white opacity-80 hover:opacity-100'}`}
@@ -97,25 +97,25 @@ export default function Arjetxter() {
 
         {activeTab === 'investment' ? (
           /* ================= ՆԵՐԴՐՈՒՄԱՅԻՆ ԾԱՌԱՅՈՒԹՅՈՒՆՆԵՐ ԷՋ ================= */
-          <main className="max-w-7xl mx-auto px-4 py-8 text-left">
-            <div className="text-xs text-gray-400 mb-6 flex items-center gap-2">
+          <main className="max-w-7xl mx-auto px-4 py-6 md:py-8 text-left">
+            <div className="text-xs text-gray-400 mb-6 flex items-center gap-2 flex-wrap">
               <span>🏠</span> &gt; <span>Անհատ</span> &gt; <span>Արժեթղթեր</span> &gt; <span className="text-gray-700 font-medium">Ներդրումային ծառայություններ</span>
             </div>
 
-            <div className="bg-[#f5efff] rounded-[32px] overflow-hidden p-8 md:p-12 mb-10 flex flex-col md:flex-row items-center justify-between gap-8 shadow-sm">
+            <div className="bg-[#f5efff] rounded-2xl md:rounded-[32px] overflow-hidden p-6 sm:p-8 md:p-12 mb-8 md:mb-10 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8 shadow-sm">
               <div className="space-y-4 md:w-1/2">
-                <h1 className="text-3xl md:text-5xl font-black text-neutral-900 leading-tight tracking-tight">
+                <h1 className="text-2xl sm:text-3xl md:text-5xl font-black text-neutral-900 leading-tight tracking-tight">
                   Ներդրումային ծառայություններ
                 </h1>
                 <p className="text-xs md:text-sm text-gray-700 leading-relaxed">
                   Evocabank-ն առաջարկում է ներդրումային ծառայություններ և տալիս եկամտի նոր աղբյուրների հնարավորություն՝ ձեր պահանջներին և ցանկություններին համապատասխան։
                 </p>
               </div>
-              <div className="md:w-1/2 flex justify-center">
+              <div className="md:w-1/2 flex justify-center w-full">
                 <img 
                   src="https://www.evoca.am/images-cache/menu/1/16781890566687/780x585.jpg" 
                   alt="Ներդրումային ծառայություններ" 
-                  className="rounded-2xl max-h-80 object-cover shadow-md"
+                  className="rounded-2xl max-h-60 sm:max-h-80 object-cover shadow-md w-full md:w-auto"
                 />
               </div>
             </div>
@@ -138,7 +138,7 @@ export default function Arjetxter() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10 bg-purple-50 p-6 md:p-8 rounded-3xl border border-purple-100 text-xs md:text-sm">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-10 bg-purple-50 p-6 md:p-8 rounded-2xl sm:rounded-3xl border border-purple-100 text-xs md:text-sm">
               <div className="space-y-2">
                 <h3 className="font-bold text-[#6400dc] text-base">Հասցե՝</h3>
                 <p className="text-gray-700">Երևան, Հանրապետության 44/2</p>
@@ -155,7 +155,7 @@ export default function Arjetxter() {
               </div>
             </div>
 
-            <div className="bg-red-50 p-5 rounded-2xl border-l-4 border-red-500 text-red-700 font-semibold text-xs md:text-sm mb-12">
+            <div className="bg-red-50 p-4 sm:p-5 rounded-2xl border-l-4 border-red-500 text-red-700 font-semibold text-xs md:text-sm mb-12">
               ՈՒՇԱԴՐՈՒԹՅՈՒՆ․ Ֆինանսական շուկաներում գործարքների իրականացման հետ կապված ՌԻՍԿԸ ԿՐՈՒՄ Է ՀԱՃԱԽՈՐԴԸ: Բանկը ՉԻ ՓՈԽՀԱՏՈՒՑԵԼՈՒ հաճախորդի վնասները, եթե դրանք չեն պատճառվել Բանկի կողմից անբարեխիղճ վարքագծի արդյունքում։
             </div>
 
@@ -197,7 +197,9 @@ export default function Arjetxter() {
                   </button>
                   {openAccordions[1] && (
                     <div className="p-4 border-t border-gray-100 bg-gray-50 space-y-2 text-xs md:text-sm text-gray-700">
-                      <p>• <a href="#" className="text-[#6400dc] underline font-medium">Տեղական և Ռուսական շուկաներում ծառայությունների մատուցման սակագներ</a></p>
+                      <p>
+                        <a href="#" className="text-[#6400dc] underline font-medium">Տեղական և Ռուսական շուկաներում ծառայությունների մատուցման սակագներ</a>
+                      </p>
                     </div>
                   )}
                 </div>
@@ -208,25 +210,25 @@ export default function Arjetxter() {
           </main>
         ) : activeTab === 'bonds' ? (
           /* ================= ՊԱՐՏԱՏՈՄՍԵՐ ԷՋ ================= */
-          <main className="max-w-7xl mx-auto px-4 py-8 text-left">
-            <div className="text-xs text-gray-400 mb-6 flex items-center gap-2">
+          <main className="max-w-7xl mx-auto px-4 py-6 md:py-8 text-left">
+            <div className="text-xs text-gray-400 mb-6 flex items-center gap-2 flex-wrap">
               <span>🏠</span> &gt; <span>Անհատ</span> &gt; <span>Արժեթղթեր</span> &gt; <span className="text-gray-700 font-medium">Պարտատոմսեր</span>
             </div>
 
-            <div className="bg-[#f5efff] rounded-[32px] overflow-hidden p-8 md:p-12 mb-10 flex flex-col md:flex-row items-center justify-between gap-8 shadow-sm">
+            <div className="bg-[#f5efff] rounded-2xl md:rounded-[32px] overflow-hidden p-6 sm:p-8 md:p-12 mb-8 md:mb-10 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8 shadow-sm">
               <div className="space-y-4 md:w-1/2">
-                <h1 className="text-3xl md:text-5xl font-black text-neutral-900 leading-tight tracking-tight">
+                <h1 className="text-2xl sm:text-3xl md:text-5xl font-black text-neutral-900 leading-tight tracking-tight">
                   Պարտատոմսեր
                 </h1>
                 <p className="text-xs md:text-sm text-gray-700 leading-relaxed">
                   Evocabank-ը հնարավորություն է տալիս ձեռք բերել պարտատոմսեր և ստանալ բարձր եկամուտներ։ Մենք ցանկանում ենք դառնալ Ձեր բարեկեցիկ ապագայի մի մասնիկը։
                 </p>
               </div>
-              <div className="md:w-1/2 flex justify-center">
+              <div className="md:w-1/2 flex justify-center w-full">
                 <img 
                   src="https://www.evoca.am/images-cache/menu/1/16783548543339/780x585.jpg" 
                   alt="Պարտատոմսեր" 
-                  className="rounded-2xl max-h-80 object-cover shadow-md"
+                  className="rounded-2xl max-h-60 sm:max-h-80 object-cover shadow-md w-full md:w-auto"
                 />
               </div>
             </div>
@@ -270,7 +272,7 @@ export default function Arjetxter() {
                     <div className="p-4 border-t border-gray-100 bg-gray-50 space-y-4 text-xs md:text-sm text-gray-700">
                       <p className="font-bold text-[#6400dc]">ԹՈՂԱՐԿՎԱԾ ՊԱՐՏԱՏՈՄՍԵՐԻ ՊԱՅՄԱՆՆԵՐ</p>
                       <div className="overflow-x-auto">
-                        <table className="w-full text-left border-collapse">
+                        <table className="w-full text-left border-collapse min-w-[450px]">
                           <thead>
                             <tr className="border-b border-gray-200 text-gray-500">
                               <th className="py-2">Ցուցանիշ</th>
@@ -322,25 +324,25 @@ export default function Arjetxter() {
           </main>
         ) : activeTab === 'hpd' ? (
           /* ================= ՀՊԴ ԾԱՌԱՅՈՒԹՅՈՒՆՆԵՐ ԷՋ ================= */
-          <main className="max-w-7xl mx-auto px-4 py-8 text-left">
-            <div className="text-xs text-gray-400 mb-6 flex items-center gap-2">
+          <main className="max-w-7xl mx-auto px-4 py-6 md:py-8 text-left">
+            <div className="text-xs text-gray-400 mb-6 flex items-center gap-2 flex-wrap">
               <span>🏠</span> &gt; <span>Անհատ</span> &gt; <span>Արժեթղթեր</span> &gt; <span className="text-gray-700 font-medium">ՀԿԴ ծառայություններ</span>
             </div>
 
-            <div className="bg-[#f5efff] rounded-[32px] overflow-hidden p-8 md:p-12 mb-10 flex flex-col md:flex-row items-center justify-between gap-8 shadow-sm">
+            <div className="bg-[#f5efff] rounded-2xl md:rounded-[32px] overflow-hidden p-6 sm:p-8 md:p-12 mb-8 md:mb-10 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8 shadow-sm">
               <div className="space-y-4 md:w-1/2">
-                <h1 className="text-3xl md:text-5xl font-black text-neutral-900 leading-tight tracking-tight">
+                <h1 className="text-2xl sm:text-3xl md:text-5xl font-black text-neutral-900 leading-tight tracking-tight">
                   Հայաստանի կենտրոնական դեպոզիտարիայի (ՀԿԴ) ծառայություններ
                 </h1>
                 <p className="text-xs md:text-sm text-gray-700 leading-relaxed">
                   Evocabank-ը հանդիսանում է ՀՀ Կենտրոնական Դեպոզիտարիայի Հաշվի Օպերատոր՝ միջնորդավորելով ՀՀ Կենտրոնական Դեպոզիտարիայի կողմից մատուցվող ռեեստրավարման և արժեթղթերի պահառության հետ կապված բոլոր ծառայությունները:
                 </p>
               </div>
-              <div className="md:w-1/2 flex justify-center">
+              <div className="md:w-1/2 flex justify-center w-full">
                 <img 
                   src="https://www.evoca.am/images-cache/menu/1/16783474498811/780x585.jpg" 
                   alt="ՀԿԴ ծառայություններ" 
-                  className="rounded-2xl max-h-80 object-cover shadow-md"
+                  className="rounded-2xl max-h-60 sm:max-h-80 object-cover shadow-md w-full md:w-auto"
                 />
               </div>
             </div>
@@ -375,8 +377,12 @@ export default function Arjetxter() {
                   </button>
                   {openHpdAccordions[0] && (
                     <div className="p-4 border-t border-gray-100 bg-gray-50 space-y-2 text-xs md:text-sm text-gray-700">
-                      <p>• <a href="#" className="text-[#6400dc] underline font-medium">Հայաստանի կենտրոնական դեպոզիտարիայի կողմից մատուցվող ծառայությունների միջնորդավորման գործունեության սակագներ</a></p>
-                      <p>• <a href="#" className="text-[#6400dc] underline font-medium">Հայաստանի կենտրոնական դեպոզիտարիայի կողմից մատուցվող ծառայությունների միջնորդավորման գործունեության կանոններ</a></p>
+                      <p>
+                        <a href="#" className="text-[#6400dc] underline font-medium">Հայաստանի կենտրոնական դեպոզիտարիայի կողմից մատուցվող ծառայությունների միջնորդավորման գործունեության սակագներ</a>
+                      </p>
+                      <p>
+                        <a href="#" className="text-[#6400dc] underline font-medium">Հայաստանի կենտրոնական դեպոզիտարիայի կողմից մատուցվող ծառայությունների միջնորդավորման գործունեության կանոններ</a>
+                      </p>
                     </div>
                   )}
                 </div>
@@ -387,25 +393,25 @@ export default function Arjetxter() {
           </main>
         ) : activeTab === 'repo' ? (
           /* ================= ՌԵՊՈ/ՀԱԿԱԴԱՐՁ ՌԵՊՈ ԳՈՐԾԱՐՔՆԵՐ ԷՋ ================= */
-          <main className="max-w-7xl mx-auto px-4 py-8 text-left">
-            <div className="text-xs text-gray-400 mb-6 flex items-center gap-2">
+          <main className="max-w-7xl mx-auto px-4 py-6 md:py-8 text-left">
+            <div className="text-xs text-gray-400 mb-6 flex items-center gap-2 flex-wrap">
               <span>🏠</span> &gt; <span>Անհատ</span> &gt; <span>Արժեթղթեր</span> &gt; <span className="text-gray-700 font-medium">Ռեպո/Հակադարձ Ռեպո գործարքներ</span>
             </div>
 
-            <div className="bg-[#f5efff] rounded-[32px] overflow-hidden p-8 md:p-12 mb-10 flex flex-col md:flex-row items-center justify-between gap-8 shadow-sm">
+            <div className="bg-[#f5efff] rounded-2xl md:rounded-[32px] overflow-hidden p-6 sm:p-8 md:p-12 mb-8 md:mb-10 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8 shadow-sm">
               <div className="space-y-4 md:w-1/2">
-                <h1 className="text-3xl md:text-5xl font-black text-neutral-900 leading-tight tracking-tight">
+                <h1 className="text-2xl sm:text-3xl md:text-5xl font-black text-neutral-900 leading-tight tracking-tight">
                   Ռեպո/Հակադարձ Ռեպո գործարքներ
                 </h1>
                 <p className="text-xs md:text-sm text-gray-700 leading-relaxed">
                   Կարճաժամկետ դրամական միջոցներ ներգրավելու և տեղաբաշխելու նպատակով Evocabank-ն իրականացնում է Ռեպո/Հակադարձ Ռեպո գործարքներ։ Ռեպո/Հակադարձ Ռեպո գործարքների շնորհիվ՝ Բանկը կատարում է կարճաժամկետ իրացվելիության կառավարում։
                 </p>
               </div>
-              <div className="md:w-1/2 flex justify-center">
+              <div className="md:w-1/2 flex justify-center w-full">
                 <img 
                   src="https://www.evoca.am/images-cache/menu/1/16783548886405/780x585.jpg" 
                   alt="Ռեպո/Հակադարձ Ռեպո գործարքներ" 
-                  className="rounded-2xl max-h-80 object-cover shadow-md"
+                  className="rounded-2xl max-h-60 sm:max-h-80 object-cover shadow-md w-full md:w-auto"
                 />
               </div>
             </div>
@@ -426,69 +432,59 @@ export default function Arjetxter() {
           </main>
         ) : (
           /* ================= EVOCAINVEST ԷՋ ================= */
-          <main className="max-w-7xl mx-auto px-4 py-8 text-left">
-            <div className="text-xs text-gray-400 mb-6 flex items-center gap-2">
+          <main className="max-w-7xl mx-auto px-4 py-6 md:py-8 text-left">
+            <div className="text-xs text-gray-400 mb-6 flex items-center gap-2 flex-wrap">
               <span>🏠</span> &gt; <span>Անհատ</span> &gt; <span>Արժեթղթեր</span> &gt; <span className="text-gray-700 font-medium">EvocaINVEST</span>
             </div>
 
-            <div className="bg-[#f5efff] rounded-[32px] overflow-hidden p-8 md:p-12 mb-10 flex flex-col md:flex-row items-center justify-between gap-8 shadow-sm">
+            <div className="bg-[#f5efff] rounded-2xl md:rounded-[32px] overflow-hidden p-6 sm:p-8 md:p-12 mb-8 md:mb-10 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8 shadow-sm">
               <div className="space-y-4 md:w-1/2">
-                <h1 className="text-3xl md:text-5xl font-black text-neutral-900 leading-tight tracking-tight">
+                <h1 className="text-2xl sm:text-3xl md:text-5xl font-black text-neutral-900 leading-tight tracking-tight">
                   EvocaINVEST
                 </h1>
                 <p className="text-xs md:text-sm text-gray-700 leading-relaxed">
                   EvocaINVEST-ի միջոցով Դուք կարող եք ներդրումներ կատարել և կառավարել Ձեր ակտիվները առցանց եղանակով։
                 </p>
               </div>
-              <div className="md:w-1/2 flex justify-center">
+              <div className="md:w-1/2 flex justify-center w-full">
                 <img 
                   src="https://www.evoca.am/images-cache/menu/1/16781890566687/780x585.jpg" 
                   alt="EvocaINVEST" 
-                  className="rounded-2xl max-h-80 object-cover shadow-md"
+                  className="rounded-2xl max-h-60 sm:max-h-80 object-cover shadow-md w-full md:w-auto"
                 />
               </div>
             </div>
 
             {/* EvocaInvest Bottom Section (Անհրաժեշտ տեղեկատվություն, օգտակար նյութեր և ՀՏՀ) */}
-            <div className="evocainvest-bottom-container" style={{ padding: '20px 0', fontFamily: 'sans-serif' }}>
+            <div className="py-5">
               
               {/* ԱՆՀՐԱԺԵՇՏ ՏԵՂԵԿԱՏՎՈՒԹՅՈՒՆ */}
-              <h2 style={{ color: '#6400dc', borderBottom: '2px solid #6400dc', paddingBottom: '8px', marginBottom: '20px', fontSize: '24px', fontWeight: '900' }}>
+              <h2 className="text-xl md:text-2xl font-black text-[#6400dc] border-b-2 border-[#6400dc] pb-2 mb-6">
                 ԱՆՀՐԱԺԵՇՏ ՏԵՂԵԿԱՏՎՈՒԹՅՈՒՆ
               </h2>
 
               {/* EvocaINVEST օգտակար նյութեր (Dropdown) */}
-              <div style={{ marginBottom: '20px', border: '1px solid #e5e7eb', borderRadius: '16px', overflow: 'hidden' }}>
+              <div className="mb-5 border border-gray-200 rounded-2xl overflow-hidden bg-white shadow-sm">
                 <div 
                   onClick={() => setOpenUseful(!openUseful)}
-                  style={{ 
-                    backgroundColor: '#f9fafb', 
-                    padding: '15px 20px', 
-                    cursor: 'pointer', 
-                    display: 'flex', 
-                    justifyContent: 'space-between', 
-                    alignItems: 'center',
-                    color: '#6400dc',
-                    fontWeight: 'bold',
-                    fontSize: '18px'
-                  }}
+                  className="bg-gray-50 p-4 sm:p-5 cursor-pointer flex justify-between items-center text-[#6400dc] font-bold text-base sm:text-lg"
                 >
                   <span>EvocaINVEST օգտակար նյութեր</span>
                   <span>{openUseful ? '▲' : '▼'}</span>
                 </div>
 
                 {openUseful && (
-                  <div style={{ padding: '20px', display: 'flex', flexDirection: 'column', gap: '15px', backgroundColor: '#fff' }}>
-                    <a href="https://www.youtube.com/watch?v=5kUF-3KueZ8&t=2s" target="_blank" rel="noopener noreferrer" style={{ color: '#2563eb', textDecoration: 'none' }}>
+                  <div className="p-5 flex flex-col gap-3 bg-white text-xs md:text-sm">
+                    <a href="https://www.youtube.com/watch?v=5kUF-3KueZ8&t=2s" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
                       ▶ Տեսանյութ 1 (Դիտել YouTube-ում)
                     </a>
-                    <a href="https://www.youtube.com/watch?v=wax5BjEOAGQ&t=32s" target="_blank" rel="noopener noreferrer" style={{ color: '#2563eb', textDecoration: 'none' }}>
+                    <a href="https://www.youtube.com/watch?v=wax5BjEOAGQ&t=32s" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
                       ▶ Տեսանյութ 2 (Դիտել YouTube-ում)
                     </a>
-                    <a href="https://www.youtube.com/watch?v=oxxOZXf2kPA&t=12s" target="_blank" rel="noopener noreferrer" style={{ color: '#2563eb', textDecoration: 'none' }}>
+                    <a href="https://www.youtube.com/watch?v=oxxOZXf2kPA&t=12s" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
                       ▶ Տեսանյութ 3 (Դիտել YouTube-ում)
                     </a>
-                    <a href="https://www.youtube.com/watch?v=XCz2N5eicHs" target="_blank" rel="noopener noreferrer" style={{ color: '#2563eb', textDecoration: 'none' }}>
+                    <a href="https://www.youtube.com/watch?v=XCz2N5eicHs" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
                       ▶ Տեսանյութ 4 (Դիտել YouTube-ում)
                     </a>
                   </div>
@@ -496,46 +492,28 @@ export default function Arjetxter() {
               </div>
 
               {/* Հաճախ տրվող հարցեր */}
-              <div style={{ marginBottom: '40px', border: '1px solid #e5e7eb', borderRadius: '16px', overflow: 'hidden' }}>
+              <div className="mb-10 border border-gray-200 rounded-2xl overflow-hidden bg-white shadow-sm">
                 <div 
                   onClick={() => setOpenFaq(!openFaq)}
-                  style={{ 
-                    backgroundColor: '#f9fafb', 
-                    padding: '15px 20px', 
-                    cursor: 'pointer', 
-                    display: 'flex', 
-                    justifyContent: 'space-between', 
-                    alignItems: 'center',
-                    color: '#6400dc',
-                    fontWeight: 'bold',
-                    fontSize: '18px'
-                  }}
+                  className="bg-gray-50 p-4 sm:p-5 cursor-pointer flex justify-between items-center text-[#6400dc] font-bold text-base sm:text-lg"
                 >
                   <span>Հաճախ տրվող հարցեր</span>
                   <span>{openFaq ? '▲' : '▼'}</span>
                 </div>
 
                 {openFaq && (
-                  <div style={{ backgroundColor: '#fff' }}>
+                  <div className="bg-white">
                     {faqList.map((item, index) => (
-                      <div key={index} style={{ borderBottom: index !== faqList.length - 1 ? '1px solid #e5e7eb' : 'none' }}>
+                      <div key={index} className={index !== faqList.length - 1 ? 'border-b border-gray-200' : ''}>
                         <div 
                           onClick={() => setActiveFaqIndex(activeFaqIndex === index ? null : index)}
-                          style={{ 
-                            padding: '15px 20px', 
-                            cursor: 'pointer', 
-                            display: 'flex', 
-                            justifyContent: 'space-between', 
-                            alignItems: 'center',
-                            color: '#4b5563',
-                            fontWeight: '600'
-                          }}
+                          className="p-4 sm:p-5 cursor-pointer flex justify-between items-center text-gray-700 font-semibold text-xs md:text-sm"
                         >
-                          <span style={{ color: '#6400dc' }}>{item.question}</span>
+                          <span className="text-[#6400dc] font-bold">{item.question}</span>
                           <span>{activeFaqIndex === index ? '−' : '+'}</span>
                         </div>
                         {activeFaqIndex === index && (
-                          <div style={{ padding: '0 20px 15px 20px', color: '#4b5563', lineHeight: '1.6', whiteSpace: 'pre-line' }}>
+                          <div className="px-4 sm:px-5 pb-5 text-gray-600 text-xs md:text-sm leading-relaxed whitespace-pre-line">
                             {item.answer}
                           </div>
                         )}

@@ -21,7 +21,7 @@ export default function FooterHarcer() {
     },
     {
       question: "Ինչու՞ պետք է գնեմ պարտատոմսեր՝ ավանդ ներդնելու փոխարեն:",
-      answer: "Պարտատոմսեր գնելն է՛լ ավելի շահավետ է և հարմար։ Պարտատոմսերն ունեն մի շարք առավելություններ:\n- Պարտատոմսերից ստացված եկամուտները ազատված են եկամտային հարկից և ոչ ռեզիդենտի շահութահարկից:\n- Պարտատոմսերը վաճառելու դեպքում Դուք պահպանում եք մինչ այդ պահը կուտակված տոկոսագումարները:"
+      answer: "Պարտատոմսեր գնելն է՛լ ավելի շահավետ է և հարմար։ Պարտատոմսերն ունեն մի շարք առավելություններ:\n• Պարտատոմսերից ստացված եկամուտները ազատված են եկամտային հարկից և ոչ ռեզիդենտի շահութահարկից:\n• Պարտատոմսերը վաճառելու դեպքում Դուք պահպանում եք մինչ այդ պահը կուտակված տոկոսագումարները:"
     },
     {
       question: "Իմ ավանդները երաշխավորված են ավանդների հատուցումը երաշխավորող հիմնադրամի կողմից, իսկ պարտատոմսե՞րը:",
@@ -85,7 +85,7 @@ export default function FooterHarcer() {
     },
     {
       question: "Կարո՞ղ եմ վաճառել արժեթուղթը ցանկացած պահի։",
-      answer: "Դու կարող ես վաճառքի պատվեր տեղադրել ցանկացած պահի։ Եթե շուկան բաց է, և կա համապատասխան առաջարկ, պատվերը կարող է կատարվել նույն պահին կամ ըստ քո պատվերի պայմանների։"
+      answer: "Դու կարող եես վաճառքի պատվեր տեղադրել ցանկացած պահի։ Եթե շուկան բաց է, և կա համապատասխան առաջարկ, պատվերը կարող է կատարվել նույն պահին կամ ըստ քո պատվերի պայմանների։"
     },
     {
       question: "Ի՞նչ արժույթներով կարող եմ ներդրումներ կատարել։",
@@ -103,21 +103,21 @@ export default function FooterHarcer() {
         <Navbar />
 
         {/* Բովանդակության գլխավոր կոնտեյներ */}
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 pt-10 pb-16 text-left">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8 md:py-12 text-left">
           
           {/* Հացի փշրանքներ (Breadcrumbs) */}
-          <div className="text-xs text-gray-400 mb-6 flex items-center gap-2">
+          <div className="text-xs text-gray-400 mb-6 flex items-center gap-2 flex-wrap">
             <span>🏠</span> &gt; <span className="text-gray-700 font-medium">Հաճախ տրվող հարցեր</span>
           </div>
 
-          <h1 className="text-3xl md:text-4xl font-black text-neutral-900 mb-8">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-neutral-900 mb-6 md:mb-8">
             Հաճախ տրվող հարցեր
           </h1>
 
           {/* Բաժնի ենթավերնագիր / Կատեգորիա */}
           <div className="flex items-center gap-2 mb-6">
             <span className="w-1.5 h-6 bg-[#6400dc] rounded-full"></span>
-            <h2 className="text-lg font-bold text-neutral-900">Պարտատոմսեր</h2>
+            <h2 className="text-base sm:text-lg font-bold text-neutral-900">Պարտատոմսեր</h2>
           </div>
 
           {/* Հարցերի և պատասխանների ցանկ (Accordion) */}
@@ -131,15 +131,15 @@ export default function FooterHarcer() {
                 >
                   <button
                     onClick={() => toggleAccordion(index)}
-                    className="w-full flex items-center justify-between p-4 sm:p-5 bg-gray-50 hover:bg-gray-100 transition-colors text-left font-bold text-neutral-900 text-sm sm:text-base"
+                    className="w-full flex items-center justify-between p-4 sm:p-5 bg-gray-50 hover:bg-gray-100 transition-colors text-left font-bold text-neutral-900 text-xs sm:text-sm md:text-base cursor-pointer"
                   >
                     <span>{faq.question}</span>
-                    <span className="text-[#6400dc] font-bold text-lg ml-4 transition-transform duration-200">
+                    <span className="text-[#6400dc] font-bold text-lg ml-4 transition-transform duration-200 shrink-0">
                       {isOpen ? '−' : '+'}
                     </span>
                   </button>
                   {isOpen && (
-                    <div className="p-4 sm:p-5 bg-white border-t border-gray-200 text-gray-600 text-sm leading-relaxed whitespace-pre-line">
+                    <div className="p-4 sm:p-5 bg-white border-t border-gray-200 text-gray-600 text-xs sm:text-sm leading-relaxed whitespace-pre-line">
                       {faq.answer}
                     </div>
                   )}

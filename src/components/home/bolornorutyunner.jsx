@@ -7,7 +7,7 @@ export default function BolorNorutyunner() {
   const location = useLocation();
   const [selectedCategory, setSelectedCategory] = useState("Բոլորը");
   
-  // Инициализируем сразу из location.state, чтобы новость открывалась без задержки
+  // Ինիցիալիզացնում ենք միանգամից location.state-ից, որ նորությունը բացվի առանց ուշացման
   const [selectedNews, setSelectedNews] = useState(() => {
     if (location.state && (location.state.openNewsId || location.state.openId)) {
       const targetId = location.state.openNewsId || location.state.openId;
@@ -37,7 +37,7 @@ export default function BolorNorutyunner() {
           content: "Evocabank-ը ներկայացրեց իր նոր EvocaTOUCH հավելվածը ժամանակակից թվային լուծումներով:"
         }
       ];
-      // Ищем в полном списке
+      // Փնտրում ենք ամբողջական ցանկում
       const found = allNewsList.find(n => n.id === Number(targetId));
       if (found) return found;
     }
@@ -566,31 +566,32 @@ export default function BolorNorutyunner() {
         <Navbar />
 
         {selectedNews ? (
-          <main className="max-w-4xl mx-auto px-4 py-8 text-left bg-white">
+          <main className="max-w-4xl mx-auto px-4 py-6 md:py-8 text-left bg-white">
             <button 
               onClick={() => setSelectedNews(null)} 
               className="font-bold text-xs text-gray-500 hover:text-[#6400dc] mb-6 flex items-center gap-1 cursor-pointer"
             >
               ← Վերադառնալ
             </button>
-            <h1 className="text-2xl md:text-3xl font-black text-neutral-900 mb-4">{selectedNews.title}</h1>
+            <h1 className="text-2xl sm:text-3xl font-black text-neutral-900 mb-4">{selectedNews.title}</h1>
             <span className="text-xs font-bold text-[#6400dc] bg-purple-50 px-3 py-1 rounded-full inline-block mb-4">{selectedNews.category}</span>
-            <div className="rounded-2xl overflow-hidden mb-6 max-h-[450px] bg-gray-50">
+            <div className="rounded-2xl overflow-hidden mb-6 max-h-[450px] bg-gray-50 shadow-sm">
               <img src={selectedNews.image} alt={selectedNews.title} className="w-full h-full object-cover" />
             </div>
-            <p className="text-gray-700 leading-relaxed whitespace-pre-line">{selectedNews.content}</p>
+            <p className="text-xs sm:text-sm text-gray-700 leading-relaxed whitespace-pre-line">{selectedNews.content}</p>
           </main>
         ) : (
-          <div className="max-w-7xl mx-auto px-4 py-8 text-left bg-white">
-            <div className="text-xs text-gray-400 mb-3 flex items-center gap-2">
+          <div className="max-w-7xl mx-auto px-4 py-6 md:py-8 text-left bg-white">
+            <div className="text-xs text-gray-400 mb-3 flex items-center gap-2 flex-wrap">
               <span>🏠</span> &gt; <span>Նորություններ</span> &gt; <span className="text-gray-700 font-medium">Բոլորը</span>
             </div>
 
-            <h1 className="text-3xl md:text-4xl font-black text-neutral-900 mb-8">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-neutral-900 mb-6 md:mb-8">
               Բոլորը
             </h1>
 
-            <div className="flex flex-wrap items-center gap-2 border-b border-gray-100 pb-6 mb-8 text-xs font-semibold text-gray-600">
+            {/* Categories horizontal scroll / wrap */}
+            <div className="flex flex-wrap items-center gap-2 border-b border-gray-100 pb-4 md:pb-6 mb-6 md:mb-8 text-xs font-semibold text-gray-600">
               {categories.map((cat) => (
                 <button
                   key={cat}
@@ -606,36 +607,38 @@ export default function BolorNorutyunner() {
               ))}
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {/* News Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-16">
               {currentItems.map((item) => (
                 <div 
                   key={item.id}
                   onClick={() => { setSelectedNews(item); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
-                  className="bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition duration-300 cursor-pointer group flex flex-col justify-between"
+                  className="bg-white border border-gray-100 rounded-2xl sm:rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition duration-300 cursor-pointer group flex flex-col justify-between"
                 >
                   <div>
                     <div className="h-48 overflow-hidden bg-gray-50">
-                      <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
+                      <img src={item.image} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
                     </div>
-                    <div className="p-6 space-y-3">
+                    <div className="p-5 sm:p-6 space-y-3">
                       <span className="text-xs font-bold text-[#6400dc] border-l-2 border-[#6400dc] pl-2 block">
                         {item.category}
                       </span>
-                      <h3 className="text-base font-extrabold text-neutral-900 leading-snug group-hover:text-[#6400dc] transition line-clamp-2">
+                      <h3 className="text-sm sm:text-base font-extrabold text-neutral-900 leading-snug group-hover:text-[#6400dc] transition line-clamp-2">
                         {item.title}
                       </h3>
                       <p className="text-xs text-gray-600 line-clamp-2">{item.content}</p>
                     </div>
                   </div>
-                  <div className="px-6 pb-6 text-xs text-gray-400 font-medium">
+                  <div className="px-5 sm:px-6 pb-5 sm:pb-6 text-xs text-gray-400 font-medium">
                     {item.date}
                   </div>
                 </div>
               ))}
             </div>
 
+            {/* Pagination */}
             {totalPages > 1 && (
-              <div className="flex justify-center items-center gap-2 mb-16">
+              <div className="flex justify-center items-center gap-2 mb-12 md:mb-16 flex-wrap">
                 {Array.from({ length: totalPages }, (_, index) => index + 1).map((page) => (
                   <button
                     key={page}

@@ -27,11 +27,11 @@ function Footer({ setActiveTab }) {
   };
 
   return (
-    <footer className="w-full bg-[#f1f1f1] border-t border-gray-200 pt-12 pb-6 font-sans text-neutral-800">
+    <footer className="w-full bg-[#f1f1f1] border-t border-gray-200 pt-10 sm:pt-12 pb-6 font-sans text-neutral-800">
       <div className="max-w-7xl mx-auto px-4">
         
         {/* Verin bazin (sylunkar) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
           
           {/* Sylunk 1: Logo ane Address */}
           <div className="lg:col-span-1 space-y-4">
@@ -93,7 +93,7 @@ function Footer({ setActiveTab }) {
           </div>
 
           {/* Sylunk 5: Socials, Apps & Contact */}
-          <div className="space-y-4">
+          <div className="space-y-4 sm:col-span-2 lg:col-span-1">
             <div className="flex space-x-3 text-gray-600 text-lg">
               <a href="#" aria-label="Facebook" className="hover:text-[#6400dc]">f</a>
               <a href="#" aria-label="Instagram" className="hover:text-[#6400dc]">ig</a>
@@ -120,14 +120,14 @@ function Footer({ setActiveTab }) {
         </div>
 
         {/* Legal Text */}
-        <div className="border-t border-gray-300 pt-6 pb-6 text-[11px] text-gray-500 leading-relaxed">
+        <div className="border-t border-gray-300 pt-6 pb-6 text-[11px] text-gray-500 leading-relaxed text-left">
           <p>
             Կայքի՝ այցելուի որևէ տեխնիկական միջոցներով վերցվող տվյալների անհամապատասխանության, ինչպես նաև տռտաներն ու անցքերն ընդունելու ոչ ադրեզնված ծրագրի տեխնիկական դեպքերում ինքնաբերաբար ինքն ապահովագրելը: "Էվոկաբանկ" ԲԲԸ-ն պատասխանատվություն չի կրում ի՞նչ ինտերնետային կայքում այլ անձանց ինտերնետային կայքերի բովանդակության և արժանահավատության, այնտեղ տեղադրված գովազդների, ինչպես նաև երրորդ անձանց կողմից այդ կայքերում տեղադրված տեղեկության օգտագործման հետևանքների համար:
           </p>
         </div>
 
-        {/* Partner Logos above the bottom line, positioned on the right */}
-        <div className="border-t border-gray-300 pt-6 mt-4 flex items-center justify-end flex-wrap gap-4 opacity-90">
+        {/* Partner Logos */}
+        <div className="border-t border-gray-300 pt-6 mt-4 flex items-center justify-center lg:justify-end flex-wrap gap-4 opacity-90">
           {partners.map((partner) => (
             <a 
               key={partner.id} 

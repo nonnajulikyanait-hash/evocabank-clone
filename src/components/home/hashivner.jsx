@@ -21,22 +21,22 @@ export default function Hashivner() {
 
         {/* Purple Sub-bar #6400dc */}
         <div className="bg-[#6400dc] text-white py-3 px-4 shadow-inner">
-          <div className="max-w-7xl mx-auto flex items-center space-x-8 text-xs sm:text-sm font-semibold overflow-x-auto whitespace-nowrap">
+          <div className="max-w-7xl mx-auto flex items-center space-x-6 sm:space-x-8 text-xs sm:text-sm font-semibold overflow-x-auto whitespace-nowrap">
             <span 
               onClick={() => setActiveTab('saving')} 
-              className={`cursor-pointer pb-1 transition ${activeTab === 'saving' ? 'border-b-2 border-white text-white' : 'text-white opacity-80 hover:opacity-100'}`}
+              className={`cursor-pointer pb-1 transition ${activeTab === 'saving' ? 'border-b-2 border-white text-white font-black' : 'text-white opacity-80 hover:opacity-100'}`}
             >
               Evoca խնայողական հաշիվ
             </span>
             <span 
               onClick={() => setActiveTab('opening')} 
-              className={`cursor-pointer pb-1 transition ${activeTab === 'opening' ? 'border-b-2 border-white text-white' : 'text-white opacity-80 hover:opacity-100'}`}
+              className={`cursor-pointer pb-1 transition ${activeTab === 'opening' ? 'border-b-2 border-white text-white font-black' : 'text-white opacity-80 hover:opacity-100'}`}
             >
               Հաշիվների բացում և սպասարկում
             </span>
             <span 
               onClick={() => setActiveTab('metal')} 
-              className={`cursor-pointer pb-1 transition ${activeTab === 'metal' ? 'border-b-2 border-white text-white' : 'text-white opacity-80 hover:opacity-100'}`}
+              className={`cursor-pointer pb-1 transition ${activeTab === 'metal' ? 'border-b-2 border-white text-white font-black' : 'text-white opacity-80 hover:opacity-100'}`}
             >
               Առարկայազուրկ մետաղական հաշիվներ
             </span>
@@ -45,34 +45,34 @@ export default function Hashivner() {
 
         {activeTab === 'metal' ? (
           /* ================= ԱՌԱՐԿԱՅԱԶՈՒՐԿ ՄԵՏԱՂԱԿԱՆ ՀԱՇԻՎՆԵՐ ԷՋ ================= */
-          <main className="max-w-7xl mx-auto px-4 py-8 text-left">
+          <main className="max-w-7xl mx-auto px-4 py-6 md:py-8 text-left">
             {/* Breadcrumbs */}
-            <div className="text-xs text-gray-400 mb-6 flex items-center gap-2">
+            <div className="text-xs text-gray-400 mb-6 flex items-center gap-2 flex-wrap">
               <span>🏠</span> &gt; <span>Անհատ</span> &gt; <span>Հաշիվներ</span> &gt; <span className="text-gray-700 font-medium">Առարկայազուրկ մետաղական հաշիվներ</span>
             </div>
 
             {/* Banner Section */}
-            <div className="bg-[#f5efff] rounded-[32px] overflow-hidden p-8 md:p-12 mb-12 flex flex-col md:flex-row items-center justify-between gap-8 shadow-sm">
+            <div className="bg-[#f5efff] rounded-2xl md:rounded-[32px] overflow-hidden p-6 sm:p-8 md:p-12 mb-10 md:mb-12 flex flex-col md:flex-row items-center justify-between gap-8 shadow-sm">
               <div className="space-y-4 md:w-1/2">
-                <h1 className="text-3xl md:text-5xl font-black text-neutral-900 leading-tight tracking-tight">
+                <h1 className="text-2xl sm:text-3xl md:text-5xl font-black text-neutral-900 leading-tight tracking-tight">
                   Առարկայազուրկ մետաղական հաշիվներ
                 </h1>
-                <p className="text-xs md:text-sm text-gray-700 leading-relaxed">
+                <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
                   Առաջարկում ենք բացել առարկայազուրկ մետաղական հաշիվներ, որոնք նախատեսված են անկանխիկ ոսկու հաշվառման համար: Այս ցպահանջ հաշիվները հնարավորություն են ընձեռում խնայողություններ կատարել անկանխիկ ոսկով, ինչպես նաև ավելացնել դրանք՝ միջազգային շուկայում ոսկու գնի բարձրացման շնորհիվ:
                 </p>
               </div>
-              <div className="md:w-1/2 flex justify-center">
+              <div className="md:w-1/2 flex justify-center w-full">
                 <img 
                   src="https://www.evoca.am/images-cache/menu/1/17092121924185/780x585.png" 
                   alt="Առարկայազուրկ մետաղական հաշիվներ" 
-                  className="rounded-2xl max-h-80 object-cover shadow-md"
+                  className="rounded-xl md:rounded-2xl max-h-64 md:max-h-80 object-cover shadow-md w-full max-w-md"
                 />
               </div>
             </div>
 
             {/* Main Conditions Section */}
-            <div className="space-y-6 text-xs md:text-sm text-gray-700 leading-relaxed mb-16">
-              <h2 className="text-xl md:text-2xl font-black text-neutral-900">
+            <div className="space-y-6 text-xs sm:text-sm text-gray-700 leading-relaxed mb-16">
+              <h2 className="text-lg sm:text-xl md:text-2xl font-black text-neutral-900">
                 Հիմնական պայմաններ
               </h2>
 
@@ -158,7 +158,7 @@ export default function Hashivner() {
 
               {/* Warning Notice */}
               <div className="bg-red-50 p-4 rounded-xl border-l-4 border-red-500 text-red-700 font-semibold text-xs md:text-sm">
-                Ուշադրություն. Ավանդների հատուցումը երաշխավորող հիմնադրամը չի հատուցում մետաղական հաշիվները:
+                Ուշադրություն։ Ավանդների հատուցումը երաշխավորող հիմնադրամը չի հատուցում մետաղական հաշիվները:
               </div>
             </div>
 
@@ -166,50 +166,50 @@ export default function Hashivner() {
           </main>
         ) : activeTab === 'opening' ? (
           /* ================= ՀԱՇԻՎՆԵՐԻ ԲԱՑՈՒՄ ԵՎ ՍՊԱՍԱՐԿՈՒՄ ԷՋ ================= */
-          <main className="max-w-7xl mx-auto px-4 py-8 text-left">
-            <div className="text-xs text-gray-400 mb-6 flex items-center gap-2">
+          <main className="max-w-7xl mx-auto px-4 py-6 md:py-8 text-left">
+            <div className="text-xs text-gray-400 mb-6 flex items-center gap-2 flex-wrap">
               <span>🏠</span> &gt; <span>Անհատ</span> &gt; <span>Հաշիվներ</span> &gt; <span className="text-gray-700 font-medium">Հաշիվների բացում և սպասարկում</span>
             </div>
 
-            <div className="bg-[#f5efff] rounded-[32px] overflow-hidden p-8 md:p-12 mb-10 flex flex-col md:flex-row items-center justify-between gap-8 shadow-sm">
+            <div className="bg-[#f5efff] rounded-2xl md:rounded-[32px] overflow-hidden p-6 sm:p-8 md:p-12 mb-10 md:mb-12 flex flex-col md:flex-row items-center justify-between gap-8 shadow-sm">
               <div className="space-y-4 md:w-1/2">
-                <h1 className="text-3xl md:text-5xl font-black text-neutral-900 leading-tight tracking-tight">
+                <h1 className="text-2xl sm:text-3xl md:text-5xl font-black text-neutral-900 leading-tight tracking-tight">
                   Հաշիվների բացում և սպասարկում
                 </h1>
-                <p className="text-xs md:text-sm text-gray-700 leading-relaxed">
+                <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
                   Առաջարկում ենք բացել դրամային և արտարժութային ընթացիկ բանկային հաշիվներ, որոնց սպասարկումն իրականացնում ենք մեր սակագների համաձայն: Մեզ մոտ հաշիվներ կարող են բացել Հայաստանի ռեզիդենտ և ոչ ռեզիդենտ ֆիզիկական անձիք:
                 </p>
               </div>
-              <div className="md:w-1/2 flex justify-center">
+              <div className="md:w-1/2 flex justify-center w-full">
                 <img 
                   src="https://www.evoca.am/images-cache/menu/1/16111691720299/780x585.jpg" 
                   alt="Հաշիվների բացում և սպասարկում" 
-                  className="rounded-2xl max-h-80 object-cover shadow-md"
+                  className="rounded-xl md:rounded-2xl max-h-64 md:max-h-80 object-cover shadow-md w-full max-w-md"
                 />
               </div>
             </div>
 
-            <div className="bg-purple-50 p-6 rounded-2xl border border-purple-100 text-xs md:text-sm text-gray-700 leading-relaxed mb-10">
+            <div className="bg-purple-50 p-5 sm:p-6 rounded-2xl border border-purple-100 text-xs sm:text-sm text-gray-700 leading-relaxed mb-10">
               <p>
                 Մեր և ձեր պայմանագրային փոխհարաբերությունները կարգավորվում են <strong>ՀԱՄԱԼԻՐ ԲԱՆԿԱՅԻՆ ԾԱՌԱՅՈՒԹՅՈՒՆՆԵՐԻ ՄԱՏՈՒՑՄԱՆ ՊԱՅՄԱՆՆԵՐՈՎ</strong>, որը հրապարակային առաջարկ (օֆերտա) է և ձեր կողմից համարվում է ընդունված այն պահից, երբ առձեռն կամ հեռակառավարման համակարգերի միջոցով մեզ եք ներկայացնում պատշաճ լրացված և վավերացված՝ բանկային ծառայություններից օգտվելու հայտ/դիմում: Համալիր բանկային ծառայությունների մատուցման պայմաններին կարող եք ծանոթանալ <a href="#" className="text-[#6400dc] underline font-medium">այստեղ</a>:
               </p>
             </div>
 
-            <div className="relative rounded-[32px] overflow-hidden mb-12 shadow-md">
+            <div className="relative rounded-2xl md:rounded-[32px] overflow-hidden mb-12 shadow-md">
               <img 
                 src="https://www.evoca.am/images-cache/menu/1/16111710051163/1920x530.jpg" 
                 alt="Հաշիվներ բացելու նպատակով" 
-                className="w-full h-64 md:h-80 object-cover"
+                className="w-full h-56 sm:h-64 md:h-80 object-cover"
               />
-              <div className="absolute inset-0 bg-black/40 flex items-center justify-center p-6 text-center">
-                <h2 className="text-xl md:text-3xl font-extrabold text-white max-w-3xl leading-snug">
-                  Հաշիվներ բացելու նպատակով կարող եք դիմել մեր Գլխամասային գրասենյակ կամ ցանկացած մասնաճյուղ (բացառությամբ «Էրեբունի» -ի):
+              <div className="absolute inset-0 bg-black/40 flex items-center justify-center p-4 sm:p-6 text-center">
+                <h2 className="text-lg sm:text-xl md:text-3xl font-extrabold text-white max-w-3xl leading-snug">
+                  Հաշիվներ բացելու նպատակով կարող եք դիմել մեր Գլխամասային գրասենյակ կամ ցանկացած մասնաճյուղ (բացառությամբ «Էրեբունի»-ի):
                 </h2>
               </div>
             </div>
 
             <div className="space-y-6 mb-16">
-              <h2 className="text-xl md:text-2xl font-black text-neutral-900">
+              <h2 className="text-lg sm:text-xl md:text-2xl font-black text-neutral-900">
                 ԱՆՀՐԱԺԵՇՏ ՏԵՂԵԿԱՏՎՈՒԹՅՈՒՆ
               </h2>
 
@@ -217,12 +217,12 @@ export default function Hashivner() {
                 <div className="border border-gray-200 rounded-2xl overflow-hidden bg-white shadow-sm">
                   <button
                     onClick={() => toggleAccordion(0)}
-                    className="w-full flex justify-between items-center p-4 text-left font-bold text-neutral-800 hover:bg-purple-50 transition cursor-pointer"
+                    className="w-full flex justify-between items-center p-4 text-left font-bold text-neutral-800 hover:bg-purple-50 transition cursor-pointer text-xs sm:text-sm"
                   >
                     <span className="flex items-center gap-2">
                       <span className="text-[#6400dc]">⌄</span> Անհրաժեշտ փաստաթղթեր
                     </span>
-                    <span className="text-xs text-gray-400 font-normal">{openAccordions[0] ? 'Փակել' : 'Բացել'}</span>
+                    <span className="text-xs text-gray-400 font-normal shrink-0 ml-2">{openAccordions[0] ? 'Փակել' : 'Բացել'}</span>
                   </button>
                   {openAccordions[0] && (
                     <div className="p-4 border-t border-gray-100 bg-gray-50 space-y-2 text-xs md:text-sm text-gray-700">
@@ -236,12 +236,12 @@ export default function Hashivner() {
                 <div className="border border-gray-200 rounded-2xl overflow-hidden bg-white shadow-sm">
                   <button
                     onClick={() => toggleAccordion(1)}
-                    className="w-full flex justify-between items-center p-4 text-left font-bold text-neutral-800 hover:bg-purple-50 transition cursor-pointer"
+                    className="w-full flex justify-between items-center p-4 text-left font-bold text-neutral-800 hover:bg-purple-50 transition cursor-pointer text-xs sm:text-sm"
                   >
                     <span className="flex items-center gap-2">
                       <span className="text-[#6400dc]">⌄</span> Հաշիվ բացելու ընթացակարգ
                     </span>
-                    <span className="text-xs text-gray-400 font-normal">{openAccordions[1] ? 'Փակել' : 'Բացել'}</span>
+                    <span className="text-xs text-gray-400 font-normal shrink-0 ml-2">{openAccordions[1] ? 'Փակել' : 'Բացել'}</span>
                   </button>
                   {openAccordions[1] && (
                     <div className="p-4 border-t border-gray-100 bg-gray-50 space-y-2 text-xs md:text-sm text-gray-700 leading-relaxed">
@@ -258,30 +258,30 @@ export default function Hashivner() {
           </main>
         ) : (
           /* ================= EVOCA ԽՆԱՅՈՂԱԿԱՆ ՀԱՇԻՎ ԷՋ ================= */
-          <main className="max-w-7xl mx-auto px-4 py-8 text-left">
-            <div className="text-xs text-gray-400 mb-6 flex items-center gap-2">
+          <main className="max-w-7xl mx-auto px-4 py-6 md:py-8 text-left">
+            <div className="text-xs text-gray-400 mb-6 flex items-center gap-2 flex-wrap">
               <span>🏠</span> &gt; <span>Անհատ</span> &gt; <span>Հաշիվներ</span> &gt; <span className="text-gray-700 font-medium">Evoca խնայողական հաշիվ</span>
             </div>
 
-            <div className="bg-[#f5efff] rounded-[32px] overflow-hidden p-8 md:p-12 mb-12 flex flex-col md:flex-row items-center justify-between gap-8 shadow-sm">
+            <div className="bg-[#f5efff] rounded-2xl md:rounded-[32px] overflow-hidden p-6 sm:p-8 md:p-12 mb-10 md:mb-12 flex flex-col md:flex-row items-center justify-between gap-8 shadow-sm">
               <div className="space-y-4 md:w-1/2">
-                <h1 className="text-3xl md:text-5xl font-black text-neutral-900 leading-tight tracking-tight">
+                <h1 className="text-2xl sm:text-3xl md:text-5xl font-black text-neutral-900 leading-tight tracking-tight">
                   Evoca խնայողական հաշիվ
                 </h1>
-                <p className="text-xs md:text-sm text-gray-700 leading-relaxed">
+                <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
                   Ստացիր եկամուտ՝ պարզապես գումարդ պահելով խնայողական հաշվիդ վրա։
                 </p>
               </div>
-              <div className="md:w-1/2 flex justify-center">
+              <div className="md:w-1/2 flex justify-center w-full">
                 <img 
                   src="https://www.evoca.am/images-cache/menu/1/17906902726456/780x585.png" 
                   alt="Evoca խնայողական հաշիվ" 
-                  className="rounded-2xl max-h-80 object-cover shadow-md"
+                  className="rounded-xl md:rounded-2xl max-h-64 md:max-h-80 object-cover shadow-md w-full max-w-md"
                 />
               </div>
             </div>
 
-            <div className="space-y-6 text-xs md:text-sm text-gray-700 leading-relaxed mb-12">
+            <div className="space-y-6 text-xs sm:text-sm text-gray-700 leading-relaxed mb-12">
               <p>
                 Գումարդ ավելանա՞, թե՞ միշտ հասանելի մնա։ Այլևս պետք չէ ընտրել։ Evoca խնայողական հաշվի միջոցով կարող ես միաժամանակ և՛ խնայել, և՛ ավելացնել գումարդ, և՛ անհրաժեշտ պահին ունենալ դրա հասանելիությունը։
               </p>

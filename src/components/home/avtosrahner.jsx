@@ -129,24 +129,24 @@ export default function Avtosrahner() {
         <Navbar />
 
         {/* Բովանդակության գլխավոր կոնտեյներ */}
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 pt-10 pb-16 text-left">
+        <main className="max-w-5xl mx-auto px-4 sm:px-6 pt-6 md:pt-10 pb-16 text-left">
           
           {/* Հացի փշրանքներ (Breadcrumbs) */}
-          <div className="text-xs text-gray-400 mb-6 flex items-center gap-2">
+          <div className="text-xs text-gray-400 mb-4 md:mb-6 flex items-center gap-2 flex-wrap">
             <span>🏠</span> &gt; <span className="text-gray-700 font-medium">Գործընկեր ավտոսրահներ</span>
           </div>
 
-          <h1 className="text-3xl md:text-4xl font-black text-neutral-900 mb-6">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-neutral-900 mb-6">
             Գործընկեր ավտոսրահներ
           </h1>
 
           {/* Ներածական տեքստեր */}
-          <div className="space-y-4 text-sm text-gray-600 mb-10 leading-relaxed">
+          <div className="space-y-4 text-xs sm:text-sm text-gray-600 mb-10 leading-relaxed">
             <p className="font-semibold text-neutral-800">
               Պետք է ավտովարկ և որոշել ես դիմել Evoca-ին, իմացիր՝ արդեն ունես արտոնյալ պայմաններ։
             </p>
             <div>
-              <h2 className="text-base font-bold text-neutral-900 mb-1">Նոր մեքենա, ցածր տոկոսադրույք</h2>
+              <h2 className="text-sm sm:text-base font-bold text-neutral-900 mb-1">Նոր մեքենա, ցածր տոկոսադրույք</h2>
               <p>
                 Դու գիտես, որ Evoca-ում ավտոմեքենա կարող ես ձեռք բերել ինչպես առաջնային, այնպես էլ երկրորդային շուկայից։ Առաջնային շուկայի դեպքում՝ Evoca-ն համագործակցում է մի շարք ավտոսրահների հետ և առաջարկում վարկավորման արտոնյալ պայմաններ։
               </p>
@@ -159,7 +159,7 @@ export default function Avtosrahner() {
             </p>
           </div>
 
-          <h2 className="text-xl font-bold text-neutral-900 mb-6">
+          <h2 className="text-lg sm:text-xl font-bold text-neutral-900 mb-6">
             ԱՆՀՐԱԺԵՇՏ ՏԵՂԵԿԱՏՎՈՒԹՅՈՒՆ
           </h2>
 
@@ -175,7 +175,7 @@ export default function Avtosrahner() {
                   {/* Ակորդեոնի գլխամաս (Header) */}
                   <button
                     onClick={() => toggleAccordion(item.id)}
-                    className="w-full flex items-center justify-between p-5 bg-white hover:bg-gray-50 transition-colors text-left cursor-pointer font-bold text-neutral-900 text-base"
+                    className="w-full flex items-center justify-between p-4 sm:p-5 bg-white hover:bg-gray-50 transition-colors text-left cursor-pointer font-bold text-neutral-900 text-sm sm:text-base"
                   >
                     <span>{item.title}</span>
                     <span className={`transform transition-transform duration-300 text-purple-600 font-bold ${isOpen ? 'rotate-180' : ''}`}>
@@ -185,7 +185,7 @@ export default function Avtosrahner() {
 
                   {/* Ակորդեոնի բովանդակություն (Body) */}
                   {isOpen && (
-                    <div className="p-6 bg-gray-50/50 border-t border-gray-200 space-y-3 text-xs sm:text-sm">
+                    <div className="p-4 sm:p-6 bg-gray-50/50 border-t border-gray-200 space-y-3 text-xs sm:text-sm">
                       <p><strong className="text-neutral-900">Գումար՝</strong> {item.amount}</p>
                       <p><strong className="text-neutral-900">Ժամկետ՝</strong> {item.term}</p>
                       <p><strong className="text-neutral-900">Տոկոսադրույք՝</strong> {item.rate}</p>
@@ -225,7 +225,7 @@ export default function Avtosrahner() {
             })}
           </div>
 
-        </div>
+        </main>
       </div>
 
       <Footer />

@@ -280,45 +280,45 @@ export default function Xekavarutyun() {
         <Navbar />
 
         {/* Sub-header navigation menu for About Us */}
-        <div className="bg-[#6400dc] text-white py-3 px-8 shadow-inner">
-          <div className="container mx-auto flex gap-6 text-xs font-semibold overflow-x-auto whitespace-nowrap">
-            <Link to="/mer-masin" className="text-purple-200 hover:text-white cursor-pointer">Ընդհանուր</Link>
-            <Link to="/mer-masin/karucvacq" className="text-purple-200 hover:text-white cursor-pointer">Կառուցվածք</Link>
-            <Link to="/mer-masin/bajneterer" className="text-purple-200 hover:text-white cursor-pointer">Բաժնետերեր</Link>
-            <span className="border-b-2 border-white pb-1 cursor-pointer font-black">Ղեկավարություն</span>
-            <Link to="/mer-masin/gortsynkerner" className="text-purple-200 hover:text-white cursor-pointer">Գործընկերներ</Link>
-            <Link to="/mer-masin/mrcanakner" className="text-purple-200 hover:text-white cursor-pointer">Մրցանակներ</Link>
-            <Link to="/mer-masin/csr" className="text-purple-200 hover:text-white cursor-pointer">CSR</Link>
-            <Link to="/mer-masin/xumb" className="text-purple-200 hover:text-white cursor-pointer">Էվոկա ֆինանսական խումբ</Link>
+        <div className="bg-[#6400dc] text-white py-3 px-4 md:px-8 shadow-inner">
+          <div className="container mx-auto flex gap-6 text-xs font-semibold overflow-x-auto whitespace-nowrap scrollbar-none">
+            <Link to="/mer-masin" className="text-purple-200 hover:text-white cursor-pointer shrink-0">Ընդհանուր</Link>
+            <Link to="/mer-masin/karucvacq" className="text-purple-200 hover:text-white cursor-pointer shrink-0">Կառուցվածք</Link>
+            <Link to="/mer-masin/bajneterer" className="text-purple-200 hover:text-white cursor-pointer shrink-0">Բաժնետերեր</Link>
+            <span className="border-b-2 border-white pb-1 cursor-pointer font-black shrink-0">Ղեկավարություն</span>
+            <Link to="/mer-masin/gortsynkerner" className="text-purple-200 hover:text-white cursor-pointer shrink-0">Գործընկերներ</Link>
+            <Link to="/mer-masin/mrcanakner" className="text-purple-200 hover:text-white cursor-pointer shrink-0">Մրցանակներ</Link>
+            <Link to="/mer-masin/csr" className="text-purple-200 hover:text-white cursor-pointer shrink-0">CSR</Link>
+            <Link to="/mer-masin/xumb" className="text-purple-200 hover:text-white cursor-pointer shrink-0">Էվոկա ֆինանսական խումբ</Link>
           </div>
         </div>
 
-        <main className="max-w-6xl mx-auto px-4 py-12 space-y-12">
+        <main className="max-w-6xl mx-auto px-4 py-8 md:py-12 space-y-10 md:space-y-12">
           {/* Breadcrumbs */}
-          <div className="text-xs text-gray-400 flex items-center gap-2">
-            <Link to="/mer-masin" className="hover:text-[#6400dc]">Մեր մասին</Link>
+          <div className="text-xs text-gray-400 flex items-center gap-2 overflow-x-auto whitespace-nowrap">
+            <Link to="/mer-masin" className="hover:text-[#6400dc] shrink-0">Մեր մասին</Link>
             <span>/</span>
-            <span>Evoca-ի մասին</span>
+            <span className="shrink-0">Evoca-ի մասին</span>
             <span>/</span>
-            <span className="text-gray-700 font-medium">Ղեկավարություն</span>
+            <span className="text-gray-700 font-medium shrink-0">Ղեկավարություն</span>
           </div>
 
-          <h1 className="text-3xl md:text-4xl font-extrabold text-neutral-900 mb-8">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-neutral-900 mb-6 md:mb-8">
             Ղեկավարություն
           </h1>
 
           {/* 1. Բանկի խորհուրդ */}
           <section className="space-y-6">
-            <h2 className="text-2xl font-bold text-neutral-900 border-b pb-3">Բանկի խորհուրդ</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            <h2 className="text-xl sm:text-2xl font-bold text-neutral-900 border-b pb-3">Բանկի խորհուրդ</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
               {managementData.council.map((person, idx) => (
                 <div 
                   key={idx} 
                   onClick={() => setSelectedMember(person)}
                   className="bg-gray-50 rounded-3xl p-6 border border-gray-100 shadow-xs flex flex-col items-center text-center cursor-pointer hover:shadow-md transition"
                 >
-                  <img src={person.img} alt={person.name} className="w-32 h-32 rounded-full object-cover mb-4 shadow-sm" />
-                  <h3 className="font-bold text-base text-neutral-900 mb-1">{person.name}</h3>
+                  <img src={person.img} alt={person.name} className="w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover mb-4 shadow-sm" />
+                  <h3 className="font-bold text-sm sm:text-base text-neutral-900 mb-1">{person.name}</h3>
                   <p className="text-xs text-[#6400dc] font-medium">{person.title}</p>
                 </div>
               ))}
@@ -326,17 +326,17 @@ export default function Xekavarutyun() {
           </section>
 
           {/* 2. Բանկի վարչություն */}
-          <section className="space-y-6 pt-6">
-            <h2 className="text-2xl font-bold text-neutral-900 border-b pb-3">Բանկի վարչություն</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          <section className="space-y-6 pt-4 sm:pt-6">
+            <h2 className="text-xl sm:text-2xl font-bold text-neutral-900 border-b pb-3">Բանկի վարչություն</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
               {managementData.board.map((person, idx) => (
                 <div 
                   key={idx} 
                   onClick={() => setSelectedMember(person)}
                   className="bg-gray-50 rounded-3xl p-6 border border-gray-100 shadow-xs flex flex-col items-center text-center cursor-pointer hover:shadow-md transition"
                 >
-                  <img src={person.img} alt={person.name} className="w-32 h-32 rounded-full object-cover mb-4 shadow-sm" />
-                  <h3 className="font-bold text-base text-neutral-900 mb-1">{person.name}</h3>
+                  <img src={person.img} alt={person.name} className="w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover mb-4 shadow-sm" />
+                  <h3 className="font-bold text-sm sm:text-base text-neutral-900 mb-1">{person.name}</h3>
                   <p className="text-xs text-[#6400dc] font-medium">{person.title}</p>
                 </div>
               ))}
@@ -344,17 +344,17 @@ export default function Xekavarutyun() {
           </section>
 
           {/* 3. Բանկի ներքին աուդիտ */}
-          <section className="space-y-6 pt-6">
-            <h2 className="text-2xl font-bold text-neutral-900 border-b pb-3">Բանկի ներքին աուդիտ</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          <section className="space-y-6 pt-4 sm:pt-6">
+            <h2 className="text-xl sm:text-2xl font-bold text-neutral-900 border-b pb-3">Բանկի ներքին աուդիտ</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
               {managementData.audit.map((person, idx) => (
                 <div 
                   key={idx} 
                   onClick={() => setSelectedMember(person)}
                   className="bg-gray-50 rounded-3xl p-6 border border-gray-100 shadow-xs flex flex-col items-center text-center cursor-pointer hover:shadow-md transition"
                 >
-                  <img src={person.img} alt={person.name} className="w-32 h-32 rounded-full object-cover mb-4 shadow-sm" />
-                  <h3 className="font-bold text-base text-neutral-900 mb-1">{person.name}</h3>
+                  <img src={person.img} alt={person.name} className="w-28 h-28 sm:w-32 sm:h-32 rounded-full object-cover mb-4 shadow-sm" />
+                  <h3 className="font-bold text-sm sm:text-base text-neutral-900 mb-1">{person.name}</h3>
                   <p className="text-xs text-[#6400dc] font-medium">{person.title}</p>
                 </div>
               ))}
@@ -364,7 +364,7 @@ export default function Xekavarutyun() {
           {/* Detail Modal when clicked on a member */}
           {selectedMember && (
             <div className="fixed inset-0 bg-black/60 backdrop-blur-xs z-50 flex items-center justify-center p-4">
-              <div className="bg-white rounded-3xl max-w-2xl w-full p-8 max-h-[90vh] overflow-y-auto relative shadow-2xl space-y-6">
+              <div className="bg-white rounded-3xl max-w-2xl w-full p-6 sm:p-8 max-h-[90vh] overflow-y-auto relative shadow-2xl space-y-6">
                 <button 
                   onClick={() => setSelectedMember(null)}
                   className="absolute top-4 right-4 w-8 h-8 rounded-full bg-gray-100 text-gray-600 font-bold flex items-center justify-center hover:bg-gray-200 cursor-pointer"
@@ -372,11 +372,11 @@ export default function Xekavarutyun() {
                   ✕
                 </button>
 
-                <div className="flex flex-col sm:flex-row items-center gap-6 border-b pb-6">
-                  <img src={selectedMember.img} alt={selectedMember.name} className="w-28 h-28 rounded-full object-cover shadow-md" />
-                  <div className="text-center sm:text-left">
-                    <h2 className="text-xl font-extrabold text-neutral-900 mb-1">{selectedMember.name}</h2>
-                    <p className="text-sm text-[#6400dc] font-bold">{selectedMember.title}</p>
+                <div className="flex flex-col sm:flex-row items-center gap-6 border-b pb-6 text-center sm:text-left">
+                  <img src={selectedMember.img} alt={selectedMember.name} className="w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover shadow-md shrink-0" />
+                  <div>
+                    <h2 className="text-lg sm:text-xl font-extrabold text-neutral-900 mb-1">{selectedMember.name}</h2>
+                    <p className="text-xs sm:text-sm text-[#6400dc] font-bold">{selectedMember.title}</p>
                   </div>
                 </div>
 
@@ -414,7 +414,7 @@ export default function Xekavarutyun() {
                 <div className="text-right pt-4 border-t">
                   <button 
                     onClick={() => setSelectedMember(null)}
-                    className="bg-[#6400dc] text-white px-6 py-2 rounded-full font-bold text-xs hover:bg-opacity-90 cursor-pointer"
+                    className="w-full sm:w-auto bg-[#6400dc] text-white px-6 py-2.5 rounded-full font-bold text-xs hover:bg-opacity-90 cursor-pointer"
                   >
                     Փակել
                   </button>

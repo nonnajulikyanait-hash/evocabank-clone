@@ -200,18 +200,18 @@ export default function Karucapatox() {
         <Navbar />
 
         {/* Բովանդակության գլխավոր կոնտեյներ */}
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 pt-10 pb-16 text-left">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8 md:py-12 text-left">
           
           {/* Հացի փշրանքներ (Breadcrumbs) */}
-          <div className="text-xs text-gray-400 mb-6 flex items-center gap-2">
+          <div className="text-xs text-gray-400 mb-6 flex items-center gap-2 flex-wrap">
             <span>🏠</span> &gt; <span className="text-gray-700 font-medium">Կառուցապատողներ</span>
           </div>
 
-          <h1 className="text-3xl md:text-4xl font-black text-neutral-900 mb-6">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-neutral-900 mb-6">
             Կառուցապատողներ
           </h1>
 
-          <div className="space-y-4 text-sm text-gray-600 mb-10 leading-relaxed">
+          <div className="space-y-4 text-xs sm:text-sm text-gray-600 mb-10 leading-relaxed">
             <p className="font-semibold text-neutral-800">
               Ձե՛ռք բերեք Ձեր նորաոճ և հարմարավետ բնակարանը Evocabank-ի հետ:
             </p>
@@ -220,7 +220,7 @@ export default function Karucapatox() {
             </p>
           </div>
 
-          <h2 className="text-xl font-bold text-neutral-900 mb-6">
+          <h2 className="text-lg sm:text-xl font-bold text-neutral-900 mb-6">
             ԱՆՀՐԱԺԵՇՏ ՏԵՂԵԿԱՏՎՈՒԹՅՈՒՆ
           </h2>
 
@@ -236,24 +236,24 @@ export default function Karucapatox() {
                   {/* Ակորդեոնի գլխամաս (Header) */}
                   <button
                     onClick={() => toggleAccordion(item.id)}
-                    className="w-full flex items-center justify-between p-5 bg-white hover:bg-gray-50 transition-colors text-left cursor-pointer font-bold text-neutral-900 text-base"
+                    className="w-full flex items-center justify-between p-4 sm:p-5 bg-white hover:bg-gray-50 transition-colors text-left cursor-pointer font-bold text-neutral-900 text-sm sm:text-base gap-3"
                   >
                     <span>{item.title}</span>
-                    <span className={`transform transition-transform duration-300 text-purple-600 font-bold ${isOpen ? 'rotate-180' : ''}`}>
+                    <span className={`transform transition-transform duration-300 text-purple-600 font-bold shrink-0 ${isOpen ? 'rotate-180' : ''}`}>
                       ⌄
                     </span>
                   </button>
 
                   {/* Ակորդեոնի բովանդակություն (Body) */}
                   {isOpen && (
-                    <div className="p-6 bg-gray-50/50 border-t border-gray-200 space-y-4 text-xs sm:text-sm">
+                    <div className="p-4 sm:p-6 bg-gray-50/50 border-t border-gray-200 space-y-4 text-xs sm:text-sm">
                       {item.project && (
                         <p><strong className="text-neutral-900">Նախագիծ՝</strong> {item.project}</p>
                       )}
                       <p><strong className="text-neutral-900">Հասցե՝</strong> {item.address}</p>
                       <p><strong className="text-neutral-900">Հեռ․՝</strong> {item.phone}</p>
                       {item.website && (
-                        <p>
+                        <p className="break-all">
                           <strong className="text-neutral-900">Website:</strong>{' '}
                           <a href={item.website} target="_blank" rel="noreferrer" className="text-[#6400dc] hover:underline">
                             {item.website}

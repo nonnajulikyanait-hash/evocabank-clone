@@ -32,20 +32,20 @@ function BiometricSection() {
   };
 
   return (
-    <section className="py-12 lg:py-20 bg-white overflow-hidden">
-      <div className="max-w-6xl mx-auto px-4 lg:px-8 flex flex-col lg:flex-row items-center justify-between gap-12">
+    <section className="py-10 sm:py-12 lg:py-20 bg-white overflow-hidden">
+      <div className="max-w-6xl mx-auto px-4 lg:px-8 flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
         
-        {/* Paña/Luq'i - Uchuyachisqa hinaspa chawpichasqa uyawan erankyunwan */}
-        <div className="lg:w-1/2 flex justify-center items-center relative min-h-[380px]">
+        {/* Ձախ մաս - Բիոմետրիկ նկարներն ու մանուշակագույն եռանկյունը */}
+        <div className="lg:w-1/2 flex justify-center items-center relative min-h-[320px] sm:min-h-[380px] w-full">
           
-          {/* Qhepapi k’uchu k’uchu muyukunap siq'in */}
-          <div className="absolute w-[360px] h-[360px] rounded-full border border-dashed border-gray-200 pointer-events-none flex items-center justify-center">
-            <div className="w-[280px] h-[280px] rounded-full border border-dashed border-gray-100"></div>
+          {/* Հետևի կետագծով շրջաններ */}
+          <div className="absolute w-[300px] h-[300px] sm:w-[360px] sm:h-[360px] rounded-full border border-dashed border-gray-200 pointer-events-none flex items-center justify-center">
+            <div className="w-[220px] h-[220px] sm:w-[280px] sm:h-[280px] rounded-full border border-dashed border-gray-100"></div>
           </div>
 
-          {/* Puka-puka/Yuraq uyarayuq yuraq/puka manushakuqi erankyun (Perfect alignment) */}
+          {/* Մանուշակագույն եռանկյունաձև ֆոն */}
           <div 
-            className="absolute w-[320px] h-[295px] bg-[#6400DC] pointer-events-none flex items-center justify-center"
+            className="absolute w-[280px] h-[260px] sm:w-[320px] sm:h-[295px] bg-[#6400DC] pointer-events-none flex items-center justify-center"
             style={{
               clipPath: 'polygon(0% 0%, 100% 0%, 50% 100%)',
               borderTopLeftRadius: '32px',
@@ -53,8 +53,8 @@ function BiometricSection() {
             }}
           ></div>
           
-          {/* Uyan - Kikin chawpipi, tupanallanpaq */}
-          <div className="relative z-10 flex justify-center items-center w-[320px] h-[380px]">
+          {/* Դեմքերի անիմացիոն պատկերներ */}
+          <div className="relative z-10 flex justify-center items-center w-[280px] h-[340px] sm:w-[320px] sm:h-[380px]">
             <img 
               src={faces[faceIndex]} 
               alt="Biometric Identification" 
@@ -65,30 +65,30 @@ function BiometricSection() {
           </div>
         </div>
 
-        {/* Paña mas - Qillqakuna, QR code hinaspa boton */}
-        <div className="lg:w-1/2 space-y-5 text-left z-10">
+        {/* Աջ մաս - Վերնագիր, նկարագրություն, QR կոդ և կոճակ */}
+        <div className="lg:w-1/2 space-y-4 sm:space-y-5 text-left z-10 w-full">
           <h2 className="text-2xl sm:text-3xl lg:text-[34px] font-black text-gray-900 tracking-tight leading-snug">
             Դարձիր Evocabank-ի հաճախորդ բիոմետրիկ նույնականացմամբ
           </h2>
-          <p className="text-sm sm:text-base text-gray-600 max-w-md leading-relaxed font-normal">
+          <p className="text-xs sm:text-sm lg:text-base text-gray-600 max-w-md leading-relaxed font-normal">
             Սկանավորի՛ր QR կոդը, ներբեռնի՛ր EvocaTOUCH հարմարավետ հավելվածը, ստեղծի՛ր քո հաշիվը և ստացիր քարտ
           </p>
 
-          <div className="flex flex-row items-center gap-6 pt-3">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 pt-2 sm:pt-3">
             {/* QR code */}
             <div className="bg-white p-1.5 rounded-xl shadow-sm border border-gray-100 shrink-0">
               <img 
                 src="https://www.evoca.am/img/biometric-section-QR-Code.png" 
                 alt="Biometric QR Code" 
-                className="w-28 h-28 object-contain"
+                className="w-24 h-24 sm:w-28 sm:h-28 object-contain"
               />
             </div>
 
-            {/* Boton */}
+            {/* Կոճակ */}
             <div>
               <button 
                 onClick={handleLearnMore}
-                className="font-bold text-xs sm:text-sm px-7 py-3.5 rounded-full text-white bg-[#6400DC] hover:bg-opacity-90 transition-all shadow-md cursor-pointer"
+                className="font-bold text-xs sm:text-sm px-6 sm:px-7 py-3 sm:py-3.5 rounded-full text-white bg-[#6400DC] hover:bg-opacity-95 transition-all shadow-md cursor-pointer"
               >
                 Իմանալ ավելին
               </button>

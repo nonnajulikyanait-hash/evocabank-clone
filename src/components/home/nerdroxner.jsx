@@ -80,8 +80,8 @@ export default function Nerdroxner() {
         <Navbar />
 
         {/* Reports Sub-header Purple Menu */}
-        <div className="bg-[#6400dc] text-white py-3 px-8 shadow-inner">
-          <div className="container mx-auto flex gap-8 text-xs font-semibold overflow-x-auto whitespace-nowrap">
+        <div className="bg-[#6400dc] text-white py-3 px-4 sm:px-8 shadow-inner">
+          <div className="container mx-auto flex gap-6 sm:gap-8 text-xs sm:text-sm font-semibold overflow-x-auto whitespace-nowrap">
             <Link to="/hashvetvutyunner" className="text-purple-200 hover:text-white transition">Աուդիտորական եզրակացություն</Link>
             <Link to="/finansakan" className="text-purple-200 hover:text-white transition">Ֆինանսական հաշվետվություններ</Link>
             <Link to="/nerdroxner" className="border-b-2 border-white pb-1 cursor-pointer font-black">Ներդրողների համար</Link>
@@ -90,9 +90,9 @@ export default function Nerdroxner() {
           </div>
         </div>
 
-        <main className="max-w-6xl mx-auto px-4 py-12 space-y-12">
+        <main className="max-w-6xl mx-auto px-4 py-8 md:py-12 space-y-8 md:space-y-12 text-left">
           {/* Breadcrumbs */}
-          <div className="text-xs text-gray-400 flex items-center gap-2">
+          <div className="text-xs text-gray-400 flex items-center gap-2 flex-wrap">
             <Link to="/mer-masin" className="hover:text-[#6400dc]">Մեր մասին</Link>
             <span>/</span>
             <span>Հաշվետվություններ</span>
@@ -100,15 +100,15 @@ export default function Nerdroxner() {
             <span className="text-gray-700 font-medium">Ներդրողների համար</span>
           </div>
 
-          <h1 className="text-3xl md:text-4xl font-extrabold text-neutral-900 mb-8">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-neutral-900 mb-6 md:mb-8">
             Ներդրողների համար
           </h1>
 
           {/* Investor Presentations Grid */}
-          <div className="space-y-12">
+          <div className="space-y-10 md:space-y-12">
             {investorReports.map((group, idx) => (
               <div key={idx} className="space-y-4">
-                <h2 className="text-2xl font-extrabold text-neutral-900">
+                <h2 className="text-xl sm:text-2xl font-extrabold text-neutral-900">
                   {group.year}
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
@@ -120,7 +120,7 @@ export default function Nerdroxner() {
                       rel="noopener noreferrer"
                       className="bg-[#f8f9fa] hover:bg-gray-100 border border-gray-100 rounded-2xl overflow-hidden shadow-xs transition group flex flex-col"
                     >
-                      <div className="w-full h-48 bg-gray-100 overflow-hidden flex items-center justify-center p-2">
+                      <div className="w-full h-44 sm:h-48 bg-gray-100 overflow-hidden flex items-center justify-center p-2">
                         <img 
                           src={item.img} 
                           alt={item.title} 
@@ -128,7 +128,7 @@ export default function Nerdroxner() {
                         />
                       </div>
                       <div className="p-4 flex items-center justify-between bg-white border-t border-gray-100">
-                        <span className="text-neutral-800 font-bold text-sm group-hover:text-[#6400dc] transition">
+                        <span className="text-neutral-800 font-bold text-xs sm:text-sm group-hover:text-[#6400dc] transition">
                           {item.title}
                         </span>
                         <span className="text-gray-400 group-hover:text-[#6400dc] text-sm font-bold">↓</span>

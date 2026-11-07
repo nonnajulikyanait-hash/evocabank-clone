@@ -31,44 +31,44 @@ export default function Kap() {
         <Navbar />
 
         {/* Բովանդակության գլխավոր կոնտեյներ */}
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 pt-10 pb-16 text-left">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-6 md:py-10 text-left">
           
           {/* Հացի փշրանքներ (Breadcrumbs) */}
-          <div className="text-xs text-gray-400 mb-6 flex items-center gap-2">
+          <div className="text-xs text-gray-400 mb-6 flex items-center gap-2 flex-wrap">
             <span>🏠</span> &gt; <span className="text-gray-700 font-medium">Հետադարձ կապ</span>
           </div>
 
-          <h1 className="text-3xl md:text-4xl font-black text-neutral-900 mb-8">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-neutral-900 mb-6 md:mb-8">
             Հետադարձ կապ
           </h1>
 
           {/* Կոնտակտային տվյալների աղյուսակ / բլոկ */}
           <div className="border border-gray-200 rounded-2xl overflow-hidden mb-12 shadow-sm">
-            <div className="divide-y divide-gray-200 text-sm">
-              <div className="grid grid-cols-1 sm:grid-cols-3 p-4 bg-gray-50">
+            <div className="divide-y divide-gray-200 text-xs sm:text-sm">
+              <div className="grid grid-cols-1 sm:grid-cols-3 p-4 bg-gray-50 gap-1 sm:gap-0">
                 <span className="font-bold text-neutral-900">Հասցե</span>
                 <span className="sm:col-span-2 text-gray-700">ՀՀ, 0010 Երևան, Հանրապետության փող. 44/2 շենք</span>
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-3 p-4 bg-white">
+              <div className="grid grid-cols-1 sm:grid-cols-3 p-4 bg-white gap-1 sm:gap-0">
                 <span className="font-bold text-neutral-900">Հեռախոսահամար</span>
                 <span className="sm:col-span-2 text-gray-700">
                   +374 10 605555,<br />
                   84-44
                 </span>
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-3 p-4 bg-gray-50">
+              <div className="grid grid-cols-1 sm:grid-cols-3 p-4 bg-gray-50 gap-1 sm:gap-0">
                 <span className="font-bold text-neutral-900">Էլ. փոստ</span>
                 <span className="sm:col-span-2 text-gray-700">hello@evoca.am</span>
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-3 p-4 bg-white">
+              <div className="grid grid-cols-1 sm:grid-cols-3 p-4 bg-white gap-1 sm:gap-0">
                 <span className="font-bold text-neutral-900">SWIFT</span>
                 <span className="sm:col-span-2 text-gray-700">PRML AM 22</span>
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-3 p-4 bg-gray-50">
+              <div className="grid grid-cols-1 sm:grid-cols-3 p-4 bg-gray-50 gap-1 sm:gap-0">
                 <span className="font-bold text-neutral-900">Աշխատանքային ժամեր</span>
                 <span className="sm:col-span-2 text-gray-700">9:00 - 18:00</span>
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-3 p-4 bg-white">
+              <div className="grid grid-cols-1 sm:grid-cols-3 p-4 bg-white gap-1 sm:gap-0">
                 <span className="font-bold text-neutral-900">Հաճախորդների սպասարկման ժամեր</span>
                 <span className="sm:col-span-2 text-gray-700">9:30 - 17:00</span>
               </div>
@@ -76,7 +76,7 @@ export default function Kap() {
           </div>
 
           {/* Նկարագրություն */}
-          <div className="bg-purple-50 border border-purple-100 rounded-2xl p-6 mb-10 text-sm text-gray-700 leading-relaxed">
+          <div className="bg-purple-50 border border-purple-100 rounded-2xl p-5 sm:p-6 mb-10 text-xs sm:text-sm text-gray-700 leading-relaxed">
             <p>
               Մենք կցանկանայինք լսել ձեր մտքերը, առաջարկությունները, մտահոգությունները կամ ցանկացած խնդրի հետ կապված հարցերը, որպեսզի կարողանանք բարելավել մեր ծառայությունները:
             </p>
@@ -86,12 +86,12 @@ export default function Kap() {
           </div>
 
           {/* Հետադարձ կապի ֆորմա */}
-          <form onSubmit={handleSubmit} className="space-y-6 text-sm text-gray-700 bg-white border border-gray-200 rounded-2xl p-6 sm:p-8 shadow-sm">
+          <form onSubmit={handleSubmit} className="space-y-6 text-xs sm:text-sm text-gray-700 bg-white border border-gray-200 rounded-2xl p-5 sm:p-6 md:p-8 shadow-sm">
             
             {/* Դուք հանդիսանում եք */}
             <div>
               <label className="block font-bold text-neutral-900 mb-2">Դուք հանդիսանում եք</label>
-              <div className="flex gap-6">
+              <div className="flex gap-6 flex-wrap">
                 <label className="flex items-center gap-2 cursor-pointer">
                   <input 
                     type="radio" 
@@ -118,7 +118,7 @@ export default function Kap() {
             {/* Հետադարձ կապի տեսակը */}
             <div>
               <label className="block font-bold text-neutral-900 mb-2">Հետադարձ կապի տեսակը *</label>
-              <div className="flex gap-6">
+              <div className="flex gap-6 flex-wrap">
                 <label className="flex items-center gap-2 cursor-pointer">
                   <input 
                     type="radio" 
@@ -143,7 +143,7 @@ export default function Kap() {
             </div>
 
             {/* Անուն և Ազգանուն */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <label className="block font-medium text-neutral-900 mb-1">Անուն *</label>
                 <input 
@@ -171,7 +171,7 @@ export default function Kap() {
             </div>
 
             {/* Հեռախոսահամար և Էլ. փոստ */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <label className="block font-medium text-neutral-900 mb-1">Հեռ՝ *</label>
                 <div className="flex items-center border border-gray-300 rounded-xl overflow-hidden focus-within:border-[#6400dc]">

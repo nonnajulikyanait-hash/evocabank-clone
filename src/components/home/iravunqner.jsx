@@ -9,20 +9,20 @@ export default function Iravunqner() {
         <Navbar />
 
         {/* Բովանդակության գլխավոր կոնտեյներ */}
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 pt-10 pb-16 text-left">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8 md:py-12 text-left">
           
           {/* Հացի փշրանքներ (Breadcrumbs) */}
-          <div className="text-xs text-gray-400 mb-6 flex items-center gap-2">
+          <div className="text-xs text-gray-400 mb-6 flex items-center gap-2 flex-wrap">
             <span>🏠</span> &gt; <span className="text-gray-700 font-medium">Հաճախորդի իրավունքները (Բողոքի ներկայացման կանոններ)</span>
           </div>
 
-          <h1 className="text-3xl md:text-4xl font-black text-neutral-900 mb-8">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-neutral-900 mb-6 md:mb-8">
             Հաճախորդի իրավունքները (Բողոքի ներկայացման կանոններ)
           </h1>
 
-          <div className="space-y-6 text-sm text-gray-700 leading-relaxed">
+          <div className="space-y-6 text-xs sm:text-sm text-gray-700 leading-relaxed">
             <div>
-              <h2 className="text-lg font-bold text-neutral-900 mb-2">Հարգելի Հաճախորդներ՝</h2>
+              <h2 className="text-base sm:text-lg font-bold text-neutral-900 mb-2">Հարգելի Հաճախորդներ՝</h2>
               <p>
                 Մեր կողմից հաճախորդների բողոք-պահանջների ընդունման, քննարկման և որոշումների կայացման (արձագանքման) գործընթացը կարգավորվում է «Էվոկաբանկ» ԲԲԸ կողմից հաստատված` Բողոքների քննության կանոններով:
               </p>
@@ -42,7 +42,7 @@ export default function Iravunqner() {
 
             {/* Ուշադրություն բաժին */}
             <div className="pt-4">
-              <h3 className="text-lg font-bold text-neutral-900 mb-3">Ուշադրություն`</h3>
+              <h3 className="text-base sm:text-lg font-bold text-neutral-900 mb-3">Ուշադրություն՝</h3>
               <ul className="list-disc pl-5 space-y-3">
                 <li>
                   Ցանկացած անձ իրավունք ունի ստանալ «Էվոկաբանկ» ԲԲԸ-ի վերաբերյալ «Բանկերի և բանկային գործունեության մասին» ՀՀ օրենքի 20-րդ հոդվածի 3-րդ մասով, 43-րդ հոդվածի 2-րդ մասով սահմանված տեղեկատվության պատճենները (օրենքը կարող եք գտնել ՀՀ Կենտրոնական բանկի <a href="https://www.cba.am" target="_blank" rel="noreferrer" className="text-[#6400dc] underline font-semibold">www.cba.am</a> ինտերնետային հասցեում): Տեղեկատվության թղթային մեկ տպագիր էջի արժեքը 50 դրամ է, իսկ էլեկտրոնային առաքման դեպքում անվճար է:

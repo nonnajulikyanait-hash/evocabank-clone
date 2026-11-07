@@ -39,25 +39,25 @@ export default function Usumnakan() {
         <Navbar />
 
         {/* Manushakaguyn Sub-bar */}
-        <div className="bg-[#6400dc] text-white py-3 px-8 shadow-inner">
-          <div className="container mx-auto flex gap-8 text-xs font-semibold overflow-x-auto whitespace-nowrap">
-            <Link to="/praktika" className="text-purple-200 hover:text-white transition">Աշխատանք Evoca-ում</Link>
-            <Link to="/usumnakan" className="border-b-2 border-white pb-1 cursor-pointer font-black">Ուսումնական պրակտիկա</Link>
-            <Link to="/evocabridge" className="text-purple-200 hover:text-white transition">EvocaBRIDGE</Link>
+        <div className="bg-[#6400dc] text-white py-3 px-4 md:px-8 shadow-inner">
+          <div className="container mx-auto flex gap-6 sm:gap-8 text-xs font-semibold overflow-x-auto whitespace-nowrap scrollbar-none">
+            <Link to="/praktika" className="text-purple-200 hover:text-white transition shrink-0">Աշխատանք Evoca-ում</Link>
+            <Link to="/usumnakan" className="border-b-2 border-white pb-1 cursor-pointer font-black shrink-0">Ուսումնական պրակտիկա</Link>
+            <Link to="/evocabridge" className="text-purple-200 hover:text-white transition shrink-0">EvocaBRIDGE</Link>
           </div>
         </div>
 
-        <main className="space-y-16 pb-20">
+        <main className="space-y-12 sm:space-y-16 pb-16 md:pb-20">
           {/* Top Banner with Image */}
-          <div className="relative w-full h-[350px] md:h-[450px] overflow-hidden bg-gray-900">
+          <div className="relative w-full h-[280px] sm:h-[350px] md:h-[450px] overflow-hidden bg-gray-900">
             <img 
               src="https://www.evoca.am/images-cache/menu/1/1619460987097/1920x634.jpg" 
               alt="Ուսումնական պրակտիկա" 
               className="w-full h-full object-cover opacity-80"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-8 md:p-16">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6 sm:p-8 md:p-16">
               <div className="container mx-auto max-w-6xl">
-                <h1 className="text-3xl md:text-5xl font-black text-white">
+                <h1 className="text-2xl sm:text-3xl md:text-5xl font-black text-white">
                   Ուսումնական պրակտիկա
                 </h1>
               </div>
@@ -65,52 +65,52 @@ export default function Usumnakan() {
           </div>
 
           {/* Intro Description */}
-          <div className="container mx-auto px-4 max-w-4xl text-center space-y-6 pt-4">
-            <p className="text-neutral-600 text-base md:text-lg leading-relaxed">
+          <div className="container mx-auto px-4 max-w-4xl text-center space-y-6 pt-2 sm:pt-4">
+            <p className="text-neutral-600 text-sm sm:text-base md:text-lg leading-relaxed">
               Evocabank-ն, առանձնահատուկ ուշադրություն դարձնելով երիտասարդության զարգացմանը և նրանց համար հնարավորություններ ստեղծելուն, պարբերաբար կազմակերպում է ուսումնական պրակտիկաներ` համագործակցելով հայաստանյան առաջատար բուհերի հետ:
             </p>
           </div>
 
           {/* Partner Universities Section */}
-          <div className="container mx-auto px-4 max-w-6xl text-center space-y-10">
-            <h2 className="text-2xl md:text-3xl font-black text-neutral-950">
+          <div className="container mx-auto px-4 max-w-6xl text-center space-y-8 sm:space-y-10">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-black text-neutral-950 leading-tight">
               Համալսարանական պրակտիկայի շրջանակներում մենք համագործակցում ենք հետևյալ Բուհերի հետ՝
             </h2>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
               <div className="flex flex-col items-center space-y-4 bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:border-[#6400dc] transition">
                 <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center p-3 shadow-xs">
                   <img src="https://www.evoca.am/images-cache/partner_universities/1/16192503158745/120x120.jpg" alt="ԵՊՀ" className="w-16 h-16 object-contain" />
                 </div>
-                <span className="font-bold text-sm text-neutral-800">Երևանի պետական համալսարան</span>
+                <span className="font-bold text-xs sm:text-sm text-neutral-800">Երևանի պետական համալսարան</span>
               </div>
 
               <div className="flex flex-col items-center space-y-4 bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:border-[#6400dc] transition">
                 <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center p-3 shadow-xs">
                   <img src="https://www.evoca.am/images-cache/partner_universities/1/16192501535211/120x120.jpg" alt="ՀԱՀ" className="w-16 h-16 object-contain" />
                 </div>
-                <span className="font-bold text-sm text-neutral-800">Հայաստանի ամերիկյան համալսարան</span>
+                <span className="font-bold text-xs sm:text-sm text-neutral-800">Հայաստանի ամերիկյան համալսարան</span>
               </div>
 
               <div className="flex flex-col items-center space-y-4 bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:border-[#6400dc] transition">
                 <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center p-3 shadow-xs">
                   <img src="https://www.evoca.am/images-cache/partner_universities/1/16192504505443/120x120.jpg" alt="ՀՊՏՀ" className="w-16 h-16 object-contain" />
                 </div>
-                <span className="font-bold text-sm text-neutral-800">Հայաստանի պետական տնտեսագիտական համալսարան</span>
+                <span className="font-bold text-xs sm:text-sm text-neutral-800">Հայաստանի պետական տնտեսագիտական համալսարան</span>
               </div>
 
               <div className="flex flex-col items-center space-y-4 bg-gray-50 p-6 rounded-2xl border border-gray-100 hover:border-[#6400dc] transition">
                 <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center p-3 shadow-xs">
                   <img src="https://www.evoca.am/images-cache/partner_universities/1/16192505629164/120x120.jpg" alt="ՀՌՀ" className="w-16 h-16 object-contain" />
                 </div>
-                <span className="font-bold text-sm text-neutral-800">Հայ-Ռուսական Համալսարան</span>
+                <span className="font-bold text-xs sm:text-sm text-neutral-800">Հայ-Ռուսական Համալսարան</span>
               </div>
             </div>
           </div>
 
           {/* Practice Phases Accordion */}
-          <div className="container mx-auto px-4 max-w-4xl space-y-8 pt-6">
-            <h2 className="text-2xl md:text-3xl font-black text-neutral-950 text-center">
+          <div className="container mx-auto px-4 max-w-4xl space-y-6 sm:space-y-8 pt-4 sm:pt-6">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-black text-neutral-950 text-center">
               Ուսումնական պրակտիկայի փուլեր
             </h2>
 
@@ -119,16 +119,16 @@ export default function Usumnakan() {
               <div className="border border-gray-200 rounded-2xl overflow-hidden shadow-xs bg-white">
                 <button 
                   onClick={() => togglePhase(1)}
-                  className="w-full text-left p-5 md:p-6 flex justify-between items-center gap-4 font-bold text-neutral-900 text-sm md:text-base hover:text-[#6400dc] transition cursor-pointer"
+                  className="w-full text-left p-4 sm:p-5 md:p-6 flex justify-between items-center gap-4 font-bold text-neutral-900 text-xs sm:text-sm md:text-base hover:text-[#6400dc] transition cursor-pointer"
                 >
                   <div className="flex items-center gap-3">
-                    <span className="w-8 h-8 rounded-full bg-[#6400dc] text-white flex items-center justify-center text-xs font-bold">1</span>
+                    <span className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#6400dc] text-white flex items-center justify-center text-xs font-bold shrink-0">1</span>
                     <span>Առաջին փուլ` Համագործակցություն</span>
                   </div>
                   <span className={`text-xl transform transition-transform duration-300 ${openPhase === 1 ? 'rotate-180 text-[#6400dc]' : 'text-gray-400'}`}>∨</span>
                 </button>
                 {openPhase === 1 && (
-                  <div className="px-6 pb-6 pt-2 border-t border-gray-100 text-neutral-600 text-sm leading-relaxed bg-purple-50/30">
+                  <div className="px-4 sm:px-6 pb-6 pt-2 border-t border-gray-100 text-neutral-600 text-xs sm:text-sm leading-relaxed bg-purple-50/30">
                     Բարձրագույն ուսումնական հաստատության և Evocabank-ի միջև կնքվում է ուսումնական պրակտիկայի վերաբերյալ պայմանագիր` համաձայն ուսումնական պլանի:
                   </div>
                 )}
@@ -138,16 +138,16 @@ export default function Usumnakan() {
               <div className="border border-gray-200 rounded-2xl overflow-hidden shadow-xs bg-white">
                 <button 
                   onClick={() => togglePhase(2)}
-                  className="w-full text-left p-5 md:p-6 flex justify-between items-center gap-4 font-bold text-neutral-900 text-sm md:text-base hover:text-[#6400dc] transition cursor-pointer"
+                  className="w-full text-left p-4 sm:p-5 md:p-6 flex justify-between items-center gap-4 font-bold text-neutral-900 text-xs sm:text-sm md:text-base hover:text-[#6400dc] transition cursor-pointer"
                 >
                   <div className="flex items-center gap-3">
-                    <span className="w-8 h-8 rounded-full bg-[#6400dc] text-white flex items-center justify-center text-xs font-bold">2</span>
+                    <span className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#6400dc] text-white flex items-center justify-center text-xs font-bold shrink-0">2</span>
                     <span>Երկրորդ փուլ` Դիմում-Հայտ</span>
                   </div>
                   <span className={`text-xl transform transition-transform duration-300 ${openPhase === 2 ? 'rotate-180 text-[#6400dc]' : 'text-gray-400'}`}>∨</span>
                 </button>
                 {openPhase === 2 && (
-                  <div className="px-6 pb-6 pt-2 border-t border-gray-100 text-neutral-600 text-sm leading-relaxed bg-purple-50/30">
+                  <div className="px-4 sm:px-6 pb-6 pt-2 border-t border-gray-100 text-neutral-600 text-xs sm:text-sm leading-relaxed bg-purple-50/30">
                     Ուսանողը, ով ցանկանում է անցնել պրակտիկա, պետք է լրացնի դիմում-հայտ՝ կցելով ինքնակենսագրականը:
                   </div>
                 )}
@@ -157,16 +157,16 @@ export default function Usumnakan() {
               <div className="border border-gray-200 rounded-2xl overflow-hidden shadow-xs bg-white">
                 <button 
                   onClick={() => togglePhase(3)}
-                  className="w-full text-left p-5 md:p-6 flex justify-between items-center gap-4 font-bold text-neutral-900 text-sm md:text-base hover:text-[#6400dc] transition cursor-pointer"
+                  className="w-full text-left p-4 sm:p-5 md:p-6 flex justify-between items-center gap-4 font-bold text-neutral-900 text-xs sm:text-sm md:text-base hover:text-[#6400dc] transition cursor-pointer"
                 >
                   <div className="flex items-center gap-3">
-                    <span className="w-8 h-8 rounded-full bg-[#6400dc] text-white flex items-center justify-center text-xs font-bold">3</span>
+                    <span className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#6400dc] text-white flex items-center justify-center text-xs font-bold shrink-0">3</span>
                     <span>Երրորդ փուլ` Թեստավորում</span>
                   </div>
                   <span className={`text-xl transform transition-transform duration-300 ${openPhase === 3 ? 'rotate-180 text-[#6400dc]' : 'text-gray-400'}`}>∨</span>
                 </button>
                 {openPhase === 3 && (
-                  <div className="px-6 pb-6 pt-2 border-t border-gray-100 text-neutral-600 text-sm leading-relaxed bg-purple-50/30 space-y-2">
+                  <div className="px-4 sm:px-6 pb-6 pt-2 border-t border-gray-100 text-neutral-600 text-xs sm:text-sm leading-relaxed bg-purple-50/30 space-y-2">
                     <p>Դիմորդներն անցնում են թեստավորում, որն իրականացվում է երկու փուլով:</p>
                     <p><strong>Առաջին փուլ</strong> գրավոր թեստ է ընդհանուր զարգացվածության վերաբերյալ` ստուգում է hard skills:</p>
                     <p>Բավարար արդյունքներ ունենալու դեպքում թեկնածուն տեղափոխվում է <strong>երկրորդ փուլ</strong>, որը թիմային առաջադրանք է, ստուգում է soft skills:</p>
@@ -178,16 +178,16 @@ export default function Usumnakan() {
               <div className="border border-gray-200 rounded-2xl overflow-hidden shadow-xs bg-white">
                 <button 
                   onClick={() => togglePhase(4)}
-                  className="w-full text-left p-5 md:p-6 flex justify-between items-center gap-4 font-bold text-neutral-900 text-sm md:text-base hover:text-[#6400dc] transition cursor-pointer"
+                  className="w-full text-left p-4 sm:p-5 md:p-6 flex justify-between items-center gap-4 font-bold text-neutral-900 text-xs sm:text-sm md:text-base hover:text-[#6400dc] transition cursor-pointer"
                 >
                   <div className="flex items-center gap-3">
-                    <span className="w-8 h-8 rounded-full bg-[#6400dc] text-white flex items-center justify-center text-xs font-bold">4</span>
+                    <span className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#6400dc] text-white flex items-center justify-center text-xs font-bold shrink-0">4</span>
                     <span>Չորրորդ փուլ` Ուսումնական պրակտիկա</span>
                   </div>
                   <span className={`text-xl transform transition-transform duration-300 ${openPhase === 4 ? 'rotate-180 text-[#6400dc]' : 'text-gray-400'}`}>∨</span>
                 </button>
                 {openPhase === 4 && (
-                  <div className="px-6 pb-6 pt-2 border-t border-gray-100 text-neutral-600 text-sm leading-relaxed bg-purple-50/30 space-y-2">
+                  <div className="px-4 sm:px-6 pb-6 pt-2 border-t border-gray-100 text-neutral-600 text-xs sm:text-sm leading-relaxed bg-purple-50/30 space-y-2">
                     <p>Նախորդ փուլում լավագույն արդյունք ցուցաբերած դիմորդներն սկսում են պրակտիկան: Ուսանողները, ներածական դասընթաց անցնելուց և կազմակերպությանը ծանոթանալուց հետո, անմիջապես ներգրավվում են ամենօրյա աշխատանքներում` կիրառելով համալսարանական գիտելիքները և հմտությունները:</p>
                     <p>Պրակտիկայի ավարտին ուսանողներն ստանում են մեծ փորձ, պրակտիկ գիտելիքներ և մոտիվացիա: Եվ իհարկե, պրակտիկայի մասնակցության հավաստագիր:</p>
                   </div>
@@ -198,16 +198,16 @@ export default function Usumnakan() {
               <div className="border border-gray-200 rounded-2xl overflow-hidden shadow-xs bg-white">
                 <button 
                   onClick={() => togglePhase(5)}
-                  className="w-full text-left p-5 md:p-6 flex justify-between items-center gap-4 font-bold text-neutral-900 text-sm md:text-base hover:text-[#6400dc] transition cursor-pointer"
+                  className="w-full text-left p-4 sm:p-5 md:p-6 flex justify-between items-center gap-4 font-bold text-neutral-900 text-xs sm:text-sm md:text-base hover:text-[#6400dc] transition cursor-pointer"
                 >
                   <div className="flex items-center gap-3">
-                    <span className="w-8 h-8 rounded-full bg-[#6400dc] text-white flex items-center justify-center text-xs font-bold">5</span>
+                    <span className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#6400dc] text-white flex items-center justify-center text-xs font-bold shrink-0">5</span>
                     <span>Հինգերորդ փուլ` Աշխատանքի առաջարկ</span>
                   </div>
                   <span className={`text-xl transform transition-transform duration-300 ${openPhase === 5 ? 'rotate-180 text-[#6400dc]' : 'text-gray-400'}`}>∨</span>
                 </button>
                 {openPhase === 5 && (
-                  <div className="px-6 pb-6 pt-2 border-t border-gray-100 text-neutral-600 text-sm leading-relaxed bg-purple-50/30">
+                  <div className="px-4 sm:px-6 pb-6 pt-2 border-t border-gray-100 text-neutral-600 text-xs sm:text-sm leading-relaxed bg-purple-50/30">
                     Ստուգումների դրական արդյունքներ ստանալուց հետո մեր թիմը կապ կհաստատի Ձեզ հետ և կներկայացնի աշխատանքի առաջարկ: Ձեր կողմից այն ընդունվելուց հետո կիրականացվեն փաստաթղթային ձևակերպումները և կամփոփվեն այլ մանրամասներ: Բարի գալուստ Evocabank!
                   </div>
                 )}
@@ -216,13 +216,13 @@ export default function Usumnakan() {
           </div>
 
           {/* Application Form Section */}
-          <div className="container mx-auto px-4 max-w-3xl pt-12">
-            <div className="bg-white border border-gray-200 rounded-3xl p-8 md:p-12 shadow-sm space-y-8">
+          <div className="container mx-auto px-4 max-w-3xl pt-8 sm:pt-12">
+            <div className="bg-white border border-gray-200 rounded-3xl p-6 sm:p-8 md:p-12 shadow-sm space-y-6 sm:space-y-8">
               <div className="space-y-2 text-center">
-                <h2 className="text-2xl md:text-3xl font-black text-neutral-950">
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-black text-neutral-950">
                   Ուսումնական պրակտիկայի դիմում-հայտ
                 </h2>
-                <p className="text-gray-500 text-sm">
+                <p className="text-gray-500 text-xs sm:text-sm">
                   Եթե ցանկանում ես անցնել ուսումնական պրակտիկա Evoca-ում, կարող ես ուղարկել դիմում` կցելով ինքնակենսագրականը:
                 </p>
               </div>
@@ -284,7 +284,7 @@ export default function Usumnakan() {
                 {/* University selection */}
                 <div className="space-y-3">
                   <label className="text-xs font-bold text-neutral-700 block">ԲՈՒՀ *</label>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {[
                       'Երևանի պետական համալսարան',
                       'Հայաստանի ամերիկյան համալսարան',
@@ -351,7 +351,7 @@ export default function Usumnakan() {
 
                 <div className="space-y-2">
                   <label className="text-xs font-bold text-neutral-700 block">Ստուգման ծածկագիր *</label>
-                  <div className="flex gap-4 items-center">
+                  <div className="flex flex-col sm:flex-row gap-4 items-center">
                     <input 
                       type="text" 
                       name="captcha"
@@ -359,9 +359,9 @@ export default function Usumnakan() {
                       placeholder="Մուտքագրեք ծածկագիրը"
                       value={formData.captcha}
                       onChange={handleChange}
-                      className="w-full md:w-1/2 border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#6400dc]" 
+                      className="w-full sm:w-1/2 border border-gray-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#6400dc]" 
                     />
-                    <div className="bg-gray-100 border border-gray-300 px-6 py-3 rounded-xl font-mono font-bold text-gray-700 tracking-widest">
+                    <div className="bg-gray-100 border border-gray-300 px-6 py-3 rounded-xl font-mono font-bold text-gray-700 tracking-widest w-full sm:w-auto text-center">
                       8 4 9 2
                     </div>
                   </div>
@@ -370,7 +370,7 @@ export default function Usumnakan() {
                 <div className="pt-4 flex justify-center">
                   <button 
                     type="submit"
-                    className="bg-[#6400dc] hover:bg-opacity-90 text-white font-bold text-sm px-8 py-4 rounded-xl transition shadow-sm cursor-pointer"
+                    className="w-full sm:w-auto bg-[#6400dc] hover:bg-opacity-90 text-white font-bold text-sm px-8 py-4 rounded-xl transition shadow-sm cursor-pointer"
                   >
                     Ես ուզում եմ աշխատել Evoca-ում :)
                   </button>

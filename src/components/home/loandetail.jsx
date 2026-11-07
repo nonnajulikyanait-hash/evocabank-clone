@@ -370,18 +370,18 @@ export default function LoanDetail() {
       <Navbar />
       
       <div className="bg-[#6400dc] text-white py-3 px-4 shadow-inner">
-        <div className="max-w-7xl mx-auto flex items-center space-x-8 text-xs sm:text-sm font-semibold overflow-x-auto whitespace-nowrap">
+        <div className="max-w-7xl mx-auto flex items-center space-x-6 sm:space-x-8 text-xs sm:text-sm font-semibold overflow-x-auto whitespace-nowrap">
           <Link to="/loans" className="text-white border-b-2 border-white pb-1 cursor-pointer">Վարկեր</Link>
           <Link to="/credit-history-and-score" className="text-white opacity-80 hover:opacity-100 cursor-pointer">Վարկային պատմություն և սքոր</Link>
           <Link to="/important-information" className="text-white opacity-80 hover:opacity-100 cursor-pointer">Կարևոր տեղեկատվություն</Link>
         </div>
       </div>
 
-      <div className="relative bg-[#e6d2ff] text-neutral-900 overflow-hidden py-16 px-4 md:px-12 rounded-b-[40px] shadow-sm">
+      <div className="relative bg-[#e6d2ff] text-neutral-900 overflow-hidden py-10 sm:py-16 px-4 md:px-12 rounded-b-[30px] sm:rounded-b-[40px] shadow-sm">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center relative z-10">
           <div className="space-y-4 text-left">
-            <h1 className="text-3xl md:text-5xl font-black tracking-tight text-neutral-900">{loan.title}</h1>
-            <p className="text-sm md:text-base text-neutral-700 leading-relaxed max-w-xl">
+            <h1 className="text-2xl sm:text-3xl md:text-5xl font-black tracking-tight text-neutral-900">{loan.title}</h1>
+            <p className="text-xs sm:text-sm md:text-base text-neutral-700 leading-relaxed max-w-xl">
               {loan.description}
             </p>
           </div>
@@ -389,25 +389,25 @@ export default function LoanDetail() {
             <img 
               src={loan.image} 
               alt={loan.title} 
-              className="max-h-72 object-contain"
+              className="max-h-56 sm:max-h-72 object-contain"
             />
           </div>
         </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 py-8">
-        <div className="flex items-center gap-4 mb-8">
+        <div className="flex items-center gap-4 mb-8 flex-wrap">
           <Link to="/loans" className="text-xs font-bold text-gray-500 hover:text-[#6400dc] flex items-center gap-1">
             ← Վերադառնալ
           </Link>
-          <div className="text-xs text-gray-400 flex items-center gap-2">
+          <div className="text-xs text-gray-400 flex items-center gap-2 flex-wrap">
             <span>🏠</span> &gt; <span>Անհատ</span> &gt; <Link to="/loans">Վարկեր</Link> &gt; <span className="text-gray-700 font-medium">{loan.title}</span>
           </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           <div className="lg:col-span-8 space-y-6 text-left">
-            <div className="flex border-b border-gray-200 gap-8 text-sm font-bold">
+            <div className="flex border-b border-gray-200 gap-6 sm:gap-8 text-xs sm:text-sm font-bold overflow-x-auto whitespace-nowrap">
               <button 
                 onClick={() => setActiveTab('about')}
                 className={`pb-3 cursor-pointer transition-all border-b-2 ${activeTab === 'about' ? 'border-[#6400dc] text-[#6400dc]' : 'border-transparent text-gray-500 hover:text-neutral-800'}`}
@@ -429,20 +429,20 @@ export default function LoanDetail() {
             </div>
 
             {activeTab === 'about' && (
-              <div className="space-y-4 text-sm text-gray-700 leading-relaxed animate-fadeIn">
+              <div className="space-y-4 text-xs sm:text-sm text-gray-700 leading-relaxed animate-fadeIn">
                 <p>{loan.description}</p>
               </div>
             )}
 
             {activeTab === 'conditions' && (
-              <div className="space-y-4 text-sm text-gray-700 animate-fadeIn">
+              <div className="space-y-4 text-xs sm:text-sm text-gray-700 animate-fadeIn">
                 <p className="font-semibold text-neutral-900">Ընդհանուր պայմաններ և դրույթներ տվյալ վարկատեսակի համար։</p>
                 <p>Վարկը տրամադրվում է ՀՀ քաղաքացիներին և ռեզիդենտներին՝ բանկի ներքին ընթացակարգերին համապատասխան:</p>
               </div>
             )}
 
             {activeTab === 'documents' && (
-              <div className="space-y-4 text-sm text-gray-700 animate-fadeIn">
+              <div className="space-y-4 text-xs sm:text-sm text-gray-700 animate-fadeIn">
                 <ol className="list-decimal pl-5 space-y-2 text-gray-700">
                   <li>Վարկի տրամադրման դիմում-հայտ</li>
                   <li>Անձնագիր կամ նույնականացման քարտ, սոցիալական քարտ</li>

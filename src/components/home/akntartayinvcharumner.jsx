@@ -381,9 +381,8 @@ export default function AkntartayinVcharumner() {
         <main className="max-w-6xl mx-auto px-4 pt-10 pb-12">
           
           {showHistory ? (
-            /* ՊԱՏՄՈՒԹՅԱՆ ԷՋԸ (Նկարին համապատասխան) */
+            /* ՊԱՏՄՈՒԹՅԱՆ ԷՋԸ */
             <div>
-              {/* Breadcrumbs */}
               <div className="text-xs text-gray-400 mb-8 flex items-center justify-center gap-2">
                 <button onClick={resetAll} className="hover:text-[#6400dc] font-medium">{currentT.home}</button>
                 <span>/</span>

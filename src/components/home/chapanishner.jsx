@@ -9,22 +9,22 @@ export default function Chapanishner() {
         <Navbar />
 
         {/* Բովանդակության գլխավոր կոնտեյներ */}
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 pt-10 pb-16 text-left">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-6 md:py-10 text-left">
           
           {/* Հացի փշրանքներ (Breadcrumbs) */}
-          <div className="text-xs text-gray-400 mb-6 flex items-center gap-2">
+          <div className="text-xs text-gray-400 mb-6 flex items-center gap-2 flex-wrap">
             <span>🏠</span> &gt; <span className="text-gray-700 font-medium">Հաճախորդի ռեզիդենտության չափանիշներ</span>
           </div>
 
-          <h1 className="text-3xl md:text-4xl font-black text-neutral-900 mb-8">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-neutral-900 mb-6 md:mb-8">
             Հաճախորդի ռեզիդենտության չափանիշներ
           </h1>
 
-          <div className="space-y-6 text-sm text-gray-700 leading-relaxed">
+          <div className="space-y-6 text-xs sm:text-sm text-gray-700 leading-relaxed">
             
             {/* Ո՞վ է համարվում ՀՀ ռեզիդենտ */}
             <div>
-              <h2 className="text-lg font-bold text-neutral-900 mb-2">Ո՞վ է համարվում ՀՀ ռեզիդենտ։</h2>
+              <h2 className="text-base sm:text-lg font-bold text-neutral-900 mb-2">Ո՞վ է համարվում ՀՀ ռեզիդենտ։</h2>
               <p className="mb-2">
                 Ձեր Ռեզիդենտության կարգավիճակը որոշվում է՝ հաշվի առնելով երկու կարևոր հանգամանք։
               </p>
@@ -40,7 +40,7 @@ export default function Chapanishner() {
 
             {/* ՀՀ ռեզիդենտ չե՞ք */}
             <div className="pt-4 border-t border-gray-100">
-              <h2 className="text-lg font-bold text-neutral-900 mb-2">ՀՀ ռեզիդենտ չե՞ք։</h2>
+              <h2 className="text-base sm:text-lg font-bold text-neutral-900 mb-2">ՀՀ ռեզիդենտ չե՞ք։</h2>
               <p className="mb-3">
                 Դուք այլ երկրի քաղաքացի եք և չե՞ք համապատասխանում ՀՀ ռեզիդենտության չափանիշներին։<br />
                 Բանկի հաճախորդ կարող եք դառնալ, եթե բավարարում եք ստորև նշված պայմաններից <strong>առնվազն մեկին</strong>․

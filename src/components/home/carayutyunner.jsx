@@ -9,13 +9,13 @@ export default function Carayutyunner() {
       <div>
         <Navbar />
 
-        <main className="max-w-6xl mx-auto px-4 py-8 text-left">
+        <main className="max-w-6xl mx-auto px-4 py-6 md:py-8 text-left">
           {/* Breadcrumbs */}
-          <div className="text-xs text-gray-400 mb-6 flex items-center gap-2">
+          <div className="text-xs text-gray-400 mb-6 flex items-center gap-2 flex-wrap">
             <span>🏠</span> &gt; <span>Բիզնես</span> &gt; <span>Արժեթղթերի շուկա</span> &gt; <span className="text-gray-700 font-medium">ՀԿԴ ծառայություններ</span>
           </div>
 
-          <h1 className="text-3xl md:text-4xl font-black text-neutral-900 mb-8 leading-tight">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-neutral-900 mb-6 md:mb-8 leading-tight">
             Հայաստանի կենտրոնական դեպոզիտարիայի (ՀԿԴ) ծառայություններ
           </h1>
 
@@ -28,16 +28,16 @@ export default function Carayutyunner() {
             </div>
 
             {/* Հիմնական բովանդակություն */}
-            <div className="flex-1 space-y-6 text-xs md:text-sm text-gray-700 leading-relaxed">
-              <p className="text-base text-gray-800">
+            <div className="flex-1 space-y-6 text-xs sm:text-sm md:text-base text-gray-700 leading-relaxed w-full">
+              <p className="text-sm sm:text-base text-gray-800 font-medium">
                 ՀՀ Կենտրոնական Դեպոզիտարիան հաճախորդների սպասարկումը իրականացնում է բացառապես Հաշվի Օպերատորների միջնորդությամբ:
               </p>
 
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-xs sm:text-sm">
                 Հաշվի Օպերատորը ՀՀ Կենտրոնական Դեպոզիտարիայի հետ կնքած պայմանագրի հիման վրա միջնորդավորում է ՀՀ Կենտրոնական Դեպոզիտարիայի կողմից մատուցվող ծառայությունները:
               </p>
 
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-xs sm:text-sm">
                 Evocabank-ը, որպես ՀՀ Կենտրոնական Դեպոզիտարիայի Հաշվի Օպերատոր և կարգավորվող շուկայի հաշվարկային համակարգի անդամ (ԿՇՀՀԱ), մատուցում է ռեեստրավարման և պահառության ծառայություններ՝ ապահովելով դրանց մատուցումը ինչպես Բանկի Գլխամասային գրասենյակում, այնպես էլ՝ մասնաճյուղերում։
               </p>
 
@@ -45,10 +45,10 @@ export default function Carayutyunner() {
               <div className="pt-6 space-y-4 border-t border-gray-100">
                 <div className="p-4 rounded-2xl bg-gray-50 border border-gray-100 hover:border-purple-200 transition">
                   <a 
-                    href="https://www.evoca.am/file_manager/Bonds%202026/%D5%80%D5%A1%D5%B5%D5%A1%D5%BD%D5%BF%D5%A1%D5%B6%D5%AB%20%D4%BF%D5%A5%D5%B6%D5%BF%D6%80%D5%B8%D5%B6%D5%A1%D5%AF%D5%A1%D5%B6%20%D4%B4%D5%A5%D5%BA%D5%B8%D6%86%D5%A9%D5%AB%20%D5%AE%D5%A1%D5%BC%D5%A1%D5%B5%D5%B8%D6%82%D5%A9%D5%B5%D5%B8%D6%82%D5%B6%D5%BD%20%D5%B4%D5%AB%D5%BB%D5%B6%D5%B8%D6%86%D5%A4%D5%A1%D5%B5%D5%B8%D6%82%D5%B2%D5%B4%D5%A1%D5%B6%20%D5%BD%D5%A1%D5%AF%D5%A1%D5%A3%D5%BD%20%D6%87%20%D5%A4%D6%80%D5%B8%D6%82%D5%B5%D5%A9%D5%BD%D5%A1%20(1).pdf" 
+                    href="https://www.evoca.am/file_manager/Bonds%202026/%D5%80%D5%A1%D5%B5%D5%A1%D5%BD%D5%BF%D5%A1%D5%B6%D5%ab%20%D4%BF%D5%A5%D5%B6%D5%BF%D6%80%D5%B8%D5%B6%D5%A1%D5%AF%D5%A1%D5%B6%20%D4%B4%D5%A5%D5%BA%D5%B8%D6%86%D5%A9%D5%AB%20%D5%AE%D5%A1%D5%BC%D5%A1%D5%B5%D5%B8%D6%82%D5%A9%D5%B5%D5%B8%D6%82%D5%B6%D5%BD%20%D5%B4%D5%AB%D5%BB%D5%B6%D5%B8%D6%86%D5%A4%D5%A1%D5%B5%D5%B8%D6%82%D5%B2%D5%B4%D5%A1%D5%B6%20%D5%BD%D5%A1%D5%AF%D5%A1%D5%A3%D5%BD%20%D6%87%20%D5%A4%D6%87%D5%B8%D6%82%D5%B5%D5%A9%D5%BD%D5%A1%20(1).pdf" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-[#6400dc] font-bold underline hover:text-purple-800 block"
+                    className="text-[#6400dc] font-bold underline hover:text-purple-800 block text-xs sm:text-sm"
                   >
                     Հայաստանի կենտրոնական դեպոզիտարիայի կողմից մատուցվող ծառայությունների միջնորդավորման գործունեության սակագներ (Սակագների ուժի մեջ մտնելու ամսաթիվ – 01.04.2026թ.)
                   </a>
@@ -56,10 +56,10 @@ export default function Carayutyunner() {
 
                 <div className="p-4 rounded-2xl bg-gray-50 border border-gray-100 hover:border-purple-200 transition">
                   <a 
-                    href="https://www.evoca.am/file_manager/PDF-FILES/Investment%20Services/%D5%80%D5%A1%D5%B5%D5%A1%D5%BD%D5%BF%D5%A1%D5%B6%20%D5%AF%D5%A5%D5%B6%D5%BF%D6%87%D5%B8%D5%B6%D5%A1%D5%AF%D5%A1%D5%B6%20%D5%A4%D5%A5%D5%BA%D5%B8%D6%86%D5%A9%D5%AB%20%D5%AF%D5%B8%D5%B5%D5%B6%20%D5%B4%D5%A1%D5%BF%D5%B8%D6%82%D5%A9%D5%B5%D5%B8%D6%82%D5%B6%D5%BD%20%D5%B4%D5%AB%D5%BB%D5%B6%D5%B8%D6%86%D5%A4%D5%A1%D5%B5%D5%B8%D6%82%D5%B2%D5%B4%D5%A1%20%D5%A3%D5%BE%D5%B8%D6%80%D5%B9%D5%B8%D6%82%D5%A9%D5%B5%D5%A1%D5%B6%20%D5%AF%D5%A1%D5%BD%D5%B6%D5%B8%D5%B6%20(1).pdf" 
+                    href="https://www.evoca.am/file_manager/PDF-FILES/Investment%20Services/%D5%80%D5%A1%D5%B5%D5%A1%D5%BD%D5%BF%D5%A1%D5%B6%20%D5%AF%D5%A5%D5%B6%D5%BF%D6%87%D5%B8%D5%B6%D5%A1%D5%AF%D5%A1%D5%B6%20%D5%A4%D5%A5%D5%BA%D5%B8%D6%86%D5%A9%D5%AB%20%D5%AF%D5%B8%D5%B5%D5%B6%20%D5%B4%D5%A1%D5%B0%D5%B8%D6%82%D5%A9%D5%B5%D5%B8%D6%82%D5%B6%D5%BD%20%D5%B4%D5%AB%D5%BB%D5%B6%D5%B0%D6%86%D5%A4%D5%A1%D5%B5%D5%B8%D6%82%D5%B2%D5%B4%D5%A1%20%D5%A3%D5%BE%D5%B8%D6%87%D5%B9%D5%B8%D6%82%D5%A9%D5%B5%D5%A1%D5%B6%20%D5%AF%D5%A1%D5%BD%D5%B6%D5%B8%D5%B6%20(1).pdf" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-[#6400dc] font-bold underline hover:text-purple-800 block"
+                    className="text-[#6400dc] font-bold underline hover:text-purple-800 block text-xs sm:text-sm"
                   >
                     Հայաստանի կենտրոնական դեպոզիտարիայի կողմից մատուցվող ծառայությունների միջնորդավորման գործունեության կանոններ
                   </a>

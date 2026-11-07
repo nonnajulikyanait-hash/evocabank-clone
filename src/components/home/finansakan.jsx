@@ -172,19 +172,19 @@ export default function Finansakan() {
         <Navbar />
 
         {/* Reports Sub-header Purple Menu */}
-        <div className="bg-[#6400dc] text-white py-3 px-8 shadow-inner">
-          <div className="container mx-auto flex gap-8 text-xs font-semibold overflow-x-auto whitespace-nowrap">
-            <Link to="/hashvetvutyunner" className="text-purple-200 hover:text-white transition">Աուդիտորական եզրակացություն</Link>
+        <div className="bg-[#6400dc] text-white py-3 px-4 sm:px-8 shadow-inner">
+          <div className="container mx-auto flex gap-6 text-xs font-semibold overflow-x-auto whitespace-nowrap">
+            <Link to="/hashvetvutyunner" className="text-purple-200 hover:text-white transition cursor-pointer">Աուդիտորական եզրակացություն</Link>
             <Link to="/finansakan" className="border-b-2 border-white pb-1 cursor-pointer font-black">Ֆինանսական հաշվետվություններ</Link>
-            <Link to="/nerdroxner" className="text-purple-200 hover:text-white transition">Ներդրողների համար</Link>
-            <Link to="/kisamyakayin" className="text-purple-200 hover:text-white transition">Կիսամյակային հաշվետվություն</Link>
-            <Link to="/mermasintarekan" className="text-purple-200 hover:text-white transition">Տարեկան հաշվետվություն</Link>
+            <Link to="/nerdroxner" className="text-purple-200 hover:text-white transition cursor-pointer">Ներդրողների համար</Link>
+            <Link to="/kisamyakayin" className="text-purple-200 hover:text-white transition cursor-pointer">Կիսամյակային հաշվետվություն</Link>
+            <Link to="/mermasintarekan" className="text-purple-200 hover:text-white transition cursor-pointer">Տարեկան հաշվետվություն</Link>
           </div>
         </div>
 
-        <main className="max-w-6xl mx-auto px-4 py-12 space-y-12">
+        <main className="max-w-6xl mx-auto px-4 py-8 md:py-12 space-y-8 md:space-y-12 text-left">
           {/* Breadcrumbs */}
-          <div className="text-xs text-gray-400 flex items-center gap-2">
+          <div className="text-xs text-gray-400 flex items-center gap-2 flex-wrap">
             <Link to="/mer-masin" className="hover:text-[#6400dc]">Մեր մասին</Link>
             <span>/</span>
             <span>Հաշվետվություններ</span>
@@ -192,15 +192,15 @@ export default function Finansakan() {
             <span className="text-gray-700 font-medium">Ֆինանսական հաշվետվություններ</span>
           </div>
 
-          <h1 className="text-3xl md:text-4xl font-extrabold text-neutral-900 mb-8">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-neutral-900 mb-6 md:mb-8">
             Ֆինանսական հաշվետվություններ
           </h1>
 
           {/* Financial Reports List */}
-          <div className="space-y-10">
+          <div className="space-y-8 md:space-y-10">
             {financialReports.map((group, idx) => (
               <div key={idx} className="space-y-4">
-                <h2 className="text-2xl font-extrabold text-neutral-900">
+                <h2 className="text-xl sm:text-2xl font-extrabold text-neutral-900">
                   {group.year}
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -210,17 +210,17 @@ export default function Finansakan() {
                       href={item.url} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="bg-[#f8f9fa] hover:bg-gray-100 border border-gray-100 rounded-2xl p-5 flex items-center justify-between transition group shadow-xs"
+                      className="bg-[#f8f9fa] hover:bg-gray-100 border border-gray-100 rounded-2xl p-4 sm:p-5 flex items-center justify-between transition group shadow-xs"
                     >
                       <div className="flex items-center gap-4">
-                        <div className="w-10 h-10 rounded-xl bg-purple-50 text-[#6400dc] flex items-center justify-center font-bold text-lg group-hover:bg-[#6400dc] group-hover:text-white transition">
+                        <div className="w-10 h-10 rounded-xl bg-purple-50 text-[#6400dc] flex items-center justify-center font-bold text-lg group-hover:bg-[#6400dc] group-hover:text-white transition shrink-0">
                           📄
                         </div>
-                        <span className="text-neutral-800 font-bold text-sm md:text-base group-hover:text-[#6400dc] transition">
+                        <span className="text-neutral-800 font-bold text-xs sm:text-sm md:text-base group-hover:text-[#6400dc] transition truncate">
                           {item.title}
                         </span>
                       </div>
-                      <span className="text-gray-400 group-hover:text-[#6400dc] text-sm font-bold">↓</span>
+                      <span className="text-gray-400 group-hover:text-[#6400dc] text-sm font-bold shrink-0 ml-2">↓</span>
                     </a>
                   ))}
                 </div>

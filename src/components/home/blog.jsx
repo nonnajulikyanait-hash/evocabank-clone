@@ -118,22 +118,22 @@ export default function Blog() {
       <div className="min-h-screen bg-white font-sans text-neutral-800 flex flex-col justify-between">
         <div>
           <Navbar />
-          <main className="max-w-4xl mx-auto px-4 py-8 text-left bg-white">
+          <main className="max-w-4xl mx-auto px-4 py-6 md:py-8 text-left bg-white">
             <button 
               onClick={() => setSelectedBlog(null)} 
               className="font-bold text-xs text-gray-500 hover:text-[#6400dc] mb-6 flex items-center gap-1 cursor-pointer"
             >
               ← Վերադառնալ բլոգներին
             </button>
-            <h1 className="text-2xl md:text-3xl font-black text-neutral-900 mb-4">{selectedBlog.title}</h1>
-            <div className="flex items-center gap-3 mb-4">
+            <h1 className="text-2xl sm:text-3xl font-black text-neutral-900 mb-4">{selectedBlog.title}</h1>
+            <div className="flex items-center gap-3 mb-4 flex-wrap">
               <span className="text-xs font-bold text-[#6400dc] bg-purple-50 px-3 py-1 rounded-full inline-block">{selectedBlog.category}</span>
               <span className="text-xs text-gray-400">{selectedBlog.date}</span>
             </div>
             <div className="rounded-2xl overflow-hidden mb-6 max-h-[450px] bg-gray-50 shadow-sm">
               <img src={selectedBlog.image} alt={selectedBlog.title} className="w-full h-full object-cover" />
             </div>
-            <div className="text-gray-700 leading-relaxed space-y-4">
+            <div className="text-gray-700 leading-relaxed space-y-4 text-xs sm:text-sm">
               {selectedBlog.content}
             </div>
           </main>
@@ -148,16 +148,16 @@ export default function Blog() {
       <div>
         <Navbar />
 
-        <main className="max-w-7xl mx-auto px-4 py-8 text-left">
-          <div className="text-xs text-gray-400 mb-3 flex items-center gap-2">
+        <main className="max-w-7xl mx-auto px-4 py-6 md:py-8 text-left">
+          <div className="text-xs text-gray-400 mb-3 flex items-center gap-2 flex-wrap">
             <span>🏠</span> &gt; <span className="text-gray-700 font-medium">Բլոգ</span>
           </div>
 
-          <h1 className="text-3xl md:text-4xl font-black text-neutral-900 mb-8">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-neutral-900 mb-6 md:mb-8">
             Բլոգ
           </h1>
 
-          <div className="flex flex-wrap items-center gap-2 border-b border-gray-100 pb-6 mb-12 text-xs font-semibold text-gray-600">
+          <div className="flex flex-wrap items-center gap-2 border-b border-gray-100 pb-4 md:pb-6 mb-8 md:mb-12 text-xs font-semibold text-gray-600">
             {['Բիզնես', 'Կենսակերպ', 'Ներդրումներ'].map((cat) => (
               <span key={cat} className="px-4 py-2 rounded-full bg-gray-100 text-gray-700 cursor-pointer hover:bg-purple-50 hover:text-[#6400dc]">
                 {cat}
@@ -172,18 +172,18 @@ export default function Blog() {
           </div>
 
           {/* 1. Monthly Recap */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 items-center mb-12 md:mb-16">
             <div className="lg:col-span-5 space-y-4">
               <span className="text-xs font-bold text-[#6400dc] border-l-2 border-[#6400dc] pl-2 block">
                 {blogsData.monthlyRecap.category}
               </span>
               <h2 
                 onClick={() => { setSelectedBlog(blogsData.monthlyRecap); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
-                className="text-2xl md:text-3xl font-extrabold text-neutral-900 cursor-pointer hover:text-[#6400dc] transition"
+                className="text-xl sm:text-2xl md:text-3xl font-extrabold text-neutral-900 cursor-pointer hover:text-[#6400dc] transition"
               >
                 {blogsData.monthlyRecap.title}
               </h2>
-              <p className="text-sm text-gray-600 leading-relaxed">
+              <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
                 {blogsData.monthlyRecap.description}
               </p>
               <div className="text-xs text-gray-400 font-medium pt-2">
@@ -192,7 +192,7 @@ export default function Blog() {
             </div>
             <div 
               onClick={() => { setSelectedBlog(blogsData.monthlyRecap); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
-              className="lg:col-span-7 rounded-3xl overflow-hidden shadow-sm cursor-pointer group bg-gray-50 h-[380px]"
+              className="lg:col-span-7 rounded-2xl sm:rounded-3xl overflow-hidden shadow-sm cursor-pointer group bg-gray-50 h-[280px] sm:h-[350px] lg:h-[380px]"
             >
               <img 
                 src={blogsData.monthlyRecap.image} 
@@ -203,27 +203,27 @@ export default function Blog() {
           </div>
 
           {/* 2. Բաց մի թող */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-black text-neutral-900 mb-8">Բաց մի թող</h2>
+          <div className="mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl font-black text-neutral-900 mb-6 md:mb-8">Բաց մի թող</h2>
 
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8">
               <div 
                 onClick={() => { setSelectedBlog(blogsData.evocaInvestMain); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
-                className="lg:col-span-7 bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition cursor-pointer flex flex-col justify-between group"
+                className="lg:col-span-7 bg-white border border-gray-100 rounded-2xl sm:rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition cursor-pointer flex flex-col justify-between group"
               >
                 <div>
-                  <div className="h-80 overflow-hidden bg-gray-50">
+                  <div className="h-60 sm:h-72 lg:h-80 overflow-hidden bg-gray-50">
                     <img 
                       src={blogsData.evocaInvestMain.image} 
                       alt={blogsData.evocaInvestMain.title} 
                       className="w-full h-full object-cover group-hover:scale-105 transition duration-500" 
                     />
                   </div>
-                  <div className="p-6 space-y-3">
+                  <div className="p-5 sm:p-6 space-y-3">
                     <span className="text-xs font-bold text-[#6400dc] border-l-2 border-[#6400dc] pl-2 block">
                       {blogsData.evocaInvestMain.category}
                     </span>
-                    <h3 className="text-lg font-extrabold text-neutral-900 group-hover:text-[#6400dc] transition">
+                    <h3 className="text-base sm:text-lg font-extrabold text-neutral-900 group-hover:text-[#6400dc] transition">
                       {blogsData.evocaInvestMain.title}
                     </h3>
                     <p className="text-xs text-gray-600 line-clamp-2">
@@ -231,7 +231,7 @@ export default function Blog() {
                     </p>
                   </div>
                 </div>
-                <div className="px-6 pb-6 text-xs text-gray-400 font-medium">
+                <div className="px-5 sm:px-6 pb-5 sm:pb-6 text-xs text-gray-400 font-medium">
                   {blogsData.evocaInvestMain.date}
                 </div>
               </div>
@@ -268,19 +268,19 @@ export default function Blog() {
           {/* 3. Ամանորի երազանքը */}
           <div 
             onClick={() => { setSelectedBlog(blogsData.amanor); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
-            className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-16 bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-sm cursor-pointer group p-6"
+            className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 items-center mb-12 md:mb-16 bg-white border border-gray-100 rounded-2xl sm:rounded-3xl overflow-hidden shadow-sm cursor-pointer group p-4 sm:p-6"
           >
-            <div className="lg:col-span-7 rounded-2xl overflow-hidden bg-gray-50 h-[350px]">
+            <div className="lg:col-span-7 rounded-2xl overflow-hidden bg-gray-50 h-[260px] sm:h-[320px] lg:h-[350px]">
               <img src={blogsData.amanor.image} alt={blogsData.amanor.title} className="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
             </div>
             <div className="lg:col-span-5 space-y-4">
               <span className="text-xs font-bold text-[#6400dc] bg-purple-50 px-3 py-1 rounded-full inline-block">
                 {blogsData.amanor.badge}
               </span>
-              <h2 className="text-2xl md:text-3xl font-extrabold text-neutral-900 group-hover:text-[#6400dc] transition">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-neutral-900 group-hover:text-[#6400dc] transition">
                 {blogsData.amanor.title}
               </h2>
-              <p className="text-sm text-gray-600 leading-relaxed">
+              <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
                 {blogsData.amanor.description}
               </p>
               <div className="text-xs text-gray-400 font-medium pt-2">
@@ -290,22 +290,22 @@ export default function Blog() {
           </div>
 
           {/* 4. Ներքևի 3 նկարով բլոգները */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-16">
             {blogsData.takiEreq.map((item) => (
               <div 
                 key={item.id}
                 onClick={() => { setSelectedBlog(item); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
-                className="bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition duration-300 cursor-pointer flex flex-col justify-between group"
+                className="bg-white border border-gray-100 rounded-2xl sm:rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition duration-300 cursor-pointer flex flex-col justify-between group"
               >
                 <div>
-                  <div className="h-56 overflow-hidden bg-gray-50">
+                  <div className="h-48 sm:h-56 overflow-hidden bg-gray-50">
                     <img src={item.image} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
                   </div>
-                  <div className="p-6 space-y-3">
+                  <div className="p-5 sm:p-6 space-y-3">
                     <span className="text-xs font-bold text-[#6400dc] border-l-2 border-[#6400dc] pl-2 block">
                       {item.category}
                     </span>
-                    <h3 className="text-base font-extrabold text-neutral-900 group-hover:text-[#6400dc] transition line-clamp-2">
+                    <h3 className="text-sm sm:text-base font-extrabold text-neutral-900 group-hover:text-[#6400dc] transition line-clamp-2">
                       {item.title}
                     </h3>
                     <p className="text-xs text-gray-600 line-clamp-2">
@@ -313,7 +313,7 @@ export default function Blog() {
                     </p>
                   </div>
                 </div>
-                <div className="px-6 pb-6 text-xs text-gray-400 font-medium">
+                <div className="px-5 sm:px-6 pb-5 sm:pb-6 text-xs text-gray-400 font-medium">
                   {item.date}
                 </div>
               </div>
@@ -323,17 +323,17 @@ export default function Blog() {
           {/* 5. Evoca-գույնի հոգեբանական նկարագիրը */}
           <div 
             onClick={() => { setSelectedBlog(blogsData.evocaGuyn); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
-            className="relative rounded-3xl overflow-hidden shadow-sm cursor-pointer group mb-16 bg-gray-900 h-[400px]"
+            className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-sm cursor-pointer group mb-12 md:mb-16 bg-gray-900 h-[320px] sm:h-[380px] lg:h-[400px]"
           >
             <img src={blogsData.evocaGuyn.image} alt={blogsData.evocaGuyn.title} className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition duration-700" />
-            <div className="absolute bottom-8 left-8 bg-white/95 backdrop-blur-md p-8 rounded-2xl max-w-lg shadow-lg">
+            <div className="absolute bottom-4 sm:bottom-8 left-4 sm:left-8 right-4 sm:right-auto bg-white/95 backdrop-blur-md p-5 sm:p-8 rounded-2xl max-w-lg shadow-lg">
               <span className="text-xs font-bold text-[#6400dc] border-l-2 border-[#6400dc] pl-2 block mb-2">
                 {blogsData.evocaGuyn.category}
               </span>
-              <h3 className="text-xl font-extrabold text-neutral-900 group-hover:text-[#6400dc] transition mb-2">
+              <h3 className="text-lg sm:text-xl font-extrabold text-neutral-900 group-hover:text-[#6400dc] transition mb-2">
                 {blogsData.evocaGuyn.title}
               </h3>
-              <p className="text-xs text-gray-600">
+              <p className="text-xs text-gray-600 line-clamp-3 sm:line-clamp-none">
                 {blogsData.evocaGuyn.description}
               </p>
             </div>

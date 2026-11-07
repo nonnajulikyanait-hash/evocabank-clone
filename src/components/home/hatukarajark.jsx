@@ -14,13 +14,13 @@ export default function HatukArajark() {
       <div>
         <Navbar />
 
-        <main className="max-w-6xl mx-auto px-4 py-8 text-left">
+        <main className="max-w-6xl mx-auto px-4 py-6 md:py-8 text-left">
           {/* Breadcrumbs */}
-          <div className="text-xs text-gray-400 mb-6 flex items-center gap-2">
+          <div className="text-xs text-gray-400 mb-6 flex items-center gap-2 flex-wrap">
             <span>🏠</span> &gt; <span>Բիզնես</span> &gt; <span>Լիզինգ</span> &gt; <span className="text-gray-700 font-medium">Հատուկ առաջարկ</span>
           </div>
 
-          <h1 className="text-3xl md:text-4xl font-black text-neutral-900 mb-8">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-neutral-900 mb-6 md:mb-8">
             Հատուկ առաջարկ
           </h1>
 
@@ -33,8 +33,8 @@ export default function HatukArajark() {
             </div>
 
             {/* Content Area */}
-            <div className="flex-1 space-y-6">
-              <h2 className="text-lg font-bold text-neutral-900 tracking-wide mb-4">
+            <div className="flex-1 space-y-6 w-full">
+              <h2 className="text-base sm:text-lg font-bold text-neutral-900 tracking-wide mb-4">
                 ԱՆՀՐԱԺԵՇՏ ՏԵՂԵԿԱՏՎՈՒԹՅՈՒՆ
               </h2>
 
@@ -42,7 +42,7 @@ export default function HatukArajark() {
               <div className="border border-gray-200 rounded-2xl overflow-hidden bg-white shadow-2xs">
                 <button
                   onClick={() => toggleSection(1)}
-                  className="w-full flex justify-between items-center p-5 text-left font-bold text-gray-800 hover:text-[#6400dc] transition cursor-pointer"
+                  className="w-full flex justify-between items-center p-4 sm:p-5 text-left font-bold text-gray-800 hover:text-[#6400dc] transition cursor-pointer text-xs sm:text-sm"
                 >
                   <span className="flex items-center gap-3">
                     <span className={`text-[#6400dc] text-xs transition-transform duration-200 ${openSection === 1 ? 'rotate-180' : ''}`}>
@@ -53,49 +53,49 @@ export default function HatukArajark() {
                 </button>
 
                 {openSection === 1 && (
-                  <div className="p-6 border-t border-gray-100 text-xs md:text-sm text-gray-700 space-y-4 bg-gray-50/50">
+                  <div className="p-4 sm:p-6 border-t border-gray-100 text-xs md:text-sm text-gray-700 space-y-4 bg-gray-50/50">
                     <p className="leading-relaxed">
                       Արտադրողականության խթանման նպատակային ծրագրից չօգտվող հաճախորդների համար Evocabank-ը ներկայացնում է նոր առաջարկ, ըստ որի կտրամադրվեն լիզինգներ հետևյալ պայմաններով՝
                     </p>
 
                     {/* Rates Table */}
-                    <div className="overflow-x-auto my-4">
-                      <table className="w-full text-center border-collapse border border-gray-200 text-xs md:text-sm bg-white rounded-xl">
+                    <div className="overflow-x-auto my-4 bg-white rounded-xl border border-gray-200">
+                      <table className="w-full text-center border-collapse text-xs md:text-sm min-w-[450px]">
                         <thead>
-                          <tr className="bg-purple-50 text-[#6400dc]">
-                            <th className="border border-gray-200 p-3">ժամկետ (ամիս)</th>
+                          <tr className="bg-purple-50 text-[#6400dc] font-bold">
+                            <th className="border border-gray-200 p-3">Ժամկետ (ամիս)</th>
                             <th className="border border-gray-200 p-3">AMD</th>
                             <th className="border border-gray-200 p-3">USD</th>
                             <th className="border border-gray-200 p-3">EUR</th>
                           </tr>
                         </thead>
-                        <tbody>
+                        <tbody className="divide-y divide-gray-200 text-gray-700">
                           <tr>
-                            <td className="border border-gray-200 p-2.5 font-bold">12</td>
+                            <td className="border border-gray-200 p-2.5 font-bold bg-gray-50">12</td>
                             <td className="border border-gray-200 p-2.5">5.0%</td>
                             <td className="border border-gray-200 p-2.5">0.0%</td>
                             <td className="border border-gray-200 p-2.5">0.0%</td>
                           </tr>
                           <tr>
-                            <td className="border border-gray-200 p-2.5 font-bold">24</td>
+                            <td className="border border-gray-200 p-2.5 font-bold bg-gray-50">24</td>
                             <td className="border border-gray-200 p-2.5">8.5%</td>
                             <td className="border border-gray-200 p-2.5">5.0%</td>
                             <td className="border border-gray-200 p-2.5">4.0%</td>
                           </tr>
                           <tr>
-                            <td className="border border-gray-200 p-2.5 font-bold">36</td>
+                            <td className="border border-gray-200 p-2.5 font-bold bg-gray-50">36</td>
                             <td className="border border-gray-200 p-2.5">10.0%</td>
                             <td className="border border-gray-200 p-2.5">6.0%</td>
                             <td className="border border-gray-200 p-2.5">5.0%</td>
                           </tr>
                           <tr>
-                            <td className="border border-gray-200 p-2.5 font-bold">48</td>
+                            <td className="border border-gray-200 p-2.5 font-bold bg-gray-50">48</td>
                             <td className="border border-gray-200 p-2.5">10.75%</td>
                             <td className="border border-gray-200 p-2.5">7.00%</td>
                             <td className="border border-gray-200 p-2.5">6.0%</td>
                           </tr>
                           <tr>
-                            <td className="border border-gray-200 p-2.5 font-bold">60</td>
+                            <td className="border border-gray-200 p-2.5 font-bold bg-gray-50">60</td>
                             <td className="border border-gray-200 p-2.5">11.50%</td>
                             <td className="border border-gray-200 p-2.5">7.50%</td>
                             <td className="border border-gray-200 p-2.5">7.0%</td>
@@ -111,7 +111,7 @@ export default function HatukArajark() {
               <div className="border border-gray-200 rounded-2xl overflow-hidden bg-white shadow-2xs">
                 <button
                   onClick={() => toggleSection(2)}
-                  className="w-full flex justify-between items-center p-5 text-left font-bold text-gray-800 hover:text-[#6400dc] transition cursor-pointer"
+                  className="w-full flex justify-between items-center p-4 sm:p-5 text-left font-bold text-gray-800 hover:text-[#6400dc] transition cursor-pointer text-xs sm:text-sm"
                 >
                   <span className="flex items-center gap-3">
                     <span className={`text-[#6400dc] text-xs transition-transform duration-200 ${openSection === 2 ? 'rotate-180' : ''}`}>
@@ -122,7 +122,7 @@ export default function HatukArajark() {
                 </button>
 
                 {openSection === 2 && (
-                  <div className="p-6 border-t border-gray-100 text-xs md:text-sm text-gray-700 space-y-4 bg-gray-50/50">
+                  <div className="p-4 sm:p-6 border-t border-gray-100 text-xs md:text-sm text-gray-700 space-y-4 bg-gray-50/50">
                     <p className="leading-relaxed">
                       Արտադրողականության խթանման նպատակային ծրագրի շրջանակում՝ Evocabank-ը և իր գործընկեր «Ավտո Գելլրի» ՓԲԸ-ն համատեղ ներկայացնում են նոր առաջարկ, ըստ որի կտրամադրվեն լիզինգներ՝
                     </p>

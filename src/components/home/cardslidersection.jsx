@@ -149,7 +149,7 @@ export default function CardsSliderSection() {
   const [swiperInstance, setSwiperInstance] = useState(null);
 
   return (
-    <section className="py-16 px-4 md:px-8 bg-[#f0f7fe] transition-colors duration-300">
+    <section className="py-12 md:py-16 px-4 md:px-8 bg-[#f0f7fe] transition-colors duration-300">
       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8 md:gap-12">
         
         {/* Left Side: Vertical Swiper without hover background */}
@@ -167,7 +167,7 @@ export default function CardsSliderSection() {
           </button>
 
           {/* Vertical Swiper Container - Fully Transparent */}
-          <div className="h-[360px] w-full max-w-[280px]">
+          <div className="h-[320px] sm:h-[360px] w-full max-w-[280px]">
             <Swiper
               direction={'vertical'}
               slidesPerView={3}
@@ -219,18 +219,18 @@ export default function CardsSliderSection() {
             <img 
               src={selectedCard.image} 
               alt={selectedCard.title} 
-              className="w-[340px] md:w-[380px] h-auto object-contain drop-shadow-2xl transition-all duration-300"
+              className="w-[280px] sm:w-[340px] md:w-[380px] h-auto object-contain drop-shadow-2xl transition-all duration-300"
             />
           </div>
         </div>
 
         {/* Right Side: Card Information & Detail Button */}
-        <div className="w-full lg:w-4/12 space-y-5 text-left pl-0 lg:pl-4">
-          <h3 className="text-2xl md:text-3xl font-extrabold text-gray-900 tracking-tight">
+        <div className="w-full lg:w-4/12 space-y-4 md:space-y-5 text-left pl-0 lg:pl-4">
+          <h3 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-gray-900 tracking-tight">
             {selectedCard.title}
           </h3>
 
-          <div className="text-gray-600 text-sm leading-relaxed whitespace-pre-line space-y-2">
+          <div className="text-gray-600 text-xs sm:text-sm leading-relaxed whitespace-pre-line space-y-2">
             <p>{selectedCard.description}</p>
             {selectedCard.bullets && (
               <ul className="space-y-1 mt-2">
@@ -245,7 +245,7 @@ export default function CardsSliderSection() {
           </div>
 
           <div className="pt-2">
-            <button className="bg-[#6400dc] hover:bg-[#5200b8] text-white font-bold text-sm px-8 py-3.5 rounded-full shadow-lg transition-all cursor-pointer">
+            <button className="bg-[#6400dc] hover:bg-[#5200b8] text-white font-bold text-xs sm:text-sm px-6 sm:px-8 py-3 sm:py-3.5 rounded-full shadow-lg transition-all cursor-pointer">
               Մանրամասն
             </button>
           </div>

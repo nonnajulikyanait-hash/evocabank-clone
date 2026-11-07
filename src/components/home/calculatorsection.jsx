@@ -303,7 +303,10 @@ export default function CalculatorSection() {
                     Հաշվարկեք Ձեր ավանդային եկամուտը պարզ և արագ
                   </p>
                   <button 
-                    onClick={() => alert(`Ընդհանուր տոկոսային եկամուտը կազմում է՝ ${Math.round((depositAmount * (depositRate/100) * depositTerm) / 365).toLocaleString()} ֏`)}
+                    onClick={() => {
+                      const income = Math.round((Number(depositAmount) * (Number(depositRate) / 100) * Number(depositTerm)) / 365);
+                      alert(`Ընդհանուր տոկոսային եկամուտը կազմում է՝ ${income.toLocaleString()} ֏`);
+                    }}
                     className="w-full bg-[#6400dc] hover:bg-[#5200b8] text-white font-bold text-xs py-3 px-6 rounded-full shadow-md transition-all cursor-pointer"
                   >
                     Հաշվել
@@ -354,7 +357,7 @@ export default function CalculatorSection() {
                 <div className="text-sm font-bold text-gray-900">{loanTerm} ամիս</div>
               </div>
               <div>
-                <div className="text-[11px] text-gray-500 font-medium">Ոմբ վճարվելը (Գումար + տոկոսագումար)</div>
+                <div className="text-[11px] text-gray-500 font-medium">Ընդհանուր վճար (Գումար + տոկոս)</div>
                 <div className="text-sm font-black text-[#6400dc]">{Math.round(loanSummary.totalPayment).toLocaleString()} ֏</div>
               </div>
             </div>
@@ -389,4 +392,4 @@ export default function CalculatorSection() {
 
     </section>
   );
-}  
+}

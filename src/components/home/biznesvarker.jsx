@@ -181,40 +181,40 @@ export default function BiznesVarker() {
       <div>
         <Navbar />
 
-        <main className="max-w-7xl mx-auto px-4 py-8 text-left">
+        <main className="max-w-7xl mx-auto px-4 py-6 md:py-8 text-left">
           {/* Breadcrumbs */}
-          <div className="text-xs text-gray-400 mb-6 flex items-center gap-2">
+          <div className="text-xs text-gray-400 mb-6 flex items-center gap-2 flex-wrap">
             <span>🏠</span> &gt; <span>Բիզնես</span> &gt; <span>Վարկեր</span> &gt; <span className="text-gray-700 font-medium">Բիզնես վարկեր</span>
           </div>
 
-          <h1 className="text-3xl md:text-4xl font-black text-neutral-900 mb-10">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-neutral-900 mb-8 md:mb-10">
             Բիզնես վարկեր
           </h1>
 
           {/* Loans List */}
-          <div className="space-y-12">
+          <div className="space-y-8 md:space-y-12">
             {loans.map((loan) => (
-              <div key={loan.id} className="bg-white border border-gray-100 rounded-[28px] p-6 md:p-8 shadow-sm flex flex-col lg:flex-row items-center justify-between gap-8 hover:shadow-md transition">
+              <div key={loan.id} className="bg-white border border-gray-100 rounded-2xl sm:rounded-[28px] p-5 sm:p-6 md:p-8 shadow-sm flex flex-col lg:flex-row items-center justify-between gap-6 md:gap-8 hover:shadow-md transition">
                 
                 {/* Left side: Image */}
                 <div className="lg:w-1/3 flex justify-center bg-gray-50 rounded-2xl p-4 w-full">
-                  <img src={loan.image} alt={loan.title} className="max-h-56 object-contain rounded-xl" />
+                  <img src={loan.image} alt={loan.title} className="max-h-48 sm:max-h-56 object-contain rounded-xl" />
                 </div>
 
                 {/* Right side: Info */}
                 <div className="lg:w-2/3 space-y-4 w-full">
-                  <h3 className="text-xl md:text-2xl font-bold text-neutral-900">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-neutral-900">
                     {loan.title}
                   </h3>
-                  <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
                     {loan.description}
                   </p>
 
                   {/* Details Grid */}
-                  <div className="grid grid-cols-2 md:grid-cols-3 gap-4 py-4 border-t border-b border-gray-100">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 py-4 border-t border-b border-gray-100">
                     {loan.details.map((det, idx) => (
                       <div key={idx}>
-                        <div className="text-sm md:text-lg font-black text-[#6400dc]">
+                        <div className="text-xs sm:text-sm md:text-lg font-black text-[#6400dc]">
                           {det.value}
                         </div>
                         <div className="text-[11px] text-gray-500 mt-0.5">
@@ -244,7 +244,7 @@ export default function BiznesVarker() {
       {/* Detail Modal */}
       {selectedLoan && (
         <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-3xl p-8 max-w-lg w-full relative shadow-2xl space-y-6 text-left">
+          <div className="bg-white rounded-3xl p-6 sm:p-8 max-w-lg w-full relative shadow-2xl space-y-6 text-left max-h-[90vh] overflow-y-auto">
             <button 
               onClick={() => setSelectedLoan(null)}
               className="absolute right-4 top-4 text-gray-400 hover:text-black text-lg cursor-pointer font-bold"
@@ -252,17 +252,17 @@ export default function BiznesVarker() {
               ✕
             </button>
             <div className="flex justify-center bg-gray-50 p-4 rounded-2xl">
-              <img src={selectedLoan.image} alt={selectedLoan.title} className="h-40 object-contain" />
+              <img src={selectedLoan.image} alt={selectedLoan.title} className="h-36 sm:h-40 object-contain" />
             </div>
-            <h2 className="text-xl font-bold text-neutral-900">{selectedLoan.title}</h2>
-            <p className="text-xs text-gray-700 leading-relaxed">{selectedLoan.fullInfo}</p>
+            <h2 className="text-lg sm:text-xl font-bold text-neutral-900">{selectedLoan.title}</h2>
+            <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">{selectedLoan.fullInfo}</p>
             
             <div className="space-y-2 bg-purple-50 p-4 rounded-2xl">
               <h4 className="text-xs font-bold text-[#6400dc]">Հիմնական պայմաններ՝</h4>
               {selectedLoan.details.map((d, i) => (
-                <div key={i} className="text-xs flex justify-between">
+                <div key={i} className="text-xs flex justify-between gap-4">
                   <span className="text-gray-600">{d.label}:</span>
-                  <span className="font-bold text-neutral-900">{d.value}</span>
+                  <span className="font-bold text-neutral-900 text-right">{d.value}</span>
                 </div>
               ))}
             </div>

@@ -111,8 +111,8 @@ export default function Norutyunner() {
         <Navbar />
 
         {selectedNews ? (
-          <main className="max-w-4xl mx-auto px-4 py-8 text-left">
-            <div className="flex items-center gap-3 mb-6 text-xs text-gray-400">
+          <main className="max-w-4xl mx-auto px-4 sm:px-6 py-8 text-left">
+            <div className="flex items-center gap-3 mb-6 text-xs text-gray-400 flex-wrap">
               <button 
                 onClick={() => setSelectedNews(null)} 
                 className="font-bold text-gray-500 hover:text-[#6400dc] flex items-center gap-1 cursor-pointer transition"
@@ -130,7 +130,7 @@ export default function Norutyunner() {
             </div>
 
             <div className="space-y-6">
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3 flex-wrap">
                 <span className="text-xs font-bold text-[#6400dc] bg-purple-50 px-3 py-1 rounded-full">
                   {selectedNews.category}
                 </span>
@@ -139,7 +139,7 @@ export default function Norutyunner() {
                 )}
               </div>
               
-              <h1 className="text-2xl md:text-4xl font-black text-neutral-900 leading-tight">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-neutral-900 leading-tight">
                 {selectedNews.title}
               </h1>
 
@@ -151,7 +151,7 @@ export default function Norutyunner() {
                 />
               </div>
 
-              <div className="text-sm md:text-base text-gray-700 leading-relaxed space-y-4 whitespace-pre-line border-t border-gray-100 pt-6">
+              <div className="text-xs sm:text-sm md:text-base text-gray-700 leading-relaxed space-y-4 whitespace-pre-line border-t border-gray-100 pt-6">
                 {selectedNews.content}
               </div>
 
@@ -164,35 +164,35 @@ export default function Norutyunner() {
           </main>
         ) : (
           <div>
-            <div className="max-w-7xl mx-auto px-4 pt-6 pb-4 text-left">
-              <div className="text-xs text-gray-400 mb-3 flex items-center gap-2">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-6 pb-4 text-left">
+              <div className="text-xs text-gray-400 mb-3 flex items-center gap-2 flex-wrap">
                 <span>🏠</span> &gt; <span className="text-gray-700 font-medium">Նորություններ</span>
               </div>
               
-              <h1 className="text-3xl md:text-4xl font-black text-neutral-900 mb-6">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-neutral-900 mb-6">
                 Նորություններ
               </h1>
 
               <div className="flex flex-wrap items-center gap-2 border-b border-gray-100 pb-6 text-xs font-semibold text-gray-600">
-                <button className="bg-gray-100 px-4 py-2 rounded-full hover:bg-purple-50 hover:text-[#6400dc] transition cursor-pointer">Գլխավոր</button>
-                <button className="bg-gray-100 px-4 py-2 rounded-full hover:bg-purple-50 hover:text-[#6400dc] transition cursor-pointer">Բանկային</button>
-                <button className="bg-gray-100 px-4 py-2 rounded-full hover:bg-purple-50 hover:text-[#6400dc] transition cursor-pointer">Հարցազրույցներ</button>
-                <button className="bg-gray-100 px-4 py-2 rounded-full hover:bg-purple-50 hover:text-[#6400dc] transition cursor-pointer">Պրոդուկտներ</button>
-                <button className="bg-gray-100 px-4 py-2 rounded-full hover:bg-purple-50 hover:text-[#6400dc] transition cursor-pointer">Նորարարություններ</button>
-                <button className="bg-gray-100 px-4 py-2 rounded-full hover:bg-purple-50 hover:text-[#6400dc] transition cursor-pointer">Կենսակերպ</button>
-                <button className="bg-gray-100 px-4 py-2 rounded-full hover:bg-purple-50 hover:text-[#6400dc] transition cursor-pointer">Մրցանակներ</button>
-                <button className="bg-gray-100 px-4 py-2 rounded-full hover:bg-purple-50 hover:text-[#6400dc] transition cursor-pointer">CSR</button>
-                <button className="bg-gray-100 px-4 py-2 rounded-full hover:bg-purple-50 hover:text-[#6400dc] transition cursor-pointer">Այլ</button>
+                <button className="bg-gray-100 px-3 sm:px-4 py-2 rounded-full hover:bg-purple-50 hover:text-[#6400dc] transition cursor-pointer">Գլխավոր</button>
+                <button className="bg-gray-100 px-3 sm:px-4 py-2 rounded-full hover:bg-purple-50 hover:text-[#6400dc] transition cursor-pointer">Բանկային</button>
+                <button className="bg-gray-100 px-3 sm:px-4 py-2 rounded-full hover:bg-purple-50 hover:text-[#6400dc] transition cursor-pointer">Հարցազրույցներ</button>
+                <button className="bg-gray-100 px-3 sm:px-4 py-2 rounded-full hover:bg-purple-50 hover:text-[#6400dc] transition cursor-pointer">Պրոդուկտներ</button>
+                <button className="bg-gray-100 px-3 sm:px-4 py-2 rounded-full hover:bg-purple-50 hover:text-[#6400dc] transition cursor-pointer">Նորարարություններ</button>
+                <button className="bg-gray-100 px-3 sm:px-4 py-2 rounded-full hover:bg-purple-50 hover:text-[#6400dc] transition cursor-pointer">Կենսակերպ</button>
+                <button className="bg-gray-100 px-3 sm:px-4 py-2 rounded-full hover:bg-purple-50 hover:text-[#6400dc] transition cursor-pointer">Մրցանակներ</button>
+                <button className="bg-gray-100 px-3 sm:px-4 py-2 rounded-full hover:bg-purple-50 hover:text-[#6400dc] transition cursor-pointer">CSR</button>
+                <button className="bg-gray-100 px-3 sm:px-4 py-2 rounded-full hover:bg-purple-50 hover:text-[#6400dc] transition cursor-pointer">Այլ</button>
                 <button 
                   onClick={() => navigate('/bolor-norutyunner')}
-                  className="bg-[#6400dc] text-white px-5 py-2 rounded-full font-bold ml-auto cursor-pointer shadow-sm hover:opacity-90 transition"
+                  className="bg-[#6400dc] text-white px-4 sm:px-5 py-2 rounded-full font-bold ml-auto cursor-pointer shadow-sm hover:opacity-90 transition shrink-0"
                 >
                   Բոլորը &gt;
                 </button>
               </div>
             </div>
 
-            <main className="max-w-7xl mx-auto px-4 py-6 space-y-12">
+            <main className="max-w-7xl mx-auto px-4 sm:px-6 py-6 space-y-12">
               
               {/* TOP FEATURE */}
               <div 
@@ -203,17 +203,17 @@ export default function Norutyunner() {
                   <span className="text-xs font-bold text-[#6400dc] bg-purple-100 px-3 py-1 rounded-full inline-block">
                     {topNews.category}
                   </span>
-                  <h2 className="text-2xl md:text-3xl font-black text-neutral-900 leading-tight group-hover:text-[#6400dc] transition">
+                  <h2 className="text-xl sm:text-2xl md:text-3xl font-black text-neutral-900 leading-tight group-hover:text-[#6400dc] transition">
                     {topNews.title}
                   </h2>
-                  <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
                     {topNews.desc}
                   </p>
                   <div className="pt-4 text-xs font-bold text-gray-400">
                     {topNews.date}
                   </div>
                 </div>
-                <div className="lg:w-1/2 rounded-2xl overflow-hidden shadow-sm">
+                <div className="lg:w-1/2 rounded-2xl overflow-hidden shadow-sm w-full">
                   <img 
                     src={topNews.image} 
                     alt={topNews.title} 
@@ -239,7 +239,7 @@ export default function Norutyunner() {
                     <span className="text-xs font-bold text-[#6400dc] border-l-2 border-[#6400dc] pl-2">
                       {mainNews.category}
                     </span>
-                    <h3 className="text-xl md:text-2xl font-black text-neutral-900 leading-snug group-hover:text-[#6400dc] transition">
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-black text-neutral-900 leading-snug group-hover:text-[#6400dc] transition">
                       {mainNews.title}
                     </h3>
                     <p className="text-xs text-gray-600 leading-relaxed">
@@ -251,7 +251,7 @@ export default function Norutyunner() {
                   </div>
                 </div>
 
-                <div className="lg:col-span-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-6">
                   {sideNews.map((item) => (
                     <div 
                       key={item.id}
@@ -269,7 +269,7 @@ export default function Norutyunner() {
                         <span className="text-[11px] font-bold text-[#6400dc] border-l-2 border-[#6400dc] pl-2 block">
                           {item.category}
                         </span>
-                        <h4 className="text-xs md:text-sm font-extrabold text-neutral-900 leading-snug group-hover:text-[#6400dc] transition line-clamp-2">
+                        <h4 className="text-xs sm:text-sm font-extrabold text-neutral-900 leading-snug group-hover:text-[#6400dc] transition line-clamp-2">
                           {item.title}
                         </h4>
                         <div className="text-[10px] text-gray-400 pt-1">
@@ -287,7 +287,7 @@ export default function Norutyunner() {
                   onClick={() => handleOpenNews(middleNews)}
                   className="flex flex-col lg:flex-row items-center gap-8 cursor-pointer group text-left"
                 >
-                  <div className="lg:w-1/2 rounded-2xl overflow-hidden">
+                  <div className="lg:w-1/2 rounded-2xl overflow-hidden w-full">
                     <img 
                       src={middleNews.image} 
                       alt={middleNews.title} 
@@ -298,10 +298,10 @@ export default function Norutyunner() {
                     <span className="text-xs font-bold text-[#6400dc] border-l-2 border-[#6400dc] pl-2">
                       {middleNews.category}
                     </span>
-                    <h3 className="text-2xl md:text-3xl font-black text-neutral-900 leading-snug group-hover:text-[#6400dc] transition">
+                    <h3 className="text-xl sm:text-2xl md:text-3xl font-black text-neutral-900 leading-snug group-hover:text-[#6400dc] transition">
                       {middleNews.title}
                     </h3>
-                    <p className="text-xs md:text-sm text-gray-600 leading-relaxed">
+                    <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
                       {middleNews.desc}
                     </p>
                     <div className="text-xs text-gray-400 font-medium pt-2">
@@ -335,7 +335,7 @@ export default function Norutyunner() {
                         <span className="text-xs font-bold text-[#6400dc] border-l-2 border-[#6400dc] pl-2 block">
                           {item.category}
                         </span>
-                        <h3 className="text-base font-extrabold text-neutral-900 leading-snug group-hover:text-[#6400dc] transition line-clamp-2">
+                        <h3 className="text-sm sm:text-base font-extrabold text-neutral-900 leading-snug group-hover:text-[#6400dc] transition line-clamp-2">
                           {item.title}
                         </h3>
                       </div>

@@ -93,7 +93,6 @@ export default function EvocaOnline() {
       return;
     }
 
-    // Եթե սխալ կամ անկապ բան է գրված, բացում ենք սխալի մոդալը
     setShowErrorModal(true);
   };
 
@@ -101,14 +100,14 @@ export default function EvocaOnline() {
     <div className="min-h-screen bg-slate-100 font-sans flex flex-col justify-between relative select-none">
       
       {/* Top Navigation / Header */}
-      <header className="w-full bg-white border-b border-gray-200 py-4 px-8 flex justify-between items-center shadow-xs relative">
+      <header className="w-full bg-white border-b border-gray-200 py-3 sm:py-4 px-4 sm:px-8 flex justify-between items-center shadow-xs relative">
         <div className="flex items-center gap-1.5 cursor-pointer">
-          <span className="text-2xl font-black text-[#6400dc] tracking-tighter">evoca</span>
+          <span className="text-xl sm:text-2xl font-black text-[#6400dc] tracking-tighter">evoca</span>
           <span className="w-2 h-2 bg-[#6400dc] rounded-full"></span>
-          <span className="text-xl font-bold text-neutral-700 ml-1">BANK</span>
+          <span className="text-lg sm:text-xl font-bold text-neutral-700 ml-1">BANK</span>
         </div>
 
-        {/* Language Switcher Dropdown (3rd screenshot style) */}
+        {/* Language Switcher Dropdown */}
         <div className="relative">
           <button 
             onClick={() => setShowLangMenu(!showLangMenu)}
@@ -143,9 +142,9 @@ export default function EvocaOnline() {
       </header>
 
       {/* Main Login Container */}
-      <main className="flex-grow flex flex-col items-center justify-center px-4 py-12">
-        <div className="bg-white rounded-[24px] shadow-xl w-full max-w-md p-8 border border-gray-100">
-          <h2 className="text-xl font-bold text-neutral-900 mb-6 text-center">
+      <main className="flex-grow flex flex-col items-center justify-center px-4 py-8 md:py-12">
+        <div className="bg-white rounded-2xl sm:rounded-[24px] shadow-xl w-full max-w-md p-6 sm:p-8 border border-gray-100">
+          <h2 className="text-lg sm:text-xl font-bold text-neutral-900 mb-6 text-center">
             {t[lang].loginTitle}
           </h2>
 
@@ -160,7 +159,7 @@ export default function EvocaOnline() {
                   setUsername(e.target.value);
                   if (e.target.value.trim()) setUsernameError(false);
                 }}
-                className={`w-full px-4 py-3 rounded-xl border text-sm outline-none transition bg-white ${
+                className={`w-full px-4 py-3 rounded-xl border text-xs sm:text-sm outline-none transition bg-white ${
                   usernameError ? 'border-red-500 focus:ring-1 focus:ring-red-500' : 'border-gray-300 focus:border-[#6400dc]'
                 }`}
               />
@@ -180,7 +179,7 @@ export default function EvocaOnline() {
                     setPassword(e.target.value);
                     if (e.target.value.trim()) setPasswordError(false);
                   }}
-                  className={`w-full px-4 py-3 rounded-xl border text-sm outline-none transition bg-white ${
+                  className={`w-full px-4 py-3 rounded-xl border text-xs sm:text-sm outline-none transition bg-white ${
                     passwordError ? 'border-red-500 focus:ring-1 focus:ring-red-500' : 'border-gray-300 focus:border-[#6400dc]'
                   }`}
                 />
@@ -194,7 +193,7 @@ export default function EvocaOnline() {
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-full bg-[#6400dc] hover:bg-opacity-90 text-white font-bold py-3 rounded-xl transition shadow-md cursor-pointer text-sm"
+              className="w-full bg-[#6400dc] hover:bg-opacity-90 text-white font-bold py-3 rounded-xl transition shadow-md cursor-pointer text-xs sm:text-sm"
             >
               {t[lang].loginBtn}
             </button>
@@ -218,8 +217,8 @@ export default function EvocaOnline() {
           </button>
         </div>
 
-        {/* Old Version Link (Opens old online banking link in new tab) */}
-        <div className="mt-8 text-xs text-gray-500 cursor-pointer hover:underline">
+        {/* Old Version Link */}
+        <div className="mt-6 sm:mt-8 text-xs text-gray-500 cursor-pointer hover:underline text-center">
           <a 
             href="https://online.evoca.am/internetbank/MainForm.wgx" 
             target="_blank" 
@@ -232,13 +231,13 @@ export default function EvocaOnline() {
       </main>
 
       {/* Footer */}
-      <footer className="w-full bg-white border-t border-gray-200 py-4 px-8 text-xs text-gray-500 flex flex-col md:flex-row justify-between items-center gap-4">
+      <footer className="w-full bg-white border-t border-gray-200 py-4 px-4 sm:px-8 text-[11px] sm:text-xs text-gray-500 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
         <div>
           <p>© 2026 Evocabank</p>
           <p>{t[lang].bankSupervised}</p>
           <p>{t[lang].version}</p>
         </div>
-        <div className="flex items-center gap-6">
+        <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-6">
           <span>📞 (+374 10) 60 55 55</span>
           <span>✉️ hello@evoca.am</span>
         </div>
@@ -251,7 +250,7 @@ export default function EvocaOnline() {
       {/* ================= QR MODAL ================= */}
       {showQrModal && (
         <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-3xl p-8 max-w-sm w-full relative shadow-2xl text-center space-y-4">
+          <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 max-w-sm w-full relative shadow-2xl text-center space-y-4">
             <button 
               onClick={() => setShowQrModal(false)}
               className="absolute right-4 top-4 text-gray-400 hover:text-black text-lg cursor-pointer font-bold"
@@ -260,12 +259,12 @@ export default function EvocaOnline() {
             </button>
             <div className="flex justify-center pt-2">
               <img 
-                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAAEOAQAAAABQysQIAAACAklEQVR4nO2YXY6DMAyELfUAHImrcyQOgMTOj5NCd7V9HokIVTR8L04mYzt1fhtHPcizLo8Yvh+S4ljPvV548H8vPxj4m4hoej2W81i2WhTpvr721Z8iEYaLiQ2/oMSSwkpEI46yN1N/05Gj+r36JRmREjFBYdYKbR71p3ZjEJuHt+7y/PaXGMSDjsgoeeBeXom3wYch2DTaYRVeatmILwCLFpKJwAjxYEJflLu0BromIv9DXETQ3kxHfzSMMcTUhR5QkJUy7yAg6DdGEETqG8jDNA7+ZiHOUv+vYaQ2o1lREksTHfifYcU9hhiFjboMpzkJJ+3ldlyyEKRdBe2gbt247MhFMIGKmX7xImw46F5lzwwLJukqa2s1CEJzyLSNWQnZtfisrshDGWqNtGs0uywoVg6GIJOmsBT06CfcCJCK+eDAlbfLkdQuSibgdhCM6So/PsiIKccOhoo9e6HsjRzy2MQ5hEmagcEE6vQp2Zq151MIQTChBqSOUQuXx2sxMRBRBV3wa/R6KyMvZZ6g8d6FBO7wIMwzpuPvAUZtTnqGIS6ThGTXd/V7BJyHcLl1FOGIV5srDt8Y9CvFlv5pn7uAl0o/LlThEFR/t0D2He99opMbtlzOYhMkDF4lImE68XfFpVy8NRxhiDfJFFyp2QVaCt8uVJOT/8SDPujxi+HZIfgAGwfiL0iGekuAAAABJRU5ErkJggg==" 
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAAEOAQAAAABQysQIAAACAklEQVR4nO2YXY6DMAyELfUAHImrcyQOgMTOj5NCd7V9HokIVTR8L04mYzt1fhtHPcizLo8Yvh+S4ljPvV548H8vPxj4m4hoej2W81i2WhTpvr721Z8iEYaLiQ2/oMSSwkpEI46yN1N/05Gj+r36JRmREjFByIdqJyKfYcYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYeYe" 
                 alt="QR Code" 
-                className="w-48 h-48 object-contain mx-auto"
+                className="w-40 h-40 sm:w-48 sm:h-48 object-contain mx-auto"
               />
             </div>
-            <h3 className="text-lg font-bold text-neutral-900">{t[lang].qrTitle}</h3>
+            <h3 className="text-base sm:text-lg font-bold text-neutral-900">{t[lang].qrTitle}</h3>
             <p className="text-xs text-gray-600 leading-relaxed">
               {t[lang].qrDesc}
             </p>
@@ -276,8 +275,8 @@ export default function EvocaOnline() {
       {/* ================= ERROR MODAL ================= */}
       {showErrorModal && (
         <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-3xl p-8 max-w-md w-full relative shadow-2xl text-left space-y-4">
-            <div className="flex items-center gap-2 text-red-600 font-bold text-lg">
+          <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 max-w-md w-full relative shadow-2xl text-left space-y-4">
+            <div className="flex items-center gap-2 text-red-600 font-bold text-base sm:text-lg">
               <span>⚠️</span> <span>{t[lang].errorTitle}</span>
             </div>
             <p className="text-xs text-gray-700 leading-relaxed whitespace-pre-line">

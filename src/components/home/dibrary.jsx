@@ -43,24 +43,24 @@ export default function Dibrary() {
         <Navbar />
 
         {/* Բովանդակության գլխավոր կոնտեյներ */}
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 pt-10 pb-16 text-left">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-6 md:py-10 text-left">
           
           {/* Հացի փշրանքներ (Breadcrumbs) */}
-          <div className="text-xs text-gray-400 mb-6 flex items-center gap-2">
+          <div className="text-xs text-gray-400 mb-6 flex items-center gap-2 flex-wrap">
             <span>🏠</span> &gt; <span className="text-gray-700 font-medium">Dibrary</span>
           </div>
 
           {/* Վերնագիր և մեծ նկար */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-10">
             <div>
-              <h1 className="text-3xl md:text-4xl font-black text-neutral-900 leading-tight mb-4">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-neutral-900 leading-tight mb-4">
                 Dibrary - Digital Library
               </h1>
-              <p className="text-sm text-gray-700 leading-relaxed">
+              <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
                 Evocabank-ի նոր և գերժամանակակից «Թումանյան» մասնաճյուղում` Թումանյան 15 հասցեով, բացի ստանդարտ բանկային ծառայություններից, կգործի նաև Dibrary – digital library:
               </p>
             </div>
-            <div className="rounded-2xl overflow-hidden shadow-sm border border-gray-200">
+            <div className="rounded-2xl overflow-hidden shadow-sm border border-gray-200 bg-gray-50">
               <img 
                 src="https://www.evoca.am/images-cache/menu/1/16117479662777/780x585.jpg" 
                 alt="Dibrary Digital Library" 
@@ -70,7 +70,7 @@ export default function Dibrary() {
             </div>
           </div>
 
-          <div className="space-y-6 text-sm text-gray-700 leading-relaxed">
+          <div className="space-y-6 text-xs sm:text-sm text-gray-700 leading-relaxed">
             
             <p>
               <strong>#dibrary</strong>-ում կարելի է անվճար օգտվել էլեկտրոնային բիզնես ռեսուրսներից՝ e-Duke Journals Scholarly Collection, ASTM Compass, Edward Elgar Publishing Journals, Mathematical Sciences Publishers Journals, Royal Society Journals Collection, SAGE Premier և այլն․․․
@@ -88,7 +88,7 @@ export default function Dibrary() {
 
           {/* Փոքր նկարների ցանց (Partners Grid) */}
           <div className="mt-12 pt-8 border-t border-gray-200">
-            <h3 className="text-base font-bold text-neutral-900 mb-6 text-center">
+            <h3 className="text-sm sm:text-base font-bold text-neutral-900 mb-6 text-center">
               Գործընկեր գրադարաններ և հարթակներ
             </h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 items-center">

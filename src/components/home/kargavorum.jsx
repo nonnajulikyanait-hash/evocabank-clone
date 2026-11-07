@@ -9,25 +9,27 @@ export default function Kargavorum() {
         <Navbar />
 
         {/* Բովանդակության գլխավոր կոնտեյներ */}
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 pt-10 pb-16 text-left">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8 md:py-12 text-left">
           
           {/* Հացի փշրանքներ (Breadcrumbs) */}
-          <div className="text-xs text-gray-400 mb-6 flex items-center gap-2">
+          <div className="text-xs text-gray-400 mb-6 flex items-center gap-2 flex-wrap">
             <span>🏠</span> &gt; <span className="text-gray-700 font-medium">Կարգավորում</span>
           </div>
 
-          <h1 className="text-3xl md:text-4xl font-black text-neutral-900 mb-8">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-neutral-900 mb-6 md:mb-8">
             Կարգավորում
           </h1>
 
-          <div className="space-y-6 text-sm text-gray-700 leading-relaxed">
-            <p className="font-semibold text-neutral-900 text-base">
+          <div className="space-y-6 text-xs sm:text-sm text-gray-700 leading-relaxed">
+            <p className="font-semibold text-neutral-900 text-sm sm:text-base">
               Բանկի կողմից ծառայությունների մատուցումը կարգավորվում է՝
             </p>
 
             {/* ՀՀ Օրենքներով */}
             <div>
-              <p className="font-bold text-neutral-900 mb-2">- ՀՀ Օրենքներով՝</p>
+              <p className="font-bold text-neutral-900 mb-2">
+                ՀՀ Օրենքներով՝
+              </p>
               <ul className="list-disc pl-6 space-y-1.5 text-gray-600">
                 <li>«Հայաստանի Հանրապետության Քաղաքացիական օրենսգիրք»</li>
                 <li>«Բանկային գաղտնիքի մասին»</li>
@@ -49,7 +51,9 @@ export default function Kargavorum() {
 
             {/* ՀՀ Կենտրոնական Բանկի նորմատիվ իրավական ակտերով */}
             <div>
-              <p className="font-bold text-neutral-900 mb-2">- ՀՀ Կենտրոնական Բանկի նորմատիվ իրավական ակտերով՝</p>
+              <p className="font-bold text-neutral-900 mb-2">
+                ՀՀ Կենտրոնական Բանկի նորմատիվ իրավական ակտերով՝
+              </p>
               <ul className="list-disc pl-6 space-y-1.5 text-gray-600">
                 <li>Կանոնակարգ 8/01 «Տարեկան փաստացի տոկոսադրույքի հաշվարկման բացատրություններ և օրինակներ»</li>
                 <li>Կանոնակարգ 8/02 «Բանկային ավանդների տարեկան տոկոսային եկամտաբերության հաշվարկումը»</li>
@@ -63,7 +67,7 @@ export default function Kargavorum() {
             {/* Բանկի Խորհրդի կողմից հաստատված ներքին իրավական ակտերով */}
             <div>
               <p className="font-bold text-neutral-900 mb-1">
-                - Բանկի Խորհրդի կողմից հաստատված ներքին իրավական ակտերով (կանոնակարգեր, կարգեր, ընթացակարգեր և այլն):[cite: 15, 16]
+                Բանկի Խորհրդի կողմից հաստատված ներքին իրավական ակտերով (կանոնակարգեր, կարգեր, ընթացակարգեր և այլն):
               </p>
             </div>
 

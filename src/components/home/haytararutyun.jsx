@@ -11,7 +11,7 @@ export default function Haytararutyun() {
       date: '10.11.2026',
       title: '«ԷՎՈԿԱԲԱՆԿ» ԲԲԸ Բաժնետերերի արտահերթ ընդհանուր ժողով',
       content: (
-        <div className="space-y-3 text-neutral-600 text-sm leading-relaxed">
+        <div className="space-y-3 text-neutral-600 text-xs sm:text-sm leading-relaxed">
           <p>
             <strong>2026թ. Նոյեմբերի 10-ին` ժամը 13:00-ին</strong> (Երևանի ժամանակով), ք. Երևան, Հանրապետության 44/2 հասցեում տեղի է ունենալու «ԷՎՈԿԱԲԱՆԿ» ԲԲԸ Բաժնետերերի արտահերթ ընդհանուր ժողով՝ տեսակապի միջոցով:
           </p>
@@ -28,7 +28,7 @@ export default function Haytararutyun() {
       date: '22.06.2026',
       title: '«ԷՎՈԿԱԲԱՆԿ» ԲԲԸ Բաժնետերերի տարեկան ընդհանուր ժողով',
       content: (
-        <div className="space-y-3 text-neutral-600 text-sm leading-relaxed">
+        <div className="space-y-3 text-neutral-600 text-xs sm:text-sm leading-relaxed">
           <p>
             <strong>2026թ. հունիսի 22-ին` ժամը 12:00-ին</strong> (Երևանի ժամանակով), ք. Երևան, Հանրապետության 44/2 հասցեում տեղի է ունենալու «ԷՎՈԿԱԲԱՆԿ» ԲԲԸ-ի Բաժնետերերի տարեկան ընդհանուր ժողով՝ տեսակապի միջոցով:
           </p>
@@ -50,7 +50,7 @@ export default function Haytararutyun() {
       date: '01.07.2025',
       title: 'Գործարքների արգելափակում ֆունկցիոնալ',
       content: (
-        <div className="space-y-3 text-neutral-600 text-sm leading-relaxed">
+        <div className="space-y-3 text-neutral-600 text-xs sm:text-sm leading-relaxed">
           <p>
             Հուլիսի 1-ից EvocaTOUCH հավելվածում ու EvocaONLINE համակարգում հասանելի կլինի նոր՝ Գործարքների արգելափակում ֆունկցիոնալը։
           </p>
@@ -58,7 +58,7 @@ export default function Haytararutyun() {
             Այն հնարավորություն է տալիս ինքնուրույն՝ ընդամենը 1 կոճակով, ժամանակավորապես արգելափակել առանձին կամ բոլոր հեռավար բանկային ծառայությունները՝ ապահովելով հաշիվների անվտանգության բարձր մակարդակը։ Գործարքների ապաարգելափակման համար անհրաժեշտ կլինի մոտենալ Բանկի ցանկացած մասնաճյուղ:
           </p>
           <p>
-            <strong>Ուշադրություն.</strong> «Գործարքների արգելափակում» գործիքը նախատեսված է Ձեր միջոցների և տվյալների անվտանգությունն ապահովելու համար: Խնդրում ենք չկիրառել այն փորձարկման նպատակով, քանի որ արգելափակման դեպքում ընտրված ծառայությունները կդառնան անհասանելի, իսկ դրանց ապաարգելափակման համար անհրաժեշտ կլինի մոտենալ Բանկի մասնաճյուղ:
+            <strong>Ուշադրություն։</strong> «Գործարքների արգելափակում» գործիքը նախատեսված է Ձեր միջոցների և տվյալների անվտանգությունն ապահովելու համար: Խնդրում ենք չկիրառել այն փորձարկման նպատակով, քանի որ արգելափակման դեպքում ընտրված ծառայությունները կդառնան անհասանելի, իսկ դրանց ապաարգելափակման համար անհրաժեշտ կլինի մոտենալ Բանկի մասնաճյուղ:
           </p>
         </div>
       )
@@ -68,7 +68,7 @@ export default function Haytararutyun() {
       date: '19.06.2025',
       title: '«ԷՎՈԿԱԲԱՆԿ» ՓԲԸ-ի Բաժնետերերի տարեկան ընդհանուր ժողով',
       content: (
-        <div className="space-y-3 text-neutral-600 text-sm leading-relaxed">
+        <div className="space-y-3 text-neutral-600 text-xs sm:text-sm leading-relaxed">
           <p>
             <strong>2025թ. հունիսի 19-ին` ժամը 15:00-ին</strong> (Երևանի ժամանակով), ք. Երևան, Հանրապետության 44/2 հասցեում տեղի է ունենալու «ԷՎՈԿԱԲԱՆԿ» ՓԲԸ-ի Բաժնետերերի տարեկան ընդհանուր ժողով՝ տեսակապի միջոցով:
           </p>
@@ -89,7 +89,7 @@ export default function Haytararutyun() {
       date: '14.04.2025',
       title: '«ԷՎՈԿԱԲԱՆԿ» ՓԲԸ Բաժնետերերի արտահերթ ընդհանուր ժողով',
       content: (
-        <div className="space-y-3 text-neutral-600 text-sm leading-relaxed">
+        <div className="space-y-3 text-neutral-600 text-xs sm:text-sm leading-relaxed">
           <p>
             <strong>2025թ. ապրիլի 14-ին` ժամը 15:00-ին</strong> (Երևանի ժամանակով), ք. Երևան, Հանրապետության 44/2 հասցեում տեղի է ունենալու «ԷՎՈԿԱԲԱՆԿ» ՓԲԸ Բաժնետերերի արտահերթ ընդհանուր ժողով՝ տեսակապի միջոցով:
           </p>
@@ -107,7 +107,7 @@ export default function Haytararutyun() {
       date: '30.12.2024',
       title: 'Արտաքին աուդիտի մրցույթի հայտարարություն',
       content: (
-        <div className="space-y-3 text-neutral-600 text-sm leading-relaxed">
+        <div className="space-y-3 text-neutral-600 text-xs sm:text-sm leading-relaxed">
           <p>
             «Էվոկաբանկ» ՓԲԸ-ն հայտարարում է Բանկի 2025թ. գործունեության արտաքին աուդիտ իրականացնող անձի ընտրության բաց հրապարակային մրցույթ` համաձայն Բանկի Խորհրդի 25.12.2019թ. թիվ 20 արձանագրությամբ հաստատված «Անկախ աուդիտորական կազմակերպության ընտրության» կարգի պահանջների:
           </p>
@@ -122,11 +122,11 @@ export default function Haytararutyun() {
       date: '01.07.2024',
       title: 'Բանկի ներսում նույն արժույթով քարտերի միջև փոխանցման սակագինը սահմանվել է 0%',
       content: (
-        <div className="space-y-3 text-neutral-600 text-sm leading-relaxed">
+        <div className="space-y-3 text-neutral-600 text-xs sm:text-sm leading-relaxed">
           <p>
             Տեղեկացնում ենք, որ EvocaTOUCH հավելվածում և EvocaONLINE համակարգում Բանկի ներսում նույն արժույթով քարտերի միջև փոխանցման սակագինը սահմանվել է 0%։
           </p>
-          <p><strong>Խնդրում ենք հաշվի առնել, որ</strong></p>
+          <p><strong>Խնդրում ենք հաշվի առնել, որ՝</strong></p>
           <ul className="list-disc pl-5 space-y-1">
             <li>Մյուս սակագները մնացել են անփոփոխ:</li>
             <li>Փոփոխությունը չի տարածվում Visa Infinite քարտերի վրա։</li>
@@ -139,7 +139,7 @@ export default function Haytararutyun() {
       date: '28.06.2024',
       title: '«ԷՎՈԿԱԲԱՆԿ» ՓԲԸ Բաժնետերերի տարեկան ընդհանուր ժողով',
       content: (
-        <div className="space-y-3 text-neutral-600 text-sm leading-relaxed">
+        <div className="space-y-3 text-neutral-600 text-xs sm:text-sm leading-relaxed">
           <p>
             <strong>2024թ. հունիսի 28-ին` ժամը 16:00-ին</strong> (Երևանի ժամանակով), ք. Երևան, Հանրապետության 44/2 հասցեում տեղի է ունենալու «ԷՎՈԿԱԲԱՆԿ» ՓԲԸ Բաժնետերերի տարեկան ընդհանուր ժողով՝ տեսակապի միջոցով:
           </p>
@@ -160,7 +160,7 @@ export default function Haytararutyun() {
       date: '29.03.2024',
       title: 'МИР քարտերի սպասարկման դադարեցում',
       content: (
-        <div className="space-y-3 text-neutral-600 text-sm leading-relaxed">
+        <div className="space-y-3 text-neutral-600 text-xs sm:text-sm leading-relaxed">
           <p>
             Տեղեկացնում ենք, որ մարտի 29-ից Բանկը դադարեցնում է ArCa МИР քարտերի թողարկումը և МИР քարտերի սպասարկումն իր ցանցում, ինչը պայմանավորված է «МИР» վճարային համակարգի նկատմամբ միջազգային պատժամիջոցների կիրառմամբ:
           </p>
@@ -178,7 +178,7 @@ export default function Haytararutyun() {
       date: '08.09.2023',
       title: 'Թղթադրամների մուտքագրման սակագնի փոփոխություն',
       content: (
-        <div className="space-y-3 text-neutral-600 text-sm leading-relaxed">
+        <div className="space-y-3 text-neutral-600 text-xs sm:text-sm leading-relaxed">
           <p>
             Տեղեկացնում ենք, որ ԱՄՆ դոլարով կանխիկի մուտքագրման սակագներում տեղի է ունեցել փոփոխություն։
           </p>
@@ -194,7 +194,7 @@ export default function Haytararutyun() {
       date: '15.08.2023',
       title: 'Արտարժութային հաշիվներից կանխիկացման միջնորդավճարի ժամանակավոր փոփոխություն',
       content: (
-        <div className="space-y-3 text-neutral-600 text-sm leading-relaxed">
+        <div className="space-y-3 text-neutral-600 text-xs sm:text-sm leading-relaxed">
           <p>
             15.08.2023թ.-ից Էվոկաբանկ ՓԲԸ-ի ընթացիկ արտարժույթային հաշիվներից (ԱՄՆ դոլարով և Եվրոյով), ինչպես նաև Բանկի ArCa, ArCa МИР, ArCa Transfer MasterCard և VISA ԱՄՆ դոլարով և Եվրոյով քարտերից և քարտային հաշիվներից կանխիկացման միջնորդավճարը կկազմի 0.5%:
           </p>
@@ -206,7 +206,7 @@ export default function Haytararutyun() {
       date: '02.06.2023',
       title: '«ԷՎՈԿԱԲԱՆԿ» ՓԲԸ բաժնետերերի տարեկան ընդհանուր ժողով',
       content: (
-        <div className="space-y-3 text-neutral-600 text-sm leading-relaxed">
+        <div className="space-y-3 text-neutral-600 text-xs sm:text-sm leading-relaxed">
           <p>
             <strong>2023թ. հունիսի 02-ին` ժամը 16:00-ին</strong> (Երևանի ժամանակով), ք. Երևան, Հանրապետության 44/2 հասցեում տեղի է ունենալու «ԷՎՈԿԱԲԱՆԿ» ՓԲԸ բաժնետերերի տարեկան ընդհանուր ժողով, որն անցկացվելու է տեսակապի միջոցով` Zoom ծրագրով:
           </p>
@@ -227,7 +227,7 @@ export default function Haytararutyun() {
       date: '27.03.2023',
       title: 'ԱՄՆ դոլարով և Եվրոյով ստացված արագ դրամական փոխանցումների վերաբերյալ',
       content: (
-        <div className="space-y-3 text-neutral-600 text-sm leading-relaxed">
+        <div className="space-y-3 text-neutral-600 text-xs sm:text-sm leading-relaxed">
           <p>
             27.03.2023թ.-ից արագ դրամական փոխանցումների բոլոր համակարգերով (այդ թվում Ria, Intelexpress, Unistream, Moneygram) ԱՄՆ դոլարով և Եվրոյով ստացված բոլոր գումարների կանխիկ եղանակով ստացումը իրականացվում է առանց կանխիկացման միջնորդավճարի գանձման:
           </p>
@@ -239,12 +239,12 @@ export default function Haytararutyun() {
       date: '06.02.2023',
       title: '«ԷՎՈԿԱԲԱՆԿ» ՓԲԸ բաժնետերերի արտահերթ ընդհանուր ժողով',
       content: (
-        <div className="space-y-3 text-neutral-600 text-sm leading-relaxed">
+        <div className="space-y-3 text-neutral-600 text-xs sm:text-sm leading-relaxed">
           <p>
             <strong>2023թ. փետրվարի 06-ին` ժամը 17:00-ին</strong> (Երևանի ժամանակով), ք. Երևան, Հանրապետության 44/2 հասցեում տեղի է ունենալու «ԷՎՈԿԱԲԱՆԿ» ՓԲԸ բաժնետերերի արտահերթ ընդհանուր ժողով, որն անցկացվելու է տեսակապի միջոցով` Zoom ծրագրով:
           </p>
           <p><strong>Ժողովի օրակարգում ընդգրկվել է հետևյալ հարցը.</strong></p>
-          <p>- 2021թ․ արդյունքները ներառյալ Բանկում կուտակված զուտ շահույթից հասարակ անվանական բաժնետոմսերի դիմաց 2 մլրդ ՀՀ դրամի չափով շահութաբաժնի վճարման մասին որոշման կայացում։</p>
+          <p>2021թ․ արդյունքները ներառյալ Բանկում կուտակված զուտ շահույթից հասարակ անվանական բաժնետոմսերի դիմաց 2 մլրդ ՀՀ դրամի չափով շահութաբաժնի վճարման մասին որոշման կայացում։</p>
         </div>
       )
     },
@@ -253,7 +253,7 @@ export default function Haytararutyun() {
       date: '01.01.2023',
       title: 'Արտարժութային հաշիվներից կանխիկացման միջնորդավճարի ժամանակավոր փոփոխություն',
       content: (
-        <div className="space-y-3 text-neutral-600 text-sm leading-relaxed">
+        <div className="space-y-3 text-neutral-600 text-xs sm:text-sm leading-relaxed">
           <p>
             01.01.2023թ.-ից Էվոկաբանկ ՓԲԸ-ի ընթացիկ արտարժույթային հաշիվներից (ԱՄՆ դոլարով և Եվրոյով), ինչպես նաև Բանկի ArCa, ArCa МИР, ArCa Transfer MasterCard և VISA ԱՄՆ դոլարով և Եվրոյով քարտերից և քարտային հաշիվներից կանխիկացման միջնորդավճարը կկազմի 2%:
           </p>
@@ -266,7 +266,7 @@ export default function Haytararutyun() {
       date: '18.06.2022',
       title: '«ԷՎՈԿԱԲԱՆԿ» ՓԲԸ բաժնետերերի տարեկան ընդհանուր ժողով',
       content: (
-        <div className="space-y-3 text-neutral-600 text-sm leading-relaxed">
+        <div className="space-y-3 text-neutral-600 text-xs sm:text-sm leading-relaxed">
           <p>
             <strong>2022թ. հունիսի 18-ին` ժամը 12:00-ին</strong>, ք. Երևան, Հանրապետության 44/2 հասցեում տեղի է ունենալու «ԷՎՈԿԱԲԱՆԿ» ՓԲԸ բաժնետերերի տարեկան ընդհանուր ժողով` տեսակապի միջոցով:
           </p>
@@ -302,9 +302,9 @@ export default function Haytararutyun() {
       <div>
         <Navbar />
 
-        <main className="space-y-12 pb-20 pt-8">
+        <main className="space-y-8 md:space-y-12 pb-16 md:pb-20 pt-6 md:pt-8">
           {/* Breadcrumbs */}
-          <div className="container mx-auto px-4 max-w-6xl text-xs text-gray-500 flex items-center gap-2">
+          <div className="container mx-auto px-4 max-w-6xl text-xs text-gray-500 flex items-center gap-2 flex-wrap">
             <Link to="/" className="hover:text-[#6400dc]">🏠</Link>
             <span>/</span>
             <Link to="/mer-masin" className="hover:text-[#6400dc]">Մեր մասին</Link>
@@ -312,14 +312,14 @@ export default function Haytararutyun() {
             <span className="text-neutral-800 font-semibold">Հայտարարություններ</span>
           </div>
 
-          <div className="container mx-auto px-4 max-w-6xl space-y-8">
+          <div className="container mx-auto px-4 max-w-6xl space-y-6 md:space-y-8">
             {/* Title & Filter Icon Section */}
             <div className="flex justify-between items-center flex-wrap gap-4">
-              <h1 className="text-3xl md:text-4xl font-black text-neutral-950">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-neutral-950">
                 Հայտարարություններ
               </h1>
 
-              <div className="flex items-center gap-3 bg-gray-50 border border-gray-200 rounded-xl px-4 py-2 text-sm text-gray-600">
+              <div className="flex items-center gap-3 bg-gray-50 border border-gray-200 rounded-xl px-4 py-2 text-xs sm:text-sm text-gray-600">
                 <span>📅</span>
                 <span className="text-gray-400">Սկսած</span>
                 <span>-</span>
@@ -347,19 +347,19 @@ export default function Haytararutyun() {
                   >
                     <button
                       onClick={() => toggleAccordion(item.id)}
-                      className="w-full text-left p-5 md:p-6 flex justify-between items-center gap-4 font-bold text-neutral-900 text-sm md:text-base hover:text-[#6400dc] transition cursor-pointer"
+                      className="w-full text-left p-4 sm:p-5 md:p-6 flex justify-between items-center gap-4 font-bold text-neutral-900 text-xs sm:text-sm md:text-base hover:text-[#6400dc] transition cursor-pointer"
                     >
                       <div className="space-y-1">
-                        <span className="text-xs text-gray-400 font-medium block">{item.date}</span>
+                        <span className="text-[11px] sm:text-xs text-gray-400 font-medium block">{item.date}</span>
                         <span>{item.title}</span>
                       </div>
-                      <span className={`text-xl transform transition-transform duration-300 shrink-0 ${openId === item.id ? 'rotate-180 text-[#6400dc]' : 'text-gray-400'}`}>
+                      <span className={`text-lg sm:text-xl transform transition-transform duration-300 shrink-0 ${openId === item.id ? 'rotate-180 text-[#6400dc]' : 'text-gray-400'}`}>
                         ∨
                       </span>
                     </button>
 
                     {openId === item.id && (
-                      <div className="px-5 md:px-6 pb-6 pt-2 border-t border-gray-100 bg-[#f8f9fa]/50">
+                      <div className="px-4 sm:px-5 md:px-6 pb-6 pt-2 border-t border-gray-100 bg-[#f8f9fa]/50">
                         {item.content}
                       </div>
                     )}
@@ -367,7 +367,7 @@ export default function Haytararutyun() {
                 ))}
 
                 {/* Pagination */}
-                <div className="flex items-center justify-center gap-2 pt-8">
+                <div className="flex items-center justify-center gap-2 pt-6 sm:pt-8 flex-wrap">
                   {Array.from({ length: totalPages }, (_, i) => i + 1).map((num) => (
                     <button
                       key={num}
@@ -375,7 +375,7 @@ export default function Haytararutyun() {
                         setCurrentPage(num);
                         setOpenId(null);
                       }}
-                      className={`w-9 h-9 rounded-lg font-bold text-sm transition cursor-pointer flex items-center justify-center ${
+                      className={`w-9 h-9 rounded-lg font-bold text-xs sm:text-sm transition cursor-pointer flex items-center justify-center ${
                         currentPage === num 
                           ? 'bg-[#6400dc] text-white shadow-sm' 
                           : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
@@ -391,7 +391,7 @@ export default function Haytararutyun() {
                         setOpenId(null);
                       }
                     }}
-                    className="w-9 h-9 rounded-lg bg-gray-100 text-gray-600 hover:bg-gray-200 font-bold text-sm flex items-center justify-center cursor-pointer"
+                    className="w-9 h-9 rounded-lg bg-gray-100 text-gray-600 hover:bg-gray-200 font-bold text-xs sm:text-sm flex items-center justify-center cursor-pointer"
                   >
                     →
                   </button>

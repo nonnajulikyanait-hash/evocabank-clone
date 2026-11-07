@@ -8,13 +8,13 @@ export default function Gorcarqner() {
       <div>
         <Navbar />
 
-        <main className="max-w-6xl mx-auto px-4 py-8 text-left">
+        <main className="max-w-6xl mx-auto px-4 py-6 md:py-8 text-left">
           {/* Breadcrumbs */}
-          <div className="text-xs text-gray-400 mb-6 flex items-center gap-2">
+          <div className="text-xs text-gray-400 mb-6 flex items-center gap-2 flex-wrap">
             <span>🏠</span> &gt; <span>Բիզնես</span> &gt; <span>Արժեթղթերի շուկա</span> &gt; <span className="text-gray-700 font-medium">Ռեպո/Հակադարձ ռեպո գործարքներ</span>
           </div>
 
-          <h1 className="text-3xl md:text-4xl font-black text-neutral-900 mb-8">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-neutral-900 mb-6 md:mb-8">
             Ռեպո/Հակադարձ ռեպո գործարքներ
           </h1>
 
@@ -27,17 +27,17 @@ export default function Gorcarqner() {
             </div>
 
             {/* Հիմնական տեքստ */}
-            <div className="flex-1 space-y-6 text-xs md:text-sm text-gray-700 leading-relaxed">
+            <div className="flex-1 space-y-6 text-xs sm:text-sm text-gray-700 leading-relaxed w-full">
               <p className="text-gray-800 leading-relaxed">
-                Բանկը Ռեպո/Հակադարձ Ռեպո գործարքներ է կնքում բացառապես Հայաստանի Հանրապետության Կենտրոնական բանկի կողմից գրանցված և լիցենզավորված, մասնագիտացված ընկերությունների հետ (Բանկեր, Ներդրումային ընկերություններ, Ներդրումային ֆոնդեր, Վարկային կազմակերպություններ, Ապահովագրական ընկերություններ)[cite: 22]:
+                Բանկը Ռեպո/Հակադարձ Ռեպո գործարքներ է կնքում բացառապես Հայաստանի Հանրապետության Կենտրոնական բանկի կողմից գրանցված և լիցենզավորված, մասնագիտացված ընկերությունների հետ (Բանկեր, Ներդրումային ընկերություններ, Ներդրումային ֆոնդեր, Վարկային կազմակերպություններ, Ապահովագրական ընկերություններ):
               </p>
 
               <p className="text-gray-800 leading-relaxed">
-                Գործարքները կնքվում են ՀՀ պետական գանձապետական և ԿԲ-ի կողմից թողարկված պարտատոմսերով, ինչպես նաև ՀՀ առևտրային բանկերի, վարկային կազմակերպությունների կողմից թողարկված և Հայաստանի Ֆոնդային Բորսայում ցուցակված այլ կորպորատիվ պարտատոմսերով[cite: 22]:
+                Գործարքները կնքվում են ՀՀ պետական գանձապետական և ԿԲ-ի կողմից թողարկված պարտատոմսերով, ինչպես նաև ՀՀ առևտրային բանկերի, վարկային կազմակերպությունների կողմից թողարկված և Հայաստանի Ֆոնդային Բորսայում ցուցակված այլ կորպորատիվ պարտատոմսերով:
               </p>
 
               <p className="text-gray-800 leading-relaxed">
-                Գործարքի հիմնական պայմանները որոշվում են երկկողմ բանակցությունների արդյունքում[cite: 22]:
+                Գործարքի հիմնական պայմանները որոշվում են երկկողմ բանակցությունների արդյունքում:
               </p>
             </div>
           </div>

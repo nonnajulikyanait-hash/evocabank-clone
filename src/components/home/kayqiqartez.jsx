@@ -18,24 +18,24 @@ export default function Kayqiqartez() {
         <Navbar />
 
         {/* Բովանդակության գլխավոր կոնտեյներ */}
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 pt-10 pb-16 text-left">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 md:py-12 text-left">
           
           {/* Հացի փշրանքներ (Breadcrumbs) */}
-          <div className="text-xs text-gray-400 mb-6 flex items-center gap-2">
+          <div className="text-xs text-gray-400 mb-6 flex items-center gap-2 flex-wrap">
             <span>🏠</span> &gt; <span className="text-gray-700 font-medium">Կայքի քարտեզ</span>
           </div>
 
-          <h1 className="text-3xl md:text-4xl font-black text-neutral-900 mb-10">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-neutral-900 mb-8 md:mb-10">
             Կայքի քարտեզ
           </h1>
 
           {/* Քարտեզի բովանդակություն */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 text-sm">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 text-xs sm:text-sm">
             
             {/* Սյուն 1: Անհատ */}
             <div className="space-y-6">
               <div>
-                <h2 className="text-xl font-black text-[#6400dc] mb-3 pb-2 border-b border-gray-200">Անհատ</h2>
+                <h2 className="text-lg sm:text-xl font-black text-[#6400dc] mb-3 pb-2 border-b border-gray-200">Անհատ</h2>
               </div>
 
               <div>
@@ -103,7 +103,7 @@ export default function Kayqiqartez() {
             {/* Սյուն 2: Բիզնես */}
             <div className="space-y-6">
               <div>
-                <h2 className="text-xl font-black text-[#6400dc] mb-3 pb-2 border-b border-gray-200">Բիզնես</h2>
+                <h2 className="text-lg sm:text-xl font-black text-[#6400dc] mb-3 pb-2 border-b border-gray-200">Բիզնես</h2>
               </div>
 
               <div>
@@ -187,7 +187,7 @@ export default function Kayqiqartez() {
             {/* Սյուն 3: Մեր մասին, Սակագներ, Հաշվետվություններ և այլն */}
             <div className="space-y-6">
               <div>
-                <h2 className="text-xl font-black text-[#6400dc] mb-3 pb-2 border-b border-gray-200">Մեր մասին</h2>
+                <h2 className="text-lg sm:text-xl font-black text-[#6400dc] mb-3 pb-2 border-b border-gray-200">Մեր մասին</h2>
                 <ul className="space-y-1.5 text-gray-600">
                   <li><button onClick={() => handleRouteChange('/mer-masin')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">Evoca-ի մասին</button></li>
                   <li><button onClick={() => handleRouteChange('/mer-masin')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">Ընդհանուր</button></li>
@@ -202,7 +202,7 @@ export default function Kayqiqartez() {
               </div>
 
               <div>
-                <h2 className="text-xl font-black text-[#6400dc] mb-3 pb-2 border-b border-gray-200">Սակագներ</h2>
+                <h2 className="text-lg sm:text-xl font-black text-[#6400dc] mb-3 pb-2 border-b border-gray-200">Սակագներ</h2>
                 <ul className="space-y-1.5 text-gray-600">
                   <li><button onClick={() => handleRouteChange('/sakagner')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">Վարկեր ֆիզիկական անձանց</button></li>
                   <li><button onClick={() => handleRouteChange('/sakagner')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">Վարկեր իրավաբանական անձանց</button></li>
@@ -213,7 +213,7 @@ export default function Kayqiqartez() {
               </div>
 
               <div>
-                <h2 className="text-xl font-black text-[#6400dc] mb-3 pb-2 border-b border-gray-200">Հաշվետվություններ</h2>
+                <h2 className="text-lg sm:text-xl font-black text-[#6400dc] mb-3 pb-2 border-b border-gray-200">Հաշվետվություններ</h2>
                 <ul className="space-y-1.5 text-gray-600">
                   <li><button onClick={() => handleRouteChange('/hashvetvutyunner')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">Աուդիտորական եզրակացություն</button></li>
                   <li><button onClick={() => handleRouteChange('/finansakan')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">Ֆինանսական հաշվետվություններ</button></li>
@@ -224,7 +224,7 @@ export default function Kayqiqartez() {
               </div>
 
               <div>
-                <h2 className="text-xl font-black text-[#6400dc] mb-3 pb-2 border-b border-gray-200">Այլ բաժիններ</h2>
+                <h2 className="text-lg sm:text-xl font-black text-[#6400dc] mb-3 pb-2 border-b border-gray-200">Այլ բաժիններ</h2>
                 <ul className="space-y-1.5 text-gray-600">
                   <li><button onClick={() => handleRouteChange('/haytararutyunner')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">Հայտարարություններ</button></li>
                   <li><button onClick={() => handleRouteChange('/norutyunner')} className="hover:text-[#6400dc] bg-transparent border-0 cursor-pointer p-0 text-left">Նորություններ</button></li>

@@ -45,7 +45,6 @@ export default function Hayt() {
     }));
     // Մաքրում ենք սխալը մուտքագրելիս
     if (errors[name]) {
-
       setErrors((prev) => ({ ...prev, [name]: false }));
     }
   };
@@ -113,13 +112,13 @@ export default function Hayt() {
       <div>
         <Navbar />
 
-        <main className="max-w-6xl mx-auto px-4 py-8 text-left">
+        <main className="max-w-6xl mx-auto px-4 py-6 md:py-8 text-left">
           {/* Breadcrumbs */}
-          <div className="text-xs text-gray-400 mb-6 flex items-center gap-2">
+          <div className="text-xs text-gray-400 mb-6 flex items-center gap-2 flex-wrap">
             <span>🏠</span> &gt; <span>Բիզնես</span> &gt; <span>Դիջիթալ</span> &gt; <span className="text-gray-700 font-medium">Տերմինալի տեղադրման հայտ</span>
           </div>
 
-          <h1 className="text-3xl md:text-4xl font-black text-neutral-900 mb-8">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-neutral-900 mb-6 md:mb-8">
             Տերմինալի տեղադրման հայտ
           </h1>
 
@@ -132,12 +131,12 @@ export default function Hayt() {
             </div>
 
             {/* Հայտի Ձևաթուղթ (Form) */}
-            <div className="flex-1 bg-white border border-gray-100 rounded-3xl p-6 md:p-10 shadow-xs">
-              <h2 className="text-lg md:text-xl font-bold text-[#6400dc] mb-8 pb-4 border-b border-gray-100">
+            <div className="flex-1 bg-white border border-gray-100 rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-10 shadow-xs w-full">
+              <h2 className="text-base sm:text-lg md:text-xl font-bold text-[#6400dc] mb-6 sm:mb-8 pb-4 border-b border-gray-100">
                 V-POS, POS կամ mPOS տերմինալի տեղադրման հայտ
               </h2>
 
-              <form onSubmit={handleSubmit} className="space-y-6 text-xs md:text-sm">
+              <form onSubmit={handleSubmit} className="space-y-6 text-xs sm:text-sm">
                 {/* Անուն Ազգանուն */}
                 <div>
                   <label className="block font-bold text-gray-700 mb-2">Անուն Ազգանուն</label>
@@ -429,7 +428,7 @@ export default function Hayt() {
 
                 {/* Վերջին տարվա,ամսվա միջին շրջանառությունը ՀՀ դրամով */}
                 <div>
-                  <label className="block font-bold text-gray-700 mb-2">Վերջին տարվա,ամսվա միջին շրջանառությունը ՀՀ դրամով</label>
+                  <label className="block font-bold text-gray-700 mb-2">Վերջին տարվա, ամսվա միջին շրջանառությունը ՀՀ դրամով</label>
                   <input
                     type="text"
                     name="avgTurnover"
@@ -502,7 +501,7 @@ export default function Hayt() {
                       className="mt-1 accent-[#6400dc]"
                     />
                     <span className={`text-xs text-gray-600 leading-relaxed ${errors.agreement ? 'text-red-500 font-medium' : ''}`}>
-                      Սույն հայտը լրացնելով՝ հավաստում եմ, որ դրանում ներկայացված տվյալները ստույգ են, լրիվ և արժանահավատ: Տալիս եմ իմ համաձայնությունը, որպեսզի Բանկը ստուգի դրանց իսկությունը
+                      Սույն հայտը լրացնելով՝ հավաստում եմ, որ դրանում ներկայացված տվյալները ստույգ են, լիվ և արժանահավատ: Տալիս եմ իմ համաձայնությունը, որպեսզի Բանկը ստուգի դրանց իսկությունը
                     </span>
                   </label>
                   {errors.agreement && <p className="text-red-500 text-xs mt-1 font-medium">Խնդրում ենք նշել համաձայնությունը</p>}
@@ -512,7 +511,7 @@ export default function Hayt() {
                 <div className="pt-4 flex justify-center">
                   <button
                     type="submit"
-                    className="bg-[#6400dc] hover:bg-opacity-90 text-white font-bold text-sm px-10 py-3 rounded-full transition shadow-md cursor-pointer"
+                    className="bg-[#6400dc] hover:bg-opacity-90 text-white font-bold text-xs sm:text-sm px-10 py-3 rounded-full transition shadow-md cursor-pointer"
                   >
                     Ուղարկել
                   </button>
