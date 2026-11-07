@@ -21,5 +21,33 @@
     "digital": "Digital",
     "tradeFinance": "Trade Finance",
     "other": "Other"
+  },
+  "akreditiv": {
+    "breadcrumbBusiness": "Business",
+    "breadcrumbTrade": "Trade Finance",
+    "breadcrumbCurrent": "Letter of Credit",
+    "title": "Letter of Credit",
+    "p1": "A documentary letter of credit (L/C) is our written obligation (issued on behalf of the buyer in favor of the seller) to pay a certain amount to the seller of goods upon presentation of documents complying with the terms of the letter of credit.",
+    "p2": "Letters of credit are issued in accordance with the uniform rules developed by the International Chamber of Commerce (depending on the terms and features of the commercial transaction).",
+    "conditionsTitle": "Main conditions for issuing a letter of credit:",
+    "cond1": "It is necessary to have a letter of credit coverage in your account, which is fixed in your special coverage account.",
+    "cond2": "The mode of your special coverage account, the interest rate calculated on the account balance, and other conditions are established by contract.",
+    "cond3": "In case of partial or complete absence of your own funds in your account, we consider the possibility of providing you with a credit line.",
+    "p3": "For additional information and advice on the issuance of documentary letters of credit, you can contact our Head Office, International and Foreign Exchange Operations Department.",
+    "tariffsTitle": "Tariffs",
+    "tableHead1": "Letter of Credit:",
+    "tableHead2": "Tariff",
+    "t1": "preliminary notice",
+    "t2": "notice",
+    "t3": "opening",
+    "t4": "confirmation",
+    "t5": "payment or negotiation",
+    "t6": "acceptance, verification, delivery of documents",
+    "t7": "modification of conditions",
+    "t8": "cancellation",
+    "price1": "50,000 AMD",
+    "price2": "0.15% min. 50,000 AMD",
+    "noteTitle": "Note",
+    "noteText": "– In addition to the fees established by these rates and tariffs, we charge the amount of our actual expenses incurred."
   }
 }
