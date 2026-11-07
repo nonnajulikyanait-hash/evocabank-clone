@@ -19,6 +19,10 @@ export default function Navbar() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
 
+  // Full Screen Mega Menu State
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeMenuTab, setActiveMenuTab] = useState('Anhat'); // 'Anhat', 'Business', 'MerMasin', 'Kariera', etc.
+
   const handleCallSubmit = (e) => {
     e.preventDefault();
     alert(`Zangi patver@ uxxarkvec: +374 ${phoneNumber}`);
@@ -213,62 +217,41 @@ export default function Navbar() {
               )}
             </div>
 
-            {/* Նշաններ */}
+            {/* Icons */}
             <div className="flex items-center gap-4 text-gray-500 ml-2">
-              {/* Location icon */}
               <Link to="/qartez" className="cursor-pointer inline-flex items-center">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwoY50aiSYY_HihVHo6AXDde2PN9vsQfWiQwCE0ZLCaA&s=10" alt="Location" className="w-5 h-5 object-contain opacity-70 hover:opacity-100 transition" />
               </Link>
 
-              {/* Help icon */}
               <Link to="/footerharcer" className="cursor-pointer inline-flex items-center">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZgomt6LOx3Q5D-yOJFdIXXizAzApLiU8yT4Zm7KzRXg&s=10" alt="Help" className="w-5 h-5 object-contain opacity-70 hover:opacity-100 transition" />
               </Link>
 
-              {/* Search icon */}
               <span onClick={() => setIsSearchOpen(true)} className="cursor-pointer inline-flex items-center">
-                <img src="data:image/png;base64,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" alt="Search" className="w-5 h-5 object-contain opacity-70 hover:opacity-100 transition" />
+                <img src="data:image/png;base64,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" alt="Search" className="w-5 h-5 object-contain opacity-70 hover:opacity-100 transition" />
               </span>
 
-              {/* Language dropdown container */}
+              {/* Language dropdown */}
               <div 
                 className="relative"
                 onMouseEnter={() => setIsLangOpen(true)}
                 onMouseLeave={() => setIsLangOpen(false)}
               >
-                <span 
-                  onClick={() => setIsLangOpen(!isLangOpen)}
-                  className="cursor-pointer inline-flex items-center"
-                >
+                <span className="cursor-pointer inline-flex items-center">
                   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTytoBQmKQaYjpTL6CJlzRNSlEjF-zMFM7LbiFgIMygzQ&s=10" alt="Language" className="w-5 h-5 object-contain opacity-70 hover:opacity-100 transition" />
                 </span>
 
                 {isLangOpen && (
                   <div className="absolute right-0 top-full w-24 bg-[#6400dc] text-white rounded-xl shadow-xl py-2 z-50 text-xs font-bold flex flex-col items-center space-y-1">
-                    <div 
-                      onClick={() => { setCurrentLang('ՀԱՅ'); setIsLangOpen(false); }}
-                      className={`w-full text-center py-1.5 cursor-pointer hover:bg-white/20 transition ${currentLang === 'ՀԱՅ' ? 'bg-white/10 underline' : ''}`}
-                    >
-                      ՀԱՅ
-                    </div>
-                    <div 
-                      onClick={() => { setCurrentLang('ENG'); setIsLangOpen(false); }}
-                      className={`w-full text-center py-1.5 cursor-pointer hover:bg-white/20 transition ${currentLang === 'ENG' ? 'bg-white/10 underline' : ''}`}
-                    >
-                      ENG
-                    </div>
-                    <div 
-                      onClick={() => { setCurrentLang('РУС'); setIsLangOpen(false); }}
-                      className={`w-full text-center py-1.5 cursor-pointer hover:bg-white/20 transition ${currentLang === 'РУС' ? 'bg-white/10 underline' : ''}`}
-                    >
-                      РУС
-                    </div>
+                    <div onClick={() => { setCurrentLang('ՀԱՅ'); setIsLangOpen(false); }} className={`w-full text-center py-1.5 cursor-pointer hover:bg-white/20 transition ${currentLang === 'ՀԱՅ' ? 'bg-white/10 underline' : ''}`}>ՀԱՅ</div>
+                    <div onClick={() => { setCurrentLang('ENG'); setIsLangOpen(false); }} className={`w-full text-center py-1.5 cursor-pointer hover:bg-white/20 transition ${currentLang === 'ENG' ? 'bg-white/10 underline' : ''}`}>ENG</div>
+                    <div onClick={() => { setCurrentLang('РУС'); setIsLangOpen(false); }} className={`w-full text-center py-1.5 cursor-pointer hover:bg-white/20 transition ${currentLang === 'РУС' ? 'bg-white/10 underline' : ''}`}>РУС</div>
                   </div>
                 )}
               </div>
 
-              {/* Menu icon */}
-              <span className="cursor-pointer inline-flex items-center">
+              {/* Menu icon - Opens Mega Menu Overlay */}
+              <span onClick={() => setIsMenuOpen(true)} className="cursor-pointer inline-flex items-center">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSskqKoU9CXrPFsrcvFQPYZqweeHfycPcnR-DJtSABUHg&s=10" alt="Menu" className="w-5 h-5 object-contain opacity-70 hover:opacity-100 transition" />
               </span>
             </div>
@@ -285,57 +268,25 @@ export default function Navbar() {
 
         {isKarieraPage ? (
           <nav className="hidden lg:flex items-center gap-8 text-[13px] font-bold text-gray-800">
-            <Link 
-              to="/kariera" 
-              className={`transition ${location.pathname === '/kariera' || location.pathname === '/aravelutyunner' || location.pathname === '/harcer' || location.pathname === '/yndunum' ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}
-            >
-              Evoca Լայֆ
-            </Link>
-            <Link 
-              to="/praktika" 
-              className={`transition ${location.pathname === '/praktika' || location.pathname === '/usumnakan' || location.pathname === '/evocabridge' ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}
-            >
-              Աշխատանք և պրակտիկա
-            </Link>
+            <Link to="/kariera" className={`transition ${location.pathname === '/kariera' || location.pathname === '/aravelutyunner' || location.pathname === '/harcer' || location.pathname === '/yndunum' ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>Evoca Լայֆ</Link>
+            <Link to="/praktika" className={`transition ${location.pathname === '/praktika' || location.pathname === '/usumnakan' || location.pathname === '/evocabridge' ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>Աշխատանք և պրակտիկա</Link>
           </nav>
         ) : isMerMasinPage ? (
           <nav className="hidden lg:flex items-center gap-7 text-[13px] font-bold text-gray-800">
-            <Link to="/mer-masin" className={`transition ${location.pathname === '/mer-masin' || (location.pathname.startsWith('/mer-masin/') && location.pathname !== '/hashvetvutyunner') ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>
-              Evoca-ի մասին
-            </Link>
-            <Link to="/hashvetvutyunner" className={`transition ${location.pathname === '/hashvetvutyunner' ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>
-              Հաշվետվություններ
-            </Link>
-            <Link to="/haytararutyunner" className={`transition ${location.pathname === '/haytararutyunner' ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>
-              Հայտարարություններ
-            </Link>
+            <Link to="/mer-masin" className={`transition ${location.pathname === '/mer-masin' || (location.pathname.startsWith('/mer-masin/') && location.pathname !== '/hashvetvutyunner') ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>Evoca-ի մասին</Link>
+            <Link to="/hashvetvutyunner" className={`transition ${location.pathname === '/hashvetvutyunner' ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>Հաշվետվություններ</Link>
+            <Link to="/haytararutyunner" className={`transition ${location.pathname === '/haytararutyunner' ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>Հայտարարություններ</Link>
           </nav>
         ) : isBusinessSection ? (
           <nav className="hidden lg:flex items-center gap-7 text-[13px] font-bold text-gray-800">
-            <Link to="/business-loans" className={`transition ${location.pathname === '/business-loans' ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>
-              Վարկեր
-            </Link>
-            <Link to="/leasing" className={`transition ${isLeasingSub ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>
-              Լիզինգ
-            </Link>
-            <Link to="/business-accounts" className={`transition ${isAccountsSub ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>
-              Հաշիվներ
-            </Link>
-            <Link to="/business-deposits" className={`transition ${location.pathname === '/business-deposits' ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>
-              Ավանդներ
-            </Link>
-            <Link to="/business-securities" className={`transition ${isSecuritiesSub ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>
-              Արժեթղթերի շուկա
-            </Link>
-            <Link to="/trade-finance" className={`transition ${isTradeFinanceSub ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>
-              Առևտրի ֆինանսավորում
-            </Link>
-            <Link to="/dijital" className={`transition ${isDijitalSub ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>
-              Դիջիթալ
-            </Link>
-            <Link to="/ayl" className={`transition ${location.pathname === '/ayl' ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>
-              Այլ
-            </Link>
+            <Link to="/business-loans" className={`transition ${location.pathname === '/business-loans' ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>Վարկեր</Link>
+            <Link to="/leasing" className={`transition ${isLeasingSub ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>Լիզինգ</Link>
+            <Link to="/business-accounts" className={`transition ${isAccountsSub ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>Հաշիվներ</Link>
+            <Link to="/business-deposits" className={`transition ${location.pathname === '/business-deposits' ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>Ավանդներ</Link>
+            <Link to="/business-securities" className={`transition ${isSecuritiesSub ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>Արժեթղթերի շուկա</Link>
+            <Link to="/trade-finance" className={`transition ${isTradeFinanceSub ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>Առևտրի ֆինանսավորում</Link>
+            <Link to="/dijital" className={`transition ${isDijitalSub ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>Դիջիթալ</Link>
+            <Link to="/ayl" className={`transition ${location.pathname === '/ayl' ? 'text-[#6400dc]' : 'hover:text-[#6400dc]'}`}>Այլ</Link>
           </nav>
         ) : (
           <nav className="hidden lg:flex items-center gap-7 text-[13px] font-bold text-gray-800">
@@ -411,6 +362,284 @@ export default function Navbar() {
         </div>
       )}
 
+      {/* Full-Screen Mega Menu Overlay */}
+      {isMenuOpen && (
+        <div className="fixed inset-0 z-[100] flex bg-black">
+          {/* Left Dark Sidebar */}
+          <div className="w-1/3 bg-[#0a0a0c] text-white flex flex-col justify-between p-12 relative border-r border-white/10">
+            <div>
+              <Link to="/" onClick={() => setIsMenuOpen(false)} className="inline-block mb-16">
+                <span className="text-3xl font-black text-white tracking-tighter">evoca</span>
+                <span className="w-2.5 h-2.5 bg-[#6400dc] rounded-full inline-block ml-1"></span>
+              </Link>
+
+              <div className="flex flex-col space-y-6 text-xl font-extrabold">
+                <button 
+                  onClick={() => setActiveMenuTab('Anhat')} 
+                  className={`text-left transition ${activeMenuTab === 'Anhat' ? 'text-[#6400dc]' : 'text-white hover:text-purple-300'}`}
+                >
+                  Անհատ
+                </button>
+                <button 
+                  onClick={() => setActiveMenuTab('Business')} 
+                  className={`text-left transition ${activeMenuTab === 'Business' ? 'text-[#6400dc]' : 'text-white hover:text-purple-300'}`}
+                >
+                  Բիզնես
+                </button>
+                <Link 
+                  to="/akntartayinvcharumner" 
+                  onClick={() => setIsMenuOpen(false)} 
+                  className="text-left text-white hover:text-purple-300 transition"
+                >
+                  Ակնթարթային վճարումներ
+                </Link>
+                <button 
+                  onClick={() => setActiveMenuTab('MerMasin')} 
+                  className={`text-left transition ${activeMenuTab === 'MerMasin' ? 'text-[#6400dc]' : 'text-white hover:text-purple-300'}`}
+                >
+                  Մեր մասին
+                </button>
+                <Link 
+                  to="/norutyunner" 
+                  onClick={() => setIsMenuOpen(false)} 
+                  className="text-left text-white hover:text-purple-300 transition"
+                >
+                  Նորություններ
+                </Link>
+                <Link 
+                  to="/blog" 
+                  onClick={() => setIsMenuOpen(false)} 
+                  className="text-left text-white hover:text-purple-300 transition"
+                >
+                  Բլոգ
+                </Link>
+                <button 
+                  onClick={() => setActiveMenuTab('Kariera')} 
+                  className={`text-left transition ${activeMenuTab === 'Kariera' ? 'text-[#6400dc]' : 'text-white hover:text-purple-300'}`}
+                >
+                  Կարիերա
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Purple Content Panel */}
+          <div className="w-2/3 bg-[#6400dc] text-white p-16 relative overflow-y-auto flex flex-col justify-between">
+            {/* Close Button */}
+            <button 
+              onClick={() => setIsMenuOpen(false)}
+              className="absolute top-8 right-8 text-white hover:opacity-80 text-3xl font-bold cursor-pointer"
+            >
+              ✕
+            </button>
+
+            {/* Dynamic Content Based on Active Menu Tab */}
+            <div className="mt-8">
+              {activeMenuTab === 'Anhat' && (
+                <div className="grid grid-cols-2 gap-12 text-sm">
+                  <div className="space-y-6">
+                    <div>
+                      <h4 className="text-xl font-black mb-3">Վարկեր</h4>
+                      <div className="flex flex-col space-y-2 opacity-80 text-xs">
+                        <Link to="/loans" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">Վարկեր</Link>
+                        <Link to="/varker" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">Վարկային պատմություն և սքոր</Link>
+                        <Link to="/loans" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">Կարևոր տեղեկատվություն</Link>
+                      </div>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-black mb-3">Ավանդներ</h4>
+                      <div className="flex flex-col space-y-2 opacity-80 text-xs">
+                        <Link to="/deposits" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">Ավանդներ</Link>
+                        <Link to="/deposits" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">Կարևոր տեղեկատվություն</Link>
+                      </div>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-black mb-3">Փոխանցումներ</h4>
+                      <div className="flex flex-col space-y-2 opacity-80 text-xs">
+                        <Link to="/transfers" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">Դրամական փոխանցումներ</Link>
+                        <Link to="/transfers" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">Վճարային համակարգեր</Link>
+                      </div>
+                    </div>
+                    <div>
+                      <Link to="/evocasalary" onClick={() => setIsMenuOpen(false)} className="text-xl font-black block hover:underline">EvocaSALARY</Link>
+                    </div>
+                  </div>
+
+                  <div className="space-y-6">
+                    <div>
+                      <h4 className="text-xl font-black mb-3">Քարտեր</h4>
+                      <div className="flex flex-col space-y-2 opacity-80 text-xs">
+                        <Link to="/qarter" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">Քարտեր</Link>
+                        <Link to="/qarter" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">Քարտերի տրամադրում և սպասարկում</Link>
+                        <Link to="/qarter" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">Սոցիալական ապահովության վճարային քարտեր</Link>
+                        <Link to="/qarter" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">Evoca Benefits</Link>
+                      </div>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-black mb-3">Հաշիվներ</h4>
+                      <div className="flex flex-col space-y-2 opacity-80 text-xs">
+                        <Link to="/accounts" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">Evoca խնայողական հաշիվ</Link>
+                        <Link to="/accounts" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">Հաշիվների բացում և սպասարկում</Link>
+                        <Link to="/accounts" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">Առարկայազուրկ մետաղական հաշիվներ</Link>
+                        <Link to="/accounts" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">Ոչ ռեզիդենտ հաճախորդների հեռավար սպասարկում</Link>
+                      </div>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-black mb-3">Արժեթղթեր</h4>
+                      <div className="flex flex-col space-y-2 opacity-80 text-xs">
+                        <Link to="/securities" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">Ներդրումային ծառայություններ</Link>
+                        <Link to="/bonds" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">Պարտատոմսեր</Link>
+                        <Link to="/cda-services" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">ՀԿԴ ծառայություններ</Link>
+                        <Link to="/repo-reverse-repo" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">Ռեպո/Հակադարձ Ռեպո գործարքներ</Link>
+                        <Link to="/evocainvest-service" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">EvocaINVEST</Link>
+                      </div>
+                    </div>
+                    <div>
+                      <Link to="/evocatouch" onClick={() => setIsMenuOpen(false)} className="text-xl font-black block hover:underline">EvocaTOUCH</Link>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {activeMenuTab === 'Business' && (
+                <div className="grid grid-cols-2 gap-12 text-sm">
+                  <div className="space-y-6">
+                    <div>
+                      <h4 className="text-xl font-black mb-3">Վարկեր</h4>
+                      <div className="flex flex-col space-y-2 opacity-80 text-xs">
+                        <Link to="/business-loans" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">Բիզնես վարկեր</Link>
+                      </div>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-black mb-3">Հաշիվներ</h4>
+                      <div className="flex flex-col space-y-2 opacity-80 text-xs">
+                        <Link to="/business-accounts" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">Հաշիվների բացում և սպասարկում</Link>
+                        <Link to="/business-unallocated-metal-accounts" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">Առարկայազուրկ մետաղական հաշիվներ</Link>
+                      </div>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-black mb-3">Արժեթղթերի շուկա</h4>
+                      <div className="flex flex-col space-y-2 opacity-80 text-xs">
+                        <Link to="/business-securities" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">Ներդրումային ծառայություններ</Link>
+                        <Link to="/bonds" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">Պարտատոմսեր</Link>
+                        <Link to="/cda-services" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">ՀԿԴ ծառայություններ</Link>
+                        <Link to="/repo-reverse-repo" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">Ռեպո/Հակադարձ ռեպո գործարքներ</Link>
+                        <Link to="/evocainvest-service" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">EvocaINVEST</Link>
+                      </div>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-black mb-3">Դիջիթալ</h4>
+                      <div className="flex flex-col space-y-2 opacity-80 text-xs">
+                        <Link to="/dijital" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">V-POS Տերմինալ</Link>
+                        <Link to="/terminal" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">POS Տերմինալ</Link>
+                        <Link to="/sakagner" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">Սակագներ</Link>
+                        <Link to="/hayt" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">Տերմինալի տեղադրման հայտ</Link>
+                        <Link to="/mobilepos" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">Evoca Mobile POS' mPOS</Link>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="space-y-6">
+                    <div>
+                      <h4 className="text-xl font-black mb-3">Լիզինգ</h4>
+                      <div className="flex flex-col space-y-2 opacity-80 text-xs">
+                        <Link to="/leasing" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">Evoca Leasing</Link>
+                        <Link to="/special-offer" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">Հատուկ առաջարկ</Link>
+                      </div>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-black mb-3">Ավանդներ</h4>
+                      <div className="flex flex-col space-y-2 opacity-80 text-xs">
+                        <Link to="/business-deposits" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">Դասական ավանդ</Link>
+                      </div>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-black mb-3">Առևտրի ֆինանսավորում</h4>
+                      <div className="flex flex-col space-y-2 opacity-80 text-xs">
+                        <Link to="/trade-finance" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">Երաշխիք</Link>
+                        <Link to="/factoring" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">Ֆակտորինգային ֆինանսավորում</Link>
+                        <Link to="/creditive" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">Ակրեդիտիվ</Link>
+                        <Link to="/inkaso" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">Ինկասո</Link>
+                      </div>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-black mb-3">Այլ</h4>
+                      <div className="flex flex-col space-y-2 opacity-80 text-xs">
+                        <Link to="/ayl" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">Պահատուփեր</Link>
+                        <Link to="/aylpoxancumner" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">Փոխանցումներ</Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {activeMenuTab === 'MerMasin' && (
+                <div className="grid grid-cols-2 gap-12 text-sm">
+                  <div className="space-y-6">
+                    <div>
+                      <h4 className="text-xl font-black mb-3">Evoca-ի մասին</h4>
+                      <div className="flex flex-col space-y-2 opacity-80 text-xs">
+                        <Link to="/mer-masin" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">Ընդհանուր</Link>
+                        <Link to="/mer-masin" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">Կառուցվածք</Link>
+                        <Link to="/mer-masin" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">Բաժնետերեր</Link>
+                        <Link to="/mer-masin" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">Ղեկավարություն</Link>
+                        <Link to="/mer-masin" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">Գործընկերներ</Link>
+                        <Link to="/mer-masin" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">Մրցանակներ</Link>
+                        <Link to="/mer-masin" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">CSR</Link>
+                        <Link to="/mer-masin" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">Էվոկա ֆինանսական խումբ</Link>
+                      </div>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-black mb-3">Հաշվետվություններ</h4>
+                      <div className="flex flex-col space-y-2 opacity-80 text-xs">
+                        <Link to="/hashvetvutyunner" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">Աուդիտորական եզրակացություն</Link>
+                        <Link to="/hashvetvutyunner" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">Ֆինանսական հաշվետվություններ</Link>
+                        <Link to="/hashvetvutyunner" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">Ներդրողների համար</Link>
+                        <Link to="/hashvetvutyunner" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">Կիսամյակային հաշվետվություն</Link>
+                        <Link to="/hashvetvutyunner" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">Տարեկան հաշվետվություն</Link>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="space-y-6">
+                    <div>
+                      <Link to="/haytararutyunner" onClick={() => setIsMenuOpen(false)} className="text-xl font-black block hover:underline">Հայտարարություններ</Link>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {activeMenuTab === 'Kariera' && (
+                <div className="grid grid-cols-2 gap-12 text-sm">
+                  <div className="space-y-6">
+                    <div>
+                      <h4 className="text-xl font-black mb-3">Evoca Լայֆ</h4>
+                      <div className="flex flex-col space-y-2 opacity-80 text-xs">
+                        <Link to="/kariera" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">Մշակույթ</Link>
+                        <Link to="/aravelutyunner" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">Առավելություններ</Link>
+                        <Link to="/harcer" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">Հաճախ տրվող հարցեր</Link>
+                        <Link to="/yndunum" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">Ինչպես ընդունվել աշխատանքի Evocabank-ում</Link>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="space-y-6">
+                    <div>
+                      <h4 className="text-xl font-black mb-3">Աշխատանք և պրակտիկա</h4>
+                      <div className="flex flex-col space-y-2 opacity-80 text-xs">
+                        <Link to="/praktika" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">Աշխատանք Evoca-ում</Link>
+                        <Link to="/usumnakan" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">Ուսումնական պրակտիկա</Link>
+                        <Link to="/evocabridge" onClick={() => setIsMenuOpen(false)} className="hover:opacity-100">EvocaBRIDGE</Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Search Modal Window */}
       {isSearchOpen && (
         <div className="fixed inset-0 bg-black/50 z-50 flex items-start justify-center pt-20 p-4">
@@ -440,32 +669,16 @@ export default function Navbar() {
                 <p className="text-gray-400 text-center py-6">Մուտքագրեք որոնելու բառը...</p>
               ) : (
                 <div className="space-y-2">
-                  <div 
-                    onClick={() => { setIsSearchOpen(false); navigate('/anhatvarker'); }} 
-                    className="p-3 hover:bg-purple-50 rounded-xl cursor-pointer transition flex justify-between items-center"
-                  >
+                  <div onClick={() => { setIsSearchOpen(false); navigate('/loans'); }} className="p-3 hover:bg-purple-50 rounded-xl cursor-pointer transition flex justify-between items-center">
                     <span className="font-semibold text-neutral-900">Վարկեր (Անհատ)</span>
                     <span className="text-xs text-[#6400dc]">Անցնել ➔</span>
                   </div>
-                  <div 
-                    onClick={() => { setIsSearchOpen(false); navigate('/qarter'); }} 
-                    className="p-3 hover:bg-purple-50 rounded-xl cursor-pointer transition flex justify-between items-center"
-                  >
+                  <div onClick={() => { setIsSearchOpen(false); navigate('/qarter'); }} className="p-3 hover:bg-purple-50 rounded-xl cursor-pointer transition flex justify-between items-center">
                     <span className="font-semibold text-neutral-900">Քարտեր և տեսակներ</span>
                     <span className="text-xs text-[#6400dc]">Անցնել ➔</span>
                   </div>
-                  <div 
-                    onClick={() => { setIsSearchOpen(false); navigate('/qartez'); }} 
-                    className="p-3 hover:bg-purple-50 rounded-xl cursor-pointer transition flex justify-between items-center"
-                  >
+                  <div onClick={() => { setIsSearchOpen(false); navigate('/qartez'); }} className="p-3 hover:bg-purple-50 rounded-xl cursor-pointer transition flex justify-between items-center">
                     <span className="font-semibold text-neutral-900">Բանկի հասցեները և մասնաճյուղերը</span>
-                    <span className="text-xs text-[#6400dc]">Անցնել ➔</span>
-                  </div>
-                  <div 
-                    onClick={() => { setIsSearchOpen(false); navigate('/bukletner'); }} 
-                    className="p-3 hover:bg-purple-50 rounded-xl cursor-pointer transition flex justify-between items-center"
-                  >
-                    <span className="font-semibold text-neutral-900">Բուկլետներ և ուղեցույցներ</span>
                     <span className="text-xs text-[#6400dc]">Անցնել ➔</span>
                   </div>
                 </div>
