@@ -9,9 +9,13 @@ export default function Navbar() {
   const [isOnlineAppOpen, setIsOnlineAppOpen] = useState(false);
   const [isFeedbackOpen, setIsFeedbackOpen] = useState(false);
   
-  // Modal state (hetadardz zangi patver)
+  // Modal states
   const [isCallModalOpen, setIsCallModalOpen] = useState(false);
   const [phoneNumber, setPhoneNumber] = useState('');
+  
+  // Search modal state
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
 
   const handleCallSubmit = (e) => {
     e.preventDefault();
@@ -69,7 +73,6 @@ export default function Navbar() {
       location.pathname === '/aylpoxancumner'
     );
 
-  // Անհատ բաժնի ենթաէջերի ստուգումներ՝ մանուշակագույն դարձնելու համար
   const isLoansPage = location.pathname.startsWith('/loans') || location.pathname.startsWith('/varker');
   const isCardsPage = location.pathname.startsWith('/cards') || location.pathname.startsWith('/qarter');
   const isDepositsPage = location.pathname.startsWith('/deposits') || location.pathname.startsWith('/avandner');
@@ -208,31 +211,31 @@ export default function Navbar() {
               )}
             </div>
 
-            {/* Նկարներով փոխարինված նշաններ */}
-            <div className="flex items-center gap-3.5 text-gray-500 ml-2">
-              {/* Location icon linking to /qartez */}
+            {/* Մեծացված չափերով նշաններ */}
+            <div className="flex items-center gap-4 text-gray-500 ml-2">
+              {/* Location icon */}
               <Link to="/qartez" className="cursor-pointer inline-flex items-center">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwoY50aiSYY_HihVHo6AXDde2PN9vsQfWiQwCE0ZLCaA&s=10" alt="Location" className="w-4 h-4 object-contain opacity-70 hover:opacity-100 transition" />
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwoY50aiSYY_HihVHo6AXDde2PN9vsQfWiQwCE0ZLCaA&s=10" alt="Location" className="w-5 h-5 object-contain opacity-70 hover:opacity-100 transition" />
               </Link>
 
-              {/* Help icon linking to /footerharcer */}
+              {/* Help icon */}
               <Link to="/footerharcer" className="cursor-pointer inline-flex items-center">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZgomt6LOx3Q5D-yOJFdIXXizAzApLiU8yT4Zm7KzRXg&s=10" alt="Help" className="w-4 h-4 object-contain opacity-70 hover:opacity-100 transition" />
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZgomt6LOx3Q5D-yOJFdIXXizAzApLiU8yT4Zm7KzRXg&s=10" alt="Help" className="w-5 h-5 object-contain opacity-70 hover:opacity-100 transition" />
               </Link>
 
               {/* Search icon */}
-              <span className="cursor-pointer inline-flex items-center">
-                <img src="data:image/png;base64,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" alt="Search" className="w-4 h-4 object-contain opacity-70 hover:opacity-100 transition" />
+              <span onClick={() => setIsSearchOpen(true)} className="cursor-pointer inline-flex items-center">
+                <img src="data:image/png;base64,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" alt="Search" className="w-5 h-5 object-contain opacity-70 hover:opacity-100 transition" />
               </span>
 
               {/* Language icon */}
               <span className="cursor-pointer inline-flex items-center">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTytoBQmKQaYjpTL6CJlzRNSlEjF-zMFM7LbiFgIMygzQ&s=10" alt="Language" className="w-4 h-4 object-contain opacity-70 hover:opacity-100 transition" />
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTytoBQmKQaYjpTL6CJlzRNSlEjF-zMFM7LbiFgIMygzQ&s=10" alt="Language" className="w-5 h-5 object-contain opacity-70 hover:opacity-100 transition" />
               </span>
 
               {/* Menu icon */}
               <span className="cursor-pointer inline-flex items-center">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSskqKoU9CXrPFsrcvFQPYZqweeHfycPcnR-DJtSABUHg&s=10" alt="Menu" className="w-4 h-4 object-contain opacity-70 hover:opacity-100 transition" />
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSskqKoU9CXrPFsrcvFQPYZqweeHfycPcnR-DJtSABUHg&s=10" alt="Menu" className="w-5 h-5 object-contain opacity-70 hover:opacity-100 transition" />
               </span>
             </div>
           </div>
@@ -370,6 +373,70 @@ export default function Navbar() {
                 {location.pathname === '/business-deposits' ? 'Բիզնես ավանդներ' : 'Բիզնես վարկեր'}
               </div>
             )}
+          </div>
+        </div>
+      )}
+
+      {/* Search Modal Window */}
+      {isSearchOpen && (
+        <div className="fixed inset-0 bg-black/50 z-50 flex items-start justify-center pt-20 p-4">
+          <div className="bg-white rounded-3xl max-w-2xl w-full p-6 relative shadow-2xl space-y-6">
+            <div className="flex items-center justify-between border-b border-gray-200 pb-4">
+              <div className="flex items-center gap-3 w-full mr-4">
+                <span className="text-gray-400 text-lg">🔍</span>
+                <input 
+                  type="text" 
+                  autoFocus
+                  placeholder="Որոնում..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full text-lg font-semibold text-neutral-900 focus:outline-none bg-transparent"
+                />
+              </div>
+              <button 
+                onClick={() => setIsSearchOpen(false)}
+                className="text-gray-400 hover:text-gray-700 text-xl font-bold cursor-pointer"
+              >
+                ✕
+              </button>
+            </div>
+
+            <div className="space-y-3 max-h-80 overflow-y-auto text-sm text-gray-600">
+              {searchQuery.trim() === '' ? (
+                <p className="text-gray-400 text-center py-6">Մուտքագրեք որոնելու բառը...</p>
+              ) : (
+                <div className="space-y-2">
+                  <div 
+                    onClick={() => { setIsSearchOpen(false); navigate('/anhatvarker'); }} 
+                    className="p-3 hover:bg-purple-50 rounded-xl cursor-pointer transition flex justify-between items-center"
+                  >
+                    <span className="font-semibold text-neutral-900">Վարկեր (Անհատ)</span>
+                    <span className="text-xs text-[#6400dc]">Անցնել ➔</span>
+                  </div>
+                  <div 
+                    onClick={() => { setIsSearchOpen(false); navigate('/qarter'); }} 
+                    className="p-3 hover:bg-purple-50 rounded-xl cursor-pointer transition flex justify-between items-center"
+                  >
+                    <span className="font-semibold text-neutral-900">Քարտեր և տեսակներ</span>
+                    <span className="text-xs text-[#6400dc]">Անցնել ➔</span>
+                  </div>
+                  <div 
+                    onClick={() => { setIsSearchOpen(false); navigate('/qartez'); }} 
+                    className="p-3 hover:bg-purple-50 rounded-xl cursor-pointer transition flex justify-between items-center"
+                  >
+                    <span className="font-semibold text-neutral-900">Բանկի հասցեները և մասնաճյուղերը</span>
+                    <span className="text-xs text-[#6400dc]">Անցնել ➔</span>
+                  </div>
+                  <div 
+                    onClick={() => { setIsSearchOpen(false); navigate('/bukletner'); }} 
+                    className="p-3 hover:bg-purple-50 rounded-xl cursor-pointer transition flex justify-between items-center"
+                  >
+                    <span className="font-semibold text-neutral-900">Բուկլետներ և ուղեցույցներ</span>
+                    <span className="text-xs text-[#6400dc]">Անցնել ➔</span>
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       )}
