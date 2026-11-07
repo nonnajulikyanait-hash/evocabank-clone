@@ -208,12 +208,20 @@ export default function Navbar() {
               )}
             </div>
 
+            {/* Նկարներով փոխարինված նշաններ */}
             <div className="flex items-center gap-3.5 text-gray-500 ml-2">
-              <span className="cursor-pointer text-xs">📍</span>
-              <span className="cursor-pointer text-xs">❓</span>
-              <span className="cursor-pointer text-xs">🌐</span>
-              <span className="cursor-pointer text-xs">🔍</span>
-              <span className="cursor-pointer font-bold text-xs">☰</span>
+              <span className="cursor-pointer inline-flex items-center">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwoY50aiSYY_HihVHo6AXDde2PN9vsQfWiQwCE0ZLCaA&s=10" alt="Location" className="w-4 h-4 object-contain opacity-70 hover:opacity-100 transition" />
+              </span>
+              <span className="cursor-pointer inline-flex items-center">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZgomt6LOx3Q5D-yOJFdIXXizAzApLiU8yT4Zm7KzRXg&s=10" alt="Help" className="w-4 h-4 object-contain opacity-70 hover:opacity-100 transition" />
+              </span>
+              <span className="cursor-pointer inline-flex items-center">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTytoBQmKQaYjpTL6CJlzRNSlEjF-zMFM7LbiFgIMygzQ&s=10" alt="Language" className="w-4 h-4 object-contain opacity-70 hover:opacity-100 transition" />
+              </span>
+              <span className="cursor-pointer inline-flex items-center">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSskqKoU9CXrPFsrcvFQPYZqweeHfycPcnR-DJtSABUHg&s=10" alt="Menu" className="w-4 h-4 object-contain opacity-70 hover:opacity-100 transition" />
+              </span>
             </div>
           </div>
         </div>
