@@ -1,0 +1,25 @@
+{
+  "nav": {
+    "individual": "Физическим лицам",
+    "business": "Бизнес",
+    "instantPayments": "Мгновенные платежи",
+    "aboutUs": "О нас",
+    "news": "Новости",
+    "blog": "Блог",
+    "career": "Карьера",
+    "onlineApps": "Онлайн заявки",
+    "feedback": "Обратная связь",
+    "orderCall": "Заказать звонок",
+    "evocaOnline": "EvocaONLINE",
+    "loans": "Кредиты",
+    "cards": "Карты",
+    "deposits": "Вклады",
+    "accounts": "Счета",
+    "transfers": "Переводы",
+    "securities": "Ценные бумаги",
+    "leasing": "Лизинг",
+    "digital": "Диджитал",
+    "tradeFinance": "Торговое финансирование",
+    "other": "Другое"
+  }
+}

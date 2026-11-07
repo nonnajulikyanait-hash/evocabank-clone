@@ -1,0 +1,25 @@
+{
+  "nav": {
+    "individual": "Individual",
+    "business": "Business",
+    "instantPayments": "Instant Payments",
+    "aboutUs": "About Us",
+    "news": "News",
+    "blog": "Blog",
+    "career": "Career",
+    "onlineApps": "Online Applications",
+    "feedback": "Feedback",
+    "orderCall": "Request a Call",
+    "evocaOnline": "EvocaONLINE",
+    "loans": "Loans",
+    "cards": "Cards",
+    "deposits": "Deposits",
+    "accounts": "Accounts",
+    "transfers": "Transfers",
+    "securities": "Securities",
+    "leasing": "Leasing",
+    "digital": "Digital",
+    "tradeFinance": "Trade Finance",
+    "other": "Other"
+  }
+}

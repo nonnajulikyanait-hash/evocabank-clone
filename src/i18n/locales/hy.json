@@ -1,0 +1,25 @@
+{
+  "nav": {
+    "individual": "Անհատ",
+    "business": "Բիզնես",
+    "instantPayments": "Ակնթարթային վճարումներ",
+    "aboutUs": "Մեր մասին",
+    "news": "Նորություններ",
+    "blog": "Բլոգ",
+    "career": "Կարիերա",
+    "onlineApps": "Առցանց հայտեր",
+    "feedback": "Հետադարձ կապ",
+    "orderCall": "Պատվիրել զանգ",
+    "evocaOnline": "EvocaONLINE",
+    "loans": "Վարկեր",
+    "cards": "Քարտեր",
+    "deposits": "Ավանդներ",
+    "accounts": "Հաշիվներ",
+    "transfers": "Փոխանցումներ",
+    "securities": "Արժեթղթեր",
+    "leasing": "Լիզինգ",
+    "digital": "Դիջիթալ",
+    "tradeFinance": "Առևտրի ֆինանսավորում",
+    "other": "Այլ"
+  }
+}
