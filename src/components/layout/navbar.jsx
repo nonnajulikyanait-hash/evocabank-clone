@@ -21,7 +21,7 @@ export default function Navbar() {
 
   // Full Screen Mega Menu State
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeMenuTab, setActiveMenuTab] = useState('Anhat'); // 'Anhat', 'Business', 'MerMasin', 'Kariera', etc.
+  const [activeMenuTab, setActiveMenuTab] = useState('Anhat');
 
   const handleCallSubmit = (e) => {
     e.preventDefault();
@@ -227,8 +227,9 @@ export default function Navbar() {
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZgomt6LOx3Q5D-yOJFdIXXizAzApLiU8yT4Zm7KzRXg&s=10" alt="Help" className="w-5 h-5 object-contain opacity-70 hover:opacity-100 transition" />
               </Link>
 
+              {/* Search Icon (Fixed with direct image link) */}
               <span onClick={() => setIsSearchOpen(true)} className="cursor-pointer inline-flex items-center">
-                <img src="data:image/png;base64,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" alt="Search" className="w-5 h-5 object-contain opacity-70 hover:opacity-100 transition" />
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSI4s9QViADSn4yd8_bLjD2XGOAliNo3bNdcshMRvmTVg&s=10" alt="Search" className="w-5 h-5 object-contain opacity-70 hover:opacity-100 transition" />
               </span>
 
               {/* Language dropdown */}
