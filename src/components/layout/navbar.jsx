@@ -210,9 +210,10 @@ export default function Navbar() {
 
             {/* Նկարներով փոխարինված նշաններ */}
             <div className="flex items-center gap-3.5 text-gray-500 ml-2">
-              <span className="cursor-pointer inline-flex items-center">
+              {/* Location icon linking to /qartez */}
+              <Link to="/qartez" className="cursor-pointer inline-flex items-center">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwoY50aiSYY_HihVHo6AXDde2PN9vsQfWiQwCE0ZLCaA&s=10" alt="Location" className="w-4 h-4 object-contain opacity-70 hover:opacity-100 transition" />
-              </span>
+              </Link>
               <span className="cursor-pointer inline-flex items-center">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZgomt6LOx3Q5D-yOJFdIXXizAzApLiU8yT4Zm7KzRXg&s=10" alt="Help" className="w-4 h-4 object-contain opacity-70 hover:opacity-100 transition" />
               </span>
